@@ -8,7 +8,6 @@
    <a href="">
       <img src="https://img.shields.io/cocoapods/p/ValidatedPropertyKit.svg?style=flat" alt="Platform">
    </a>
-
    <a href="https://twitter.com/ricardo_psantos/">
       <img src="https://img.shields.io/badge/Twitter-@ricardo_psantos-blue.svg?style=flat" alt="Twitter">
    </a>
