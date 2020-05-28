@@ -64,6 +64,7 @@
 		9FE50978231FB10E0081E1DB /* Tab3_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab3_View.swift; sourceTree = "<group>"; };
 		9FE50979231FB10E0081E1DB /* TabView_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView_View.swift; sourceTree = "<group>"; };
 		9FE5097D231FB14E0081E1DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D70C19DA24806D2700125742 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D7BC2012247EBC9300D546F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BC2013247EBC9300D546F0 /* RJPS_SwiftUI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = RJPS_SwiftUI.plist; path = RJPS_SwiftUI/SupportingFiles/RJPS_SwiftUI.plist; sourceTree = SOURCE_ROOT; };
 		D7BC2014247EBC9300D546F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RJPS_SwiftUI/SupportingFiles/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -92,6 +93,7 @@
 		9F288F1B20F8089F008A9539 = {
 			isa = PBXGroup;
 			children = (
+				D70C19DA24806D2700125742 /* README.md */,
 				9F288F2620F8089F008A9539 /* RJPS_SwiftUI */,
 				9F46132D2321817700F24162 /* SupportingFiles */,
 				9F288F2520F8089F008A9539 /* Products */,
