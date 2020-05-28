@@ -21,5 +21,5 @@
 ## Preview
 
 <p align="center">
-![Preview](assets/sample.gif)
+<img src="hhttps://github.com/ricardopsantos/RJPS_SwiftUI/blob/master/assets/sample.gif">
 </p>
