@@ -43,3 +43,10 @@ extension AppView {
     }
 }
 
+#if DEBUG
+struct Tab3_View_Previews: PreviewProvider {
+    static var previews: some View {
+        AppView.Tab3_View()
+    }
+}
+#endif

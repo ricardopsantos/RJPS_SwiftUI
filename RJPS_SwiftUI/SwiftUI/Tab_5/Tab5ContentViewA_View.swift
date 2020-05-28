@@ -24,13 +24,6 @@ extension AppView {
         }
     }
     
-    #if DEBUG
-    struct Tab5ContentViewA_View_Previews : PreviewProvider {
-        static var previews: some View {
-            ContentViewA(viewRouter: ViewRouter())
-        }
-    }
-    #endif
 }
 
 

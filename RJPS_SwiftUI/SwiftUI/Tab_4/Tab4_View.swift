@@ -18,7 +18,7 @@ extension AppView {
                     VStack (alignment: .center, spacing: 20) {
                         List(users, id: \.self) { user in
                             NavigationLink(destination: Text("Detail for \(user)")) {
-                                Tab4Details_View(user: user)
+                                AppView.Tab4Details_View(user: user)
                             }
                             }.navigationBarTitle("Select a user")
                     }
@@ -29,3 +29,11 @@ extension AppView {
         }
     }
 }
+
+#if DEBUG
+struct Tab4_View_Previews: PreviewProvider {
+    static var previews: some View {
+        AppView.Tab4_View()
+    }
+}
+#endif

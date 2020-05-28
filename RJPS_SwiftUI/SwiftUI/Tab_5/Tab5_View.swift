@@ -16,23 +16,20 @@ extension AppView {
         var body: some View {
             VStack {
                 if viewRouter.currentPage == Tab5Pages.page1 {
-                    Tab5ContentViewA_View(viewRouter: viewRouter)
+                    AppView.Tab5ContentViewA_View(viewRouter: viewRouter)
                 } else if viewRouter.currentPage == Tab5Pages.page2 {
-                    Tab5ContentViewB_View(viewRouter: viewRouter)
+                    AppView.Tab5ContentViewB_View(viewRouter: viewRouter)
                 }
             }
             .onAppear { print("[\(self)] onAppear!") }
             .onDisappear { print("[\(self)] onDisappear!") }
         }
     }
-    
-    #if DEBUG
-    struct Tab5_View_Previews : PreviewProvider {
-        static var previews: some View {
-            Tab5_View(viewRouter: ViewRouter()).previewDevice("iPhone X")
-        }
-    }
-    #endif
 }
 
 
+struct Tab5_View_Previews: PreviewProvider {
+    static var previews: some View {
+        AppView.Tab5_View(viewRouter: Tab5_ViewRouter())
+    }
+}

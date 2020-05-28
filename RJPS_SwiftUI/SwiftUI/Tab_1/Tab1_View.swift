@@ -18,12 +18,18 @@ extension AppView {
         var body : some View {
             ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
                 VStack (alignment: .center, spacing: 20) {
-                    ActivityIndicator(isAnimating: true)
+                    AppView.ActivityIndicator(isAnimating: true)
                     Text("Tab 1").font(.title).padding(50)
                 }
             }
             .onAppear { print("[\(self)] onAppear!") }
             .onDisappear { print("[\(self)] onDisappear!") }
         }
+    }
+}
+
+struct Tab1_View_Previews: PreviewProvider {
+    static var previews: some View {
+        AppView.Tab1_View()
     }
 }

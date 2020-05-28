@@ -22,15 +22,6 @@ extension AppView {
                 .onDisappear { print("[\(self)] onDisappear!") }
             }
         }
-    
-        #if DEBUG
-        struct Tab5ContentViewB_View_Previews : PreviewProvider {
-            static var previews: some View {
-                ContentViewB(viewRouter: ViewRouter())
-            }
-        }
-        #endif
-    
     }
 }
 

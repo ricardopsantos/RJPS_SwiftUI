@@ -101,3 +101,11 @@ extension AppView {
         }
     }
 }
+
+#if DEBUG
+struct Tab2_View_Previews: PreviewProvider {
+    static var previews: some View {
+        AppView.Tab2_View()
+    }
+}
+#endif
