@@ -1,8 +1,3 @@
-# RJPS_SwiftUI
-
-Just playing with Swift UI concepts
-
-
 <p align="center">
    <a href="https://developer.apple.com/swift/">
       <img src="https://img.shields.io/badge/Swift-5.1-orange.svg?style=flat" alt="Swift 5.1">
@@ -25,4 +20,6 @@ Just playing with Swift UI concepts
 
 ## Preview
 
+<p align="center">
 ![Preview](assets/sample.gif)
+</p>
