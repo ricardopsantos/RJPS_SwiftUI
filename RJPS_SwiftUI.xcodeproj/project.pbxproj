@@ -65,6 +65,11 @@
 		9FE50979231FB10E0081E1DB /* TabView_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView_View.swift; sourceTree = "<group>"; };
 		9FE5097D231FB14E0081E1DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70C19DA24806D2700125742 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D79FA9DD24928F43008D76F2 /* Recreating.instagram.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.instagram.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.LockScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D79FA9E22492928F008D76F2 /* Recreating.HomeScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.HomeScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D79FA9E3249292DA008D76F2 /* Recreating.Twitter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.Twitter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D79FA9E424929348008D76F2 /* Recreating.Settings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.Settings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D7BC2012247EBC9300D546F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BC2013247EBC9300D546F0 /* RJPS_SwiftUI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = RJPS_SwiftUI.plist; path = RJPS_SwiftUI/SupportingFiles/RJPS_SwiftUI.plist; sourceTree = SOURCE_ROOT; };
 		D7BC2014247EBC9300D546F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RJPS_SwiftUI/SupportingFiles/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -93,6 +98,7 @@
 		9F288F1B20F8089F008A9539 = {
 			isa = PBXGroup;
 			children = (
+				D79FA9DE249290DE008D76F2 /* Playgrounds */,
 				D70C19DA24806D2700125742 /* README.md */,
 				9F288F2620F8089F008A9539 /* RJPS_SwiftUI */,
 				9F46132D2321817700F24162 /* SupportingFiles */,
@@ -208,6 +214,18 @@
 				9F4A421723228F6B00FE5BC7 /* Tab_5 */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		D79FA9DE249290DE008D76F2 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				D79FA9E424929348008D76F2 /* Recreating.Settings.playground */,
+				D79FA9E3249292DA008D76F2 /* Recreating.Twitter.playground */,
+				D79FA9E22492928F008D76F2 /* Recreating.HomeScreen.playground */,
+				D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */,
+				D79FA9DD24928F43008D76F2 /* Recreating.instagram.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 		D7BC2010247EBC9300D546F0 /* Base.lproj */ = {
