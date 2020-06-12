@@ -28,8 +28,13 @@
 		D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */; };
 		D7B5601E2493A16600E9EC7D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */; };
 		D7B560202493A18100E9EC7D /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
+		D7B560252493AA5400E9EC7D /* Recreating.Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560242493AA5400E9EC7D /* Recreating.Settings.swift */; };
+		D7B560272493AB1500E9EC7D /* Recreating.Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560262493AB1500E9EC7D /* Recreating.Twitter.swift */; };
+		D7B560292493AC1900E9EC7D /* Recreating.Instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560282493AC1900E9EC7D /* Recreating.Instagram.swift */; };
+		D7B5602B2493AED400E9EC7D /* Recreating.HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602A2493AED400E9EC7D /* Recreating.HomeScreen.swift */; };
+		D7B5602D2493AF6800E9EC7D /* Recreating.LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602C2493AF6800E9EC7D /* Recreating.LockScreen.swift */; };
+		D7B560302493B01700E9EC7D /* DebugFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602F2493B01700E9EC7D /* DebugFonts.swift */; };
 		D7BC2015247EBC9300D546F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2011247EBC9300D546F0 /* LaunchScreen.storyboard */; };
-		D7BC2016247EBC9300D546F0 /* RJPS_SwiftUI.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2013247EBC9300D546F0 /* RJPS_SwiftUI.plist */; };
 		D7BC2017247EBC9300D546F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2014247EBC9300D546F0 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -69,16 +74,18 @@
 		9FE50979231FB10E0081E1DB /* TabView_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView_View.swift; sourceTree = "<group>"; };
 		9FE5097D231FB14E0081E1DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70C19DA24806D2700125742 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D79FA9DD24928F43008D76F2 /* Recreating.instagram.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.instagram.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.LockScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D79FA9E22492928F008D76F2 /* Recreating.HomeScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.HomeScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D79FA9E3249292DA008D76F2 /* Recreating.Twitter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.Twitter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		D79FA9E424929348008D76F2 /* Recreating.Settings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.Settings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		D7B5601F2493A18100E9EC7D /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		D7B560222493A2EA00E9EC7D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D7B560242493AA5400E9EC7D /* Recreating.Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Settings.swift; sourceTree = "<group>"; };
+		D7B560262493AB1500E9EC7D /* Recreating.Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Twitter.swift; sourceTree = "<group>"; };
+		D7B560282493AC1900E9EC7D /* Recreating.Instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Instagram.swift; sourceTree = "<group>"; };
+		D7B5602A2493AED400E9EC7D /* Recreating.HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.HomeScreen.swift; sourceTree = "<group>"; };
+		D7B5602C2493AF6800E9EC7D /* Recreating.LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.LockScreen.swift; sourceTree = "<group>"; };
+		D7B5602F2493B01700E9EC7D /* DebugFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFonts.swift; sourceTree = "<group>"; };
 		D7BC2012247EBC9300D546F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BC2013247EBC9300D546F0 /* RJPS_SwiftUI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = RJPS_SwiftUI.plist; path = RJPS_SwiftUI/SupportingFiles/RJPS_SwiftUI.plist; sourceTree = SOURCE_ROOT; };
 		D7BC2014247EBC9300D546F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RJPS_SwiftUI/SupportingFiles/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -207,6 +214,7 @@
 		9FA68D4B231FB7CD007353EF /* Comom */ = {
 			isa = PBXGroup;
 			children = (
+				D7B5602F2493B01700E9EC7D /* DebugFonts.swift */,
 				D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */,
 				D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */,
 				D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */,
@@ -220,6 +228,7 @@
 		9FE50976231FB10E0081E1DB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D7B560232493AA4100E9EC7D /* Recreating */,
 				9FE50979231FB10E0081E1DB /* TabView_View.swift */,
 				9F85457A2321194000F08379 /* Tab_1 */,
 				9F4A421423228F4700FE5BC7 /* Tab_2 */,
@@ -233,13 +242,21 @@
 		D79FA9DE249290DE008D76F2 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				D79FA9E424929348008D76F2 /* Recreating.Settings.playground */,
-				D79FA9E3249292DA008D76F2 /* Recreating.Twitter.playground */,
-				D79FA9E22492928F008D76F2 /* Recreating.HomeScreen.playground */,
 				D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */,
-				D79FA9DD24928F43008D76F2 /* Recreating.instagram.playground */,
 			);
 			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		D7B560232493AA4100E9EC7D /* Recreating */ = {
+			isa = PBXGroup;
+			children = (
+				D7B560242493AA5400E9EC7D /* Recreating.Settings.swift */,
+				D7B560262493AB1500E9EC7D /* Recreating.Twitter.swift */,
+				D7B560282493AC1900E9EC7D /* Recreating.Instagram.swift */,
+				D7B5602A2493AED400E9EC7D /* Recreating.HomeScreen.swift */,
+				D7B5602C2493AF6800E9EC7D /* Recreating.LockScreen.swift */,
+			);
+			path = Recreating;
 			sourceTree = "<group>";
 		};
 		D7BC2010247EBC9300D546F0 /* Base.lproj */ = {
@@ -281,7 +298,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Ricardo P Santos";
 				TargetAttributes = {
 					9FE1438E21AF2F520026BDFC = {
@@ -312,7 +329,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7BC2016247EBC9300D546F0 /* RJPS_SwiftUI.plist in Resources */,
 				9FB193512326BBCF00721481 /* Combine.png in Resources */,
 				D7BC2017247EBC9300D546F0 /* Assets.xcassets in Resources */,
 				D7BC2015247EBC9300D546F0 /* LaunchScreen.storyboard in Resources */,
@@ -365,15 +381,20 @@
 			files = (
 				9FBEA8A02322944F00E4B6FE /* ActivityIndicator.swift in Sources */,
 				9FA68D4F23204DE3007353EF /* Tab4_View.swift in Sources */,
+				D7B5602B2493AED400E9EC7D /* Recreating.HomeScreen.swift in Sources */,
 				9FE5097E231FB14E0081E1DB /* AppDelegate.swift in Sources */,
 				D7B560202493A18100E9EC7D /* typelias.swift in Sources */,
 				9FE5097A231FB10E0081E1DB /* Tab2_View.swift in Sources */,
+				D7B560302493B01700E9EC7D /* DebugFonts.swift in Sources */,
+				D7B560252493AA5400E9EC7D /* Recreating.Settings.swift in Sources */,
 				9F4A421B23228FC600FE5BC7 /* Tab1_View.swift in Sources */,
 				D7B5601A2493A0B300E9EC7D /* UIView+Extensions.swift in Sources */,
 				9FE143C021AF2F520026BDFC /* Auxiliar.swift in Sources */,
 				D7B5601E2493A16600E9EC7D /* UIColor+Extensions.swift in Sources */,
+				D7B560272493AB1500E9EC7D /* Recreating.Twitter.swift in Sources */,
 				9F4A4221232290BE00FE5BC7 /* Tab5_ViewRouter.swift in Sources */,
 				9F4A4222232290BE00FE5BC7 /* Tab5_View.swift in Sources */,
+				D7B560292493AC1900E9EC7D /* Recreating.Instagram.swift in Sources */,
 				9FE5097B231FB10E0081E1DB /* Tab3_View.swift in Sources */,
 				9F4A42252322914D00FE5BC7 /* Tab4ContentView_View.swift in Sources */,
 				9F4A4223232290BE00FE5BC7 /* Tab5ContentViewA_View.swift in Sources */,
@@ -381,6 +402,7 @@
 				9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */,
 				9FA68D4D231FEE58007353EF /* SwiftUIFactory.swift in Sources */,
 				D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */,
+				D7B5602D2493AF6800E9EC7D /* Recreating.LockScreen.swift in Sources */,
 				9F4A4220232290BE00FE5BC7 /* Tab5ContentViewB_View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +488,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/RJPS_SwiftUI/SupportingFiles/RJPS_SwiftUI.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
