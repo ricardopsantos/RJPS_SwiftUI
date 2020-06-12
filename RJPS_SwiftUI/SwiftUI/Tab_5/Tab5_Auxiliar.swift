@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum Tab5Pages : String {
-    case page1 = "page1"
-    case page2 = "page2"
+enum Tab5Pages: String {
+    case page1
+    case page2
 }

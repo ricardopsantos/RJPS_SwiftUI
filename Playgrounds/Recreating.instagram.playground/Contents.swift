@@ -30,11 +30,11 @@ struct Screen: View {
 struct InstagramHome: View {
     var body: some View {
         NavigationView {
-            ScrollView (.vertical, showsIndicators: false) {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                    ScrollView (.horizontal, showsIndicators: false) {
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach (0..<10) {_ in
+                            ForEach(0..<10) {_ in
                                 StatusCard()
                             }
                         }.animation(.spring())
@@ -44,14 +44,16 @@ struct InstagramHome: View {
                         PostCard()
                     }
                 }
-            }.navigationBarTitle("Instagram", displayMode: .inline).navigationBarItems(leading: Image(systemName: "camera").resizable().frame(width: 30, height: 24), trailing: Image(systemName: "paperplane").resizable().frame(width: 24, height: 24))
+            }
+            .navigationBarTitle("Instagram", displayMode: .inline)
+                .navigationBarItems(leading: Image(systemName: "camera").resizable().frame(width: 30, height: 24), trailing: Image(systemName: "paperplane").resizable().frame(width: 24, height: 24))
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct StatusCard: View {
     var body: some View {
-        VStack (spacing: 2) {
+        VStack(spacing: 2) {
             Image(systemName: "person.crop.circle.fill").resizable().frame(width: 60, height: 60).clipShape(Circle())
             Text("user").font(.footnote).fontWeight(.light)
         }.padding(.horizontal).padding(.top, 12)
@@ -60,10 +62,10 @@ struct StatusCard: View {
 
 struct PostCard: View {
     var body: some View {
-        VStack (alignment: .leading) {
+        VStack(alignment: .leading) {
             HStack {
                 Image(systemName: "person.crop.circle.fill").resizable().frame(width: 30, height: 30).clipShape(Circle())
-                VStack (alignment: .leading) {
+                VStack(alignment: .leading) {
                     Text("instagram_user").bold()
                     Text("Manhattan, New York").foregroundColor(.secondary).font(.footnote)
                 }
@@ -73,22 +75,22 @@ struct PostCard: View {
                 }.foregroundColor(.primary)
             }
             Image(systemName: "paperplane").resizable().frame(height: 350).aspectRatio(contentMode: .fit).padding(.horizontal, -12)
-            HStack (spacing: 20) {
-                Button(action: {}) {
+            HStack(spacing: 20) {
+                Button(action: { }) {
                     Image(systemName: "heart").resizable().frame(width: 24, height: 24)
                 }.foregroundColor(.primary)
-                Button(action: {}) {
+                Button(action: { }) {
                     Image(systemName: "message").resizable().frame(width: 24, height: 24)
                 }.foregroundColor(.primary)
-                Button(action: {}) {
+                Button(action: { }) {
                     Image(systemName: "paperplane").resizable().frame(width: 24, height: 24)
                 }.foregroundColor(.primary)
                 Spacer()
-                Button(action: {}) {
+                Button(action: { }) {
                     Image(systemName: "bookmark").resizable().frame(width: 20, height: 24)
                 }.foregroundColor(.primary)
             }.padding(.top, 4)
-            VStack (alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text("34 likes").font(.subheadline).bold()
                 HStack {
                     Text("instagram_user").font(.subheadline).bold()
@@ -99,7 +101,5 @@ struct PostCard: View {
         }.padding(.horizontal, 12).padding(.vertical, 6)
     }
 }
-
-
 
 PlaygroundPage.current.setLiveView(Screen())

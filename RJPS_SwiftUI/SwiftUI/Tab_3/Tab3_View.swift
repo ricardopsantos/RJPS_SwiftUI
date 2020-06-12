@@ -9,17 +9,17 @@ import UIKit
 import Foundation
 import SwiftUI
 
-extension AppView {
+extension V {
     struct Tab3_View: View {
         @State private var detail: SomeIdentifiableStruct?
         var body: some View {
             ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
-                VStack (alignment: .center) {
+                VStack(alignment: .center) {
                     Text("Present sheet").font(.title).foregroundColor(Color.purple).padding(20)
                     SwiftUIFactory.ButtonView(title: "Click Me", action: {
                         self.detail = SomeIdentifiableStruct(someParam: "Details!")
                     }).sheet(item: $detail, content: { detail in
-                        AppView.MiscPresentModelDetails_View(param: detail.someParam)
+                        V.MiscPresentModelDetails_View(param: detail.someParam)
                         }).padding(20)
                 }.background(UIColor.Stack.debugColor)
                }
@@ -30,9 +30,9 @@ extension AppView {
 }
 
 // MARK: MiscPresentModelDetails_View
-extension AppView {
+extension V {
     struct MiscPresentModelDetails_View: View {
-        let param : String
+        let param: String
         var body: some View {
             ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
                 Text(param)
@@ -43,10 +43,10 @@ extension AppView {
     }
 }
 
-#if DEBUG
+// MARK: - Preview
+
 struct Tab3_View_Previews: PreviewProvider {
     static var previews: some View {
-        AppView.Tab3_View()
+        V.Tab3_View()
     }
 }
-#endif

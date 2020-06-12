@@ -19,3 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+// MARK: - Preview
+
+struct AppDelegate_Previews: PreviewProvider {
+    static var previews: some View {
+        V.TabView_View()
+    }
+}

@@ -15,7 +15,6 @@ We’re building the logic of a program, without describing its control flow. Th
 __Combine = Publishers + Subscribers + Operators__
 
 
-
 ### Combine Publisher
 
 Publisher sends sequences of values over time to one or more Subscribers. Combine publishers conform to the following protocol:

@@ -43,12 +43,12 @@ custom_rules:
         message: "Use a DateFormats on AppContants.Date or DateFormatterTypes"
         severity: error
 
-    no_print:
-        included: ".*\\.swift"
-        name: "Fordiden print"
-        regex: "print[(]"
-        message: "Use AppLogger..."
-        severity: warning
+#    no_print:
+#        included: ".*\\.swift"
+#        name: "Fordiden print"
+#        regex: "print[(]"
+#        message: "Use AppLogger..."
+#        severity: warning
 
     no_hardCodedImages:
         included: ".*\\.swift"

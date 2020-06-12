@@ -24,6 +24,10 @@
 		9FE5097B231FB10E0081E1DB /* Tab3_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE50978231FB10E0081E1DB /* Tab3_View.swift */; };
 		9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE50979231FB10E0081E1DB /* TabView_View.swift */; };
 		9FE5097E231FB14E0081E1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE5097D231FB14E0081E1DB /* AppDelegate.swift */; };
+		D7B5601A2493A0B300E9EC7D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */; };
+		D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */; };
+		D7B5601E2493A16600E9EC7D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */; };
+		D7B560202493A18100E9EC7D /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D7BC2015247EBC9300D546F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2011247EBC9300D546F0 /* LaunchScreen.storyboard */; };
 		D7BC2016247EBC9300D546F0 /* RJPS_SwiftUI.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2013247EBC9300D546F0 /* RJPS_SwiftUI.plist */; };
 		D7BC2017247EBC9300D546F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2014247EBC9300D546F0 /* Assets.xcassets */; };
@@ -70,6 +74,11 @@
 		D79FA9E22492928F008D76F2 /* Recreating.HomeScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.HomeScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D79FA9E3249292DA008D76F2 /* Recreating.Twitter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.Twitter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D79FA9E424929348008D76F2 /* Recreating.Settings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.Settings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
+		D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		D7B5601F2493A18100E9EC7D /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
+		D7B560222493A2EA00E9EC7D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D7BC2012247EBC9300D546F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BC2013247EBC9300D546F0 /* RJPS_SwiftUI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = RJPS_SwiftUI.plist; path = RJPS_SwiftUI/SupportingFiles/RJPS_SwiftUI.plist; sourceTree = SOURCE_ROOT; };
 		D7BC2014247EBC9300D546F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RJPS_SwiftUI/SupportingFiles/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -98,8 +107,10 @@
 		9F288F1B20F8089F008A9539 = {
 			isa = PBXGroup;
 			children = (
-				D79FA9DE249290DE008D76F2 /* Playgrounds */,
 				D70C19DA24806D2700125742 /* README.md */,
+				D7B560222493A2EA00E9EC7D /* .swiftlint.yml */,
+				9F4613292321814F00F24162 /* Docs */,
+				D79FA9DE249290DE008D76F2 /* Playgrounds */,
 				9F288F2620F8089F008A9539 /* RJPS_SwiftUI */,
 				9F46132D2321817700F24162 /* SupportingFiles */,
 				9F288F2520F8089F008A9539 /* Products */,
@@ -118,9 +129,8 @@
 		9F288F2620F8089F008A9539 /* RJPS_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				9F4613292321814F00F24162 /* Docs */,
 				9FE5097D231FB14E0081E1DB /* AppDelegate.swift */,
-				9FA68D4B231FB7CD007353EF /* Utils */,
+				9FA68D4B231FB7CD007353EF /* Comom */,
 				9FE50976231FB10E0081E1DB /* SwiftUI */,
 			);
 			path = RJPS_SwiftUI;
@@ -194,13 +204,17 @@
 			path = Tab_1;
 			sourceTree = "<group>";
 		};
-		9FA68D4B231FB7CD007353EF /* Utils */ = {
+		9FA68D4B231FB7CD007353EF /* Comom */ = {
 			isa = PBXGroup;
 			children = (
+				D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */,
+				D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */,
+				D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */,
+				D7B5601F2493A18100E9EC7D /* typelias.swift */,
 				9F288F2720F8089F008A9539 /* Auxiliar.swift */,
 				9FA68D4C231FEE58007353EF /* SwiftUIFactory.swift */,
 			);
-			path = Utils;
+			path = Comom;
 			sourceTree = "<group>";
 		};
 		9FE50976231FB10E0081E1DB /* SwiftUI */ = {
@@ -249,6 +263,7 @@
 				9FE143EC21AF2F520026BDFC /* Resources */,
 				9F69CB1922BE854B008D305D /* Embed Frameworks */,
 				9F5D1D9E22E6138900C0AF38 /* ShellScript */,
+				D7B560212493A2A100E9EC7D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -324,6 +339,23 @@
 			shellPath = /bin/sh;
 			shellScript = "#buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\n#buildNumber=$(($buildNumber + 1))\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n\n/usr/local/bin/carthage copy-frameworks\n\nexit\n";
 		};
+		D7B560212493A2A100E9EC7D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    echo \"will lint? un comment! next line\"\nswiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -334,9 +366,12 @@
 				9FBEA8A02322944F00E4B6FE /* ActivityIndicator.swift in Sources */,
 				9FA68D4F23204DE3007353EF /* Tab4_View.swift in Sources */,
 				9FE5097E231FB14E0081E1DB /* AppDelegate.swift in Sources */,
+				D7B560202493A18100E9EC7D /* typelias.swift in Sources */,
 				9FE5097A231FB10E0081E1DB /* Tab2_View.swift in Sources */,
 				9F4A421B23228FC600FE5BC7 /* Tab1_View.swift in Sources */,
+				D7B5601A2493A0B300E9EC7D /* UIView+Extensions.swift in Sources */,
 				9FE143C021AF2F520026BDFC /* Auxiliar.swift in Sources */,
+				D7B5601E2493A16600E9EC7D /* UIColor+Extensions.swift in Sources */,
 				9F4A4221232290BE00FE5BC7 /* Tab5_ViewRouter.swift in Sources */,
 				9F4A4222232290BE00FE5BC7 /* Tab5_View.swift in Sources */,
 				9FE5097B231FB10E0081E1DB /* Tab3_View.swift in Sources */,
@@ -345,6 +380,7 @@
 				9F4A422723229B1F00FE5BC7 /* Tab5_Auxiliar.swift in Sources */,
 				9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */,
 				9FA68D4D231FEE58007353EF /* SwiftUIFactory.swift in Sources */,
+				D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */,
 				9F4A4220232290BE00FE5BC7 /* Tab5ContentViewB_View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

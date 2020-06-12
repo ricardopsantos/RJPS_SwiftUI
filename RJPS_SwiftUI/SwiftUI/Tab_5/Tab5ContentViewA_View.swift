@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-extension AppView {
+extension V {
 
-    struct Tab5ContentViewA_View : View {
+    struct Tab5ContentViewA_View: View {
         @ObservedObject var viewRouter: Tab5_ViewRouter
         var body: some View {
             VStack {
@@ -26,4 +26,10 @@ extension AppView {
     
 }
 
+// MARK: - Preview
 
+struct Tab5ContentViewA_View_Previews: PreviewProvider {
+    static var previews: some View {
+        V.Tab5ContentViewA_View(viewRouter: Tab5_ViewRouter())
+    }
+}

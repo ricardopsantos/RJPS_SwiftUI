@@ -10,7 +10,7 @@ import PlaygroundSupport
 
 struct Screen: View {
     var body: some View {
-        ZStack (alignment: .bottomTrailing) {
+        ZStack(alignment: .bottomTrailing) {
             TabView {
                 Home().tabItem {
                     Image(systemName: "house.fill")
@@ -25,7 +25,7 @@ struct Screen: View {
                     Image(systemName: "envelope")
                 }
             }
-            Button(action:{}) {
+            Button(action: { }) {
                 Image(systemName: "paperplane.fill").resizable().frame(width: 20, height: 20).foregroundColor(.white).padding()
             }.background(Color.blue).clipShape(Circle()).padding().padding(.vertical, 50)
         }
@@ -35,8 +35,8 @@ struct Screen: View {
         var body: some View {
             VStack {
                 NavigationView {
-                    ScrollView (.vertical, showsIndicators: false) {
-                        VStack (alignment: .leading) {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack(alignment: .leading) {
                             Post()
                             Divider()
                             Post()
@@ -48,7 +48,9 @@ struct Screen: View {
                             Post()
                             Divider()
                         }
-                    }.navigationBarTitle("Home", displayMode: .inline).navigationBarItems(leading: Image(systemName: "person.crop.circle.fill").resizable().frame(width: 35, height: 35).clipShape(Circle()), trailing: Image(systemName: "sparkles").resizable().frame(width: 25, height: 25).foregroundColor(.blue).clipShape(Circle()))
+                    }
+                    .navigationBarTitle("Home", displayMode: .inline)
+                    .navigationBarItems(leading: Image(systemName: "person.crop.circle.fill").resizable().frame(width: 35, height: 35).clipShape(Circle()), trailing: Image(systemName: "sparkles").resizable().frame(width: 25, height: 25).foregroundColor(.blue).clipShape(Circle()))
                 }.navigationViewStyle(StackNavigationViewStyle())
             }
         }
@@ -56,11 +58,11 @@ struct Screen: View {
 
     struct Post: View {
         var body: some View {
-            HStack (alignment: .top) {
+            HStack(alignment: .top) {
                 VStack {
                     Image(systemName: "person.crop.circle.fill").resizable().frame(width: 50, height: 50).clipShape(Circle())
                 }
-                VStack (alignment: .leading) {
+                VStack(alignment: .leading) {
                     HStack {
                         Text("Twitter User").fontWeight(.heavy)
                         Text("@twitter_user").foregroundColor(.secondary)
@@ -75,20 +77,20 @@ struct Screen: View {
 
     struct Buttons: View {
         var body: some View {
-            HStack (spacing: 40) {
-                Button(action: {}) {
+            HStack(spacing: 40) {
+                Button(action: { }) {
                     Image(systemName: "message")
                 }.foregroundColor(.gray)
 
-                Button(action: {}) {
+                Button(action: { }) {
                     Image(systemName: "arrow.2.squarepath")
                 }.foregroundColor(.gray)
 
-                Button(action: {}) {
+                Button(action: { }) {
                     Image(systemName: "heart")
                 }.foregroundColor(.gray)
 
-                Button(action: {}) {
+                Button(action: { }) {
                     Image(systemName: "square.and.arrow.up")
                 }.foregroundColor(.gray)
             }

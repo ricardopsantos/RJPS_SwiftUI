@@ -11,7 +11,7 @@ import Combine
 import SwiftUI
 
 class Tab5_ViewRouter: ObservableObject {
-    let objectWillChange = PassthroughSubject<Tab5_ViewRouter,Never>() // DONT CHANGE NAME, else Stops working
+    let objectWillChange = PassthroughSubject<Tab5_ViewRouter, Never>() // DONT CHANGE NAME, else Stops working
     var currentPage: Tab5Pages = .page1 {
         didSet {
             objectWillChange.send(self)

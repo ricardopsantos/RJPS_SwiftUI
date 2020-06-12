@@ -10,15 +10,14 @@ import Foundation
 import SwiftUI
 import Combine
 
-
-
 // MARK: Tab1_View
-extension AppView {
+
+extension V {
     struct Tab1_View: View {
         var body : some View {
             ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
-                VStack (alignment: .center, spacing: 20) {
-                    AppView.ActivityIndicator(isAnimating: true)
+                VStack(alignment: .center, spacing: 20) {
+                    V.ActivityIndicator(isAnimating: true)
                     Text("Tab 1").font(.title).padding(50)
                 }
             }
@@ -28,8 +27,10 @@ extension AppView {
     }
 }
 
+// MARK: - Preview
+
 struct Tab1_View_Previews: PreviewProvider {
     static var previews: some View {
-        AppView.Tab1_View()
+        V.Tab1_View()
     }
 }

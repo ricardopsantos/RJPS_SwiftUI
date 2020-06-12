@@ -10,11 +10,11 @@ import Foundation
 import SwiftUI
 import Combine
 
-extension AppView {
+extension V {
     struct ActivityIndicator: UIViewRepresentable {
-        /*@Binding*/ var isAnimating: Bool
+        var isAnimating: Bool
         func makeUIView(context: Context) -> UIActivityIndicatorView {
-            return UIActivityIndicatorView(style:.large)
+            return UIActivityIndicatorView(style: .large)
         }
 
         func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
@@ -26,10 +26,11 @@ extension AppView {
         }
     }
 }
-#if DEBUG
+
+// MARK: - Preview
+
 struct ActivityIndicator_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        V.ActivityIndicator(isAnimating: true)
     }
 }
-#endif

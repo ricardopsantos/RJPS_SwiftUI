@@ -9,16 +9,16 @@ import UIKit
 import Foundation
 import SwiftUI
 
-extension AppView {
+extension V {
     struct Tab4_View: View {
         let users = (1...10).map { some in "User \(some)" }
         var body : some View {
             ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
                 NavigationView {
-                    VStack (alignment: .center, spacing: 20) {
+                    VStack(alignment: .center, spacing: 40) {
                         List(users, id: \.self) { user in
                             NavigationLink(destination: Text("Detail for \(user)")) {
-                                AppView.Tab4Details_View(user: user)
+                                V.Tab4Details_View(user: user)
                             }
                             }.navigationBarTitle("Select a user")
                     }
@@ -30,10 +30,10 @@ extension AppView {
     }
 }
 
-#if DEBUG
+// MARK: - Preview
+
 struct Tab4_View_Previews: PreviewProvider {
     static var previews: some View {
-        AppView.Tab4_View()
+        V.Tab4_View()
     }
 }
-#endif

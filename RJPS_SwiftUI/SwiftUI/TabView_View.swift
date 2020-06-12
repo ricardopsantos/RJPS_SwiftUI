@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-extension AppView {
+extension V {
     
     struct TabView_View: View {
       
@@ -18,7 +18,7 @@ extension AppView {
         var tab2 : some View { V.Tab2_View().tabItem({ Text("Tab_2") }).tag(2) }
         var tab3 : some View { V.Tab3_View().tabItem({ Text("Tab_3") }).tag(3) }
         var tab4 : some View { V.Tab4_View().tabItem({ Text("Tab_4") }).tag(4) }
-        var tab5 : some View { Tab5_View(viewRouter: Tab5_ViewRouter()).tabItem({ Text("Tab_5") }).tag(5) }
+        var tab5 : some View { V.Tab5_View(viewRouter: Tab5_ViewRouter()).tabItem({ Text("Tab_5") }).tag(5) }
 
         var titleView : some View {
              Text("SwiftUI TabBar App")
@@ -33,7 +33,7 @@ extension AppView {
         }
         
         var body : some View {
-            VStack (alignment: .center, spacing: 20) {
+            VStack(alignment: .center, spacing: 20) {
                 //ActivityIndicator()
                 titleView
                 Divider()
@@ -52,9 +52,8 @@ extension AppView {
     }
 }
 
-
 struct TabView_View_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        V.TabView_View()
     }
 }

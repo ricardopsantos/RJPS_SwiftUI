@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import SwiftUI
 
-extension AppView {
+extension V {
     
     struct Tab2_View: View {
         private var _background: Color = .green
@@ -18,7 +18,7 @@ extension AppView {
             List {
                     Text("List2.Item_1")
                     Text("List2.Item_2")
-                    HStack (alignment: .center, spacing: 10) {
+                    HStack(alignment: .center, spacing: 10) {
                         Image(systemName: "clock")
                         Text("List2.Item_3")
                     }
@@ -32,8 +32,7 @@ extension AppView {
         var someImage1: some View { return Image.cloud.foregroundColor(.red) }
         var someImage2: some View { return Image.cloud.resizable().scaledToFill().frame(height: 20).clipped() }
         var someBtn: some View {
-            Button(action:
-                {
+            Button(action: {
                 print("Tap!")
             }, label: {
                 Image(systemName: "clock")
@@ -54,7 +53,7 @@ extension AppView {
         }
         
         var viewHorizontalStack: some View {
-            HStack (alignment: .center, spacing: 10) {
+            HStack(alignment: .center, spacing: 10) {
             Spacer()
             someLabel
             Spacer()
@@ -68,9 +67,9 @@ extension AppView {
         }
         
         var viewVerticalStack: some View {
-            VStack (alignment: .center, spacing: 10) {
+            VStack(alignment: .center, spacing: 10) {
             someBtn
-            SwiftUIFactory.ButtonView(title:"Click here", action: {
+            SwiftUIFactory.ButtonView(title: "Click here", action: {
                 print("!action!")
             })
             }.background(UIColor.Stack.debugColor)
@@ -78,7 +77,7 @@ extension AppView {
         
         var body : some View {
             ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
-                VStack (alignment: .center, spacing: 10) {
+                VStack(alignment: .center, spacing: 10) {
                 Text("Sample SwiftUI elements").font(.title)
                 Divider().background(Color.clear)
                 viewHorizontalStack
@@ -102,10 +101,10 @@ extension AppView {
     }
 }
 
-#if DEBUG
+// MARK: - Preview
+
 struct Tab2_View_Previews: PreviewProvider {
     static var previews: some View {
-        AppView.Tab2_View()
+        V.Tab2_View()
     }
 }
-#endif
