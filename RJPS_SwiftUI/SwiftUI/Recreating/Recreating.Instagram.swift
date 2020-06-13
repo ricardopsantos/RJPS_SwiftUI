@@ -77,9 +77,7 @@ extension V {
                         Text("Manhattan, New York").foregroundColor(.secondary).font(.footnote)
                     }
                     Spacer()
-                    Button(action: {}) {
-                        Text("...")
-                    }.foregroundColor(.primary)
+                    Button(action: {}) { Text("...") }.foregroundColor(.primary)
                 }
                 Image(systemName: "paperplane").resizable().frame(height: 350).aspectRatio(contentMode: .fit).padding(.horizontal, -12)
                 HStack(spacing: 20) {

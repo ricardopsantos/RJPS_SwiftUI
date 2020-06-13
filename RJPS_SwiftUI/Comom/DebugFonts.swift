@@ -13,7 +13,7 @@ import Combine
 
 extension V {
     struct DebugFonts: View {
-        let size: CGFloat = 25
+        let size: CGFloat = 20
         var body: some View {
             ScrollView {
                 VStack {
@@ -27,8 +27,9 @@ extension V {
                     Text("system.heavy").font(.system(size: size, weight: .heavy))
                     Text("system.black").font(.system(size: size, weight: .black))
                 }
-                .padding(.vertical, 32)
-                .padding(.horizontal, 32)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 0)
+                Divider()
                 VStack {
                     Text("largeTitle").font(.largeTitle)
                     Text("title").font(.title)
@@ -39,14 +40,15 @@ extension V {
                     Text("footnote").font(.footnote)
                     Text("caption").font(.caption)
                 }
-                .padding(.vertical, 32)
-                .padding(.horizontal, 32)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 0)
+                Divider()
                 VStack {
                     Text("Regular Text")
                     Text("system.\(Int(size))").font(.system(size: size))
                 }
-                .padding(.vertical, 32)
-                .padding(.horizontal, 32)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 0)
             }
         }
     }

@@ -34,12 +34,13 @@ struct SwiftUIFactory {
 
 struct SwiftUIFactory_Previews: PreviewProvider {
     static var previews: some View {
-        VStack(alignment: .center, spacing: 20) {
-            Divider()
-            SwiftUIFactory.ButtonView(title: "Click here", action: {
-                print("!action!")
-            })
-            Divider()
+        ScrollView {
+            VStack {
+                SwiftUIFactory.ButtonView(title: "Title", action: {
+                    print("!action!")
+                })
+            }
         }
+
     }
 }
