@@ -24,6 +24,9 @@
 		9FE5097B231FB10E0081E1DB /* Tab3_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE50978231FB10E0081E1DB /* Tab3_View.swift */; };
 		9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE50979231FB10E0081E1DB /* TabView_View.swift */; };
 		9FE5097E231FB14E0081E1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE5097D231FB14E0081E1DB /* AppDelegate.swift */; };
+		D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23102497F68F00D24169 /* NetworkAgent.swift */; };
+		D7AA23162497F7DD00D24169 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23132497F7DD00D24169 /* GithubAPI.swift */; };
+		D7AA23172497F7DD00D24169 /* NetworkAgentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23142497F7DD00D24169 /* NetworkAgentTest.swift */; };
 		D7B5601A2493A0B300E9EC7D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */; };
 		D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */; };
 		D7B5601E2493A16600E9EC7D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */; };
@@ -36,6 +39,7 @@
 		D7B560302493B01700E9EC7D /* DebugFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602F2493B01700E9EC7D /* DebugFonts.swift */; };
 		D7BC2015247EBC9300D546F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2011247EBC9300D546F0 /* LaunchScreen.storyboard */; };
 		D7BC2017247EBC9300D546F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BC2014247EBC9300D546F0 /* Assets.xcassets */; };
+		D7C9EA5B24A2B7A300FF80BD /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +79,11 @@
 		9FE5097D231FB14E0081E1DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70C19DA24806D2700125742 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.LockScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D7AA23102497F68F00D24169 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
+		D7AA23132497F7DD00D24169 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		D7AA23142497F7DD00D24169 /* NetworkAgentTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAgentTest.swift; sourceTree = "<group>"; };
+		D7AA23182497FAD900D24169 /* NetworkAgentTutorial.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = NetworkAgentTutorial.pdf; sourceTree = "<group>"; };
+		D7AA23192497FCF100D24169 /* Infinite List Scroll.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Infinite List Scroll.pdf"; sourceTree = "<group>"; };
 		D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -89,6 +98,7 @@
 		D7BC2012247EBC9300D546F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7BC2013247EBC9300D546F0 /* RJPS_SwiftUI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = RJPS_SwiftUI.plist; path = RJPS_SwiftUI/SupportingFiles/RJPS_SwiftUI.plist; sourceTree = SOURCE_ROOT; };
 		D7BC2014247EBC9300D546F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RJPS_SwiftUI/SupportingFiles/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,7 @@
 		9F288F2620F8089F008A9539 /* RJPS_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D7AA230E2497F67B00D24169 /* Utils */,
 				9FE5097D231FB14E0081E1DB /* AppDelegate.swift */,
 				9FA68D4B231FB7CD007353EF /* Comom */,
 				9FE50976231FB10E0081E1DB /* SwiftUI */,
@@ -247,6 +258,26 @@
 			path = Playgrounds;
 			sourceTree = "<group>";
 		};
+		D7AA230E2497F67B00D24169 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D7AA230F2497F68400D24169 /* NetworkAgent */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D7AA230F2497F68400D24169 /* NetworkAgent */ = {
+			isa = PBXGroup;
+			children = (
+				D7AA23182497FAD900D24169 /* NetworkAgentTutorial.pdf */,
+				D7AA23192497FCF100D24169 /* Infinite List Scroll.pdf */,
+				D7AA23102497F68F00D24169 /* NetworkAgent.swift */,
+				D7AA23132497F7DD00D24169 /* GithubAPI.swift */,
+				D7AA23142497F7DD00D24169 /* NetworkAgentTest.swift */,
+			);
+			path = NetworkAgent;
+			sourceTree = "<group>";
+		};
 		D7B560232493AA4100E9EC7D /* Recreating */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +286,7 @@
 				D7B560282493AC1900E9EC7D /* Recreating.Instagram.swift */,
 				D7B5602A2493AED400E9EC7D /* Recreating.HomeScreen.swift */,
 				D7B5602C2493AF6800E9EC7D /* Recreating.LockScreen.swift */,
+				D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */,
 			);
 			path = Recreating;
 			sourceTree = "<group>";
@@ -386,6 +418,7 @@
 				D7B560202493A18100E9EC7D /* typelias.swift in Sources */,
 				9FE5097A231FB10E0081E1DB /* Tab2_View.swift in Sources */,
 				D7B560302493B01700E9EC7D /* DebugFonts.swift in Sources */,
+				D7AA23172497F7DD00D24169 /* NetworkAgentTest.swift in Sources */,
 				D7B560252493AA5400E9EC7D /* Recreating.Settings.swift in Sources */,
 				9F4A421B23228FC600FE5BC7 /* Tab1_View.swift in Sources */,
 				D7B5601A2493A0B300E9EC7D /* UIView+Extensions.swift in Sources */,
@@ -396,12 +429,15 @@
 				9F4A4222232290BE00FE5BC7 /* Tab5_View.swift in Sources */,
 				D7B560292493AC1900E9EC7D /* Recreating.Instagram.swift in Sources */,
 				9FE5097B231FB10E0081E1DB /* Tab3_View.swift in Sources */,
+				D7C9EA5B24A2B7A300FF80BD /* Recreating.Tinder.swift in Sources */,
+				D7AA23162497F7DD00D24169 /* GithubAPI.swift in Sources */,
 				9F4A42252322914D00FE5BC7 /* Tab4ContentView_View.swift in Sources */,
 				9F4A4223232290BE00FE5BC7 /* Tab5ContentViewA_View.swift in Sources */,
 				9F4A422723229B1F00FE5BC7 /* Tab5_Auxiliar.swift in Sources */,
 				9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */,
 				9FA68D4D231FEE58007353EF /* SwiftUIFactory.swift in Sources */,
 				D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */,
+				D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */,
 				D7B5602D2493AF6800E9EC7D /* Recreating.LockScreen.swift in Sources */,
 				9F4A4220232290BE00FE5BC7 /* Tab5ContentViewB_View.swift in Sources */,
 			);

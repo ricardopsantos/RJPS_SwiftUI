@@ -55,7 +55,7 @@ custom_rules:
         name: "Fordiden hardCoded images"
         regex: "(image|[(]named]|imageLiteralResourceName|highlightedResource|resourceName){1}[ ]*[:][ ]*[\"]"
         message: "Don't use hardCoded images"
-        severity: error
+        severity: warning
 
 #numbers_smell:
 #    regex: '(return |case |\w\(|: |\?\? |\, |== |<=? |>=? |\+= |\-= |\/= |\*= |%= |\w\.\w+ = )\(*-?\d{2,}'
