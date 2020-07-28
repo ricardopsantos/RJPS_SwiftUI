@@ -32,9 +32,11 @@
 		D78FABDA24D0BE7B0069809D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78FABD624D0BE7B0069809D /* Assets.xcassets */; };
 		D78FABDB24D0BE7B0069809D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78FABD724D0BE7B0069809D /* LaunchScreen.storyboard */; };
 		D78FABDC24D0BE7B0069809D /* RJPS_SwiftUI.plist in Resources */ = {isa = PBXBuildFile; fileRef = D78FABD924D0BE7B0069809D /* RJPS_SwiftUI.plist */; };
-		D78FABDF24D0C0EF0069809D /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABDE24D0C0EF0069809D /* Reminder.swift */; };
+		D78FABDF24D0C0EF0069809D /* Recreating.Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABDE24D0C0EF0069809D /* Recreating.Reminder.swift */; };
 		D78FABE124D0C1780069809D /* Recreating.Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE024D0C1780069809D /* Recreating.Breathe.swift */; };
 		D78FABE324D0C2590069809D /* Recreating.AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE224D0C2590069809D /* Recreating.AppStore.swift */; };
+		D78FABE524D0C3710069809D /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE424D0C3710069809D /* SampleService.swift */; };
+		D78FABE724D0C5400069809D /* Debug_Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE624D0C5400069809D /* Debug_Shapes.swift */; };
 		D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23102497F68F00D24169 /* NetworkAgent.swift */; };
 		D7AA23162497F7DD00D24169 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23132497F7DD00D24169 /* GithubAPI.swift */; };
 		D7AA23172497F7DD00D24169 /* NetworkAgentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23142497F7DD00D24169 /* NetworkAgentTest.swift */; };
@@ -95,9 +97,11 @@
 		D78FABD624D0BE7B0069809D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D78FABD824D0BE7B0069809D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D78FABD924D0BE7B0069809D /* RJPS_SwiftUI.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RJPS_SwiftUI.plist; sourceTree = "<group>"; };
-		D78FABDE24D0C0EF0069809D /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		D78FABDE24D0C0EF0069809D /* Recreating.Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Reminder.swift; sourceTree = "<group>"; };
 		D78FABE024D0C1780069809D /* Recreating.Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Breathe.swift; sourceTree = "<group>"; };
 		D78FABE224D0C2590069809D /* Recreating.AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.AppStore.swift; sourceTree = "<group>"; };
+		D78FABE424D0C3710069809D /* SampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
+		D78FABE624D0C5400069809D /* Debug_Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug_Shapes.swift; sourceTree = "<group>"; };
 		D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.LockScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D7AA23102497F68F00D24169 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
 		D7AA23132497F7DD00D24169 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
@@ -259,7 +263,7 @@
 			children = (
 				D7AA230F2497F68400D24169 /* NetworkAgent */,
 				D78FABD124D0BC7B0069809D /* Samples.LangindPage.swift */,
-				D78FABDE24D0C0EF0069809D /* Reminder.swift */,
+				D78FABE424D0C3710069809D /* SampleService.swift */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -268,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				D7B5602F2493B01700E9EC7D /* DebugFonts_View.swift */,
+				D78FABE624D0C5400069809D /* Debug_Shapes.swift */,
 			);
 			path = Auxiliar;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */,
 				D78FABCF24D0B9540069809D /* Recreating.iPhone12ProWebsite.swift */,
 				D78FABE224D0C2590069809D /* Recreating.AppStore.swift */,
+				D78FABDE24D0C0EF0069809D /* Recreating.Reminder.swift */,
 			);
 			path = Recreating;
 			sourceTree = "<group>";
@@ -474,8 +480,10 @@
 				9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */,
 				9FA68D4D231FEE58007353EF /* SwiftUIFactory.swift in Sources */,
 				D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */,
-				D78FABDF24D0C0EF0069809D /* Reminder.swift in Sources */,
+				D78FABDF24D0C0EF0069809D /* Recreating.Reminder.swift in Sources */,
+				D78FABE724D0C5400069809D /* Debug_Shapes.swift in Sources */,
 				D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */,
+				D78FABE524D0C3710069809D /* SampleService.swift in Sources */,
 				D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */,
 				D7B5602D2493AF6800E9EC7D /* Recreating.LockScreen.swift in Sources */,
 				D78FABD024D0B9540069809D /* Recreating.iPhone12ProWebsite.swift in Sources */,
