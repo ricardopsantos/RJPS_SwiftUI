@@ -29,13 +29,12 @@ var rawData = """
 2F,04/05/2020,12:08:00,0:01:37,[ 913285634 ],560 » Extensão 560,,,0:00:02
 2F,04/05/2020,12:27:00,0:02:10,[ 218681107 ],560 » Extensão 560,,,0:00:02
 2F,04/05/2020,12:34:00,0:01:29,[ 218681107 ],560 » Extensão 560,,,0:00:02
-
 """
 
 import UIKit
 import PlaygroundSupport
 
-class MyViewController : UIViewController {
+class MyViewController: UIViewController {
     override func loadView() {
         let view = UIView()
         view.backgroundColor = .white

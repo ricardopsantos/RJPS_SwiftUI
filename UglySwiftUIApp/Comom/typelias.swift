@@ -10,6 +10,3 @@ import Foundation
 
 typealias V = AppView
 struct AppView { private init() {} }
-
-typealias M = Model
-struct Model { private init() {} }

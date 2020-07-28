@@ -46,6 +46,8 @@ extension V {
                 VStack {
                     Text("Regular Text")
                     Text("system.\(Int(size))").font(.system(size: size))
+                    Text("monospaced").font(.system(size: size, design: .monospaced))
+                    Text("monospaced.medium").font(.system(size: size, design: .monospaced)).fontWeight(.medium)
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal, 0)
