@@ -36,7 +36,12 @@
 		D78FABE124D0C1780069809D /* Recreating.Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE024D0C1780069809D /* Recreating.Breathe.swift */; };
 		D78FABE324D0C2590069809D /* Recreating.AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE224D0C2590069809D /* Recreating.AppStore.swift */; };
 		D78FABE524D0C3710069809D /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE424D0C3710069809D /* SampleService.swift */; };
-		D78FABE724D0C5400069809D /* Debug_Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE624D0C5400069809D /* Debug_Shapes.swift */; };
+		D78FABE724D0C5400069809D /* VisualDocs_Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE624D0C5400069809D /* VisualDocs_Shapes.swift */; };
+		D78FABE924D160500069809D /* Recreating.Maps_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABE824D160500069809D /* Recreating.Maps_I.swift */; };
+		D78FABEB24D1613E0069809D /* VisualDocs_LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABEA24D1613E0069809D /* VisualDocs_LinearGradient.swift */; };
+		D78FABED24D161FE0069809D /* VisualDocs_Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABEC24D161FE0069809D /* VisualDocs_Buttons.swift */; };
+		D78FABEF24D164AC0069809D /* VisualDocs_Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABEE24D164AC0069809D /* VisualDocs_Padding.swift */; };
+		D78FABF124D165DF0069809D /* VisualDocs_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABF024D165DF0069809D /* VisualDocs_Colors.swift */; };
 		D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23102497F68F00D24169 /* NetworkAgent.swift */; };
 		D7AA23162497F7DD00D24169 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23132497F7DD00D24169 /* GithubAPI.swift */; };
 		D7AA23172497F7DD00D24169 /* NetworkAgentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23142497F7DD00D24169 /* NetworkAgentTest.swift */; };
@@ -49,7 +54,7 @@
 		D7B560292493AC1900E9EC7D /* Recreating.Instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560282493AC1900E9EC7D /* Recreating.Instagram.swift */; };
 		D7B5602B2493AED400E9EC7D /* Recreating.HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602A2493AED400E9EC7D /* Recreating.HomeScreen.swift */; };
 		D7B5602D2493AF6800E9EC7D /* Recreating.LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602C2493AF6800E9EC7D /* Recreating.LockScreen.swift */; };
-		D7B560302493B01700E9EC7D /* DebugFonts_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602F2493B01700E9EC7D /* DebugFonts_View.swift */; };
+		D7B560302493B01700E9EC7D /* VisualDocs_Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5602F2493B01700E9EC7D /* VisualDocs_Fonts.swift */; };
 		D7C9EA5B24A2B7A300FF80BD /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +106,13 @@
 		D78FABE024D0C1780069809D /* Recreating.Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Breathe.swift; sourceTree = "<group>"; };
 		D78FABE224D0C2590069809D /* Recreating.AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.AppStore.swift; sourceTree = "<group>"; };
 		D78FABE424D0C3710069809D /* SampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
-		D78FABE624D0C5400069809D /* Debug_Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug_Shapes.swift; sourceTree = "<group>"; };
+		D78FABE624D0C5400069809D /* VisualDocs_Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Shapes.swift; sourceTree = "<group>"; };
+		D78FABE824D160500069809D /* Recreating.Maps_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_I.swift; sourceTree = "<group>"; };
+		D78FABEA24D1613E0069809D /* VisualDocs_LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_LinearGradient.swift; sourceTree = "<group>"; };
+		D78FABEC24D161FE0069809D /* VisualDocs_Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_Buttons.swift; sourceTree = "<group>"; };
+		D78FABEE24D164AC0069809D /* VisualDocs_Padding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_Padding.swift; sourceTree = "<group>"; };
+		D78FABF024D165DF0069809D /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
+		D78FABF424D173540069809D /* IMG_8890.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_8890.PNG; sourceTree = "<group>"; };
 		D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.LockScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D7AA23102497F68F00D24169 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
 		D7AA23132497F7DD00D24169 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
@@ -118,7 +129,7 @@
 		D7B560282493AC1900E9EC7D /* Recreating.Instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Instagram.swift; sourceTree = "<group>"; };
 		D7B5602A2493AED400E9EC7D /* Recreating.HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.HomeScreen.swift; sourceTree = "<group>"; };
 		D7B5602C2493AF6800E9EC7D /* Recreating.LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.LockScreen.swift; sourceTree = "<group>"; };
-		D7B5602F2493B01700E9EC7D /* DebugFonts_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFonts_View.swift; sourceTree = "<group>"; };
+		D7B5602F2493B01700E9EC7D /* VisualDocs_Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Fonts.swift; sourceTree = "<group>"; };
 		D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,11 +158,11 @@
 			children = (
 				D70C19DA24806D2700125742 /* README.md */,
 				D7B560222493A2EA00E9EC7D /* .swiftlint.yml */,
-				9F4613292321814F00F24162 /* Docs */,
+				9F4613292321814F00F24162 /* Documents */,
+				D78FABD424D0BD740069809D /* Documents.Visual */,
 				D78FABD324D0BD020069809D /* Samples */,
 				D7B560232493AA4100E9EC7D /* Recreating */,
 				D79FA9DE249290DE008D76F2 /* Playgrounds */,
-				D78FABD424D0BD740069809D /* Auxiliar */,
 				9F288F2620F8089F008A9539 /* UglySwiftUIApp */,
 				D78FABDD24D0C0410069809D /* Extensions */,
 				9F288F2520F8089F008A9539 /* Products */,
@@ -178,7 +189,7 @@
 			path = UglySwiftUIApp;
 			sourceTree = "<group>";
 		};
-		9F4613292321814F00F24162 /* Docs */ = {
+		9F4613292321814F00F24162 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
 				9F46132A2321814F00F24162 /* NotesAndReferences.md */,
@@ -186,7 +197,7 @@
 				9F46132C2321814F00F24162 /* ToDo.swift */,
 				9FB193502326BBCF00721481 /* Combine.png */,
 			);
-			path = Docs;
+			path = Documents;
 			sourceTree = "<group>";
 		};
 		9F4A421423228F4700FE5BC7 /* Tab_2 */ = {
@@ -268,13 +279,17 @@
 			path = Samples;
 			sourceTree = "<group>";
 		};
-		D78FABD424D0BD740069809D /* Auxiliar */ = {
+		D78FABD424D0BD740069809D /* Documents.Visual */ = {
 			isa = PBXGroup;
 			children = (
-				D7B5602F2493B01700E9EC7D /* DebugFonts_View.swift */,
-				D78FABE624D0C5400069809D /* Debug_Shapes.swift */,
+				D78FABF024D165DF0069809D /* VisualDocs_Colors.swift */,
+				D7B5602F2493B01700E9EC7D /* VisualDocs_Fonts.swift */,
+				D78FABE624D0C5400069809D /* VisualDocs_Shapes.swift */,
+				D78FABEA24D1613E0069809D /* VisualDocs_LinearGradient.swift */,
+				D78FABEC24D161FE0069809D /* VisualDocs_Buttons.swift */,
+				D78FABEE24D164AC0069809D /* VisualDocs_Padding.swift */,
 			);
-			path = Auxiliar;
+			path = Documents.Visual;
 			sourceTree = "<group>";
 		};
 		D78FABD524D0BE7B0069809D /* SupportingFiles */ = {
@@ -295,6 +310,14 @@
 				D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D78FABF224D171B30069809D /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				D78FABF424D173540069809D /* IMG_8890.PNG */,
+			);
+			path = ToDo;
 			sourceTree = "<group>";
 		};
 		D79FA9DE249290DE008D76F2 /* Playgrounds */ = {
@@ -320,6 +343,7 @@
 		D7B560232493AA4100E9EC7D /* Recreating */ = {
 			isa = PBXGroup;
 			children = (
+				D78FABF224D171B30069809D /* ToDo */,
 				D78FABE024D0C1780069809D /* Recreating.Breathe.swift */,
 				D7B560242493AA5400E9EC7D /* Recreating.Settings.swift */,
 				D7B560262493AB1500E9EC7D /* Recreating.Twitter.swift */,
@@ -333,6 +357,7 @@
 				D78FABCF24D0B9540069809D /* Recreating.iPhone12ProWebsite.swift */,
 				D78FABE224D0C2590069809D /* Recreating.AppStore.swift */,
 				D78FABDE24D0C0EF0069809D /* Recreating.Reminder.swift */,
+				D78FABE824D160500069809D /* Recreating.Maps_I.swift */,
 			);
 			path = Recreating;
 			sourceTree = "<group>";
@@ -449,13 +474,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78FABED24D161FE0069809D /* VisualDocs_Buttons.swift in Sources */,
 				9FBEA8A02322944F00E4B6FE /* ActivityIndicator.swift in Sources */,
 				9FA68D4F23204DE3007353EF /* Tab4_View.swift in Sources */,
 				D7B5602B2493AED400E9EC7D /* Recreating.HomeScreen.swift in Sources */,
 				9FE5097E231FB14E0081E1DB /* AppDelegate.swift in Sources */,
 				D7B560202493A18100E9EC7D /* typelias.swift in Sources */,
 				9FE5097A231FB10E0081E1DB /* Tab2_View.swift in Sources */,
-				D7B560302493B01700E9EC7D /* DebugFonts_View.swift in Sources */,
+				D7B560302493B01700E9EC7D /* VisualDocs_Fonts.swift in Sources */,
 				D78FABD224D0BC7B0069809D /* Samples.LangindPage.swift in Sources */,
 				D7AA23172497F7DD00D24169 /* NetworkAgentTest.swift in Sources */,
 				D7B560252493AA5400E9EC7D /* Recreating.Settings.swift in Sources */,
@@ -470,6 +496,7 @@
 				9F4A4221232290BE00FE5BC7 /* Tab5_ViewRouter.swift in Sources */,
 				9F4A4222232290BE00FE5BC7 /* Tab5_View.swift in Sources */,
 				D7B560292493AC1900E9EC7D /* Recreating.Instagram.swift in Sources */,
+				D78FABE924D160500069809D /* Recreating.Maps_I.swift in Sources */,
 				9FE5097B231FB10E0081E1DB /* Tab3_View.swift in Sources */,
 				D7C9EA5B24A2B7A300FF80BD /* Recreating.Tinder.swift in Sources */,
 				D7AA23162497F7DD00D24169 /* GithubAPI.swift in Sources */,
@@ -478,10 +505,13 @@
 				D78FABE324D0C2590069809D /* Recreating.AppStore.swift in Sources */,
 				9F4A422723229B1F00FE5BC7 /* Tab5_Auxiliar.swift in Sources */,
 				9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */,
+				D78FABF124D165DF0069809D /* VisualDocs_Colors.swift in Sources */,
 				9FA68D4D231FEE58007353EF /* SwiftUIFactory.swift in Sources */,
+				D78FABEF24D164AC0069809D /* VisualDocs_Padding.swift in Sources */,
 				D7B5601C2493A12C00E9EC7D /* Image+Extensions.swift in Sources */,
 				D78FABDF24D0C0EF0069809D /* Recreating.Reminder.swift in Sources */,
-				D78FABE724D0C5400069809D /* Debug_Shapes.swift in Sources */,
+				D78FABEB24D1613E0069809D /* VisualDocs_LinearGradient.swift in Sources */,
+				D78FABE724D0C5400069809D /* VisualDocs_Shapes.swift in Sources */,
 				D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */,
 				D78FABE524D0C3710069809D /* SampleService.swift in Sources */,
 				D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */,

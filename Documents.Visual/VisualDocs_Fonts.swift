@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 extension V {
-    struct DebugFonts: View {
+    struct VisualDocs_Fonts: View {
         let size: CGFloat = 20
         var body: some View {
             ScrollView {
@@ -55,8 +55,8 @@ extension V {
 
 // MARK: - Preview
 
-struct DebugFonts: PreviewProvider {
+struct VisualDocs_Fonts: PreviewProvider {
     static var previews: some View {
-        V.DebugFonts()
+        V.VisualDocs_Fonts()
     }
 }

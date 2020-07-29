@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 extension V {
-    struct DebugShapes: View {
+    struct VisualDocs_Shapes: View {
         let size_w: CGFloat = 50
         let size_h: CGFloat = 50
         var body: some View {
@@ -81,9 +81,9 @@ extension V {
 
 // MARK: - Preview
 
-struct DebugShapes: PreviewProvider {
+struct VisualDocs_Shapes: PreviewProvider {
     static var previews: some View {
-        V.DebugShapes()
+        V.VisualDocs_Shapes()
         //V.Costa()
     }
 }

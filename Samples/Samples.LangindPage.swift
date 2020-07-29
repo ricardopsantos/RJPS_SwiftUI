@@ -14,7 +14,7 @@ extension V {
             ZStack {
                 Image("photo").resizable().aspectRatio(contentMode: .fill).edgesIgnoringSafeArea(.all)
 
-                Rectangle()                         // Shapes are resizable by default
+                Rectangle()                     // Shapes are resizable by default
                 .foregroundColor(.clear)        // Making rectangle transparent
                     .background(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .bottom, endPoint: .top)).edgesIgnoringSafeArea(.all)
                 VStack(spacing: 20) {
