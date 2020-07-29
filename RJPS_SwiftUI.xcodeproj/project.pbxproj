@@ -42,6 +42,7 @@
 		D78FABED24D161FE0069809D /* VisualDocs_Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABEC24D161FE0069809D /* VisualDocs_Buttons.swift */; };
 		D78FABEF24D164AC0069809D /* VisualDocs_Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABEE24D164AC0069809D /* VisualDocs_Padding.swift */; };
 		D78FABF124D165DF0069809D /* VisualDocs_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABF024D165DF0069809D /* VisualDocs_Colors.swift */; };
+		D78FABF624D175590069809D /* VisualDocs_Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABF524D175590069809D /* VisualDocs_Text.swift */; };
 		D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23102497F68F00D24169 /* NetworkAgent.swift */; };
 		D7AA23162497F7DD00D24169 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23132497F7DD00D24169 /* GithubAPI.swift */; };
 		D7AA23172497F7DD00D24169 /* NetworkAgentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23142497F7DD00D24169 /* NetworkAgentTest.swift */; };
@@ -113,6 +114,7 @@
 		D78FABEE24D164AC0069809D /* VisualDocs_Padding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_Padding.swift; sourceTree = "<group>"; };
 		D78FABF024D165DF0069809D /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
 		D78FABF424D173540069809D /* IMG_8890.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_8890.PNG; sourceTree = "<group>"; };
+		D78FABF524D175590069809D /* VisualDocs_Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Text.swift; sourceTree = "<group>"; };
 		D79FA9E124929251008D76F2 /* Recreating.LockScreen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recreating.LockScreen.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D7AA23102497F68F00D24169 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
 		D7AA23132497F7DD00D24169 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				D78FABEA24D1613E0069809D /* VisualDocs_LinearGradient.swift */,
 				D78FABEC24D161FE0069809D /* VisualDocs_Buttons.swift */,
 				D78FABEE24D164AC0069809D /* VisualDocs_Padding.swift */,
+				D78FABF524D175590069809D /* VisualDocs_Text.swift */,
 			);
 			path = Documents.Visual;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				D78FABEB24D1613E0069809D /* VisualDocs_LinearGradient.swift in Sources */,
 				D78FABE724D0C5400069809D /* VisualDocs_Shapes.swift in Sources */,
 				D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */,
+				D78FABF624D175590069809D /* VisualDocs_Text.swift in Sources */,
 				D78FABE524D0C3710069809D /* SampleService.swift in Sources */,
 				D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */,
 				D7B5602D2493AF6800E9EC7D /* Recreating.LockScreen.swift in Sources */,

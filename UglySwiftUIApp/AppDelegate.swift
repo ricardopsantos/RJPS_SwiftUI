@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
 
-        Service.loadData()
+        //Service.loadData()
         //NetworkAgentTest.chain()
         //NetworkAgentTest.parallel()
         return true

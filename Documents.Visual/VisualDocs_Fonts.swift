@@ -48,6 +48,17 @@ extension V {
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal, 0)
+                Divider()
+                VStack {
+                    Text("Regular")
+                    Text("Regular.bold").bold()
+                    Text("Regular.italic").italic()
+                    Text("Regular.italic.bold").italic().bold()
+                    Text("Regular.underline").underline()
+                    Text("Regular.strikethrough").strikethrough()
+                }
+                .padding(.vertical, 10)
+                .padding(.horizontal, 0)
             }
         }
     }

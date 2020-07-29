@@ -36,7 +36,7 @@ extension V {
                     Divider()
                 }
                 VStack {
-                    Text("")
+                    Text("Hi").padding(.top, 3).padding(.leading, 50).padding(.trailing, 50).padding(.bottom, 20).background(Color.blue)
                 }
                 Divider()
                 VStack {
