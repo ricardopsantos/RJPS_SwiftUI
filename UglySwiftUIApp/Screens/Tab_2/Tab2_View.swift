@@ -16,21 +16,19 @@ extension V {
         
         var someListSample1: some View {
             List {
-                    Text("List2.Item_1")
-                    Text("List2.Item_2")
-                    HStack(alignment: .center, spacing: 10) {
-                        Image(systemName: "clock")
-                        Text("List2.Item_3")
-                    }
-                    Text("List2.Item_4")
-                    Text("List2.Item_5")
-                    Text("List2.Item_6")
-                    Text("List2.Item_7")
+                Text("List2.Item_1")
+                Text("List2.Item_2")
+                HStack(alignment: .center, spacing: 10) {
+                    Image(systemName: "clock")
+                    Text("List2.Item_3")
                 }
+                Text("List2.Item_4")
+                Text("List2.Item_5")
+                Text("List2.Item_6")
+                Text("List2.Item_7")
+            }
         }
         var someLabel: some View { return Text("Hello World").bold().italic().underline().lineLimit(2) }
-        var someImage1: some View { return ImageNames.cloud.image.foregroundColor(.red) }
-        var someImage2: some View { return ImageNames.cloud.image.resizable().scaledToFill().frame(height: 20).clipped() }
         var someBtn: some View {
             Button(action: {
                 print("Tap!")
@@ -56,10 +54,6 @@ extension V {
             HStack(alignment: .center, spacing: 10) {
             Spacer()
             someLabel
-            Spacer()
-            someImage1
-            Divider()
-            someImage2
             Spacer()
             someLabel
             Spacer()

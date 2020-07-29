@@ -22,6 +22,11 @@ extension V {
                     SwiftUIFactory.ButtonView.init(title: "title_2", subTitle: "subTitle") { print("Tapped") }
                 }
                 Divider()
+
+                // Frame and padding
+                // Frame and padding
+                // Frame and padding
+
                 VStack {
                     Text("Frame and padding").font(.headline)
                     Spacer()
@@ -30,6 +35,11 @@ extension V {
                     Button(action: {}) { Text("Text padding..").padding() }.frame(width: 300).background(Color.green)
                 }
                 Divider()
+
+                // Basic
+                // Basic
+                // Basic
+
                 VStack {
                     Text("Basic").font(.headline)
                     Spacer()
@@ -37,6 +47,11 @@ extension V {
                     Button(action: {}) { Text("Hi") }.foregroundColor(.secondary)
                 }
                 Divider()
+
+                // Shapes and padding
+                // Shapes and padding
+                // Shapes and padding
+
                 VStack {
                     Text("Shapes and padding").font(.headline)
                     Button(action: { }) {
@@ -49,6 +64,11 @@ extension V {
                 .padding(.vertical, 10)
                 .padding(.horizontal, 0)
                 Divider()
+
+                // Composed
+                // Composed
+                // Composed
+
                 VStack {
                     Text("Composed").font(.headline)
                     Button(action: { }) {
@@ -57,6 +77,12 @@ extension V {
                                 Text("New Reminder").foregroundColor(.blue)
                             }
                         }.padding()
+                    Spacer()
+                    Button(action: {
+                        print("Tap!")
+                    }, label: {
+                        Image(systemName: "clock")
+                        Text("Click Me")})
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal, 0)

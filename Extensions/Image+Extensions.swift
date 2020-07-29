@@ -19,6 +19,7 @@ enum ImageNames: String, CaseIterable {
     case bag
     case bell
     case cloud
+    case clock
     case camera
     case chevron
     case circle
