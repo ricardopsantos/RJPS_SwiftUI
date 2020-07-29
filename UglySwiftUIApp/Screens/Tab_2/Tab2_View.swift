@@ -29,8 +29,8 @@ extension V {
                 }
         }
         var someLabel: some View { return Text("Hello World").bold().italic().underline().lineLimit(2) }
-        var someImage1: some View { return Image.cloud.foregroundColor(.red) }
-        var someImage2: some View { return Image.cloud.resizable().scaledToFill().frame(height: 20).clipped() }
+        var someImage1: some View { return ImageNames.cloud.image.foregroundColor(.red) }
+        var someImage2: some View { return ImageNames.cloud.image.resizable().scaledToFill().frame(height: 20).clipped() }
         var someBtn: some View {
             Button(action: {
                 print("Tap!")

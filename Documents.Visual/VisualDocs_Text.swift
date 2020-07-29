@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 var bigWeirdText : some View {
-     Text("SwiftUI TabBar App")
+     Text("Big Weird Text")
      .bold()
      .font(.system(.largeTitle))
      .fontWeight(.medium)
