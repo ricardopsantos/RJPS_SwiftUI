@@ -35,7 +35,7 @@ extension Sequence {
 }
 
 extension V {
-    struct BasicApp_ListOfUsers: View {
+    struct BasicApp_EditableListOfUsers: View {
 
         @ObservedObject var store: PersonStore
 
@@ -88,8 +88,8 @@ final class PersonStore: ObservableObject {
     ]
 }
 
-struct BasicApp_ListOfUsers: PreviewProvider {
+struct BasicApp_EditableListOfUsers: PreviewProvider {
     static var previews: some View {
-        V.BasicApp_ListOfUsers(store: PersonStore.init())
+        V.BasicApp_EditableListOfUsers(store: PersonStore.init())
     }
 }

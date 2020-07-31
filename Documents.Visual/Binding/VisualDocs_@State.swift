@@ -140,7 +140,8 @@ extension V {
                     Stepper(value: $counter) { Text("Counter: \(counter)") }
                     Divider()
                     toggleView
-                    Button(action: { self.toggle.toggle() }, label: { Text("Change Toggle") } )
+                    Button(action: { self.toggle.toggle() }, label: { Text("Change Toggle_1") } )
+                    Button("Change_Toggle_2") { self.toggle = !self.toggle }
                     Divider()
                     TextField("type something...", text: $name)
                     Text(name)

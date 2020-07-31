@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  TextField.swift
 //  UglySwiftUIApp
 //
 //  Created by Ricardo Santos on 31/07/2020.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-// https://swiftui-lab.com/state-changes/
+// https://swiftwithmajid.com/2020/02/26/textfield-in-swiftui/

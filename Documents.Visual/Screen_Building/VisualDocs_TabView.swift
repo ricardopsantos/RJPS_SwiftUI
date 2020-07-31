@@ -33,14 +33,11 @@ extension V {
 }
 
 extension V {
-
     struct VisualDocs_TabView: View {
-
         var tab1 : some View { V.VisualDocs_TabView_Tab1().tabItem({ Text("Tab_1") }).tag(1) }
         var tab2 : some View { V.VisualDocs_TabView_Tab2().tabItem({ Text("Tab_2") }).tag(2) }
         var tab3 : some View { V.VisualDocs_TabView_Tab3().tabItem({ Text("Tab_3") }).tag(3) }
         var tab4 : some View { V.VisualDocs_TabView_Tab4().tabItem({ Text("Tab_4") }).tag(4) }
-
         var body : some View {
             VStack {
                 Text("SwiftUI TabBar App")
@@ -51,9 +48,6 @@ extension V {
                     tab4
                 }
             }
-            //.background(UIColor.Stack.debugColor)
-            //.onAppear { print("[\(self)] onAppear!") }
-            //.onDisappear { print("[\(self)] onDisappear!") }
         }
     }
 }

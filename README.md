@@ -15,10 +15,10 @@
 
 ## Project structure
 
-![Preview](assets/screen_1.png)
+![Preview](readme.images/image.1.png)
 
-## Preview
+## Things you can find
 
-<p align="center">
-<img src="https://github.com/ricardopsantos/RJPS_SwiftUI/blob/master/assets/sample.gif">
-</p>
+![Preview](readme.images/image.2.png)
+
+![Preview](readme.images/image.3.png)

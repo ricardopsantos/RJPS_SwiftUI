@@ -43,10 +43,13 @@ enum ImageNames: String, CaseIterable {
     case personCropCircle = "person.crop.circle"
     case personCropSquare = "person.crop.square"
     case plus
+    case pause
+    case play
     case plusCircle = "plus.circle"
     case plusSquare = "plus.square"
     case star
     case sparkles
+    case stop
     case square
     case squareAndArrow = "square.and.arrow"
     case wifi

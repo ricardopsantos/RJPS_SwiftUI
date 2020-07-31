@@ -69,6 +69,7 @@ extension V {
                 }
                 .navigationBarTitle("Title")
                 .listStyle(GroupedListStyle())
+                
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }

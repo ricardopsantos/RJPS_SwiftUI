@@ -69,6 +69,7 @@ publisher.sink(receiveCompletion: { _ in
 ```
 
 ---
+
 ### PassthroughSubject
 
 A subject that broadcasts elements to downstream subscribers.
@@ -98,9 +99,48 @@ var toggleView: some View {
 }
 ```
 
-### `@EnvironmentObject`
+## `@Binding`
 
-A dynamic view property that uses a bindable object supplied by an ancestor view to invalidate the current view whenever the bindable object changes.
+https://developer.apple.com/documentation/swiftui/binding
+
+Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. For example, a button that toggles between play and pause can create a binding to a property of its parent view using the Binding property wrapper.
+
+```
+struct PlayButton: View {
+    @Binding var isPlaying: Bool
+
+    var body: some View {
+        Button(action: {
+            self.isPlaying.toggle()
+        }) {
+            Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+        }
+    }
+}
+```
+
+The parent view declares a property to hold the playing state, using the State property wrapper to indicate that this property is the value’s source of truth.
+
+```
+struct PlayerView: View {
+    var episode: Episode
+    @State private var isPlaying: Bool = false
+
+    var body: some View {
+        VStack {
+            Text(episode.title)
+            Text(episode.showTitle)
+            PlayButton(isPlaying: $isPlaying)
+        }
+    }
+}
+```
+
+When PlayerView initializes PlayButton, it passes a binding of its state property into the button’s binding property. Applying the $ prefix to a property wrapped value returns its projectedValue, which for a state property wrapper returns a binding to the value.
+
+Whenever the user taps the PlayButton, the PlayerView updates its isPlaying state.
+
+### `@EnvironmentObject`
 
 An __EnvironmentObject__ is a data model which, once initialised, can share data to all view’s of your app. The cool thing is, that an__ EnvironmentObject__ is created by supplying a __ObservableObject__, thus we can use our __ViewRouter__ for creating an __EnvironmentObject__!
 
@@ -113,6 +153,30 @@ As said, an EnvironmentObject needs to already be initialised when referring to 
 [https://developer.apple.com/documentation/swiftui/environmentobject](https://developer.apple.com/documentation/swiftui/environmentobject)
 
 ### `@Published`
+
+@Published is one of the most useful property wrappers in SwiftUI, allowing us to create observable objects that automatically announce when changes occur.
+
+SwiftUI will automatically monitor for such changes, and re-invoke the body property of any views that rely on the data. In practical terms, that means whenever an object with a property marked @Published is changed, all views using that object will be reloaded to reflect those changes.
+
+```swift
+class Bag_A: ObservableObject {
+    var items = [String]()
+}
+```
+
+That conforms to the ObservableObject protocol, which means SwiftUI’s views can watch it for changes. But because its only property isn’t marked with @Published, no change announcements will ever be sent – you can add items to the array freely and no views will update.
+
+If you wanted change announcements to be sent whenever something was added or removed from items, you would mark it with @Published, like this:
+
+```
+class Bag_B: ObservableObject {
+    @Published var items = [String]()
+}
+```
+
+You don’t need to do anything else – the @Published property wrapper effectively adds a willSet property observer to items, so that any changes are automatically sent out to observers.
+
+As you can see, @Published is opt-in – you need to list which properties should cause announcements, because the default is that changes don’t cause reloads. This means you can have properties that store caches, properties for internal use, and more, and they won’t force SwiftUI to reload views when they change unless you specifically mark them with @Published.
 
 ### `@ObservedObject`
 
@@ -140,10 +204,10 @@ Note that `@State` variables are also great while prototyping your app. For exam
 * [How to Build a Form UI with SwiftUI](https://www.appcoda.com/swiftui-form-ui/)
 * [SwiftUI Framework Learning and Usage Guide](https://jinxiansen.github.io/SwiftUI/)
 * [How to use UIKit in SwiftUI](https://sarunw.com/posts/uikit-in-swiftui)
+* [swiftui-lab](https://gist.github.com/swiftui-lab)
+* [About SwiftUI](https://github.com/swiftui-lab/About-SwiftUI)
 
 ## Combine References
-* [Data Flow Through SwiftUI
-](https://developer.apple.com/videos/play/wwdc2019/226/)
-* [Swift Combine Framework Tutorial: Getting Started
-](https://www.vadimbulavin.com/swift-combine-framework-tutorial-getting-started/)
+* [Data Flow Through SwiftUI](https://developer.apple.com/videos/play/wwdc2019/226/)
+* [Swift Combine Framework Tutorial: Getting Started](https://www.vadimbulavin.com/swift-combine-framework-tutorial-getting-started/)
 

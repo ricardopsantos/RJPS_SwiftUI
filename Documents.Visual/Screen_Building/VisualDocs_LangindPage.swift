@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 extension V {
-    struct LandingPage: View {
+    struct VisualDocs_LangindPage: View {
         var body: some View {
             ZStack {
                 Image("photo").resizable().aspectRatio(contentMode: .fill).edgesIgnoringSafeArea(.all)
@@ -37,8 +37,8 @@ extension V {
 
 // MARK: - Preview
 
-struct LandingPage: PreviewProvider {
+struct VisualDocs_LangindPage: PreviewProvider {
     static var previews: some View {
-        V.LandingPage()
+        V.VisualDocs_LangindPage()
     }
 }

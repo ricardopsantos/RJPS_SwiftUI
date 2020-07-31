@@ -9,6 +9,25 @@ import SwiftUI
 import Combine
 
 extension V {
+    struct VisualDocs_Background_III: View {
+        // https://stackoverflow.com/questions/57685679/how-to-change-background-color-of-the-navigationview-in-swiftui
+        //For other NavigationBar changes, look here:(https://stackoverflow.com/a/57509555/5623035)
+        init() { UINavigationBar.appearance().backgroundColor = .green }
+        var body: some View {
+            ZStack {
+                Color.yellow
+                NavigationView {
+                    ZStack {
+                        Color.blue
+                        Text("Some text")
+                    }
+                }.background(Color.red)
+            }
+        }
+    }
+}
+
+extension V {
     struct VisualDocs_Background_II: View {
         var body: some View {
             ZStack {
@@ -26,7 +45,7 @@ extension V {
             ZStack { Color.secondary.edgesIgnoringSafeArea(.all)
                 ScrollView {
                     VStack(alignment: .center, spacing: 10) {
-                        Text("Hi")
+                        Text("Some text")
                     }
                 }
             }
@@ -45,5 +64,11 @@ struct VisualDocs_Background_I: PreviewProvider {
 struct VisualDocs_Background_II: PreviewProvider {
     static var previews: some View {
         V.VisualDocs_Background_II()
+    }
+}
+
+struct VisualDocs_Background_III: PreviewProvider {
+    static var previews: some View {
+        V.VisualDocs_Background_III()
     }
 }

@@ -12,7 +12,7 @@ import SwiftUI
 import Combine
 
 extension V {
-    struct VisualDocs_ReactingEvents_onEditingChanged: View {
+    struct VisualDocs_onEditingChanged: View {
         @State var output: String = ""
         @State var input: String = ""
         @State var typing = false
@@ -34,8 +34,8 @@ extension V {
 
 // MARK: - Preview VisualDocs_ReactingEvents
 
-struct VisualDocs_ReactingEvents_onEditingChanged: PreviewProvider {
+struct VisualDocs_onEditingChanged: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_ReactingEvents_onEditingChanged()
+        V.VisualDocs_onEditingChanged()
     }
 }
