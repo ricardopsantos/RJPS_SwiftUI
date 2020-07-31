@@ -12,13 +12,11 @@ import SwiftUI
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
-
-        //Service.loadData()
-        //NetworkAgentTest.chain()
-        //NetworkAgentTest.parallel()
+        //self.window?.rootViewController = UIHostingController(rootView: V.BasicApps_LastShelterWeek())
+        //self.window?.rootViewController = UIHostingController(rootView: V.VisualDocs_WaysToReactToState_onEditingChanged())
         return true
     }
 }
