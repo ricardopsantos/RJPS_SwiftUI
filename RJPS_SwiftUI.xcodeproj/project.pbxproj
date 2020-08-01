@@ -333,7 +333,6 @@
 				D72BD64E24D43EC700671712 /* BasicApps_LastShelter.swift */,
 				D72BD65024D43EC700671712 /* BasicApp_EditableListOfUsers.swift */,
 				D72BD65424D43F0000671712 /* BasicApp_InfiniteScrollView.swift */,
-				D755B14C24D59A7000C6215C /* BasicApp_Active.swift */,
 			);
 			name = BasicApps;
 			path = Documents.Visual/BasicApps;
@@ -406,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				D78FAC3324D41BD40069809D /* README.md */,
+				D755B14C24D59A7000C6215C /* BasicApp_Active.swift */,
 				D78FABD124D0BC7B0069809D /* VisualDocs_LangindPage.swift */,
 				D78FABFD24D1F6170069809D /* VisualDocs_Background.swift */,
 				D78FAC1424D365AF0069809D /* VisualDocs_Dismiss.swift */,

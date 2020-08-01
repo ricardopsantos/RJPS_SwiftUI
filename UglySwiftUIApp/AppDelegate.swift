@@ -14,7 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
+        //self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
+        let view = V.BasicApp_PassCode(secret: "1234")
+        self.window?.rootViewController = UIHostingController(rootView: view)
         return true
     }
 }
