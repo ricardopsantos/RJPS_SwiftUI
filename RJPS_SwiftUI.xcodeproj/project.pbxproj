@@ -32,6 +32,7 @@
 		D755B14424D4BDDD00C6215C /* VisualDocs_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14324D4BDDD00C6215C /* VisualDocs_onDelete.swift */; };
 		D755B14724D5736C00C6215C /* VisualDocs_SendEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14624D5736C00C6215C /* VisualDocs_SendEmail.swift */; };
 		D755B14924D57D8400C6215C /* VisualDocs_UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14824D57D8400C6215C /* VisualDocs_UserSettings.swift */; };
+		D755B14D24D59A7000C6215C /* BasicApp_Active.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14C24D59A7000C6215C /* BasicApp_Active.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -108,7 +109,7 @@
 		9FA68D4C231FEE58007353EF /* SwiftUIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIFactory.swift; sourceTree = "<group>"; };
 		9FA68D4E23204DE3007353EF /* Tab4_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab4_View.swift; sourceTree = "<group>"; };
 		9FBEA89F2322944F00E4B6FE /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		9FE143F421AF2F520026BDFC /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE143F421AF2F520026BDFC /* Active.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Active.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE50977231FB10E0081E1DB /* Tab2_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab2_View.swift; sourceTree = "<group>"; };
 		9FE50978231FB10E0081E1DB /* Tab3_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab3_View.swift; sourceTree = "<group>"; };
 		9FE50979231FB10E0081E1DB /* TabView_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView_View.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		D755B14324D4BDDD00C6215C /* VisualDocs_onDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_onDelete.swift; sourceTree = "<group>"; };
 		D755B14624D5736C00C6215C /* VisualDocs_SendEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SendEmail.swift; sourceTree = "<group>"; };
 		D755B14824D57D8400C6215C /* VisualDocs_UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_UserSettings.swift; sourceTree = "<group>"; };
+		D755B14C24D59A7000C6215C /* BasicApp_Active.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicApp_Active.swift; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -231,7 +233,7 @@
 		9F288F2520F8089F008A9539 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9FE143F421AF2F520026BDFC /* RJPS_SwiftUI.app */,
+				9FE143F421AF2F520026BDFC /* Active.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,6 +333,7 @@
 				D72BD64E24D43EC700671712 /* BasicApps_LastShelter.swift */,
 				D72BD65024D43EC700671712 /* BasicApp_EditableListOfUsers.swift */,
 				D72BD65424D43F0000671712 /* BasicApp_InfiniteScrollView.swift */,
+				D755B14C24D59A7000C6215C /* BasicApp_Active.swift */,
 			);
 			name = BasicApps;
 			path = Documents.Visual/BasicApps;
@@ -513,7 +516,7 @@
 			);
 			name = UglySwiftUIApp;
 			productName = GoodToGo;
-			productReference = 9FE143F421AF2F520026BDFC /* RJPS_SwiftUI.app */;
+			productReference = 9FE143F421AF2F520026BDFC /* Active.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -671,6 +674,7 @@
 				D78FABE524D0C3710069809D /* SampleService.swift in Sources */,
 				D72BD65124D43EC700671712 /* BasicApps_LastShelter.swift in Sources */,
 				D7AA23112497F68F00D24169 /* NetworkAgent.swift in Sources */,
+				D755B14D24D59A7000C6215C /* BasicApp_Active.swift in Sources */,
 				D7B5602D2493AF6800E9EC7D /* Recreating.LockScreen.swift in Sources */,
 				D72BD65524D43F0000671712 /* BasicApp_InfiniteScrollView.swift in Sources */,
 				D78FABD024D0B9540069809D /* Recreating.iPhone12ProWebsite.swift in Sources */,
@@ -767,7 +771,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui;
-				PRODUCT_NAME = RJPS_SwiftUI;
+				PRODUCT_NAME = Active;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
