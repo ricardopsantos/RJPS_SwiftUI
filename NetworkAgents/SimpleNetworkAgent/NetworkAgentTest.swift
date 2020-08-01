@@ -3,7 +3,7 @@ import Combine
 
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
 
-struct NetworkAgentTest {
+struct SimpleNetworkAgentTest {
     private init() {}
     
     static func chain() {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Service {
+struct BasicNetworkAgent {
 
     struct TaskEntry: Codable {
         let userId: Int

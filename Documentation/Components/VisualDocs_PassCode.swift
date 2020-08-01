@@ -15,7 +15,7 @@ import Combine
 //
 
 extension V {
-    struct BasicApp_PassCode: View {
+    struct VisualDocs_PassCode: View {
         private let size: CGFloat = 70
         let secret: String
         private let defaultColor = Color(UIColor.gray)
@@ -76,7 +76,7 @@ extension V {
         }
 
         func eval(_ number: Int) {
-            /*let pinChar = "*"
+            let pinChar = "*"
             defer {
                 if !unlocked {
                     unlocked = pin == secret
@@ -96,15 +96,15 @@ extension V {
             }
             guard unlocked else { return }
             // Work
-            print("Do stuff!")*/
+            print("Do stuff!")
         }
     }
 }
 
 // MARK: - Preview
 
-struct BasicApp_PassCode: PreviewProvider {
+struct VisualDocs_PassCode: PreviewProvider {
     static var previews: some View {
-        V.BasicApp_PassCode(secret: "1234")
+        V.VisualDocs_PassCode(secret: "1234")
     }
 }

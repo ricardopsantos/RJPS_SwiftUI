@@ -21,17 +21,13 @@ import Combine
 // view using the Binding property wrapper.
 //
 
-struct Episode {
-    let title: String
-    let showTitle: String
-}
-
 extension V {
     struct PlayButton: View {
-        @Binding var isPlaying: Bool
+        @Binding var bindingVar2: Bool
         var body: some View {
-            Button(action: { self.isPlaying.toggle() }) {
-                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+            Button(action: { self.bindingVar2.toggle() }) {
+                Image(systemName: bindingVar2 ? "pause.circle" : "play.circle")
+                    .resizable().frame(width: 50, height: 50, alignment: .center)
             }
         }
     }
@@ -39,17 +35,13 @@ extension V {
 
 extension V {
     struct VisualDocs_Binding_I: View {
-        var episode: Episode
-        @State private var isPlaying: Bool = false
+        @State private var bindingVar1: Bool = false
         var body: some View {
-            ScrollView {
-                VStack {
-                    Text(episode.title)
-                    if isPlaying {
-                        ImageNames.app.image
-                    }
-                    V.PlayButton(isPlaying: $isPlaying)
-                }.scaledToFill()
+            VStack {
+                V.PlayButton(bindingVar2: $bindingVar1)
+                if bindingVar1 {
+                    Text("isPlaying...")
+                }
             }
         }
     }
@@ -57,6 +49,6 @@ extension V {
 
 struct VisualDocs_Binding_I: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_Binding_I(episode: Episode(title: "title", showTitle: "showTitle"))
+        V.VisualDocs_Binding_I()
     }
 }

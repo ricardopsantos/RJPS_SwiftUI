@@ -17,7 +17,7 @@ import Combine
  7 - Erase publisher’s type and return an instance of AnyPublisher.
 
  */
-struct NetworkAgent {
+struct SimpleNetworkAgent {
     // 1
     struct Response<T> {
         let value: T

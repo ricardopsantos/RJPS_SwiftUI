@@ -6,6 +6,11 @@
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
 
+//
+// Solving this : https://www.appgamer.com/last-shelter-survival/strategy-guide/hourly-challenges-schedule
+// https://wwdcbysundell.com/2020/building-entire-apps-with-swiftui/
+//
+
 //swiftlint:disable cyclomatic_complexity
 
 import Foundation
@@ -44,9 +49,6 @@ final class LastShelterUserSettings: ObservableObject {
         }
     }
 }
-
-// https://www.appgamer.com/last-shelter-survival/strategy-guide/hourly-challenges-schedule
-// https://wwdcbysundell.com/2020/building-entire-apps-with-swiftui/
 
 extension Date {
     static var dayOfWeek: Int? {

@@ -12,7 +12,7 @@ import SwiftUI
 import Combine
 
 class MyViewModel: ObservableObject {
-    var title: String = "SwiftUwI"
+    var title: String = "SwiftUI"
     @Published var text: String = ""
 }
 

@@ -33,7 +33,7 @@ fileprivate final class SampleUserSettings: ObservableObject {
 }
 
 fileprivate extension V {
-    struct VisualDocs_UserSettings: View {
+    struct VisualDocs_UserDefaults: View {
         @ObservedObject var settings = SampleUserSettings()
         var body: some View {
             VStack {
@@ -50,8 +50,8 @@ fileprivate extension V {
 
 // MARK: - Preview
 
-struct VisualDocs_UserSettings: PreviewProvider {
+struct VisualDocs_UserDefaults: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_UserSettings()
+        V.VisualDocs_UserDefaults()
     }
 }

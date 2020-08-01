@@ -28,7 +28,7 @@ struct GithubAPIResponseModel {
 }
 
 enum GithubAPI {
-    static let agent = NetworkAgent()
+    static let agent = SimpleNetworkAgent()
     static let base = URL(string: "https://api.github.com")!
 }
 
