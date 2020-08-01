@@ -12,7 +12,7 @@ import SwiftUI
 
 extension UIColor {
     struct View {
-        static let appDefaultBackground = Color.gray
+        static let appDefaultBackground = Color(UIColor.lightGray)
     }
     struct Stack {
         static let debugColor = Color.clear

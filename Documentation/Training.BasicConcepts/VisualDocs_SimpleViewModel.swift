@@ -19,8 +19,9 @@ class MyViewModel: ObservableObject {
 struct TextFieldView: View {
     @ObservedObject var myViewModel: MyViewModel = MyViewModel()
     var body: some View {
-        ScrollView {
+        VStack {
             TextField(myViewModel.title, text: $myViewModel.text).padding()
+            Text(myViewModel.text)
         }
     }
 }

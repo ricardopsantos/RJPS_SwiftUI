@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F4A421B23228FC600FE5BC7 /* Tab1_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A421A23228FC600FE5BC7 /* Tab1_View.swift */; };
-		9F4A4222232290BE00FE5BC7 /* Tab5_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A421E232290BE00FE5BC7 /* Tab5_View.swift */; };
 		9F4A42252322914D00FE5BC7 /* Tab4ContentView_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A42242322914D00FE5BC7 /* Tab4ContentView_View.swift */; };
 		9F69CB1422BE8544008D305D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F69CB1322BE8544008D305D /* AVKit.framework */; };
 		9FA68D4D231FEE58007353EF /* SwiftUIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA68D4C231FEE58007353EF /* SwiftUIFactory.swift */; };
@@ -104,7 +103,6 @@
 		9F46132A2321814F00F24162 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
 		9F46132C2321814F00F24162 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		9F4A421A23228FC600FE5BC7 /* Tab1_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab1_View.swift; sourceTree = "<group>"; };
-		9F4A421E232290BE00FE5BC7 /* Tab5_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab5_View.swift; sourceTree = "<group>"; };
 		9F4A42242322914D00FE5BC7 /* Tab4ContentView_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab4ContentView_View.swift; sourceTree = "<group>"; };
 		9F69CB1322BE8544008D305D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		9FA68D4C231FEE58007353EF /* SwiftUIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIFactory.swift; sourceTree = "<group>"; };
@@ -285,14 +283,6 @@
 			path = Tab_4;
 			sourceTree = "<group>";
 		};
-		9F4A421723228F6B00FE5BC7 /* Tab_5 */ = {
-			isa = PBXGroup;
-			children = (
-				9F4A421E232290BE00FE5BC7 /* Tab5_View.swift */,
-			);
-			path = Tab_5;
-			sourceTree = "<group>";
-		};
 		9F85457A2321194000F08379 /* Tab_1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,7 +310,6 @@
 				9F4A421423228F4700FE5BC7 /* Tab_2 */,
 				9F4A421523228F4E00FE5BC7 /* Tab_3 */,
 				9F4A421623228F5300FE5BC7 /* Tab_4 */,
-				9F4A421723228F6B00FE5BC7 /* Tab_5 */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -660,7 +649,6 @@
 				D78FAC1A24D3FEB00069809D /* VisualDocs_WaysToReactToState.swift in Sources */,
 				D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */,
 				D7B560272493AB1500E9EC7D /* Recreating.Twitter.swift in Sources */,
-				9F4A4222232290BE00FE5BC7 /* Tab5_View.swift in Sources */,
 				D7B560292493AC1900E9EC7D /* Recreating.Instagram.swift in Sources */,
 				D78FABFA24D1F02C0069809D /* VisualDocs_List.swift in Sources */,
 				D755B13E24D49E7500C6215C /* VisualDocs_NavigationView.swift in Sources */,

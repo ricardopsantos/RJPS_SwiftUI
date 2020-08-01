@@ -1,6 +1,4 @@
 //
-//  GoodToGo
-//
 //  Created by Ricardo P Santos on 2019.
 //  Copyright © 2019 Ricardo P Santos. All rights reserved.
 //
@@ -14,15 +12,19 @@ import Combine
 
 extension V {
     struct Tab1_View: View {
+        @State var isAnimating: Bool = true
         var body : some View {
             ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
                 VStack(alignment: .center, spacing: 20) {
-                    V.ActivityIndicator(isAnimating: true)
+                    V.ActivityIndicator(isAnimating: isAnimating)
                     Text("Tab 1").font(.title).padding(50)
                 }
             }
-            .onAppear { print("[\(self)] onAppear!") }
-            .onDisappear { print("[\(self)] onDisappear!") }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.isAnimating = false
+                }
+            }
         }
     }
 }

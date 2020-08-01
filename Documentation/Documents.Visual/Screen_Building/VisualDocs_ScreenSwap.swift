@@ -62,7 +62,7 @@ struct VisualDocs_ScreenSwap_ViewA: PreviewProvider {
 
 class VisualDocs_ScreenSwap_Router: ObservableObject {
     // PassthroughSubject : A subject that broadcasts elements to downstream subscribers.
-    let objectWillChange = PassthroughSubject<VisualDocs_ScreenSwap_Router, Never>() // DONT CHANGE NAME, else Stops working
+    let objectWillChange = PassthroughSubject<VisualDocs_ScreenSwap_Router, Never>() 
     var currentPage: VisualDocs_ScreenSwap_Pages = .page1 {
         didSet {
             objectWillChange.send(self)
