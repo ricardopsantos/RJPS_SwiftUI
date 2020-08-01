@@ -25,7 +25,6 @@ struct BasicNetworkAgent {
         let request = URLRequest(url: url)
 
         URLSession.shared.dataTask(with: request) { data, response, error in
-            print(error)
             if let data = data {
                 if let response = try? JSONDecoder().decode([TaskEntry].self, from: data) {
                     DispatchQueue.main.async {
