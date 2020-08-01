@@ -18,6 +18,7 @@ enum ImageNames: String, CaseIterable {
     case app
     case bag
     case bell
+    case buble
     case cloud
     case clock
     case camera
@@ -36,6 +37,8 @@ enum ImageNames: String, CaseIterable {
     case minusSquare = "minus.square"
     case minusCircle = "minus.circle"
     case mic
+    case micCircle = "mic.circle"
+    case micSlash = "mic.slash"
     case phone
     case paperplane
     case person

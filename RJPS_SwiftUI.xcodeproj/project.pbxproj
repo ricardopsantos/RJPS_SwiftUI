@@ -29,6 +29,9 @@
 		D755B13E24D49E7500C6215C /* VisualDocs_NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B13D24D49E7500C6215C /* VisualDocs_NavigationView.swift */; };
 		D755B14024D4A21300C6215C /* VisualDocs_@Published.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B13F24D4A21300C6215C /* VisualDocs_@Published.swift */; };
 		D755B14224D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14124D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift */; };
+		D755B14424D4BDDD00C6215C /* VisualDocs_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14324D4BDDD00C6215C /* VisualDocs_onDelete.swift */; };
+		D755B14724D5736C00C6215C /* VisualDocs_SendEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14624D5736C00C6215C /* VisualDocs_SendEmail.swift */; };
+		D755B14924D57D8400C6215C /* VisualDocs_UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14824D57D8400C6215C /* VisualDocs_UserSettings.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -122,6 +125,9 @@
 		D755B13D24D49E7500C6215C /* VisualDocs_NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_NavigationView.swift; sourceTree = "<group>"; };
 		D755B13F24D4A21300C6215C /* VisualDocs_@Published.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Published.swift"; sourceTree = "<group>"; };
 		D755B14124D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@EnvironmentObject.swift"; sourceTree = "<group>"; };
+		D755B14324D4BDDD00C6215C /* VisualDocs_onDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_onDelete.swift; sourceTree = "<group>"; };
+		D755B14624D5736C00C6215C /* VisualDocs_SendEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SendEmail.swift; sourceTree = "<group>"; };
+		D755B14824D57D8400C6215C /* VisualDocs_UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_UserSettings.swift; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -414,11 +420,14 @@
 			isa = PBXGroup;
 			children = (
 				D78FAC3224D41BC90069809D /* README.md */,
+				D755B14824D57D8400C6215C /* VisualDocs_UserSettings.swift */,
 				D78FABEE24D164AC0069809D /* VisualDocs_Padding.swift */,
 				D78FAC2124D407C80069809D /* VisualDocs_onEditingChanged.swift */,
 				D72BD65624D4587300671712 /* VisualDocs_SimpleViewModel.swift */,
 				D72BD65A24D4633800671712 /* VisualDocs_TimerView.swift */,
 				D72BD65C24D4684800671712 /* VisualDocs_onReceive.swift */,
+				D755B14324D4BDDD00C6215C /* VisualDocs_onDelete.swift */,
+				D755B14624D5736C00C6215C /* VisualDocs_SendEmail.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -601,6 +610,7 @@
 				D78FABED24D161FE0069809D /* VisualDocs_Buttons.swift in Sources */,
 				9FBEA8A02322944F00E4B6FE /* ActivityIndicator.swift in Sources */,
 				D78FAC2C24D416800069809D /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift in Sources */,
+				D755B14424D4BDDD00C6215C /* VisualDocs_onDelete.swift in Sources */,
 				D72BD65724D4587300671712 /* VisualDocs_SimpleViewModel.swift in Sources */,
 				9FA68D4F23204DE3007353EF /* Tab4_View.swift in Sources */,
 				D78FAC2724D40E490069809D /* VisualDocs_TextField.swift in Sources */,
@@ -614,6 +624,7 @@
 				D72BD65324D43EC700671712 /* BasicApp_EditableListOfUsers.swift in Sources */,
 				9FE5097A231FB10E0081E1DB /* Tab2_View.swift in Sources */,
 				D78FAC0B24D3584D0069809D /* VisualDocs_ForEach.swift in Sources */,
+				D755B14924D57D8400C6215C /* VisualDocs_UserSettings.swift in Sources */,
 				D7B560302493B01700E9EC7D /* VisualDocs_Fonts.swift in Sources */,
 				D78FABD224D0BC7B0069809D /* VisualDocs_LangindPage.swift in Sources */,
 				D72BD65924D45CC900671712 /* VisualDocs_@Binding.swift in Sources */,
@@ -623,6 +634,7 @@
 				D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */,
 				D7B5601A2493A0B300E9EC7D /* UIView+Extensions.swift in Sources */,
 				9FE143C021AF2F520026BDFC /* Auxiliar.swift in Sources */,
+				D755B14724D5736C00C6215C /* VisualDocs_SendEmail.swift in Sources */,
 				D78FABE124D0C1780069809D /* Recreating.Breathe.swift in Sources */,
 				D7B5601E2493A16600E9EC7D /* UIColor+Extensions.swift in Sources */,
 				D78FAC1A24D3FEB00069809D /* VisualDocs_WaysToReactToState.swift in Sources */,

@@ -24,8 +24,6 @@ extension V {
                     Text("system.heavy").font(.system(size: size, weight: .heavy))
                     Text("system.black").font(.system(size: size, weight: .black))
                 }
-                .padding(.vertical, 10)
-                .padding(.horizontal, 0)
                 Divider()
                 VStack {
                     Text("largeTitle").font(.largeTitle)
@@ -37,8 +35,6 @@ extension V {
                     Text("footnote").font(.footnote)
                     Text("caption").font(.caption)
                 }
-                .padding(.vertical, 10)
-                .padding(.horizontal, 0)
                 Divider()
                 VStack {
                     Text("Regular Text")
@@ -46,8 +42,6 @@ extension V {
                     Text("monospaced").font(.system(size: size, design: .monospaced))
                     Text("monospaced.medium").font(.system(size: size, design: .monospaced)).fontWeight(.medium)
                 }
-                .padding(.vertical, 10)
-                .padding(.horizontal, 0)
                 Divider()
                 VStack {
                     Text("Regular")
@@ -57,8 +51,6 @@ extension V {
                     Text("Regular.underline").underline()
                     Text("Regular.strikethrough").strikethrough()
                 }
-                .padding(.vertical, 10)
-                .padding(.horizontal, 0)
             }
         }
     }
