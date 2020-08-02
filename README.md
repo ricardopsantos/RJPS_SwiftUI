@@ -13,11 +13,13 @@
    </a>
 </p>
 
-## Project structure
+## SwiftUI & Combine Note
 
-![Preview](readme.images/image.1.png)
+[__HERE__](https://github.com/ricardopsantos/RJPS_SwiftUI/blob/master/Documentation/MarkDown/NotesAndReferences.md)
 
 ## Things you can find
+
+![Preview](readme.images/image.1.png)
 
 ![Preview](readme.images/image.2.png)
 

@@ -33,6 +33,7 @@
 		D755B15524D5E70D00C6215C /* BasicApp_EditableListOfUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B15124D5E70D00C6215C /* BasicApp_EditableListOfUsers.swift */; };
 		D755B15624D5E70D00C6215C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D755B15224D5E70D00C6215C /* README.md */; };
 		D755B15724D5E70D00C6215C /* BasicApp_InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B15324D5E70D00C6215C /* BasicApp_InfiniteScrollView.swift */; };
+		D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -129,6 +130,8 @@
 		D755B15124D5E70D00C6215C /* BasicApp_EditableListOfUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicApp_EditableListOfUsers.swift; sourceTree = "<group>"; };
 		D755B15224D5E70D00C6215C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D755B15324D5E70D00C6215C /* BasicApp_InfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicApp_InfiniteScrollView.swift; sourceTree = "<group>"; };
+		D769897A24D5FEEA005F851F /* VisualDocs_Caixa.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualDocs_Caixa.JPG; sourceTree = "<group>"; };
+		D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Caixa.swift; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -317,6 +320,7 @@
 		D755B14E24D5E68B00C6215C /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				D769897924D5FED8005F851F /* ToDo */,
 				D755B15924D5E87A00C6215C /* Components */,
 				D755B15824D5E86700C6215C /* Training.BasicConcepts */,
 				D755B14F24D5E70D00C6215C /* Training.BasicApps */,
@@ -359,6 +363,15 @@
 				D755B14C24D59A7000C6215C /* VisualDocs_PassCode.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D769897924D5FED8005F851F /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				D769897A24D5FEEA005F851F /* VisualDocs_Caixa.JPG */,
+				D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */,
+			);
+			path = ToDo;
 			sourceTree = "<group>";
 		};
 		D78FABD324D0BD020069809D /* NetworkAgents */ = {
@@ -643,6 +656,7 @@
 				D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */,
 				D7B5601A2493A0B300E9EC7D /* UIView+Extensions.swift in Sources */,
 				9FE143C021AF2F520026BDFC /* Auxiliar.swift in Sources */,
+				D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */,
 				D755B14724D5736C00C6215C /* VisualDocs_SendEmail.swift in Sources */,
 				D78FABE124D0C1780069809D /* Recreating.Breathe.swift in Sources */,
 				D7B5601E2493A16600E9EC7D /* UIColor+Extensions.swift in Sources */,
