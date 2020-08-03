@@ -100,7 +100,7 @@ enum VisualDocs_RouteToAndCameBack_Sample_III_Pages: String {
 
 extension V {
     struct VisualDocs_RouteToAndCameBack_Sample_III_Page1: View {
-        @ObservedObject var viewRouter: VisualDocs_ScreenSwap_Router
+        @ObservedObject var viewRouter: VisualDocs_RouteToAndCameBack_Sample_III_Router
         var body: some View {
             VStack {
                 Image("happyDog").contentMode(.fit)
@@ -114,7 +114,7 @@ extension V {
 
 extension V {
     struct VisualDocs_RouteToAndCameBack_Sample_III_Page2: View {
-        @ObservedObject var viewRouter: VisualDocs_ScreenSwap_Router
+        @ObservedObject var viewRouter: VisualDocs_RouteToAndCameBack_Sample_III_Router
         var body: some View {
             VStack {
                 Image("grumpyDog").contentMode(.fit)
@@ -126,11 +126,9 @@ extension V {
     }
 }
 
-// MARK: - VisualDocs_ScreenSwap_Router
-
-class VisualDocs_ScreenSwap_Router: ObservableObject {
+class VisualDocs_RouteToAndCameBack_Sample_III_Router: ObservableObject {
     // PassthroughSubject : A subject that broadcasts elements to downstream subscribers.
-    let objectWillChange = PassthroughSubject<VisualDocs_ScreenSwap_Router, Never>()
+    let objectWillChange = PassthroughSubject<VisualDocs_RouteToAndCameBack_Sample_III_Router, Never>()
     var currentPage: VisualDocs_RouteToAndCameBack_Sample_III_Pages = .page1 {
         didSet {
             objectWillChange.send(self)
@@ -138,12 +136,10 @@ class VisualDocs_ScreenSwap_Router: ObservableObject {
     }
 }
 
-// MARK: - Preview VisualDocs_ScreenSwap
-
 extension V {
 
-    struct VisualDocs_ScreenSwap: View {
-        @ObservedObject var viewRouter: VisualDocs_ScreenSwap_Router
+    struct VisualDocs_RouteToAndCameBack_Sample_III_BasePage: View {
+        @ObservedObject var viewRouter: VisualDocs_RouteToAndCameBack_Sample_III_Router
         var body: some View {
             VStack {
                 if viewRouter.currentPage == .page1 {
@@ -158,8 +154,9 @@ extension V {
 
 // MARK: - Preview
 
-struct VisualDocs_ScreenSwap: PreviewProvider {
+struct VisualDocs_RouteToAndCameBack_Sample_III_BasePage: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_ScreenSwap(viewRouter: VisualDocs_ScreenSwap_Router())
+        let viewRouter = VisualDocs_RouteToAndCameBack_Sample_III_Router()
+        return V.VisualDocs_RouteToAndCameBack_Sample_III_BasePage(viewRouter: viewRouter)
     }
 }
