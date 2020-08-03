@@ -18,6 +18,9 @@ import UIKit
 import SwiftUI
 import Combine
 import MessageUI
+//
+import Designables
+import ControllerRepresentables
 
 @propertyWrapper
 struct LastShelterUserDefault<T> {
@@ -356,7 +359,7 @@ extension V {
                             Spacer()
                         }
                         .sheet(isPresented: $isShowingMailView) {
-                            MailView(isShowing: self.$isShowingMailView,
+                            ControllerRepresentable_MailView(isShowing: self.$isShowingMailView,
                                      result: self.$result,
                                      emailTo: "rjps.dev@gmail.com",
                                      emailSubject: "Last Shelter - Hourly Challenge")

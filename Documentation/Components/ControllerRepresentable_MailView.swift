@@ -9,12 +9,25 @@ import SwiftUI
 import Combine
 import MessageUI
 
-struct MailView: UIViewControllerRepresentable {
+//
+// Naming convention : ControllerRepresentable_XXX
+//
+
+struct ControllerRepresentable_MailView: UIViewControllerRepresentable {
     @Binding var isShowing: Bool
     @Binding var result: Result<MFMailComposeResult, Error>?
     @State var emailTo: String
     @State var emailSubject: String
 
+    /*
+    public init(isShowing: Bool, result: Result<MFMailComposeResult, Error>?, emailTo: String, emailSubject: String) {
+        self.isShowing = isShowing
+        self.result = result
+        self.emailTo = emailTo
+        self.emailSubject = emailSubject
+    }
+*/
+    
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
         @Binding var isShowing: Bool
         @Binding var result: Result<MFMailComposeResult, Error>?
@@ -23,7 +36,7 @@ struct MailView: UIViewControllerRepresentable {
             _result = result
         }
 
-        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
             defer {
                 isShowing = false
             }
@@ -39,7 +52,7 @@ struct MailView: UIViewControllerRepresentable {
         return Coordinator(isShowing: $isShowing, result: $result)
     }
 
-    func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ControllerRepresentable_MailView>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
         vc.mailComposeDelegate = context.coordinator
         vc.setSubject(emailSubject)
@@ -47,13 +60,16 @@ struct MailView: UIViewControllerRepresentable {
         return vc
     }
 
-    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: UIViewControllerRepresentableContext<MailView>) {
+    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: UIViewControllerRepresentableContext<ControllerRepresentable_MailView>) {
 
     }
 }
 
+//
+// Naming convention : ControllerRepresentable_XXX_Sample
+//
 extension V {
-    struct VisualDocs_SendEmail: View {
+    struct ControllerRepresentable_MailView_Sample: View {
         @State var result: Result<MFMailComposeResult, Error>?
         @State var isShowingMailView = false
         var body: some View {
@@ -70,7 +86,7 @@ extension V {
                 }
             }
             .sheet(isPresented: $isShowingMailView) {
-                MailView(isShowing: self.$isShowingMailView, result: self.$result, emailTo: "", emailSubject: "Hi")
+                ControllerRepresentable_MailView(isShowing: self.$isShowingMailView, result: self.$result, emailTo: "", emailSubject: "Hi")
             }
         }
 
@@ -79,8 +95,12 @@ extension V {
 
 // MARK: - Preview
 
-struct VisualDocs_SendEmail: PreviewProvider {
+//
+// Naming convention : ControllerRepresentable_XXX_Preview
+//
+
+struct ControllerRepresentable_MailView_Preview: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_SendEmail()
+        V.ControllerRepresentable_MailView_Sample()
     }
 }

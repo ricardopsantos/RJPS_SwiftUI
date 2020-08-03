@@ -1,7 +1,4 @@
 //
-//  Image+Extensions.swift
-//  RJPS_SwiftUI
-//
 //  Created by Ricardo Santos on 12/06/2020.
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
@@ -10,7 +7,13 @@ import UIKit
 import Foundation
 import SwiftUI
 
-enum ImageNames: String, CaseIterable {
+public extension Image {
+    func contentMode(_ mode: ContentMode) -> some View {
+        self.resizable().aspectRatio(contentMode: mode)
+    }
+}
+
+public enum ImageNames: String, CaseIterable {
     case arrow
     case arrow2 = "arrow.2"
     case arrowCounterClockWise = "arrow.counterclockwise"
@@ -58,47 +61,117 @@ enum ImageNames: String, CaseIterable {
     case wifi
     case xmark
 
-    var name: String {
+    public var name: String {
         self.rawValue
     }
 
-    var image: Image {
+    public var image: Image {
         Image(systemName: "\(self.rawValue)")
     }
 
-    var imageFill: Image {
+    public var imageFill: Image {
         Image(systemName: "\(self.rawValue).fill")
     }
 
-    var imageBadge: Image {
+    public var imageBadge: Image {
         Image(systemName: "\(self.rawValue).badge")
     }
 
-    var imageSquarePath: Image {
+    public var imageSquarePath: Image {
         Image(systemName: "\(self.rawValue).squarepath")
     }
 
-    var imageSquare: Image {
+    public var imageSquare: Image {
         Image(systemName: "\(self.rawValue).square")
     }
 
-    var imageCircle: Image {
+    public var imageCircle: Image {
         Image(systemName: "\(self.rawValue).circle")
     }
 
-    var imageRight: Image {
+    public var imageRight: Image {
         Image(systemName: "\(self.rawValue).right")
     }
 
-    var imageLeft: Image {
+    public var imageLeft: Image {
         Image(systemName: "\(self.rawValue).left")
     }
 
-    var imageUp: Image {
+    public var imageUp: Image {
         Image(systemName: "\(self.rawValue).up")
     }
 
-    var imageDown: Image {
+    public var imageDown: Image {
         Image(systemName: "\(self.rawValue).down")
+    }
+}
+
+extension V {
+    public struct VisualDocs_Images: View {
+        @State var imageNames = ImageNames.allCases
+        var body: some View {
+            VStack {
+                Text("ImageNames.allCases").font(.title)
+                ScrollView {
+                    ForEach(self.imageNames, id: \.self) { imageName in
+                        VStack {
+                            Divider()
+                            HStack {
+                                Text(imageName.name).bold()
+                                imageName.image.foregroundColor(Color(UIColor.black))
+                            }.scaledToFill()
+                            HStack {
+                                VStack {
+                                    imageName.imageFill.foregroundColor(Color(UIColor.black))
+                                    Text(".fill").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                                VStack {
+                                    imageName.imageBadge.foregroundColor(Color(UIColor.black))
+                                    Text(".badge").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                                VStack {
+                                    imageName.imageSquarePath.foregroundColor(Color(UIColor.black))
+                                    Text(".squarePath").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                                VStack {
+                                    imageName.imageSquare.foregroundColor(Color(UIColor.black))
+                                    Text(".square").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                                VStack {
+                                    imageName.imageCircle.foregroundColor(Color(UIColor.black))
+                                    Text(".circle").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                            }.scaledToFill()
+                            HStack {
+                                VStack {
+                                    imageName.imageRight.foregroundColor(Color(UIColor.black))
+                                    Text(".right").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                                VStack {
+                                    imageName.imageLeft.foregroundColor(Color(UIColor.black))
+                                    Text(".left").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                                VStack {
+                                    imageName.imageUp.foregroundColor(Color(UIColor.black))
+                                    Text(".up").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                                VStack {
+                                    imageName.imageDown.foregroundColor(Color(UIColor.black))
+                                    Text(".down").font(.caption).textColor(Color(UIColor.lightGray))
+                                }.scaledToFill()
+                            }.scaledToFill()
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Preview
+
+public struct VisualDocs_Images: PreviewProvider {
+    public static var previews: some View {
+        V.VisualDocs_Images()
     }
 }

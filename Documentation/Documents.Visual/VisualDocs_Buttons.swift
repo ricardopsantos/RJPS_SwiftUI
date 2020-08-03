@@ -7,6 +7,9 @@ import Foundation
 import UIKit
 import SwiftUI
 import Combine
+//
+import Extensions
+import Factory
 
 extension V {
     struct VisualDocs_Buttons: View {
@@ -19,9 +22,9 @@ extension V {
                     Divider()
                     Text("SwiftUIFactory.ButtonView").font(.headline)
                     Spacer()
-                    SwiftUIFactory.ButtonView.init(title: "title_1")
+                    SwiftUIFactory.ButtonView(title: "title_1")
                     Spacer()
-                    SwiftUIFactory.ButtonView.init(title: "title_2", subTitle: "subTitle") { print("Tapped") }
+                    SwiftUIFactory.ButtonView(title: "title_2", subTitle: "subTitle") { print("Tapped") }
                 }
 
                 // Tap options

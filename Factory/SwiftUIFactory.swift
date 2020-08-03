@@ -6,13 +6,21 @@
 import UIKit
 import Foundation
 import SwiftUI
+import Extensions
 
-struct SwiftUIFactory {
-    struct ButtonView: View {
-        let title: String
-        var subTitle: String = ""
-        var action = { }
-        var body: some View {
+//swiftlint:disable colon
+
+public struct SwiftUIFactory {
+    public struct ButtonView: View {
+        public let title: String
+        public var subTitle: String = ""
+        public var action = { }
+        public init(title: String, subTitle:String = "", action: @escaping () -> Void = { } ) {
+            self.title = title
+            self.subTitle = subTitle
+            self.action = action
+        }
+        public var body: some View {
             Button(action: {
                 self.action()
             }, label: {

@@ -7,15 +7,13 @@ import UIKit
 import Foundation
 import SwiftUI
 import Combine
+//
+import Extensions
 
 //swiftlint:disable multiple_closures_with_trailing_closure
 
-//
-// Active bank, código multi-canal
-//
-
 extension V {
-    struct VisualDocs_PassCode: View {
+    struct Designables_PassCode: View {
         private let size: CGFloat = 70
         let secret: String
         private let defaultColor = Color(UIColor.gray)
@@ -103,8 +101,8 @@ extension V {
 
 // MARK: - Preview
 
-struct VisualDocs_PassCode: PreviewProvider {
+struct Designables_PassCode: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_PassCode(secret: "1234")
+        V.Designables_PassCode(secret: "1234")
     }
 }
