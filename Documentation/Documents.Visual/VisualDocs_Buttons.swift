@@ -22,9 +22,9 @@ extension V {
                     Divider()
                     Text("SwiftUIFactory.ButtonView").font(.headline)
                     Spacer()
-                    SwiftUIFactory.ButtonView(title: "title_1")
+                    SwiftUIFactory.ButtonView(title: "SwiftUIFactory : 1")
                     Spacer()
-                    SwiftUIFactory.ButtonView(title: "title_2", subTitle: "subTitle") { print("Tapped") }
+                    SwiftUIFactory.ButtonView(title: "SwiftUIFactory : 2", subTitle: "subTitle") { print("Tapped") }
                 }
 
                 // Tap options
@@ -35,9 +35,9 @@ extension V {
                     Divider()
                     Text("Tap options").font(.headline)
                     Spacer()
-                    Button(action: { print("Tap") }, label: { Text("Tap option 1") } )
+                    Button(action: { print("Tap options : 1") }, label: { Text("Tap option 1") } )
                     Spacer()
-                    Button("Tap Option 2") { print("Tap") }
+                    Button("Tap options : 2") { print("Tap") }
                 }
 
                 // Frame and padding
@@ -53,6 +53,39 @@ extension V {
                     Button(action: {}) { Text("Text padding..").padding() }.frame(width: 300).background(Color.green)
                 }
 
+                // Fancy
+                // Fancy
+                // Fancy
+
+                VStack {
+                    Divider()
+                    Text("Fancy").font(.headline)
+                    Button(action: {}) {
+                        Text("Fancy : 1")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .border(Color.blue, width: 5)
+
+                    }
+                    Spacer()
+                    Button(action: {}) {
+                        Text("Fancy : 2")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .padding()
+                            .background(Color.blue)
+                             .cornerRadius(40)
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 40).stroke(Color.blue, lineWidth: 5))
+                    }
+                }
+
                 // Basic
                 // Basic
                 // Basic
@@ -61,8 +94,8 @@ extension V {
                     Divider()
                     Text("Basic").font(.headline)
                     Spacer()
-                    Button(action: {}) { Text("Hi") }.foregroundColor(.primary)
-                    Button(action: {}) { Text("Hi") }.foregroundColor(.secondary)
+                    Button(action: {}) { Text("Basic_1") }.foregroundColor(.primary)
+                    Button(action: {}) { Text("Basic_2") }.foregroundColor(.secondary)
                 }
 
                 // Shapes and padding
@@ -71,7 +104,7 @@ extension V {
 
                 VStack {
                     Divider()
-                    Text("Shapes and padding").font(.headline)
+                    Text("Shapes and padding ").font(.headline)
                     Button(action: { }) {
                         Image(systemName: "paperplane.fill").resizable().frame(width: 20, height: 20).foregroundColor(.red).padding()
                     }.background(Color.blue).clipShape(Circle()).padding().padding(.horizontal, 30)
@@ -97,10 +130,16 @@ extension V {
                     Button(action: {
                         print("Tap!")
                     }, label: {
-                        Image(systemName: "clock")
-                        Text("Click Me")})
+                        HStack {
+                            Image(systemName: "trash").font(.title)
+                            Text("Delete")
+                        }
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                    .cornerRadius(40)
+                    })
                 }
-
             }
         }
     }

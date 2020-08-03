@@ -38,7 +38,6 @@ extension V {
     struct VisualDocs_SwiftUI_Lab_Triangle: View {
         let direction: Direction
         let color: Color
-
         init(_ direction: Direction = .down, _ color: Color = .black) {
             self.direction = direction
             self.color = color

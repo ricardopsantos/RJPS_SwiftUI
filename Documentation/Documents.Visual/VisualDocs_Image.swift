@@ -16,11 +16,28 @@ extension V {
         var body : some View {
             ScrollView {
                 VStack {
+                    Text("Pure")
                     ImageNames.cloud.image
-                    ImageNames.cloud.image.resizable().frame(width: 150, height: 150, alignment: .center)
+                    Divider()
+
+                    Text("resizable().frame(width: 100, height: 100, alignment: .center)")
+                    ImageNames.cloud.image.resizable().frame(width: 100, height: 100, alignment: .center)
+                    Divider()
+
+                    Text("resizable()")
                     ImageNames.cloud.image.resizable()
+                    Divider()
+                }
+                VStack {
+                    Text("resizable().scaledToFit()")
                     ImageNames.cloud.image.resizable().scaledToFit()
-                }.padding()
+
+                    Divider()
+                    Text("Extensions")
+                    ImageNames.cloud.image.contentMode(.fit)
+                    ImageNames.cloud.image.contentMode(.fill)
+                    ImageNames.cloud.image.resize(width: 100, height: 100, alignment: .center)
+                }
             }
         }
     }

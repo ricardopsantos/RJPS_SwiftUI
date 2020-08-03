@@ -8,8 +8,8 @@ import UIKit
 import SwiftUI
 import Combine
 
-var bigWeirdText : some View {
-     Text("Big Weird Text")
+var sample1 : some View {
+     Text("sample1")
      .bold()
      .font(.system(.largeTitle))
      .fontWeight(.medium)
@@ -20,12 +20,29 @@ var bigWeirdText : some View {
      .foregroundColor(Color.green)
 }
 
+var sample2: some View {
+    Text("sample2")
+    .padding()
+    .overlay(
+        RoundedRectangle(cornerRadius: 8)
+            .stroke(Color.blue, lineWidth: 4)
+    )
+}
+
+var sample3: some View {
+    Text("sample3").padding().addCorner(color: UIColor.blue, radius: 8, width: 4)
+}
+
 extension V {
     struct VisualDocs_Text: View {
         var body: some View {
             ScrollView {
                 VStack {
-                    bigWeirdText
+                    sample1
+                    Spacer()
+                    sample2
+                    Spacer()
+                    sample2
                 }
             }
         }

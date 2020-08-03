@@ -11,6 +11,11 @@ public extension Image {
     func contentMode(_ mode: ContentMode) -> some View {
         self.resizable().aspectRatio(contentMode: mode)
     }
+
+    func resize(width: CGFloat, height: CGFloat, alignment: Alignment = .center) -> some View {
+        self.resizable().frame(width: width, height: height, alignment: alignment)
+    }
+
 }
 
 public enum ImageNames: String, CaseIterable {
