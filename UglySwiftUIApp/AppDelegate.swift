@@ -5,6 +5,9 @@
 
 import UIKit
 import SwiftUI
+import Combine
+//
+import App_WeatherApp
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
+
+        if false {
+            self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
+        } else {
+            let fetcher    = WeatherFetcher()
+            let viewModel  = WeeklyWeather_ViewModel(weatherFetcher: fetcher)
+            let weeklyView = WeeklyWeather_View(viewModel: viewModel)
+            self.window?.rootViewController = UIHostingController(rootView: weeklyView)
+        }
         return true
     }
 }

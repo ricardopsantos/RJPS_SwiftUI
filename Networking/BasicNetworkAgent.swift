@@ -1,8 +1,5 @@
 //
-//  Agent.swift
-//  UglySwiftUIApp
-//
-//  Created by Ricardo Santos on 28/07/2020.
+//  Created by Ricardo Santos
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
 

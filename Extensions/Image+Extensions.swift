@@ -1,5 +1,5 @@
 //
-//  Created by Ricardo Santos on 12/06/2020.
+//  Created by Ricardo Santos
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
 
@@ -114,7 +114,7 @@ public enum ImageNames: String, CaseIterable {
 extension V {
     public struct VisualDocs_Images: View {
         @State var imageNames = ImageNames.allCases
-        var body: some View {
+        public var body: some View {
             VStack {
                 Text("ImageNames.allCases").font(.title)
                 ScrollView {

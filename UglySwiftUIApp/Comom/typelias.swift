@@ -1,9 +1,15 @@
 //
-//  Created by Ricardo Santos on 12/06/2020.
+//  Created by Ricardo Santos
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
 
 import Foundation
 
-typealias V = AppView
-struct AppView { private init() {} }
+public typealias V = AppView
+public struct AppView { private init() {} }
+
+public typealias E = Entity // Same as Model in MVP
+public struct Entity { private init() {} }
+
+public typealias VM = ViewModel // Same as Model in MVP
+public struct ViewModel { private init() {} }
