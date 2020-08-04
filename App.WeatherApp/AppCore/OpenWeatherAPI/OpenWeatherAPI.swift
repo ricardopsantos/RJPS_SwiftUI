@@ -12,7 +12,7 @@ public struct OpenWeatherAPI {
         static let scheme = "https"
         static let host   = "api.openweathermap.org"
         static let path   = "/data/2.5"
-        static let key    = "af9bd3a20f27a2ecd36670f6504f653b"
+        static let key    = "224b660ec95851491875217de3e8813e"
     }
 
     public static func makeWeeklyForecastComponents(withCity city: String) -> URLComponents {

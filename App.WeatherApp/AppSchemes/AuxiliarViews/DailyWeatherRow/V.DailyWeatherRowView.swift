@@ -6,7 +6,6 @@
 import SwiftUI
 
 extension V {
-
     struct DailyWeatherRow_View: View {
         private let viewModel: VM.DailyWeatherRow_ViewModel
 

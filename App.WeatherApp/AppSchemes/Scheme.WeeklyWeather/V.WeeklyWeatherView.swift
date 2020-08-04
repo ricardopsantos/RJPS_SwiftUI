@@ -5,32 +5,30 @@
 
 import SwiftUI
 
-//extension V {
-    public struct WeeklyWeather_View: View {
-        @ObservedObject var viewModel: WeeklyWeather_ViewModel
+public struct WeeklyWeather_View: View {
+    @ObservedObject private var viewModel: WeeklyWeather_ViewModel
 
-        public init(viewModel: WeeklyWeather_ViewModel) {
-            print(viewModel)
-            self.viewModel = viewModel
-        }
+    public init(viewModel: WeeklyWeather_ViewModel) {
+        self.viewModel = viewModel
+    }
 
-        public var body: some View {
-            NavigationView {
-                List {
-                    searchField
-                    if viewModel.dataSource.isEmpty {
-                        emptySection
-                    } else {
-                        cityHourlyWeatherSection
-                        forecastSection
-                    }
+    public var body: some View {
+        NavigationView {
+            List {
+                searchField
+                //Text(viewModel.city)
+                if viewModel.dataSource.isEmpty {
+                    emptySection
+                } else {
+                    cityHourlyWeatherSection
+                    forecastSection
                 }
-                .listStyle(GroupedListStyle())
-                .navigationBarTitle("Weather ⛅️")
             }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle("Weather ⛅️")
         }
     }
-//}
+}
 
 private extension WeeklyWeather_View {
     var searchField: some View {
@@ -60,11 +58,5 @@ private extension WeeklyWeather_View {
         Section {
             Text("No results").foregroundColor(.gray)
         }
-    }
-}
-
-struct WeeklyWeather_View_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

@@ -8,7 +8,6 @@ import SwiftUI
 import MapKit
 
 public extension VM {
-
     struct CurrentWeatherRow_ViewModel {
         private let item: E.CurrentWeatherForecastResponse
         

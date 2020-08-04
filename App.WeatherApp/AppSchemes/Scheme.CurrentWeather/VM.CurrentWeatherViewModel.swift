@@ -7,7 +7,6 @@ import SwiftUI
 import Combine
 
 public extension VM {
-
     class CurrentWeather_ViewModel: ObservableObject {
         @Published var dataSource: CurrentWeatherRow_ViewModel?
 

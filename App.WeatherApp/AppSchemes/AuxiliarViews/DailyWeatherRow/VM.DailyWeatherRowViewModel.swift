@@ -7,7 +7,6 @@ import Foundation
 import SwiftUI
 
 public extension VM {
-
     struct DailyWeatherRow_ViewModel: Identifiable {
         private let item: E.WeeklyForecastResponse.Item
         
