@@ -6,7 +6,7 @@
 import Foundation
 
 public extension E {
-    struct WeeklyForecastResponse: Codable {
+    struct WeeklyForecastEntity: Codable {
         let list: [Item]
         
         public struct Item: Codable {

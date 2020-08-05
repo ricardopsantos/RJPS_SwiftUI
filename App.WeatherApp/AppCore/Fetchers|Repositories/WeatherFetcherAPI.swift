@@ -6,28 +6,29 @@
 import Foundation
 import Combine
 
-public class WeatherFetcher {
+public class WeatherFetcherAPI {
     private let session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
 }
 
-// MARK: - WeatherAPI_Protocol
-extension WeatherFetcher: WeatherAPI_Protocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<E.WeeklyForecastResponse, E.WeatherError> {
-        return forecast(with: OpenWeatherAPI.makeWeeklyForecastComponents(withCity: city))
+extension WeatherFetcherAPI: WeatherAPIProtocol {
+    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<E.WeeklyForecastEntity, E.WeatherErrorEntity> {
+        return forecast(with: WeatherAPI.makeWeeklyForecastComponents(withCity: city))
     }
 
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<E.CurrentWeatherForecastResponse, E.WeatherError> {
-        return forecast(with: OpenWeatherAPI.makeCurrentDayForecastComponents(withCity: city))
+    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<E.CurrentWeatherForecastEntity, E.WeatherErrorEntity> {
+        return forecast(with: WeatherAPI.makeCurrentDayForecastComponents(withCity: city))
     }
+}
 
-    private func forecast<T>(with components: URLComponents) -> AnyPublisher<T, E.WeatherError> where T: Decodable {
+fileprivate extension WeatherFetcherAPI {
+     func forecast<T>(with components: URLComponents) -> AnyPublisher<T, E.WeatherErrorEntity> where T: Decodable {
         // Try to create an instance of URL from the URLComponents. If this fails, return an error
         // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.
         guard let url = components.url else {
-            let error = E.WeatherError.network(description: "Couldn't create URL")
+            let error = E.WeatherErrorEntity.network(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
         }
 
@@ -39,7 +40,7 @@ extension WeatherFetcher: WeatherAPI_Protocol {
             // The uses of flatMap deserves a post of their own. Here, you use it to convert the data
             // coming from the server as JSON to a fully-fledged object. You use decode(_:) as an auxiliary
             // function to achieve this. Since you are only interested in the first value emitted by the network request, you set .max(1).
-            .flatMap(maxPublishers: .max(1)) { pair in decode(pair.data) }
+            .flatMap(maxPublishers: .max(1)) { [weak self] pair in self!.decode(pair.data) }
             // If you don’t use eraseToAnyPublisher() you’ll have to carry over the full type returned
             // by flatMap: Publishers.FlatMap<AnyPublisher<_, WeatherError>, Publishers.MapError<URLSession.DataTaskPublisher, WeatherError>>.
             // As a consumer of the API, you don’t want to be burdened with these details. So, to improve the API ergonomics,
@@ -47,4 +48,15 @@ extension WeatherFetcher: WeatherAPI_Protocol {
             // changes the returned type and, therefore, leaks implementation details.
             .eraseToAnyPublisher()
     }
+
+    func decode<T: Decodable>(_ data: Data) -> AnyPublisher<T, E.WeatherErrorEntity> {
+        //let str = String(decoding: data, as: UTF8.self)
+        //
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return Just(data).decode(type: T.self, decoder: decoder).mapError { error in
+            .parsing(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+
 }

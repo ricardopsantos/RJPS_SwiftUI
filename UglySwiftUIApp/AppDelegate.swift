@@ -16,11 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        if true {
+        if false {
             self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
         } else {
-            let fetcher    = WeatherFetcher()
-            let viewModel  = WeeklyWeather_ViewModel(weatherFetcher: fetcher)
+            let fetcher_1  = WeatherFetcherAPI()
+            let fetcher_2  = WeatherFetcherMock()
+            let viewModel  = WeeklyWeather_ViewModel(weatherFetcher: fetcher_2)
             let weeklyView = WeeklyWeather_View(viewModel: viewModel)
             self.window?.rootViewController = UIHostingController(rootView: weeklyView)
         }

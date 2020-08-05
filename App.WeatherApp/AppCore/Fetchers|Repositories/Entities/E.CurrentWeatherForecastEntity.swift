@@ -6,7 +6,7 @@
 import Foundation
 
 extension E {
-    public struct CurrentWeatherForecastResponse: Decodable {
+    public struct CurrentWeatherForecastEntity: Decodable {
         let coord: Coord
         let main: Main
 

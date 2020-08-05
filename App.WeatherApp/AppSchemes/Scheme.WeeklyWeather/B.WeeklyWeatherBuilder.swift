@@ -6,7 +6,7 @@
 import SwiftUI
 
 struct WeeklyWeather_Builder {
-    static func makeCurrentWeatherView(withCity city: String, weatherFetcher: WeatherAPI_Protocol) -> some View {
+    static func makeCurrentWeatherView(withCity city: String, weatherFetcher: WeatherAPIProtocol) -> some View {
         let viewModel = VM.CurrentWeather_ViewModel(city: city, weatherFetcher: weatherFetcher)
         return V.CurrentWeather_View(viewModel: viewModel)
     }

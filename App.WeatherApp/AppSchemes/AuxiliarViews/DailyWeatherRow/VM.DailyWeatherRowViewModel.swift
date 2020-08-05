@@ -8,11 +8,11 @@ import SwiftUI
 
 public extension VM {
     struct DailyWeatherRow_ViewModel: Identifiable {
-        private let item: E.WeeklyForecastResponse.Item
+        private let item: E.WeeklyForecastEntity.Item
         
         public var id: String { return day + temperature + title }
-        var day: String { return dayFormatter.string(from: item.date) }
-        var month: String { return monthFormatter.string(from: item.date) }
+        var day: String { return Formatters.dayFormatter.string(from: item.date) }
+        var month: String { return Formatters.monthFormatter.string(from: item.date) }
         
         var temperature: String { return String(format: "%.1f", item.main.temp) }
         
@@ -26,7 +26,7 @@ public extension VM {
             return description
         }
         
-        init(item: E.WeeklyForecastResponse.Item) {
+        init(item: E.WeeklyForecastEntity.Item) {
             self.item = item
         }
     }

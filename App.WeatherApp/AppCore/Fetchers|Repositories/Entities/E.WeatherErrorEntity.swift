@@ -6,7 +6,7 @@
 import Foundation
 
 public extension E {
-     enum WeatherError: Error {
+     enum WeatherErrorEntity: Error {
         case parsing(description: String)
         case network(description: String)
     }

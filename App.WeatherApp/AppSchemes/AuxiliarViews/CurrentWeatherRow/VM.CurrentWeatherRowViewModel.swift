@@ -9,7 +9,7 @@ import MapKit
 
 public extension VM {
     struct CurrentWeatherRow_ViewModel {
-        private let item: E.CurrentWeatherForecastResponse
+        private let item: E.CurrentWeatherForecastEntity
         
         var temperature: String {
             return String(format: "%.1f", item.main.temperature)
@@ -31,7 +31,7 @@ public extension VM {
             return CLLocationCoordinate2D.init(latitude: item.coord.lat, longitude: item.coord.lon)
         }
         
-        init(item: E.CurrentWeatherForecastResponse) {
+        init(item: E.CurrentWeatherForecastEntity) {
             self.item = item
         }
     }

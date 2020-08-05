@@ -11,10 +11,10 @@ public extension VM {
         @Published var dataSource: CurrentWeatherRow_ViewModel?
 
         let city: String
-        private let weatherFetcher: WeatherAPI_Protocol
+        private let weatherFetcher: WeatherAPIProtocol
         private var disposables = Set<AnyCancellable>()
 
-        init(city: String, weatherFetcher: WeatherAPI_Protocol) {
+        init(city: String, weatherFetcher: WeatherAPIProtocol) {
             self.weatherFetcher = weatherFetcher
             self.city = city
         }
