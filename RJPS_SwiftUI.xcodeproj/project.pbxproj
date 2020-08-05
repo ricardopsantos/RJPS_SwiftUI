@@ -116,6 +116,7 @@
 		D7B9969824DB1FE2000DAFD2 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7B9969724DB1FE2000DAFD2 /* Keys.plist */; };
 		D7B9969A24DB1FFA000DAFD2 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9969924DB1FFA000DAFD2 /* APIKeys.swift */; };
 		D7B9969F24DB25C7000DAFD2 /* WeatherFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9969D24DB25C7000DAFD2 /* WeatherFetcherMock.swift */; };
+		D7B996A324DB3141000DAFD2 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */; };
 		D7C9EA5B24A2B7A300FF80BD /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */; };
 		D7F142D124D95DD600B910A7 /* App_WeatherApp.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F142CF24D95DD600B910A7 /* App_WeatherApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7F142D424D95DD700B910A7 /* App_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F142CD24D95DD600B910A7 /* App_WeatherApp.framework */; };
@@ -399,6 +400,7 @@
 		D7B9969724DB1FE2000DAFD2 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		D7B9969924DB1FFA000DAFD2 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		D7B9969D24DB25C7000DAFD2 /* WeatherFetcherMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherFetcherMock.swift; sourceTree = "<group>"; };
+		D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 		D7F142CD24D95DD600B910A7 /* App_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F142CF24D95DD600B910A7 /* App_WeatherApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_WeatherApp.h; sourceTree = "<group>"; };
@@ -693,6 +695,7 @@
 		D769898324D7252E005F851F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */,
 				D7F142EC24D95EAD00B910A7 /* Array+Filtering.swift */,
 				D76989E924D8406C005F851F /* Text+Extensions.swift */,
 				D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */,
@@ -1516,6 +1519,7 @@
 				D76989EA24D8406C005F851F /* Text+Extensions.swift in Sources */,
 				D769898F24D72555005F851F /* UIColor+Extensions.swift in Sources */,
 				D769898E24D72555005F851F /* Image+Extensions.swift in Sources */,
+				D7B996A324DB3141000DAFD2 /* OSLog+Extension.swift in Sources */,
 				D7F1432224D95F2100B910A7 /* Array+Filtering.swift in Sources */,
 				D76989E724D7F890005F851F /* CodeIndex.swift in Sources */,
 			);

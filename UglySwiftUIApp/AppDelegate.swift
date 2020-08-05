@@ -7,6 +7,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
+import API_Keys
 import App_WeatherApp
 
 @UIApplicationMain
@@ -19,9 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if false {
             self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
         } else {
-            let fetcher_1  = WeatherFetcherAPI()
-            let fetcher_2  = WeatherFetcherMock()
-            let viewModel  = WeeklyWeather_ViewModel(weatherFetcher: fetcher_2)
+            let fetcher: WeatherAPIProtocol = APIKeys.get(key: "OpenWeather") != nil ?  WeatherFetcherAPI() : WeatherFetcherMock()
+            let viewModel  = WeeklyWeather_ViewModel(weatherFetcher: fetcher)
             let weeklyView = WeeklyWeather_View(viewModel: viewModel)
             self.window?.rootViewController = UIHostingController(rootView: weeklyView)
         }

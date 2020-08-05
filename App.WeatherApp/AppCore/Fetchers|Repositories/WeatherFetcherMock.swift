@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Extensions
 
 public class WeatherFetcherMock {
     private let session: URLSession
@@ -20,8 +21,11 @@ extension WeatherFetcherMock: WeatherAPIProtocol {
         let data = Data(weeklyWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        return Just(data).decode(type: E.WeeklyForecastEntity.self, decoder: decoder).mapError { error in
-            .parsing(description: error.localizedDescription)
+        return Just(data)
+            .decode(type: E.WeeklyForecastEntity.self, decoder: decoder)
+            .mapError { error in
+                os_log("Error : \(error)", type: .error)
+            return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
     public func currentWeatherForecast(forCity city: String) -> AnyPublisher<E.CurrentWeatherForecastEntity, E.WeatherErrorEntity> {
@@ -29,7 +33,8 @@ extension WeatherFetcherMock: WeatherAPIProtocol {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data).decode(type: E.CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
-            .parsing(description: error.localizedDescription)
+            os_log("Error : \(error)", type: .error)
+            return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
 }
@@ -1500,55 +1505,5 @@ private let weeklyWeatherForecastMock = """
     "sunrise": 1596606103,
     "sunset": 1596656595
   }
-}
-
-
-
-
-
-
-
-{
-  "coord": {
-    "lon": -9.13,
-    "lat": 38.72
-  },
-  "weather": [
-    {
-      "id": 800,
-      "main": "Clear",
-      "description": "clear sky",
-      "icon": "01d"
-    }
-  ],
-  "base": "stations",
-  "main": {
-    "temp": 28.46,
-    "feels_like": 24.88,
-    "temp_min": 27.78,
-    "temp_max": 30,
-    "pressure": 1010,
-    "humidity": 40
-  },
-  "visibility": 10000,
-  "wind": {
-    "speed": 6.7,
-    "deg": 320
-  },
-  "clouds": {
-    "all": 0
-  },
-  "dt": 1596648377,
-  "sys": {
-    "type": 1,
-    "id": 6901,
-    "country": "PT",
-    "sunrise": 1596606102,
-    "sunset": 1596656594
-  },
-  "timezone": 3600,
-  "id": 2267057,
-  "name": "Lisbon",
-  "cod": 200
 }
 """
