@@ -12,7 +12,7 @@ public struct APIKeys {
             keys = NSDictionary(contentsOfFile: path)
         }
         if let dict = keys, let value = dict[key] as? String {
-            return value
+            return value.replacingOccurrences(of: " ", with: "")
         }
         print("Key [\(key)] not found")
         return nil
