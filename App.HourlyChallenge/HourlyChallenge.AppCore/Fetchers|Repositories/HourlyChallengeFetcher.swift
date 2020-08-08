@@ -1,17 +1,61 @@
 //
-//  Created by Ricardo Santos
+//  Created by Ricardo Santos on 07/08/2020.
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
+
+//swiftlint:disable cyclomatic_complexity
 
 import Foundation
 import UIKit
 import SwiftUI
 import Combine
-import MessageUI
+//
+import Extensions
 
-//swiftlint:disable cyclomatic_complexity
+public class Fetcher {
+    public init() { }
+    public static var shared = Fetcher()
+}
 
-struct HourlyChallengeData {
+extension Fetcher: APIProtocol {
+    public func day(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
+        return Just(HourlyChallengeData.day(weekDay: weekDay))
+            .mapError { error in
+            os_log("Error : \(error)", type: .error)
+            return .customError(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+    public func mainTask(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
+        return Just(HourlyChallengeData.mainTask(weekDay: weekDay))
+            .mapError { error in
+            os_log("Error : \(error)", type: .error)
+            return .customError(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+    public func imageName(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
+        return Just(HourlyChallengeData.imageName(weekDay: weekDay))
+            .mapError { error in
+            os_log("Error : \(error)", type: .error)
+            return .customError(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+    public func color(weekDay: Int) -> AnyPublisher<Color, E.HourlyErrorEntity> {
+        return Just(HourlyChallengeData.color(weekDay: weekDay))
+            .mapError { error in
+            os_log("Error : \(error)", type: .error)
+            return .customError(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+    public func task(weekDay: Int, hour: String) -> AnyPublisher<String, E.HourlyErrorEntity> {
+        return Just(HourlyChallengeData.task(weekDay: weekDay, hour: hour))
+            .mapError { error in
+            os_log("Error : \(error)", type: .error)
+            return .customError(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+}
+
+fileprivate struct HourlyChallengeData {
 
     static func day(weekDay: Int) -> String {
         switch weekDay {
@@ -138,32 +182,5 @@ struct HourlyChallengeData {
             }
         }
         return ""
-    }
-
-    static func taskNow(weekDay: Int, timeZone: Int) -> String {
-        task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone))
-    }
-
-    static func taskNext(weekDay: Int, timeZone: Int, next: Int) -> String {
-        task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+next))
-    }
-
-    static func listItem(weekDay: Int, timeZone: Int) -> some View {
-        HStack {
-            Image(systemName: imageName(weekDay: weekDay)).frame(width: 28, height: 28).background(color(weekDay: weekDay)).cornerRadius(6)
-            VStack(alignment: .leading) {
-                if Date.dayOfWeek == weekDay {
-                    Text(day(weekDay: weekDay)).font(.headline).bold()
-                    Text(mainTask(weekDay: weekDay)).font(.headline).bold()
-                } else {
-                    Text(day(weekDay: weekDay))
-                    Text(mainTask(weekDay: weekDay))
-                }
-            }
-        }
-    }
-
-    static func weedDayDetailsBody(weekDay: Int, timeZone: Int) -> some View {
-        return Text("")
     }
 }

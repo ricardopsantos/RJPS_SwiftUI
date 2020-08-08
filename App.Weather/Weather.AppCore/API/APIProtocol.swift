@@ -6,7 +6,7 @@
 import Foundation
 import Combine
 
-public protocol WeatherAPIProtocol {
+public protocol APIProtocol {
     func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<E.WeeklyForecastEntity, E.WeatherErrorEntity>
     func currentWeatherForecast(forCity city: String) -> AnyPublisher<E.CurrentWeatherForecastEntity, E.WeatherErrorEntity>
 }

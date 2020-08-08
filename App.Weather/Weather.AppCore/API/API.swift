@@ -7,7 +7,7 @@ import Foundation
 import Combine
 import API_Keys
 
-public struct WeatherAPI {
+public struct API {
     
     public struct Constants {
         static let scheme = "https"
@@ -19,14 +19,14 @@ public struct WeatherAPI {
     public static func makeWeeklyForecastComponents(withCity city: String) -> URLComponents {
         // https://api.openweathermap.org/data/2.5/forecast?q=Lisboa&mode=json&units=metric&APPID=XXXXXXXXX
         var components = URLComponents()
-        components.scheme = WeatherAPI.Constants.scheme
-        components.host   = WeatherAPI.Constants.host
-        components.path   = WeatherAPI.Constants.path + "/forecast"
+        components.scheme = API.Constants.scheme
+        components.host   = API.Constants.host
+        components.path   = API.Constants.path + "/forecast"
         components.queryItems = [
             URLQueryItem(name: "q", value: city),
             URLQueryItem(name: "mode", value: "json"),
             URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "APPID", value: WeatherAPI.Constants.key)
+            URLQueryItem(name: "APPID", value: API.Constants.key)
         ]
         return components
     }
@@ -34,14 +34,14 @@ public struct WeatherAPI {
     public static func makeCurrentDayForecastComponents(withCity city: String) -> URLComponents {
         // https://api.openweathermap.org/data/2.5/weather?q=Lisboa&mode=json&units=metric&APPID=XXXXXXXXX
         var components    = URLComponents()
-        components.scheme = WeatherAPI.Constants.scheme
-        components.host   = WeatherAPI.Constants.host
-        components.path   = WeatherAPI.Constants.path + "/weather"
+        components.scheme = API.Constants.scheme
+        components.host   = API.Constants.host
+        components.path   = API.Constants.path + "/weather"
         components.queryItems = [
             URLQueryItem(name: "q", value: city),
             URLQueryItem(name: "mode", value: "json"),
             URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "APPID", value: WeatherAPI.Constants.key)
+            URLQueryItem(name: "APPID", value: API.Constants.key)
         ]
         return components
     }

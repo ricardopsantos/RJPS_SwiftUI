@@ -8,7 +8,14 @@ import SwiftUI
 import Combine
 //
 import API_Keys
-import App_WeatherApp
+import App_Weather
+import App_HourlyChallenge
+
+enum TargetApp {
+    case sample
+    case weather
+    case hourly
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,13 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        if false {
+        let targetApp: TargetApp = .hourly
+        switch targetApp {
+        case .sample:
             self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
-        } else {
-            let fetcher: WeatherAPIProtocol = APIKeys.get(key: "OpenWeather") != nil ?  WeatherFetcherAPI() : WeatherFetcherMock()
-            let viewModel  = WeeklyWeather_ViewModel(weatherFetcher: fetcher)
-            let weeklyView = WeeklyWeather_View(viewModel: viewModel)
-            self.window?.rootViewController = UIHostingController(rootView: weeklyView)
+        case .hourly:
+            self.window?.rootViewController = UIHostingController(rootView: DashboardViewBuilder.buildView())
+        case .weather:
+            self.window?.rootViewController = UIHostingController(rootView: WeeklyWeatherBuilder.buildView())
         }
         return true
     }

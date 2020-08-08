@@ -22,12 +22,9 @@ struct LastShelterUserDefault<T> {
     }
     var wrappedValue: T {
         get {
-            let result = UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
-            //print("result: \(result)")
-            return result
+            UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
         }
         set {
-            //print("new: \(newValue)")
             UserDefaults.standard.set(newValue, forKey: key)
         }
     }

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D7F142CC24D95DD600B910A7"
-               BuildableName = "App_WeatherApp.framework"
-               BlueprintName = "App.WeatherApp"
+               BuildableName = "App_Weather.framework"
+               BlueprintName = "App.Weather"
                ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D7F142CC24D95DD600B910A7"
-            BuildableName = "App_WeatherApp.framework"
-            BlueprintName = "App.WeatherApp"
+            BuildableName = "App_Weather.framework"
+            BlueprintName = "App.Weather"
             ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

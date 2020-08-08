@@ -25,14 +25,14 @@ import Extensions
         // that publisher and redraws the screen when you change the property.
         @Published var dataSource: [VM.DailyWeatherRow_ViewModel] = []
 
-        private let weatherFetcher: WeatherAPIProtocol
+        private let weatherFetcher: APIProtocol
 
         // Think of disposables as a collection of references to requests.
         // Without keeping these references, the network requests you’ll make won’t be
         // kept alive, preventing you from getting responses from the server.
         private var disposables = Set<AnyCancellable>()
 
-        public init(weatherFetcher: WeatherAPIProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
+        public init(weatherFetcher: APIProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
             self.weatherFetcher = weatherFetcher
 
             // Option 1
@@ -92,6 +92,6 @@ import Extensions
 
 extension WeeklyWeather_ViewModel {
     var currentWeatherView: some View {
-        return WeeklyWeather_Builder.makeCurrentWeatherView(withCity: city, weatherFetcher: weatherFetcher)
+        return WeeklyWeatherBuilder.buildView()
     }
 }

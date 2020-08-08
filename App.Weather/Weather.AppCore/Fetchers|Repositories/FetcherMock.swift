@@ -9,14 +9,14 @@ import Foundation
 import Combine
 import Extensions
 
-public class WeatherFetcherMock {
+public class FetcherMock {
     private let session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
 }
 
-extension WeatherFetcherMock: WeatherAPIProtocol {
+extension FetcherMock: APIProtocol {
     public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<E.WeeklyForecastEntity, E.WeatherErrorEntity> {
         let data = Data(weeklyWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
