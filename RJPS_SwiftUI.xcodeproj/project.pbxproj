@@ -21,7 +21,6 @@
 		D72BD65924D45CC900671712 /* VisualDocs_@Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65824D45CC900671712 /* VisualDocs_@Binding.swift */; };
 		D72BD65B24D4633800671712 /* VisualDocs_TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65A24D4633800671712 /* VisualDocs_TimerView.swift */; };
 		D72BD65D24D4684800671712 /* VisualDocs_onReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65C24D4684800671712 /* VisualDocs_onReceive.swift */; };
-		D751735F24DDBB8F004822B2 /* HourlyChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751735E24DDBB8F004822B2 /* HourlyChallengeViewModel.swift */; };
 		D751736124DDBC79004822B2 /* E.HourlyErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751736024DDBC79004822B2 /* E.HourlyErrorEntity.swift */; };
 		D751736424DDD0FD004822B2 /* VM.DashboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751736324DDD0FD004822B2 /* VM.DashboardViewViewModel.swift */; };
 		D751736824DEA18E004822B2 /* B.DashboardViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751736724DEA18E004822B2 /* B.DashboardViewBuilder.swift */; };
@@ -112,7 +111,6 @@
 		D7A7184B24D8BC2A00EC53FB /* V.DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B15024D5E70D00C6215C /* V.DashboardView.swift */; };
 		D7A7184C24D8BC9100EC53FB /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D7A7184E24D8BCC700EC53FB /* App.LastSheltel.MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7184D24D8BCC700EC53FB /* App.LastSheltel.MailView.swift */; };
-		D7A7185024D8BCEB00EC53FB /* HourlyChallengeFetcherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7184F24D8BCEB00EC53FB /* HourlyChallengeFetcherData.swift */; };
 		D7A7185224D8BD3900EC53FB /* App.LastShelter.Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185124D8BD3900EC53FB /* App.LastShelter.Extensions.swift */; };
 		D7A7185424D8BDC500EC53FB /* App.LastShelter.Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185324D8BDC500EC53FB /* App.LastShelter.Settings.swift */; };
 		D7A7185624D8C70B00EC53FB /* VisualDocs_DebugUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185524D8C70B00EC53FB /* VisualDocs_DebugUI.swift */; };
@@ -323,7 +321,6 @@
 		D72BD65824D45CC900671712 /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
 		D72BD65A24D4633800671712 /* VisualDocs_TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TimerView.swift; sourceTree = "<group>"; };
 		D72BD65C24D4684800671712 /* VisualDocs_onReceive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_onReceive.swift; sourceTree = "<group>"; };
-		D751735E24DDBB8F004822B2 /* HourlyChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyChallengeViewModel.swift; sourceTree = "<group>"; };
 		D751736024DDBC79004822B2 /* E.HourlyErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.HourlyErrorEntity.swift; sourceTree = "<group>"; };
 		D751736324DDD0FD004822B2 /* VM.DashboardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DashboardViewViewModel.swift; sourceTree = "<group>"; };
 		D751736724DEA18E004822B2 /* B.DashboardViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.DashboardViewBuilder.swift; sourceTree = "<group>"; };
@@ -410,7 +407,6 @@
 		D7A7184224D8BBFB00EC53FB /* App_HourlyChallenge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_HourlyChallenge.h; sourceTree = "<group>"; };
 		D7A7184324D8BBFB00EC53FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A7184D24D8BCC700EC53FB /* App.LastSheltel.MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.LastSheltel.MailView.swift; sourceTree = "<group>"; };
-		D7A7184F24D8BCEB00EC53FB /* HourlyChallengeFetcherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyChallengeFetcherData.swift; sourceTree = "<group>"; };
 		D7A7185124D8BD3900EC53FB /* App.LastShelter.Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.LastShelter.Extensions.swift; sourceTree = "<group>"; };
 		D7A7185324D8BDC500EC53FB /* App.LastShelter.Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.LastShelter.Settings.swift; sourceTree = "<group>"; };
 		D7A7185524D8C70B00EC53FB /* VisualDocs_DebugUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_DebugUI.swift; sourceTree = "<group>"; };
@@ -890,7 +886,6 @@
 			children = (
 				D751736224DDBCA7004822B2 /* Enteties */,
 				D79B2EBF24DDA44F009B84A4 /* Fetcher.swift */,
-				D7A7184F24D8BCEB00EC53FB /* HourlyChallengeFetcherData.swift */,
 			);
 			path = "Fetchers|Repositories";
 			sourceTree = "<group>";
@@ -1107,7 +1102,6 @@
 				D79B2EBE24DDA42E009B84A4 /* API */,
 				D79B2EBD24DDA2EF009B84A4 /* Fetchers|Repositories */,
 				D7A7185324D8BDC500EC53FB /* App.LastShelter.Settings.swift */,
-				D751735E24DDBB8F004822B2 /* HourlyChallengeViewModel.swift */,
 			);
 			path = HourlyChallenge.AppCore;
 			sourceTree = "<group>";
@@ -1736,9 +1730,7 @@
 				D79B2EC224DDA49A009B84A4 /* APIProtocol.swift in Sources */,
 				D7A7185224D8BD3900EC53FB /* App.LastShelter.Extensions.swift in Sources */,
 				D7A7184C24D8BC9100EC53FB /* typelias.swift in Sources */,
-				D751735F24DDBB8F004822B2 /* HourlyChallengeViewModel.swift in Sources */,
 				D7A7184B24D8BC2A00EC53FB /* V.DashboardView.swift in Sources */,
-				D7A7185024D8BCEB00EC53FB /* HourlyChallengeFetcherData.swift in Sources */,
 				D751736A24DEA3A5004822B2 /* VM.DayDetailsViewModel.swift in Sources */,
 				D751736C24DEA3DD004822B2 /* B.DayDetailsView.swift in Sources */,
 				D79B2EC024DDA44F009B84A4 /* Fetcher.swift in Sources */,

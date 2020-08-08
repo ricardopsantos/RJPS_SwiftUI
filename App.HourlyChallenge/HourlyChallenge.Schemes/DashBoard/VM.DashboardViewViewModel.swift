@@ -26,28 +26,28 @@ public class DashBoardViewModel: ObservableObject {
     }
 
     func day(weekDay: Int) -> String {
-        fetcher.day(weekDay: weekDay)
-        return "1"
+        //fetcher.day(weekDay: weekDay)
+        return FetcherStaticData.day(weekDay: weekDay)
     }
 
     func mainTask(weekDay: Int) -> String {
-        fetcher.mainTask(weekDay: weekDay)
-        return "1"
+        //fetcher.mainTask(weekDay: weekDay)
+        return FetcherStaticData.mainTask(weekDay: weekDay)
     }
 
     func imageName(weekDay: Int) -> String {
-        fetcher.imageName(weekDay: weekDay)
-        return ""
+        //fetcher.imageName(weekDay: weekDay)
+        return FetcherStaticData.imageName(weekDay: weekDay)
     }
 
-    func color(weekDay: Int) -> Just<Color> {
-        fetcher.color(weekDay: weekDay)
-        return Just(Color.red)
+    func color(weekDay: Int) -> Color {
+        //fetcher.color(weekDay: weekDay)
+        return FetcherStaticData.color(weekDay: weekDay)
     }
 
     func task(weekDay: Int, hour: String) -> String {
-        fetcher.task(weekDay: weekDay, hour: hour)
-        return ""
+        //fetcher.task(weekDay: weekDay, hour: hour)
+        return FetcherStaticData.task(weekDay: weekDay, hour: hour)
     }
 
     func refresh() {
@@ -62,7 +62,8 @@ public class DashBoardViewModel: ObservableObject {
 
 private extension DashBoardViewModel {
     private func taskNow(weekDay: Int, timeZone: Int) {
-        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(
+            receiveCompletion: { value in
             switch value {
             case .failure: break
             case .finished: break

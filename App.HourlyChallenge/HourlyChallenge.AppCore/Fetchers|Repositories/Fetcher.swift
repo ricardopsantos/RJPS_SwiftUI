@@ -22,35 +22,35 @@ public class Fetcher {
 
 extension Fetcher: APIProtocol {
     public func day(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
-        return Just(HourlyChallengeData.day(weekDay: weekDay))
+        return Just(FetcherStaticData.day(weekDay: weekDay))
             .mapError { error in
             os_log("Error : \(error)", type: .error)
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
     public func mainTask(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
-        return Just(HourlyChallengeData.mainTask(weekDay: weekDay))
+        return Just(FetcherStaticData.mainTask(weekDay: weekDay))
             .mapError { error in
             os_log("Error : \(error)", type: .error)
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
     public func imageName(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
-        return Just(HourlyChallengeData.imageName(weekDay: weekDay))
+        return Just(FetcherStaticData.imageName(weekDay: weekDay))
             .mapError { error in
             os_log("Error : \(error)", type: .error)
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
     public func color(weekDay: Int) -> AnyPublisher<Color, E.HourlyErrorEntity> {
-        return Just(HourlyChallengeData.color(weekDay: weekDay))
+        return Just(FetcherStaticData.color(weekDay: weekDay))
             .mapError { error in
             os_log("Error : \(error)", type: .error)
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
     public func task(weekDay: Int, hour: String) -> AnyPublisher<String, E.HourlyErrorEntity> {
-        return Just(HourlyChallengeData.task(weekDay: weekDay, hour: hour))
+        return Just(FetcherStaticData.task(weekDay: weekDay, hour: hour))
             .mapError { error in
             os_log("Error : \(error)", type: .error)
             return .customError(description: error.localizedDescription)
@@ -58,7 +58,9 @@ extension Fetcher: APIProtocol {
     }
 }
 
-fileprivate struct HourlyChallengeData {
+typealias FetcherStaticData = HourlyChallengeData
+
+struct HourlyChallengeData {
 
     static func day(weekDay: Int) -> String {
         switch weekDay {

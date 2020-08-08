@@ -16,22 +16,22 @@ public struct DayDetailsView: View {
     var weekDay: Int
     var timeZone: Int
     let list = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
-
+    
     @ObservedObject private var viewModel: DayDetailsViewModel
     public init(weekDay: Int, timeZone: Int, viewModel: DayDetailsViewModel) {
         self.viewModel = viewModel
         self.weekDay = weekDay
         self.timeZone = timeZone
+        self.viewModel.refresh()
     }
     
     public var body : some View {
-        Text("Uncomment")
-       /* ScrollView {
+        ScrollView {
             VStack {
-                Text(HourlyChallengeData.day(weekDay: weekDay)).font(.title)
+                Text(viewModel.day).font(.title)
                 Spacer()
                 Text("Current challenge: ").font(.footnote).bold()
-                Text(HourlyChallengeViewModel.taskNow(weekDay: weekDay, timeZone: timeZone))
+                Text(viewModel.taskNow)
             }.scaledToFill().padding(.vertical)
             Spacer()
             Text("Today Challenges Schedule").font(.title)
@@ -41,20 +41,22 @@ public struct DayDetailsView: View {
                     HStack(alignment: .top, spacing: 3) {
                         if Date.getUserHour(diff: self.timeZone) == some {
                             Text("\(some):00").font(.headline).bold()
-                            Text(HourlyChallengeData.task(weekDay: self.weekDay, hour: some)).font(.headline).bold()
+                            Text(self.viewModel.task(weekDay: self.weekDay, hour: some)).font(.headline).bold()
                         } else {
-                            Text("\(some):00 ")
-                            Text(HourlyChallengeData.task(weekDay: self.weekDay, hour: some))
+                            Text("\(some):00 ").alpha(0.6)
+                            Text(self.viewModel.task(weekDay: self.weekDay, hour: some)).alpha(0.6)
                         }
                     }
                 }
-             }
-        }.padding(.horizontal)*/
+            }
+        }
+        .padding(.horizontal)
+        .onAppear(perform: { })
     }
 }
 
 // MARK: - Auxiliar components
 
 fileprivate extension DayDetailsView {
-
+    
 }

@@ -16,10 +16,48 @@ public class DayDetailsViewModel: ObservableObject {
 
     private var disposables = Set<AnyCancellable>()
 
+    @Published var taskNow = ""
+    @Published var day = ""
+
     public init(weekDay: Int, timeZone: Int, fetcher: APIProtocol) {
         self.fetcher = fetcher
         self.weekDay = weekDay
         self.timeZone = timeZone
+    }
+
+    func refresh() {
+        taskNow(weekDay: weekDay, timeZone: timeZone)
+        day(weekDay: weekDay)
+    }
+
+    func task(weekDay: Int, hour: String) -> String {
+        FetcherStaticData.task(weekDay: weekDay, hour: hour)
+    }
+}
+
+private extension DayDetailsViewModel {
+    private func taskNow(weekDay: Int, timeZone: Int) {
+        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+            switch value {
+            case .failure: break
+            case .finished: break
+            }
+        }, receiveValue: { [weak self] value in
+            guard let self = self else { return }
+            self.taskNow = value
+        }).store(in: &disposables)
+    }
+
+    private func day(weekDay: Int) {
+        fetcher.day(weekDay: weekDay).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+            switch value {
+            case .failure: break
+            case .finished: break
+            }
+        }, receiveValue: { [weak self] value in
+            guard let self = self else { return }
+            self.day = value
+        }).store(in: &disposables)
     }
 
 }

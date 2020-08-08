@@ -104,7 +104,7 @@ public struct DashboardView: View {
                     }
                 }
 
-                Stepper(value: $viewModel.settings.timeZone) { Text("Adjust TimeZone: \(viewModel.settings.timeZone)") }
+                Stepper(value: $viewModel.settings.timeZone, onEditingChanged: { _ in self.viewModel.refresh() }) { Text("Adjust TimeZone: \(viewModel.settings.timeZone)") }
 
                 Section {
                     NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 1, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 1, timeZone: viewModel.timeZoneServer) }
@@ -153,7 +153,7 @@ fileprivate extension DashboardView {
 
     func listItem(weekDay: Int, timeZone: Int) -> some View {
         HStack {
-           // Image(systemName: "viewModel.imageName(weekDay: weekDay)").frame(width: 28, height: 28).background(viewModel.color(weekDay: weekDay).collect()).cornerRadius(6)
+            Image(systemName: viewModel.imageName(weekDay: weekDay)).frame(width: 28, height: 28).background(viewModel.color(weekDay: weekDay)).cornerRadius(6)
             VStack(alignment: .leading) {
                 if Date.dayOfWeek == weekDay {
                     Text(viewModel.day(weekDay: weekDay)).bold()

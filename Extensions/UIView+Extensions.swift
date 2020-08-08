@@ -20,6 +20,11 @@ public extension RoundedRectangle {
 }
 
 public extension View {
+
+    func alpha(_ some: Double) -> some View {
+        self.opacity(some)
+    }
+
     @inlinable func textColor(_ color: Color?) -> some View {
         self.foregroundColor(color)
     }
