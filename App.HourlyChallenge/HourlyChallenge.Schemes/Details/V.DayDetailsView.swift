@@ -10,13 +10,18 @@ import UIKit
 
 // MARK: - Preview
 
+struct BasicApps_DayDetailsView: PreviewProvider {
+    static var previews: some View {
+        DayDetailsViewBuilder.buildView(weekDay: 1, timeZone: 0)
+    }
+}
+
 // MARK: - View
 
 public struct DayDetailsView: View {
     var weekDay: Int
     var timeZone: Int
-    let list = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
-    
+
     @ObservedObject private var viewModel: DayDetailsViewModel
     public init(weekDay: Int, timeZone: Int, viewModel: DayDetailsViewModel) {
         self.viewModel = viewModel
@@ -35,7 +40,7 @@ public struct DayDetailsView: View {
             }.scaledToFill().padding(.vertical)
             Spacer()
             Text("Today Challenges Schedule").font(.title)
-            ForEach(list, id: \.self) { some in
+            ForEach(viewModel.list, id: \.self) { some in
                 VStack {
                     Divider()
                     HStack(alignment: .top, spacing: 3) {
