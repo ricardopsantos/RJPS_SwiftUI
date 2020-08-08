@@ -17,19 +17,18 @@ import MessageUI
 import Designables
 import ControllerRepresentables
 
+// MARK: - Preview
+
 struct BasicApps_LastShelter: PreviewProvider {
     static var previews: some View {
         DashboardViewBuilder.buildView()
     }
 }
 
+// MARK: - View
+
 public struct DashboardView: View {
-    private var timeZoneServer: Int { return timeZoneUser - 3 }
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @ObservedObject private var settings = LastShelterUserSettings()
-    @State private var showTimeZone: Bool = true
-    @State private var timeZoneUser: Int = 0
-    @State private var counter: Int = 0
     @State private var currentDate = Date()
     @State private var result: Result<MFMailComposeResult, Error>?
     @State private var isShowingMailView = false
@@ -62,7 +61,7 @@ public struct DashboardView: View {
                         }
                         HStack {
                             Spacer()
-                            Text("\(Date.serverTime(timeZone: timeZoneServer))").onReceive(timer) { _ in }.font(.footnote)
+                            Text("\(Date.serverTime(timeZone: viewModel.timeZoneServer))").onReceive(timer) { _ in }.font(.footnote)
                             Spacer()
                         }
                     }
@@ -77,7 +76,7 @@ public struct DashboardView: View {
                         }
                         HStack {
                             Spacer()
-                            Text("\(viewModel.taskNow(weekDay: Date.dayOfWeek!, timeZone: timeZoneServer))").font(.title).bold()
+                            Text("\(viewModel.taskNow)").font(.title).bold()
                             Spacer()
                         }
                         Spacer()
@@ -89,37 +88,32 @@ public struct DashboardView: View {
                         Spacer()
                         HStack {
                             Spacer()
-                            Text("- \(viewModel.taskNext(weekDay: Date.dayOfWeek!, timeZone: timeZoneServer, next: 1))").font(.footnote)
+                            Text("\(viewModel.taskNext1)").font(.footnote)
                             Spacer()
                         }
                         HStack {
                             Spacer()
-                            Text("- \(viewModel.taskNext(weekDay: Date.dayOfWeek!, timeZone: timeZoneServer, next: 2))").font(.footnote)
+                            Text("\(viewModel.taskNext2)").font(.footnote)
                             Spacer()
                         }
                         HStack {
                             Spacer()
-                            Text("- \(viewModel.taskNext(weekDay: Date.dayOfWeek!, timeZone: timeZoneServer, next: 3))").font(.footnote)
+                            Text("\(viewModel.taskNext3)").font(.footnote)
                             Spacer()
                         }
                     }
                 }
 
-                if showTimeZone {
-                    Stepper(value: $timeZoneUser,
-                            onEditingChanged: { _ in self.settings.timeZone = self.timeZoneUser }) { Text("Adjust TimeZone: \(timeZoneUser)") }.onAppear {
-                                self.timeZoneUser = self.settings.timeZone
-                    }
-                }
+                Stepper(value: $viewModel.settings.timeZone) { Text("Adjust TimeZone: \(viewModel.settings.timeZone)") }
 
                 Section {
-                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 1, timeZone: timeZoneServer)) { listItem(weekDay: 1, timeZone: timeZoneServer) }
-                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 2, timeZone: timeZoneServer)) { listItem(weekDay: 2, timeZone: timeZoneServer) }
-                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 3, timeZone: timeZoneServer)) { listItem(weekDay: 3, timeZone: timeZoneServer) }
-                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 4, timeZone: timeZoneServer)) { listItem(weekDay: 4, timeZone: timeZoneServer) }
-                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 5, timeZone: timeZoneServer)) { listItem(weekDay: 5, timeZone: timeZoneServer) }
-                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 6, timeZone: timeZoneServer)) { listItem(weekDay: 6, timeZone: timeZoneServer) }
-                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 7, timeZone: timeZoneServer)) { listItem(weekDay: 7, timeZone: timeZoneServer) }
+                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 1, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 1, timeZone: viewModel.timeZoneServer) }
+                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 2, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 2, timeZone: viewModel.timeZoneServer) }
+                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 3, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 3, timeZone: viewModel.timeZoneServer) }
+                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 4, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 4, timeZone: viewModel.timeZoneServer) }
+                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 5, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 5, timeZone: viewModel.timeZoneServer) }
+                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 6, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 6, timeZone: viewModel.timeZoneServer) }
+                    NavigationLink(destination: DayDetailsViewBuilder.buildView(weekDay: 7, timeZone: viewModel.timeZoneServer)) { listItem(weekDay: 7, timeZone: viewModel.timeZoneServer) }
                 }
 
                 if MFMailComposeViewController.canSendMail() {
@@ -135,12 +129,7 @@ public struct DashboardView: View {
                         }
                         Spacer()
                     }
-                    .sheet(isPresented: $isShowingMailView) {
-                        ControllerRepresentable_MailView(isShowing: self.$isShowingMailView,
-                                 result: self.$result,
-                                 emailTo: "rjps.dev@gmail.com",
-                                 emailSubject: "Last Shelter - Hourly Challenge")
-                    }
+                    .sheet(isPresented: $isShowingMailView) { self.mailView() }
                 }
 
             }
@@ -148,15 +137,23 @@ public struct DashboardView: View {
             .listStyle(GroupedListStyle())
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear {}
+        .onAppear {
+            self.viewModel.refresh()
+        }
     }
 }
 
+// MARK: - Auxiliar components
+
 fileprivate extension DashboardView {
+
+    func mailView() -> some View {
+        ControllerRepresentable_MailView(isShowing: self.$isShowingMailView, result: self.$result, emailTo: "rjps.dev@gmail.com", emailSubject: "Last Shelter - Hourly Challenge")
+    }
 
     func listItem(weekDay: Int, timeZone: Int) -> some View {
         HStack {
-            Image(systemName: "viewModel.imageName(weekDay: weekDay)").frame(width: 28, height: 28).background(viewModel.color(weekDay: weekDay)).cornerRadius(6)
+           // Image(systemName: "viewModel.imageName(weekDay: weekDay)").frame(width: 28, height: 28).background(viewModel.color(weekDay: weekDay).collect()).cornerRadius(6)
             VStack(alignment: .leading) {
                 if Date.dayOfWeek == weekDay {
                     Text(viewModel.day(weekDay: weekDay)).bold()

@@ -5,6 +5,10 @@
 
 import SwiftUI
 
+// MARK: - Preview
+
+// MARK: - View
+
 extension V {
     public struct CurrentWeather_View: View {
         @ObservedObject var viewModel: VM.CurrentWeather_ViewModel
@@ -19,6 +23,8 @@ extension V {
         }
     }
 }
+
+// MARK: - Auxiliar components
 
 private extension V.CurrentWeather_View {
     func content() -> some View {

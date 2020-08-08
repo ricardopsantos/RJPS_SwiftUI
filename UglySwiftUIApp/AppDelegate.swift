@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         switch targetApp {
         case .sample:
             self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
+//            self.window?.rootViewController = UIHostingController(rootView: V.VisualDocs_PasswordChecker())
         case .hourly:
             self.window?.rootViewController = UIHostingController(rootView: DashboardViewBuilder.buildView())
         case .weather:

@@ -19,15 +19,6 @@ struct ControllerRepresentable_MailView: UIViewControllerRepresentable {
     @State var emailTo: String
     @State var emailSubject: String
 
-    /*
-    public init(isShowing: Bool, result: Result<MFMailComposeResult, Error>?, emailTo: String, emailSubject: String) {
-        self.isShowing = isShowing
-        self.result = result
-        self.emailTo = emailTo
-        self.emailSubject = emailSubject
-    }
-*/
-    
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
         @Binding var isShowing: Bool
         @Binding var result: Result<MFMailComposeResult, Error>?

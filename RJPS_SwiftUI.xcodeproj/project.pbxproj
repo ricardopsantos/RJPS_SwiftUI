@@ -31,6 +31,7 @@
 		D751737924DEAA3E004822B2 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D751737224DEAA3E004822B2 /* Domain.framework */; };
 		D751737A24DEAA3E004822B2 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D751737224DEAA3E004822B2 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D751737E24DEAA5F004822B2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751737D24DEAA5F004822B2 /* Protocols.swift */; };
+		D751738124DEC44F004822B2 /* VisualDocs_PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751737F24DEC3DB004822B2 /* VisualDocs_PasswordChecker.swift */; };
 		D755B13E24D49E7500C6215C /* VisualDocs_NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B13D24D49E7500C6215C /* VisualDocs_NavigationView.swift */; };
 		D755B14024D4A21300C6215C /* VisualDocs_@Published.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B13F24D4A21300C6215C /* VisualDocs_@Published.swift */; };
 		D755B14224D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14124D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift */; };
@@ -332,6 +333,7 @@
 		D751737424DEAA3E004822B2 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		D751737524DEAA3E004822B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D751737D24DEAA5F004822B2 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		D751737F24DEC3DB004822B2 /* VisualDocs_PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_PasswordChecker.swift; sourceTree = "<group>"; };
 		D755B13D24D49E7500C6215C /* VisualDocs_NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_NavigationView.swift; sourceTree = "<group>"; };
 		D755B13F24D4A21300C6215C /* VisualDocs_@Published.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Published.swift"; sourceTree = "<group>"; };
 		D755B14124D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@EnvironmentObject.swift"; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 			isa = PBXGroup;
 			children = (
 				D755B15224D5E70D00C6215C /* README.md */,
+				D751737F24DEC3DB004822B2 /* VisualDocs_PasswordChecker.swift */,
 				D755B15124D5E70D00C6215C /* BasicApp_EditableListOfUsers.swift */,
 				D755B15324D5E70D00C6215C /* BasicApp_InfiniteScrollView.swift */,
 			);
@@ -1623,6 +1626,7 @@
 				9FE143C021AF2F520026BDFC /* Auxiliar.swift in Sources */,
 				D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */,
 				D78FABE124D0C1780069809D /* Recreating.Breathe.swift in Sources */,
+				D751738124DEC44F004822B2 /* VisualDocs_PasswordChecker.swift in Sources */,
 				D78FAC1A24D3FEB00069809D /* VisualDocs_WaysToReactToState.swift in Sources */,
 				D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */,
 				D7B560272493AB1500E9EC7D /* Recreating.Twitter.swift in Sources */,

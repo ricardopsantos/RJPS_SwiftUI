@@ -8,6 +8,10 @@ import Combine
 import SwiftUI
 import UIKit
 
+// MARK: - Preview
+
+// MARK: - View
+
 public struct DayDetailsView: View {
     var weekDay: Int
     var timeZone: Int
@@ -47,4 +51,10 @@ public struct DayDetailsView: View {
              }
         }.padding(.horizontal)*/
     }
+}
+
+// MARK: - Auxiliar components
+
+fileprivate extension DayDetailsView {
+
 }

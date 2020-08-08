@@ -132,10 +132,7 @@ __Code Sample__
 struct PlayButton: View {
     @Binding var bindingVar2: Bool
     var body: some View {
-        Button(action: { self.bindingVar2.toggle() }) {
-            Image(systemName: bindingVar2 ? "pause.circle" : "play.circle")
-                .resizable().frame(width: 50, height: 50, alignment: .center)
-        }
+        Button(action: { self.bindingVar2.toggle() }) { Image(systemName: bindingVar2 ? "pause.circle" : "play.circle") }
     }
 }
 

@@ -5,6 +5,10 @@
 
 import SwiftUI
 
+// MARK: - Preview
+
+// MARK: - View
+
 public struct WeeklyWeather_View: View {
     @ObservedObject private var viewModel: WeeklyWeather_ViewModel
 
@@ -59,4 +63,10 @@ private extension WeeklyWeather_View {
             Text("No results").foregroundColor(.gray)
         }
     }
+}
+
+// MARK: - Auxiliar components
+
+fileprivate extension WeeklyWeather_View {
+
 }
