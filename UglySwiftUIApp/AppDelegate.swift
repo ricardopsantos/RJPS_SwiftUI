@@ -26,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let targetApp: TargetApp = .sample
         switch targetApp {
         case .sample:
-            //self.window?.rootViewController = UIHostingController(rootView: TabView_View())
-            self.window?.rootViewController = UIHostingController(rootView: VisualDocs_SimpleViewModel_III())
+            self.window?.rootViewController = UIHostingController(rootView: TabView_View())
         case .hourly:
             self.window?.rootViewController = UIHostingController(rootView: DashboardViewBuilder.buildView())
         case .weather:
