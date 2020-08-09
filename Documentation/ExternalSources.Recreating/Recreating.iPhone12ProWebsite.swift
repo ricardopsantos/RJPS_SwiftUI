@@ -16,7 +16,7 @@ struct IPhone12ProWebsite: View {
             TitleBar()
             AppleCard()
             Display()
-            Model()
+            ModelView()
             Charger()
             Footer().edgesIgnoringSafeArea(.bottom)
         }
@@ -63,7 +63,7 @@ struct Charger: View {
     }
 }
 
-struct Model: View {
+struct ModelView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 12) {

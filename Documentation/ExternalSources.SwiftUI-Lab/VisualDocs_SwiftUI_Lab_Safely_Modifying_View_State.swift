@@ -4,16 +4,14 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
+import Combine
 
 //
 // https://github.com/swiftui-lab
 // https://swiftui-lab.com
 //
-// Safely Modifying The View State (SwiftUI)
-// https://swiftui-lab.com/state-changes
-//
-
-import SwiftUI
 
 struct CustomView: View {
 
