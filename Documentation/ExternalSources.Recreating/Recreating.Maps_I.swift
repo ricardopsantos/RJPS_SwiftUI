@@ -9,24 +9,22 @@ import SwiftUI
 import Combine
 import MapKit 
 
-extension V {
-    struct Maps_I: View {
-        var body: some View {
-            ZStack {
-                MapView()
+struct Maps_I: View {
+    var body: some View {
+        ZStack {
+            MapView()
 
-                VStack {
-                    HStack {
-                        Spacer()
-                        Controls()
-                    }
-
+            VStack {
+                HStack {
                     Spacer()
-                    Sheet()
+                    Controls()
                 }
+
+                Spacer()
+                Sheet()
             }
-            .cornerRadius(24)
         }
+        .cornerRadius(24)
     }
 }
 
@@ -95,8 +93,8 @@ struct MapView: UIViewRepresentable {
 
 // MARK: - Preview
 
-struct Maps_I: PreviewProvider {
+struct Maps_I_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.Maps_I()
+        Maps_I()
     }
 }

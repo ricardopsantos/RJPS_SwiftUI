@@ -111,61 +111,59 @@ public enum ImageNames: String, CaseIterable {
     }
 }
 
-extension V {
-    public struct VisualDocs_Images: View {
-        @State var imageNames = ImageNames.allCases
-        public var body: some View {
-            VStack {
-                Text("ImageNames.allCases").font(.title)
-                ScrollView {
-                    ForEach(self.imageNames, id: \.self) { imageName in
-                        VStack {
-                            Divider()
-                            HStack {
-                                Text(imageName.name).bold()
-                                imageName.image.foregroundColor(Color(UIColor.black))
+public struct VisualDocs_Images: View {
+    @State var imageNames = ImageNames.allCases
+    public var body: some View {
+        VStack {
+            Text("ImageNames.allCases").font(.title)
+            ScrollView {
+                ForEach(self.imageNames, id: \.self) { imageName in
+                    VStack {
+                        Divider()
+                        HStack {
+                            Text(imageName.name).bold()
+                            imageName.image.foregroundColor(Color(UIColor.black))
+                        }.scaledToFill()
+                        HStack {
+                            VStack {
+                                imageName.imageFill.foregroundColor(Color(UIColor.black))
+                                Text(".fill").font(.caption).textColor(Color(UIColor.lightGray))
                             }.scaledToFill()
-                            HStack {
-                                VStack {
-                                    imageName.imageFill.foregroundColor(Color(UIColor.black))
-                                    Text(".fill").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
-                                VStack {
-                                    imageName.imageBadge.foregroundColor(Color(UIColor.black))
-                                    Text(".badge").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
-                                VStack {
-                                    imageName.imageSquarePath.foregroundColor(Color(UIColor.black))
-                                    Text(".squarePath").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
-                                VStack {
-                                    imageName.imageSquare.foregroundColor(Color(UIColor.black))
-                                    Text(".square").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
-                                VStack {
-                                    imageName.imageCircle.foregroundColor(Color(UIColor.black))
-                                    Text(".circle").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
+                            VStack {
+                                imageName.imageBadge.foregroundColor(Color(UIColor.black))
+                                Text(".badge").font(.caption).textColor(Color(UIColor.lightGray))
                             }.scaledToFill()
-                            HStack {
-                                VStack {
-                                    imageName.imageRight.foregroundColor(Color(UIColor.black))
-                                    Text(".right").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
-                                VStack {
-                                    imageName.imageLeft.foregroundColor(Color(UIColor.black))
-                                    Text(".left").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
-                                VStack {
-                                    imageName.imageUp.foregroundColor(Color(UIColor.black))
-                                    Text(".up").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
-                                VStack {
-                                    imageName.imageDown.foregroundColor(Color(UIColor.black))
-                                    Text(".down").font(.caption).textColor(Color(UIColor.lightGray))
-                                }.scaledToFill()
+                            VStack {
+                                imageName.imageSquarePath.foregroundColor(Color(UIColor.black))
+                                Text(".squarePath").font(.caption).textColor(Color(UIColor.lightGray))
                             }.scaledToFill()
-                        }
+                            VStack {
+                                imageName.imageSquare.foregroundColor(Color(UIColor.black))
+                                Text(".square").font(.caption).textColor(Color(UIColor.lightGray))
+                            }.scaledToFill()
+                            VStack {
+                                imageName.imageCircle.foregroundColor(Color(UIColor.black))
+                                Text(".circle").font(.caption).textColor(Color(UIColor.lightGray))
+                            }.scaledToFill()
+                        }.scaledToFill()
+                        HStack {
+                            VStack {
+                                imageName.imageRight.foregroundColor(Color(UIColor.black))
+                                Text(".right").font(.caption).textColor(Color(UIColor.lightGray))
+                            }.scaledToFill()
+                            VStack {
+                                imageName.imageLeft.foregroundColor(Color(UIColor.black))
+                                Text(".left").font(.caption).textColor(Color(UIColor.lightGray))
+                            }.scaledToFill()
+                            VStack {
+                                imageName.imageUp.foregroundColor(Color(UIColor.black))
+                                Text(".up").font(.caption).textColor(Color(UIColor.lightGray))
+                            }.scaledToFill()
+                            VStack {
+                                imageName.imageDown.foregroundColor(Color(UIColor.black))
+                                Text(".down").font(.caption).textColor(Color(UIColor.lightGray))
+                            }.scaledToFill()
+                        }.scaledToFill()
                     }
                 }
             }
@@ -175,8 +173,8 @@ extension V {
 
 // MARK: - Preview
 
-public struct VisualDocs_Images: PreviewProvider {
+public struct VisualDocs_Images_PreviewProvider: PreviewProvider {
     public static var previews: some View {
-        V.VisualDocs_Images()
+        VisualDocs_Images()
     }
 }

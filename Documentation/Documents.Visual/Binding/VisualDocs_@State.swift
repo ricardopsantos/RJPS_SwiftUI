@@ -8,21 +8,19 @@ import UIKit
 import SwiftUI
 import Combine
 
-extension V {
-    struct VisualDocs_Binding_State: View {
-        var body: some View {
-            ScrollView {
-                TextField("type something...", text: Binding.constant("Hello!"))
-            }.padding()
-        }
+struct VisualDocs_Binding_State: View {
+    var body: some View {
+        ScrollView {
+            TextField("type something...", text: Binding.constant("Hello!")).applyDefaultLayout()
+        }.padding()
     }
 }
 
 // MARK: - Preview VisualDocs_Binding_State
 
-struct VisualDocs_Binding_State: PreviewProvider {
+struct VisualDocs_Binding_State_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_Binding_State()
+        VisualDocs_Binding_State()
     }
 }
 
@@ -52,22 +50,20 @@ struct VisualDocs_Binding_State: PreviewProvider {
 // is a binding to the value of property wrapper.
 //
 
-extension V {
-    struct VisualDocs_Binding_State_I: View {
-        @State private var text = "Hello World."
-        var body: some View {
-            ScrollView {
-                TextField("type something...", text: $text)
-            }.padding()
-        }
+struct VisualDocs_Binding_State_I: View {
+    @State private var text = "Hello World."
+    var body: some View {
+        ScrollView {
+            TextField("type something...", text: $text).applyDefaultLayout()
+        }.padding()
     }
 }
 
 // MARK: - Preview VisualDocs_Binding_I
 
-struct VisualDocs_Binding_State_I: PreviewProvider {
+struct VisualDocs_Binding_State_I_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_Binding_State_I()
+        VisualDocs_Binding_State_I()
     }
 }
 
@@ -81,37 +77,35 @@ struct Product: Identifiable {
     let isFavorited: Bool
 }
 
-extension V {
-    struct VisualDocs_Binding_State_II: View {
-        let products: [Product]
-        @State private var filterFavourites: Bool = false
-        var body: some View {
-            VStack {
-                Button(action: { self.filterFavourites.toggle() }, label: { Text("Change filter") } )
-                Toggle(isOn: $filterFavourites) {
-                    if filterFavourites {
-                        Text("Favourites Only")
-                    } else {
-                        Text("All records")
+struct VisualDocs_Binding_State_II: View {
+    let products: [Product]
+    @State private var filterFavourites: Bool = false
+    var body: some View {
+        VStack {
+            Button(action: { self.filterFavourites.toggle() }, label: { Text("Change filter") } )
+            Toggle(isOn: $filterFavourites) {
+                if filterFavourites {
+                    Text("Favourites Only")
+                } else {
+                    Text("All records")
+                }
+            }
+            List {
+                ForEach(products) { some in
+                    if !self.filterFavourites || some.isFavorited {
+                        Text(some.title)
                     }
                 }
-                List {
-                    ForEach(products) { some in
-                        if !self.filterFavourites || some.isFavorited {
-                            Text(some.title)
-                        }
-                    }
-                }
-            }.padding()
-        }
+            }
+        }.padding()
     }
 }
 
 // MARK: - Preview VisualDocs_Binding_State_II
 
-struct VisualDocs_Binding_State_II: PreviewProvider {
+struct VisualDocs_Binding_State_II_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_Binding_State_II(products: [Product(title: "1", isFavorited: false), Product(title: "2", isFavorited: true)])
+        VisualDocs_Binding_State_II(products: [Product(title: "1", isFavorited: false), Product(title: "2", isFavorited: true)])
     }
 }
 
@@ -119,43 +113,41 @@ struct VisualDocs_Binding_State_II: PreviewProvider {
 // ///////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////////////////////
 
-extension V {
-    struct VisualDocs_Toggle_I: View {
-        @State private var toggle: Bool = true // toggle state
-        @State private var counter: Int = 0
-        @State private var name: String = ""
+struct VisualDocs_Toggle_I: View {
+    @State private var toggle: Bool = true // toggle state
+    @State private var counter: Int = 0
+    @State private var name: String = ""
 
-        var toggleView: some View {
-            return Toggle(isOn: $toggle) {
-                if toggle {
-                    Text("Toggle On")
-                } else {
-                    Text("Toggle Off")
-                }
+    var toggleView: some View {
+        return Toggle(isOn: $toggle) {
+            if toggle {
+                Text("Toggle On")
+            } else {
+                Text("Toggle Off")
             }
         }
-        var body : some View {
-            ScrollView {
-                VStack {
-                    Stepper(value: $counter) { Text("Counter: \(counter)") }
-                    Divider()
-                    toggleView
-                    Button(action: { self.toggle.toggle() }, label: { Text("Change Toggle_1") } )
-                    Button("Change_Toggle_2") { self.toggle = !self.toggle }
-                    Divider()
-                    TextField("type something...", text: $name)
-                    Text(name)
-                    Divider()
-                }.padding()
-            }
+    }
+    var body : some View {
+        ScrollView {
+            VStack {
+                Stepper(value: $counter) { Text("Counter: \(counter)") }
+                Divider()
+                toggleView
+                Button(action: { self.toggle.toggle() }, label: { Text("Change Toggle_1") } )
+                Button("Change_Toggle_2") { self.toggle = !self.toggle }
+                Divider()
+                TextField("type something...", text: $name).applyDefaultLayout()
+                Text(name)
+                Divider()
+            }.padding()
         }
     }
 }
 
 // MARK: - Preview VisualDocs_Toggle_I
 
-struct VisualDocs_Toggle_I: PreviewProvider {
+struct VisualDocs_Toggle_I_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_Toggle_I()
+        VisualDocs_Toggle_I()
     }
 }

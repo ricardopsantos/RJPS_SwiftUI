@@ -8,19 +8,17 @@ import Foundation
 import SwiftUI
 import Combine
 
-extension V {
-    struct IPhone12ProWebsite: View {
-        var body: some View {
-            ScrollView(.vertical) {
-                AddressBar()
-                Navbar()
-                TitleBar()
-                AppleCard()
-                Display()
-                Model()
-                Charger()
-                Footer().edgesIgnoringSafeArea(.bottom)
-            }
+struct IPhone12ProWebsite: View {
+    var body: some View {
+        ScrollView(.vertical) {
+            AddressBar()
+            Navbar()
+            TitleBar()
+            AppleCard()
+            Display()
+            Model()
+            Charger()
+            Footer().edgesIgnoringSafeArea(.bottom)
         }
     }
 }
@@ -315,8 +313,8 @@ struct Navbar: View {
     }
 }
 
-struct IPhone12ProWebsite: PreviewProvider {
+struct IPhone12ProWebsite_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.IPhone12ProWebsite()
+        IPhone12ProWebsite()
     }
 }

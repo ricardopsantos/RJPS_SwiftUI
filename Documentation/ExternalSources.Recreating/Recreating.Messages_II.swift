@@ -8,14 +8,12 @@ import Foundation
 import SwiftUI
 import Combine
 
-extension V {
-    struct Messages_II: View {
-        var body: some View {
-            VStack {
-                ChatTopView()
-                ConversationView()
-                ChatBottomBar().padding(.bottom, 10)
-            }
+struct Messages_II: View {
+    var body: some View {
+        VStack {
+            ChatTopView()
+            ConversationView()
+            ChatBottomBar().padding(.bottom, 10)
         }
     }
 }
@@ -101,8 +99,8 @@ var AllMessages = [
 
 // MARK: - Preview
 
-struct Messages_II: PreviewProvider {
+struct Messages_II_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.Messages_II()
+        Messages_II()
     }
 }

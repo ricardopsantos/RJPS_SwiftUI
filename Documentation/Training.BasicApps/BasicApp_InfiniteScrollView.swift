@@ -48,58 +48,52 @@ struct Repository: Codable, Identifiable, Equatable {
 // Implementing the View
 //
 
-extension V {
-    struct RepositoryRow: View {
-        let repo: Repository
-        var body: some View {
-            VStack {
-                Text(repo.name).font(.title)
-                Text("⭐️ \(repo.stargazers_count)")
-                repo.description.map(Text.init)?.font(.body)
-            }
-            .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
+struct RepositoryRow: View {
+    let repo: Repository
+    var body: some View {
+        VStack {
+            Text(repo.name).font(.title)
+            Text("⭐️ \(repo.stargazers_count)")
+            repo.description.map(Text.init)?.font(.body)
         }
+        .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
     }
 }
 
-extension V {
-    struct BasicApp_InfiniteScrollView_Screen: View {
+struct BasicApp_InfiniteScrollView_Screen: View {
 
-        // The list accepts an array of repositories to show, a callback that notifies when the list is
-        // scrolled to the bottom, and an isLoading flag, that indicates whether a loading animation needs to be shown.
-        let repos: [Repository]
-        let isLoading: Bool
-        let onScrolledAtBottom: () -> Void
+    // The list accepts an array of repositories to show, a callback that notifies when the list is
+    // scrolled to the bottom, and an isLoading flag, that indicates whether a loading animation needs to be shown.
+    let repos: [Repository]
+    let isLoading: Bool
+    let onScrolledAtBottom: () -> Void
 
-        // The body contains a list and a loading indicator below it.
-        var body: some View {
-            List {
-                ForEach(repos) { repo in
-                    // RepositoryRow represents a list entry.
-                    V.RepositoryRow(repo: repo).onAppear {
-                        // We call onScrolledAtBottom() when the last repository appears on the screen.
-                        if self.repos.last == repo {
-                            self.onScrolledAtBottom()
-                        }
+    // The body contains a list and a loading indicator below it.
+    var body: some View {
+        List {
+            ForEach(repos) { repo in
+                // RepositoryRow represents a list entry.
+                RepositoryRow(repo: repo).onAppear {
+                    // We call onScrolledAtBottom() when the last repository appears on the screen.
+                    if self.repos.last == repo {
+                        self.onScrolledAtBottom()
                     }
                 }
-                if isLoading {
-                    loadingIndicator
-                }
+            }
+            if isLoading {
+                loadingIndicator
             }
         }
-
-        private var loadingIndicator: some View { Text("Loading") }
     }
+
+    private var loadingIndicator: some View { Text("Loading") }
 }
 
-extension V {
-    struct BasicApp_InfiniteScrollView: View {
-        @ObservedObject var viewModel: RepositoriesViewModel
-        var body: some View {
-            V.BasicApp_InfiniteScrollView_Screen(repos: viewModel.state.repos, isLoading: viewModel.state.canLoadNextPage, onScrolledAtBottom: viewModel.fetchNextPageIfPossible)
-            .onAppear(perform: viewModel.fetchNextPageIfPossible)
-        }
+struct BasicApp_InfiniteScrollView: View {
+    @ObservedObject var viewModel: RepositoriesViewModel
+    var body: some View {
+        BasicApp_InfiniteScrollView_Screen(repos: viewModel.state.repos, isLoading: viewModel.state.canLoadNextPage, onScrolledAtBottom: viewModel.fetchNextPageIfPossible)
+        .onAppear(perform: viewModel.fetchNextPageIfPossible)
     }
 }
 
@@ -110,7 +104,7 @@ extension V {
 class RepositoriesViewModel: ObservableObject {
     @Published private(set) var state = State()
     var query: String = "swift"
-    private var subscriptions = Set<AnyCancellable>()
+    private var disposables = Set<AnyCancellable>()
 
     // The fetchNextPageIfPossible() method searches GitHub repositories using the ‘swift’ query.
     // It checks that the next page is available before requesting it.
@@ -118,7 +112,7 @@ class RepositoriesViewModel: ObservableObject {
         guard state.canLoadNextPage else { return }
         WebAPI.searchRepos(query: query, page: state.page)
             .sink(receiveCompletion: onReceive, receiveValue: onReceive)
-            .store(in: &subscriptions)
+            .store(in: &disposables)
     }
 
     // The state contains all the information to render a view.
@@ -142,8 +136,8 @@ class RepositoriesViewModel: ObservableObject {
     }
 }
 
-struct BasicApp_InfiniteScrollView: PreviewProvider {
+struct BasicApp_InfiniteScrollView_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.BasicApp_InfiniteScrollView(viewModel: RepositoriesViewModel())
+        BasicApp_InfiniteScrollView(viewModel: RepositoriesViewModel())
     }
 }

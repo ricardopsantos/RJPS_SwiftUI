@@ -17,40 +17,36 @@ class UserX: ObservableObject {
     @Published var score = 0
 }
 
-extension V {
-    struct ChangeView_VisualDocs_Published_I: View {
-        @EnvironmentObject var user: UserX
-        var body: some View {
-            VStack {
+struct ChangeView_VisualDocs_Published_I: View {
+    @EnvironmentObject var user: UserX
+    var body: some View {
+        VStack {
+            Text("Score: \(user.score)")
+            Button("Increase") {
+                self.user.score += 1
+            }
+        }
+    }
+}
+
+struct VisualDocs_Published_I: View {
+    @ObservedObject var user = UserX()
+
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 30) {
                 Text("Score: \(user.score)")
-                Button("Increase") {
-                    self.user.score += 1
+                NavigationLink(destination: ChangeView_VisualDocs_Published_I()) {
+                    Text("Show Detail View")
                 }
             }
         }
+        .environmentObject(user)
     }
 }
 
-extension V {
-    struct VisualDocs_Published_I: View {
-        @ObservedObject var user = UserX()
-
-        var body: some View {
-            NavigationView {
-                VStack(spacing: 30) {
-                    Text("Score: \(user.score)")
-                    NavigationLink(destination: V.ChangeView_VisualDocs_Published_I()) {
-                        Text("Show Detail View")
-                    }
-                }
-            }
-            .environmentObject(user)
-        }
-    }
-}
-
-struct VisualDocs_Published_I: PreviewProvider {
+struct VisualDocs_Published_I_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_Published_I()
+        VisualDocs_Published_I()
     }
 }

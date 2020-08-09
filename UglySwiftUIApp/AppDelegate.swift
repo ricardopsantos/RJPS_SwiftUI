@@ -7,7 +7,6 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import API_Keys
 import App_Weather
 import App_HourlyChallenge
 
@@ -24,10 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let targetApp: TargetApp = .weather
+        let targetApp: TargetApp = .sample
         switch targetApp {
         case .sample:
-            self.window?.rootViewController = UIHostingController(rootView: V.TabView_View())
+            //self.window?.rootViewController = UIHostingController(rootView: TabView_View())
+            self.window?.rootViewController = UIHostingController(rootView: VisualDocs_SimpleViewModel_III())
         case .hourly:
             self.window?.rootViewController = UIHostingController(rootView: DashboardViewBuilder.buildView())
         case .weather:
@@ -41,6 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 struct AppDelegate_Previews: PreviewProvider {
     static var previews: some View {
-        V.TabView_View()
+        TabView_View()
     }
 }

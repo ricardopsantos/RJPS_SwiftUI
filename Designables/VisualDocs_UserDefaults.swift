@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 @propertyWrapper
-fileprivate struct UserDefault<T> {
+struct UserDefault<T> {
     let key: String
     let defaultValue: T
     init(_ key: String, defaultValue: T) {
@@ -22,7 +22,7 @@ fileprivate struct UserDefault<T> {
     }
 }
 
-fileprivate final class SampleUserSettings: ObservableObject {
+final class SampleUserSettings: ObservableObject {
     let objectWillChange = PassthroughSubject<Void, Never>()
     @UserDefault("ShowOnStart", defaultValue: true)
     var showOnStart: Bool {
@@ -32,26 +32,24 @@ fileprivate final class SampleUserSettings: ObservableObject {
     }
 }
 
-fileprivate extension V {
-    struct VisualDocs_UserDefaults: View {
-        @ObservedObject var settings = SampleUserSettings()
-        var body: some View {
-            VStack {
-                Toggle(isOn: $settings.showOnStart) {
-                    Text("Show welcome text")
-                }
-                if settings.showOnStart {
-                    Text("Welcome")
-                }
-            }.padding()
-        }
+struct VisualDocs_UserDefaults: View {
+    @ObservedObject var settings = SampleUserSettings()
+    var body: some View {
+        VStack {
+            Toggle(isOn: $settings.showOnStart) {
+                Text("Show welcome text")
+            }
+            if settings.showOnStart {
+                Text("Welcome")
+            }
+        }.padding()
     }
 }
 
 // MARK: - Preview
 
-struct VisualDocs_UserDefaults: PreviewProvider {
+struct VisualDocs_UserDefaults_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_UserDefaults()
+        VisualDocs_UserDefaults()
     }
 }

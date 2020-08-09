@@ -34,47 +34,33 @@ extension Sequence {
     }
 }
 
-extension V {
-    struct BasicApp_EditableListOfUsers: View {
-
-        @ObservedObject var store: PersonStore
-
-        var body: some View {
-            NavigationView {
-                List {
-                    ForEach(store.persons.indexed(), id: \.1.id) { index, person in
-                        NavigationLink(destination: V.EditingView(person: self.$store.persons[index])) {
-                            VStack(alignment: .leading) {
-                                Text(person.name).font(.headline)
-                                Text("Age: \(person.age)").font(.subheadline).foregroundColor(.secondary)
-                            }
+struct BasicApp_EditableListOfUsers: View {
+    @ObservedObject var store: PersonStore
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(store.persons.indexed(), id: \.1.id) { index, person in
+                    NavigationLink(destination: EditingView(person: self.$store.persons[index])) {
+                        VStack(alignment: .leading) {
+                            Text(person.name).font(.headline)
+                            Text("Age: \(person.age)").font(.subheadline).foregroundColor(.secondary)
                         }
                     }
-                }.navigationBarTitle(Text("Persons"))
-            }
+                }
+            }.navigationBarTitle(Text("Persons"))
         }
     }
+}
 
-    struct EditingView: View {
-        @Environment(\.presentationMode) var presentation
-        @Binding var person: Person
-
-        var body: some View {
-            Form {
-                Section(header: Text("Personal information")) {
-                    TextField("type something...", text: $person.name)
-                    Stepper(value: $person.age) {
-                        Text("Age: \(person.age)")
-                    }
-                }
-
-                Section {
-                    Button("Save") {
-                        self.presentation.wrappedValue.dismiss()
-                    }
-                }
-            }.navigationBarTitle(Text(person.name))
-        }
+struct EditingView: View {
+    @Binding var person: Person
+    var body: some View {
+        Form {
+            Section(header: Text("Personal information")) {
+                TextField("type something...", text: $person.name).applyDefaultLayout()
+                Stepper(value: $person.age) { Text("Age: \(person.age)") }
+            }
+        }.navigationBarTitle(Text(person.name))
     }
 }
 
@@ -88,8 +74,8 @@ final class PersonStore: ObservableObject {
     ]
 }
 
-struct BasicApp_EditableListOfUsers: PreviewProvider {
+struct BasicApp_EditableListOfUsers_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.BasicApp_EditableListOfUsers(store: PersonStore.init())
+        BasicApp_EditableListOfUsers(store: PersonStore.init())
     }
 }

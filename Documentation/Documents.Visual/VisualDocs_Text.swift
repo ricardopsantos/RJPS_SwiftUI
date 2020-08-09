@@ -33,17 +33,15 @@ var sample3: some View {
     Text("sample3").padding().addCorner(color: UIColor.blue, radius: 8, width: 4)
 }
 
-extension V {
-    struct VisualDocs_Text: View {
-        var body: some View {
-            ScrollView {
-                VStack {
-                    sample1
-                    Spacer()
-                    sample2
-                    Spacer()
-                    sample2
-                }
+struct VisualDocs_Text: View {
+    var body: some View {
+        ScrollView {
+            VStack {
+                sample1
+                Spacer()
+                sample2
+                Spacer()
+                sample2
             }
         }
     }
@@ -51,8 +49,8 @@ extension V {
 
 // MARK: - Preview
 
-struct VisualDocs_Text: PreviewProvider {
+struct VisualDocs_Text_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.VisualDocs_Text()
+        VisualDocs_Text()
     }
 }

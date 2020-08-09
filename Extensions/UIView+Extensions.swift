@@ -21,6 +21,10 @@ public extension RoundedRectangle {
 
 public extension View {
 
+    func userInteractionEnabled(_ value: Bool) -> some View {
+        self.disabled(value)
+    }
+
     func alpha(_ some: Double) -> some View {
         self.opacity(some)
     }

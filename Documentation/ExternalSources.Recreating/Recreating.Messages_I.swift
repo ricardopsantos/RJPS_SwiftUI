@@ -8,30 +8,28 @@ import Foundation
 import SwiftUI
 import Combine
 
-extension V {
-    struct Messages_I: View {
-        var body: some View {
-            NavigationView {
-                VStack {
-                    ScrollView(.vertical, showsIndicators: false) {
-                    SearchBar()
-                    Pins()
-                    ForEach(0..<20) {_ in
-                        NavigationLink(destination: Text("chat view")) {
-                            VStack {
-                                MessageCell()
-                                Divider()
-                            }.padding(.horizontal)
-                        }
+struct Messages_I: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                ScrollView(.vertical, showsIndicators: false) {
+                SearchBar()
+                Pins()
+                ForEach(0..<20) {_ in
+                    NavigationLink(destination: Text("chat view")) {
+                        VStack {
+                            MessageCell()
+                            Divider()
+                        }.padding(.horizontal)
                     }
-                    }
-                }.padding().navigationBarTitle("Messages", displayMode: .inline).navigationBarItems(leading: Button(action: { }) {
-                    Text("Edit")
-                }, trailing: Button(action: { }) {
-                    Image(systemName: "square.and.pencil")
-                }).edgesIgnoringSafeArea(.bottom)
-            }.navigationViewStyle(StackNavigationViewStyle())
-        }
+                }
+                }
+            }.padding().navigationBarTitle("Messages", displayMode: .inline).navigationBarItems(leading: Button(action: { }) {
+                Text("Edit")
+            }, trailing: Button(action: { }) {
+                Image(systemName: "square.and.pencil")
+            }).edgesIgnoringSafeArea(.bottom)
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -84,8 +82,8 @@ struct MessageCell: View {
 
 // MARK: - Preview
 
-struct Messages_I: PreviewProvider {
+struct Messages_I_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.Messages_I()
+        Messages_I()
     }
 }

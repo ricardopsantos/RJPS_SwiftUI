@@ -5,8 +5,8 @@
 
 import Foundation
 
-public typealias V = AppView
-public struct AppView { private init() {} }
+//public typealias V = AppView
+//public struct AppView { private init() {} }
 
 public typealias E = Entity // Same as Model in MVP
 public struct Entity { private init() {} }

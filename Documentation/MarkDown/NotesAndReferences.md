@@ -14,7 +14,6 @@ We’re building the logic of a program, without describing its control flow. Th
 
 __Combine = Publishers + Subscribers + Operators__
 
-
 ### Publisher
 
 Publisher sends sequences of values over time to one or more Subscribers. 
@@ -140,7 +139,7 @@ struct VisualDocs_Binding_I: View {
     @State private var bindingVar1: Bool = false
     var body: some View {
         VStack {
-            V.PlayButton(bindingVar2: $bindingVar1)
+            PlayButton(bindingVar2: $bindingVar1)
             if bindingVar1 {
                 Text("isPlaying...")
             }
@@ -188,10 +187,10 @@ struct VisualDocs_EnvironmentObject_I: View {
         NavigationView {
             VStack(spacing: 30) {
                 Text("Score: \(someObservedObject.somePublishedVar)")
-                NavigationLink(destination: V.ChangeView_VisualDocs_EnvironmentObject_I_Details_1()) {
+                NavigationLink(destination: ChangeView_VisualDocs_EnvironmentObject_I_Details_1()) {
                     Text("Show Detail View 1")
                 }
-                NavigationLink(destination: V.ChangeView_VisualDocs_EnvironmentObject_I_Details_2()) {
+                NavigationLink(destination: ChangeView_VisualDocs_EnvironmentObject_I_Details_2()) {
                     Text("Show Detail View 2")
                 }
             }

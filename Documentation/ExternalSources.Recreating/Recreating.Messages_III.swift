@@ -8,21 +8,19 @@ import Foundation
 import SwiftUI
 import Combine
 
-extension V {
-    struct Messages_III: View {
-        var body: some View {
-            VStack {
-                HStack {
-                    Spacer()
-                    Text("Here’s to the crazy ones, the misfits, the rebels, the troublemakers...").padding().background(Color(UIColor.systemBlue)).clipShape(BubbleShape(MyMessage: true)).foregroundColor(.white)
-                }.padding(.leading, 55).padding(.vertical, 10)
+struct Messages_III: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Text("Here’s to the crazy ones, the misfits, the rebels, the troublemakers...").padding().background(Color(UIColor.systemBlue)).clipShape(BubbleShape(MyMessage: true)).foregroundColor(.white)
+            }.padding(.leading, 55).padding(.vertical, 10)
 
-                HStack {
-                    Text("You can quote them, disagree with them, glorify or vilify them, but the only thing you can’t do is ignore them because they change things…").padding().foregroundColor(.primary).background(Color.secondary.opacity(0.2)).clipShape(BubbleShape(MyMessage: false))
-                    Spacer()
-                }.padding(.trailing, 55).padding(.vertical, 10)
-            }.padding(.horizontal, 15)
-        }
+            HStack {
+                Text("You can quote them, disagree with them, glorify or vilify them, but the only thing you can’t do is ignore them because they change things…").padding().foregroundColor(.primary).background(Color.secondary.opacity(0.2)).clipShape(BubbleShape(MyMessage: false))
+                Spacer()
+            }.padding(.trailing, 55).padding(.vertical, 10)
+        }.padding(.horizontal, 15)
     }
 }
 
@@ -66,8 +64,8 @@ struct BubbleShape: Shape {
 
 // MARK: - Preview
 
-struct Messages_III: PreviewProvider {
+struct Messages_III_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        V.Messages_III()
+        Messages_III()
     }
 }
