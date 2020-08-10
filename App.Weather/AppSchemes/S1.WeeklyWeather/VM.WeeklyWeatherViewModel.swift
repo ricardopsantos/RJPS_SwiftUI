@@ -17,8 +17,7 @@ import Extensions
 
         // The properly delegate @Published modifier makes it possible to observe
         // the city property. You’ll see in a moment how to leverage this.
-        @Published var city: String = ""
-
+        @Published var city: String = AppDefaultsRepository.shared.lastCity
         // You’ll keep the View’s data source in the ViewModel. This is in contrast
         // to what you might be used to doing in MVC. Because the property is marked @Published,
         // the compiler automatically synthesizes a publisher for it. SwiftUI subscribes to
@@ -47,6 +46,9 @@ import Extensions
         }
 
         public func fetchWeather(forCity city: String) {
+
+            AppDefaultsRepository.shared.lastCity = city
+
             // Start by making a new request to fetch the information from the OpenWeatherMap API.
             // Pass the city name as the argument.
             weatherFetcher.weeklyWeatherForecast(forCity: city)

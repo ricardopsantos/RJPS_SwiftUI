@@ -47,6 +47,12 @@
 		D755B15524D5E70D00C6215C /* BasicApp_EditableListOfUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B15124D5E70D00C6215C /* BasicApp_EditableListOfUsers.swift */; };
 		D755B15624D5E70D00C6215C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D755B15224D5E70D00C6215C /* README.md */; };
 		D755B15724D5E70D00C6215C /* BasicApp_InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B15324D5E70D00C6215C /* BasicApp_InfiniteScrollView.swift */; };
+		D7611BBC24E1F0B700B53E61 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BBB24E1F0B700B53E61 /* String+Extensions.swift */; };
+		D7611BC624E1F7A800B53E61 /* DevTools.h in Headers */ = {isa = PBXBuildFile; fileRef = D7611BC424E1F7A800B53E61 /* DevTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7611BC924E1F7A800B53E61 /* DevTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7611BC224E1F7A800B53E61 /* DevTools.framework */; };
+		D7611BCA24E1F7A800B53E61 /* DevTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7611BC224E1F7A800B53E61 /* DevTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7611BCE24E1F7CD00B53E61 /* AppUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */; };
+		D7611BD424E1F97600B53E61 /* AppDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD324E1F97600B53E61 /* AppDefaultsRepository.swift */; };
 		D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */; };
 		D769898624D7252E005F851F /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D769898424D7252E005F851F /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D769898924D7252E005F851F /* Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D769898224D7252E005F851F /* Extensions.framework */; };
@@ -121,7 +127,7 @@
 		D7A7184C24D8BC9100EC53FB /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D7A7184E24D8BCC700EC53FB /* MailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7184D24D8BCC700EC53FB /* MailViewControllerRepresentable.swift */; };
 		D7A7185224D8BD3900EC53FB /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185124D8BD3900EC53FB /* DateUtils.swift */; };
-		D7A7185424D8BDC500EC53FB /* App.LastShelter.Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185324D8BDC500EC53FB /* App.LastShelter.Settings.swift */; };
+		D7A7185424D8BDC500EC53FB /* AppDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185324D8BDC500EC53FB /* AppDefaultsRepository.swift */; };
 		D7A7185624D8C70B00EC53FB /* VisualDocs_DebugUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185524D8C70B00EC53FB /* VisualDocs_DebugUI.swift */; };
 		D7A7185824D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185724D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift */; };
 		D7B560202493A18100E9EC7D /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
@@ -172,6 +178,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = D751737124DEAA3E004822B2;
 			remoteInfo = Domain;
+		};
+		D7611BC724E1F7A800B53E61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7611BC124E1F7A800B53E61;
+			remoteInfo = DevTools;
+		};
+		D7611BCF24E1F82400B53E61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7611BC124E1F7A800B53E61;
+			remoteInfo = DevTools;
+		};
+		D7611BD124E1F82A00B53E61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7611BC124E1F7A800B53E61;
+			remoteInfo = DevTools;
 		};
 		D769898724D7252E005F851F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -296,6 +323,7 @@
 			files = (
 				D769898A24D7252E005F851F /* Extensions.framework in Embed Frameworks */,
 				D769899D24D72582005F851F /* Factory.framework in Embed Frameworks */,
+				D7611BCA24E1F7A800B53E61 /* DevTools.framework in Embed Frameworks */,
 				D7F142D524D95DD700B910A7 /* App_Weather.framework in Embed Frameworks */,
 				D751737A24DEAA3E004822B2 /* Domain.framework in Embed Frameworks */,
 				D7B9969424DB1F86000DAFD2 /* API_Keys.framework in Embed Frameworks */,
@@ -357,6 +385,12 @@
 		D755B15124D5E70D00C6215C /* BasicApp_EditableListOfUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicApp_EditableListOfUsers.swift; sourceTree = "<group>"; };
 		D755B15224D5E70D00C6215C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D755B15324D5E70D00C6215C /* BasicApp_InfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicApp_InfiniteScrollView.swift; sourceTree = "<group>"; };
+		D7611BBB24E1F0B700B53E61 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D7611BC224E1F7A800B53E61 /* DevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7611BC424E1F7A800B53E61 /* DevTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevTools.h; sourceTree = "<group>"; };
+		D7611BC524E1F7A800B53E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaults.swift; sourceTree = "<group>"; };
+		D7611BD324E1F97600B53E61 /* AppDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaultsRepository.swift; sourceTree = "<group>"; };
 		D769897A24D5FEEA005F851F /* VisualDocs_Caixa.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualDocs_Caixa.JPG; sourceTree = "<group>"; };
 		D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Caixa.swift; sourceTree = "<group>"; };
 		D769898224D7252E005F851F /* Extensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,7 +457,7 @@
 		D7A7184324D8BBFB00EC53FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A7184D24D8BCC700EC53FB /* MailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		D7A7185124D8BD3900EC53FB /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
-		D7A7185324D8BDC500EC53FB /* App.LastShelter.Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.LastShelter.Settings.swift; sourceTree = "<group>"; };
+		D7A7185324D8BDC500EC53FB /* AppDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaultsRepository.swift; sourceTree = "<group>"; };
 		D7A7185524D8C70B00EC53FB /* VisualDocs_DebugUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_DebugUI.swift; sourceTree = "<group>"; };
 		D7A7185724D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_horizontalSizeClass.swift; sourceTree = "<group>"; };
 		D7AA23102497F68F00D24169 /* SimpleNetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent.swift; sourceTree = "<group>"; };
@@ -472,7 +506,7 @@
 		D7F142FD24D95EAD00B910A7 /* V.WeeklyWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V.WeeklyWeatherView.swift; sourceTree = "<group>"; };
 		D7F142FF24D95EAD00B910A7 /* VM.CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 		D7F1430124D95EAD00B910A7 /* V.CurrentWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherView.swift; sourceTree = "<group>"; };
-		D7F1433624D9F79E00B910A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D7F1433624D9F79E00B910A7 /* MVVM.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVVM.README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,6 +520,7 @@
 				D769898924D7252E005F851F /* Extensions.framework in Frameworks */,
 				D7B9969324DB1F86000DAFD2 /* API_Keys.framework in Frameworks */,
 				D769899C24D72582005F851F /* Factory.framework in Frameworks */,
+				D7611BC924E1F7A800B53E61 /* DevTools.framework in Frameworks */,
 				D7A7184724D8BBFB00EC53FB /* App_HourlyChallenge.framework in Frameworks */,
 				D7F142D424D95DD700B910A7 /* App_Weather.framework in Frameworks */,
 				9F69CB1422BE8544008D305D /* AVKit.framework in Frameworks */,
@@ -494,6 +529,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D751736F24DEAA3E004822B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7611BBF24E1F7A800B53E61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -583,6 +625,7 @@
 				D751737324DEAA3E004822B2 /* Domain */,
 				D7A7184124D8BBFB00EC53FB /* App.HourlyChallenge */,
 				D7F142CE24D95DD600B910A7 /* App.Weather */,
+				D7611BC324E1F7A800B53E61 /* DevTools */,
 				9F288F2520F8089F008A9539 /* Products */,
 				4546C3C321B570CD00127A20 /* Frameworks */,
 			);
@@ -601,6 +644,7 @@
 				D7F142CD24D95DD600B910A7 /* App_Weather.framework */,
 				D7B9968C24DB1F86000DAFD2 /* API_Keys.framework */,
 				D751737224DEAA3E004822B2 /* Domain.framework */,
+				D7611BC224E1F7A800B53E61 /* DevTools.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -724,8 +768,9 @@
 		D755B14E24D5E68B00C6215C /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				D7F1433624D9F79E00B910A7 /* MVVM.README.md */,
 				D76989E624D7F890005F851F /* CodeIndex.swift */,
-				D769897924D5FED8005F851F /* WorkOnProgress */,
+				D769897924D5FED8005F851F /* Recreating */,
 				D755B15924D5E87A00C6215C /* Components */,
 				D755B14F24D5E70D00C6215C /* Training.BasicApps */,
 				D78FABD424D0BD740069809D /* Documents.Visual */,
@@ -778,13 +823,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		D769897924D5FED8005F851F /* WorkOnProgress */ = {
+		D7611BC324E1F7A800B53E61 /* DevTools */ = {
+			isa = PBXGroup;
+			children = (
+				D7611BC424E1F7A800B53E61 /* DevTools.h */,
+				D7611BC524E1F7A800B53E61 /* Info.plist */,
+				D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */,
+			);
+			path = DevTools;
+			sourceTree = "<group>";
+		};
+		D769897924D5FED8005F851F /* Recreating */ = {
 			isa = PBXGroup;
 			children = (
 				D769897A24D5FEEA005F851F /* VisualDocs_Caixa.JPG */,
 				D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */,
 			);
-			path = WorkOnProgress;
+			path = Recreating;
 			sourceTree = "<group>";
 		};
 		D769898324D7252E005F851F /* Extensions */ = {
@@ -800,6 +855,7 @@
 				D76989B524D72747005F851F /* UIScreen+Extensions.swift */,
 				D769898424D7252E005F851F /* Extensions.h */,
 				D769898524D7252E005F851F /* Info.plist */,
+				D7611BBB24E1F0B700B53E61 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -903,6 +959,7 @@
 		D79B2EBD24DDA2EF009B84A4 /* Fetchers|Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				D7A7185324D8BDC500EC53FB /* AppDefaultsRepository.swift */,
 				D751736224DDBCA7004822B2 /* Enteties */,
 				D79B2EBF24DDA44F009B84A4 /* Fetcher.swift */,
 			);
@@ -993,7 +1050,6 @@
 		D7F142CE24D95DD600B910A7 /* App.Weather */ = {
 			isa = PBXGroup;
 			children = (
-				D7F1433624D9F79E00B910A7 /* README.md */,
 				D7F142E824D95EAD00B910A7 /* Utils */,
 				D7F142DE24D95EAD00B910A7 /* AppCore */,
 				D7F142ED24D95EAD00B910A7 /* AppSchemes */,
@@ -1028,6 +1084,7 @@
 				D7F142E024D95EAD00B910A7 /* Entities */,
 				D7F142E424D95EAD00B910A7 /* Fetcher.swift */,
 				D7B9969D24DB25C7000DAFD2 /* FetcherMock.swift */,
+				D7611BD324E1F97600B53E61 /* AppDefaultsRepository.swift */,
 			);
 			path = "Fetchers|Repositories";
 			sourceTree = "<group>";
@@ -1121,7 +1178,6 @@
 			children = (
 				D79B2EBE24DDA42E009B84A4 /* API */,
 				D79B2EBD24DDA2EF009B84A4 /* Fetchers|Repositories */,
-				D7A7185324D8BDC500EC53FB /* App.LastShelter.Settings.swift */,
 			);
 			path = AppCore;
 			sourceTree = "<group>";
@@ -1152,6 +1208,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D751737624DEAA3E004822B2 /* Domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7611BBD24E1F7A800B53E61 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7611BC624E1F7A800B53E61 /* DevTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1245,6 +1309,7 @@
 				D7F142D324D95DD700B910A7 /* PBXTargetDependency */,
 				D7B9969224DB1F86000DAFD2 /* PBXTargetDependency */,
 				D751737824DEAA3E004822B2 /* PBXTargetDependency */,
+				D7611BC824E1F7A800B53E61 /* PBXTargetDependency */,
 			);
 			name = UglySwiftUIApp;
 			productName = GoodToGo;
@@ -1267,6 +1332,24 @@
 			name = Domain;
 			productName = Domain;
 			productReference = D751737224DEAA3E004822B2 /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D7611BC124E1F7A800B53E61 /* DevTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7611BCB24E1F7A800B53E61 /* Build configuration list for PBXNativeTarget "DevTools" */;
+			buildPhases = (
+				D7611BBD24E1F7A800B53E61 /* Headers */,
+				D7611BBE24E1F7A800B53E61 /* Sources */,
+				D7611BBF24E1F7A800B53E61 /* Frameworks */,
+				D7611BC024E1F7A800B53E61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DevTools;
+			productName = DevTools;
+			productReference = D7611BC224E1F7A800B53E61 /* DevTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D769898124D7252E005F851F /* Extensions */ = {
@@ -1374,6 +1457,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7611BD024E1F82400B53E61 /* PBXTargetDependency */,
 				D7F1433424D9E9DB00B910A7 /* PBXTargetDependency */,
 				D7F1433224D9E9D800B910A7 /* PBXTargetDependency */,
 				D7F1433024D9E9AB00B910A7 /* PBXTargetDependency */,
@@ -1413,6 +1497,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7611BD224E1F82A00B53E61 /* PBXTargetDependency */,
 				D7B9969C24DB2113000DAFD2 /* PBXTargetDependency */,
 				D7F1432424D95F3900B910A7 /* PBXTargetDependency */,
 			);
@@ -1435,6 +1520,10 @@
 						LastSwiftMigration = 1020;
 					};
 					D751737124DEAA3E004822B2 = {
+						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
+					};
+					D7611BC124E1F7A800B53E61 = {
 						CreatedOnToolsVersion = 11.4;
 						LastSwiftMigration = 1140;
 					};
@@ -1489,6 +1578,7 @@
 				D7F142CC24D95DD600B910A7 /* App.Weather */,
 				D7B9968B24DB1F86000DAFD2 /* API.Keys */,
 				D751737124DEAA3E004822B2 /* Domain */,
+				D7611BC124E1F7A800B53E61 /* DevTools */,
 			);
 		};
 /* End PBXProject section */
@@ -1506,6 +1596,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D751737024DEAA3E004822B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7611BC024E1F7A800B53E61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1691,11 +1788,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7611BBE24E1F7A800B53E61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7611BCE24E1F7CD00B53E61 /* AppUserDefaults.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D769897E24D7252E005F851F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D79B2EC424DDA569009B84A4 /* Array+Filtering.swift in Sources */,
+				D7611BBC24E1F0B700B53E61 /* String+Extensions.swift in Sources */,
 				D76989CA24D72ABA005F851F /* typelias.swift in Sources */,
 				D769898D24D72555005F851F /* UIView+Extensions.swift in Sources */,
 				D76989B624D72747005F851F /* UIScreen+Extensions.swift in Sources */,
@@ -1751,7 +1857,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A7185424D8BDC500EC53FB /* App.LastShelter.Settings.swift in Sources */,
+				D7A7185424D8BDC500EC53FB /* AppDefaultsRepository.swift in Sources */,
 				D751736424DDD0FD004822B2 /* VM.DashboardViewViewModel.swift in Sources */,
 				D7A7184E24D8BCC700EC53FB /* MailViewControllerRepresentable.swift in Sources */,
 				D79B2EC224DDA49A009B84A4 /* APIProtocol.swift in Sources */,
@@ -1785,6 +1891,7 @@
 				D7B9969F24DB25C7000DAFD2 /* FetcherMock.swift in Sources */,
 				D7F1432124D95EF300B910A7 /* typelias.swift in Sources */,
 				D7F1431B24D95EAD00B910A7 /* VM.WeeklyWeatherViewModel.swift in Sources */,
+				D7611BD424E1F97600B53E61 /* AppDefaultsRepository.swift in Sources */,
 				D7F1431A24D95EAD00B910A7 /* B.WeeklyWeatherBuilder.swift in Sources */,
 				D7F1431524D95EAD00B910A7 /* VM.CurrentWeatherRowViewModel.swift in Sources */,
 				D7F1431324D95EAD00B910A7 /* V.DailyWeatherRowView.swift in Sources */,
@@ -1809,6 +1916,21 @@
 			isa = PBXTargetDependency;
 			target = D751737124DEAA3E004822B2 /* Domain */;
 			targetProxy = D751737724DEAA3E004822B2 /* PBXContainerItemProxy */;
+		};
+		D7611BC824E1F7A800B53E61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7611BC124E1F7A800B53E61 /* DevTools */;
+			targetProxy = D7611BC724E1F7A800B53E61 /* PBXContainerItemProxy */;
+		};
+		D7611BD024E1F82400B53E61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7611BC124E1F7A800B53E61 /* DevTools */;
+			targetProxy = D7611BCF24E1F82400B53E61 /* PBXContainerItemProxy */;
+		};
+		D7611BD224E1F82A00B53E61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7611BC124E1F7A800B53E61 /* DevTools */;
+			targetProxy = D7611BD124E1F82A00B53E61 /* PBXContainerItemProxy */;
 		};
 		D769898824D7252E005F851F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2018,6 +2140,38 @@
 				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.app.domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7611BCC24E1F7A800B53E61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G92548JLNB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DevTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.app.devtools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2301,6 +2455,14 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D751737C24DEAA3E004822B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7611BCB24E1F7A800B53E61 /* Build configuration list for PBXNativeTarget "DevTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7611BCC24E1F7A800B53E61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

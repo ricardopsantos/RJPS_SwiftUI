@@ -16,6 +16,7 @@ private let size_1: CGFloat = 50
 private let colorPrimary = UIColor(red: CGFloat(46)/CGFloat(255), green: CGFloat(99)/CGFloat(255), blue: CGFloat(168)/CGFloat(255), alpha: 1)
 private let colorOnPrimary = UIColor(red: CGFloat(245)/CGFloat(255), green: CGFloat(245)/CGFloat(255), blue: CGFloat(245)/CGFloat(255),
 alpha: 1)
+private var defaultPadding: CGFloat = 22
 
 struct VisualDocs_Caixa_I: View {
     var body: some View {
@@ -190,67 +191,94 @@ struct VisualDocs_Caixa_II_PreviewProvider: PreviewProvider {
 // //////////////////////////////////////////////////////////
 
 func button(systemName: String, name: String) -> some View {
-    VStack {
-        Image(systemName: systemName).resizable().frame(width: 44, height: 44, alignment: .center).foregroundColor(Color.orange)
+    let size: CGFloat = UIScreen.screenWidth / 9
+    return VStack {
+        ZStack {
+            Rectangle()
+                .foregroundColor(.clear)
+                .background(Color.gray).alpha(0.07)
+                .cornerRadius(10)
+                .frame(width: size*1.5, height: size*1.2, alignment: .center)
+            Image(systemName: systemName)
+                .resizable()
+                .frame(width: size, height: size, alignment: .center)
+                .foregroundColor(Color.orange)
+        }
         Text(name).bold()
-    }.padding()
+    }
+    .padding(.bottom, 22)
+    //.debugWithDashedStroke(color: UIColor.orange)
 }
 
 struct VisualDocs_Caixa_III: View {
     let topPartHeight: CGFloat = 200
-    let viewMiddleHeight: CGFloat = 150
+    let viewMiddleHeight: CGFloat = 120
 
     var viewTop: some View {
         ZStack {
             Color(colorPrimary)
             HStack {
-                ImageNames.person.imageCircle.resizable().frame(width: 44, height: 44)
+                ImageNames.person.imageCircle
+                    .resizable().frame(width: 40, height: 40)
+                    .foregroundColor(Color.white)
                 Spacer()
                 Text("Conta poupança").bold().textColor(Color.white)
                 Image(systemName: "chevron.down").foregroundColor(Color.white)
                 Spacer()
-                Image(systemName: "ellipsis").foregroundColor(Color.white).rotate(degrees: -90)
+                Image(systemName: "bell").foregroundColor(Color.white)
             }.padding(.leading, 44).padding(.trailing, 44)
         }
         .frame(maxWidth: .infinity)
         .frame(height: topPartHeight)
-        .debugWithDashedStroke(color: UIColor.red)
+        //.debugWithDashedStroke(color: UIColor.red)
     }
 
     var viewMiddle: some View {
         ZStack {
             Color(colorOnPrimary).cornerRadius(10)
-            HStack {
-                Spacer()
-                Text("Saldo em conta").foregroundColor(Color(colorPrimary)).bold()
+            VStack {
+                HStack {
+                    Text("Saldo em conta").foregroundColor(Color.secondary).font(.callout).bold()
+                    Spacer()
+                    Image(systemName: "ellipsis").foregroundColor(Color(colorPrimary)).rotate(degrees: -90)
+                }.padding(.leading, 21).padding(.trailing, 21).padding(.top, 22)
+                HStack {
+                    Text("R$ 200,00").foregroundColor(Color(colorPrimary)).font(.title).bold()
+                    Spacer()
+                    Text("Esconder").foregroundColor(Color(colorPrimary)).font(.footnote).bold()
+                }.padding(.leading, 21).padding(.trailing, 21)
                 Spacer()
             }
         }
-        .padding()
         .frame(height: viewMiddleHeight)
-        .padding(.top, topPartHeight * 0.4)
-        .debugWithDashedStroke(color: UIColor.blue)
+        .padding(.trailing, defaultPadding)
+        .padding(.leading, defaultPadding)
+        .padding(.top, topPartHeight * 0.5)
+        //.debugWithDashedStroke(color: UIColor.blue)
     }
 
     var viewBottom: some View {
         VStack(alignment: .center, spacing: 0) {
-            ForEach(0..<4) { i in
+            ForEach(0..<4) { _ in
                 HStack(alignment: .center, spacing: 0) {
-                    button(systemName: ImageNames.bag.rawValue, name: "\(i)")
+                    button(systemName: ImageNames.bag.rawValue, name: String.random(5))
                     Spacer()
-                    button(systemName: ImageNames.bag.rawValue, name: "\(i)")
+                    button(systemName: ImageNames.bag.rawValue, name: String.random(5))
                     Spacer()
-                    button(systemName: ImageNames.bag.rawValue, name: "\(i)")
-                }.padding(.leading, 44).padding(.trailing, 44).padding(.top, 44)
+                    button(systemName: ImageNames.bag.rawValue, name: String.random(5))
+                }//.padding(.leading, 44).padding(.trailing, 44).padding(.top, 44)
             }
             Spacer()
             HStack {
                 Spacer()
-                Text("Solicitar ajudar").foregroundColor(Color(colorPrimary)).bold()
+                Text("Solicitar ajuda").foregroundColor(Color(colorPrimary)).font(.footnote).bold()
                 Spacer()
             }
         }
-        .padding(.top, viewMiddleHeight/2)
+//        .padding(.vertical, 10)
+        .padding(.leading, defaultPadding)
+        .padding(.trailing, defaultPadding)
+        .padding(.top, viewMiddleHeight/2 + defaultPadding)
         .padding(.bottom, 44)
         .debugWithDashedStroke(color: UIColor.green)
     }

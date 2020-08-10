@@ -37,8 +37,9 @@ public extension View {
         self.foregroundColor(color)
     }
 
-    func addCornerOverlay(color: UIColor, radius: CGFloat, width: CGFloat = 2) -> some View {
-        self.overlay(RoundedRectangle(cornerRadius: radius).addSimpleStroke(color: color, width: width))
+    // Draw a corner, outside the View
+    func addOuterCornerOverlaying(color: UIColor, radius: CGFloat = 3, width: CGFloat = 2) -> some View {
+        self.padding().overlay(RoundedRectangle(cornerRadius: radius).addSimpleStroke(color: color, width: width))
     }
 
     func debugWithSimpleStroke(color: UIColor = .red, width: CGFloat=3) -> some View {

@@ -12,7 +12,7 @@ public class DashBoardViewModel: ObservableObject {
 
     private let fetcher: APIProtocol
     private var disposables = Set<AnyCancellable>()
-    @ObservedObject var settings = LastShelterUserSettings()
+    @ObservedObject var settings = AppDefaultsRepository.shared
 
     var timeZoneServer: Int { return settings.timeZone - 3 }
 
