@@ -39,6 +39,7 @@
 		D751738F24E073AE004822B2 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751738E24E073AE004822B2 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */; };
 		D751739124E075EB004822B2 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751739024E075EB004822B2 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */; };
 		D751739524E07EEE004822B2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751739424E07EEE004822B2 /* File.swift */; };
+		D751739724E0AC47004822B2 /* DemoLayoutInScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751739624E0AC47004822B2 /* DemoLayoutInScrollView.swift */; };
 		D755B13E24D49E7500C6215C /* VisualDocs_NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B13D24D49E7500C6215C /* VisualDocs_NavigationView.swift */; };
 		D755B14024D4A21300C6215C /* VisualDocs_@Published.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B13F24D4A21300C6215C /* VisualDocs_@Published.swift */; };
 		D755B14224D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14124D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift */; };
@@ -344,6 +345,7 @@
 		D751738E24E073AE004822B2 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift; sourceTree = "<group>"; };
 		D751739024E075EB004822B2 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift; sourceTree = "<group>"; };
 		D751739424E07EEE004822B2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D751739624E0AC47004822B2 /* DemoLayoutInScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLayoutInScrollView.swift; sourceTree = "<group>"; };
 		D755B13D24D49E7500C6215C /* VisualDocs_NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_NavigationView.swift; sourceTree = "<group>"; };
 		D755B13F24D4A21300C6215C /* VisualDocs_@Published.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Published.swift"; sourceTree = "<group>"; };
 		D755B14124D4A66E00C6215C /* VisualDocs_@EnvironmentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@EnvironmentObject.swift"; sourceTree = "<group>"; };
@@ -762,6 +764,7 @@
 				D72BD65C24D4684800671712 /* VisualDocs_onReceive.swift */,
 				D755B14324D4BDDD00C6215C /* VisualDocs_onDelete.swift */,
 				D751738424E00F76004822B2 /* VisualDocs_sheet.swift */,
+				D751739624E0AC47004822B2 /* DemoLayoutInScrollView.swift */,
 			);
 			path = Training.BasicConcepts;
 			sourceTree = "<group>";
@@ -1649,6 +1652,7 @@
 				D78FABFA24D1F02C0069809D /* VisualDocs_List.swift in Sources */,
 				D755B13E24D49E7500C6215C /* VisualDocs_NavigationView.swift in Sources */,
 				D78FAC0924D34F840069809D /* VisualDocs_@State.swift in Sources */,
+				D751739724E0AC47004822B2 /* DemoLayoutInScrollView.swift in Sources */,
 				D78FABE924D160500069809D /* Recreating.Maps_I.swift in Sources */,
 				D7A7185624D8C70B00EC53FB /* VisualDocs_DebugUI.swift in Sources */,
 				9FE5097B231FB10E0081E1DB /* Tab3_View.swift in Sources */,

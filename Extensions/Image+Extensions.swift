@@ -12,6 +12,10 @@ public extension Image {
         self.resizable().aspectRatio(contentMode: mode)
     }
 
+    func tint(color: Color) -> some View {
+        self.foregroundColor(color)
+    }
+
     func resize(width: CGFloat, height: CGFloat, alignment: Alignment = .center) -> some View {
         self.resizable().frame(width: width, height: height, alignment: alignment)
     }

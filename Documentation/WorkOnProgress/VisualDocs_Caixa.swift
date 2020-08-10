@@ -7,13 +7,16 @@ import Foundation
 import UIKit
 import SwiftUI
 import Combine
+//
+import Extensions
 
+private let clockBarSize: CGFloat = 44
 private let boxWidth = UIScreen.screenWidth * 0.85
 private let size_1: CGFloat = 50
-private let colorPrimary = UIColor(red: CGFloat(46)/CGFloat(255),
-                           green: CGFloat(99)/CGFloat(255),
-                           blue: CGFloat(168)/CGFloat(255),
-                           alpha: 1)
+private let colorPrimary = UIColor(red: CGFloat(46)/CGFloat(255), green: CGFloat(99)/CGFloat(255), blue: CGFloat(168)/CGFloat(255), alpha: 1)
+private let colorOnPrimary = UIColor(red: CGFloat(245)/CGFloat(255), green: CGFloat(245)/CGFloat(255), blue: CGFloat(245)/CGFloat(255),
+alpha: 1)
+
 struct VisualDocs_Caixa_I: View {
     var body: some View {
         VStack {
@@ -26,15 +29,17 @@ struct VisualDocs_Caixa_I: View {
     }
 }
 
-// MARK: - Preview VisualDocs_Caixa_I
-
 struct VisualDocs_Caixa_I_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_Caixa_I()
     }
 }
 
-struct TextInputField: View {
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+struct VisualDocs_Caixa_II_TextInputField: View {
     let title: String
     @State var value: String = ""
     var body: some View {
@@ -106,9 +111,9 @@ struct VisualDocs_Caixa_II: View {
     var viewBottom: some View {
           VStack {
               VStack {
-                TextInputField(title: "User")
+                VisualDocs_Caixa_II_TextInputField(title: "User")
                   Spacer()
-                  TextInputField(title: "Password")
+                  VisualDocs_Caixa_II_TextInputField(title: "Password")
                   Button(action: {}) {
                       ZStack {
                           Text("Enter on your account".uppercased())
@@ -137,23 +142,20 @@ struct VisualDocs_Caixa_II: View {
                   Image(systemName: "qrcode.viewfinder")
                       .resizable()
                       .frame(width: size_1*1.5, height: size_1*1.5, alignment: .center).padding(.bottom, size_1*1.5)
-                      //.background(Color(UIColor.gray))
                       .foregroundColor(Color(colorPrimary))
                   Text("Don't have an account".uppercased())
                     .bold().font(.footnote)
                     .textColor(Color(colorPrimary))
                     .frame(width: boxWidth, height: size_1*0.5)
-                    //.background(Color(UIColor.gray))
                   Text("Accessibility mode".uppercased())
                     .bold().font(.footnote)
                     .textColor(Color(colorPrimary))
                     .frame(width: boxWidth, height: size_1*0.5)
-                    //.background(Color(UIColor.gray))
               }
           }
       }
 
-    var viewMidle: some View {
+    var viewMiddle: some View {
         ZStack {
             topPartBackgroundView
             Rectangle()
@@ -171,16 +173,101 @@ struct VisualDocs_Caixa_II: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             viewTop.padding(.top, -clockBarSize)
-            viewMidle
+            viewMiddle
             viewBottom
         }
     }
 }
 
-// MARK: - Preview VisualDocs_Caixa_II
-
 struct VisualDocs_Caixa_II_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_Caixa_II(topPartBackgroundView: Color(colorPrimary))
+    }
+}
+
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+func button(systemName: String, name: String) -> some View {
+    VStack {
+        Image(systemName: systemName).resizable().frame(width: 44, height: 44, alignment: .center).foregroundColor(Color.orange)
+        Text(name).bold()
+    }.padding()
+}
+
+struct VisualDocs_Caixa_III: View {
+    let topPartHeight: CGFloat = 200
+    let viewMiddleHeight: CGFloat = 150
+
+    var viewTop: some View {
+        ZStack {
+            Color(colorPrimary)
+            HStack {
+                ImageNames.person.imageCircle.resizable().frame(width: 44, height: 44)
+                Spacer()
+                Text("Conta poupança").bold().textColor(Color.white)
+                Image(systemName: "chevron.down").foregroundColor(Color.white)
+                Spacer()
+                Image(systemName: "ellipsis").foregroundColor(Color.white).rotate(degrees: -90)
+            }.padding(.leading, 44).padding(.trailing, 44)
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: topPartHeight)
+        .debugWithDashedStroke(color: UIColor.red)
+    }
+
+    var viewMiddle: some View {
+        ZStack {
+            Color(colorOnPrimary).cornerRadius(10)
+            HStack {
+                Spacer()
+                Text("Saldo em conta").foregroundColor(Color(colorPrimary)).bold()
+                Spacer()
+            }
+        }
+        .padding()
+        .frame(height: viewMiddleHeight)
+        .padding(.top, topPartHeight * 0.4)
+        .debugWithDashedStroke(color: UIColor.blue)
+    }
+
+    var viewBottom: some View {
+        VStack(alignment: .center, spacing: 0) {
+            ForEach(0..<4) { i in
+                HStack(alignment: .center, spacing: 0) {
+                    button(systemName: ImageNames.bag.rawValue, name: "\(i)")
+                    Spacer()
+                    button(systemName: ImageNames.bag.rawValue, name: "\(i)")
+                    Spacer()
+                    button(systemName: ImageNames.bag.rawValue, name: "\(i)")
+                }.padding(.leading, 44).padding(.trailing, 44).padding(.top, 44)
+            }
+            Spacer()
+            HStack {
+                Spacer()
+                Text("Solicitar ajudar").foregroundColor(Color(colorPrimary)).bold()
+                Spacer()
+            }
+        }
+        .padding(.top, viewMiddleHeight/2)
+        .padding(.bottom, 44)
+        .debugWithDashedStroke(color: UIColor.green)
+    }
+
+    var body: some View {
+        ZStack(alignment: .top) {
+            VStack(alignment: .leading, spacing: 0) {
+                viewTop.padding(.top, -clockBarSize)
+                viewBottom
+            }
+            viewMiddle
+        }
+    }
+}
+
+struct VisualDocs_Caixa_III_PreviewProvider: PreviewProvider {
+    static var previews: some View {
+        VisualDocs_Caixa_III()
     }
 }

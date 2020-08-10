@@ -20,9 +20,9 @@ struct VisualDocs_DebugUI: View {
             VStack {
                 baseView
                 Spacer()
-                baseView.debug1()
+                baseView.debugWithSimpleStroke()
                 Spacer()
-                baseView.debug2()
+                baseView.debugWithDashedStroke()
                 Spacer()
                 baseView.debug3()
             }.padding().debug3(color: .blue, width: 3)

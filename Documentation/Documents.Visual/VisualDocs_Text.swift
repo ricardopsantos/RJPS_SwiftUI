@@ -30,7 +30,7 @@ var sample2: some View {
 }
 
 var sample3: some View {
-    Text("sample3").padding().addCorner(color: UIColor.blue, radius: 8, width: 4)
+    Text("sample3").padding().addCornerOverlay(color: UIColor.blue, radius: 8, width: 4)
 }
 
 struct VisualDocs_Text: View {
