@@ -14,7 +14,7 @@ public class SimpleNetworkAgent_B {
 }
 
 extension SimpleNetworkAgent_B {
-     func run<T>(with components: URLComponents) -> AnyPublisher<T, APIErrorEntity> where T: Decodable {
+    func run<T>(with components: URLComponents, dumpResponse: Bool) -> AnyPublisher<T, APIErrorEntity> where T: Decodable {
         // Try to create an instance of URL from the URLComponents. If this fails, return an error
         // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.
         guard let url = components.url else {
@@ -30,7 +30,7 @@ extension SimpleNetworkAgent_B {
             // The uses of flatMap deserves a post of their own. Here, you use it to convert the data
             // coming from the server as JSON to a fully-fledged object. You use decode(_:) as an auxiliary
             // function to achieve this. Since you are only interested in the first value emitted by the network request, you set .max(1).
-            .flatMap(maxPublishers: .max(1)) { [weak self] pair in self!.decode(pair.data) }
+            .flatMap(maxPublishers: .max(1)) { [weak self] pair in self!.decode(pair.data, url, dumpResponse) }
             // If you don’t use eraseToAnyPublisher() you’ll have to carry over the full type returned
             // by flatMap: Publishers.FlatMap<AnyPublisher<_, WeatherError>, Publishers.MapError<URLSession.DataTaskPublisher, WeatherError>>.
             // As a consumer of the API, you don’t want to be burdened with these details. So, to improve the API ergonomics,
@@ -39,9 +39,13 @@ extension SimpleNetworkAgent_B {
             .eraseToAnyPublisher()
     }
 
-    func decode<T: Decodable>(_ data: Data) -> AnyPublisher<T, APIErrorEntity> {
+    func decode<T: Decodable>(_ data: Data, _ url: URL, _ dumpResponse: Bool) -> AnyPublisher<T, APIErrorEntity> {
+        if dumpResponse {
+            print("url: \(url)\n\(String(decoding: data, as: UTF8.self))")
+        }
+
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .secondsSince1970
+        //decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data).decode(type: T.self, decoder: decoder).mapError { error in .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }

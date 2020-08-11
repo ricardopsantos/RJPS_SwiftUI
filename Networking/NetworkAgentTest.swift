@@ -20,15 +20,9 @@ public struct NetworkAgentsTest {
 extension NetworkAgentsTest {
     struct SimpleNetworkAgent_B {
         static func basic() {
-            let response =  sampleAPI_II.repos(username: "apple").sink(receiveCompletion: { value in
-                print(value)
-                switch value {
-                case .failure: break
-                case .finished: break
-                }
-            }, receiveValue: { value in
+            let response =  sampleAPI_II.repos(username: "ricardopsantos").sink(receiveCompletion: { _ in }, receiveValue: {
                 print("# 1 #####################################")
-                print(value)
+                print($0)
             })
             RunLoop.main.run(until: Date(timeIntervalSinceNow: 10))
             withExtendedLifetime(response, {})
@@ -39,7 +33,7 @@ extension NetworkAgentsTest {
 extension NetworkAgentsTest {
     struct SimpleNetworkAgent_A {
         public static func basic() {
-            let response =  sampleAPI_I.repos(username: "apple").sink(receiveCompletion: { _ in }, receiveValue: {
+            let response =  sampleAPI_I.repos(username: "ricardopsantos").sink(receiveCompletion: { _ in }, receiveValue: {
                 print("# 1 #####################################")
                 print($0)
             })
