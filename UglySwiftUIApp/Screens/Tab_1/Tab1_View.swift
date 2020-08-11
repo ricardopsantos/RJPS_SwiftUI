@@ -10,6 +10,7 @@ import Combine
 //
 import Extensions
 import Factory
+import UIKitRepresentables
 
 // MARK: Tab1_View
 
@@ -18,7 +19,7 @@ struct Tab1_View: View {
     var body : some View {
         ZStack { UIColor.View.appDefaultBackground.edgesIgnoringSafeArea(.all)
             VStack(alignment: .center, spacing: 20) {
-                ActivityIndicatorViewRepresentable(isAnimating: isAnimating)
+                ActivityIndicatorRepresentable(isAnimating: isAnimating)
                 Text("Tab 1").font(.title).padding(50)
             }
         }

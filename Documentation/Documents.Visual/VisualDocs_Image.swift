@@ -17,6 +17,7 @@ struct VisualDocs_Image: View {
             VStack {
                 Text("Pure")
                 ImageNames.cloud.image
+                Image(systemName: "bell")
                 Divider()
 
                 Text("resizable().frame(width: 100, height: 100, alignment: .center)")

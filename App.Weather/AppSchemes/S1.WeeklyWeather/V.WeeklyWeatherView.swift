@@ -4,6 +4,8 @@
 //
 
 import SwiftUI
+import UIKitRepresentables
+import Combine
 
 // MARK: - Preview
 
@@ -17,19 +19,21 @@ public struct WeeklyWeatherView: View {
     }
 
     public var body: some View {
-        NavigationView {
-            List {
-                searchField
-                //Text(viewModel.city)
-                if viewModel.dataSource.isEmpty {
-                    emptySection
-                } else {
-                    cityHourlyWeatherSection
-                    forecastSection
+        ZStack {
+            NavigationView {
+                List {
+                    searchField
+                    if viewModel.dataSource.isEmpty {
+                        emptySection
+                    } else {
+                        cityHourlyWeatherSection
+                        forecastSection
+                    }
                 }
+                .listStyle(GroupedListStyle())
+                .navigationBarTitle("Weather ⛅️")
             }
-            .listStyle(GroupedListStyle())
-            .navigationBarTitle("Weather ⛅️")
+            ActivityIndicatorRepresentable(isAnimating: viewModel.isAnimating)
         }
     }
 }

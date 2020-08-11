@@ -3,19 +3,28 @@ import Combine
 
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
 
-struct SimpleNetworkAgentTest {
+public struct SimpleNetworkAgentTest {
     private init() {}
-    
-    static func chain() {
-        let me = "ricardopsantos"
-        let repos = GithubAPI.repos(username: me)
+
+    public static func basic() {
+        let response =  SampleAPI_I.repos(username: "ricardopsantos").sink(receiveCompletion: { _ in }, receiveValue: {
+            print("# 1 #####################################")
+            print($0)
+        })
+        RunLoop.main.run(until: Date(timeIntervalSinceNow: 10))
+        withExtendedLifetime(response, {})
+    }
+
+    public static func chain() {
+        let me = "apple"
+        let repos = SampleAPI_I.repos(username: me)
         let firstRepo = repos.compactMap { $0.first }
         let issues = firstRepo.flatMap { repo in
-            GithubAPI.issues(repo: repo.name, owner: me)
+            SampleAPI_I.issues(repo: repo.name, owner: me)
         }
 
         let token = issues.sink(receiveCompletion: { _ in }, receiveValue: {
-            print("# 1 #####################################")
+            print("# 2 #####################################")
             print($0)
         })
 
@@ -26,13 +35,13 @@ struct SimpleNetworkAgentTest {
 
     // MARK: - Parallel
 
-    static func parallel() {
-        let members = GithubAPI.members(org: "apple")
-        let repos = GithubAPI.repos(org: "apple")
+    public static func parallel() {
+        let members = SampleAPI_I.members(org: "apple")
+        let repos = SampleAPI_I.repos(org: "apple")
         let token = Publishers.Zip(members, repos)
             .sink(receiveCompletion: { _ in },
                   receiveValue: { (members, repos) in
-                    print("# 2 #####################################")
+                    print("# 3 #####################################")
                     print(members, repos)
             })
 

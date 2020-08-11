@@ -4,7 +4,7 @@ import Combine
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
 
 /*
- Agent is a promise-based HTTP client. It fulfills and configures requests by passing a single URLRequest object to it.
+ Agent is a promise-based HTTP client. It fulfils and configures requests by passing a single URLRequest object to it.
  The agent automatically transforms JSON data into a Codable value and returns an AnyPublisher instance:
 
  1 - Response<T> carries both parsed value and a URLResponse instance. The latter can be used for status code validation and logging.
@@ -12,12 +12,12 @@ import Combine
  describes the request configuration. The decoder is optional in case custom JSON parsing is needed.
  3 - Create data task as a Combine publisher.
  4 - Parse JSON data. We have constrained T to be Decodable in the run<T>() method declaration.
- 5 -  Create the Response<T> object and pass it downstream. It contains the parsed value and the URL response.
+ 5 - Create the Response<T> object and pass it downstream. It contains the parsed value and the URL response.
  6 - Deliver values on the main thread.
  7 - Erase publisher’s type and return an instance of AnyPublisher.
 
  */
-struct SimpleNetworkAgent {
+struct SimpleNetworkAgent_A {
     // 1
     struct Response<T> {
         let value: T

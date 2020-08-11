@@ -15,7 +15,7 @@ import Combine
 import MessageUI
 //
 import Designables
-import ControllerRepresentables
+import UIKitRepresentables
 
 // MARK: - Preview
 

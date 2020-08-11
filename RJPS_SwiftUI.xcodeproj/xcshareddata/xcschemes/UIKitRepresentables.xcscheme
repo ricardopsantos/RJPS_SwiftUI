@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D76989D224D72C0A005F851F"
-               BuildableName = "ControllerRepresentables.framework"
-               BlueprintName = "ControllerRepresentables"
+               BuildableName = "UIKitRepresentables.framework"
+               BlueprintName = "UIKitRepresentables"
                ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D76989D224D72C0A005F851F"
-            BuildableName = "ControllerRepresentables.framework"
-            BlueprintName = "ControllerRepresentables"
+            BuildableName = "UIKitRepresentables.framework"
+            BlueprintName = "UIKitRepresentables"
             ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

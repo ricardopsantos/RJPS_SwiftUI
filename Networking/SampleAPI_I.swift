@@ -10,29 +10,12 @@ import Combine
  2 - Agent executes the request and passes forward the repositories, skipping the response object. We skip response code validation to focus on the happy path.
 */
 
-struct GithubAPIResponseModel {
-    private init() { }
-    struct User: Codable {
-        let id: Int
-    }
-
-    struct Repository: Codable {
-        let id: Int
-        let name: String
-        let description: String?
-    }
-
-    struct Issue: Codable {
-        let id: Int
-    }
-}
-
-enum GithubAPI {
-    static let agent = SimpleNetworkAgent()
+enum SampleAPI_I {
+    static let agent = SimpleNetworkAgent_A()
     static let base = URL(string: "https://api.github.com")!
 }
 
-extension GithubAPI {
+extension SampleAPI_I {
 
     // 1
     static func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error> {
@@ -53,10 +36,8 @@ extension GithubAPI {
     }
 }
 
-extension GithubAPI {
+extension SampleAPI_I {
     static func run<T: Decodable>(_ request: URLRequest) -> AnyPublisher<T, Error> {
-        return agent.run(request)
-            .map(\.value)
-            .eraseToAnyPublisher()
+        return agent.run(request).map(\.value).eraseToAnyPublisher()
     }
 }

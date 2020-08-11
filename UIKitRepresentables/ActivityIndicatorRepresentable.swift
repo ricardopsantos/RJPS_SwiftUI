@@ -8,12 +8,15 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct ActivityIndicatorViewRepresentable: UIViewRepresentable {
-    var isAnimating: Bool
-    func makeUIView(context: Context) -> UIActivityIndicatorView {
+public struct ActivityIndicatorRepresentable: UIViewRepresentable {
+    public var isAnimating: Bool
+    public init(isAnimating: Bool) {
+        self.isAnimating = isAnimating
+    }
+    public func makeUIView(context: Context) -> UIActivityIndicatorView {
         return UIActivityIndicatorView(style: .large)
     }
-    func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
+    public func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
         if isAnimating {
             activityIndicator.startAnimating()
         } else {
@@ -26,6 +29,6 @@ struct ActivityIndicatorViewRepresentable: UIViewRepresentable {
 
 struct ActivityIndicator_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityIndicatorViewRepresentable(isAnimating: true)
+        ActivityIndicatorRepresentable(isAnimating: true)
     }
 }
