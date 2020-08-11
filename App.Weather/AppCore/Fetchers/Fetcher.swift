@@ -49,7 +49,7 @@ fileprivate extension Fetcher {
             .eraseToAnyPublisher()
     }
 
-    func decode<T: Decodable>(_ data: Data) -> AnyPublisher<T, E.WeatherErrorEntity> {
+    func decode<T>(_ data: Data) -> AnyPublisher<T, E.WeatherErrorEntity> where T: Decodable {
         //let str = String(decoding: data, as: UTF8.self)
         //
         let decoder = JSONDecoder()

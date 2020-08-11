@@ -9,10 +9,10 @@ import Combine
 // MARK: - Protocol
 
 public protocol SampleAPI_II_Protocol {
-    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIErrorEntity>
-    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIErrorEntity>
-    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIErrorEntity>
-    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIErrorEntity>
+    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
+    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError>
+    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
+    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError>
 }
 
 // MARK: - Class & Constants
@@ -28,19 +28,19 @@ public class SampleAPI_II {
 // MARK: - Protocol implementation
 
 extension SimpleNetworkAgent_B: SampleAPI_II_Protocol {
-    public func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIErrorEntity> {
+    public func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
         return run(with: SampleAPI_II.repos(username: username), dumpResponse: true)
     }
 
-    public func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIErrorEntity> {
+    public func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError> {
         return run(with: SampleAPI_II.issues(repo: repo, owner: owner), dumpResponse: true)
     }
 
-    public func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIErrorEntity> {
+    public func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
         return run(with: SampleAPI_II.repos(org: org), dumpResponse: true)
     }
 
-    public func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIErrorEntity> {
+    public func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError> {
         return run(with: SampleAPI_II.members(org: org), dumpResponse: true)
     }
 

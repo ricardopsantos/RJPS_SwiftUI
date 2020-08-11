@@ -17,22 +17,34 @@ import Combine
  7 - Erase publisher’s type and return an instance of AnyPublisher.
 
  */
-struct SimpleNetworkAgent_A {
+class SimpleNetworkAgent_A {
     // 1
-    struct Response<T> {
+    struct Response<T: Decodable> {
         let value: T
         let response: URLResponse
     }
 
     // 2
-    func run<T: Decodable>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<Response<T>, Error> {
+    func run<T>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<Response<T>, APIError> where T: Decodable {
         return URLSession.shared
-            .dataTaskPublisher(for: request) // 3
-            .tryMap { result -> Response<T> in
-                let value = try decoder.decode(T.self, from: result.data) // 4
-                return Response(value: value, response: result.response)  // 5
-            }
-            .receive(on: DispatchQueue.main) // 6
-            .eraseToAnyPublisher()           // 7
+           .dataTaskPublisher(for: request) // 3
+           .tryMap { result -> Response<T> in
+               let value = try decoder.decode(T.self, from: result.data) // 4
+               return Response(value: value, response: result.response)  // 5
+           }
+           .mapError { error in .network(description: error.localizedDescription) }
+           .receive(on: DispatchQueue.main) // 6
+           .eraseToAnyPublisher()           // 7
+    }
+
+    private func decode<T>(_ data: Data, _ request: URLRequest, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> where T: Decodable {
+        if dumpResponse {
+            print("request: \(request)\n\(String(decoding: data, as: UTF8.self))")
+        }
+
+        let decoder = JSONDecoder()
+        //decoder.dateDecodingStrategy = .secondsSince1970
+        return Just(data).decode(type: T.self, decoder: decoder).mapError { error in .parsing(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
     }
 }

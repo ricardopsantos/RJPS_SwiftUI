@@ -5,7 +5,7 @@
 
 import Foundation
 
- public enum APIErrorEntity: Error {
+ public enum APIError: Error {
     case parsing(description: String)
     case network(description: String)
 }

@@ -14,11 +14,11 @@ public class SimpleNetworkAgent_B {
 }
 
 extension SimpleNetworkAgent_B {
-    func run<T>(with components: URLComponents, dumpResponse: Bool) -> AnyPublisher<T, APIErrorEntity> where T: Decodable {
+    func run<T>(with components: URLComponents, dumpResponse: Bool) -> AnyPublisher<T, APIError> where T: Decodable {
         // Try to create an instance of URL from the URLComponents. If this fails, return an error
         // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.
         guard let url = components.url else {
-            let error = APIErrorEntity.network(description: "Couldn't create URL")
+            let error = APIError.network(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
         }
 
@@ -39,7 +39,7 @@ extension SimpleNetworkAgent_B {
             .eraseToAnyPublisher()
     }
 
-    func decode<T: Decodable>(_ data: Data, _ url: URL, _ dumpResponse: Bool) -> AnyPublisher<T, APIErrorEntity> {
+    private func decode<T: Decodable>(_ data: Data, _ url: URL, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> {
         if dumpResponse {
             print("url: \(url)\n\(String(decoding: data, as: UTF8.self))")
         }

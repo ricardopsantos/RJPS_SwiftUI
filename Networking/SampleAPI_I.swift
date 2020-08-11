@@ -11,10 +11,10 @@ import Combine
 // MARK: - Protocol
 
 public protocol SampleAPI_I_Protocol {
-    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error>
-    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], Error> 
-    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error>
-    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], Error>
+    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
+    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError>
+    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
+    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError>
 }
 
 // MARK: - Class & Constants
@@ -30,19 +30,19 @@ class SampleAPI_I {
 
 extension SampleAPI_I: SampleAPI_I_Protocol {
 
-    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error> {
+    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
         return run(with: reposRequest(org: username))
     }
 
-    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], Error> {
+    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError> {
         return run(with: issuesRequest(repo: repo, owner: owner))
     }
     
-    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error> {
+    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
         return run(with: reposRequest(org: org))
     }
     
-    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], Error> {
+    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError> {
         return run(with: membersRequest(org: org))
     }
 }
@@ -67,7 +67,7 @@ fileprivate extension SampleAPI_I {
 // MARK: - Private
 
 private extension SampleAPI_I {
-    func run<T: Decodable>(with request: URLRequest) -> AnyPublisher<T, Error> {
+    func run<T: Decodable>(with request: URLRequest) -> AnyPublisher<T, APIError> {
         return Self.Constants.agent.run(request).map(\.value).eraseToAnyPublisher()
     }
 }
