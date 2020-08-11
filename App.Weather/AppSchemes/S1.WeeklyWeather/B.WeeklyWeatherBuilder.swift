@@ -11,7 +11,8 @@ public struct WeeklyWeatherBuilder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
         let fetcher: APIProtocol = APIKeys.get(key: "OpenWeather") != nil ?  Fetcher() : FetcherMock()
-        let viewModel  = WeeklyWeatherViewModel(weatherFetcher: fetcher)
+        let repository: RepositoryProtocol = Repository()
+        let viewModel  = WeeklyWeatherViewModel(weatherFetcher: fetcher, weatherRepository: repository)
         return WeeklyWeatherView(viewModel: viewModel)
     }
 }

@@ -17,7 +17,7 @@ import Extensions
 
         // The properly delegate @Published modifier makes it possible to observe
         // the city property. You’ll see in a moment how to leverage this.
-        @Published var city: String = AppDefaultsRepository.shared.lastCity
+        @Published var city: String = ""
         // You’ll keep the View’s data source in the ViewModel. This is in contrast
         // to what you might be used to doing in MVC. Because the property is marked @Published,
         // the compiler automatically synthesizes a publisher for it. SwiftUI subscribes to
@@ -25,29 +25,36 @@ import Extensions
         @Published var dataSource: [VM.DailyWeatherRowViewModel] = []
 
         private let weatherFetcher: APIProtocol
+        private var weatherRepository: RepositoryProtocol
 
         // Think of disposables as a collection of references to requests.
         // Without keeping these references, the network requests you’ll make won’t be
         // kept alive, preventing you from getting responses from the server.
         private var disposables = Set<AnyCancellable>()
 
-        public init(weatherFetcher: APIProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
+        public init(weatherFetcher: APIProtocol, weatherRepository: RepositoryProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
             self.weatherFetcher = weatherFetcher
+            self.weatherRepository = weatherRepository
 
-            // Option 1
-            if true {
-                _ = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main).sink(receiveValue: fetchWeather(forCity:)).store(in: &disposables)
-            } else {
-                // Option 2
-                _ = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main).sink(receiveValue: { (some) in
-                    print(some)
-                }).store(in: &disposables)
-            }
+            let observer = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+
+            // 1 - call fetchWeather
+            _ = observer.sink(receiveValue: fetchWeather(forCity:)).store(in: &disposables)
+
+            // 2 - Update AppDefaultsRepository.shared.lastCity on change
+            _ = observer.sink(receiveValue: { [weak self] (some) in
+                self?.weatherRepository.lastCity = some
+            }).store(in: &disposables)
+
+            // After the observers, so that when we change the value of [city] the app will react
+            // and refresh
+            self.city = weatherRepository.lastCity
+
         }
 
         public func fetchWeather(forCity city: String) {
 
-            AppDefaultsRepository.shared.lastCity = city
+            print("Will fetch for [\(city)]")
 
             // Start by making a new request to fetch the information from the OpenWeatherMap API.
             // Pass the city name as the argument.
@@ -94,6 +101,7 @@ import Extensions
 
 extension WeeklyWeatherViewModel {
     var currentWeatherView: some View {
-        return WeeklyWeatherBuilder.buildView()
+        Text("123")
+//        return WeeklyWeatherBuilder.buildView()
     }
 }

@@ -52,7 +52,9 @@
 		D7611BC924E1F7A800B53E61 /* DevTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7611BC224E1F7A800B53E61 /* DevTools.framework */; };
 		D7611BCA24E1F7A800B53E61 /* DevTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7611BC224E1F7A800B53E61 /* DevTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7611BCE24E1F7CD00B53E61 /* AppUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */; };
-		D7611BD424E1F97600B53E61 /* AppDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD324E1F97600B53E61 /* AppDefaultsRepository.swift */; };
+		D7611BD424E1F97600B53E61 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD324E1F97600B53E61 /* Repository.swift */; };
+		D7611BD824E2D1DF00B53E61 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD724E2D1DF00B53E61 /* RepositoryProtocol.swift */; };
+		D7611BDA24E2D24000B53E61 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */; };
 		D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */; };
 		D769898624D7252E005F851F /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D769898424D7252E005F851F /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D769898924D7252E005F851F /* Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D769898224D7252E005F851F /* Extensions.framework */; };
@@ -390,7 +392,10 @@
 		D7611BC424E1F7A800B53E61 /* DevTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevTools.h; sourceTree = "<group>"; };
 		D7611BC524E1F7A800B53E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaults.swift; sourceTree = "<group>"; };
-		D7611BD324E1F97600B53E61 /* AppDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaultsRepository.swift; sourceTree = "<group>"; };
+		D7611BD324E1F97600B53E61 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D7611BD524E296C900B53E61 /* Clean.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Clean.README.md; sourceTree = "<group>"; };
+		D7611BD724E2D1DF00B53E61 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		D769897A24D5FEEA005F851F /* VisualDocs_Caixa.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualDocs_Caixa.JPG; sourceTree = "<group>"; };
 		D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Caixa.swift; sourceTree = "<group>"; };
 		D769898224D7252E005F851F /* Extensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -769,6 +774,7 @@
 			isa = PBXGroup;
 			children = (
 				D7F1433624D9F79E00B910A7 /* MVVM.README.md */,
+				D7611BD524E296C900B53E61 /* Clean.README.md */,
 				D76989E624D7F890005F851F /* CodeIndex.swift */,
 				D769897924D5FED8005F851F /* Recreating */,
 				D755B15924D5E87A00C6215C /* Components */,
@@ -831,6 +837,23 @@
 				D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */,
 			);
 			path = DevTools;
+			sourceTree = "<group>";
+		};
+		D7611BDB24E2D3F300B53E61 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D7611BD324E1F97600B53E61 /* Repository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D7611BDC24E2D40E00B53E61 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */,
+				D7F142E724D95EAD00B910A7 /* APIProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		D769897924D5FED8005F851F /* Recreating */ = {
@@ -970,6 +993,7 @@
 			isa = PBXGroup;
 			children = (
 				D79B2EC124DDA49A009B84A4 /* APIProtocol.swift */,
+				D7611BD724E2D1DF00B53E61 /* RepositoryProtocol.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1072,21 +1096,22 @@
 		D7F142DE24D95EAD00B910A7 /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
-				D7F142DF24D95EAD00B910A7 /* Fetchers|Repositories */,
+				D7611BDC24E2D40E00B53E61 /* Protocols */,
+				D7611BDB24E2D3F300B53E61 /* Repositories */,
+				D7F142DF24D95EAD00B910A7 /* Fetchers */,
 				D7F142E524D95EAD00B910A7 /* API */,
 			);
 			path = AppCore;
 			sourceTree = "<group>";
 		};
-		D7F142DF24D95EAD00B910A7 /* Fetchers|Repositories */ = {
+		D7F142DF24D95EAD00B910A7 /* Fetchers */ = {
 			isa = PBXGroup;
 			children = (
 				D7F142E024D95EAD00B910A7 /* Entities */,
 				D7F142E424D95EAD00B910A7 /* Fetcher.swift */,
 				D7B9969D24DB25C7000DAFD2 /* FetcherMock.swift */,
-				D7611BD324E1F97600B53E61 /* AppDefaultsRepository.swift */,
 			);
-			path = "Fetchers|Repositories";
+			path = Fetchers;
 			sourceTree = "<group>";
 		};
 		D7F142E024D95EAD00B910A7 /* Entities */ = {
@@ -1102,7 +1127,6 @@
 		D7F142E524D95EAD00B910A7 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D7F142E724D95EAD00B910A7 /* APIProtocol.swift */,
 				D7F142E624D95EAD00B910A7 /* API.swift */,
 			);
 			path = API;
@@ -1866,6 +1890,7 @@
 				D7A7184B24D8BC2A00EC53FB /* V.DashboardView.swift in Sources */,
 				D751736A24DEA3A5004822B2 /* VM.DayDetailsViewModel.swift in Sources */,
 				D751736C24DEA3DD004822B2 /* B.DayDetailsView.swift in Sources */,
+				D7611BD824E2D1DF00B53E61 /* RepositoryProtocol.swift in Sources */,
 				D79B2EC024DDA44F009B84A4 /* Fetcher.swift in Sources */,
 				D751736824DEA18E004822B2 /* B.DashboardViewBuilder.swift in Sources */,
 				D751736124DDBC79004822B2 /* E.HourlyErrorEntity.swift in Sources */,
@@ -1891,7 +1916,7 @@
 				D7B9969F24DB25C7000DAFD2 /* FetcherMock.swift in Sources */,
 				D7F1432124D95EF300B910A7 /* typelias.swift in Sources */,
 				D7F1431B24D95EAD00B910A7 /* VM.WeeklyWeatherViewModel.swift in Sources */,
-				D7611BD424E1F97600B53E61 /* AppDefaultsRepository.swift in Sources */,
+				D7611BD424E1F97600B53E61 /* Repository.swift in Sources */,
 				D7F1431A24D95EAD00B910A7 /* B.WeeklyWeatherBuilder.swift in Sources */,
 				D7F1431524D95EAD00B910A7 /* VM.CurrentWeatherRowViewModel.swift in Sources */,
 				D7F1431324D95EAD00B910A7 /* V.DailyWeatherRowView.swift in Sources */,
@@ -1902,6 +1927,7 @@
 				D7F1431424D95EAD00B910A7 /* VM.DailyWeatherRowViewModel.swift in Sources */,
 				D7F1431D24D95EAD00B910A7 /* VM.CurrentWeatherViewModel.swift in Sources */,
 				D7F1431724D95EAD00B910A7 /* V.CurrentWeatherRowView.swift in Sources */,
+				D7611BDA24E2D24000B53E61 /* RepositoryProtocol.swift in Sources */,
 				D7F1430724D95EAD00B910A7 /* E.WeatherErrorEntity.swift in Sources */,
 				D7F1430F24D95EAD00B910A7 /* Formatters.swift in Sources */,
 				D7F1431F24D95EAD00B910A7 /* V.CurrentWeatherView.swift in Sources */,
