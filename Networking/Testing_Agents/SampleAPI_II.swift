@@ -6,15 +6,6 @@
 import Foundation
 import Combine
 
-// MARK: - Protocol
-
-public protocol SampleAPI_II_Protocol {
-    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
-    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError>
-    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
-    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError>
-}
-
 // MARK: - Class & Constants
 
 public class SampleAPI_II {
@@ -27,7 +18,7 @@ public class SampleAPI_II {
 
 // MARK: - Protocol implementation
 
-extension SimpleNetworkAgent_B: SampleAPI_II_Protocol {
+extension SimpleNetworkAgent_B: SampleAPI_Protocol {
     public func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
         return run(with: SampleAPI_II.repos(username: username), dumpResponse: true)
     }

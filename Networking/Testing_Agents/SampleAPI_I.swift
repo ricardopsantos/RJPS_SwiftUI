@@ -8,27 +8,20 @@ import Combine
 
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
 
-// MARK: - Protocol
-
-public protocol SampleAPI_I_Protocol {
-    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
-    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError>
-    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
-    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError>
-}
-
 // MARK: - Class & Constants
 
 class SampleAPI_I {
     public struct Constants {
         static let agent = SimpleNetworkAgent_A()
-        static let base = URL(string: "https://api.github.com")!
+        static let scheme = "https"
+        static let host = "api.github.com"
+        static let base = URL(string: "\(scheme)://\(host)")!
     }
 }
 
 // MARK: - Protocol implementation
 
-extension SampleAPI_I: SampleAPI_I_Protocol {
+extension SampleAPI_I: SampleAPI_Protocol {
 
     func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
         return run(with: reposRequest(org: username))
