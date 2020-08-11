@@ -13,14 +13,8 @@ public class SimpleNetworkAgent_B {
     }
 }
 
-extension SimpleNetworkAgent_B: APIProtocol {
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<CurrentWeatherForecastEntity, APIErrorEntity> {
-        return forecast(with: API.makeWeeklyForecastComponents(withCity: city))
-    }
-}
-
-fileprivate extension SimpleNetworkAgent_B {
-     func forecast<T>(with components: URLComponents) -> AnyPublisher<T, APIErrorEntity> where T: Decodable {
+extension SimpleNetworkAgent_B {
+     func run<T>(with components: URLComponents) -> AnyPublisher<T, APIErrorEntity> where T: Decodable {
         // Try to create an instance of URL from the URLComponents. If this fails, return an error
         // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.
         guard let url = components.url else {

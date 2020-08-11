@@ -1,43 +1,73 @@
+//
+//  Created by Ricardo Santos on 11/08/2020.
+//  Copyright © 2020 Ricardo P Santos. All rights reserved.
+//
+
 import Foundation
 import Combine
 
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
 
-/*
- The first endpoint that we implement is list user repositories:
+// MARK: - Protocol
 
- 1 - Create a URLRequest instance, which describes the request. It doesn’t need any additional set up, since the HTTP method defaults to GET.
- 2 - Agent executes the request and passes forward the repositories, skipping the response object. We skip response code validation to focus on the happy path.
-*/
-
-enum SampleAPI_I {
-    static let agent = SimpleNetworkAgent_A()
-    static let base = URL(string: "https://api.github.com")!
+public protocol SampleAPI_I_Protocol {
+    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error>
+    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], Error> 
+    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error>
+    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], Error>
 }
 
-extension SampleAPI_I {
+// MARK: - Class & Constants
 
-    // 1
-    static func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error> {
-        return run(URLRequest(url: base.appendingPathComponent("users/\(username)/repos")))
-    }
-
-    // 2
-    static func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], Error> {
-        return run(URLRequest(url: base.appendingPathComponent("repos/\(owner)/\(repo)/issues")))
-    }
-    
-    static func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error> {
-        return run(URLRequest(url: base.appendingPathComponent("orgs/\(org)/repos")))
-    }
-    
-    static func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], Error> {
-        return run(URLRequest(url: base.appendingPathComponent("orgs/\(org)/members")))
+class SampleAPI_I {
+    public struct Constants {
+        static let agent = SimpleNetworkAgent_A()
+        static let base = URL(string: "https://api.github.com")!
     }
 }
 
-extension SampleAPI_I {
-    static func run<T: Decodable>(_ request: URLRequest) -> AnyPublisher<T, Error> {
-        return agent.run(request).map(\.value).eraseToAnyPublisher()
+// MARK: - Protocol implementation
+
+extension SampleAPI_I: SampleAPI_I_Protocol {
+
+    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error> {
+        return run(with: reposRequest(org: username))
+    }
+
+    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], Error> {
+        return run(with: issuesRequest(repo: repo, owner: owner))
+    }
+    
+    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], Error> {
+        return run(with: reposRequest(org: org))
+    }
+    
+    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], Error> {
+        return run(with: membersRequest(org: org))
+    }
+}
+
+// MARK: - Requestables
+
+fileprivate extension SampleAPI_I {
+    func reposRequest(username: String) -> URLRequest {
+        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("users/\(username)/repos"))
+    }
+    func issuesRequest(repo: String, owner: String) -> URLRequest {
+        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("repos/\(owner)/\(repo)/issues"))
+    }
+    func reposRequest(org: String) -> URLRequest {
+        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("orgs/\(org)/repos"))
+    }
+    func membersRequest(org: String) -> URLRequest {
+        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("orgs/\(org)/members"))
+    }
+}
+
+// MARK: - Private
+
+private extension SampleAPI_I {
+    func run<T: Decodable>(with request: URLRequest) -> AnyPublisher<T, Error> {
+        return Self.Constants.agent.run(request).map(\.value).eraseToAnyPublisher()
     }
 }

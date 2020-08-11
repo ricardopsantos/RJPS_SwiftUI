@@ -53,10 +53,9 @@
 		D7611BDD24E318F500B53E61 /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */; };
 		D7611BE024E3233600B53E61 /* CacheLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BDF24E3233600B53E61 /* CacheLive.swift */; };
 		D7611BEF24E32C2000B53E61 /* GithubAPIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BEE24E32C2000B53E61 /* GithubAPIResponseModel.swift */; };
-		D7611BF024E32D2800B53E61 /* E.CurrentWeatherForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE424E3284A00B53E61 /* E.CurrentWeatherForecastEntity.swift */; };
-		D7611BF124E32D4A00B53E61 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE324E3284A00B53E61 /* API.swift */; };
-		D7611BF224E32D5200B53E61 /* E.WeatherErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE624E3284A00B53E61 /* E.WeatherErrorEntity.swift */; };
-		D7611BF324E32E0B00B53E61 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE524E3284A00B53E61 /* Fetcher.swift */; };
+		D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */; };
+		D7611BF724E3314D00B53E61 /* SampleAPI_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF624E3314D00B53E61 /* SampleAPI_II.swift */; };
+		D7611BF924E33AAA00B53E61 /* APIErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF824E33AAA00B53E61 /* APIErrorEntity.swift */; };
 		D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */; };
 		D769898624D7252E005F851F /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D769898424D7252E005F851F /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D769898924D7252E005F851F /* Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D769898224D7252E005F851F /* Extensions.framework */; };
@@ -394,11 +393,10 @@
 		D7611BD724E2D1DF00B53E61 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		D7611BDF24E3233600B53E61 /* CacheLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheLive.swift; sourceTree = "<group>"; };
-		D7611BE324E3284A00B53E61 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = SimpleNetworkAgent_2/API.swift; sourceTree = "<group>"; };
-		D7611BE424E3284A00B53E61 /* E.CurrentWeatherForecastEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = E.CurrentWeatherForecastEntity.swift; path = ../SimpleNetworkAgent_2/E.CurrentWeatherForecastEntity.swift; sourceTree = "<group>"; };
-		D7611BE524E3284A00B53E61 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
-		D7611BE624E3284A00B53E61 /* E.WeatherErrorEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = E.WeatherErrorEntity.swift; path = ../SimpleNetworkAgent_2/E.WeatherErrorEntity.swift; sourceTree = "<group>"; };
+		D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_B.swift; sourceTree = "<group>"; };
 		D7611BEE24E32C2000B53E61 /* GithubAPIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIResponseModel.swift; sourceTree = "<group>"; };
+		D7611BF624E3314D00B53E61 /* SampleAPI_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI_II.swift; sourceTree = "<group>"; };
+		D7611BF824E33AAA00B53E61 /* APIErrorEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrorEntity.swift; sourceTree = "<group>"; };
 		D769897A24D5FEEA005F851F /* VisualDocs_Caixa.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualDocs_Caixa.JPG; sourceTree = "<group>"; };
 		D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Caixa.swift; sourceTree = "<group>"; };
 		D769898224D7252E005F851F /* Extensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -844,19 +842,19 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
-		D7611BE224E327F800B53E61 /* SimpleNetworkAgent_2 */ = {
+		D7611BE224E327F800B53E61 /* SimpleNetworkAgents */ = {
 			isa = PBXGroup;
 			children = (
-				D7611BE524E3284A00B53E61 /* Fetcher.swift */,
+				D7AA23102497F68F00D24169 /* SimpleNetworkAgent_A.swift */,
+				D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */,
 			);
-			path = SimpleNetworkAgent_2;
+			path = SimpleNetworkAgents;
 			sourceTree = "<group>";
 		};
 		D7611BED24E32C1300B53E61 /* Enteties */ = {
 			isa = PBXGroup;
 			children = (
-				D7611BE624E3284A00B53E61 /* E.WeatherErrorEntity.swift */,
-				D7611BE424E3284A00B53E61 /* E.CurrentWeatherForecastEntity.swift */,
+				D7611BF824E33AAA00B53E61 /* APIErrorEntity.swift */,
 				D7611BEE24E32C2000B53E61 /* GithubAPIResponseModel.swift */,
 			);
 			path = Enteties;
@@ -904,11 +902,10 @@
 			children = (
 				D78FAC3924D41C460069809D /* README.md */,
 				D7611BED24E32C1300B53E61 /* Enteties */,
-				D7611BE224E327F800B53E61 /* SimpleNetworkAgent_2 */,
-				D7AA230F2497F68400D24169 /* SimpleNetworkAgent_1 */,
+				D7611BE224E327F800B53E61 /* SimpleNetworkAgents */,
 				D7AA23142497F7DD00D24169 /* NetworkAgentTest.swift */,
 				D7AA23132497F7DD00D24169 /* SampleAPI_I.swift */,
-				D7611BE324E3284A00B53E61 /* API.swift */,
+				D7611BF624E3314D00B53E61 /* SampleAPI_II.swift */,
 				D76989A724D72694005F851F /* Networking.h */,
 				D76989A824D72694005F851F /* Info.plist */,
 			);
@@ -1019,14 +1016,6 @@
 				D7A7184324D8BBFB00EC53FB /* Info.plist */,
 			);
 			path = App.HourlyChallenge;
-			sourceTree = "<group>";
-		};
-		D7AA230F2497F68400D24169 /* SimpleNetworkAgent_1 */ = {
-			isa = PBXGroup;
-			children = (
-				D7AA23102497F68F00D24169 /* SimpleNetworkAgent_A.swift */,
-			);
-			path = SimpleNetworkAgent_1;
 			sourceTree = "<group>";
 		};
 		D7B560232493AA4100E9EC7D /* ExternalSources.Recreating */ = {
@@ -1858,13 +1847,12 @@
 			files = (
 				D76989CC24D72ABB005F851F /* typelias.swift in Sources */,
 				D7611BEF24E32C2000B53E61 /* GithubAPIResponseModel.swift in Sources */,
+				D7611BF924E33AAA00B53E61 /* APIErrorEntity.swift in Sources */,
 				D76989B124D726D0005F851F /* SimpleNetworkAgent_A.swift in Sources */,
 				D76989B224D726D3005F851F /* SampleAPI_I.swift in Sources */,
 				D76989B324D726D6005F851F /* NetworkAgentTest.swift in Sources */,
-				D7611BF024E32D2800B53E61 /* E.CurrentWeatherForecastEntity.swift in Sources */,
-				D7611BF124E32D4A00B53E61 /* API.swift in Sources */,
-				D7611BF224E32D5200B53E61 /* E.WeatherErrorEntity.swift in Sources */,
-				D7611BF324E32E0B00B53E61 /* Fetcher.swift in Sources */,
+				D7611BF724E3314D00B53E61 /* SampleAPI_II.swift in Sources */,
+				D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
