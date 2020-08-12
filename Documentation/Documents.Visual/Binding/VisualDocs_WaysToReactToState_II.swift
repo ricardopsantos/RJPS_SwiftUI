@@ -116,7 +116,7 @@ class PasswordCheckerViewModel2: ObservableObject {
             .eraseToAnyPublisher()
     }
 
-    private var usernameChangedPublisher: AnyPublisher<String, Never> {
+    private var inputChangedPublisher: AnyPublisher<String, Never> {
         $input
             .debounce(for: 0.8, scheduler: RunLoop.main)
             .removeDuplicates()
@@ -132,7 +132,7 @@ class PasswordCheckerViewModel2: ObservableObject {
         .assign(to: \.output1, on: self)
         .store(in: &disposables)
 
-        usernameChangedPublisher
+        inputChangedPublisher
             .receive(on: RunLoop.main)
             .map { some in return String(some.reversed())
         }

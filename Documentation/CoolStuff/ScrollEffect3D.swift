@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 
-struct ColorList: View {
+struct ScrollEffect3D: View {
     var colors: [Color]
 
     var body: some View {
@@ -29,8 +29,9 @@ struct ColorList: View {
     }
 }
 
-struct ColorList_Preview: PreviewProvider {
+struct ScrollEffect3D_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        ColorList(colors: [Color.pink])
+        let colors = [Color.pink, Color.red, Color.blue, Color.orange]
+        return ScrollEffect3D(colors: colors)
     }
 }

@@ -6,7 +6,7 @@
 import Foundation
 import SwiftUI
 
-struct Treads_Screen: View {
+struct InstagramMessages: View {
     var body: some View {
         VStack(spacing: 24) {
             HStack {
@@ -64,8 +64,8 @@ struct MessageCellUnread: View {
 
 // MARK: - Preview
 
-struct Treads_PreviewProvider: PreviewProvider {
+struct InstagramMessages_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        Treads_Screen()
+        InstagramMessages()
     }
 }

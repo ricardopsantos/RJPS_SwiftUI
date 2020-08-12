@@ -8,8 +8,8 @@ import UIKit
 import SwiftUI
 import Combine
 
-struct BasicApp_SimpleMVVM: View {
-    @EnvironmentObject var viewModel: BasicApp_SimpleMVVM_ViewModel
+struct SimpleMVVM: View {
+    @EnvironmentObject var viewModel: SimpleMVVM_ViewModel
     var body: some View {
         return VStack {
             Text(String(self.viewModel.count))
@@ -21,19 +21,19 @@ struct BasicApp_SimpleMVVM: View {
     }
 }
 
-struct BasicApp_SimpleMVVM_Model {
+struct SimpleMVVM_Model {
     public static func incrementCount(currentCount: Int) -> Int { return currentCount + 1 }
     public static func decrementCount(currentCount: Int) -> Int { currentCount - 1 }
 }
 
-class BasicApp_SimpleMVVM_ViewModel: ObservableObject {
+class SimpleMVVM_ViewModel: ObservableObject {
     @Published var count = 0
-    public func countUp() { count = BasicApp_SimpleMVVM_Model.incrementCount(currentCount: count) }
-    public func countDown() { count = BasicApp_SimpleMVVM_Model.decrementCount(currentCount: count) }
+    public func countUp() { count = SimpleMVVM_Model.incrementCount(currentCount: count) }
+    public func countDown() { count = SimpleMVVM_Model.decrementCount(currentCount: count) }
 }
 
-struct BasicApp_SimpleMVVM_Preview: PreviewProvider {
+struct SimpleMVVM_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        BasicApp_SimpleMVVM().environmentObject(BasicApp_SimpleMVVM_ViewModel())
+        SimpleMVVM().environmentObject(SimpleMVVM_ViewModel())
     }
 }

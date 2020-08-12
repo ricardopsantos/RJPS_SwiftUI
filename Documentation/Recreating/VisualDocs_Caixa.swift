@@ -49,20 +49,17 @@ struct VisualDocs_Caixa_II_TextInputField: View {
             ZStack {
                 ZStack {
                     TextField(title, text: $value)
-                        //.background(Color.white)
+                        .border(Color.clear)
                         .padding(.horizontal, size_1 / 2)
                         .padding(.vertical, size_1 / 3)
-                        .border(Color.secondary, width: 2)
-                        .cornerRadius(8)
                         .frame(width: boxWidth, height: size_1)
-                }
+                }.addCorner(color: Color(colorPrimary), lineWidth: 3, padding: false)
                 ZStack {
                     HStack {
                         Text("  \(title)  ")
                             .textColor(Color(UIColor.darkGray))
                             .background(Color.white)
                             .offset(x: 0, y: -size_1/2).padding(.horizontal, size_1 / 1.5)
-
                         Spacer()
                     }
                 }
@@ -207,7 +204,6 @@ func button(systemName: String, name: String) -> some View {
         Text(name).bold()
     }
     .padding(.bottom, 22)
-    //.debugWithDashedStroke(color: UIColor.orange)
 }
 
 struct VisualDocs_Caixa_III: View {
@@ -230,7 +226,6 @@ struct VisualDocs_Caixa_III: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: topPartHeight)
-        //.debugWithDashedStroke(color: UIColor.red)
     }
 
     var viewMiddle: some View {
@@ -254,7 +249,6 @@ struct VisualDocs_Caixa_III: View {
         .padding(.trailing, defaultPadding)
         .padding(.leading, defaultPadding)
         .padding(.top, topPartHeight * 0.5)
-        //.debugWithDashedStroke(color: UIColor.blue)
     }
 
     var viewBottom: some View {

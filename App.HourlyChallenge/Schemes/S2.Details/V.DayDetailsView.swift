@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Preview
 
-struct BasicApps_DayDetailsView: PreviewProvider {
+struct DayDetailsView_PreviewProvider: PreviewProvider {
     static var previews: some View {
         DayDetailsViewBuilder.buildView(1, 0)
     }

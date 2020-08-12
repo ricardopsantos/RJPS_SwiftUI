@@ -62,7 +62,7 @@ struct RepositoryRow: View {
     }
 }
 
-struct BasicApp_InfiniteScrollView_Screen: View {
+struct InfiniteScrollView_Screen: View {
 
     // The list accepts an array of repositories to show, a callback that notifies when the list is
     // scrolled to the bottom, and an isLoading flag, that indicates whether a loading animation needs to be shown.
@@ -91,10 +91,10 @@ struct BasicApp_InfiniteScrollView_Screen: View {
     private var loadingIndicator: some View { Text("Loading") }
 }
 
-struct BasicApp_InfiniteScrollView: View {
+struct InfiniteScrollView: View {
     @ObservedObject var viewModel: RepositoriesViewModel
     var body: some View {
-        BasicApp_InfiniteScrollView_Screen(repos: viewModel.state.repos, isLoading: viewModel.state.canLoadNextPage, onScrolledAtBottom: viewModel.fetchNextPageIfPossible)
+        InfiniteScrollView_Screen(repos: viewModel.state.repos, isLoading: viewModel.state.canLoadNextPage, onScrolledAtBottom: viewModel.fetchNextPageIfPossible)
         .onAppear(perform: viewModel.fetchNextPageIfPossible)
     }
     
@@ -139,8 +139,8 @@ class RepositoriesViewModel: ObservableObject {
     }
 }
 
-struct BasicApp_InfiniteScrollView_PreviewProvider: PreviewProvider {
+struct InfiniteScrollView_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        BasicApp_InfiniteScrollView(viewModel: RepositoriesViewModel())
+        InfiniteScrollView(viewModel: RepositoriesViewModel())
     }
 }

@@ -10,6 +10,7 @@ import Combine
 import App_Weather
 import App_HourlyChallenge
 import Networking
+import Extensions
 
 enum TargetApp {
     case sample
@@ -24,9 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        SampleAPI_Testing.test()
+        //SampleAPI_Testing.test()
 
-        let targetApp: TargetApp = .sample
+        //self.window?.rootViewController = UIHostingController(rootView: ExtensionsView())
+
+        let targetApp: TargetApp = .weather
         switch targetApp {
         case .sample:
             self.window?.rootViewController = UIHostingController(rootView: TabView_View())
