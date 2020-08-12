@@ -9,31 +9,31 @@ import SwiftUI
 import Combine
 
 struct BasicApp_SimpleMVVM: View {
-    @EnvironmentObject var counterViewModel: CounterViewModel
+    @EnvironmentObject var viewModel: BasicApp_SimpleMVVM_ViewModel
     var body: some View {
         return VStack {
-            Text(String(self.counterViewModel.count))
+            Text(String(self.viewModel.count))
             HStack {
-                Button("+", action: { self.counterViewModel.countUp() })
-                Button("-", action: { self.counterViewModel.countDown() })
+                Button("+", action: { self.viewModel.countUp() })
+                Button("-", action: { self.viewModel.countDown() })
             }
         }
     }
 }
 
-struct CounterModel {
+struct BasicApp_SimpleMVVM_Model {
     public static func incrementCount(currentCount: Int) -> Int { return currentCount + 1 }
     public static func decrementCount(currentCount: Int) -> Int { currentCount - 1 }
 }
 
-class CounterViewModel: ObservableObject {
+class BasicApp_SimpleMVVM_ViewModel: ObservableObject {
     @Published var count = 0
-    public func countUp() { count = CounterModel.incrementCount(currentCount: count) }
-    public func countDown() { count = CounterModel.decrementCount(currentCount: count) }
+    public func countUp() { count = BasicApp_SimpleMVVM_Model.incrementCount(currentCount: count) }
+    public func countDown() { count = BasicApp_SimpleMVVM_Model.decrementCount(currentCount: count) }
 }
 
 struct BasicApp_SimpleMVVM_Preview: PreviewProvider {
     static var previews: some View {
-        BasicApp_SimpleMVVM().environmentObject(CounterViewModel())
+        BasicApp_SimpleMVVM().environmentObject(BasicApp_SimpleMVVM_ViewModel())
     }
 }

@@ -88,7 +88,7 @@ struct SendEMailViewControllerRepresentable_Sample: View {
 // Naming convention : ControllerRepresentable_XXX_Preview
 //
 
-struct ControllerRepresentable_MailView_Preview: PreviewProvider {
+struct ControllerRepresentable_MailView_PreviewProvider: PreviewProvider {
     static var previews: some View {
         SendEMailViewControllerRepresentable_Sample()
     }

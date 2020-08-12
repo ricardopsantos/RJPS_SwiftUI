@@ -13,35 +13,37 @@ import Combine
 // https://www.vadimbulavin.com/infinite-list-scroll-swiftui-combine/
 // Read also : https://www.vadimbulavin.com/modern-mvvm-ios-app-architecture-with-combine-and-swiftui/
 
-enum WebAPI {
-    static let pageSize = 10
+struct InfiniteScrollView_API {
+    enum WebAPI {
+        static let pageSize = 10
 
-    // 1 : Create a publisher that wraps a URL session data task.
-    // 2 : Decode the response as GithubSearchResult. This is an intermediate type created for the purpose of parsing JSON.
-    // 3 : Receive response on the main thread.
-    static func searchRepos(query: String, page: Int) -> AnyPublisher<[Repository], Error> {
-        let url = URL(string: "https://api.github.com/search/repositories?q=\(query)&sort=stars&per_page=\(Self.pageSize)&page=\(page)")!
-        return URLSession.shared
-            .dataTaskPublisher(for: url) // 1
-            .tryMap { try JSONDecoder().decode(WebAPIGenericResultDto<Repository>.self, from: $0.data).items } // 2
-            .receive(on: DispatchQueue.main) // 3
-            .eraseToAnyPublisher()
+        // 1 : Create a publisher that wraps a URL session data task.
+        // 2 : Decode the response as GithubSearchResult. This is an intermediate type created for the purpose of parsing JSON.
+        // 3 : Receive response on the main thread.
+        static func searchRepos(query: String, page: Int) -> AnyPublisher<[Repository], Error> {
+            let url = URL(string: "https://api.github.com/search/repositories?q=\(query)&sort=stars&per_page=\(Self.pageSize)&page=\(page)")!
+            return URLSession.shared
+                .dataTaskPublisher(for: url) // 1
+                .tryMap { try JSONDecoder().decode(WebAPIGenericResultDto<InfiniteScrollView_API.Repository>.self, from: $0.data).items } // 2
+                .receive(on: DispatchQueue.main) // 3
+                .eraseToAnyPublisher()
+        }
     }
-}
 
-//
-// The models are implemented as follows:
-//
+    //
+    // The models are implemented as follows:
+    //
 
-struct WebAPIGenericResultDto<T: Codable>: Codable {
-    let items: [T]
-}
+    struct WebAPIGenericResultDto<T: Codable>: Codable {
+        let items: [T]
+    }
 
-struct Repository: Codable, Identifiable, Equatable {
-    let id: Int
-    let name: String
-    let description: String?
-    let stargazers_count: Int
+    struct Repository: Codable, Identifiable, Equatable {
+        let id: Int
+        let name: String
+        let description: String?
+        let stargazers_count: Int
+    }
 }
 
 //
@@ -49,7 +51,7 @@ struct Repository: Codable, Identifiable, Equatable {
 //
 
 struct RepositoryRow: View {
-    let repo: Repository
+    let repo: InfiniteScrollView_API.Repository
     var body: some View {
         VStack {
             Text(repo.name).font(.title)
@@ -64,7 +66,7 @@ struct BasicApp_InfiniteScrollView_Screen: View {
 
     // The list accepts an array of repositories to show, a callback that notifies when the list is
     // scrolled to the bottom, and an isLoading flag, that indicates whether a loading animation needs to be shown.
-    let repos: [Repository]
+    let repos: [InfiniteScrollView_API.Repository]
     let isLoading: Bool
     let onScrolledAtBottom: () -> Void
 
@@ -95,6 +97,7 @@ struct BasicApp_InfiniteScrollView: View {
         BasicApp_InfiniteScrollView_Screen(repos: viewModel.state.repos, isLoading: viewModel.state.canLoadNextPage, onScrolledAtBottom: viewModel.fetchNextPageIfPossible)
         .onAppear(perform: viewModel.fetchNextPageIfPossible)
     }
+    
 }
 
 // To support data binding, the view model must conform to the ObservableObject protocol,
@@ -110,14 +113,14 @@ class RepositoriesViewModel: ObservableObject {
     // It checks that the next page is available before requesting it.
     func fetchNextPageIfPossible() {
         guard state.canLoadNextPage else { return }
-        WebAPI.searchRepos(query: query, page: state.page)
+        InfiniteScrollView_API.WebAPI.searchRepos(query: query, page: state.page)
             .sink(receiveCompletion: onReceive, receiveValue: onReceive)
             .store(in: &disposables)
     }
 
     // The state contains all the information to render a view.
     struct State {
-        var repos: [Repository] = []
+        var repos: [InfiniteScrollView_API.Repository] = []
         var page: Int = 1
         var canLoadNextPage = true
     }
@@ -129,10 +132,10 @@ class RepositoriesViewModel: ObservableObject {
         }
     }
 
-    private func onReceive(_ batch: [Repository]) {
+    private func onReceive(_ batch: [InfiniteScrollView_API.Repository]) {
         state.repos += batch
         state.page += 1
-        state.canLoadNextPage = batch.count == WebAPI.pageSize
+        state.canLoadNextPage = batch.count == InfiniteScrollView_API.WebAPI.pageSize
     }
 }
 
