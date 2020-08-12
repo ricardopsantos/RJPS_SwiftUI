@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Class & Constants
 
-class SampleAPI_I {
+class SampleAPI_A {
     public struct Constants {
         static let agent = SimpleNetworkAgent_A()
         static let scheme = "https"
@@ -22,7 +22,7 @@ class SampleAPI_I {
 
 // MARK: - Protocol implementation
 
-extension SampleAPI_I: SampleAPIProtocol {
+extension SampleAPI_A: SampleAPIProtocol {
 
     func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
         return run(with: reposRequest(username: username), dumpResponse: Constants.dumpResponse)
@@ -43,24 +43,24 @@ extension SampleAPI_I: SampleAPIProtocol {
 
 // MARK: - Requestables
 
-fileprivate extension SampleAPI_I {
+private extension SampleAPI_A {
     func reposRequest(username: String) -> URLRequest {
-        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("users/\(username)/repos"))
+        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("users/\(username)/repos"))
     }
     func issuesRequest(repo: String, owner: String) -> URLRequest {
-        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("repos/\(owner)/\(repo)/issues"))
+        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("repos/\(owner)/\(repo)/issues"))
     }
     func reposRequest(org: String) -> URLRequest {
-        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("orgs/\(org)/repos"))
+        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("orgs/\(org)/repos"))
     }
     func membersRequest(org: String) -> URLRequest {
-        URLRequest(url: SampleAPI_I.Constants.base.appendingPathComponent("orgs/\(org)/members"))
+        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("orgs/\(org)/members"))
     }
 }
 
 // MARK: - Private
 
-private extension SampleAPI_I {
+private extension SampleAPI_A {
     func run<T: Decodable>(with request: URLRequest, decoder: JSONDecoder = JSONDecoder(), dumpResponse: Bool) -> AnyPublisher<T, APIError> {
         return Self.Constants.agent.run(request, decoder, dumpResponse).map(\.value).eraseToAnyPublisher()
     }

@@ -8,44 +8,46 @@ import Combine
 
 // MARK: - Class & Constants
 
-public class SampleAPI_II {
+public class SampleAPI_B {
     public struct Constants {
+        static let agent = SimpleNetworkAgent_B()
         static let scheme = "https"
         static let host = "api.github.com"
         static let path = "" // API Version
         static let dumpResponse = false
+        static let decoder = JSONDecoder()
     }
 }
 
 // MARK: - Protocol implementation
 
-extension SimpleNetworkAgent_B: SampleAPIProtocol {
+extension SampleAPI_B: SampleAPIProtocol {
     public func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
-        return run(with: SampleAPI_II.repos(username: username), dumpResponse: SampleAPI_II.Constants.dumpResponse)
+        return Self.Constants.agent.run(SampleAPI_B.repos(username: username), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
     }
 
     public func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
-        return run(with: SampleAPI_II.issues(repo: repo, owner: owner), dumpResponse: SampleAPI_II.Constants.dumpResponse)
+        return Self.Constants.agent.run(SampleAPI_B.issues(repo: repo, owner: owner), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
     }
 
     public func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
-        return run(with: SampleAPI_II.repos(org: org), dumpResponse: SampleAPI_II.Constants.dumpResponse)
+        return Self.Constants.agent.run(SampleAPI_B.repos(org: org), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
     }
 
     public func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError> {
-        return run(with: SampleAPI_II.members(org: org), dumpResponse: SampleAPI_II.Constants.dumpResponse)
+        return Self.Constants.agent.run(SampleAPI_B.members(org: org), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
     }
 
 }
 
 // MARK: - Requestables
 
-private extension SampleAPI_II {
+private extension SampleAPI_B {
      static func repos(username: String) -> URLComponents {
         var components = URLComponents()
-        components.scheme = SampleAPI_II.Constants.scheme
-        components.host   = SampleAPI_II.Constants.host
-        components.path   = SampleAPI_II.Constants.path + "/users/\(username)/repos"
+        components.scheme = SampleAPI_B.Constants.scheme
+        components.host   = SampleAPI_B.Constants.host
+        components.path   = SampleAPI_B.Constants.path + "/users/\(username)/repos"
         components.queryItems = [
         //    URLQueryItem(name: "users", value: "\(username)/repos")
         ]
@@ -54,9 +56,9 @@ private extension SampleAPI_II {
 
      static func issues(repo: String, owner: String) -> URLComponents {
         var components = URLComponents()
-        components.scheme = SampleAPI_II.Constants.scheme
-        components.host   = SampleAPI_II.Constants.host
-        components.path   = SampleAPI_II.Constants.path + "/repos/\(owner)/\(repo)/issues"
+        components.scheme = SampleAPI_B.Constants.scheme
+        components.host   = SampleAPI_B.Constants.host
+        components.path   = SampleAPI_B.Constants.path + "/repos/\(owner)/\(repo)/issues"
         components.queryItems = [
         //    URLQueryItem(name: "users", value: "\(username)/repos")
         ]
@@ -65,9 +67,9 @@ private extension SampleAPI_II {
 
      static func repos(org: String) -> URLComponents {
         var components = URLComponents()
-        components.scheme = SampleAPI_II.Constants.scheme
-        components.host   = SampleAPI_II.Constants.host
-        components.path   = SampleAPI_II.Constants.path + "/orgs/\(org)/repos"
+        components.scheme = SampleAPI_B.Constants.scheme
+        components.host   = SampleAPI_B.Constants.host
+        components.path   = SampleAPI_B.Constants.path + "/orgs/\(org)/repos"
         components.queryItems = [
         //    URLQueryItem(name: "users", value: "\(username)/repos")
         ]
@@ -76,9 +78,9 @@ private extension SampleAPI_II {
 
      static func members(org: String) -> URLComponents {
         var components = URLComponents()
-        components.scheme = SampleAPI_II.Constants.scheme
-        components.host   = SampleAPI_II.Constants.host
-        components.path   = SampleAPI_II.Constants.path + "/orgs/\(org)/members"
+        components.scheme = SampleAPI_B.Constants.scheme
+        components.host   = SampleAPI_B.Constants.host
+        components.path   = SampleAPI_B.Constants.path + "/orgs/\(org)/members"
         components.queryItems = [
         //    URLQueryItem(name: "users", value: "\(username)/repos")
         ]

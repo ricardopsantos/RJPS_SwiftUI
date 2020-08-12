@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        NetworkAgentsTest.test()
+        SampleAPI_Testing.test()
 
         let targetApp: TargetApp = .sample
         switch targetApp {

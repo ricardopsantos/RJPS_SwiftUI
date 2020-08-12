@@ -12,3 +12,20 @@ public protocol SampleAPIProtocol {
     func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError>
     func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError>
 }
+
+public struct APIResponseDto {
+    private init() { }
+    public struct User: Codable {
+        let id: Int
+    }
+
+    public struct Repository: Codable {
+        let id: Int
+        let name: String
+        let description: String?
+    }
+
+    public struct Issue: Codable {
+        let id: Int
+    }
+}

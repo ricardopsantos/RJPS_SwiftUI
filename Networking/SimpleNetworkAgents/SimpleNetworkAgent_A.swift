@@ -19,7 +19,7 @@ import Combine
 
 class SimpleNetworkAgent_A {
     private init() { self.session = .shared }
-    private let session: URLSession
+    let session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
@@ -47,20 +47,10 @@ extension SimpleNetworkAgent_A {
            .mapError { error in
                 print(request)
                 print("\(error)")
+                print("\(error.localizedDescription)")
                 return APIError.network(description: error.localizedDescription)
             }
            .receive(on: DispatchQueue.main) // 6
            .eraseToAnyPublisher()           // 7
     }
-/*
-    private func decode<T>(_ data: Data, _ request: URLRequest, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> where T: Decodable {
-        if dumpResponse {
-            print("request: \(request)\n\(String(decoding: data, as: UTF8.self))")
-        }
-
-        let decoder = JSONDecoder()
-        //decoder.dateDecodingStrategy = .secondsSince1970
-        return Just(data).decode(type: T.self, decoder: decoder).mapError { error in .parsing(description: error.localizedDescription)
-        }.eraseToAnyPublisher()
-    }*/
 }
