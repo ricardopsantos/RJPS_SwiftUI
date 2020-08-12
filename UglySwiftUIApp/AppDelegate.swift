@@ -27,8 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //SampleAPI_Testing.test()
 
-        //self.window?.rootViewController = UIHostingController(rootView: ExtensionsView())
-
         let targetApp: TargetApp = .weather
         switch targetApp {
         case .sample:

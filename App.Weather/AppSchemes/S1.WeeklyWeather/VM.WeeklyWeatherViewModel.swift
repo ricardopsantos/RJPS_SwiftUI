@@ -24,17 +24,17 @@ public class WeeklyWeatherViewModel: ObservableObject {
     // that publisher and redraws the screen when you change the property.
     @Published var dataSource: [VM.DailyWeatherRowViewModel] = []
 
-    private let weatherFetcher: APIProtocol
-    private var weatherRepository: RepositoryProtocol
+    private let fetcher: APIProtocol
+    private var repository: RepositoryProtocol
 
     // Think of disposables as a collection of references to requests.
     // Without keeping these references, the network requests you’ll make won’t be
     // kept alive, preventing you from getting responses from the server.
     private var disposables = Set<AnyCancellable>()
 
-    public init(weatherFetcher: APIProtocol, weatherRepository: RepositoryProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
-        self.weatherFetcher = weatherFetcher
-        self.weatherRepository = weatherRepository
+    public init(fetcher: APIProtocol, repository: RepositoryProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
+        self.fetcher = fetcher
+        self.repository = repository
 
         let observer = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
 
@@ -43,12 +43,12 @@ public class WeeklyWeatherViewModel: ObservableObject {
 
         // 2 - Update AppDefaultsRepository.shared.lastCity on change
         _ = observer.sink(receiveValue: { [weak self] (some) in
-            self?.weatherRepository.lastCity = some
+            self?.repository.lastCity = some
         }).store(in: &disposables)
 
         // After the observers, so that when we change the value of [city] the app will react
         // and refresh
-        self.city = weatherRepository.lastCity
+        self.city = repository.lastCity
     }
 }
 
@@ -59,7 +59,7 @@ private extension WeeklyWeatherViewModel {
         isAnimating = true
         // Start by making a new request to fetch the information from the OpenWeatherMap API.
         // Pass the city name as the argument.
-        weatherFetcher.weeklyWeatherForecast(forCity: city)
+        fetcher.weeklyWeatherForecast(forCity: city)
             .map {
                 // Map the response (WeeklyForecastResponse object) to an array of DailyWeatherRowViewModel
                 // objects. This entity represents a single row in the list. You can check the
@@ -101,6 +101,7 @@ private extension WeeklyWeatherViewModel {
 
 extension WeeklyWeatherViewModel {
     var currentWeatherView: some View {
-        return WeeklyWeatherBuilder.buildView()
+        let viewModel = VM.CurrentWeatherViewModel(city: city, weatherFetcher: fetcher)
+        return CurrentWeatherView(viewModel: viewModel)
     }
 }

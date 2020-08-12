@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct DailyWeatherRow_View: View {
+struct DailyWeatherRowView: View {
     private let viewModel: VM.DailyWeatherRowViewModel
 
     init(viewModel: VM.DailyWeatherRowViewModel) {
@@ -18,7 +18,6 @@ struct DailyWeatherRow_View: View {
                 Text("\(viewModel.day)")
                 Text("\(viewModel.month)")
             }
-
             VStack(alignment: .leading) {
                 Text("\(viewModel.title)").font(.body)
                 Text("\(viewModel.fullDescription)").font(.footnote)

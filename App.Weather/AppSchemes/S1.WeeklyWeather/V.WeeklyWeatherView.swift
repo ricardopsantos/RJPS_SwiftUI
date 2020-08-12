@@ -22,12 +22,31 @@ public struct WeeklyWeatherView: View {
         ZStack {
             NavigationView {
                 List {
-                    searchField
+                    // Search Field
+                    HStack(alignment: .center) {
+                        TextField("e.g. Cupertino", text: $viewModel.city)
+                    }
                     if viewModel.dataSource.isEmpty {
-                        emptySection
+                        // Empty Section
+                        Section {
+                             Text("No results").foregroundColor(.gray)
+                         }
                     } else {
-                        cityHourlyWeatherSection
-                        forecastSection
+                        // City Hourly Weather Section
+                        Section {
+                            NavigationLink(destination: viewModel.currentWeatherView) {
+                                VStack(alignment: .leading) {
+                                    Text(viewModel.city)
+                                    Text("Weather today").font(.caption).foregroundColor(.gray)
+                                }
+                            }
+                        }
+                        // Forecast Section
+                        Section {
+                            ForEach(viewModel.dataSource, id: \.self) { some in
+                                DailyWeatherRowView.init(viewModel: some)
+                            }
+                        }
                     }
                 }
                 .listStyle(GroupedListStyle())
@@ -38,39 +57,14 @@ public struct WeeklyWeatherView: View {
     }
 }
 
-private extension WeeklyWeatherView {
-    var searchField: some View {
-        HStack(alignment: .center) {
-            TextField("e.g. Cupertino", text: $viewModel.city)
-        }
-    }
-
-    var forecastSection: some View {
-        Section {
-            ForEach(viewModel.dataSource, content: DailyWeatherRow_View.init(viewModel:))
-        }
-    }
-
-    var cityHourlyWeatherSection: some View {
-        Section {
-            NavigationLink(destination: viewModel.currentWeatherView) {
-                VStack(alignment: .leading) {
-                    Text(viewModel.city)
-                    Text("Weather today").font(.caption).foregroundColor(.gray)
-                }
-            }
-        }
-    }
-
-    var emptySection: some View {
-        Section {
-            Text("No results").foregroundColor(.gray)
-        }
-    }
-}
-
 // MARK: - Auxiliar components
 
 fileprivate extension WeeklyWeatherView {
 
+}
+
+struct WeeklyWeatherView_PreviewProvider: PreviewProvider {
+    static var previews: some View {
+        WeeklyWeatherBuilder.buildView()
+    }
 }

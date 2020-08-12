@@ -8,19 +8,21 @@ import Combine
 
 public extension VM {
     class CurrentWeatherViewModel: ObservableObject {
+        
         @Published var dataSource: CurrentWeatherRowViewModel?
-
+        @State var isAnimating: Bool = true
         let city: String
-        private let weatherFetcher: APIProtocol
+
+        private let fetcher: APIProtocol
         private var disposables = Set<AnyCancellable>()
 
         init(city: String, weatherFetcher: APIProtocol) {
-            self.weatherFetcher = weatherFetcher
+            self.fetcher = weatherFetcher
             self.city = city
         }
 
         func refresh() {
-            weatherFetcher
+            fetcher
                 .currentWeatherForecast(forCity: city)
                 .map(VM.CurrentWeatherRowViewModel.init)
                 .receive(on: DispatchQueue.main)
