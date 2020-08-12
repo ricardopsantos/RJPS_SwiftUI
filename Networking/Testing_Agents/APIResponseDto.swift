@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct GithubAPIResponseModel {
+public struct APIResponseDto {
     private init() { }
     public struct User: Codable {
         let id: Int

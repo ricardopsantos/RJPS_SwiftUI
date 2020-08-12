@@ -15,28 +15,44 @@ import Combine
  5 - Create the Response<T> object and pass it downstream. It contains the parsed value and the URL response.
  6 - Deliver values on the main thread.
  7 - Erase publisher’s type and return an instance of AnyPublisher.
-
  */
+
 class SimpleNetworkAgent_A {
+    private init() { self.session = .shared }
+    private let session: URLSession
+    public init(session: URLSession = .shared) {
+        self.session = session
+    }
+
     // 1
     struct Response<T: Decodable> {
         let value: T
-        let response: URLResponse
+        let urlResponse: URLResponse
     }
+}
+
+extension SimpleNetworkAgent_A {
 
     // 2
-    func run<T>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<Response<T>, APIError> where T: Decodable {
-        return URLSession.shared
+    func run<T>(_ request: URLRequest, _ decoder: JSONDecoder, _ dumpResponse: Bool) -> AnyPublisher<Response<T>, APIError> where T: Decodable {
+        return session
            .dataTaskPublisher(for: request) // 3
            .tryMap { result -> Response<T> in
+                if dumpResponse {
+                    print("request: \(request)\n\(String(decoding: result.data, as: UTF8.self))")
+                }
                let value = try decoder.decode(T.self, from: result.data) // 4
-               return Response(value: value, response: result.response)  // 5
+               return Response(value: value, urlResponse: result.response)  // 5
            }
-           .mapError { error in .network(description: error.localizedDescription) }
+           .mapError { error in
+                print(request)
+                print("\(error)")
+                return APIError.network(description: error.localizedDescription)
+            }
            .receive(on: DispatchQueue.main) // 6
            .eraseToAnyPublisher()           // 7
     }
-
+/*
     private func decode<T>(_ data: Data, _ request: URLRequest, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> where T: Decodable {
         if dumpResponse {
             print("request: \(request)\n\(String(decoding: data, as: UTF8.self))")
@@ -46,5 +62,5 @@ class SimpleNetworkAgent_A {
         //decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data).decode(type: T.self, decoder: decoder).mapError { error in .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
-    }
+    }*/
 }

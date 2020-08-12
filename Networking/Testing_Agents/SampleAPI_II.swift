@@ -13,26 +13,27 @@ public class SampleAPI_II {
         static let scheme = "https"
         static let host = "api.github.com"
         static let path = "" // API Version
+        static let dumpResponse = false
     }
 }
 
 // MARK: - Protocol implementation
 
-extension SimpleNetworkAgent_B: SampleAPI_Protocol {
-    public func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
-        return run(with: SampleAPI_II.repos(username: username), dumpResponse: true)
+extension SimpleNetworkAgent_B: SampleAPIProtocol {
+    public func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+        return run(with: SampleAPI_II.repos(username: username), dumpResponse: SampleAPI_II.Constants.dumpResponse)
     }
 
-    public func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError> {
-        return run(with: SampleAPI_II.issues(repo: repo, owner: owner), dumpResponse: true)
+    public func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
+        return run(with: SampleAPI_II.issues(repo: repo, owner: owner), dumpResponse: SampleAPI_II.Constants.dumpResponse)
     }
 
-    public func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
-        return run(with: SampleAPI_II.repos(org: org), dumpResponse: true)
+    public func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+        return run(with: SampleAPI_II.repos(org: org), dumpResponse: SampleAPI_II.Constants.dumpResponse)
     }
 
-    public func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError> {
-        return run(with: SampleAPI_II.members(org: org), dumpResponse: true)
+    public func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError> {
+        return run(with: SampleAPI_II.members(org: org), dumpResponse: SampleAPI_II.Constants.dumpResponse)
     }
 
 }

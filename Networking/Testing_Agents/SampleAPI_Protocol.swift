@@ -6,9 +6,9 @@
 import Foundation
 import Combine
 
-public protocol SampleAPI_Protocol {
-    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
-    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError>
-    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError>
-    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError>
+public protocol SampleAPIProtocol {
+    func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError>
+    func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError>
+    func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError>
+    func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError>
 }

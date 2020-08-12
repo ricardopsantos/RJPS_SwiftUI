@@ -10,7 +10,7 @@ public struct NetworkAgentsTest {
     private init() {}
 
     public static func test() {
-        //SimpleNetworkAgent_A.basic()
+        SimpleNetworkAgent_A.basic()
         //SimpleNetworkAgent_A.chain()
         //SimpleNetworkAgent_A.parallel()
         SimpleNetworkAgent_B.basic()
@@ -21,7 +21,7 @@ extension NetworkAgentsTest {
     struct SimpleNetworkAgent_B {
         static func basic() {
             let response =  sampleAPI_II.repos(username: "ricardopsantos").sink(receiveCompletion: { _ in }, receiveValue: {
-                print("# 1 #####################################")
+                print("# SimpleNetworkAgent_B.1 #####################################")
                 print($0)
             })
             RunLoop.main.run(until: Date(timeIntervalSinceNow: 10))
@@ -34,7 +34,7 @@ extension NetworkAgentsTest {
     struct SimpleNetworkAgent_A {
         public static func basic() {
             let response =  sampleAPI_I.repos(username: "ricardopsantos").sink(receiveCompletion: { _ in }, receiveValue: {
-                print("# 1 #####################################")
+                print("# sampleAPI_I.1 #####################################")
                 print($0)
             })
             RunLoop.main.run(until: Date(timeIntervalSinceNow: 10))

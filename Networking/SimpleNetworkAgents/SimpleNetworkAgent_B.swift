@@ -7,6 +7,7 @@ import Foundation
 import Combine
 
 public class SimpleNetworkAgent_B {
+    private init() { self.session = .shared }
     private let session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
@@ -26,7 +27,11 @@ extension SimpleNetworkAgent_B {
         // an instance of URLRequest and returns either a tuple (Data, URLResponse) or a URLError.
         return session.dataTaskPublisher(for: URLRequest(url: url))
             // Because the method returns AnyPublisher<T, WeatherError>, you map the error from URLError to WeatherError.
-            .mapError { error in .network(description: error.localizedDescription) }
+            .mapError { error in
+                 print(components)
+                 print("\(error)")
+                 return APIError.network(description: error.localizedDescription)
+            }
             // The uses of flatMap deserves a post of their own. Here, you use it to convert the data
             // coming from the server as JSON to a fully-fledged object. You use decode(_:) as an auxiliary
             // function to achieve this. Since you are only interested in the first value emitted by the network request, you set .max(1).

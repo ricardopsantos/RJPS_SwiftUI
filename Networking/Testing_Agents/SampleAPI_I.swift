@@ -16,27 +16,28 @@ class SampleAPI_I {
         static let scheme = "https"
         static let host = "api.github.com"
         static let base = URL(string: "\(scheme)://\(host)")!
+        static let dumpResponse = false
     }
 }
 
 // MARK: - Protocol implementation
 
-extension SampleAPI_I: SampleAPI_Protocol {
+extension SampleAPI_I: SampleAPIProtocol {
 
-    func repos(username: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
-        return run(with: reposRequest(org: username))
+    func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+        return run(with: reposRequest(username: username), dumpResponse: Constants.dumpResponse)
     }
 
-    func issues(repo: String, owner: String) -> AnyPublisher<[GithubAPIResponseModel.Issue], APIError> {
-        return run(with: issuesRequest(repo: repo, owner: owner))
+    func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
+        return run(with: issuesRequest(repo: repo, owner: owner), dumpResponse: Constants.dumpResponse)
     }
     
-    func repos(org: String) -> AnyPublisher<[GithubAPIResponseModel.Repository], APIError> {
-        return run(with: reposRequest(org: org))
+    func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+        return run(with: reposRequest(org: org), dumpResponse: Constants.dumpResponse)
     }
     
-    func members(org: String) -> AnyPublisher<[GithubAPIResponseModel.User], APIError> {
-        return run(with: membersRequest(org: org))
+    func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError> {
+        return run(with: membersRequest(org: org), dumpResponse: Constants.dumpResponse)
     }
 }
 
@@ -60,7 +61,7 @@ fileprivate extension SampleAPI_I {
 // MARK: - Private
 
 private extension SampleAPI_I {
-    func run<T: Decodable>(with request: URLRequest) -> AnyPublisher<T, APIError> {
-        return Self.Constants.agent.run(request).map(\.value).eraseToAnyPublisher()
+    func run<T: Decodable>(with request: URLRequest, decoder: JSONDecoder = JSONDecoder(), dumpResponse: Bool) -> AnyPublisher<T, APIError> {
+        return Self.Constants.agent.run(request, decoder, dumpResponse).map(\.value).eraseToAnyPublisher()
     }
 }
