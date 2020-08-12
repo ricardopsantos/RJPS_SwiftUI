@@ -17,7 +17,11 @@ class SampleAPI_A {
         static let host = "api.github.com"
         static let base = URL(string: "\(scheme)://\(host)")!
         static let dumpResponse = false
+        static let decoder = JSONDecoder()
     }
+    var base: URL { return SampleAPI_A.Constants.base }
+    var dumpResponse: Bool { return SampleAPI_A.Constants.dumpResponse }
+    var decoder: JSONDecoder { return SampleAPI_A.Constants.decoder }
 }
 
 // MARK: - Protocol implementation
@@ -25,19 +29,19 @@ class SampleAPI_A {
 extension SampleAPI_A: SampleAPIProtocol {
 
     func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
-        return run(with: reposRequest(username: username), dumpResponse: Constants.dumpResponse)
+        run(reposRequest(username: username), decoder, dumpResponse)
     }
 
     func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
-        return run(with: issuesRequest(repo: repo, owner: owner), dumpResponse: Constants.dumpResponse)
+        run(issuesRequest(repo: repo, owner: owner), decoder, dumpResponse)
     }
     
     func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
-        return run(with: reposRequest(org: org), dumpResponse: Constants.dumpResponse)
+        run(reposRequest(org: org), decoder, dumpResponse)
     }
     
     func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError> {
-        return run(with: membersRequest(org: org), dumpResponse: Constants.dumpResponse)
+        run(membersRequest(org: org), decoder, dumpResponse)
     }
 }
 
@@ -45,23 +49,23 @@ extension SampleAPI_A: SampleAPIProtocol {
 
 private extension SampleAPI_A {
     func reposRequest(username: String) -> URLRequest {
-        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("users/\(username)/repos"))
+        URLRequest(url: base.appendingPathComponent("users/\(username)/repos"))
     }
     func issuesRequest(repo: String, owner: String) -> URLRequest {
-        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("repos/\(owner)/\(repo)/issues"))
+        URLRequest(url: base.appendingPathComponent("repos/\(owner)/\(repo)/issues"))
     }
     func reposRequest(org: String) -> URLRequest {
-        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("orgs/\(org)/repos"))
+        URLRequest(url: base.appendingPathComponent("orgs/\(org)/repos"))
     }
     func membersRequest(org: String) -> URLRequest {
-        URLRequest(url: SampleAPI_A.Constants.base.appendingPathComponent("orgs/\(org)/members"))
+        URLRequest(url: base.appendingPathComponent("orgs/\(org)/members"))
     }
 }
 
 // MARK: - Private
 
 private extension SampleAPI_A {
-    func run<T: Decodable>(with request: URLRequest, decoder: JSONDecoder = JSONDecoder(), dumpResponse: Bool) -> AnyPublisher<T, APIError> {
+    func run<T: Decodable>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder(), _ dumpResponse: Bool) -> AnyPublisher<T, APIError> {
         return Self.Constants.agent.run(request, decoder, dumpResponse).map(\.value).eraseToAnyPublisher()
     }
 }

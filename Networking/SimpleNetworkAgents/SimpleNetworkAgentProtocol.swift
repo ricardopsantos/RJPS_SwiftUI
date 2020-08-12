@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SimpleNetworkAgentProtocol {
-    var session: URLSession { set get }
+    var session: URLSession { get set }
 }

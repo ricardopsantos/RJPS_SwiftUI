@@ -17,25 +17,27 @@ public class SampleAPI_B {
         static let dumpResponse = false
         static let decoder = JSONDecoder()
     }
+    var decoder: JSONDecoder { return SampleAPI_B.Constants.decoder }
+    var dumpResponse: Bool { return SampleAPI_B.Constants.dumpResponse }
 }
 
 // MARK: - Protocol implementation
 
 extension SampleAPI_B: SampleAPIProtocol {
     public func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
-        return Self.Constants.agent.run(SampleAPI_B.repos(username: username), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
+        run(repos(username: username), decoder, dumpResponse)
     }
 
     public func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
-        return Self.Constants.agent.run(SampleAPI_B.issues(repo: repo, owner: owner), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
+        run(issues(repo: repo, owner: owner), decoder, dumpResponse)
     }
 
     public func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
-        return Self.Constants.agent.run(SampleAPI_B.repos(org: org), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
+        run(repos(org: org), decoder, dumpResponse)
     }
 
     public func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError> {
-        return Self.Constants.agent.run(SampleAPI_B.members(org: org), SampleAPI_B.Constants.decoder, SampleAPI_B.Constants.dumpResponse)
+        run(members(org: org), decoder, dumpResponse)
     }
 
 }
@@ -43,7 +45,7 @@ extension SampleAPI_B: SampleAPIProtocol {
 // MARK: - Requestables
 
 private extension SampleAPI_B {
-     static func repos(username: String) -> URLComponents {
+    func repos(username: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = SampleAPI_B.Constants.scheme
         components.host   = SampleAPI_B.Constants.host
@@ -54,7 +56,7 @@ private extension SampleAPI_B {
         return components
     }
 
-     static func issues(repo: String, owner: String) -> URLComponents {
+    func issues(repo: String, owner: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = SampleAPI_B.Constants.scheme
         components.host   = SampleAPI_B.Constants.host
@@ -65,7 +67,7 @@ private extension SampleAPI_B {
         return components
     }
 
-     static func repos(org: String) -> URLComponents {
+    func repos(org: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = SampleAPI_B.Constants.scheme
         components.host   = SampleAPI_B.Constants.host
@@ -76,7 +78,7 @@ private extension SampleAPI_B {
         return components
     }
 
-     static func members(org: String) -> URLComponents {
+    func members(org: String) -> URLComponents {
         var components = URLComponents()
         components.scheme = SampleAPI_B.Constants.scheme
         components.host   = SampleAPI_B.Constants.host
@@ -87,4 +89,12 @@ private extension SampleAPI_B {
         return components
     }
 
+}
+
+// MARK: - Private
+
+private extension SampleAPI_B {
+    func run<T>(_ components: URLComponents, _ decoder: JSONDecoder, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> where T: Decodable {
+        return Self.Constants.agent.run(components, decoder, dumpResponse)
+    }
 }

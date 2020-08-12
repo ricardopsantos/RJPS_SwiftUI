@@ -17,9 +17,9 @@ import Combine
  7 - Erase publisher’s type and return an instance of AnyPublisher.
  */
 
-class SimpleNetworkAgent_A {
+class SimpleNetworkAgent_A: SimpleNetworkAgentProtocol {
     private init() { self.session = .shared }
-    let session: URLSession
+    var session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
@@ -27,7 +27,7 @@ class SimpleNetworkAgent_A {
     // 1
     struct Response<T: Decodable> {
         let value: T
-        let urlResponse: URLResponse
+        let response: Any
     }
 }
 
@@ -42,7 +42,7 @@ extension SimpleNetworkAgent_A {
                     print("request: \(request)\n\(String(decoding: result.data, as: UTF8.self))")
                 }
                let value = try decoder.decode(T.self, from: result.data) // 4
-               return Response(value: value, urlResponse: result.response)  // 5
+               return Response(value: value, response: result.response)  // 5
            }
            .mapError { error in
                 print(request)

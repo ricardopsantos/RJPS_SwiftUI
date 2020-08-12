@@ -6,9 +6,9 @@
 import Foundation
 import Combine
 
-public class SimpleNetworkAgent_B {
+public class SimpleNetworkAgent_B: SimpleNetworkAgentProtocol {
     private init() { self.session = .shared }
-    private let session: URLSession
+    var session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
