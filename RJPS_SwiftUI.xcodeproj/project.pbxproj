@@ -49,7 +49,7 @@
 		D7611BD824E2D1DF00B53E61 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD724E2D1DF00B53E61 /* RepositoryProtocol.swift */; };
 		D7611BDA24E2D24000B53E61 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */; };
 		D7611BDD24E318F500B53E61 /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */; };
-		D7611BE024E3233600B53E61 /* CacheLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BDF24E3233600B53E61 /* CacheLive.swift */; };
+		D7611BE024E3233600B53E61 /* LiveCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */; };
 		D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */; };
 		D7611BF724E3314D00B53E61 /* TestingAPI_VersionB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF624E3314D00B53E61 /* TestingAPI_VersionB.swift */; };
 		D7611BF924E33AAA00B53E61 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF824E33AAA00B53E61 /* APIError.swift */; };
@@ -130,6 +130,9 @@
 		D7A7185424D8BDC500EC53FB /* AppDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185324D8BDC500EC53FB /* AppDefaultsRepository.swift */; };
 		D7A7185624D8C70B00EC53FB /* VisualDocs_DebugUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185524D8C70B00EC53FB /* VisualDocs_DebugUI.swift */; };
 		D7A7185824D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185724D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift */; };
+		D7AF630A24E5F528001E1305 /* GenericCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630924E5F528001E1305 /* GenericCacheManager.swift */; };
+		D7AF630C24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */; };
+		D7AF630E24E5FCE3001E1305 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */; };
 		D7B33CAD24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CAC24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift */; };
 		D7B33CB024E41F2F00DA77B2 /* ScrollEffect3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CAF24E41F2F00DA77B2 /* ScrollEffect3D.swift */; };
 		D7B33CB224E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CB124E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift */; };
@@ -405,7 +408,7 @@
 		D7611BD524E296C900B53E61 /* Clean.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Clean.README.md; sourceTree = "<group>"; };
 		D7611BD724E2D1DF00B53E61 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
-		D7611BDF24E3233600B53E61 /* CacheLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheLive.swift; sourceTree = "<group>"; };
+		D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCacheManager.swift; sourceTree = "<group>"; };
 		D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_B.swift; sourceTree = "<group>"; };
 		D7611BF624E3314D00B53E61 /* TestingAPI_VersionB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionB.swift; sourceTree = "<group>"; };
 		D7611BF824E33AAA00B53E61 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -481,6 +484,9 @@
 		D7AA23102497F68F00D24169 /* SimpleNetworkAgent_A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_A.swift; sourceTree = "<group>"; };
 		D7AA23132497F7DD00D24169 /* TestingAPI_VersionA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionA.swift; sourceTree = "<group>"; };
 		D7AA23142497F7DD00D24169 /* SampleAPI_Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAPI_Testing.swift; sourceTree = "<group>"; };
+		D7AF630924E5F528001E1305 /* GenericCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCacheManager.swift; sourceTree = "<group>"; };
+		D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericKeyValueStorableRecord.swift; sourceTree = "<group>"; };
+		D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
 		D7B33CAC24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recrating.InstagramMessages.swift; sourceTree = "<group>"; };
 		D7B33CAF24E41F2F00DA77B2 /* ScrollEffect3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3D.swift; sourceTree = "<group>"; };
 		D7B33CB124E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.CurrentWeatherViewBuilder.swift; sourceTree = "<group>"; };
@@ -817,7 +823,10 @@
 		D7611BDE24E3232A00B53E61 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				D7611BDF24E3233600B53E61 /* CacheLive.swift */,
+				D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */,
+				D7AF630924E5F528001E1305 /* GenericCacheManager.swift */,
+				D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */,
+				D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -1806,7 +1815,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7611BCE24E1F7CD00B53E61 /* AppUserDefaults.swift in Sources */,
-				D7611BE024E3233600B53E61 /* CacheLive.swift in Sources */,
+				D7AF630C24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift in Sources */,
+				D7AF630E24E5FCE3001E1305 /* CacheUtils.swift in Sources */,
+				D7611BE024E3233600B53E61 /* LiveCacheManager.swift in Sources */,
+				D7AF630A24E5F528001E1305 /* GenericCacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

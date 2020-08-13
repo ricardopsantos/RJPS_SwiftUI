@@ -1,24 +1,14 @@
 //
-//  File.swift
-//  DevTools
-//
 //  Created by Ricardo Santos on 11/08/2020.
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
 
 import Foundation
 
-public protocol NSCacheManagerProtocol {
-    func add(object: AnyObject, withKey: String)
-    func get(key: String) -> AnyObject?
-    func delete(key: String)
-    func clean()
-}
-
-public class NSCacheManager: NSCacheManagerProtocol {
+public class LiveCacheManager {
 
     private init() {}
-    public static let shared = NSCacheManager()
+    public static let shared = LiveCacheManager()
 
     private var _cache = NSCache<NSString, AnyObject>()
 
