@@ -51,7 +51,7 @@
 		D7611BDD24E318F500B53E61 /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */; };
 		D7611BE024E3233600B53E61 /* CacheLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BDF24E3233600B53E61 /* CacheLive.swift */; };
 		D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */; };
-		D7611BF724E3314D00B53E61 /* SampleAPI_B.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF624E3314D00B53E61 /* SampleAPI_B.swift */; };
+		D7611BF724E3314D00B53E61 /* TestingAPI_VersionB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF624E3314D00B53E61 /* TestingAPI_VersionB.swift */; };
 		D7611BF924E33AAA00B53E61 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF824E33AAA00B53E61 /* APIError.swift */; };
 		D7611BFC24E34BC900B53E61 /* SampleAPI_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BFB24E34BC900B53E61 /* SampleAPI_Protocol.swift */; };
 		D7611BFF24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BFE24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift */; };
@@ -69,7 +69,7 @@
 		D76989AC24D72694005F851F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76989A524D72694005F851F /* Networking.framework */; };
 		D76989AD24D72694005F851F /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76989A524D72694005F851F /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76989B124D726D0005F851F /* SimpleNetworkAgent_A.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23102497F68F00D24169 /* SimpleNetworkAgent_A.swift */; };
-		D76989B224D726D3005F851F /* SampleAPI_A.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23132497F7DD00D24169 /* SampleAPI_A.swift */; };
+		D76989B224D726D3005F851F /* TestingAPI_VersionA.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23132497F7DD00D24169 /* TestingAPI_VersionA.swift */; };
 		D76989B324D726D6005F851F /* SampleAPI_Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA23142497F7DD00D24169 /* SampleAPI_Testing.swift */; };
 		D76989B424D726EA005F851F /* SwiftUIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA68D4C231FEE58007353EF /* SwiftUIFactory.swift */; };
 		D76989B624D72747005F851F /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76989B524D72747005F851F /* UIScreen+Extensions.swift */; };
@@ -133,6 +133,7 @@
 		D7B33CAD24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CAC24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift */; };
 		D7B33CB024E41F2F00DA77B2 /* ScrollEffect3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CAF24E41F2F00DA77B2 /* ScrollEffect3D.swift */; };
 		D7B33CB224E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CB124E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift */; };
+		D7B33CB824E52F4E00DA77B2 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CB724E52F4E00DA77B2 /* Combine.swift */; };
 		D7B560202493A18100E9EC7D /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D7B560252493AA5400E9EC7D /* Recreating.Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560242493AA5400E9EC7D /* Recreating.Settings.swift */; };
 		D7B560272493AB1500E9EC7D /* Recreating.Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560262493AB1500E9EC7D /* Recreating.Twitter.swift */; };
@@ -266,6 +267,20 @@
 			remoteGlobalIDString = D7A7183F24D8BBFB00EC53FB;
 			remoteInfo = App.HourlyChallenge;
 		};
+		D7B33CB324E52B9800DA77B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7611BC124E1F7A800B53E61;
+			remoteInfo = DevTools;
+		};
+		D7B33CB524E52B9B00DA77B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D769898124D7252E005F851F;
+			remoteInfo = Extensions;
+		};
 		D7B9969124DB1F86000DAFD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
@@ -392,7 +407,7 @@
 		D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		D7611BDF24E3233600B53E61 /* CacheLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheLive.swift; sourceTree = "<group>"; };
 		D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_B.swift; sourceTree = "<group>"; };
-		D7611BF624E3314D00B53E61 /* SampleAPI_B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI_B.swift; sourceTree = "<group>"; };
+		D7611BF624E3314D00B53E61 /* TestingAPI_VersionB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionB.swift; sourceTree = "<group>"; };
 		D7611BF824E33AAA00B53E61 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		D7611BFB24E34BC900B53E61 /* SampleAPI_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI_Protocol.swift; sourceTree = "<group>"; };
 		D7611BFE24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentProtocol.swift; sourceTree = "<group>"; };
@@ -464,11 +479,12 @@
 		D7A7185524D8C70B00EC53FB /* VisualDocs_DebugUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_DebugUI.swift; sourceTree = "<group>"; };
 		D7A7185724D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_horizontalSizeClass.swift; sourceTree = "<group>"; };
 		D7AA23102497F68F00D24169 /* SimpleNetworkAgent_A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_A.swift; sourceTree = "<group>"; };
-		D7AA23132497F7DD00D24169 /* SampleAPI_A.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAPI_A.swift; sourceTree = "<group>"; };
+		D7AA23132497F7DD00D24169 /* TestingAPI_VersionA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionA.swift; sourceTree = "<group>"; };
 		D7AA23142497F7DD00D24169 /* SampleAPI_Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAPI_Testing.swift; sourceTree = "<group>"; };
 		D7B33CAC24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recrating.InstagramMessages.swift; sourceTree = "<group>"; };
 		D7B33CAF24E41F2F00DA77B2 /* ScrollEffect3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3D.swift; sourceTree = "<group>"; };
 		D7B33CB124E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.CurrentWeatherViewBuilder.swift; sourceTree = "<group>"; };
+		D7B33CB724E52F4E00DA77B2 /* Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combine.swift; sourceTree = "<group>"; };
 		D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -738,6 +754,7 @@
 				D7611BD524E296C900B53E61 /* Clean.README.md */,
 				D78FAC1D24D4045B0069809D /* Combine_I.png */,
 				D78FAC1E24D4045B0069809D /* State_I.png */,
+				D7B33CB724E52F4E00DA77B2 /* Combine.swift */,
 				D769897924D5FED8005F851F /* Recreating */,
 				D7B33CAE24E41EFA00DA77B2 /* CoolStuff */,
 				D78FABD424D0BD740069809D /* Documents.Visual */,
@@ -827,8 +844,8 @@
 			isa = PBXGroup;
 			children = (
 				D7611BFB24E34BC900B53E61 /* SampleAPI_Protocol.swift */,
-				D7AA23132497F7DD00D24169 /* SampleAPI_A.swift */,
-				D7611BF624E3314D00B53E61 /* SampleAPI_B.swift */,
+				D7AA23132497F7DD00D24169 /* TestingAPI_VersionA.swift */,
+				D7611BF624E3314D00B53E61 /* TestingAPI_VersionB.swift */,
 				D7AA23142497F7DD00D24169 /* SampleAPI_Testing.swift */,
 			);
 			path = Testing_Agents;
@@ -1400,6 +1417,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7B33CB624E52B9B00DA77B2 /* PBXTargetDependency */,
+				D7B33CB424E52B9800DA77B2 /* PBXTargetDependency */,
 			);
 			name = Networking;
 			productName = Networking;
@@ -1824,9 +1843,9 @@
 				D76989CC24D72ABB005F851F /* typelias.swift in Sources */,
 				D7611BF924E33AAA00B53E61 /* APIError.swift in Sources */,
 				D76989B124D726D0005F851F /* SimpleNetworkAgent_A.swift in Sources */,
-				D76989B224D726D3005F851F /* SampleAPI_A.swift in Sources */,
+				D76989B224D726D3005F851F /* TestingAPI_VersionA.swift in Sources */,
 				D76989B324D726D6005F851F /* SampleAPI_Testing.swift in Sources */,
-				D7611BF724E3314D00B53E61 /* SampleAPI_B.swift in Sources */,
+				D7611BF724E3314D00B53E61 /* TestingAPI_VersionB.swift in Sources */,
 				D7611BFC24E34BC900B53E61 /* SampleAPI_Protocol.swift in Sources */,
 				D7611BFF24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift in Sources */,
 				D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */,
@@ -1894,6 +1913,7 @@
 				D7611BD424E1F97600B53E61 /* Repository.swift in Sources */,
 				D7F1431A24D95EAD00B910A7 /* B.WeeklyWeatherBuilder.swift in Sources */,
 				D7F1431524D95EAD00B910A7 /* VM.CurrentWeatherRowViewModel.swift in Sources */,
+				D7B33CB824E52F4E00DA77B2 /* Combine.swift in Sources */,
 				D7F1431324D95EAD00B910A7 /* V.DailyWeatherRowView.swift in Sources */,
 				D7B33CB224E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift in Sources */,
 				D7F1431C24D95EAD00B910A7 /* V.WeeklyWeatherView.swift in Sources */,
@@ -1978,6 +1998,16 @@
 			isa = PBXTargetDependency;
 			target = D7A7183F24D8BBFB00EC53FB /* App.HourlyChallenge */;
 			targetProxy = D7A7184524D8BBFB00EC53FB /* PBXContainerItemProxy */;
+		};
+		D7B33CB424E52B9800DA77B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7611BC124E1F7A800B53E61 /* DevTools */;
+			targetProxy = D7B33CB324E52B9800DA77B2 /* PBXContainerItemProxy */;
+		};
+		D7B33CB624E52B9B00DA77B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D769898124D7252E005F851F /* Extensions */;
+			targetProxy = D7B33CB524E52B9B00DA77B2 /* PBXContainerItemProxy */;
 		};
 		D7B9969224DB1F86000DAFD2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -6,7 +6,7 @@ public struct SampleAPI_Testing {
 
     public static func test() {
 
-        func basic(api: SampleAPIProtocol, identifier: String) {
+        func basic(api: TestingAPIProtocol, identifier: String) {
             let response =  api.repos(username: "ricardopsantos").sink(receiveCompletion: { _ in }, receiveValue: {
                 print("# \(identifier) : basic #####################################")
                 print($0)
@@ -15,7 +15,7 @@ public struct SampleAPI_Testing {
             withExtendedLifetime(response, {})
         }
 
-        func chain(api: SampleAPIProtocol, identifier: String) {
+        func chain(api: TestingAPIProtocol, identifier: String) {
             let repos = api.repos(username: "apple")
             let firstRepo = repos.compactMap { $0.first }
             let issues = firstRepo.flatMap { repo in
@@ -29,7 +29,7 @@ public struct SampleAPI_Testing {
             withExtendedLifetime(token, {})
         }
 
-        func parallel(api: SampleAPIProtocol, identifier: String) {
+        func parallel(api: TestingAPIProtocol, identifier: String) {
             let members = api.members(org: "apple")
             let repos = api.repos(org: "apple")
             let token = Publishers.Zip(members, repos)
@@ -42,16 +42,16 @@ public struct SampleAPI_Testing {
             withExtendedLifetime(token, {})
         }
 
-        let sampleAPI_A = SampleAPI_A()
-        let sampleAPI_B = SampleAPI_B()
+        let sampleAPI_A = TestingAPI_VersionA()
+        let sampleAPI_B = TestingAPI_VersionB()
 
         //basic(api: sampleAPI_A, identifier: "sampleAPI_A")
-        //basic(api: sampleAPI_B, identifier: "sampleAPI_B")
+        basic(api: sampleAPI_B, identifier: "sampleAPI_B")
 
         //chain(api: sampleAPI_A, identifier: "sampleAPI_A")
         //chain(api: sampleAPI_B, identifier: "sampleAPI_B")
 
-        parallel(api: sampleAPI_A, identifier: "sampleAPI_A")
-        parallel(api: sampleAPI_B, identifier: "sampleAPI_B")
+        //parallel(api: sampleAPI_A, identifier: "sampleAPI_A")
+        //parallel(api: sampleAPI_B, identifier: "sampleAPI_B")
     }
 }

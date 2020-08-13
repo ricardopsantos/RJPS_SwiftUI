@@ -5,6 +5,7 @@
 
 import Foundation
 import Combine
+import Network
 
 public class Fetcher {
     private let session: URLSession

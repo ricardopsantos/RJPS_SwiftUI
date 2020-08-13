@@ -42,4 +42,8 @@ public class NSCacheManager: NSCacheManagerProtocol {
         objc_sync_enter(_cache); defer { objc_sync_exit(_cache) }
         _cache.removeAllObjects()
     }
+
+    public func check() {
+        print(_cache)
+    }
 }

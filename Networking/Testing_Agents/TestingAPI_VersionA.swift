@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - Class & Constants
 
-class SampleAPI_A {
+class TestingAPI_VersionA {
     public struct Constants {
         static let agent = SimpleNetworkAgent_A()
         static let scheme = "https"
@@ -19,14 +19,14 @@ class SampleAPI_A {
         static let dumpResponse = false
         static let decoder = JSONDecoder()
     }
-    var base: URL { return SampleAPI_A.Constants.base }
-    var dumpResponse: Bool { return SampleAPI_A.Constants.dumpResponse }
-    var decoder: JSONDecoder { return SampleAPI_A.Constants.decoder }
+    var base: URL { return Self.Constants.base }
+    var dumpResponse: Bool { return Self.Constants.dumpResponse }
+    var decoder: JSONDecoder { return Self.Constants.decoder }
 }
 
 // MARK: - Protocol implementation
 
-extension SampleAPI_A: SampleAPIProtocol {
+extension TestingAPI_VersionA: TestingAPIProtocol {
 
     func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
         run(reposRequest(username: username), decoder, dumpResponse)
@@ -47,7 +47,7 @@ extension SampleAPI_A: SampleAPIProtocol {
 
 // MARK: - Requestables
 
-private extension SampleAPI_A {
+private extension TestingAPI_VersionA {
     func reposRequest(username: String) -> URLRequest {
         URLRequest(url: base.appendingPathComponent("users/\(username)/repos"))
     }
@@ -64,7 +64,7 @@ private extension SampleAPI_A {
 
 // MARK: - Private
 
-private extension SampleAPI_A {
+private extension TestingAPI_VersionA {
     func run<T: Decodable>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder(), _ dumpResponse: Bool) -> AnyPublisher<T, APIError> {
         return Self.Constants.agent.run(request, decoder, dumpResponse).map(\.value).eraseToAnyPublisher()
     }

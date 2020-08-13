@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        //SampleAPI_Testing.test()
+        SampleAPI_Testing.test()
+        //CombineTesting.shared.testing_CurrentValueSubject()
 
         let targetApp: TargetApp = .weather
         switch targetApp {

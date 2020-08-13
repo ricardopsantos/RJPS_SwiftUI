@@ -6,7 +6,7 @@
 import Foundation
 import Combine
 
-public protocol SampleAPIProtocol {
+public protocol TestingAPIProtocol {
     func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError>
     func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError>
     func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError>
