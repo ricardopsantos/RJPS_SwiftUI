@@ -35,4 +35,3 @@ public class GenericCacheManager {
         return nil
     }
 }
-

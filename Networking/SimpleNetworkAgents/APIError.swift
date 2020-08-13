@@ -8,4 +8,5 @@ import Foundation
  public enum APIError: Error {
     case parsing(description: String)
     case network(description: String)
+    case none
 }

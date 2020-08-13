@@ -6,11 +6,33 @@
 import Foundation
 import Combine
 
+ private enum XError: Error {
+    case parsing(description: String)
+    case none
+}
+
 public class CombineTesting {
+
     private init() { }
     public static var shared = CombineTesting()
     var subscriptions: Set<AnyCancellable> = []
 
+    public func test_AnyPublisher() {
+        func someString() -> AnyPublisher<String, XError> {
+            return Just("Hi").mapError { _ in .none }.eraseToAnyPublisher()
+        }
+
+        let response = someString()
+        response.sink(receiveCompletion: { (result) in
+            switch result {
+            case .finished: _ = ()
+            case .failure(let error): _ = error
+            }
+        }, receiveValue: { (some) in
+            print(some)
+        }).store(in: &subscriptions)
+
+    }
     // CurrentValueSubject
     // https://developer.apple.com/documentation/combine/currentvaluesubject
     // A subject that wraps a single value and publishes a new element whenever the value changes.

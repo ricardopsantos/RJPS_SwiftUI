@@ -28,11 +28,9 @@ extension TestingAPI_VersionB: TestingAPIProtocol {
         let key = "\(#function)"
         let params = [username]
         if let cached = GenericCacheManager.shared.get(key: key, params: params, type: [APIResponseDto.Repository].self) {
-            print(cached)
+            return Just(cached).mapError { _ in .none }.eraseToAnyPublisher()
         }
-
         let response: AnyPublisher<[APIResponseDto.Repository], APIError> = run(repos(username: username), decoder, dumpResponse)
-
         response.sink(receiveCompletion: { (result) in
             switch result {
             case .finished: _ = ()
