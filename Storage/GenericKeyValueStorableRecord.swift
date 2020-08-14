@@ -9,7 +9,7 @@ public class GenericKeyValueStorableRecord: Codable {
     public var keyBase: String = ""
     public var key: String = ""         // Computed cache key (with parameters)
     public var keyParams: String = ""   // Only the parameters used on building the key
-    public var value: String = ""       // JSON response from server (no metadata included)
+    private var object: String = ""      // Value to be stored
     public var valueType: String = ""
     public var recordDate: Date = GenericKeyValueStorableRecord.referenceDate
     public var expireDate: Date = GenericKeyValueStorableRecord.referenceDate
@@ -28,7 +28,7 @@ public class GenericKeyValueStorableRecord: Codable {
         self.key       = composedKey
         self.keyBase   = keyBase
         self.keyParams = keyParams
-        self.value     = value
+        self.object    = value
         self.recordDate = GenericKeyValueStorableRecord.referenceDate
         self.expireDate = GenericKeyValueStorableRecord.referenceDate.addingTimeInterval(TimeInterval(timeToLive*60))
         self.encoding   = encoding.rawValue
@@ -56,6 +56,15 @@ public class GenericKeyValueStorableRecord: Codable {
         }
         return nil
     }
+
+    public var value: String? {
+        print(objectResume)
+        if Self.referenceDate < self.expireDate {
+            return object
+        }
+        // Object expired
+        return nil
+    }
 }
 
 extension GenericKeyValueStorableRecord {
@@ -71,7 +80,7 @@ extension GenericKeyValueStorableRecord {
         self.key       = CacheUtils.composedKey(key, params)
         self.keyBase   = key
         self.keyParams = CacheUtils.parseKeyParams(params)
-        self.value      = value
+        self.object     = value
         self.recordDate = GenericKeyValueStorableRecord.referenceDate
         self.expireDate = GenericKeyValueStorableRecord.referenceDate.addingTimeInterval(TimeInterval(lifeSpam*60))
         self.encoding   = ValueEncoding.data.rawValue

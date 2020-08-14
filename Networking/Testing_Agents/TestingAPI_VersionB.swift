@@ -6,6 +6,7 @@
 import Foundation
 import Combine
 import DevTools
+import Storage
 
 // MARK: - Class & Constants
 
@@ -27,7 +28,7 @@ extension TestingAPI_VersionB: TestingAPIProtocol {
     public func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
         let key = "\(#function)"
         let params = [username]
-        if let cached = GenericCacheManager.shared.get(key: key, params: params, type: [APIResponseDto.Repository].self) {
+        if let cached = APICacheManager.shared.get(key: key, params: params, type: [APIResponseDto.Repository].self) {
             return Just(cached).mapError { _ in .none }.eraseToAnyPublisher()
         }
         let response: AnyPublisher<[APIResponseDto.Repository], APIError> = run(repos(username: username), decoder, dumpResponse)
@@ -37,8 +38,7 @@ extension TestingAPI_VersionB: TestingAPIProtocol {
             case .failure(let error): _ = error
             }
         }, receiveValue: { (data) in
-            let toCache = GenericKeyValueStorableRecord(data, key: key, params: params)
-            GenericCacheManager.shared.save(kvStorableRecord: toCache)
+            APICacheManager.shared.save(data, key: key, params: params, lifeSpam: 5)
         }).store(in: &subscriptions)
         return response
     }

@@ -49,7 +49,6 @@
 		D7611BD824E2D1DF00B53E61 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD724E2D1DF00B53E61 /* RepositoryProtocol.swift */; };
 		D7611BDA24E2D24000B53E61 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BD924E2D24000B53E61 /* RepositoryProtocol.swift */; };
 		D7611BDD24E318F500B53E61 /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */; };
-		D7611BE024E3233600B53E61 /* LiveCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */; };
 		D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */; };
 		D7611BF724E3314D00B53E61 /* TestingAPI_VersionB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF624E3314D00B53E61 /* TestingAPI_VersionB.swift */; };
 		D7611BF924E33AAA00B53E61 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF824E33AAA00B53E61 /* APIError.swift */; };
@@ -130,9 +129,6 @@
 		D7A7185424D8BDC500EC53FB /* AppDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185324D8BDC500EC53FB /* AppDefaultsRepository.swift */; };
 		D7A7185624D8C70B00EC53FB /* VisualDocs_DebugUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185524D8C70B00EC53FB /* VisualDocs_DebugUI.swift */; };
 		D7A7185824D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185724D8CA4E00EC53FB /* VisualDocs_horizontalSizeClass.swift */; };
-		D7AF630A24E5F528001E1305 /* GenericCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630924E5F528001E1305 /* GenericCacheManager.swift */; };
-		D7AF630C24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */; };
-		D7AF630E24E5FCE3001E1305 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */; };
 		D7B33CAD24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CAC24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift */; };
 		D7B33CB024E41F2F00DA77B2 /* ScrollEffect3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CAF24E41F2F00DA77B2 /* ScrollEffect3D.swift */; };
 		D7B33CB224E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CB124E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift */; };
@@ -153,6 +149,14 @@
 		D7B996A324DB3141000DAFD2 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */; };
 		D7B99F9324DCB0D2005FA84A /* V.DayDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B99F9224DCB0D2005FA84A /* V.DayDetailsView.swift */; };
 		D7C9EA5B24A2B7A300FF80BD /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */; };
+		D7D6CAAF24E6FF9E00648118 /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D6CAAD24E6FF9E00648118 /* Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7D6CAB224E6FF9E00648118 /* Storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D6CAAB24E6FF9E00648118 /* Storage.framework */; };
+		D7D6CAB324E6FF9E00648118 /* Storage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7D6CAAB24E6FF9E00648118 /* Storage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D7D6CAB624E6FFBB00648118 /* LiveCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */; };
+		D7D6CAB724E6FFBE00648118 /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630924E5F528001E1305 /* APICacheManager.swift */; };
+		D7D6CAB824E6FFBE00648118 /* GenericKeyValueStorableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */; };
+		D7D6CAB924E6FFBE00648118 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */; };
+		D7D6CAC124E703AC00648118 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6CAC024E703AC00648118 /* UserDefaults+Extensions.swift */; };
 		D7F142D124D95DD600B910A7 /* App_WeatherApp.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F142CF24D95DD600B910A7 /* App_WeatherApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7F142D424D95DD700B910A7 /* App_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F142CD24D95DD600B910A7 /* App_Weather.framework */; };
 		D7F142D524D95DD700B910A7 /* App_Weather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F142CD24D95DD600B910A7 /* App_Weather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -298,6 +302,34 @@
 			remoteGlobalIDString = D7B9968B24DB1F86000DAFD2;
 			remoteInfo = API.Keys;
 		};
+		D7D6CAB024E6FF9E00648118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D6CAAA24E6FF9E00648118;
+			remoteInfo = Storage;
+		};
+		D7D6CABA24E6FFDA00648118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7611BC124E1F7A800B53E61;
+			remoteInfo = DevTools;
+		};
+		D7D6CABC24E6FFE000648118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D769898124D7252E005F851F;
+			remoteInfo = Extensions;
+		};
+		D7D6CABE24E7002700648118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D6CAAA24E6FF9E00648118;
+			remoteInfo = Storage;
+		};
 		D7F142D224D95DD700B910A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
@@ -350,6 +382,7 @@
 				D7B9969424DB1F86000DAFD2 /* API_Keys.framework in Embed Frameworks */,
 				D76989C424D72A7D005F851F /* Designables.framework in Embed Frameworks */,
 				D76989AD24D72694005F851F /* Networking.framework in Embed Frameworks */,
+				D7D6CAB324E6FF9E00648118 /* Storage.framework in Embed Frameworks */,
 				D76989DB24D72C0A005F851F /* UIKitRepresentables.framework in Embed Frameworks */,
 				D7A7184824D8BBFB00EC53FB /* App_HourlyChallenge.framework in Embed Frameworks */,
 			);
@@ -484,7 +517,7 @@
 		D7AA23102497F68F00D24169 /* SimpleNetworkAgent_A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_A.swift; sourceTree = "<group>"; };
 		D7AA23132497F7DD00D24169 /* TestingAPI_VersionA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionA.swift; sourceTree = "<group>"; };
 		D7AA23142497F7DD00D24169 /* SampleAPI_Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleAPI_Testing.swift; sourceTree = "<group>"; };
-		D7AF630924E5F528001E1305 /* GenericCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCacheManager.swift; sourceTree = "<group>"; };
+		D7AF630924E5F528001E1305 /* APICacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
 		D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericKeyValueStorableRecord.swift; sourceTree = "<group>"; };
 		D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
 		D7B33CAC24E41D7F00DA77B2 /* Recrating.InstagramMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recrating.InstagramMessages.swift; sourceTree = "<group>"; };
@@ -511,6 +544,10 @@
 		D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		D7B99F9224DCB0D2005FA84A /* V.DayDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.DayDetailsView.swift; sourceTree = "<group>"; };
 		D7C9EA5A24A2B7A300FF80BD /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
+		D7D6CAAB24E6FF9E00648118 /* Storage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D6CAAD24E6FF9E00648118 /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
+		D7D6CAAE24E6FF9E00648118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7D6CAC024E703AC00648118 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		D7F142CD24D95DD600B910A7 /* App_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F142CF24D95DD600B910A7 /* App_WeatherApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_WeatherApp.h; sourceTree = "<group>"; };
 		D7F142D024D95DD600B910A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -543,6 +580,7 @@
 			files = (
 				D751737924DEAA3E004822B2 /* Domain.framework in Frameworks */,
 				D76989AC24D72694005F851F /* Networking.framework in Frameworks */,
+				D7D6CAB224E6FF9E00648118 /* Storage.framework in Frameworks */,
 				D76989C324D72A7D005F851F /* Designables.framework in Frameworks */,
 				D769898924D7252E005F851F /* Extensions.framework in Frameworks */,
 				D7B9969324DB1F86000DAFD2 /* API_Keys.framework in Frameworks */,
@@ -618,6 +656,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7D6CAA824E6FF9E00648118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7F142CA24D95DD600B910A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -653,6 +698,7 @@
 				D7A7184124D8BBFB00EC53FB /* App.HourlyChallenge */,
 				D7F142CE24D95DD600B910A7 /* App.Weather */,
 				D7611BC324E1F7A800B53E61 /* DevTools */,
+				D7D6CAAC24E6FF9E00648118 /* Storage */,
 				9F288F2520F8089F008A9539 /* Products */,
 				4546C3C321B570CD00127A20 /* Frameworks */,
 			);
@@ -672,6 +718,7 @@
 				D7B9968C24DB1F86000DAFD2 /* API_Keys.framework */,
 				D751737224DEAA3E004822B2 /* Domain.framework */,
 				D7611BC224E1F7A800B53E61 /* DevTools.framework */,
+				D7D6CAAB24E6FF9E00648118 /* Storage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -795,7 +842,6 @@
 		D7611BC324E1F7A800B53E61 /* DevTools */ = {
 			isa = PBXGroup;
 			children = (
-				D7611BDE24E3232A00B53E61 /* Cache */,
 				D7611BC424E1F7A800B53E61 /* DevTools.h */,
 				D7611BC524E1F7A800B53E61 /* Info.plist */,
 				D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */,
@@ -818,17 +864,6 @@
 				D7F142E724D95EAD00B910A7 /* APIProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		D7611BDE24E3232A00B53E61 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */,
-				D7AF630924E5F528001E1305 /* GenericCacheManager.swift */,
-				D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */,
-				D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */,
-			);
-			path = Cache;
 			sourceTree = "<group>";
 		};
 		D7611BE124E3251200B53E61 /* Cache */ = {
@@ -1078,6 +1113,20 @@
 			path = AuxiliarViews;
 			sourceTree = "<group>";
 		};
+		D7D6CAAC24E6FF9E00648118 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D7D6CAC024E703AC00648118 /* UserDefaults+Extensions.swift */,
+				D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */,
+				D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */,
+				D7AF630924E5F528001E1305 /* APICacheManager.swift */,
+				D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */,
+				D7D6CAAD24E6FF9E00648118 /* Storage.h */,
+				D7D6CAAE24E6FF9E00648118 /* Info.plist */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		D7F142CE24D95DD600B910A7 /* App.Weather */ = {
 			isa = PBXGroup;
 			children = (
@@ -1300,6 +1349,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7D6CAA624E6FF9E00648118 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D6CAAF24E6FF9E00648118 /* Storage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7F142C824D95DD600B910A7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1335,6 +1392,7 @@
 				D7B9969224DB1F86000DAFD2 /* PBXTargetDependency */,
 				D751737824DEAA3E004822B2 /* PBXTargetDependency */,
 				D7611BC824E1F7A800B53E61 /* PBXTargetDependency */,
+				D7D6CAB124E6FF9E00648118 /* PBXTargetDependency */,
 			);
 			name = UglySwiftUIApp;
 			productName = GoodToGo;
@@ -1426,6 +1484,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7D6CABF24E7002700648118 /* PBXTargetDependency */,
 				D7B33CB624E52B9B00DA77B2 /* PBXTargetDependency */,
 				D7B33CB424E52B9800DA77B2 /* PBXTargetDependency */,
 			);
@@ -1512,6 +1571,26 @@
 			productReference = D7B9968C24DB1F86000DAFD2 /* API_Keys.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D7D6CAAA24E6FF9E00648118 /* Storage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D6CAB524E6FF9E00648118 /* Build configuration list for PBXNativeTarget "Storage" */;
+			buildPhases = (
+				D7D6CAA624E6FF9E00648118 /* Headers */,
+				D7D6CAA724E6FF9E00648118 /* Sources */,
+				D7D6CAA824E6FF9E00648118 /* Frameworks */,
+				D7D6CAA924E6FF9E00648118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D6CABD24E6FFE000648118 /* PBXTargetDependency */,
+				D7D6CABB24E6FFDA00648118 /* PBXTargetDependency */,
+			);
+			name = Storage;
+			productName = Storage;
+			productReference = D7D6CAAB24E6FF9E00648118 /* Storage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D7F142CC24D95DD600B910A7 /* App.Weather */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7F142D624D95DD700B910A7 /* Build configuration list for PBXNativeTarget "App.Weather" */;
@@ -1576,6 +1655,9 @@
 						CreatedOnToolsVersion = 11.4;
 						LastSwiftMigration = 1140;
 					};
+					D7D6CAAA24E6FF9E00648118 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					D7F142CC24D95DD600B910A7 = {
 						CreatedOnToolsVersion = 11.4;
 						LastSwiftMigration = 1140;
@@ -1606,6 +1688,7 @@
 				D7B9968B24DB1F86000DAFD2 /* API.Keys */,
 				D751737124DEAA3E004822B2 /* Domain */,
 				D7611BC124E1F7A800B53E61 /* DevTools */,
+				D7D6CAAA24E6FF9E00648118 /* Storage */,
 			);
 		};
 /* End PBXProject section */
@@ -1682,6 +1765,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B9969824DB1FE2000DAFD2 /* Keys.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D6CAA924E6FF9E00648118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1815,10 +1905,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7611BCE24E1F7CD00B53E61 /* AppUserDefaults.swift in Sources */,
-				D7AF630C24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift in Sources */,
-				D7AF630E24E5FCE3001E1305 /* CacheUtils.swift in Sources */,
-				D7611BE024E3233600B53E61 /* LiveCacheManager.swift in Sources */,
-				D7AF630A24E5F528001E1305 /* GenericCacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1910,6 +1996,18 @@
 			files = (
 				D751738224E007D9004822B2 /* typelias.swift in Sources */,
 				D7B9969A24DB1FFA000DAFD2 /* APIKeys.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D6CAA724E6FF9E00648118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D6CAC124E703AC00648118 /* UserDefaults+Extensions.swift in Sources */,
+				D7D6CAB924E6FFBE00648118 /* CacheUtils.swift in Sources */,
+				D7D6CAB724E6FFBE00648118 /* APICacheManager.swift in Sources */,
+				D7D6CAB624E6FFBB00648118 /* LiveCacheManager.swift in Sources */,
+				D7D6CAB824E6FFBE00648118 /* GenericKeyValueStorableRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2030,6 +2128,26 @@
 			isa = PBXTargetDependency;
 			target = D7B9968B24DB1F86000DAFD2 /* API.Keys */;
 			targetProxy = D7B9969B24DB2113000DAFD2 /* PBXContainerItemProxy */;
+		};
+		D7D6CAB124E6FF9E00648118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7D6CAAA24E6FF9E00648118 /* Storage */;
+			targetProxy = D7D6CAB024E6FF9E00648118 /* PBXContainerItemProxy */;
+		};
+		D7D6CABB24E6FFDA00648118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7611BC124E1F7A800B53E61 /* DevTools */;
+			targetProxy = D7D6CABA24E6FFDA00648118 /* PBXContainerItemProxy */;
+		};
+		D7D6CABD24E6FFE000648118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D769898124D7252E005F851F /* Extensions */;
+			targetProxy = D7D6CABC24E6FFE000648118 /* PBXContainerItemProxy */;
+		};
+		D7D6CABF24E7002700648118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7D6CAAA24E6FF9E00648118 /* Storage */;
+			targetProxy = D7D6CABE24E7002700648118 /* PBXContainerItemProxy */;
 		};
 		D7F142D324D95DD700B910A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2444,6 +2562,36 @@
 			};
 			name = Release;
 		};
+		D7D6CAB424E6FF9E00648118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G92548JLNB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Storage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.app.storage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D7F142D724D95DD700B910A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2563,6 +2711,14 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7B9969624DB1F86000DAFD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D6CAB524E6FF9E00648118 /* Build configuration list for PBXNativeTarget "Storage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7D6CAB424E6FF9E00648118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
