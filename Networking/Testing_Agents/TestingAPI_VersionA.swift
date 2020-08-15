@@ -5,6 +5,8 @@
 
 import Foundation
 import Combine
+import Storage
+import Domain
 
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
 
@@ -28,19 +30,19 @@ class TestingAPI_VersionA {
 
 extension TestingAPI_VersionA: TestingAPIProtocol {
 
-    func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+    func repos(username: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
         run(reposRequest(username: username), decoder, dumpResponse)
     }
 
-    func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
+    func issues(repo: String, owner: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
         run(issuesRequest(repo: repo, owner: owner), decoder, dumpResponse)
     }
     
-    func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+    func repos(org: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
         run(reposRequest(org: org), decoder, dumpResponse)
     }
     
-    func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError> {
+    func members(org: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.User], APIError> {
         run(membersRequest(org: org), decoder, dumpResponse)
     }
 }

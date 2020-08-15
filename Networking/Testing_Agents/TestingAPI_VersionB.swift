@@ -6,6 +6,7 @@
 import Foundation
 import Combine
 import DevTools
+import Domain
 import Storage
 
 // MARK: - Class & Constants
@@ -25,33 +26,36 @@ public class TestingAPI_VersionB {
 }
 
 extension TestingAPI_VersionB: TestingAPIProtocol {
-    public func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+    
+    public func repos(username: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
         let key = "\(#function)"
         let params = [username]
-        if let cached = APICacheManager.shared.get(key: key, params: params, type: [APIResponseDto.Repository].self) {
-            return Just(cached).mapError { _ in .none }.eraseToAnyPublisher()
-        }
-        let response: AnyPublisher<[APIResponseDto.Repository], APIError> = run(repos(username: username), decoder, dumpResponse)
-        response.sink(receiveCompletion: { (result) in
-            switch result {
-            case .finished: _ = ()
-            case .failure(let error): _ = error
-            }
-        }, receiveValue: { (data) in
+
+        let apiSubscriber           = run(repos(username: username), decoder, dumpResponse) as AnyPublisher<[APIResponseDto.Repository], APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: key, params: params, type: [APIResponseDto.Repository].self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: key, params: params, type: [APIResponseDto.Repository].self, onFail: apiSubscriber)
+
+        apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { (data) in
             APICacheManager.shared.save(data, key: key, params: params, lifeSpam: 5)
         }).store(in: &subscriptions)
-        return response
+
+        switch cache {
+        case .ignoringCache: return apiSubscriber
+        case .cacheElseLoad: return cacheSubscriberFailSafe
+        case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
+        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        }
     }
 
-    public func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
+    public func issues(repo: String, owner: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Issue], APIError> {
         return run(issues(repo: repo, owner: owner), decoder, dumpResponse)
     }
 
-    public func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
+    public func repos(org: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Repository], APIError> {
         return run(repos(org: org), decoder, dumpResponse)
     }
 
-    public func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError> {
+    public func members(org: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.User], APIError> {
         return run(members(org: org), decoder, dumpResponse)
     }
 

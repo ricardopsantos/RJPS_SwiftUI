@@ -51,7 +51,6 @@
 		D7611BDD24E318F500B53E61 /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */; };
 		D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */; };
 		D7611BF724E3314D00B53E61 /* TestingAPI_VersionB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF624E3314D00B53E61 /* TestingAPI_VersionB.swift */; };
-		D7611BF924E33AAA00B53E61 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF824E33AAA00B53E61 /* APIError.swift */; };
 		D7611BFC24E34BC900B53E61 /* SampleAPI_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BFB24E34BC900B53E61 /* SampleAPI_Protocol.swift */; };
 		D7611BFF24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BFE24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift */; };
 		D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */; };
@@ -157,6 +156,10 @@
 		D7D6CAB824E6FFBE00648118 /* GenericKeyValueStorableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */; };
 		D7D6CAB924E6FFBE00648118 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF630D24E5FCE3001E1305 /* CacheUtils.swift */; };
 		D7D6CAC124E703AC00648118 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6CAC024E703AC00648118 /* UserDefaults+Extensions.swift */; };
+		D7D6CAC224E7EA2800648118 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BF824E33AAA00B53E61 /* APIError.swift */; };
+		D7D6CAC624E7EA7500648118 /* Networking.typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6CAC524E7EA7500648118 /* Networking.typelias.swift */; };
+		D7D6CACA24E7EBAB00648118 /* Storage.typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6CAC924E7EBAB00648118 /* Storage.typealias.swift */; };
+		D7D6CACD24E80A7600648118 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D6CACC24E80A7600648118 /* File.swift */; };
 		D7F142D124D95DD600B910A7 /* App_WeatherApp.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F142CF24D95DD600B910A7 /* App_WeatherApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7F142D424D95DD700B910A7 /* App_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F142CD24D95DD600B910A7 /* App_Weather.framework */; };
 		D7F142D524D95DD700B910A7 /* App_Weather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7F142CD24D95DD600B910A7 /* App_Weather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -329,6 +332,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D7D6CAAA24E6FF9E00648118;
 			remoteInfo = Storage;
+		};
+		D7D6CAC324E7EA4200648118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D751737124DEAA3E004822B2;
+			remoteInfo = Domain;
+		};
+		D7D6CAC724E7EB8B00648118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F288F1C20F8089F008A9539 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D751737124DEAA3E004822B2;
+			remoteInfo = Domain;
 		};
 		D7F142D224D95DD700B910A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -548,6 +565,10 @@
 		D7D6CAAD24E6FF9E00648118 /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
 		D7D6CAAE24E6FF9E00648118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7D6CAC024E703AC00648118 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		D7D6CAC524E7EA7500648118 /* Networking.typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.typelias.swift; sourceTree = "<group>"; };
+		D7D6CAC924E7EBAB00648118 /* Storage.typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.typealias.swift; sourceTree = "<group>"; };
+		D7D6CACB24E7F87700648118 /* 1_ADIAgZcK6xNNORagY-OHpw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1_ADIAgZcK6xNNORagY-OHpw.png"; sourceTree = "<group>"; };
+		D7D6CACC24E80A7600648118 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		D7F142CD24D95DD600B910A7 /* App_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F142CF24D95DD600B910A7 /* App_WeatherApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_WeatherApp.h; sourceTree = "<group>"; };
 		D7F142D024D95DD600B910A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -792,9 +813,11 @@
 		D751737324DEAA3E004822B2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D7611BF824E33AAA00B53E61 /* APIError.swift */,
 				D751737424DEAA3E004822B2 /* Domain.h */,
 				D751737524DEAA3E004822B2 /* Info.plist */,
 				D751737D24DEAA5F004822B2 /* Protocols.swift */,
+				D7D6CACC24E80A7600648118 /* File.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -807,6 +830,7 @@
 				D7611BD524E296C900B53E61 /* Clean.README.md */,
 				D78FAC1D24D4045B0069809D /* Combine_I.png */,
 				D78FAC1E24D4045B0069809D /* State_I.png */,
+				D7D6CACB24E7F87700648118 /* 1_ADIAgZcK6xNNORagY-OHpw.png */,
 				D7B33CB724E52F4E00DA77B2 /* Combine.swift */,
 				D769897924D5FED8005F851F /* Recreating */,
 				D7B33CAE24E41EFA00DA77B2 /* CoolStuff */,
@@ -876,7 +900,6 @@
 		D7611BE224E327F800B53E61 /* SimpleNetworkAgents */ = {
 			isa = PBXGroup;
 			children = (
-				D7611BF824E33AAA00B53E61 /* APIError.swift */,
 				D7611BFE24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift */,
 				D7AA23102497F68F00D24169 /* SimpleNetworkAgent_A.swift */,
 				D7611BE524E3284A00B53E61 /* SimpleNetworkAgent_B.swift */,
@@ -936,6 +959,7 @@
 			isa = PBXGroup;
 			children = (
 				D78FAC3924D41C460069809D /* README.md */,
+				D7D6CAC524E7EA7500648118 /* Networking.typelias.swift */,
 				D7611BE224E327F800B53E61 /* SimpleNetworkAgents */,
 				D7611BFD24E34C4E00B53E61 /* Testing_Agents */,
 				D76989A724D72694005F851F /* Networking.h */,
@@ -1116,6 +1140,7 @@
 		D7D6CAAC24E6FF9E00648118 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				D7D6CAC924E7EBAB00648118 /* Storage.typealias.swift */,
 				D7D6CAC024E703AC00648118 /* UserDefaults+Extensions.swift */,
 				D7AF630B24E5FAF3001E1305 /* GenericKeyValueStorableRecord.swift */,
 				D7611BDF24E3233600B53E61 /* LiveCacheManager.swift */,
@@ -1484,6 +1509,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7D6CAC424E7EA4200648118 /* PBXTargetDependency */,
 				D7D6CABF24E7002700648118 /* PBXTargetDependency */,
 				D7B33CB624E52B9B00DA77B2 /* PBXTargetDependency */,
 				D7B33CB424E52B9800DA77B2 /* PBXTargetDependency */,
@@ -1583,6 +1609,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D7D6CAC824E7EB8B00648118 /* PBXTargetDependency */,
 				D7D6CABD24E6FFE000648118 /* PBXTargetDependency */,
 				D7D6CABB24E6FFDA00648118 /* PBXTargetDependency */,
 			);
@@ -1896,7 +1923,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D751738324E007D9004822B2 /* typelias.swift in Sources */,
+				D7D6CACD24E80A7600648118 /* File.swift in Sources */,
 				D751737E24DEAA5F004822B2 /* Protocols.swift in Sources */,
+				D7D6CAC224E7EA2800648118 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1939,11 +1968,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76989CC24D72ABB005F851F /* typelias.swift in Sources */,
-				D7611BF924E33AAA00B53E61 /* APIError.swift in Sources */,
 				D76989B124D726D0005F851F /* SimpleNetworkAgent_A.swift in Sources */,
 				D76989B224D726D3005F851F /* TestingAPI_VersionA.swift in Sources */,
 				D76989B324D726D6005F851F /* SampleAPI_Testing.swift in Sources */,
 				D7611BF724E3314D00B53E61 /* TestingAPI_VersionB.swift in Sources */,
+				D7D6CAC624E7EA7500648118 /* Networking.typelias.swift in Sources */,
 				D7611BFC24E34BC900B53E61 /* SampleAPI_Protocol.swift in Sources */,
 				D7611BFF24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift in Sources */,
 				D7611BF324E32E0B00B53E61 /* SimpleNetworkAgent_B.swift in Sources */,
@@ -2004,6 +2033,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D6CAC124E703AC00648118 /* UserDefaults+Extensions.swift in Sources */,
+				D7D6CACA24E7EBAB00648118 /* Storage.typealias.swift in Sources */,
 				D7D6CAB924E6FFBE00648118 /* CacheUtils.swift in Sources */,
 				D7D6CAB724E6FFBE00648118 /* APICacheManager.swift in Sources */,
 				D7D6CAB624E6FFBB00648118 /* LiveCacheManager.swift in Sources */,
@@ -2148,6 +2178,16 @@
 			isa = PBXTargetDependency;
 			target = D7D6CAAA24E6FF9E00648118 /* Storage */;
 			targetProxy = D7D6CABE24E7002700648118 /* PBXContainerItemProxy */;
+		};
+		D7D6CAC424E7EA4200648118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D751737124DEAA3E004822B2 /* Domain */;
+			targetProxy = D7D6CAC324E7EA4200648118 /* PBXContainerItemProxy */;
+		};
+		D7D6CAC824E7EB8B00648118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D751737124DEAA3E004822B2 /* Domain */;
+			targetProxy = D7D6CAC724E7EB8B00648118 /* PBXContainerItemProxy */;
 		};
 		D7F142D324D95DD700B910A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

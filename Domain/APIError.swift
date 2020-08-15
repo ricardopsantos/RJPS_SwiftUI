@@ -6,7 +6,10 @@
 import Foundation
 
  public enum APIError: Error {
+    case ok // no error
+    case genericError 
+    case cacheNotFound // no error
     case parsing(description: String)
     case network(description: String)
-    case none
+    case failedWithStatusCode(code: Int)
 }

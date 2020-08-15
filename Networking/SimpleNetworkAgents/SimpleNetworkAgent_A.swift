@@ -36,21 +36,25 @@ extension SimpleNetworkAgent_A {
     // 2
     func run<T>(_ request: URLRequest, _ decoder: JSONDecoder, _ dumpResponse: Bool) -> AnyPublisher<Response<T>, APIError> where T: Decodable {
         return session
-           .dataTaskPublisher(for: request) // 3
-           .tryMap { result -> Response<T> in
+            .dataTaskPublisher(for: request) // 3
+            .tryMap { result -> Response<T> in
+                guard let httpResponse = result.response as? HTTPURLResponse, 200...299 ~= httpResponse.statusCode else {
+                    let code = (result.response as! HTTPURLResponse).statusCode
+                    throw APIError.failedWithStatusCode(code: code)
+                }
                 if dumpResponse {
                     print("request: \(request)\n\(String(decoding: result.data, as: UTF8.self))")
                 }
-               let value = try decoder.decode(T.self, from: result.data) // 4
-               return Response(value: value, response: result.response)  // 5
-           }
-           .mapError { error in
-                print(request)
-                print("\(error)")
-                print("\(error.localizedDescription)")
-                return APIError.network(description: error.localizedDescription)
-            }
-           .receive(on: DispatchQueue.main) // 6
-           .eraseToAnyPublisher()           // 7
+                let value = try decoder.decode(T.self, from: result.data) // 4
+                return Response(value: value, response: result.response)  // 5
+        }
+        .mapError { error in
+            print(request)
+            print("\(error)")
+            print("\(error.localizedDescription)")
+            return APIError.network(description: error.localizedDescription)
+        }
+            .receive(on: DispatchQueue.main) // 6
+            .eraseToAnyPublisher()           // 7
     }
 }

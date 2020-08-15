@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct CacheUtils {
+struct CacheUtils {
     static func composedKey(_ key: String, _ keyParams: [String]) -> String {
         return "\(key)_\(parseKeyParams(keyParams))"
     }

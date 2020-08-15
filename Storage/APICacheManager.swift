@@ -4,6 +4,21 @@
 //
 
 import Foundation
+import Combine
+import Domain
+
+public extension Publisher {
+    var genericError: AnyPublisher<Self.Output, Error> {
+        return self.mapError({ (error: Self.Failure) -> Error in return error }).eraseToAnyPublisher()
+    }
+
+    func sampleOperator<T>(source: T) -> AnyPublisher<Self.Output, Self.Failure> where T: Publisher, T.Output: Equatable, T.Failure == Self.Failure {
+        combineLatest(source)
+            .removeDuplicates(by: { (first, second) -> Bool in first.1 == second.1 })
+            .map { first in first.0 }
+        .eraseToAnyPublisher()
+    }
+}
 
 public class APICacheManager {
     private init() {}
@@ -11,26 +26,42 @@ public class APICacheManager {
 
     public func save<T: Codable>(_ some: T, key: String, params: [String], lifeSpam: Int = 5) {
         let toCache = GenericKeyValueStorableRecord(some, key: key, params: params, lifeSpam: lifeSpam)
-        print(toCache.objectResume)
         UserDefaults.standard.save(kvStorableRecord: toCache)
     }
-    
-    public func get<T: Codable>(key: String, params: [String], type: T.Type) -> T? {
-        return get(composedKey: CacheUtils.composedKey(key, params), type: type)
+
+    // Get Sync
+    public func getSync<T: Codable>(key: String, params: [String], type: T.Type) -> T? {
+        let composedKey = CacheUtils.composedKey(key, params)
+        return get(composedKey: composedKey, type: type)
+    }
+
+    public func getAsyncFallible<T: Codable>(key: String, params: [String], type: T.Type) -> AnyPublisher<T, APIError> {
+        if let result = getSync(key: key, params: params, type: type) {
+            return Just(result).mapError { _ in .ok }.eraseToAnyPublisher()
+        } else {
+            return Fail(error: APIError.cacheNotFound).eraseToAnyPublisher()
+        }
+    }
+
+    public func getAsyncFailSafe<T: Codable>(key: String, params: [String], type: T.Type, onFail: AnyPublisher<T, APIError>) -> AnyPublisher<T, APIError> {
+        if let result = getSync(key: key, params: params, type: type) {
+            return Just(result).mapError { _ in .ok }.eraseToAnyPublisher()
+        } else {
+            return onFail
+        }
     }
 
 }
 
 private extension APICacheManager {
+
     func get<T: Codable>(composedKey: String, type: T.Type) -> T? {
-        if let cached = UserDefaults.standard.data(forKey: composedKey) {
-            if let dRes = try? JSONDecoder().decode(GenericKeyValueStorableRecord.self, from: cached), let value = dRes.value {
-                if let data = value.data(using: .utf8) {
-                    if let final = try? JSONDecoder().decode(type, from: data) {
-                        return final
-                    }
-                }
-            }
+        if let cached = UserDefaults.standard.data(forKey: composedKey),
+            let dRes = try? JSONDecoder().decode(GenericKeyValueStorableRecord.self, from: cached),
+            let value = dRes.value,
+            let data = value.data(using: .utf8),
+            let result = try? JSONDecoder().decode(type, from: data) {
+                return result
         }
         return nil
     }

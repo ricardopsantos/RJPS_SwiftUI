@@ -8,7 +8,8 @@ import Combine
 
  private enum XError: Error {
     case parsing(description: String)
-    case none
+    case generic
+    case ok
 }
 
 public class CombineTesting {
@@ -18,12 +19,21 @@ public class CombineTesting {
     var subscriptions: Set<AnyCancellable> = []
 
     public func test_AnyPublisher() {
-        func someString() -> AnyPublisher<String, XError> {
-            return Just("Hi").mapError { _ in .none }.eraseToAnyPublisher()
+        func somethingOK() -> AnyPublisher<String, XError> {
+            let allCool = arc4random_uniform(2) == 0
+            if allCool {
+                return Just("Hi").mapError { _ in .ok }.eraseToAnyPublisher()
+            } else {
+                return Fail(error: XError.generic).eraseToAnyPublisher()
+            }
         }
 
-        let response = someString()
-        response.sink(receiveCompletion: { (result) in
+        func somethingNotOK() -> AnyPublisher<String, XError> {
+            return Fail(error: XError.generic).eraseToAnyPublisher()
+        }
+
+        let responseOK = somethingOK()
+        responseOK.sink(receiveCompletion: { (result) in
             switch result {
             case .finished: _ = ()
             case .failure(let error): _ = error

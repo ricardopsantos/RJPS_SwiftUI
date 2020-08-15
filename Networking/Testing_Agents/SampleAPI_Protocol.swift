@@ -5,12 +5,13 @@
 
 import Foundation
 import Combine
+import Domain
 
 public protocol TestingAPIProtocol {
-    func repos(username: String) -> AnyPublisher<[APIResponseDto.Repository], APIError>
-    func issues(repo: String, owner: String) -> AnyPublisher<[APIResponseDto.Issue], APIError>
-    func repos(org: String) -> AnyPublisher<[APIResponseDto.Repository], APIError>
-    func members(org: String) -> AnyPublisher<[APIResponseDto.User], APIError>
+    func repos(username: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Repository], APIError>
+    func issues(repo: String, owner: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Issue], APIError>
+    func repos(org: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Repository], APIError>
+    func members(org: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.User], APIError>
 }
 
 public struct APIResponseDto {

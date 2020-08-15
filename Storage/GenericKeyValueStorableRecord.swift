@@ -58,12 +58,12 @@ public class GenericKeyValueStorableRecord: Codable {
     }
 
     public var value: String? {
-        print(objectResume)
         if Self.referenceDate < self.expireDate {
             return object
+        } else {
+            //print("expired!")
+            return nil
         }
-        // Object expired
-        return nil
     }
 }
 
