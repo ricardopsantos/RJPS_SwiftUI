@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D769898124D7252E005F851F"
-               BuildableName = "Base_Extensions.framework"
-               BlueprintName = "Base.Extensions"
+               BuildableName = "Utils_Extensions.framework"
+               BlueprintName = "Utils.Extensions"
                ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D769898124D7252E005F851F"
-            BuildableName = "Base_Extensions.framework"
-            BlueprintName = "Base.Extensions"
+            BuildableName = "Utils_Extensions.framework"
+            BlueprintName = "Utils.Extensions"
             ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

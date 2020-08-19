@@ -55,8 +55,8 @@
 		D7611BFF24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BFE24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift */; };
 		D769897C24D69A5B005F851F /* VisualDocs_Caixa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */; };
 		D769898624D7252E005F851F /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D769898424D7252E005F851F /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D769898924D7252E005F851F /* Base_Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D769898224D7252E005F851F /* Base_Extensions.framework */; };
-		D769898A24D7252E005F851F /* Base_Extensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D769898224D7252E005F851F /* Base_Extensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D769898924D7252E005F851F /* Utils_Extensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D769898224D7252E005F851F /* Utils_Extensions.framework */; };
+		D769898A24D7252E005F851F /* Utils_Extensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D769898224D7252E005F851F /* Utils_Extensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D769898D24D72555005F851F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */; };
 		D769898E24D72555005F851F /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */; };
 		D769898F24D72555005F851F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */; };
@@ -438,7 +438,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D769898A24D7252E005F851F /* Base_Extensions.framework in Embed Frameworks */,
+				D769898A24D7252E005F851F /* Utils_Extensions.framework in Embed Frameworks */,
 				D769899D24D72582005F851F /* Utils_Factory.framework in Embed Frameworks */,
 				D7611BCA24E1F7A800B53E61 /* DevTools.framework in Embed Frameworks */,
 				D7F142D524D95DD700B910A7 /* App_Weather.framework in Embed Frameworks */,
@@ -514,7 +514,7 @@
 		D7611BFE24E3E80000B53E61 /* SimpleNetworkAgentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentProtocol.swift; sourceTree = "<group>"; };
 		D769897A24D5FEEA005F851F /* VisualDocs_Caixa.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualDocs_Caixa.JPG; sourceTree = "<group>"; };
 		D769897B24D69A5B005F851F /* VisualDocs_Caixa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Caixa.swift; sourceTree = "<group>"; };
-		D769898224D7252E005F851F /* Base_Extensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base_Extensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D769898224D7252E005F851F /* Utils_Extensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils_Extensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D769898424D7252E005F851F /* Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extensions.h; sourceTree = "<group>"; };
 		D769898524D7252E005F851F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D769899524D72582005F851F /* Utils_Factory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils_Factory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -673,7 +673,7 @@
 				D76989AC24D72694005F851F /* Networking.framework in Frameworks */,
 				D7D6CAB224E6FF9E00648118 /* Utils_Storage.framework in Frameworks */,
 				D76989C324D72A7D005F851F /* Base_Designables.framework in Frameworks */,
-				D769898924D7252E005F851F /* Base_Extensions.framework in Frameworks */,
+				D769898924D7252E005F851F /* Utils_Extensions.framework in Frameworks */,
 				D7B9969324DB1F86000DAFD2 /* Utils_APIKeys.framework in Frameworks */,
 				D769899C24D72582005F851F /* Utils_Factory.framework in Frameworks */,
 				D7611BC924E1F7A800B53E61 /* DevTools.framework in Frameworks */,
@@ -789,10 +789,10 @@
 				D755B14E24D5E68B00C6215C /* Documentation */,
 				D7611BC324E1F7A800B53E61 /* DevTools */,
 				9F288F2620F8089F008A9539 /* RJPS_SwiftUI */,
-				D769898324D7252E005F851F /* Base.Extensions */,
 				D76989BD24D72A7D005F851F /* Base.Designables */,
 				D751737324DEAA3E004822B2 /* Base.Domain */,
 				D76989A624D72694005F851F /* Networking */,
+				D769898324D7252E005F851F /* Utils.Extensions */,
 				D7B6DF4624ED695D00A94EE5 /* Utils */,
 				D7D6CAAC24E6FF9E00648118 /* Utils.Storage */,
 				D769899624D72582005F851F /* Utils.Factory */,
@@ -807,7 +807,7 @@
 			isa = PBXGroup;
 			children = (
 				9FE143F421AF2F520026BDFC /* Active.app */,
-				D769898224D7252E005F851F /* Base_Extensions.framework */,
+				D769898224D7252E005F851F /* Utils_Extensions.framework */,
 				D769899524D72582005F851F /* Utils_Factory.framework */,
 				D76989A524D72694005F851F /* Networking.framework */,
 				D76989BC24D72A7D005F851F /* Base_Designables.framework */,
@@ -1009,9 +1009,11 @@
 			path = Recreating;
 			sourceTree = "<group>";
 		};
-		D769898324D7252E005F851F /* Base.Extensions */ = {
+		D769898324D7252E005F851F /* Utils.Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D769898424D7252E005F851F /* Extensions.h */,
+				D76989B524D72747005F851F /* UIScreen+Extensions.swift */,
 				D7B6DF6E24ED6CE100A94EE5 /* README.md */,
 				D79B2EC324DDA569009B84A4 /* Array+Filtering.swift */,
 				D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */,
@@ -1020,8 +1022,6 @@
 				D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */,
 				D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */,
 				D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */,
-				D76989B524D72747005F851F /* UIScreen+Extensions.swift */,
-				D769898424D7252E005F851F /* Extensions.h */,
 				D769898524D7252E005F851F /* Info.plist */,
 				D7611BBB24E1F0B700B53E61 /* String+Extensions.swift */,
 				D7B6DF6124ED6A7000A94EE5 /* Locale+Extensions.swift */,
@@ -1032,7 +1032,7 @@
 				D7B6DF7924ED701A00A94EE5 /* Subscribers+Extensions.swift */,
 				D7B6DF7B24ED702400A94EE5 /* Error+Extensions.swift */,
 			);
-			path = Base.Extensions;
+			path = Utils.Extensions;
 			sourceTree = "<group>";
 		};
 		D769899624D72582005F851F /* Utils.Factory */ = {
@@ -1575,9 +1575,9 @@
 			productReference = D7611BC224E1F7A800B53E61 /* DevTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D769898124D7252E005F851F /* Base.Extensions */ = {
+		D769898124D7252E005F851F /* Utils.Extensions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D769898C24D7252E005F851F /* Build configuration list for PBXNativeTarget "Base.Extensions" */;
+			buildConfigurationList = D769898C24D7252E005F851F /* Build configuration list for PBXNativeTarget "Utils.Extensions" */;
 			buildPhases = (
 				D769897D24D7252E005F851F /* Headers */,
 				D769897E24D7252E005F851F /* Sources */,
@@ -1588,9 +1588,9 @@
 			);
 			dependencies = (
 			);
-			name = Base.Extensions;
+			name = Utils.Extensions;
 			productName = Extensions;
-			productReference = D769898224D7252E005F851F /* Base_Extensions.framework */;
+			productReference = D769898224D7252E005F851F /* Utils_Extensions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D769899424D72582005F851F /* Utils.Factory */ = {
@@ -1848,10 +1848,10 @@
 				D7A7183F24D8BBFB00EC53FB /* App.HourlyChallenge */,
 				D7F142CC24D95DD600B910A7 /* App.Weather */,
 				D751737124DEAA3E004822B2 /* Base.Domain */,
-				D769898124D7252E005F851F /* Base.Extensions */,
 				D76989BB24D72A7D005F851F /* Base.Designables */,
 				D7611BC124E1F7A800B53E61 /* DevTools */,
 				D76989A424D72694005F851F /* Networking */,
+				D769898124D7252E005F851F /* Utils.Extensions */,
 				D7D6CAAA24E6FF9E00648118 /* Utils.Storage */,
 				D769899424D72582005F851F /* Utils.Factory */,
 				D76989D224D72C0A005F851F /* Utils.UIKitRepresentables */,
@@ -2260,7 +2260,7 @@
 		};
 		D769898824D7252E005F851F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D769898724D7252E005F851F /* PBXContainerItemProxy */;
 		};
 		D769899B24D72582005F851F /* PBXTargetDependency */ = {
@@ -2285,17 +2285,17 @@
 		};
 		D76989E124D734F3005F851F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D76989E024D734F3005F851F /* PBXContainerItemProxy */;
 		};
 		D76989E324D734F7005F851F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D76989E224D734F7005F851F /* PBXContainerItemProxy */;
 		};
 		D76989E524D734FC005F851F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D76989E424D734FC005F851F /* PBXContainerItemProxy */;
 		};
 		D7A7184624D8BBFB00EC53FB /* PBXTargetDependency */ = {
@@ -2310,7 +2310,7 @@
 		};
 		D7B33CB624E52B9B00DA77B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D7B33CB524E52B9B00DA77B2 /* PBXContainerItemProxy */;
 		};
 		D7B6DF4B24ED695D00A94EE5 /* PBXTargetDependency */ = {
@@ -2320,7 +2320,7 @@
 		};
 		D7B6DF6424ED6AAA00A94EE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D7B6DF6324ED6AAA00A94EE5 /* PBXContainerItemProxy */;
 		};
 		D7B6DF6624ED6AAE00A94EE5 /* PBXTargetDependency */ = {
@@ -2360,7 +2360,7 @@
 		};
 		D7D6CABD24E6FFE000648118 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D7D6CABC24E6FFE000648118 /* PBXContainerItemProxy */;
 		};
 		D7D6CABF24E7002700648118 /* PBXTargetDependency */ = {
@@ -2385,12 +2385,12 @@
 		};
 		D7F1432424D95F3900B910A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D7F1432324D95F3900B910A7 /* PBXContainerItemProxy */;
 		};
 		D7F1433024D9E9AB00B910A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D769898124D7252E005F851F /* Base.Extensions */;
+			target = D769898124D7252E005F851F /* Utils.Extensions */;
 			targetProxy = D7F1432F24D9E9AB00B910A7 /* PBXContainerItemProxy */;
 		};
 		D7F1433224D9E9D800B910A7 /* PBXTargetDependency */ = {
@@ -2584,7 +2584,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Base.Extensions/Info.plist;
+				INFOPLIST_FILE = Utils.Extensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2918,7 +2918,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D769898C24D7252E005F851F /* Build configuration list for PBXNativeTarget "Base.Extensions" */ = {
+		D769898C24D7252E005F851F /* Build configuration list for PBXNativeTarget "Utils.Extensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D769898B24D7252E005F851F /* Release */,
