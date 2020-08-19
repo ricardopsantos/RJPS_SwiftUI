@@ -10,7 +10,7 @@ import Combine
 //
 import Utils_Extensions
 import Utils_Factory
-import Utils_UIKitRepresentables
+import Utils_Designables
 
 // MARK: Tab1_View
 

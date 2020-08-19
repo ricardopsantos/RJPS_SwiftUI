@@ -1,4 +1,10 @@
-# DevTools
+# Base.Domain
 
-__Should not depend on any framework__
+## About
+
+Developer helping tools like logs, etc
+
+## Allowed Dependencies
+
+__NONE__
 

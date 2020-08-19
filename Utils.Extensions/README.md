@@ -1,6 +1,12 @@
-# Extensions
+# Utils.Extensions
+
+## About
+
+Extensions
 
 ## Allowed Dependencies
 
-__None__
+* DevTools
+* Utils.*
+
 

@@ -1,3 +1,11 @@
 # Utils
 
-__Should not depend on any framework__
+## About
+
+Generic utilities
+
+## Allowed Dependencies
+
+* DevTools
+* Utils.*
+

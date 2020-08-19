@@ -1,5 +1,11 @@
-# Domain
+# Base.Domain
+
+## About
+
+Protocols and value types that every mobile app should have
 
 ## Allowed Dependencies
 
-__None__
+* DevTools
+* Utils.*
+

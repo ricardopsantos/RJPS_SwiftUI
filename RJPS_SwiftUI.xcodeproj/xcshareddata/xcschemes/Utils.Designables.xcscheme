@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D76989D224D72C0A005F851F"
-               BuildableName = "Utils_UIKitRepresentables.framework"
-               BlueprintName = "Utils.UIKitRepresentables"
+               BlueprintIdentifier = "D76989BB24D72A7D005F851F"
+               BuildableName = "Utils_Designables.framework"
+               BlueprintName = "Utils.Designables"
                ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D76989D224D72C0A005F851F"
-            BuildableName = "Utils_UIKitRepresentables.framework"
-            BlueprintName = "Utils.UIKitRepresentables"
+            BlueprintIdentifier = "D76989BB24D72A7D005F851F"
+            BuildableName = "Utils_Designables.framework"
+            BlueprintName = "Utils.Designables"
             ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

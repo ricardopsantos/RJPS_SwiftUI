@@ -5,10 +5,14 @@
 
 import Foundation
 import SwiftUI
+//
+import Utils
+//
+import App_Weather_Core
 
 public extension VM {
     struct DailyWeatherRowViewModel: Identifiable {
-        private let item: E.WeeklyForecastEntity.Item
+        private let item: WeeklyForecastEntity.Item
         
         public var id: String { return day + temperature + title }
         var day: String { return Formatters.dayFormatter.string(from: item.date) }
@@ -26,7 +30,7 @@ public extension VM {
             return description
         }
         
-        init(item: E.WeeklyForecastEntity.Item) {
+        init(item: WeeklyForecastEntity.Item) {
             self.item = item
         }
     }

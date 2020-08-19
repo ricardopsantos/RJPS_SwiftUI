@@ -4,6 +4,5 @@
 //
 
 import Foundation
-import Base_Domain
 
 //public typealias APIError = Domain.APIError

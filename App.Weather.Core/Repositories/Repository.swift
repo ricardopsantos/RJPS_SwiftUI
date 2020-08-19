@@ -9,8 +9,7 @@ import SwiftUI
 import Combine
 import MessageUI
 //
-import Base_Designables
-import Utils_UIKitRepresentables
+import Utils_Designables
 import DevTools
 
 private final class AppDefaultsRepository: ObservableObject {
@@ -25,10 +24,10 @@ private final class AppDefaultsRepository: ObservableObject {
     var lastCity: String { willSet { objectWillChange.send() } }
 }
 
-class Repository: ObservableObject, RepositoryProtocol {
+public class Repository: ObservableObject, RepositoryProtocol {
     public init() { }
 
-    var lastCity: String {
+    public var lastCity: String {
         get { return AppDefaultsRepository.shared.lastCity }
         set { AppDefaultsRepository.shared.lastCity = newValue }
     }

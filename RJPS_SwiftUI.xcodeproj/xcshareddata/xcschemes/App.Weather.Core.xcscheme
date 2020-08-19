@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D76989BB24D72A7D005F851F"
-               BuildableName = "Base_Designables.framework"
-               BlueprintName = "Base.Designables"
+               BlueprintIdentifier = "D774F41524EDA1DC00D01370"
+               BuildableName = "App_Weather_Core.framework"
+               BlueprintName = "App.Weather.Core"
                ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D76989BB24D72A7D005F851F"
-            BuildableName = "Base_Designables.framework"
-            BlueprintName = "Base.Designables"
+            BlueprintIdentifier = "D774F41524EDA1DC00D01370"
+            BuildableName = "App_Weather_Core.framework"
+            BlueprintName = "App.Weather.Core"
             ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

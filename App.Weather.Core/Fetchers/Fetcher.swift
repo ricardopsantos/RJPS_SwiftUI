@@ -5,7 +5,10 @@
 
 import Foundation
 import Combine
+//
 import Network
+//
+import Base_Domain
 
 public class Fetcher {
     private let session: URLSession
@@ -15,21 +18,21 @@ public class Fetcher {
 }
 
 extension Fetcher: APIProtocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<E.WeeklyForecastEntity, E.WeatherErrorEntity> {
+    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeeklyForecastEntity, APIError> {
         return forecast(with: API.makeWeeklyForecastComponents(withCity: city))
     }
 
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<E.CurrentWeatherForecastEntity, E.WeatherErrorEntity> {
+    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<CurrentWeatherForecastEntity, APIError> {
         return forecast(with: API.makeCurrentDayForecastComponents(withCity: city))
     }
 }
 
 fileprivate extension Fetcher {
-     func forecast<T>(with components: URLComponents) -> AnyPublisher<T, E.WeatherErrorEntity> where T: Decodable {
+     func forecast<T>(with components: URLComponents) -> AnyPublisher<T, APIError> where T: Decodable {
         // Try to create an instance of URL from the URLComponents. If this fails, return an error
         // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.
         guard let url = components.url else {
-            let error = E.WeatherErrorEntity.network(description: "Couldn't create URL")
+            let error = APIError.network(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
         }
 
@@ -50,7 +53,7 @@ fileprivate extension Fetcher {
             .eraseToAnyPublisher()
     }
 
-    func decode<T>(_ data: Data) -> AnyPublisher<T, E.WeatherErrorEntity> where T: Decodable {
+    func decode<T>(_ data: Data) -> AnyPublisher<T, APIError> where T: Decodable {
         //let str = String(decoding: data, as: UTF8.self)
         //
         let decoder = JSONDecoder()

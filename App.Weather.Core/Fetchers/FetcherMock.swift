@@ -9,6 +9,8 @@ import Foundation
 import Combine
 //
 import Utils_Extensions
+//
+import Base_Domain
 
 public class FetcherMock {
     private let session: URLSession
@@ -18,22 +20,22 @@ public class FetcherMock {
 }
 
 extension FetcherMock: APIProtocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<E.WeeklyForecastEntity, E.WeatherErrorEntity> {
+    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeeklyForecastEntity, APIError> {
         let data = Data(weeklyWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data)
-            .decode(type: E.WeeklyForecastEntity.self, decoder: decoder)
+            .decode(type: WeeklyForecastEntity.self, decoder: decoder)
             .mapError { error in
                 os_log("Error : \(error)", type: .error)
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<E.CurrentWeatherForecastEntity, E.WeatherErrorEntity> {
+    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<CurrentWeatherForecastEntity, APIError> {
         let data = Data(currentWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        return Just(data).decode(type: E.CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
+        return Just(data).decode(type: CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
             os_log("Error : \(error)", type: .error)
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()

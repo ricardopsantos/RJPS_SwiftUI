@@ -8,6 +8,8 @@ import Combine
 //
 import Utils_Extensions
 import Utils
+//
+import App_Weather_Core
 
 // Make WeeklyWeatherViewModel conform to ObservableObject and Identifiable.
 // Conforming to these means that the WeeklyWeatherViewModel‘s properties can

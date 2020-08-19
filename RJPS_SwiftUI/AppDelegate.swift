@@ -9,6 +9,7 @@ import Combine
 //
 import App_Weather
 import App_HourlyChallenge
+//
 import Networking
 import Utils_Extensions
 
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //SampleAPI_Testing.test()
         //CombineTesting.shared.test_AnyPublisher()
         //CombineTesting.shared.testing_CurrentValueSubject()
-        CombineTesting.shared.observe_UserDefaults()
+        //CombineTesting.shared.observe_UserDefaults()
         //CombineTesting.shared.testing_handleEvents()
 
         let targetApp: TargetApp = .weather
