@@ -8,6 +8,6 @@ import UIKit
 import SwiftUI
 import Combine
 
-public protocol RepositoryProtocol {
+public protocol RepositoryWeatherProtocol {
     var lastCity: String { get set }
 }

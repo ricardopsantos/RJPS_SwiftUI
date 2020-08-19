@@ -28,15 +28,15 @@ public class WeeklyWeatherViewModel: ObservableObject {
     // that publisher and redraws the screen when you change the property.
     @Published var dataSource: [VM.DailyWeatherRowViewModel] = []
 
-    private let fetcher: APIProtocol
-    private var repository: RepositoryProtocol
+    private let fetcher: APIWeatherProtocol
+    private var repository: RepositoryWeatherProtocol
 
     // Think of disposables as a collection of references to requests.
     // Without keeping these references, the network requests you’ll make won’t be
     // kept alive, preventing you from getting responses from the server.
     private var cancelBag = CancelBag()
 
-    public init(fetcher: APIProtocol, repository: RepositoryProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
+    public init(fetcher: APIWeatherProtocol, repository: RepositoryWeatherProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
         self.fetcher = fetcher
         self.repository = repository
 

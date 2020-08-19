@@ -10,24 +10,24 @@ import Network
 //
 import Base_Domain
 
-public class Fetcher {
+public class FetcherWeather {
     private let session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
 }
 
-extension Fetcher: APIProtocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeeklyForecastEntity, APIError> {
-        return forecast(with: API.makeWeeklyForecastComponents(withCity: city))
+extension FetcherWeather: APIWeatherProtocol {
+    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeatherDto.WeeklyForecastEntity, APIError> {
+        return forecast(with: APIWeather.makeWeeklyForecastComponents(withCity: city))
     }
 
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<CurrentWeatherForecastEntity, APIError> {
-        return forecast(with: API.makeCurrentDayForecastComponents(withCity: city))
+    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<WeatherDto.CurrentWeatherForecastEntity, APIError> {
+        return forecast(with: APIWeather.makeCurrentDayForecastComponents(withCity: city))
     }
 }
 
-fileprivate extension Fetcher {
+fileprivate extension FetcherWeather {
      func forecast<T>(with components: URLComponents) -> AnyPublisher<T, APIError> where T: Decodable {
         // Try to create an instance of URL from the URLComponents. If this fails, return an error
         // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.

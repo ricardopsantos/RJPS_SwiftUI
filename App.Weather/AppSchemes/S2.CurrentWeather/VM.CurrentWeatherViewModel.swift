@@ -16,10 +16,10 @@ public extension VM {
         @State var isAnimating: Bool = true
         let city: String
 
-        private let fetcher: APIProtocol
+        private let fetcher: APIWeatherProtocol
         private var cancelBag = CancelBag()
 
-        init(city: String, weatherFetcher: APIProtocol) {
+        init(city: String, weatherFetcher: APIWeatherProtocol) {
             self.fetcher = weatherFetcher
             self.city = city
         }

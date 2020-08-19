@@ -11,7 +11,7 @@ import App_Weather_Core
 
 public extension VM {
     struct CurrentWeatherRowViewModel {
-        private let item: CurrentWeatherForecastEntity
+        private let item: WeatherDto.CurrentWeatherForecastEntity
         
         var temperature: String {
             return String(format: "%.1f", item.main.temperature)
@@ -33,7 +33,7 @@ public extension VM {
             return CLLocationCoordinate2D.init(latitude: item.coord.lat, longitude: item.coord.lon)
         }
         
-        init(item: CurrentWeatherForecastEntity) {
+        init(item: WeatherDto.CurrentWeatherForecastEntity) {
             self.item = item
         }
     }

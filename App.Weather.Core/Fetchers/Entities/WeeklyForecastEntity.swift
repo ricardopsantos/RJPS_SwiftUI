@@ -5,38 +5,42 @@
 
 import Foundation
 
-public struct WeeklyForecastEntity: Codable {
-    public let list: [Item]
+public extension WeatherDto {
 
-    public struct Item: Codable {
-        public let date: Date
-        public let main: MainClass
-        public let weather: [Weather]
+    struct WeeklyForecastEntity: Codable {
+        public let list: [Item]
 
-        enum CodingKeys: String, CodingKey {
-            case date = "dt"
-            case main
-            case weather
+        public struct Item: Codable {
+            public let date: Date
+            public let main: MainClass
+            public let weather: [Weather]
+
+            enum CodingKeys: String, CodingKey {
+                case date = "dt"
+                case main
+                case weather
+            }
+        }
+
+        public struct MainClass: Codable {
+            public let temp: Double
+        }
+
+        public struct Weather: Codable {
+            public let main: MainEnum
+            public let weatherDescription: String
+
+            enum CodingKeys: String, CodingKey {
+                case main
+                case weatherDescription = "description"
+            }
+        }
+
+        public enum MainEnum: String, Codable {
+            case clear = "Clear"
+            case clouds = "Clouds"
+            case rain = "Rain"
         }
     }
 
-    public struct MainClass: Codable {
-        public let temp: Double
-    }
-
-    public struct Weather: Codable {
-        public let main: MainEnum
-        public let weatherDescription: String
-
-        enum CodingKeys: String, CodingKey {
-            case main
-            case weatherDescription = "description"
-        }
-    }
-
-    public enum MainEnum: String, Codable {
-        case clear = "Clear"
-        case clouds = "Clouds"
-        case rain = "Rain"
-    }
 }

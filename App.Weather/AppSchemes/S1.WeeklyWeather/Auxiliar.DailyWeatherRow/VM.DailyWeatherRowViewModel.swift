@@ -12,7 +12,7 @@ import App_Weather_Core
 
 public extension VM {
     struct DailyWeatherRowViewModel: Identifiable {
-        private let item: WeeklyForecastEntity.Item
+        private let item: WeatherDto.WeeklyForecastEntity.Item
         
         public var id: String { return day + temperature + title }
         var day: String { return Formatters.dayFormatter.string(from: item.date) }
@@ -30,7 +30,7 @@ public extension VM {
             return description
         }
         
-        init(item: WeeklyForecastEntity.Item) {
+        init(item: WeatherDto.WeeklyForecastEntity.Item) {
             self.item = item
         }
     }

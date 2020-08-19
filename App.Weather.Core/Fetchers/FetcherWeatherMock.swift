@@ -12,30 +12,30 @@ import Utils_Extensions
 //
 import Base_Domain
 
-public class FetcherMock {
+public class FetcherWeatherMock {
     private let session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
 }
 
-extension FetcherMock: APIProtocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeeklyForecastEntity, APIError> {
+extension FetcherWeatherMock: APIWeatherProtocol {
+    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeatherDto.WeeklyForecastEntity, APIError> {
         let data = Data(weeklyWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data)
-            .decode(type: WeeklyForecastEntity.self, decoder: decoder)
+            .decode(type: WeatherDto.WeeklyForecastEntity.self, decoder: decoder)
             .mapError { error in
                 os_log("Error : \(error)", type: .error)
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<CurrentWeatherForecastEntity, APIError> {
+    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<WeatherDto.CurrentWeatherForecastEntity, APIError> {
         let data = Data(currentWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        return Just(data).decode(type: CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
+        return Just(data).decode(type: WeatherDto.CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
             os_log("Error : \(error)", type: .error)
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()

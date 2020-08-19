@@ -8,7 +8,7 @@ import Combine
 //
 import Utils_Storage
 
-public struct API {
+public struct APIWeather {
     
     public struct Constants {
         static let scheme = "https"
@@ -20,14 +20,14 @@ public struct API {
     public static func makeWeeklyForecastComponents(withCity city: String) -> URLComponents {
         // https://api.openweathermap.org/data/2.5/forecast?q=Lisboa&mode=json&units=metric&APPID=XXXXXXXXX
         var components = URLComponents()
-        components.scheme = API.Constants.scheme
-        components.host   = API.Constants.host
-        components.path   = API.Constants.path + "/forecast"
+        components.scheme = Self.Constants.scheme
+        components.host   = Self.Constants.host
+        components.path   = Self.Constants.path + "/forecast"
         components.queryItems = [
             URLQueryItem(name: "q", value: city),
             URLQueryItem(name: "mode", value: "json"),
             URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "APPID", value: API.Constants.key)
+            URLQueryItem(name: "APPID", value: Self.Constants.key)
         ]
         return components
     }
@@ -35,14 +35,14 @@ public struct API {
     public static func makeCurrentDayForecastComponents(withCity city: String) -> URLComponents {
         // https://api.openweathermap.org/data/2.5/weather?q=Lisboa&mode=json&units=metric&APPID=XXXXXXXXX
         var components    = URLComponents()
-        components.scheme = API.Constants.scheme
-        components.host   = API.Constants.host
-        components.path   = API.Constants.path + "/weather"
+        components.scheme = Self.Constants.scheme
+        components.host   = Self.Constants.host
+        components.path   = Self.Constants.path + "/weather"
         components.queryItems = [
             URLQueryItem(name: "q", value: city),
             URLQueryItem(name: "mode", value: "json"),
             URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "APPID", value: API.Constants.key)
+            URLQueryItem(name: "APPID", value: Self.Constants.key)
         ]
         return components
     }
