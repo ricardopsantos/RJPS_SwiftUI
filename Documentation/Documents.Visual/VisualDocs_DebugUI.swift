@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import Extensions
+import Base_Extensions
 
 var baseView: some View {
     Text("Hello").bold().font(.largeTitle).frame(width: 100, height: 100, alignment: .center).background(Color(UIColor.lightGray))

@@ -4,7 +4,7 @@
 //
 
 import SwiftUI
-import Domain
+import Base_Domain
 
 public struct CurrentWeatherViewBuilder: BuilderProtocol {
     private init() { }

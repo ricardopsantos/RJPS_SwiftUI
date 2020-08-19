@@ -7,6 +7,8 @@ import Foundation
 import Combine
 import SwiftUI
 import UIKit
+//
+import Utils
 
 public class DayDetailsViewModel: ObservableObject {
 
@@ -16,7 +18,7 @@ public class DayDetailsViewModel: ObservableObject {
     private let weekDay: Int
     private let timeZone: Int
 
-    private var disposables = Set<AnyCancellable>()
+    private var cancelBag = CancelBag()
 
     @Published var taskNow = ""
     @Published var day = ""
@@ -47,7 +49,7 @@ private extension DayDetailsViewModel {
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
             self.taskNow = value
-        }).store(in: &disposables)
+        }).store(in: cancelBag)
     }
 
     private func day(weekDay: Int) {
@@ -59,7 +61,7 @@ private extension DayDetailsViewModel {
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
             self.day = value
-        }).store(in: &disposables)
+        }).store(in: cancelBag)
     }
 
 }

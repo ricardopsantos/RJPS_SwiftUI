@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import Domain
+import Base_Domain
 
 public struct DashboardViewBuilder: BuilderProtocol {
     private init() { }

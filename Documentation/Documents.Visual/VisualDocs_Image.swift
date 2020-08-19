@@ -8,8 +8,8 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import Extensions
-import Factory
+import Base_Extensions
+import Utils_Factory
 
 struct VisualDocs_Image: View {
     var body : some View {

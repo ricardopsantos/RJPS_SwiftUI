@@ -5,7 +5,9 @@
 
 import SwiftUI
 import Combine
-import Extensions
+import Base_Extensions
+//
+import Utils
 
 // Make WeeklyWeatherViewModel conform to ObservableObject and Identifiable.
 // Conforming to these means that the WeeklyWeatherViewModel‘s properties can
@@ -30,7 +32,7 @@ public class WeeklyWeatherViewModel: ObservableObject {
     // Think of disposables as a collection of references to requests.
     // Without keeping these references, the network requests you’ll make won’t be
     // kept alive, preventing you from getting responses from the server.
-    private var disposables = Set<AnyCancellable>()
+    private var cancelBag = CancelBag()
 
     public init(fetcher: APIProtocol, repository: RepositoryProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
         self.fetcher = fetcher
@@ -39,12 +41,12 @@ public class WeeklyWeatherViewModel: ObservableObject {
         let observer = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
 
         // 1 - call fetchWeather
-        _ = observer.sink(receiveValue: fetchWeather(forCity:)).store(in: &disposables)
+        _ = observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
 
         // 2 - Update AppDefaultsRepository.shared.lastCity on change
         _ = observer.sink(receiveValue: { [weak self] (some) in
             self?.repository.lastCity = some
-        }).store(in: &disposables)
+        }).store(in: cancelBag)
 
         // After the observers, so that when we change the value of [city] the app will react
         // and refresh
@@ -95,7 +97,7 @@ private extension WeeklyWeatherViewModel {
             })
             // Finally, add the cancellable reference to the disposables set. As previously
             // mentioned, without keeping this reference alive, the network publisher will terminate immediately.
-            .store(in: &disposables)
+            .store(in: cancelBag)
     }
 }
 

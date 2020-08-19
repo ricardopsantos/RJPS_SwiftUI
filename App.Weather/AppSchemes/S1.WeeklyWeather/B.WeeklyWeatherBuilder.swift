@@ -4,8 +4,8 @@
 //
 
 import SwiftUI
-import API_Keys
-import Domain
+import Utils_APIKeys
+import Base_Domain
 
 public struct WeeklyWeatherBuilder: BuilderProtocol {
     private init() { }

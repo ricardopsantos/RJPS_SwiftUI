@@ -5,6 +5,8 @@
 
 import SwiftUI
 import Combine
+//
+import Utils
 
 public extension VM {
     class CurrentWeatherViewModel: ObservableObject {
@@ -14,7 +16,7 @@ public extension VM {
         let city: String
 
         private let fetcher: APIProtocol
-        private var disposables = Set<AnyCancellable>()
+        private var cancelBag = CancelBag()
 
         init(city: String, weatherFetcher: APIProtocol) {
             self.fetcher = weatherFetcher
@@ -37,7 +39,7 @@ public extension VM {
                         guard let self = self else { return }
                         self.dataSource = weather
                 })
-                .store(in: &disposables)
+                .store(in: cancelBag)
         }
     }
 }

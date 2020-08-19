@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import Extensions
+import Base_Extensions
 
 public class FetcherMock {
     private let session: URLSession

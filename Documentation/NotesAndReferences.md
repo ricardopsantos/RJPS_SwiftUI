@@ -77,6 +77,24 @@ class SampleUserSettings: ObservableObject {
 }
 ```
 
+### `CurrentValueSubject`
+
+As on [Apple Docs](https://developer.apple.com/documentation/combine/currentvaluesubject) : _A subject that wraps a single value and publishes a new element whenever the value changes._
+
+```swift
+let var1 = CurrentValueSubject<[String], Never>([])
+let var2 = CurrentValueSubject<Int, Never>(0)
+let var3 = CurrentValueSubject<Date?, Never>(nil)
+
+var1.sink { print("# var1 : \($0)") }.store(in: &subscriptions)
+var2.sink { print("# var2 : \($0)") }.store(in: &subscriptions)
+var3.sink { print("# var3 : \($0)") }.store(in: &subscriptions)
+
+var1.send(["test", "test1"])
+var2.send(1)
+var3.send(Date())
+```
+
 ### `@Published`
 
 As on [Apple Docs](https://developer.apple.com/documentation/combine/published) : _A type that publishes a property marked with an attribute._

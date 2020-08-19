@@ -5,6 +5,7 @@
 
 import Foundation
 
+// https://nshipster.com/propertywrapper/
 @propertyWrapper
 public struct AppUserDefaults<T> {
     public let key: String

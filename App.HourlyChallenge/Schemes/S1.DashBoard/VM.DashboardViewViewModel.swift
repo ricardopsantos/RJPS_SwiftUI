@@ -7,11 +7,13 @@ import Foundation
 import UIKit
 import SwiftUI
 import Combine
+//
+import Utils
 
 public class DashBoardViewModel: ObservableObject {
 
     private let fetcher: APIProtocol
-    private var disposables = Set<AnyCancellable>()
+    private var cancelBag = CancelBag()
     @ObservedObject var settings = AppDefaultsRepository.shared
 
     var timeZoneServer: Int { return settings.timeZone - 3 }
@@ -71,7 +73,7 @@ private extension DashBoardViewModel {
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
             self.taskNow = value
-        }).store(in: &disposables)
+        }).store(in: cancelBag)
     }
 
     private func taskNext1(weekDay: Int, timeZone: Int) {
@@ -83,7 +85,7 @@ private extension DashBoardViewModel {
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
             self.taskNext1 = value
-        }).store(in: &disposables)
+        }).store(in: cancelBag)
     }
 
     private func taskNext2(weekDay: Int, timeZone: Int) {
@@ -95,7 +97,7 @@ private extension DashBoardViewModel {
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
             self.taskNext2 = value
-        }).store(in: &disposables)
+        }).store(in: cancelBag)
     }
 
     private func taskNext3(weekDay: Int, timeZone: Int) {
@@ -107,6 +109,6 @@ private extension DashBoardViewModel {
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
             self.taskNext3 = value
-        }).store(in: &disposables)
+        }).store(in: cancelBag)
     }
 }

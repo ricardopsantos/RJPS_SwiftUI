@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D7B9968B24DB1F86000DAFD2"
-               BuildableName = "API_Keys.framework"
-               BlueprintName = "API.Keys"
+               BuildableName = "Utils_APIKeys.framework"
+               BlueprintName = "Utils.APIKeys"
                ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D7B9968B24DB1F86000DAFD2"
-            BuildableName = "API_Keys.framework"
-            BlueprintName = "API.Keys"
+            BuildableName = "Utils_APIKeys.framework"
+            BlueprintName = "Utils.APIKeys"
             ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

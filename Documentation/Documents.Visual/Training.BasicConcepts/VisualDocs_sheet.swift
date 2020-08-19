@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import Factory
+import Utils_Factory
 
 struct IdentifiableDetailsInfo: Identifiable {
     var id = UUID()
