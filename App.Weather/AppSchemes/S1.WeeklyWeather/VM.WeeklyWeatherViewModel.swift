@@ -30,10 +30,6 @@ public class WeeklyWeatherViewModel: ObservableObject {
 
     private let fetcher: APIWeatherProtocol
     private var repository: RepositoryWeatherProtocol
-
-    // Think of disposables as a collection of references to requests.
-    // Without keeping these references, the network requests you’ll make won’t be
-    // kept alive, preventing you from getting responses from the server.
     private var cancelBag = CancelBag()
 
     public init(fetcher: APIWeatherProtocol, repository: RepositoryWeatherProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {

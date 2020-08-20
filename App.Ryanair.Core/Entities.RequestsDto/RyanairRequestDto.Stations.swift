@@ -7,6 +7,6 @@ import Foundation
 
 public extension RyanairRequestDto {
     struct Stations {
-        
+        public init() { }
     }
 }

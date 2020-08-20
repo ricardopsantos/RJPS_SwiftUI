@@ -9,7 +9,7 @@ import Combine
 //
 import App_Weather
 import App_HourlyChallenge
-import App_Ryanair_Core
+import App_Ryanair
 //
 import Networking
 import Utils_Extensions
@@ -18,6 +18,7 @@ enum TargetApp {
     case sample
     case weather
     case hourly
+    case ryanair
 }
 
 @UIApplicationMain
@@ -33,10 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //CombineTesting.shared.observe_UserDefaults()
         //CombineTesting.shared.testing_handleEvents()
 
-        let testing = RyanairCoreTesting()
-        testing.test1()
+        //let testing = RyanairCoreTesting()
+        //testing.test1()
 
-        let targetApp: TargetApp = .weather
+        let targetApp: TargetApp = .ryanair
         switch targetApp {
         case .sample:
             self.window?.rootViewController = UIHostingController(rootView: TabView_View())
@@ -44,6 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = UIHostingController(rootView: DashboardViewBuilder.buildView())
         case .weather:
             self.window?.rootViewController = UIHostingController(rootView: WeeklyWeatherBuilder.buildView())
+        case .ryanair:
+            self.window?.rootViewController = UIHostingController(rootView: RyanairView1Builder.buildView())
+
         }
         return true
     }

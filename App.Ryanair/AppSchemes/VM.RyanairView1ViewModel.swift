@@ -11,12 +11,14 @@ import Utils
 //
 import App_Ryanair_Core
 
-public class Schemes1TemplateViewModel: ObservableObject {
+public class RyanairView1ViewModel: ObservableObject {
 
     // The properly delegate @Published modifier makes it possible to observe
     // the city property. You’ll see in a moment how to leverage this.
-    @Published var city: String = ""
-    @Published var isAnimating: Bool = false
+    //@Published var city: String = ""
+    @Published var isLoading: Bool = false
+    @Published var output: String = ""
+    @Published var children: Int = 0
 
     // You’ll keep the View’s data source in the ViewModel. This is in contrast
     // to what you might be used to doing in MVC. Because the property is marked @Published,
@@ -26,15 +28,23 @@ public class Schemes1TemplateViewModel: ObservableObject {
 
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
-
-    // Think of disposables as a collection of references to requests.
-    // Without keeping these references, the network requests you’ll make won’t be
-    // kept alive, preventing you from getting responses from the server.
     private var cancelBag = CancelBag()
 
-    public init(fetcher: APIRyanairProtocol, repository: RepositoryRyanairProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
+    public init(fetcher: APIRyanairProtocol,
+                repository: RepositoryRyanairProtocol,
+                scheduler: DispatchQueue = DispatchQueue(label: "Schemes1TemplateViewModel")) {
         self.fetcher = fetcher
         self.repository = repository
+        isLoading = true
+
+        let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
+        _ = stations.sink(receiveCompletion: { [weak self] (result) in
+            self?.isLoading = false
+            print(result)
+        }) { (result) in
+            print(result.stations.count)
+            self.output = "\(result.stations.first)"
+        }.store(in: cancelBag)
 
        /* let observer = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
 
@@ -52,7 +62,7 @@ public class Schemes1TemplateViewModel: ObservableObject {
     }
 }
 
-private extension Schemes1TemplateViewModel {
+private extension RyanairView1ViewModel {
 
     func fetchWeather(forCity city: String) {
 
@@ -99,10 +109,3 @@ private extension Schemes1TemplateViewModel {
             .store(in: cancelBag)*/
     }
 }
-/*
-extension WeeklyWeatherViewModel {
-    var currentWeatherView: some View {
-        let viewModel = VM.CurrentWeatherViewModel(city: city, weatherFetcher: fetcher)
-        return CurrentWeatherView(viewModel: viewModel)
-    }
-}*/
