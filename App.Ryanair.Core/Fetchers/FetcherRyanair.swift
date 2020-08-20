@@ -19,6 +19,7 @@ import Utils
 public class FetcherRyanair {
     private let webAPI_A: APIRyanair_A
     private let webAPI_B: APIRyanair_B
+    private var chacheLiveSpamMinutes = 60 * 60 * 24 * 7
     let cancelBag = CancelBag()
     public init(webAPI_A: APIRyanair_A, webAPI_B: APIRyanair_B) {
         self.webAPI_A = webAPI_A
@@ -38,8 +39,9 @@ extension FetcherRyanair: APIRyanairProtocol {
         let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairResponseDto.Stations.self)
         let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairResponseDto.Stations.self, onFail: apiSubscriber)
 
-        apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { (data) in
-            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: 5)
+        apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
+            guard let self = self else { return }
+            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.chacheLiveSpamMinutes)
         }).store(in: cancelBag)
 
         switch cache {
@@ -57,8 +59,9 @@ extension FetcherRyanair: APIRyanairProtocol {
         let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairResponseDto.Availability.self)
         let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairResponseDto.Availability.self, onFail: apiSubscriber)
 
-        apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { (data) in
-            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: 5)
+        apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
+            guard let self = self else { return }
+            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.chacheLiveSpamMinutes)
         }).store(in: cancelBag)
 
         switch cache {
