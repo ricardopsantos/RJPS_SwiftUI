@@ -14,6 +14,7 @@ import App_Ryanair_Core
 struct RyanairView1: View {
 
     @ObservedObject private var viewModel: RyanairView1ViewModel
+    @State var date: Date = Date()
 
     public init(viewModel: RyanairView1ViewModel) {
         self.viewModel = viewModel
@@ -23,15 +24,18 @@ struct RyanairView1: View {
         return ZStack {
             ScrollView {
                 VStack {
-                    originStationView
-                    destinationStationView
                     departureDateView
+                    HStack {
+                        originStationView
+                        Spacer()
+                        destinationStationView
+                    }
                     adultsView
                     teensView
                     childrenView
                     outputView
                 }
-            }
+            }.padding()
             ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
         }
     }
@@ -39,25 +43,55 @@ struct RyanairView1: View {
 
 extension RyanairView1 {
     var outputView: some View {
-        return Text(viewModel.output)
+
+        VStack {
+            if self.viewModel.outputResults.count > 0 {
+                List {
+                    ForEach(self.viewModel.outputResults, id: \.self) { some in
+                        Text("\(some.title) | \(some.subtitle)")
+                    }
+                }.frame(height: 200)
+            }
+            Text(viewModel.output)
+        }
     }
 }
 
 extension RyanairView1 {
     var originStationView: some View {
-        return TextField("Origin. Ex: DUB", text: $viewModel.viewRequest.origin)
+        VStack {
+            TextField("Origin. Ex: DUB", text: $viewModel.viewRequest.origin)
+            if self.viewModel.airportsDepartureSuggestions.count > 0 {
+                List {
+                    ForEach(self.viewModel.airportsDepartureSuggestions, id: \.self) { some in
+                        Text("\(some.code) | \(some.name)")
+                    }
+                }.frame(height: 200)
+            }
+        }
     }
 }
 
 extension RyanairView1 {
     var destinationStationView: some View {
-        return TextField("Destination. Ex: STN", text: $viewModel.viewRequest.destination)
+        VStack {
+            TextField("Destination. Ex: STN", text: $viewModel.viewRequest.destination)
+            if self.viewModel.airportsArrivalSuggestions.count > 0 {
+                List {
+                    ForEach(self.viewModel.airportsArrivalSuggestions, id: \.self) { some in
+                        Text("\(some.code) | \(some.name)")
+                    }
+                }.frame(height: 200)
+            }
+        }
     }
 }
 
 extension RyanairView1 {
     var departureDateView: some View {
-        return TextField("Departure. Ex: 2020-12-31", text: $viewModel.viewRequest.dateDeparture)
+        return VStack {
+            DatePicker("Departure", selection: $viewModel.viewRequest.dateDeparture, displayedComponents: .date)
+        }
     }
 }
 

@@ -21,9 +21,9 @@ public extension RyanairResponseDto {
 
     // MARK: - Trip
     struct Trip: DtoProtocol {
-        public let origin: Origin
+        public let origin: String      // Airport Code
         public let originName: String
-        public let destination: Destination
+        public let destination: String // Airport Code
         public let destinationName, routeGroup, tripType, upgradeType: String
         public let dates: [DateElement]
     }
@@ -44,13 +44,13 @@ public extension RyanairResponseDto {
         public let segments: [Segment]
         public let flightNumber: String
         public let time, timeUTC: [String]
-        public let duration: Duration
+        public let duration: String
     }
 
-    enum Duration: String, DtoProtocol {
+   /* enum Duration: String, DtoProtocol {
         case the0120 = "01:20"
         case the0125 = "01:25"
-    }
+    }*/
 
     // MARK: - RegularFare
     struct RegularFare: DtoProtocol {
@@ -86,7 +86,7 @@ public extension RyanairResponseDto {
         case n = "N"
         case q = "Q"
         case o = "O"
-
+        case c = "C"
     }
 
     // MARK: - Fare
@@ -128,18 +128,11 @@ public extension RyanairResponseDto {
     // MARK: - Segment
     struct Segment: DtoProtocol {
         public let segmentNr: Int
-        public let origin: Origin
-        public let destination: Destination
+        public let origin: String      // Airport Code
+        public let destination: String // Airport Code
         public let flightNumber: String
         public let time, timeUTC: [String]
-        public let duration: Duration
+        public let duration: String
     }
 
-    enum Destination: String, DtoProtocol {
-        case stn = "STN"
-    }
-
-    enum Origin: String, DtoProtocol {
-        case dub = "DUB"
-    }
 }
