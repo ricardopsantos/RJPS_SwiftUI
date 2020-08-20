@@ -10,6 +10,6 @@ import Base_Domain
 
 // https://tripstest.ryanair.com/static/stations.json
 public protocol APIRyanairProtocol {
-    func stations(cache: CachePolicy) -> AnyPublisher<RyanairDto.Stations, APIError>
-    func availability(cache: CachePolicy) -> AnyPublisher<RyanairDto.Availability, APIError>
+    func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError>
+    func availability(request: RyanairRequestDto.Availability, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Availability, APIError>
 }

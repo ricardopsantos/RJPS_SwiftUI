@@ -10,20 +10,20 @@ import Combine
 import MessageUI
 //
 import Utils_Designables
-import DevTools
+import Utils
 
 public class RepositoryWeather: ObservableObject, RepositoryWeatherProtocol {
     public init() { }
 
     public var lastCity: String {
-        get { return RepositoryWeatherDefaults.shared.lastCity }
-        set { RepositoryWeatherDefaults.shared.lastCity = newValue }
+        get { return RepositoryAppUserDefaults.shared.lastCity }
+        set { RepositoryAppUserDefaults.shared.lastCity = newValue }
     }
 }
 
-private final class RepositoryWeatherDefaults: ObservableObject {
+private final class RepositoryAppUserDefaults: ObservableObject {
     private init() {}
-    static let shared = RepositoryWeatherDefaults()
+    static let shared = RepositoryAppUserDefaults()
     let objectWillChange = PassthroughSubject<Void, Never>()
     static var id: String { return Bundle.main.bundleIdentifier! }
 

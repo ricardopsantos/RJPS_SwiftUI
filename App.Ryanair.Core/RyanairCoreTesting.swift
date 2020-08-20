@@ -13,13 +13,15 @@ public struct RyanairCoreTesting {
         let webAPI_A = APIRyanair_A()
         let webAPI_B = APIRyanair_B()
         let fetcher = FetcherRyanair(webAPI_A: webAPI_A, webAPI_B: webAPI_B)
-        let stations = fetcher.stations(cache: .cacheElseLoad)
-        let availability = fetcher.availability(cache: .cacheElseLoad)
-        /*let response1 = stations.sink(receiveCompletion: { (result) in
+        let stations = fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
+
+        let request = RyanairRequestDto.Availability.sample
+        let availability = fetcher.availability(request: request, cache: .cacheElseLoad)
+        let response1 = stations.sink(receiveCompletion: { (result) in
             print(result)
         }) { (result) in
             print(result.stations.count)
-        }*/
+        }
         let response2 = availability.sink(receiveCompletion: { (result) in
             print(result)
         }) { (result) in

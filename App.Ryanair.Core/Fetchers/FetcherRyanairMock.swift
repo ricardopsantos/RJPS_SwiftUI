@@ -17,10 +17,10 @@ public class FetcherRyanairMock {
 // MARK: - APIRyanairProtocol
 
 extension FetcherRyanairMock: APIRyanairProtocol {
-    public func stations(cache: CachePolicy) -> AnyPublisher<RyanairDto.Stations, APIError> {
+    public func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError> {
         fatalError("not implemented")
     }
-    public func availability(cache: CachePolicy) -> AnyPublisher<RyanairDto.Availability, APIError> {
+    public func availability(request: RyanairRequestDto.Availability, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Availability, APIError> {
         fatalError("not implemented")
     }
 }

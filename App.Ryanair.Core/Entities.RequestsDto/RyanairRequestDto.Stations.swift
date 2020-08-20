@@ -5,6 +5,8 @@
 
 import Foundation
 
-public struct RyanairDto {
-
+public extension RyanairRequestDto {
+    struct Stations {
+        
+    }
 }

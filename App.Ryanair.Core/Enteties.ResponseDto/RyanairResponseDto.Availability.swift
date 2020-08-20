@@ -7,12 +7,10 @@ import Foundation
 //
 import Base_Domain
 
-// https://sit-nativeapps.ryanair.com/api/v4/Availability?origin=DUB&destination=STN&dateout=2021-08-09&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3&adt=1&teen=0&chd=0&roundtrip=false&ToUs=AGREED
-
-public extension RyanairDto {
+public extension RyanairResponseDto {
 
     // MARK: - Availability
-    struct Availability: Codable {
+    struct Availability: DtoProtocol {
         let termsOfUse: String
         let currency: String
         let currPrecision: Int
@@ -22,7 +20,7 @@ public extension RyanairDto {
     }
 
     // MARK: - Trip
-    struct Trip: Codable {
+    struct Trip: DtoProtocol {
         let origin: Origin
         let originName: String
         let destination: Destination
@@ -31,13 +29,13 @@ public extension RyanairDto {
     }
 
     // MARK: - DateElement
-    struct DateElement: Codable {
+    struct DateElement: DtoProtocol {
         let dateOut: String
         let flights: [Flight]
     }
 
     // MARK: - Flight
-    struct Flight: Codable {
+    struct Flight: DtoProtocol {
         let faresLeft: Int
         let flightKey: String
         let infantsLeft: Int
@@ -49,24 +47,24 @@ public extension RyanairDto {
         let duration: Duration
     }
 
-    enum Duration: String, Codable {
+    enum Duration: String, DtoProtocol {
         case the0120 = "01:20"
         case the0125 = "01:25"
     }
 
     // MARK: - RegularFare
-    struct RegularFare: Codable {
+    struct RegularFare: DtoProtocol {
         let fareKey: String
         let fareClass: FareClass
         let fares: [Fare]
     }
 
-    enum FareClass: String, Codable {
+    enum FareClass: String, DtoProtocol {
         case s = "S"
     }
 
     // MARK: - Fare
-    struct Fare: Codable {
+    struct Fare: DtoProtocol {
         let type: TypeEnum
         let amount: Double
         let count: Int
@@ -79,30 +77,30 @@ public extension RyanairDto {
     }
 
     // MARK: - MandatorySeatFee
-    struct MandatorySeatFee: Codable {
+    struct MandatorySeatFee: DtoProtocol {
         let vat, amt, total, totalDiscount: Int
         let totalWithoutDiscount: Int
         let discountType: DiscountType
         let code: Code
         let qty: Int
 
-        enum Code: String, Codable {
+        enum Code: String, DtoProtocol {
             case seta = "SETA"
         }
     }
 
-    enum DiscountType: String, Codable {
+    enum DiscountType: String, DtoProtocol {
         case none = "None"
     }
 
-    enum TypeEnum: String, Codable {
+    enum TypeEnum: String, DtoProtocol {
         case adt = "ADT"
         case chd = "CHD"
         case teen = "TEEN"
     }
 
     // MARK: - Segment
-    struct Segment: Codable {
+    struct Segment: DtoProtocol {
         let segmentNr: Int
         let origin: Origin
         let destination: Destination
@@ -111,11 +109,11 @@ public extension RyanairDto {
         let duration: Duration
     }
 
-    enum Destination: String, Codable {
+    enum Destination: String, DtoProtocol {
         case stn = "STN"
     }
 
-    enum Origin: String, Codable {
+    enum Origin: String, DtoProtocol {
         case dub = "DUB"
     }
 }

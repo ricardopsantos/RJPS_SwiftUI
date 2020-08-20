@@ -6,5 +6,5 @@
 import Foundation
 
 public protocol RepositoryRyanairProtocol {
-
+    var something: String { get set }
 }

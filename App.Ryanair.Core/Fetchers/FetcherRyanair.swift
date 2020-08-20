@@ -31,12 +31,12 @@ public class FetcherRyanair {
 extension FetcherRyanair: APIRyanairProtocol {
 
     // https://tripstest.ryanair.com/static/stations.json
-    public func stations(cache: CachePolicy) -> AnyPublisher<RyanairDto.Stations, APIError> {
-        let cacheKey = "\(#function)"
+    public func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError> {
+        let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
         let targetAPI = webAPI_A
-        let apiSubscriber           = targetAPI.agent.run(targetAPI.stations(), targetAPI.decoder, false) as AnyPublisher<RyanairDto.Stations, APIError>
-        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairDto.Stations.self)
-        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairDto.Stations.self, onFail: apiSubscriber)
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.stations(request), targetAPI.decoder, false) as AnyPublisher<RyanairResponseDto.Stations, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairResponseDto.Stations.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairResponseDto.Stations.self, onFail: apiSubscriber)
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { (data) in
             APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: 5)
@@ -50,25 +50,12 @@ extension FetcherRyanair: APIRyanairProtocol {
         }
     }
 
-    // https://sit-nativeapps.ryanair.com/api/v4/Availability?origin=DUB&destination=STN&dateout=2021-08-09&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3&adt=1&teen=0&chd=0&roundtrip=false&ToUs=AGREED
-    public func availability(/*origin: String = "",
-                       destination: String = "",
-                       dateout: String = "",
-                       datein: String = "",
-                       flexdaysbeforeout: Int = 0,
-                       flexdaysout: Int = 0,
-                       flexdaysin: Int = 0,
-                       adt: Int = 0,
-                       teen: Int = 0,
-                       chd: Int = 0,
-                       roundtrip: Bool = true,
-                       ToUs: String = ""*/
-                    cache: CachePolicy) -> AnyPublisher<RyanairDto.Availability, APIError> {
-        let cacheKey = "\(#function)"
+    public func availability(request: RyanairRequestDto.Availability, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Availability, APIError> {
+        let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
         let targetAPI = webAPI_B
-        let apiSubscriber           = targetAPI.agent.run(targetAPI.availability(), targetAPI.decoder, true) as AnyPublisher<RyanairDto.Availability, APIError>
-        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairDto.Availability.self)
-        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairDto.Availability.self, onFail: apiSubscriber)
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.availability(request), targetAPI.decoder, true) as AnyPublisher<RyanairResponseDto.Availability, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairResponseDto.Availability.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairResponseDto.Availability.self, onFail: apiSubscriber)
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { (data) in
             APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: 5)

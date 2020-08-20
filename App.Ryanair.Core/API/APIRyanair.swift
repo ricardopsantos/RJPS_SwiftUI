@@ -25,9 +25,7 @@ public struct APIRyanair_A {
     var dumpResponse: Bool { return Self.Constants.dumpResponse }
     var decoder: JSONDecoder { return Self.Constants.decoder }
 
-    public func stations() -> URLComponents {
-        // https://tripstest.ryanair.com/static/stations.json
-        // https://tripstest.ryanair.com/static/stations.json
+    public func stations(_ request: RyanairRequestDto.Stations) -> URLComponents {
         var components    = URLComponents()
         components.scheme = Self.Constants.scheme
         components.host   = Self.Constants.host
@@ -36,7 +34,6 @@ public struct APIRyanair_A {
     }
 }
 
-// https://sit-nativeapps.ryanair.com/api/v4/Availability?origin=DUB&destination=STN&dateout=2021-08-09&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3&adt=1&teen=0&chd=0&roundtrip=false&ToUs=AGREED
 public struct APIRyanair_B {
     public init() {}
     public struct Constants {
@@ -53,25 +50,25 @@ public struct APIRyanair_B {
     var dumpResponse: Bool { return Self.Constants.dumpResponse }
     var decoder: JSONDecoder { return Self.Constants.decoder }
 
-    public func availability() -> URLComponents {
+    public func availability(_ request: RyanairRequestDto.Availability) -> URLComponents {
         var components    = URLComponents()
         components.scheme = Self.Constants.scheme
         components.host   = Self.Constants.host
         components.path   = Self.Constants.path + "/Availability"
         components.queryItems = [
-            URLQueryItem(name: "origin", value: "DUB"),
-            URLQueryItem(name: "destination", value: "STN"),
-            URLQueryItem(name: "dateout", value: "2021-08-09"),
-            URLQueryItem(name: "datein", value: ""),
-            URLQueryItem(name: "flexdaysbeforeout", value: "3"),
-            URLQueryItem(name: "flexdaysout", value: "3"),
-            URLQueryItem(name: "flexdaysbeforein", value: "3"),
-            URLQueryItem(name: "flexdaysin", value: "3"),
-            URLQueryItem(name: "adt", value: "1"),
-            URLQueryItem(name: "teen", value: "1"),
-            URLQueryItem(name: "chd", value: "1"),
-            URLQueryItem(name: "roundtrip", value: "false"),
-            URLQueryItem(name: "ToUs", value: "AGREED")
+            URLQueryItem(name: "origin", value: request.origin),
+            URLQueryItem(name: "destination", value: request.destination),
+            URLQueryItem(name: "dateout", value: request.dateout),
+            URLQueryItem(name: "datein", value: request.datein),
+            URLQueryItem(name: "flexdaysbeforeout", value: request.flexdaysbeforeout),
+            URLQueryItem(name: "flexdaysout", value: request.flexdaysout),
+            URLQueryItem(name: "flexdaysbeforein", value: request.flexdaysbeforein),
+            URLQueryItem(name: "flexdaysin", value: request.flexdaysin),
+            URLQueryItem(name: "adt", value: "\(request.adt)"),
+            URLQueryItem(name: "teen", value: "\(request.teen)"),
+            URLQueryItem(name: "chd", value: "\(request.chd)"),
+            URLQueryItem(name: "roundtrip", value: request.roundtrip ? "true" : "false"),
+            URLQueryItem(name: "ToUs", value: request.ToUs)
         ]
         return components
     }
