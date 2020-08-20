@@ -59,8 +59,34 @@ public extension RyanairResponseDto {
         let fares: [Fare]
     }
 
+    /*
+     F and A: first class
+     J, R, D and I: business class
+     W and P: premium economy
+     Y, H, K, M, L, G, V, S, N, Q and O: economy
+     B: basic economy
+     */
     enum FareClass: String, DtoProtocol {
+        case f = "F"
+        case a = "A"
+        case j = "J"
+        case e = "E"
+        case r = "R"
+        case w = "w"
+        case p = "p"
+        case b = "b"
+        case y = "Y"
+        case h = "H"
+        case k = "K"
+        case m = "M"
+        case l = "L"
+        case g = "G"
+        case v = "V"
         case s = "S"
+        case n = "N"
+        case q = "Q"
+        case o = "O"
+
     }
 
     // MARK: - Fare

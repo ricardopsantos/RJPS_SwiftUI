@@ -45,26 +45,25 @@ extension RyanairView1 {
 
 extension RyanairView1 {
     var originStationView: some View {
-        return TextField("Origin", text: $viewModel.viewRequest.origin)
+        return TextField("Origin. Ex: DUB", text: $viewModel.viewRequest.origin)
     }
 }
 
 extension RyanairView1 {
     var destinationStationView: some View {
-        return TextField("Desination", text: $viewModel.viewRequest.destination)
+        return TextField("Destination. Ex: STN", text: $viewModel.viewRequest.destination)
     }
 }
 
 extension RyanairView1 {
     var departureDateView: some View {
-        return Text("departureDateView")
+        return TextField("Departure. Ex: 2020-12-31", text: $viewModel.viewRequest.dateDeparture)
     }
 }
 
 extension RyanairView1 {
     var adultsView: some View {
         VStack {
-            Text("adultsView")
             Stepper(value: $viewModel.viewRequest.adult,
             onEditingChanged: { _ in  },
             label: { Text("Adults: \(viewModel.viewRequest.adult)") })
@@ -75,7 +74,6 @@ extension RyanairView1 {
 extension RyanairView1 {
     var teensView: some View {
         VStack {
-            Text("teensView")
             Stepper(value: $viewModel.viewRequest.teen,
             onEditingChanged: { _ in  },
             label: { Text("Teens: \(viewModel.viewRequest.teen)") })
@@ -86,7 +84,6 @@ extension RyanairView1 {
 extension RyanairView1 {
     var childrenView: some View {
         VStack {
-            Text("childrenView")
             Stepper(value: $viewModel.viewRequest.children,
             onEditingChanged: { _ in  },
             label: { Text("Children: \(viewModel.viewRequest.children)") })

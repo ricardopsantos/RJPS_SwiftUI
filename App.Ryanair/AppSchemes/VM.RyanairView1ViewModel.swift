@@ -15,11 +15,34 @@ class ViewRequestState: ObservableObject {
     @Published var children = 0
     @Published var teen = 0
     @Published var adult = 0
-    @Published var origin = ""
-    @Published var destination = ""
+    @Published var origin = "DUB"
+    @Published var destination = "STN"
+    @Published var dateDeparture = Formatters.yearMonthDayFormatter.string(from: Date())
 
-    var isValid: Bool {
-        return children >= 0 && adult >= 0 && teen >= 0 && origin.count >= 3 && destination.count >= 3
+    var errorMessage: String {
+
+        var acc = ""
+        // Dont allow any negative passenger
+        if children < 0 || adult < 0 || teen < 0 {
+            acc = "\(acc)No negative passengers...\n"
+        }
+
+        // At least one passenger
+        if children == 0 && adult == 0 && teen == 0 {
+            acc = "\(acc)Add passengers...\n"
+        }
+
+        // Airports info filled
+        if origin.count < 3 && destination.count < 3 {
+            acc = "\(acc)Add airports\n"
+        }
+
+        // Departure date filled (improve validation!)
+        if dateDeparture.count != "2020-01-01".count {
+            acc = "\(acc)Invalid departure date\n"
+        }
+
+        return acc
     }
 }
 
@@ -58,12 +81,17 @@ public class RyanairView1ViewModel: ObservableObject {
         }.store(in: cancelBag)
 
         // Observer Origin/Destination changes
-        Publishers.CombineLatest(viewRequest.$origin, viewRequest.$destination).sink(receiveValue: { [weak self] _ in
+        let origin = viewRequest.$origin.debounce(for: 0.8, scheduler: RunLoop.main)
+        let destination = viewRequest.$origin.debounce(for: 0.8, scheduler: RunLoop.main)
+        Publishers.CombineLatest(origin, destination).sink(receiveValue: { [weak self] _ in
             self?.refreshData()
         }).store(in: cancelBag)
 
         // Observer passenger changes
-        Publishers.CombineLatest3(viewRequest.$adult, viewRequest.$children, viewRequest.$teen).sink(receiveValue: { [weak self] _ in
+        let adult = viewRequest.$adult.debounce(for: 0.8, scheduler: RunLoop.main)
+        let children = viewRequest.$children.debounce(for: 0.8, scheduler: RunLoop.main)
+        let teen = viewRequest.$teen.debounce(for: 0.8, scheduler: RunLoop.main)
+        Publishers.CombineLatest3(adult, children, teen).sink(receiveValue: { [weak self] _ in
             self?.refreshData()
         }).store(in: cancelBag)
 
@@ -86,33 +114,38 @@ private extension RyanairView1ViewModel {
     }
 
     func refreshData() {
-        guard viewRequest.isValid else { return }
+        guard viewRequest.errorMessage.count == 0 else {
+            display(viewRequest.errorMessage)
+            return
+        }
         isLoading = true
-        let apiRequest = RyanairRequestDto.Availability(origin: viewRequest.origin.uppercased(),
-                                                        destination: viewRequest.destination.uppercased(),
-                                                        dateout: "2021-08-09",
-                                                        datein: "",
-                                                        flexdaysbeforeout: "3",
-                                                        flexdaysout: "3",
-                                                        flexdaysbeforein: "3",
-                                                        flexdaysin: "3",
-                                                        adt: viewRequest.adult,
-                                                        teen: viewRequest.teen,
-                                                        chd: viewRequest.children,
-                                                        roundtrip: true,
-                                                        ToUs: "AGREED")
+        let apiRequest = RyanairRequestDto.Availability(origin: viewRequest.origin.trim.uppercased(),
+            destination: viewRequest.destination.trim.uppercased(),
+            dateout: viewRequest.dateDeparture.trim.uppercased(),
+            datein: "",
+            flexdaysbeforeout: "3",
+            flexdaysout: "3",
+            flexdaysbeforein: "3",
+            flexdaysin: "3",
+            adt: viewRequest.adult,
+            teen: viewRequest.teen,
+            chd: viewRequest.children,
+            roundtrip: true,
+            ToUs: "AGREED")
         let availability = self.fetcher.availability(request: apiRequest, cache: .cacheElseLoad)
         availability.sink(receiveCompletion: { [weak self] (result) in
             guard let self = self else { return }
             switch result {
-            case .finished: self.display("")
-            case .failure(let error): self.display("No results : \(error)")
+            case .finished: ()
+            case .failure(let error): self.display("No results")
             }
         }) { [weak self]  (result) in
             guard let self = self else { return }
             let count = result.trips.first?.dates.first?.flights.count
             if let flight = result.trips.first?.dates.first?.flights.first {
                 self.display("\(count) \n\n\(flight)")
+            } else {
+                self.display("Weird\n\n\(result)")
             }
         }.store(in: cancelBag)
     }

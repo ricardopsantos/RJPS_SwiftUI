@@ -17,4 +17,10 @@ public struct Formatters {
         formatter.dateFormat = "MMMM"
         return formatter
     }()
+
+    public static let yearMonthDayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY-MM-dd"
+        return formatter
+    }()
 }

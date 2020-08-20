@@ -7,6 +7,10 @@ import Foundation
 
 public extension String {
 
+    var trim: String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
     func localized(_ locale: Locale) -> String {
         let localeId = locale.shortIdentifier
         guard let path = Bundle.main.path(forResource: localeId, ofType: "lproj"),
