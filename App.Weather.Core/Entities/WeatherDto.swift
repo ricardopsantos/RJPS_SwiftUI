@@ -5,7 +5,7 @@
 
 import Foundation
 
-// Encapsulate API Objects
+// Encapsulate Dtos
 public struct WeatherDto {
 
 }

@@ -8,20 +8,24 @@ import Combine
 
 public class SimpleNetworkAgent_B: SimpleNetworkAgentProtocol {
     private init() { self.session = .shared }
-    var session: URLSession
+    public var session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
 }
 
-extension SimpleNetworkAgent_B {
+public extension SimpleNetworkAgent_B {
     func run<T>(_ components: URLComponents, _ decoder: JSONDecoder, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> where T: Decodable {
         // Try to create an instance of URL from the URLComponents. If this fails, return an error
         // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.
         guard let url = components.url else {
             let error = APIError.network(description: "Couldn't create URL")
+            print("# Couldn't create URL")
+            print(components)
             return Fail(error: error).eraseToAnyPublisher()
         }
+
+        //print(url.absoluteString)
 
         // Uses the new URLSession method dataTaskPublisher(for:) to fetch the data. This method takes
         // an instance of URLRequest and returns either a tuple (Data, URLResponse) or a URLError.
@@ -48,15 +52,18 @@ extension SimpleNetworkAgent_B {
     private func decode<T: Decodable>(_ data: Data, _ url: URL, _ decoder: JSONDecoder, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> {
         if dumpResponse {
             print("url: \(url)\n\(String(decoding: data, as: UTF8.self))")
+            print(data)
         }
 
-        //let decoder = JSONDecoder()
-        //decoder.dateDecodingStrategy = .secondsSince1970
-        return Just(data)
+        let dataFormatEscaped = Data(String(decoding: data, as: UTF8.self).utf8)
+
+        return Just(dataFormatEscaped)
             .decode(type: T.self, decoder: decoder)
             .mapError { error in
-                print("\(error)")
-                print("\(error.localizedDescription)")
+                print("####################################")
+                print("# Expected : \(T.self)\n")
+                print("# Error : \(error.localizedDescription)")
+                print("# Error full \(error)\n")
                 return APIError.parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }

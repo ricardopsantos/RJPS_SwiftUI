@@ -1,5 +1,7 @@
 import Foundation
 import Combine
+//
+import Base_Domain
 
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
 
@@ -17,21 +19,15 @@ import Combine
  7 - Erase publisher’s type and return an instance of AnyPublisher.
  */
 
-class SimpleNetworkAgent_A: SimpleNetworkAgentProtocol {
+public class SimpleNetworkAgent_A: SimpleNetworkAgentProtocol {
     private init() { self.session = .shared }
-    var session: URLSession
+    public var session: URLSession
     public init(session: URLSession = .shared) {
         self.session = session
     }
-
-    // 1
-    struct Response<T: Decodable> {
-        let value: T
-        let response: Any
-    }
 }
 
-extension SimpleNetworkAgent_A {
+public extension SimpleNetworkAgent_A {
 
     // 2
     func run<T>(_ request: URLRequest, _ decoder: JSONDecoder, _ dumpResponse: Bool) -> AnyPublisher<Response<T>, APIError> where T: Decodable {

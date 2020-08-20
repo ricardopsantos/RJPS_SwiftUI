@@ -6,7 +6,6 @@
 import Foundation
 
 public extension WeatherDto {
-
     struct WeeklyForecastEntity: Codable {
         public let list: [Item]
 

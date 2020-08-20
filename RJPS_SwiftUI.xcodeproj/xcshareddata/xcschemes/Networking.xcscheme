@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D76989A424D72694005F851F"
-               BuildableName = "Networking.framework"
-               BlueprintName = "Networking"
+               BuildableName = "Utils_Networking.framework"
+               BlueprintName = "Utils.Networking"
                ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D76989A424D72694005F851F"
-            BuildableName = "Networking.framework"
-            BlueprintName = "Networking"
+            BuildableName = "Utils_Networking.framework"
+            BlueprintName = "Utils.Networking"
             ReferencedContainer = "container:RJPS_SwiftUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

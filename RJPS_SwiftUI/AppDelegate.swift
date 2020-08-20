@@ -9,6 +9,7 @@ import Combine
 //
 import App_Weather
 import App_HourlyChallenge
+import App_Ryanair_Core
 //
 import Networking
 import Utils_Extensions
@@ -31,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //CombineTesting.shared.testing_CurrentValueSubject()
         //CombineTesting.shared.observe_UserDefaults()
         //CombineTesting.shared.testing_handleEvents()
+
+        let testing = RyanairCoreTesting()
+        testing.test1()
 
         let targetApp: TargetApp = .weather
         switch targetApp {

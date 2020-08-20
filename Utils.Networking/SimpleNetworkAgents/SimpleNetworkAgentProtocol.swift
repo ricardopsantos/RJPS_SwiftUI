@@ -5,6 +5,6 @@
 
 import Foundation
 
-protocol SimpleNetworkAgentProtocol {
+public protocol SimpleNetworkAgentProtocol {
     var session: URLSession { get set }
 }
