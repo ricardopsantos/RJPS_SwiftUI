@@ -21,7 +21,35 @@ public extension RyanairRequestDto {
         let roundtrip: Bool
         let ToUs: String
 
-        static var sample: Availability {
+        public init(origin: String,
+                    destination: String,
+                    dateout: String,
+                    datein: String,
+                    flexdaysbeforeout: String,
+                    flexdaysout: String,
+                    flexdaysbeforein: String,
+                    flexdaysin: String,
+                    adt: Int,
+                    teen: Int,
+                    chd: Int,
+                    roundtrip: Bool,
+                    ToUs: String) {
+            self.origin = origin
+            self.destination = destination
+            self.dateout = dateout
+            self.datein = datein
+            self.flexdaysbeforeout = flexdaysbeforeout
+            self.flexdaysout = flexdaysout
+            self.flexdaysbeforein = flexdaysbeforein
+            self.flexdaysin = flexdaysin
+            self.adt = adt
+            self.teen = teen
+            self.chd = chd
+            self.roundtrip = roundtrip
+            self.ToUs = ToUs
+        }
+
+        public static var sample: Availability {
             return Availability(origin: "DUB",
                                 destination: "STN",
                                 dateout: "2021-08-09",

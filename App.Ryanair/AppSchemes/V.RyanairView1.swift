@@ -45,13 +45,13 @@ extension RyanairView1 {
 
 extension RyanairView1 {
     var originStationView: some View {
-        return Text("originStationView")
+        return TextField("Origin", text: $viewModel.viewRequest.origin)
     }
 }
 
 extension RyanairView1 {
     var destinationStationView: some View {
-        return Text("destinationStationView")
+        return TextField("Desination", text: $viewModel.viewRequest.destination)
     }
 }
 
@@ -63,13 +63,23 @@ extension RyanairView1 {
 
 extension RyanairView1 {
     var adultsView: some View {
-        return Text("adultsView")
+        VStack {
+            Text("adultsView")
+            Stepper(value: $viewModel.viewRequest.adult,
+            onEditingChanged: { _ in  },
+            label: { Text("Adults: \(viewModel.viewRequest.adult)") })
+        }
     }
 }
 
 extension RyanairView1 {
     var teensView: some View {
-        return Text("Origin")
+        VStack {
+            Text("teensView")
+            Stepper(value: $viewModel.viewRequest.teen,
+            onEditingChanged: { _ in  },
+            label: { Text("Teens: \(viewModel.viewRequest.teen)") })
+        }
     }
 }
 
@@ -77,9 +87,9 @@ extension RyanairView1 {
     var childrenView: some View {
         VStack {
             Text("childrenView")
-            Stepper(value: $viewModel.children,
-            onEditingChanged: { _ in /*self.viewModel.refresh()*/ },
-            label: { Text("Children: \(viewModel.children)") })
+            Stepper(value: $viewModel.viewRequest.children,
+            onEditingChanged: { _ in  },
+            label: { Text("Children: \(viewModel.viewRequest.children)") })
         }
     }
 }

@@ -11,21 +11,30 @@ import Utils
 //
 import App_Ryanair_Core
 
+class ViewRequestState: ObservableObject {
+    @Published var children = 0
+    @Published var teen = 0
+    @Published var adult = 0
+    @Published var origin = ""
+    @Published var destination = ""
+
+    var isValid: Bool {
+        return children >= 0 && adult >= 0 && teen >= 0 && origin.count >= 3 && destination.count >= 3
+    }
+}
+
+struct AirPorts {
+    let name: String
+    let code: String
+}
+
 public class RyanairView1ViewModel: ObservableObject {
 
-    // The properly delegate @Published modifier makes it possible to observe
-    // the city property. You’ll see in a moment how to leverage this.
-    //@Published var city: String = ""
     @Published var isLoading: Bool = false
     @Published var output: String = ""
-    @Published var children: Int = 0
+    @Published var viewRequest: ViewRequestState = ViewRequestState()
 
-    // You’ll keep the View’s data source in the ViewModel. This is in contrast
-    // to what you might be used to doing in MVC. Because the property is marked @Published,
-    // the compiler automatically synthesizes a publisher for it. SwiftUI subscribes to
-    // that publisher and redraws the screen when you change the property.
-    //@Published var dataSource: [VM.DailyWeatherRowViewModel] = []
-
+    private var airports: [AirPorts] = []
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
@@ -39,73 +48,72 @@ public class RyanairView1ViewModel: ObservableObject {
 
         let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
         _ = stations.sink(receiveCompletion: { [weak self] (result) in
-            self?.isLoading = false
-            print(result)
-        }) { (result) in
-            print(result.stations.count)
-            self.output = "\(result.stations.first)"
+            self?.hideLoading()
+        }) { [weak self] (result) in
+            guard let self = self else { return }
+            result.stations.forEach { [weak self] (station) in
+                self?.airports.append(AirPorts(name: station.name, code: station.code))
+            }
+            self.display("\(self.airports)")
         }.store(in: cancelBag)
 
-       /* let observer = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
-
-        // 1 - call fetchWeather
-        _ = observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
-
-        // 2 - Update AppDefaultsRepository.shared.lastCity on change
-        _ = observer.sink(receiveValue: { [weak self] (some) in
-            self?.repository.lastCity = some
+        // Observer Origin/Destination changes
+        Publishers.CombineLatest(viewRequest.$origin, viewRequest.$destination).sink(receiveValue: { [weak self] _ in
+            self?.refreshData()
         }).store(in: cancelBag)
 
-        // After the observers, so that when we change the value of [city] the app will react
-        // and refresh
-        self.city = repository.lastCity*/
+        // Observer passenger changes
+        Publishers.CombineLatest3(viewRequest.$adult, viewRequest.$children, viewRequest.$teen).sink(receiveValue: { [weak self] _ in
+            self?.refreshData()
+        }).store(in: cancelBag)
+
     }
 }
 
 private extension RyanairView1ViewModel {
 
-    func fetchWeather(forCity city: String) {
-
-        /*
-        isAnimating = true
-        // Start by making a new request to fetch the information from the OpenWeatherMap API.
-        // Pass the city name as the argument.
-        fetcher.weeklyWeatherForecast(forCity: city)
-            .map {
-                // Map the response (WeeklyForecastResponse object) to an array of DailyWeatherRowViewModel
-                // objects. This entity represents a single row in the list. You can check the
-                // implementation located in DailyWeatherRowViewModel.swift. With MVVM, it’s paramount
-                // for the ViewModel layer to expose to the View exactly the data it will need. It
-                // doesn’t make sense to expose directly to the View a WeeklyForecastResponse, since
-                // this forces the View layer to format the model in order to consume it. It’s a good
-                // idea to make the View as dumb as possible and concerned only with rendering.
-                response in response.list.map(VM.DailyWeatherRowViewModel.init)
+    func hideLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoading = false
         }
-            // The OpenWeatherMap API returns multiple temperatures for the same day depending on
-            // the time of the day, so remove the duplicates. You can check Array+Filtering.swift to see how that’s done.
-            .map(Array.removeDuplicates)
-            // Although fetching data from the server, or parsing a blob of JSON, happens on a
-            // background queue, updating the UI must happen on the main queue. With receive(on:),
-            // you ensure the update you do in steps 5, 6 and 7 occurs in the right place.
-            .receive(on: DispatchQueue.main)
-            // Start the publisher via sink(receiveCompletion:receiveValue:). This is where
-            // you update dataSource accordingly. It’s important to notice that handling a
-            // completion — either a successful or failed one — happens separately from handling values.
-            .sink(
-                receiveCompletion: { [weak self] value in
-                    self?.isAnimating = false
-                    guard let self = self else { return }
-                    switch value {
-                    case .failure: self.dataSource = []
-                    case .finished: break
-                    }
-                },
-                receiveValue: { [weak self] forecast in
-                    guard let self = self else { return }
-                    self.dataSource = forecast
-            })
-            // Finally, add the cancellable reference to the disposables set. As previously
-            // mentioned, without keeping this reference alive, the network publisher will terminate immediately.
-            .store(in: cancelBag)*/
+    }
+
+    func display(_ message: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.hideLoading()
+            self?.output = message
+        }
+    }
+
+    func refreshData() {
+        guard viewRequest.isValid else { return }
+        isLoading = true
+        let apiRequest = RyanairRequestDto.Availability(origin: viewRequest.origin.uppercased(),
+                                                        destination: viewRequest.destination.uppercased(),
+                                                        dateout: "2021-08-09",
+                                                        datein: "",
+                                                        flexdaysbeforeout: "3",
+                                                        flexdaysout: "3",
+                                                        flexdaysbeforein: "3",
+                                                        flexdaysin: "3",
+                                                        adt: viewRequest.adult,
+                                                        teen: viewRequest.teen,
+                                                        chd: viewRequest.children,
+                                                        roundtrip: true,
+                                                        ToUs: "AGREED")
+        let availability = self.fetcher.availability(request: apiRequest, cache: .cacheElseLoad)
+        availability.sink(receiveCompletion: { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .finished: self.display("")
+            case .failure(let error): self.display("No results : \(error)")
+            }
+        }) { [weak self]  (result) in
+            guard let self = self else { return }
+            let count = result.trips.first?.dates.first?.flights.count
+            if let flight = result.trips.first?.dates.first?.flights.first {
+                self.display("\(count) \n\n\(flight)")
+            }
+        }.store(in: cancelBag)
     }
 }
