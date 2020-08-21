@@ -119,6 +119,9 @@
 		D774F4B024EEC34A00D01370 /* RyanairRequestDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4AF24EEC34A00D01370 /* RyanairRequestDto.Availability.swift */; };
 		D774F4B224EECA2500D01370 /* RepositoryRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4B124EECA2500D01370 /* RepositoryRyanair.swift */; };
 		D774F4B324EECAA100D01370 /* AppUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */; };
+		D774F4DC24EFB25E00D01370 /* VM.RyanairView2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4D924EFB25E00D01370 /* VM.RyanairView2ViewModel.swift */; };
+		D774F4DD24EFB25E00D01370 /* B.RyanairView2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4DA24EFB25E00D01370 /* B.RyanairView2Builder.swift */; };
+		D774F4DE24EFB25E00D01370 /* V.RyanairView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4DB24EFB25E00D01370 /* V.RyanairView2.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -736,6 +739,9 @@
 		D774F4AD24EEC33E00D01370 /* RyanairRequestDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Stations.swift; sourceTree = "<group>"; };
 		D774F4AF24EEC34A00D01370 /* RyanairRequestDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Availability.swift; sourceTree = "<group>"; };
 		D774F4B124EECA2500D01370 /* RepositoryRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRyanair.swift; sourceTree = "<group>"; };
+		D774F4D924EFB25E00D01370 /* VM.RyanairView2ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VM.RyanairView2ViewModel.swift; path = App.Ryanair/Scheme.1/VM.RyanairView2ViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D774F4DA24EFB25E00D01370 /* B.RyanairView2Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = B.RyanairView2Builder.swift; path = App.Ryanair/Scheme.1/B.RyanairView2Builder.swift; sourceTree = SOURCE_ROOT; };
+		D774F4DB24EFB25E00D01370 /* V.RyanairView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = V.RyanairView2.swift; path = App.Ryanair/Scheme.1/V.RyanairView2.swift; sourceTree = SOURCE_ROOT; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -1126,7 +1132,6 @@
 				D7EDC0A024E966F2001CFFFA /* CombineVisual.swift */,
 				D769897924D5FED8005F851F /* Recreating */,
 				D7B33CAE24E41EFA00DA77B2 /* CoolStuff */,
-				D78FABD424D0BD740069809D /* Documents.Visual */,
 				D78FAC2A24D4165F0069809D /* ExternalSources.SwiftUI-Lab */,
 				D7B560232493AA4100E9EC7D /* ExternalSources.Recreating */,
 			);
@@ -1292,7 +1297,8 @@
 		D774F44024EDB27400D01370 /* App.Ryanair */ = {
 			isa = PBXGroup;
 			children = (
-				D774F46124EDB3A500D01370 /* AppSchemes */,
+				D774F46124EDB3A500D01370 /* Scheme.1 */,
+				D774F4D824EFB23F00D01370 /* Scheme.2 */,
 				D774F44124EDB27400D01370 /* App_Ryanair.h */,
 				D774F44224EDB27400D01370 /* Info.plist */,
 			);
@@ -1351,14 +1357,14 @@
 			path = Entities.RequestsDto;
 			sourceTree = "<group>";
 		};
-		D774F46124EDB3A500D01370 /* AppSchemes */ = {
+		D774F46124EDB3A500D01370 /* Scheme.1 */ = {
 			isa = PBXGroup;
 			children = (
 				D774F46824EE645300D01370 /* V.RyanairView1.swift */,
 				D774F46A24EE646300D01370 /* VM.RyanairView1ViewModel.swift */,
 				D774F46C24EE647200D01370 /* B.RyanairView1Builder.swift */,
 			);
-			path = AppSchemes;
+			path = Scheme.1;
 			sourceTree = "<group>";
 		};
 		D774F4AC24EEC30D00D01370 /* Enteties.ResponseDto */ = {
@@ -1369,6 +1375,16 @@
 				D774F4A424EE930300D01370 /* RyanairResponseDto.Availability.swift */,
 			);
 			path = Enteties.ResponseDto;
+			sourceTree = "<group>";
+		};
+		D774F4D824EFB23F00D01370 /* Scheme.2 */ = {
+			isa = PBXGroup;
+			children = (
+				D774F4DA24EFB25E00D01370 /* B.RyanairView2Builder.swift */,
+				D774F4DB24EFB25E00D01370 /* V.RyanairView2.swift */,
+				D774F4D924EFB25E00D01370 /* VM.RyanairView2ViewModel.swift */,
+			);
+			path = Scheme.2;
 			sourceTree = "<group>";
 		};
 		D78FABD424D0BD740069809D /* Documents.Visual */ = {
@@ -1461,6 +1477,7 @@
 		D7B33CAE24E41EFA00DA77B2 /* CoolStuff */ = {
 			isa = PBXGroup;
 			children = (
+				D78FABD424D0BD740069809D /* Documents.Visual */,
 				D755B14624D5736C00C6215C /* SendEMailViewControllerRepresentable.swift */,
 				D751737F24DEC3DB004822B2 /* VisualDocs_PasswordChecker.swift */,
 				D755B15324D5E70D00C6215C /* InfiniteScrollView.swift */,
@@ -2490,8 +2507,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D774F46D24EE647200D01370 /* B.RyanairView1Builder.swift in Sources */,
+				D774F4DC24EFB25E00D01370 /* VM.RyanairView2ViewModel.swift in Sources */,
+				D774F4DE24EFB25E00D01370 /* V.RyanairView2.swift in Sources */,
 				D774F46B24EE646300D01370 /* VM.RyanairView1ViewModel.swift in Sources */,
 				D774F46924EE645300D01370 /* V.RyanairView1.swift in Sources */,
+				D774F4DD24EFB25E00D01370 /* B.RyanairView2Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

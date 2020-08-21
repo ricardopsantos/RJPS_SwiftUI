@@ -21,9 +21,9 @@ struct RyanairView1: View {
     }
 
     var body: some View {
-        return ZStack {
-            ScrollView {
-                VStack {
+        ZStack {
+            Form {
+                Section(header: Text("Personal information")) {
                     departureDateView
                     HStack {
                         originStationView
@@ -33,26 +33,35 @@ struct RyanairView1: View {
                     adultsView
                     teensView
                     childrenView
-                    outputView
                 }
-            }.padding()
+
+                Section {
+                    VStack {
+                        outputViewText
+                        outputViewList
+                    }
+                }
+            }.navigationBarTitle(Text("person.name"))
             ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
         }
     }
 }
 
 extension RyanairView1 {
-    var outputView: some View {
 
+    var outputViewText: some View {
+        Text(viewModel.outputText)
+    }
+
+    var outputViewList: some View {
         VStack {
-            if self.viewModel.outputResults.count > 0 {
+            if self.viewModel.outputList.count > 0 {
                 List {
-                    ForEach(self.viewModel.outputResults, id: \.self) { some in
+                    ForEach(self.viewModel.outputList, id: \.self) { some in
                         Text("\(some.title) | \(some.subtitle)")
                     }
-                }.frame(height: 200)
+                }
             }
-            Text(viewModel.output)
         }
     }
 }
@@ -70,9 +79,7 @@ extension RyanairView1 {
             }
         }
     }
-}
 
-extension RyanairView1 {
     var destinationStationView: some View {
         VStack {
             TextField("Destination. Ex: STN", text: $viewModel.viewRequest.destination)
@@ -99,28 +106,30 @@ extension RyanairView1 {
     var adultsView: some View {
         VStack {
             Stepper(value: $viewModel.viewRequest.adult,
-            onEditingChanged: { _ in  },
-            label: { Text("Adults: \(viewModel.viewRequest.adult)") })
+                    onEditingChanged: { _ in  },
+                    label: { Text("Adults: \(viewModel.viewRequest.adult)") })
         }
     }
-}
 
-extension RyanairView1 {
     var teensView: some View {
         VStack {
             Stepper(value: $viewModel.viewRequest.teen,
-            onEditingChanged: { _ in  },
-            label: { Text("Teens: \(viewModel.viewRequest.teen)") })
+                    onEditingChanged: { _ in  },
+                    label: { Text("Teens: \(viewModel.viewRequest.teen)") })
+        }
+    }
+
+    var childrenView: some View {
+        VStack {
+            Stepper(value: $viewModel.viewRequest.children,
+                    onEditingChanged: { _ in  },
+                    label: { Text("Children: \(viewModel.viewRequest.children)") })
         }
     }
 }
 
-extension RyanairView1 {
-    var childrenView: some View {
-        VStack {
-            Stepper(value: $viewModel.viewRequest.children,
-            onEditingChanged: { _ in  },
-            label: { Text("Children: \(viewModel.viewRequest.children)") })
-        }
+struct RyanairView1_PreviewProvider: PreviewProvider {
+    static var previews: some View {
+        RyanairView1Builder.buildView()
     }
 }

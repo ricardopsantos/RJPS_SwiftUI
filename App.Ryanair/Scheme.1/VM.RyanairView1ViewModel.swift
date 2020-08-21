@@ -74,13 +74,13 @@ extension ViewResults: Hashable {
 public class RyanairView1ViewModel: ObservableObject {
 
     @Published var isLoading: Bool = false
-    @Published var output: String = ""
+    @Published var outputText: String = ""
+    @Published var outputList: [ViewResults] = []
     @Published var viewRequest: ViewRequestState = ViewRequestState()
 
     private var airports: [AirPorts] = []
     var airportsDepartureSuggestions: [AirPorts] = []
     var airportsArrivalSuggestions: [AirPorts] = []
-    var outputResults: [ViewResults] = []
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
@@ -136,6 +136,11 @@ public class RyanairView1ViewModel: ObservableObject {
             self.airportsArrivalSuggestions = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
         }.store(in: cancelBag)
 
+        self.outputList.append(ViewResults(title: "title_1", subtitle: "subtitle_1"))
+        self.outputList.append(ViewResults(title: "title_2", subtitle: "subtitle_1"))
+        self.outputList.append(ViewResults(title: "title_3", subtitle: "subtitle_1"))
+        self.outputList.append(ViewResults(title: "title_4", subtitle: "subtitle_1"))
+
     }
 }
 
@@ -150,7 +155,7 @@ private extension RyanairView1ViewModel {
     func display(_ message: String) {
         DispatchQueue.main.async { [weak self] in
             self?.hideLoading()
-            self?.output = message
+            self?.outputText = message
         }
     }
 
@@ -161,7 +166,8 @@ private extension RyanairView1ViewModel {
         }
         airportsDepartureSuggestions = []
         airportsArrivalSuggestions = []
-        outputResults = []
+        outputList = []
+        outputText = ""
         isLoading = true
         let apiRequest = RyanairRequestDto.Availability(origin: viewRequest.origin.trim.uppercased(),
             destination: viewRequest.destination.trim.uppercased(),
@@ -189,13 +195,13 @@ private extension RyanairView1ViewModel {
                 self.display("FLIGTH on first date \n\n\(flights)")
                 flights.forEach { (some) in
                     // STRONG SELF
-                    self.outputResults.append(ViewResults(title: some.flightKey, subtitle: some.flightNumber))
+                    self.outputList.append(ViewResults(title: some.flightKey, subtitle: some.flightNumber))
                 }
             } else if let dates = result.trips.first?.dates {
                 self.display("No fligth on any of the dates dates\n\n\(dates)")
                 dates.forEach { (some) in
                     // STRONG SELF
-                    self.outputResults.append(ViewResults(title: "\(some)", subtitle: ""))
+                    self.outputList.append(ViewResults(title: "\(some)", subtitle: ""))
                 }
             } else {
                 self.display("Weird\n\n\(result)")
