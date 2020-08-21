@@ -21,28 +21,34 @@ struct RyanairView1: View {
     }
 
     var body: some View {
-        ZStack {
-            Form {
-                Section(header: Text("Personal information")) {
-                    departureDateView
-                    HStack {
-                        originStationView
-                        Spacer()
-                        destinationStationView
-                    }
-                    adultsView
-                    teensView
-                    childrenView
+        NavigationView {
+            ZStack {
+                VStack {
+                    Form {
+                        Section(header: Text("hearder_1")) {
+                            departureDateView
+                            HStack {
+                                originStationView
+                                Spacer()
+                                destinationStationView
+                            }
+                            adultsView
+                            teensView
+                            childrenView
+                        }
+                        //Section(header: Text(viewModel.outputText)) {
+                        //    Text("")
+                        //}
+                        Section(header: Text("Results")) {
+                            outputViewList3
+                        }
+                    }.navigationBarTitle(Text("Fligth information"))
+                    outputViewText
+
                 }
 
-                Section {
-                    VStack {
-                        outputViewText
-                        outputViewList
-                    }
-                }
-            }.navigationBarTitle(Text("person.name"))
-            ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
+                ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
+            }
         }
     }
 }
@@ -50,10 +56,18 @@ struct RyanairView1: View {
 extension RyanairView1 {
 
     var outputViewText: some View {
-        Text(viewModel.outputText)
+        Text(viewModel.outputText).background(Color.clear)
     }
 
-    var outputViewList: some View {
+    var outputViewList3: some View {
+        ForEach(self.viewModel.outputList, id: \.self) { some in
+            NavigationLink(destination: Text("1")) {
+                Text("\(some.title) | \(some.subtitle)")
+            }
+        }
+    }
+
+    var outputViewList1: some View {
         VStack {
             if self.viewModel.outputList.count > 0 {
                 List {

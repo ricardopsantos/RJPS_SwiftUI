@@ -1130,6 +1130,7 @@
 				D78FAC1E24D4045B0069809D /* State_I.png */,
 				D7B33CB724E52F4E00DA77B2 /* CombineTesting.swift */,
 				D7EDC0A024E966F2001CFFFA /* CombineVisual.swift */,
+				D78FABD424D0BD740069809D /* Documents.Visual */,
 				D769897924D5FED8005F851F /* Recreating */,
 				D7B33CAE24E41EFA00DA77B2 /* CoolStuff */,
 				D78FAC2A24D4165F0069809D /* ExternalSources.SwiftUI-Lab */,
@@ -1477,7 +1478,6 @@
 		D7B33CAE24E41EFA00DA77B2 /* CoolStuff */ = {
 			isa = PBXGroup;
 			children = (
-				D78FABD424D0BD740069809D /* Documents.Visual */,
 				D755B14624D5736C00C6215C /* SendEMailViewControllerRepresentable.swift */,
 				D751737F24DEC3DB004822B2 /* VisualDocs_PasswordChecker.swift */,
 				D755B15324D5E70D00C6215C /* InfiniteScrollView.swift */,
