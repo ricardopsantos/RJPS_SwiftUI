@@ -130,6 +130,7 @@
 		D774F4EE24F1A8E400D01370 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */; };
 		D774F4F224F1C47C00D01370 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4F124F1C47B00D01370 /* URLSession+Extensions.swift */; };
 		D774F4F624F1C56100D01370 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4F524F1C56100D01370 /* NetworkUtils.swift */; };
+		D774F4F824F1D15C00D01370 /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4F724F1D15C00D01370 /* ConnectivityView.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -758,6 +759,13 @@
 		D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		D774F4F124F1C47B00D01370 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		D774F4F524F1C56100D01370 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		D774F4F724F1D15C00D01370 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
+		D774F4FB24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.21.png"; sourceTree = "<group>"; };
+		D774F4FC24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.16.png"; sourceTree = "<group>"; };
+		D774F4FD24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.39.51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.39.51.png"; sourceTree = "<group>"; };
+		D774F4FE24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.44.png"; sourceTree = "<group>"; };
+		D774F4FF24F1D70700D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.42.52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.42.52.png"; sourceTree = "<group>"; };
+		D774F50024F1D70700D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.43.01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.43.01.png"; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -1265,9 +1273,8 @@
 		D76989BD24D72A7D005F851F /* Utils.Designables */ = {
 			isa = PBXGroup;
 			children = (
+				D774F4F924F1D16100D01370 /* Code */,
 				D7B6DF6C24ED6CB400A94EE5 /* README.md */,
-				D755B14C24D59A7000C6215C /* Designables_PassCode.swift */,
-				9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */,
 				D76989BE24D72A7D005F851F /* Designables.h */,
 				D76989BF24D72A7D005F851F /* Info.plist */,
 			);
@@ -1300,6 +1307,7 @@
 		D774F44024EDB27400D01370 /* App.Ryanair */ = {
 			isa = PBXGroup;
 			children = (
+				D774F4FA24F1D6B500D01370 /* Previews */,
 				D774F46124EDB3A500D01370 /* Scheme.1 */,
 				D774F4D824EFB23F00D01370 /* Scheme.2 */,
 				D774F44124EDB27400D01370 /* App_Ryanair.h */,
@@ -1445,6 +1453,29 @@
 				D774F4F524F1C56100D01370 /* NetworkUtils.swift */,
 			);
 			path = Code;
+			sourceTree = "<group>";
+		};
+		D774F4F924F1D16100D01370 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				D755B14C24D59A7000C6215C /* Designables_PassCode.swift */,
+				9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */,
+				D774F4F724F1D15C00D01370 /* ConnectivityView.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		D774F4FA24F1D6B500D01370 /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				D774F4FD24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.39.51.png */,
+				D774F4FC24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.16.png */,
+				D774F4FB24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.21.png */,
+				D774F4FE24F1D6CE00D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.40.44.png */,
+				D774F4FF24F1D70700D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.42.52.png */,
+				D774F50024F1D70700D01370 /* Simulator Screen Shot - MAIN 13.4 . iPhone 8 - 2020-08-22 at 23.43.01.png */,
+			);
+			path = Previews;
 			sourceTree = "<group>";
 		};
 		D78FABD424D0BD740069809D /* Documents.Visual */ = {
@@ -2540,6 +2571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D76989CD24D72ABB005F851F /* typelias.swift in Sources */,
+				D774F4F824F1D15C00D01370 /* ConnectivityView.swift in Sources */,
 				D7B6DF8624ED87FA00A94EE5 /* ActivityIndicatorRepresentable.swift in Sources */,
 				D76989C724D72A97005F851F /* Designables_PassCode.swift in Sources */,
 			);

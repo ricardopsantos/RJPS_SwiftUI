@@ -19,14 +19,13 @@ public class RyanairView1ViewModel: ObservableObject {
         @Published var children = 0
         @Published var teen = 0
         @Published var adult = 0
-        @Published var origin = ""//"DUB"
-        @Published var destination = ""// "STN"
+        @Published var origin = "" { didSet { if origin.count > 3 && oldValue.count <= 3 { origin = oldValue } } } // Limit size
+        @Published var destination = "" { didSet { if destination.count > 3 && oldValue.count <= 3 { destination = oldValue } } } // Limit size
         @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
     }
 
     // Encapsulate that the View properties that the ViewModel updates in order to change UI
     class ViewStateIn: ObservableObject {
-        @Published var connectivity: String = ""
         @Published var outputText: String = ""
         @Published var outputList: [ListItemModel] = []
         @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
@@ -67,15 +66,6 @@ public class RyanairView1ViewModel: ObservableObject {
 
 private extension RyanairView1ViewModel {
     func observeUserInteractions() {
-
-        ConnectivityUtils.shared.monitor.pathUpdateHandler = { [weak self] path in
-            guard let self = self else { return }
-            if path.status == .satisfied {
-                self.viewIn.connectivity = ""
-            } else {
-                self.viewIn.connectivity = "No internet connection\n(Will use cached values if available)"
-            }
-        }
 
         // Observer Origin/Destination (TextField) changes
         let origin = viewOut.$origin.debounce(for: 0.8, scheduler: RunLoop.main)

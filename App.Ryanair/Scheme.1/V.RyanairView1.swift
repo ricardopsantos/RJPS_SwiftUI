@@ -9,6 +9,7 @@ import SwiftUI
 //
 import Utils_Designables
 import Utils_Factory
+import Utils
 //
 import App_Ryanair_Core
 import Base_Domain
@@ -27,9 +28,6 @@ struct RyanairView1: View {
             ZStack {
                 VStack {
                     Form {
-                        if viewModel.viewIn.connectivity.count > 0 {
-                            outputViewConnectivity
-                        }
                         Section(header: Text("Book options")) {
                             departureDateView
                             HStack {
@@ -45,9 +43,7 @@ struct RyanairView1: View {
                             outputViewList
                         }
                     }.navigationBarTitle(Text("Book flight"))
-                    if viewModel.viewIn.outputText.count > 0 {
-                        outputViewError
-                    }
+                    outputView
                 }
                 ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
             }
@@ -59,12 +55,14 @@ struct RyanairView1: View {
 
 extension RyanairView1 {
 
-    var outputViewConnectivity: some View {
-        Text(viewModel.viewIn.connectivity).font(.caption).foregroundColor(Color.red)
-    }
-
-    var outputViewError: some View {
-        Text(viewModel.viewIn.outputText).font(.caption).foregroundColor(Color.red)
+    var outputView: some View {
+        VStack {
+            Text(viewModel.viewIn.outputText)
+                .font(.caption)
+                .foregroundColor(Color.red)
+                .multilineTextAlignment(.center)
+            ConnectivityView(subTitle: "Will try to use cache if available")
+        }
     }
 
     var outputViewList: some View {
