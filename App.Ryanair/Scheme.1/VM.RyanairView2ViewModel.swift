@@ -18,14 +18,16 @@ public class RyanairView2ViewModel: ObservableObject {
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
+    var flight: RyanairResponseDto.Flight?
 
     public init(fetcher: APIRyanairProtocol,
                 repository: RepositoryRyanairProtocol,
-                scheduler: DispatchQueue = DispatchQueue(label: "Schemes1TemplateViewModel")) {
+                scheduler: DispatchQueue = DispatchQueue(label: "Schemes1TemplateViewModel"),
+                flight: RyanairResponseDto.Flight?) {
         self.fetcher = fetcher
         self.repository = repository
-        isLoading = true
-
+        self.flight = flight
+        self.isLoading = true
     }
 }
 

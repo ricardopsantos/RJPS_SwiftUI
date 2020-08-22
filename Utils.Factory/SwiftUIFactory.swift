@@ -35,6 +35,22 @@ public struct SwiftUIFactory {
                 .cornerRadius(5)
         }
     }
+
+    public struct TitleAndValue: View {
+        public let title: String
+        public let value: String
+        public init(title: String, value:String ) {
+            self.title = title
+            self.value = value
+        }
+        public var body: some View {
+            HStack {
+                Text(title).font(.body).bold().foregroundColor(Color(UIColor.label))
+                Spacer()
+                Text(value).font(.body).foregroundColor(Color(UIColor.secondaryLabel))
+            }
+        }
+    }
 }
 
 // MARK: - Preview
@@ -43,11 +59,9 @@ struct SwiftUIFactory_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             VStack {
-                SwiftUIFactory.ButtonView(title: "Title", action: {
-                    print("!action!")
-                })
+                SwiftUIFactory.ButtonView(title: "Title", action: { print("!action!") })
+                SwiftUIFactory.TitleAndValue(title: "Title", value: "value")
             }
         }
-
     }
 }

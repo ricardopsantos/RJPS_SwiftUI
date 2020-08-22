@@ -10,6 +10,7 @@ import SwiftUI
 import Utils_Designables
 //
 import App_Ryanair_Core
+import Base_Domain
 
 struct RyanairView1: View {
 
@@ -25,7 +26,7 @@ struct RyanairView1: View {
             ZStack {
                 VStack {
                     Form {
-                        Section(header: Text("hearder_1")) {
+                        Section(header: Text("Book options")) {
                             departureDateView
                             HStack {
                                 originStationView
@@ -36,17 +37,12 @@ struct RyanairView1: View {
                             teensView
                             childrenView
                         }
-                        //Section(header: Text(viewModel.outputText)) {
-                        //    Text("")
-                        //}
-                        Section(header: Text("Results")) {
+                        Section(header: Text("Book results")) {
                             outputViewList3
                         }
-                    }.navigationBarTitle(Text("Fligth information"))
+                    }.navigationBarTitle(Text("Book flight"))
                     outputViewText
-
                 }
-
                 ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
             }
         }
@@ -56,12 +52,12 @@ struct RyanairView1: View {
 extension RyanairView1 {
 
     var outputViewText: some View {
-        Text(viewModel.outputText).background(Color.clear)
+        Text(viewModel.outputText).bold().foregroundColor(Color.red)
     }
 
     var outputViewList3: some View {
         ForEach(self.viewModel.outputList, id: \.self) { some in
-            NavigationLink(destination: Text("1")) {
+            NavigationLink(destination: self.viewModel.goTo(id: some.id) ) {
                 Text("\(some.title) | \(some.subtitle)")
             }
         }
@@ -72,7 +68,10 @@ extension RyanairView1 {
             if self.viewModel.outputList.count > 0 {
                 List {
                     ForEach(self.viewModel.outputList, id: \.self) { some in
-                        Text("\(some.title) | \(some.subtitle)")
+                        VStack {
+                            Text("\(some.title)")
+                            Text("\(some.subtitle)")
+                        }
                     }
                 }
             }

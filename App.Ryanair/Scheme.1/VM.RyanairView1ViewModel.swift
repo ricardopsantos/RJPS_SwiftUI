@@ -10,38 +10,36 @@ import Utils_Extensions
 import Utils
 //
 import App_Ryanair_Core
+import Base_Domain
 
 class ViewRequestState: ObservableObject {
     @Published var children = 0
     @Published var teen = 0
     @Published var adult = 0
-    @Published var origin = ""
-    @Published var destination = ""
+    @Published var origin = "DUB"
+    @Published var destination = "STN"
     @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
+}
 
+extension ViewRequestState {
     var errorMessage: String {
-
         var acc = ""
         // Dont allow any negative passenger
         if children < 0 || adult < 0 || teen < 0 {
             acc = "\(acc)No negative passengers...\n"
         }
-
         // At least one passenger
         if children == 0 && adult == 0 && teen == 0 {
             acc = "\(acc)Add passengers...\n"
         }
-
         // Airports info filled
         if origin.count < 3 && destination.count < 3 {
             acc = "\(acc)Add airports\n"
         }
-
         // Departure date filled (improve validation!)
         if dateDeparture < Date() {
             acc = "\(acc)Invalid departure date\n"
         }
-
         return acc
     }
 }
@@ -59,15 +57,39 @@ extension AirPorts: Hashable {
     }
 }
 
-struct ViewResults: Identifiable {
-    var id = UUID()
-    let title: String
-    let subtitle: String
+public struct Mappers {
+    private init() { }
 }
 
-extension ViewResults: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+public extension Mappers {
+
+    static func listItemsWith(trips: [RyanairResponseDto.Trip]) -> [ListItemModel] {
+        var acc: [ListItemModel] = []
+        trips.forEach { (trip) in
+            trip.flights.forEach { (flight) in
+                let flightNumber = flight.flightNumber
+                let duration = flight.duration
+                let timeUTC = flight.timeUTC
+                let title = "\(flightNumber) | \(timeUTC)"
+                let subTitle = "\(duration)"
+                acc.append(ListItemModel(id: flight.id, title: title, subtitle: subTitle))
+            }
+        }
+        return acc
+    }
+}
+
+public extension RyanairView1ViewModel {
+    func goTo(id: String) -> some View {
+        var param: RyanairResponseDto.Flight!
+        trips.forEach { (trip) in
+            trip.flights.forEach { (flight) in
+                if flight.id == id {
+                    param = flight
+                }
+            }
+        }
+        return RyanairView2Builder.buildView(flight: param)
     }
 }
 
@@ -75,16 +97,23 @@ public class RyanairView1ViewModel: ObservableObject {
 
     @Published var isLoading: Bool = false
     @Published var outputText: String = ""
-    @Published var outputList: [ViewResults] = []
+    @Published var outputList: [ListItemModel] = []
     @Published var viewRequest: ViewRequestState = ViewRequestState()
 
-    private var airports: [AirPorts] = []
     var airportsDepartureSuggestions: [AirPorts] = []
     var airportsArrivalSuggestions: [AirPorts] = []
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
-
+    private var airports: [AirPorts] = []
+    private var trips: [RyanairResponseDto.Trip] = [] {
+        didSet {
+            self.outputList.append(contentsOf: Mappers.listItemsWith(trips: trips))
+            if self.outputList.count == 0 {
+                self.display("No results")
+            }
+        }
+    }
     public init(fetcher: APIRyanairProtocol,
                 repository: RepositoryRyanairProtocol,
                 scheduler: DispatchQueue = DispatchQueue(label: "Schemes1TemplateViewModel")) {
@@ -123,7 +152,8 @@ public class RyanairView1ViewModel: ObservableObject {
         // Update departure suggestions
         origin.sink { [weak self] (some) in
             guard let self = self else { return }
-            guard some.count >= 2 else { return } // User must type 2 chars for autocomplete
+            self.airportsDepartureSuggestions = []
+            guard some.count == 2 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
             self.airportsDepartureSuggestions = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
         }.store(in: cancelBag)
@@ -131,16 +161,11 @@ public class RyanairView1ViewModel: ObservableObject {
         // Update destination suggestions
         destination.sink { [weak self] (some) in
             guard let self = self else { return }
-            guard some.count >= 2 else { return } // User must type 2 chars for autocomplete
+            self.airportsArrivalSuggestions = []
+            guard some.count == 2 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
             self.airportsArrivalSuggestions = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
         }.store(in: cancelBag)
-
-        self.outputList.append(ViewResults(title: "title_1", subtitle: "subtitle_1"))
-        self.outputList.append(ViewResults(title: "title_2", subtitle: "subtitle_1"))
-        self.outputList.append(ViewResults(title: "title_3", subtitle: "subtitle_1"))
-        self.outputList.append(ViewResults(title: "title_4", subtitle: "subtitle_1"))
-
     }
 }
 
@@ -160,6 +185,7 @@ private extension RyanairView1ViewModel {
     }
 
     func refreshData() {
+        trips = []
         guard viewRequest.errorMessage.count == 0 else {
             display(viewRequest.errorMessage)
             return
@@ -185,27 +211,14 @@ private extension RyanairView1ViewModel {
         let availability = self.fetcher.availability(request: apiRequest, cache: .cacheElseLoad)
         availability.sink(receiveCompletion: { [weak self] (result) in
             guard let self = self else { return }
+            self.hideLoading()
             switch result {
             case .finished: ()
-            case .failure(let error): self.display("No results")
+            case .failure: self.display("No results")
             }
         }) { [weak self]  (result) in
             guard let self = self else { return }
-            if let flights = result.trips.first?.dates.first?.flights, flights.count > 0 {
-                self.display("FLIGTH on first date \n\n\(flights)")
-                flights.forEach { (some) in
-                    // STRONG SELF
-                    self.outputList.append(ViewResults(title: some.flightKey, subtitle: some.flightNumber))
-                }
-            } else if let dates = result.trips.first?.dates {
-                self.display("No fligth on any of the dates dates\n\n\(dates)")
-                dates.forEach { (some) in
-                    // STRONG SELF
-                    self.outputList.append(ViewResults(title: "\(some)", subtitle: ""))
-                }
-            } else {
-                self.display("Weird\n\n\(result)")
-            }
+            self.trips = result.trips
         }.store(in: cancelBag)
     }
 }

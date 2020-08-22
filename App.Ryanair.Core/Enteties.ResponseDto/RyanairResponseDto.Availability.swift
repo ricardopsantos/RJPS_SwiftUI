@@ -26,6 +26,16 @@ public extension RyanairResponseDto {
         public let destination: String // Airport Code
         public let destinationName, routeGroup, tripType, upgradeType: String
         public let dates: [DateElement]
+
+        public var flights: [Flight] {
+            var acc: [Flight] = []
+            dates.forEach { (dateElement) in
+                dateElement.flights.forEach { (flight) in
+                    acc.append(flight)
+                }
+            }
+            return acc
+        }
     }
 
     // MARK: - DateElement
@@ -39,18 +49,34 @@ public extension RyanairResponseDto {
         public let faresLeft: Int
         public let flightKey: String
         public let infantsLeft: Int
-        public let regularFare: RegularFare
+        public let regularFare: RegularFare?
         public let operatedBy: String
         public let segments: [Segment]
         public let flightNumber: String
         public let time, timeUTC: [String]
         public let duration: String
-    }
+        public var id: String { return "\(flightNumber)_\(flightKey)"}
 
-   /* enum Duration: String, DtoProtocol {
-        case the0120 = "01:20"
-        case the0125 = "01:25"
-    }*/
+        public init(faresLeft: Int,
+                    flightKey: String,
+                    infantsLeft: Int,
+                    operatedBy: String,
+                    flightNumber: String,
+                    time: [String],
+                    timeUTC: [String],
+                    duration: String) {
+            self.faresLeft = faresLeft
+            self.flightKey = flightKey
+            self.infantsLeft = infantsLeft
+            self.operatedBy = operatedBy
+            self.flightNumber = flightNumber
+            self.time = time
+            self.timeUTC = timeUTC
+            self.duration = duration
+            self.segments = []
+            self.regularFare = nil
+        }
+    }
 
     // MARK: - RegularFare
     struct RegularFare: DtoProtocol {
