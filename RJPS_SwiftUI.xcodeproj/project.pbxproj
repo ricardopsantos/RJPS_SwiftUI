@@ -766,6 +766,7 @@
 		D774F4FE24F1D6CE00D01370 /* Form.Internet.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Internet.1.png; sourceTree = "<group>"; };
 		D774F4FF24F1D70700D01370 /* Form.Results.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Results.2.png; sourceTree = "<group>"; };
 		D774F50024F1D70700D01370 /* Form.Autocomplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Autocomplete.png; sourceTree = "<group>"; };
+		D774F50124F1D8AB00D01370 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -1307,6 +1308,7 @@
 		D774F44024EDB27400D01370 /* App.Ryanair */ = {
 			isa = PBXGroup;
 			children = (
+				D774F50124F1D8AB00D01370 /* README.md */,
 				D774F4FA24F1D6B500D01370 /* Previews */,
 				D774F46124EDB3A500D01370 /* Scheme.1 */,
 				D774F4D824EFB23F00D01370 /* Scheme.2 */,
