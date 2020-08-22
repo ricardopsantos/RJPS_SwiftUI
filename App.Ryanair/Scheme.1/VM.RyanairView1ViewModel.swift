@@ -12,133 +12,65 @@ import Utils
 import App_Ryanair_Core
 import Base_Domain
 
-class ViewRequestState: ObservableObject {
-    @Published var children = 0
-    @Published var teen = 0
-    @Published var adult = 0
-    @Published var origin = "DUB"
-    @Published var destination = "STN"
-    @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
-}
-
-extension ViewRequestState {
-    var errorMessage: String {
-        var acc = ""
-        // Dont allow any negative passenger
-        if children < 0 || adult < 0 || teen < 0 {
-            acc = "\(acc)No negative passengers...\n"
-        }
-        // At least one passenger
-        if children == 0 && adult == 0 && teen == 0 {
-            acc = "\(acc)Add passengers...\n"
-        }
-        // Airports info filled
-        if origin.count < 3 && destination.count < 3 {
-            acc = "\(acc)Add airports\n"
-        }
-        // Departure date filled (improve validation!)
-        if dateDeparture < Date() {
-            acc = "\(acc)Invalid departure date\n"
-        }
-        return acc
-    }
-}
-
-struct AirPorts: Identifiable {
-    var id: String { return code }
-    let name: String
-    let code: String
-}
-
-extension AirPorts: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(code)
-        hasher.combine(name)
-    }
-}
-
-public struct Mappers {
-    private init() { }
-}
-
-public extension Mappers {
-
-    static func listItemsWith(trips: [RyanairResponseDto.Trip]) -> [ListItemModel] {
-        var acc: [ListItemModel] = []
-        trips.forEach { (trip) in
-            trip.flights.forEach { (flight) in
-                let flightNumber = flight.flightNumber
-                let duration = flight.duration
-                let timeUTC = flight.timeUTC
-                let title = "\(flightNumber) | \(timeUTC)"
-                let subTitle = "\(duration)"
-                acc.append(ListItemModel(id: flight.id, title: title, subtitle: subTitle))
-            }
-        }
-        return acc
-    }
-}
-
-public extension RyanairView1ViewModel {
-    func goTo(id: String) -> some View {
-        var param: RyanairResponseDto.Flight!
-        trips.forEach { (trip) in
-            trip.flights.forEach { (flight) in
-                if flight.id == id {
-                    param = flight
-                }
-            }
-        }
-        return RyanairView2Builder.buildView(flight: param)
-    }
-}
-
 public class RyanairView1ViewModel: ObservableObject {
+
+    class ViewRequestState: ObservableObject {
+        @Published var children = 0
+        @Published var teen = 0
+        @Published var adult = 0
+        @Published var origin = "DUB"
+        @Published var destination = "STN"
+        @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
+    }
 
     @Published var isLoading: Bool = false
     @Published var outputText: String = ""
     @Published var outputList: [ListItemModel] = []
     @Published var viewRequest: ViewRequestState = ViewRequestState()
+    @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
+    @Published var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
 
-    var airportsDepartureSuggestions: [AirPorts] = []
-    var airportsArrivalSuggestions: [AirPorts] = []
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
-    private var airports: [AirPorts] = []
+    private var airports: [RyanairModel.AirPort] = []
     private var trips: [RyanairResponseDto.Trip] = [] {
         didSet {
-            self.outputList.append(contentsOf: Mappers.listItemsWith(trips: trips))
-            if self.outputList.count == 0 {
-                self.display("No results")
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.outputList = []
+                self.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
+                if self.outputList.count == 0 {
+                    self.display("No results")
+                } else {
+                    self.display("")
+                }
             }
         }
     }
+
     public init(fetcher: APIRyanairProtocol,
                 repository: RepositoryRyanairProtocol,
                 scheduler: DispatchQueue = DispatchQueue(label: "Schemes1TemplateViewModel")) {
         self.fetcher = fetcher
         self.repository = repository
-        isLoading = true
+        fetchStations()
+        observeUserInteractions()
+    }
+}
 
-        let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
-        _ = stations.sink(receiveCompletion: { [weak self] (result) in
-            self?.hideLoading()
-        }) { [weak self] (result) in
-            guard let self = self else { return }
-            result.stations.forEach { [weak self] (station) in
-                self?.airports.append(AirPorts(name: station.name, code: station.code))
-            }
-            self.display("\(self.airports)")
-        }.store(in: cancelBag)
+// MARK: - Combine
 
-        // Observer Origin/Destination changes
+private extension RyanairView1ViewModel {
+    func observeUserInteractions() {
+
+        // Observer Origin/Destination (TextField) changes
         let origin = viewRequest.$origin.debounce(for: 0.8, scheduler: RunLoop.main)
         let destination = viewRequest.$destination.debounce(for: 0.8, scheduler: RunLoop.main)
         let dateDeparture = viewRequest.$dateDeparture.debounce(for: 0.8, scheduler: RunLoop.main)
 
         Publishers.CombineLatest3(origin, destination, dateDeparture).sink(receiveValue: { [weak self] _ in
-            self?.refreshData()
+            self?.fetchResults()
         }).store(in: cancelBag)
 
         // Observer passenger changes
@@ -146,7 +78,7 @@ public class RyanairView1ViewModel: ObservableObject {
         let children = viewRequest.$children.debounce(for: 0.8, scheduler: RunLoop.main)
         let teen = viewRequest.$teen.debounce(for: 0.8, scheduler: RunLoop.main)
         Publishers.CombineLatest3(adult, children, teen).sink(receiveValue: { [weak self] _ in
-            self?.refreshData()
+            self?.fetchResults()
         }).store(in: cancelBag)
 
         // Update departure suggestions
@@ -169,8 +101,9 @@ public class RyanairView1ViewModel: ObservableObject {
     }
 }
 
-private extension RyanairView1ViewModel {
+// MARK: - Private in/out
 
+private extension RyanairView1ViewModel {
     func hideLoading() {
         DispatchQueue.main.async { [weak self] in
             self?.isLoading = false
@@ -184,30 +117,58 @@ private extension RyanairView1ViewModel {
         }
     }
 
-    func refreshData() {
-        trips = []
+    func cleanViewOutput() {
+        DispatchQueue.main.async { [weak self] in
+            self?.trips = []
+            self?.airportsDepartureSuggestions = []
+            self?.airportsArrivalSuggestions = []
+            self?.airportsDepartureSuggestions = []
+            self?.airportsArrivalSuggestions = []
+            self?.outputList = []
+            self?.outputText = ""
+            self?.isLoading = false
+        }
+    }
+}
+
+// MARK: - Private fetchers
+
+private extension RyanairView1ViewModel {
+
+    func fetchStations() {
+        cleanViewOutput()
+        isLoading = true
+        let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
+        _ = stations.sink(receiveCompletion: { [weak self] (result) in
+            self?.hideLoading()
+        }) { [weak self] (result) in
+            guard let self = self else { return }
+            result.stations.forEach { [weak self] (station) in
+                self?.airports.append(RyanairModel.AirPort(name: station.name, code: station.code))
+            }
+        }.store(in: cancelBag)
+    }
+
+    func fetchResults() {
+        cleanViewOutput()
         guard viewRequest.errorMessage.count == 0 else {
             display(viewRequest.errorMessage)
             return
         }
-        airportsDepartureSuggestions = []
-        airportsArrivalSuggestions = []
-        outputList = []
-        outputText = ""
         isLoading = true
         let apiRequest = RyanairRequestDto.Availability(origin: viewRequest.origin.trim.uppercased(),
-            destination: viewRequest.destination.trim.uppercased(),
-            dateout: Formatters.yearMonthDayFormatter.string(from: viewRequest.dateDeparture),
-            datein: "",
-            flexdaysbeforeout: "3",
-            flexdaysout: "3",
-            flexdaysbeforein: "3",
-            flexdaysin: "3",
-            adt: viewRequest.adult,
-            teen: viewRequest.teen,
-            chd: viewRequest.children,
-            roundtrip: true,
-            ToUs: "AGREED")
+                                                        destination: viewRequest.destination.trim.uppercased(),
+                                                        dateout: Formatters.yearMonthDayFormatter.string(from: viewRequest.dateDeparture),
+                                                        datein: "",
+                                                        flexdaysbeforeout: "3",
+                                                        flexdaysout: "3",
+                                                        flexdaysbeforein: "3",
+                                                        flexdaysin: "3",
+                                                        adt: viewRequest.adult,
+                                                        teen: viewRequest.teen,
+                                                        chd: viewRequest.children,
+                                                        roundtrip: true,
+                                                        ToUs: "AGREED")
         let availability = self.fetcher.availability(request: apiRequest, cache: .cacheElseLoad)
         availability.sink(receiveCompletion: { [weak self] (result) in
             guard let self = self else { return }
@@ -216,9 +177,48 @@ private extension RyanairView1ViewModel {
             case .finished: ()
             case .failure: self.display("No results")
             }
-        }) { [weak self]  (result) in
+        }) { [weak self] (result) in
             guard let self = self else { return }
             self.trips = result.trips
         }.store(in: cancelBag)
+    }
+}
+
+extension RyanairView1ViewModel.ViewRequestState {
+    var errorMessage: String {
+        var acc = ""
+        // Don't allow any negative passenger
+        if children < 0 || adult < 0 || teen < 0 {
+            acc = "\(acc)No negative passengers...\n"
+        }
+        // At least one passenger
+        if children == 0 && adult == 0 && teen == 0 {
+            acc = "\(acc)Add passengers...\n"
+        }
+        // Airports info filled
+        if origin.count < 3 && destination.count < 3 {
+            acc = "\(acc)Add airports\n"
+        }
+        // Departure date filled (improve validation!)
+        if dateDeparture < Date() {
+            acc = "\(acc)Invalid departure date\n"
+        }
+        return acc
+    }
+}
+
+// MARK: - Router
+
+public extension RyanairView1ViewModel {
+    func routeWithFight(id: String) -> some View {
+        var param: RyanairResponseDto.Flight!
+        trips.forEach { (trip) in
+            trip.flights.forEach { (flight) in
+                if flight.id == id {
+                    param = flight
+                }
+            }
+        }
+        return RyanairView2Builder.buildView(flight: param)
     }
 }

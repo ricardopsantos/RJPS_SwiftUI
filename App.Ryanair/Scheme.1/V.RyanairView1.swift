@@ -57,7 +57,7 @@ extension RyanairView1 {
 
     var outputViewList3: some View {
         ForEach(self.viewModel.outputList, id: \.self) { some in
-            NavigationLink(destination: self.viewModel.goTo(id: some.id) ) {
+            NavigationLink(destination: self.viewModel.routeWithFight(id: some.id) ) {
                 Text("\(some.title) | \(some.subtitle)")
             }
         }

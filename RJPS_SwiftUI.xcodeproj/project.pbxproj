@@ -123,6 +123,10 @@
 		D774F4DD24EFB25E00D01370 /* B.RyanairView2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4DA24EFB25E00D01370 /* B.RyanairView2Builder.swift */; };
 		D774F4DE24EFB25E00D01370 /* V.RyanairView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4DB24EFB25E00D01370 /* V.RyanairView2.swift */; };
 		D774F4E024F161E100D01370 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4DF24F161E100D01370 /* ListItemModel.swift */; };
+		D774F4E524F188D000D01370 /* RyanairModel.AirPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4E424F188D000D01370 /* RyanairModel.AirPort.swift */; };
+		D774F4E724F188DB00D01370 /* RyanairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4E624F188DB00D01370 /* RyanairModel.swift */; };
+		D774F4EA24F18A3400D01370 /* RyanairMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4E924F18A3400D01370 /* RyanairMappers.swift */; };
+		D774F4EC24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4EB24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -744,6 +748,10 @@
 		D774F4DA24EFB25E00D01370 /* B.RyanairView2Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = B.RyanairView2Builder.swift; path = App.Ryanair/Scheme.1/B.RyanairView2Builder.swift; sourceTree = SOURCE_ROOT; };
 		D774F4DB24EFB25E00D01370 /* V.RyanairView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = V.RyanairView2.swift; path = App.Ryanair/Scheme.1/V.RyanairView2.swift; sourceTree = SOURCE_ROOT; };
 		D774F4DF24F161E100D01370 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
+		D774F4E424F188D000D01370 /* RyanairModel.AirPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.AirPort.swift; sourceTree = "<group>"; };
+		D774F4E624F188DB00D01370 /* RyanairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.swift; sourceTree = "<group>"; };
+		D774F4E924F18A3400D01370 /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
+		D774F4EB24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.ListItemModel.swift; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -1312,9 +1320,11 @@
 		D774F45024EDB28D00D01370 /* App.Ryanair.Core */ = {
 			isa = PBXGroup;
 			children = (
+				D774F4E824F18A2100D01370 /* Mappers */,
 				D774F4A824EEA45700D01370 /* RyanairCoreTesting.swift */,
 				D774F45F24EDB36600D01370 /* APIRyanairProtocol.swift */,
 				D774F46424EDB61100D01370 /* RepositorRyanairProtocol.swift */,
+				D774F4E324F188B100D01370 /* Models */,
 				D774F4AC24EEC30D00D01370 /* Enteties.ResponseDto */,
 				D774F45E24EDB32D00D01370 /* Entities.RequestsDto */,
 				D774F45D24EDB32300D01370 /* API */,
@@ -1389,6 +1399,24 @@
 				D774F4DA24EFB25E00D01370 /* B.RyanairView2Builder.swift */,
 			);
 			path = Scheme.2;
+			sourceTree = "<group>";
+		};
+		D774F4E324F188B100D01370 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D774F4E624F188DB00D01370 /* RyanairModel.swift */,
+				D774F4E424F188D000D01370 /* RyanairModel.AirPort.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D774F4E824F18A2100D01370 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				D774F4E924F18A3400D01370 /* RyanairMappers.swift */,
+				D774F4EB24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 		D78FABD424D0BD740069809D /* Documents.Visual */ = {
@@ -2525,13 +2553,17 @@
 			files = (
 				D774F46024EDB36600D01370 /* APIRyanairProtocol.swift in Sources */,
 				D774F4B024EEC34A00D01370 /* RyanairRequestDto.Availability.swift in Sources */,
+				D774F4E724F188DB00D01370 /* RyanairModel.swift in Sources */,
 				D774F4A124EE8D0A00D01370 /* RyanairResponseDto.swift in Sources */,
 				D774F46724EDB63500D01370 /* RyanairResponseDto.Stations.swift in Sources */,
+				D774F4EA24F18A3400D01370 /* RyanairMappers.swift in Sources */,
 				D774F46524EDB61100D01370 /* RepositorRyanairProtocol.swift in Sources */,
 				D774F49D24EE6D0A00D01370 /* APIRyanair.swift in Sources */,
 				D774F4AB24EEC28800D01370 /* RyanairRequestDto.swift in Sources */,
 				D774F4A524EE930300D01370 /* RyanairResponseDto.Availability.swift in Sources */,
 				D774F46324EDB3FB00D01370 /* FetcherRyanair.swift in Sources */,
+				D774F4EC24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift in Sources */,
+				D774F4E524F188D000D01370 /* RyanairModel.AirPort.swift in Sources */,
 				D774F4A924EEA45700D01370 /* RyanairCoreTesting.swift in Sources */,
 				D774F4B224EECA2500D01370 /* RepositoryRyanair.swift in Sources */,
 				D774F4AE24EEC33E00D01370 /* RyanairRequestDto.Stations.swift in Sources */,
