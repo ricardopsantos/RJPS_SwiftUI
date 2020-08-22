@@ -41,6 +41,7 @@ public extension SimpleNetworkAgent_B {
             // coming from the server as JSON to a fully-fledged object. You use decode(_:) as an auxiliary
             // function to achieve this. Since you are only interested in the first value emitted by the network request, you set .max(1).
             .flatMap(maxPublishers: .max(1)) { [weak self] pair in self!.decode(pair.data, url, decoder, dumpResponse) }
+            .receive(on: DispatchQueue.main)
             // If you don’t use eraseToAnyPublisher() you’ll have to carry over the full type returned
             // by flatMap: Publishers.FlatMap<AnyPublisher<_, WeatherError>, Publishers.MapError<URLSession.DataTaskPublisher, WeatherError>>.
             // As a consumer of the API, you don’t want to be burdened with these details. So, to improve the API ergonomics,

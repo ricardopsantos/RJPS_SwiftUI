@@ -5,8 +5,10 @@
 
 import Foundation
 //
+import Utils
+import Utils_Extensions
+//
 import Base_Domain
-
 public extension RyanairMappers {
 
     static func listItemsWith(trips: [RyanairResponseDto.Trip]) -> [ListItemModel] {
@@ -14,10 +16,9 @@ public extension RyanairMappers {
         trips.forEach { (trip) in
             trip.flights.forEach { (flight) in
                 let flightNumber = flight.flightNumber
-                let duration = flight.duration
-                let timeUTC = flight.timeUTC
-                let title = "\(flightNumber) | \(timeUTC)"
-                let subTitle = "\(duration)"
+                let (date) = DateFormatters.medium.string(from: Date.with(string: flight.timeUTC.first!))
+                let title = "\(flightNumber)"
+                let subTitle = "\(flight.regularFare!.fares.first!.amount)€ | \(date)"
                 acc.append(ListItemModel(id: flight.id, title: title, subtitle: subTitle))
             }
         }

@@ -14,6 +14,7 @@ import Base_Domain
 
 public class RyanairView1ViewModel: ObservableObject {
 
+    // Encapsulate that the View properties that the ViewModel needs to read on to work
     class ViewStateOut: ObservableObject {
         @Published var children = 0
         @Published var teen = 0
@@ -23,12 +24,17 @@ public class RyanairView1ViewModel: ObservableObject {
         @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
     }
 
+    // Encapsulate that the View properties that the ViewModel updates in order to change UI
+    class ViewStateIn: ObservableObject {
+        @Published var outputText: String = ""
+        @Published var outputList: [ListItemModel] = []
+        @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
+        @Published var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
+    }
+
     @Published var isLoading: Bool = false
-    @Published var outputText: String = ""
-    @Published var outputList: [ListItemModel] = []
     @Published var viewStateOut: ViewStateOut = ViewStateOut()
-    @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
-    @Published var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
+    @Published var viewStateIn: ViewStateIn = ViewStateIn()
 
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
@@ -36,16 +42,16 @@ public class RyanairView1ViewModel: ObservableObject {
     private var airports: [RyanairModel.AirPort] = []
     private var trips: [RyanairResponseDto.Trip] = [] {
         didSet {
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                self.outputList = []
-                self.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
-                if self.outputList.count == 0 {
+            //DispatchQueue.main.async { [weak self] in
+               // guard let self = self else { return }
+                self.viewStateIn.outputList = []
+                self.viewStateIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
+                if self.viewStateIn.outputList.count == 0 {
                     self.display("No results")
                 } else {
                     self.display("")
                 }
-            }
+           // }
         }
     }
 
@@ -81,22 +87,25 @@ private extension RyanairView1ViewModel {
             self?.fetchResults()
         }).store(in: cancelBag)
 
-        // Update departure suggestions
+        // Update departure suggestions (will show 3 hits results max)
         origin.sink { [weak self] (some) in
             guard let self = self else { return }
-            self.airportsDepartureSuggestions = []
+            self.viewStateIn.airportsDepartureSuggestions = []
             guard some.count == 2 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
-            self.airportsDepartureSuggestions = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            self.viewStateIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(3))
+
         }.store(in: cancelBag)
 
-        // Update destination suggestions
+        // Update destination suggestions (will show 3 hits results max)
         destination.sink { [weak self] (some) in
             guard let self = self else { return }
-            self.airportsArrivalSuggestions = []
+            self.viewStateIn.airportsArrivalSuggestions = []
             guard some.count == 2 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
-            self.airportsArrivalSuggestions = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            self.viewStateIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(3))
         }.store(in: cancelBag)
     }
 }
@@ -105,29 +114,29 @@ private extension RyanairView1ViewModel {
 
 private extension RyanairView1ViewModel {
     func hideLoading() {
-        DispatchQueue.main.async { [weak self] in
-            self?.isLoading = false
-        }
+       // DispatchQueue.main.async { [weak self] in
+            self.isLoading = false
+       // }
     }
 
     func display(_ message: String) {
-        DispatchQueue.main.async { [weak self] in
-            self?.hideLoading()
-            self?.outputText = message
-        }
+       // DispatchQueue.main.async { [weak self] in
+            self.hideLoading()
+            self.viewStateIn.outputText = message
+       // }
     }
 
     func cleanViewOutput() {
-        DispatchQueue.main.async { [weak self] in
-            self?.trips = []
-            self?.airportsDepartureSuggestions = []
-            self?.airportsArrivalSuggestions = []
-            self?.airportsDepartureSuggestions = []
-            self?.airportsArrivalSuggestions = []
-            self?.outputList = []
-            self?.outputText = ""
-            self?.isLoading = false
-        }
+       // DispatchQueue.main.async { [weak self] in
+            self.trips = []
+            self.viewStateIn.airportsDepartureSuggestions = []
+            self.viewStateIn.airportsArrivalSuggestions = []
+            self.viewStateIn.airportsDepartureSuggestions = []
+            self.viewStateIn.airportsArrivalSuggestions = []
+            self.viewStateIn.outputList = []
+            self.viewStateIn.outputText = ""
+            self.isLoading = false
+      //  }
     }
 }
 
@@ -143,40 +152,41 @@ private extension RyanairView1ViewModel {
             self?.hideLoading()
         }) { [weak self] (result) in
             guard let self = self else { return }
-            result.stations.forEach { [weak self] (station) in
-                self?.airports.append(RyanairModel.AirPort(name: station.name, code: station.code))
-            }
+            self.airports = result.stations.map({ RyanairModel.AirPort(name: $0.name, code: $0.code) })
         }.store(in: cancelBag)
     }
 
     func fetchResults() {
-        cleanViewOutput()
+        //cleanViewOutput()
         guard viewStateOut.errorMessage.count == 0 else {
             display(viewStateOut.errorMessage)
             return
         }
         isLoading = true
-        let apiRequest = RyanairRequestDto.Availability(origin: viewStateOut.origin.trim.uppercased(),
-                                                        destination: viewStateOut.destination.trim.uppercased(),
-                                                        dateout: Formatters.yearMonthDayFormatter.string(from: viewStateOut.dateDeparture),
+
+        let origin = viewStateOut.origin.trim.uppercased()
+        let destination = viewStateOut.destination.trim.uppercased()
+        let dateout = DateFormatters.yearMonthDayFormatter.string(from: viewStateOut.dateDeparture)
+        let adt = viewStateOut.adult
+        let teen = viewStateOut.teen
+        let chd = viewStateOut.children
+        let apiRequest = RyanairRequestDto.Availability(origin: origin,
+                                                        destination: destination,
+                                                        dateout: dateout,
                                                         datein: "",
                                                         flexdaysbeforeout: "3",
                                                         flexdaysout: "3",
                                                         flexdaysbeforein: "3",
                                                         flexdaysin: "3",
-                                                        adt: viewStateOut.adult,
-                                                        teen: viewStateOut.teen,
-                                                        chd: viewStateOut.children,
+                                                        adt: adt,
+                                                        teen: teen,
+                                                        chd: chd,
                                                         roundtrip: true,
                                                         ToUs: "AGREED")
         let availability = self.fetcher.availability(request: apiRequest, cache: .cacheElseLoad)
         availability.sink(receiveCompletion: { [weak self] (result) in
             guard let self = self else { return }
             self.hideLoading()
-            switch result {
-            case .finished: ()
-            case .failure: self.display("No results")
-            }
         }) { [weak self] (result) in
             guard let self = self else { return }
             self.trips = result.trips

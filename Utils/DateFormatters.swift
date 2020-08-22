@@ -5,7 +5,9 @@
 
 import Foundation
 
-public struct Formatters {
+public struct DateFormatters {
+    private init() { }
+
     public static let dayFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd"
@@ -23,4 +25,17 @@ public struct Formatters {
         formatter.dateFormat = "YYYY-MM-dd"
         return formatter
     }()
+
+    public static let medium: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }()
+
+    public static let short: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter
+    }()
+
 }

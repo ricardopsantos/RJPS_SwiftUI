@@ -63,7 +63,7 @@ struct VisualDocs_RouteToAndCameBack_Sample_II: View {
     var body: some View {
         ZStack {
             VStack(alignment: .center) {
-                SwiftUIFactory.ButtonView(title: tapToDetails, action: {
+                SwiftUIFactory.Button(title: tapToDetails, action: {
                     self.model = VisualDocs_RouteToAndCameBack_Identifiable(param: "Hi!")
                 }).sheet(item: $model, content: { some in
                     VisualDocs_RouteToAndCameBack_Sample_II_Details(param: some.param)
@@ -94,7 +94,7 @@ struct VisualDocs_RouteToAndCameBack_Sample_III_Page1: View {
     var body: some View {
         VStack {
             Image("happyDog").contentMode(.fit)
-            SwiftUIFactory.ButtonView(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page2)", subTitle: "") {
+            SwiftUIFactory.Button(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page2)", subTitle: "") {
                 self.viewRouter.currentPage = .page2
             }
         }
@@ -106,7 +106,7 @@ struct VisualDocs_RouteToAndCameBack_Sample_III_Page2: View {
     var body: some View {
         VStack {
             Image("grumpyDog").contentMode(.fit)
-            SwiftUIFactory.ButtonView(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page1)", subTitle: "") {
+            SwiftUIFactory.Button(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page1)", subTitle: "") {
                 self.viewRouter.currentPage = .page1
             }
         }

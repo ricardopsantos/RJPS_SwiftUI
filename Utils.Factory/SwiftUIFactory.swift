@@ -12,7 +12,7 @@ import Utils_Extensions
 //swiftlint:disable colon
 
 public struct SwiftUIFactory {
-    public struct ButtonView: View {
+    public struct Button: View {
         public let title: String
         public var subTitle: String = ""
         public var action = { }
@@ -22,7 +22,7 @@ public struct SwiftUIFactory {
             self.action = action
         }
         public var body: some View {
-            Button(action: {
+            SwiftUI.Button(action: {
                 self.action()
             }, label: {
                 Text(title)
@@ -51,6 +51,30 @@ public struct SwiftUIFactory {
             }
         }
     }
+
+    public struct ListItem: View {
+        public let imageName: String
+        public let imageColor: Color
+        public let title: String
+        public let value: String
+        public init(title: String, value:String, imageName: String="", imageColor: Color=Color.clear) {
+            self.title = title
+            self.value = value
+            self.imageName = imageName
+            self.imageColor = imageColor
+        }
+        public var body: some View {
+            HStack {
+                if imageName.count != 0 {
+                    Image(systemName: imageName).frame(width: 28, height: 28).background(imageColor).cornerRadius(6)
+                }
+                VStack(alignment: .leading) {
+                    Text(title).font(.body).bold().foregroundColor(Color(UIColor.label))
+                    Text(value).font(.body).foregroundColor(Color(UIColor.secondaryLabel))
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Preview
@@ -59,7 +83,7 @@ struct SwiftUIFactory_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             VStack {
-                SwiftUIFactory.ButtonView(title: "Title", action: { print("!action!") })
+                SwiftUIFactory.Button(title: "Title", action: { print("!action!") })
                 SwiftUIFactory.TitleAndValue(title: "Title", value: "value")
             }
         }

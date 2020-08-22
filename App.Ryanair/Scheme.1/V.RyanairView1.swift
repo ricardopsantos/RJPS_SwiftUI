@@ -8,6 +8,7 @@ import Combine
 import SwiftUI
 //
 import Utils_Designables
+import Utils_Factory
 //
 import App_Ryanair_Core
 import Base_Domain
@@ -38,7 +39,7 @@ struct RyanairView1: View {
                             childrenView
                         }
                         Section(header: Text("Book results")) {
-                            outputViewList3
+                            outputViewList
                         }
                     }.navigationBarTitle(Text("Book flight"))
                     outputViewText
@@ -49,29 +50,46 @@ struct RyanairView1: View {
     }
 }
 
+// MARK: - ViewModel -> View UI elements
+
 extension RyanairView1 {
 
     var outputViewText: some View {
-        Text(viewModel.outputText).bold().foregroundColor(Color.red)
+        Text(viewModel.viewStateIn.outputText).bold().foregroundColor(Color.red)
     }
 
-    var outputViewList3: some View {
-        ForEach(self.viewModel.outputList, id: \.self) { some in
+    var outputViewList: some View {
+        ForEach(self.viewModel.viewStateIn.outputList, id: \.self) { some in
             NavigationLink(destination: self.viewModel.routeWithFight(id: some.id) ) {
-                Text("\(some.title) | \(some.subtitle)")
+                SwiftUIFactory.ListItem(title: some.title, value: some.subtitle, imageName: "paperplane.fill", imageColor: Color.red)
+            }
+        }
+    }
+}
+
+// MARK: - View -> ViewModel UI elements
+
+extension RyanairView1 {
+    var originStationView: some View {
+        VStack {
+            TextField("Origin. Ex: DUB", text: $viewModel.viewStateOut.origin)
+            if self.viewModel.viewStateIn.airportsDepartureSuggestions.count > 0 {
+                List {
+                    ForEach(self.viewModel.viewStateIn.airportsDepartureSuggestions, id: \.self) { some in
+                        SwiftUIFactory.ListItem(title: some.code, value: some.name, imageName: "paperplane.fill", imageColor: Color.red)
+                    }
+                }
             }
         }
     }
 
-    var outputViewList1: some View {
+    var destinationStationView: some View {
         VStack {
-            if self.viewModel.outputList.count > 0 {
+            TextField("Destination. Ex: STN", text: $viewModel.viewStateOut.destination)
+            if self.viewModel.viewStateIn.airportsArrivalSuggestions.count > 0 {
                 List {
-                    ForEach(self.viewModel.outputList, id: \.self) { some in
-                        VStack {
-                            Text("\(some.title)")
-                            Text("\(some.subtitle)")
-                        }
+                    ForEach(self.viewModel.viewStateIn.airportsArrivalSuggestions, id: \.self) { some in
+                        SwiftUIFactory.ListItem(title: some.code, value: some.name, imageName: "paperplane.fill", imageColor: Color.red)
                     }
                 }
             }
@@ -80,37 +98,9 @@ extension RyanairView1 {
 }
 
 extension RyanairView1 {
-    var originStationView: some View {
-        VStack {
-            TextField("Origin. Ex: DUB", text: $viewModel.viewState.origin)
-            if self.viewModel.airportsDepartureSuggestions.count > 0 {
-                List {
-                    ForEach(self.viewModel.airportsDepartureSuggestions, id: \.self) { some in
-                        Text("\(some.code) | \(some.name)")
-                    }
-                }.frame(height: 200)
-            }
-        }
-    }
-
-    var destinationStationView: some View {
-        VStack {
-            TextField("Destination. Ex: STN", text: $viewModel.viewState.destination)
-            if self.viewModel.airportsArrivalSuggestions.count > 0 {
-                List {
-                    ForEach(self.viewModel.airportsArrivalSuggestions, id: \.self) { some in
-                        Text("\(some.code) | \(some.name)")
-                    }
-                }.frame(height: 200)
-            }
-        }
-    }
-}
-
-extension RyanairView1 {
     var departureDateView: some View {
         return VStack {
-            DatePicker("Departure", selection: $viewModel.viewState.dateDeparture, displayedComponents: .date)
+            DatePicker("Departure", selection: $viewModel.viewStateOut.dateDeparture, displayedComponents: .date)
         }
     }
 }
@@ -118,25 +108,25 @@ extension RyanairView1 {
 extension RyanairView1 {
     var adultsView: some View {
         VStack {
-            Stepper(value: $viewModel.viewState.adult,
+            Stepper(value: $viewModel.viewStateOut.adult,
                     onEditingChanged: { _ in  },
-                    label: { Text("Adults: \(viewModel.viewState.adult)") })
+                    label: { Text("Adults: \(viewModel.viewStateOut.adult)") })
         }
     }
 
     var teensView: some View {
         VStack {
-            Stepper(value: $viewModel.viewState.teen,
+            Stepper(value: $viewModel.viewStateOut.teen,
                     onEditingChanged: { _ in  },
-                    label: { Text("Teens: \(viewModel.viewState.teen)") })
+                    label: { Text("Teens: \(viewModel.viewStateOut.teen)") })
         }
     }
 
     var childrenView: some View {
         VStack {
-            Stepper(value: $viewModel.viewState.children,
+            Stepper(value: $viewModel.viewStateOut.children,
                     onEditingChanged: { _ in  },
-                    label: { Text("Children: \(viewModel.viewState.children)") })
+                    label: { Text("Children: \(viewModel.viewStateOut.children)") })
         }
     }
 }

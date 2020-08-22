@@ -78,7 +78,7 @@
 		D76989EA24D8406C005F851F /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76989E924D8406C005F851F /* Text+Extensions.swift */; };
 		D774F40824ED9F6700D01370 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B9969924DB1FFA000DAFD2 /* APIKeys.swift */; };
 		D774F40924ED9F6D00D01370 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7B9969724DB1FE2000DAFD2 /* Keys.plist */; };
-		D774F41024EDA0BF00D01370 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F142EB24D95EAD00B910A7 /* Formatters.swift */; };
+		D774F41024EDA0BF00D01370 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F142EB24D95EAD00B910A7 /* DateFormatters.swift */; };
 		D774F41A24EDA1DC00D01370 /* AppWe.h in Headers */ = {isa = PBXBuildFile; fileRef = D774F41824EDA1DC00D01370 /* AppWe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D774F41D24EDA1DC00D01370 /* App_Weather_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D774F41624EDA1DC00D01370 /* App_Weather_Core.framework */; };
 		D774F41E24EDA1DC00D01370 /* App_Weather_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D774F41624EDA1DC00D01370 /* App_Weather_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -127,6 +127,7 @@
 		D774F4E724F188DB00D01370 /* RyanairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4E624F188DB00D01370 /* RyanairModel.swift */; };
 		D774F4EA24F18A3400D01370 /* RyanairMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4E924F18A3400D01370 /* RyanairMappers.swift */; };
 		D774F4EC24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4EB24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift */; };
+		D774F4EE24F1A8E400D01370 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -752,6 +753,7 @@
 		D774F4E624F188DB00D01370 /* RyanairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.swift; sourceTree = "<group>"; };
 		D774F4E924F18A3400D01370 /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
 		D774F4EB24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.ListItemModel.swift; sourceTree = "<group>"; };
+		D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -864,7 +866,7 @@
 		D7F142E424D95EAD00B910A7 /* FetcherWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetcherWeather.swift; sourceTree = "<group>"; };
 		D7F142E624D95EAD00B910A7 /* APIWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWeather.swift; sourceTree = "<group>"; };
 		D7F142E724D95EAD00B910A7 /* APIWeatherProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIWeatherProtocol.swift; sourceTree = "<group>"; };
-		D7F142EB24D95EAD00B910A7 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		D7F142EB24D95EAD00B910A7 /* DateFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		D7F142EF24D95EAD00B910A7 /* V.MapViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V.MapViewRepresentable.swift; sourceTree = "<group>"; };
 		D7F142F224D95EAD00B910A7 /* V.DailyWeatherRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = V.DailyWeatherRowView.swift; sourceTree = "<group>"; };
 		D7F142F324D95EAD00B910A7 /* VM.DailyWeatherRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VM.DailyWeatherRowViewModel.swift; sourceTree = "<group>"; };
@@ -1226,6 +1228,7 @@
 			children = (
 				D769898424D7252E005F851F /* Extensions.h */,
 				D76989B524D72747005F851F /* UIScreen+Extensions.swift */,
+				D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */,
 				D7B6DF6E24ED6CE100A94EE5 /* README.md */,
 				D79B2EC324DDA569009B84A4 /* Array+Filtering.swift */,
 				D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */,
@@ -1550,7 +1553,7 @@
 				D7B6DF4824ED695D00A94EE5 /* Info.plist */,
 				D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */,
 				D7B6DF5124ED697B00A94EE5 /* CancelBag.swift */,
-				D7F142EB24D95EAD00B910A7 /* Formatters.swift */,
+				D7F142EB24D95EAD00B910A7 /* DateFormatters.swift */,
 				D774F43824EDB20300D01370 /* PointFreeFunctions.swift */,
 			);
 			path = Utils;
@@ -2469,6 +2472,7 @@
 				D7611BBC24E1F0B700B53E61 /* String+Extensions.swift in Sources */,
 				D76989CA24D72ABA005F851F /* typelias.swift in Sources */,
 				D769898D24D72555005F851F /* UIView+Extensions.swift in Sources */,
+				D774F4EE24F1A8E400D01370 /* Date+Extensions.swift in Sources */,
 				D76989B624D72747005F851F /* UIScreen+Extensions.swift in Sources */,
 				D76989EA24D8406C005F851F /* Text+Extensions.swift in Sources */,
 				D7B6DF7C24ED702400A94EE5 /* Error+Extensions.swift in Sources */,
@@ -2599,7 +2603,7 @@
 			files = (
 				D774F4B324EECAA100D01370 /* AppUserDefaults.swift in Sources */,
 				D774F43924EDB20300D01370 /* PointFreeFunctions.swift in Sources */,
-				D774F41024EDA0BF00D01370 /* Formatters.swift in Sources */,
+				D774F41024EDA0BF00D01370 /* DateFormatters.swift in Sources */,
 				D7B6DF5924ED697B00A94EE5 /* CancelBag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

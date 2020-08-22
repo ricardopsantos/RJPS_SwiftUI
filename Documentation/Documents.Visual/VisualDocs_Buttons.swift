@@ -21,9 +21,9 @@ struct VisualDocs_Buttons: View {
                 Divider()
                 Text("SwiftUIFactory.ButtonView").font(.headline)
                 Spacer()
-                SwiftUIFactory.ButtonView(title: "SwiftUIFactory : 1")
+                SwiftUIFactory.Button(title: "SwiftUIFactory : 1")
                 Spacer()
-                SwiftUIFactory.ButtonView(title: "SwiftUIFactory : 2", subTitle: "subTitle") { print("Tapped") }
+                SwiftUIFactory.Button(title: "SwiftUIFactory : 2", subTitle: "subTitle") { print("Tapped") }
             }
 
             // Tap options

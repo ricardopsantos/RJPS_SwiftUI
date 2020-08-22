@@ -72,9 +72,3 @@ extension FetcherRyanair: APIRyanairProtocol {
         }
     }
 }
-
-/*private extension FetcherRyanair {
-    func run<T>(_ components: URLComponents, _ decoder: JSONDecoder, _ dumpResponse: Bool) -> AnyPublisher<T, APIError> where T: Decodable {
-        return webAPI.agent.run(components, decoder, dumpResponse)
-    }
-}*/

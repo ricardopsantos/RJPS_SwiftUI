@@ -15,8 +15,8 @@ public extension VM {
         private let item: WeatherDto.WeeklyForecastEntity.Item
         
         public var id: String { return day + temperature + title }
-        var day: String { return Formatters.dayFormatter.string(from: item.date) }
-        var month: String { return Formatters.monthFormatter.string(from: item.date) }
+        var day: String { return DateFormatters.dayFormatter.string(from: item.date) }
+        var month: String { return DateFormatters.monthFormatter.string(from: item.date) }
         
         var temperature: String { return String(format: "%.1f", item.main.temp) }
         
