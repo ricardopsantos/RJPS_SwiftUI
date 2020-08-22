@@ -39,19 +39,16 @@ public class RyanairView1ViewModel: ObservableObject {
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
-    private var airports: [RyanairModel.AirPort] = []
+    fileprivate var airports: [RyanairModel.AirPort] = []
     private var trips: [RyanairResponseDto.Trip] = [] {
         didSet {
-            //DispatchQueue.main.async { [weak self] in
-               // guard let self = self else { return }
-                self.viewStateIn.outputList = []
-                self.viewStateIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
-                if self.viewStateIn.outputList.count == 0 {
-                    self.display("No results")
-                } else {
-                    self.display("")
-                }
-           // }
+            self.viewStateIn.outputList = []
+            self.viewStateIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
+            if self.viewStateIn.outputList.count == 0 {
+                self.display("No results")
+            } else {
+                self.display("")
+            }
         }
     }
 
@@ -87,25 +84,25 @@ private extension RyanairView1ViewModel {
             self?.fetchResults()
         }).store(in: cancelBag)
 
-        // Update departure suggestions (will show 3 hits results max)
+        // Update departure suggestions (will show 5 hits results max)
         origin.sink { [weak self] (some) in
             guard let self = self else { return }
             self.viewStateIn.airportsDepartureSuggestions = []
-            guard some.count == 2 else { return } // User must type 2 chars for autocomplete
+            guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
             let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
-            self.viewStateIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(3))
+            self.viewStateIn.airportsDepartureSuggestions.append(contentsOf: matchs.prefix(5))
 
         }.store(in: cancelBag)
 
-        // Update destination suggestions (will show 3 hits results max)
+        // Update destination suggestions (will show 5 hits results max)
         destination.sink { [weak self] (some) in
             guard let self = self else { return }
             self.viewStateIn.airportsArrivalSuggestions = []
-            guard some.count == 2 else { return } // User must type 2 chars for autocomplete
+            guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
             let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
-            self.viewStateIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(3))
+            self.viewStateIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(5))
         }.store(in: cancelBag)
     }
 }
@@ -114,29 +111,21 @@ private extension RyanairView1ViewModel {
 
 private extension RyanairView1ViewModel {
     func hideLoading() {
-       // DispatchQueue.main.async { [weak self] in
-            self.isLoading = false
-       // }
+        self.isLoading = false
     }
 
     func display(_ message: String) {
-       // DispatchQueue.main.async { [weak self] in
-            self.hideLoading()
-            self.viewStateIn.outputText = message
-       // }
+        self.hideLoading()
+        self.viewStateIn.outputText = message
     }
 
     func cleanViewOutput() {
-       // DispatchQueue.main.async { [weak self] in
-            self.trips = []
-            self.viewStateIn.airportsDepartureSuggestions = []
-            self.viewStateIn.airportsArrivalSuggestions = []
-            self.viewStateIn.airportsDepartureSuggestions = []
-            self.viewStateIn.airportsArrivalSuggestions = []
-            self.viewStateIn.outputList = []
-            self.viewStateIn.outputText = ""
-            self.isLoading = false
-      //  }
+        self.trips = []
+        self.viewStateIn.airportsArrivalSuggestions = []
+        self.viewStateIn.airportsDepartureSuggestions = []
+        self.viewStateIn.outputList = []
+        self.viewStateIn.outputText = ""
+        self.isLoading = false
     }
 }
 
@@ -157,11 +146,28 @@ private extension RyanairView1ViewModel {
     }
 
     func fetchResults() {
-        //cleanViewOutput()
-        guard viewStateOut.errorMessage.count == 0 else {
-            display(viewStateOut.errorMessage)
+
+        guard self.airports.count > 0 else {
             return
         }
+
+        // Clear view data
+        cleanViewOutput()
+
+        // View data validations
+        var errorMessage = viewStateOut.errorMessage
+        if !(self.airports.filter({ $0.code.lowercased() == viewStateOut.origin.lowercased().trim }).count == 1) {
+            errorMessage = "\(errorMessage)\nInvalid origin airport"
+        }
+        if !(self.airports.filter({ $0.code.lowercased() == viewStateOut.destination.lowercased().trim }).count == 1) {
+            errorMessage = "\(errorMessage)\nInvalid destination airport"
+        }
+        guard viewStateOut.errorMessage.count == 0 else {
+            display(errorMessage)
+            return
+        }
+
+        // Fetch
         isLoading = true
 
         let origin = viewStateOut.origin.trim.uppercased()
@@ -206,9 +212,13 @@ extension RyanairView1ViewModel.ViewStateOut {
             acc = "\(acc)Add passengers...\n"
         }
         // Airports info filled
-        if origin.count < 3 && destination.count < 3 {
+        if origin.count < 3 || destination.count < 3 {
             acc = "\(acc)Add airports\n"
         }
+        if origin.count > 3 || destination.count > 3 {
+            acc = "\(acc)Invalid airport code format\n"
+        }
+
         // Departure date filled (improve validation!)
         if dateDeparture < Date() {
             acc = "\(acc)Invalid departure date\n"

@@ -19,7 +19,7 @@ import Utils
 public class FetcherRyanair {
     private let webAPI_A: APIRyanair_A
     private let webAPI_B: APIRyanair_B
-    private var chacheLiveSpamMinutes = 60 * 60 * 24 * 7
+    private var cacheLiveSpam = 60 // minutes
     let cancelBag = CancelBag()
     public init(webAPI_A: APIRyanair_A, webAPI_B: APIRyanair_B) {
         self.webAPI_A = webAPI_A
@@ -41,7 +41,7 @@ extension FetcherRyanair: APIRyanairProtocol {
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
             guard let self = self else { return }
-            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.chacheLiveSpamMinutes)
+            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.cacheLiveSpam)
         }).store(in: cancelBag)
 
         switch cache {
@@ -61,7 +61,7 @@ extension FetcherRyanair: APIRyanairProtocol {
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
             guard let self = self else { return }
-            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.chacheLiveSpamMinutes)
+            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.cacheLiveSpam)
         }).store(in: cancelBag)
 
         switch cache {

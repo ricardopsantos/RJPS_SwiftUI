@@ -80,9 +80,7 @@ extension RyanairView1 {
             if self.viewModel.viewStateIn.airportsDepartureSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewStateIn.airportsDepartureSuggestions, id: \.self) { some in
-                        SwiftUIFactory.ListItem(title: some.code,
-                                                value: some.name,
-                                                imageName: "")
+                        Text("\(some.code) : \(some.name)").font(.footnote)
                     }
                 }
             }
@@ -95,9 +93,7 @@ extension RyanairView1 {
             if self.viewModel.viewStateIn.airportsArrivalSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewStateIn.airportsArrivalSuggestions, id: \.self) { some in
-                        SwiftUIFactory.ListItem(title: some.code,
-                                                value: some.name,
-                                                imageName: "")
+                        Text("\(some.code) : \(some.name)").font(.footnote)
                     }
                 }
             }
