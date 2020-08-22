@@ -27,6 +27,9 @@ struct RyanairView1: View {
             ZStack {
                 VStack {
                     Form {
+                        if viewModel.viewIn.connectivity.count > 0 {
+                            outputViewConnectivity
+                        }
                         Section(header: Text("Book options")) {
                             departureDateView
                             HStack {
@@ -42,7 +45,9 @@ struct RyanairView1: View {
                             outputViewList
                         }
                     }.navigationBarTitle(Text("Book flight"))
-                    outputViewText
+                    if viewModel.viewIn.outputText.count > 0 {
+                        outputViewError
+                    }
                 }
                 ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
             }
@@ -54,12 +59,16 @@ struct RyanairView1: View {
 
 extension RyanairView1 {
 
-    var outputViewText: some View {
-        Text(viewModel.viewStateIn.outputText).bold().foregroundColor(Color.red)
+    var outputViewConnectivity: some View {
+        Text(viewModel.viewIn.connectivity).font(.caption).foregroundColor(Color.red)
+    }
+
+    var outputViewError: some View {
+        Text(viewModel.viewIn.outputText).font(.caption).foregroundColor(Color.red)
     }
 
     var outputViewList: some View {
-        ForEach(self.viewModel.viewStateIn.outputList, id: \.self) { some in
+        ForEach(self.viewModel.viewIn.outputList, id: \.self) { some in
             NavigationLink(destination: self.viewModel.routeWithFight(id: some.id) ) {
                 SwiftUIFactory.ListItem(title: some.title,
                                         value: some.subtitle,
@@ -76,10 +85,10 @@ extension RyanairView1 {
 extension RyanairView1 {
     var originStationView: some View {
         VStack {
-            TextField("Origin. Ex: DUB", text: $viewModel.viewStateOut.origin)
-            if self.viewModel.viewStateIn.airportsDepartureSuggestions.count > 0 {
+            TextField("Origin. Ex: DUB", text: $viewModel.viewOut.origin)
+            if self.viewModel.viewIn.airportsDepartureSuggestions.count > 0 {
                 List {
-                    ForEach(self.viewModel.viewStateIn.airportsDepartureSuggestions, id: \.self) { some in
+                    ForEach(self.viewModel.viewIn.airportsDepartureSuggestions, id: \.self) { some in
                         Text("\(some.code) : \(some.name)").font(.footnote)
                     }
                 }
@@ -89,10 +98,10 @@ extension RyanairView1 {
 
     var destinationStationView: some View {
         VStack {
-            TextField("Destination. Ex: STN", text: $viewModel.viewStateOut.destination)
-            if self.viewModel.viewStateIn.airportsArrivalSuggestions.count > 0 {
+            TextField("Destination. Ex: STN", text: $viewModel.viewOut.destination)
+            if self.viewModel.viewIn.airportsArrivalSuggestions.count > 0 {
                 List {
-                    ForEach(self.viewModel.viewStateIn.airportsArrivalSuggestions, id: \.self) { some in
+                    ForEach(self.viewModel.viewIn.airportsArrivalSuggestions, id: \.self) { some in
                         Text("\(some.code) : \(some.name)").font(.footnote)
                     }
                 }
@@ -104,7 +113,7 @@ extension RyanairView1 {
 extension RyanairView1 {
     var departureDateView: some View {
         return VStack {
-            DatePicker("Departure", selection: $viewModel.viewStateOut.dateDeparture, displayedComponents: .date)
+            DatePicker("Departure", selection: $viewModel.viewOut.dateDeparture, displayedComponents: .date)
         }
     }
 }
@@ -112,25 +121,25 @@ extension RyanairView1 {
 extension RyanairView1 {
     var adultsView: some View {
         VStack {
-            Stepper(value: $viewModel.viewStateOut.adult,
+            Stepper(value: $viewModel.viewOut.adult,
                     onEditingChanged: { _ in  },
-                    label: { Text("Adults: \(viewModel.viewStateOut.adult)") })
+                    label: { Text("Adults: \(viewModel.viewOut.adult)") })
         }
     }
 
     var teensView: some View {
         VStack {
-            Stepper(value: $viewModel.viewStateOut.teen,
+            Stepper(value: $viewModel.viewOut.teen,
                     onEditingChanged: { _ in  },
-                    label: { Text("Teens: \(viewModel.viewStateOut.teen)") })
+                    label: { Text("Teens: \(viewModel.viewOut.teen)") })
         }
     }
 
     var childrenView: some View {
         VStack {
-            Stepper(value: $viewModel.viewStateOut.children,
+            Stepper(value: $viewModel.viewOut.children,
                     onEditingChanged: { _ in  },
-                    label: { Text("Children: \(viewModel.viewStateOut.children)") })
+                    label: { Text("Children: \(viewModel.viewOut.children)") })
         }
     }
 }

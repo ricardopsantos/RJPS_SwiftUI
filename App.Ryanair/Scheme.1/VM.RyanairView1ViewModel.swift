@@ -19,13 +19,14 @@ public class RyanairView1ViewModel: ObservableObject {
         @Published var children = 0
         @Published var teen = 0
         @Published var adult = 0
-        @Published var origin = "DUB"
-        @Published var destination = "STN"
+        @Published var origin = ""//"DUB"
+        @Published var destination = ""// "STN"
         @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
     }
 
     // Encapsulate that the View properties that the ViewModel updates in order to change UI
     class ViewStateIn: ObservableObject {
+        @Published var connectivity: String = ""
         @Published var outputText: String = ""
         @Published var outputList: [ListItemModel] = []
         @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
@@ -33,8 +34,8 @@ public class RyanairView1ViewModel: ObservableObject {
     }
 
     @Published var isLoading: Bool = false
-    @Published var viewStateOut: ViewStateOut = ViewStateOut()
-    @Published var viewStateIn: ViewStateIn = ViewStateIn()
+    @Published var viewOut: ViewStateOut = ViewStateOut()
+    @Published var viewIn: ViewStateIn = ViewStateIn()
 
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
@@ -42,9 +43,9 @@ public class RyanairView1ViewModel: ObservableObject {
     fileprivate var airports: [RyanairModel.AirPort] = []
     private var trips: [RyanairResponseDto.Trip] = [] {
         didSet {
-            self.viewStateIn.outputList = []
-            self.viewStateIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
-            if self.viewStateIn.outputList.count == 0 {
+            self.viewIn.outputList = []
+            self.viewIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
+            if self.viewIn.outputList.count == 0 {
                 self.display("No results")
             } else {
                 self.display("")
@@ -67,19 +68,28 @@ public class RyanairView1ViewModel: ObservableObject {
 private extension RyanairView1ViewModel {
     func observeUserInteractions() {
 
+        ConnectivityUtils.shared.monitor.pathUpdateHandler = { [weak self] path in
+            guard let self = self else { return }
+            if path.status == .satisfied {
+                self.viewIn.connectivity = ""
+            } else {
+                self.viewIn.connectivity = "No internet connection\n(Will use cached values if available)"
+            }
+        }
+
         // Observer Origin/Destination (TextField) changes
-        let origin = viewStateOut.$origin.debounce(for: 0.8, scheduler: RunLoop.main)
-        let destination = viewStateOut.$destination.debounce(for: 0.8, scheduler: RunLoop.main)
-        let dateDeparture = viewStateOut.$dateDeparture.debounce(for: 0.8, scheduler: RunLoop.main)
+        let origin = viewOut.$origin.debounce(for: 0.8, scheduler: RunLoop.main)
+        let destination = viewOut.$destination.debounce(for: 0.8, scheduler: RunLoop.main)
+        let dateDeparture = viewOut.$dateDeparture.debounce(for: 0.8, scheduler: RunLoop.main)
 
         Publishers.CombineLatest3(origin, destination, dateDeparture).sink(receiveValue: { [weak self] _ in
             self?.fetchResults()
         }).store(in: cancelBag)
 
         // Observer passenger changes
-        let adult = viewStateOut.$adult.debounce(for: 0.8, scheduler: RunLoop.main)
-        let children = viewStateOut.$children.debounce(for: 0.8, scheduler: RunLoop.main)
-        let teen = viewStateOut.$teen.debounce(for: 0.8, scheduler: RunLoop.main)
+        let adult = viewOut.$adult.debounce(for: 0.8, scheduler: RunLoop.main)
+        let children = viewOut.$children.debounce(for: 0.8, scheduler: RunLoop.main)
+        let teen = viewOut.$teen.debounce(for: 0.8, scheduler: RunLoop.main)
         Publishers.CombineLatest3(adult, children, teen).sink(receiveValue: { [weak self] _ in
             self?.fetchResults()
         }).store(in: cancelBag)
@@ -87,22 +97,22 @@ private extension RyanairView1ViewModel {
         // Update departure suggestions (will show 5 hits results max)
         origin.sink { [weak self] (some) in
             guard let self = self else { return }
-            self.viewStateIn.airportsDepartureSuggestions = []
+            self.viewIn.airportsDepartureSuggestions = []
             guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
             let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
-            self.viewStateIn.airportsDepartureSuggestions.append(contentsOf: matchs.prefix(5))
+            self.viewIn.airportsDepartureSuggestions.append(contentsOf: matchs.prefix(5))
 
         }.store(in: cancelBag)
 
         // Update destination suggestions (will show 5 hits results max)
         destination.sink { [weak self] (some) in
             guard let self = self else { return }
-            self.viewStateIn.airportsArrivalSuggestions = []
+            self.viewIn.airportsArrivalSuggestions = []
             guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
             let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
-            self.viewStateIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(5))
+            self.viewIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(5))
         }.store(in: cancelBag)
     }
 }
@@ -116,15 +126,15 @@ private extension RyanairView1ViewModel {
 
     func display(_ message: String) {
         self.hideLoading()
-        self.viewStateIn.outputText = message
+        self.viewIn.outputText = message
     }
 
     func cleanViewOutput() {
         self.trips = []
-        self.viewStateIn.airportsArrivalSuggestions = []
-        self.viewStateIn.airportsDepartureSuggestions = []
-        self.viewStateIn.outputList = []
-        self.viewStateIn.outputText = ""
+        self.viewIn.airportsArrivalSuggestions = []
+        self.viewIn.airportsDepartureSuggestions = []
+        self.viewIn.outputList = []
+        self.viewIn.outputText = ""
         self.isLoading = false
     }
 }
@@ -154,15 +164,19 @@ private extension RyanairView1ViewModel {
         // Clear view data
         cleanViewOutput()
 
-        // View data validations
-        var errorMessage = viewStateOut.errorMessage
-        if !(self.airports.filter({ $0.code.lowercased() == viewStateOut.origin.lowercased().trim }).count == 1) {
-            errorMessage = "\(errorMessage)\nInvalid origin airport"
+        // View data validations...
+        var errorMessage = viewOut.errorMessage
+
+        // View data validations : if the airport code have right shape, see it exists...
+        if viewOut.origin.trim.count == 3 && !(self.airports.filter({ $0.code.lowercased() == viewOut.origin.lowercased().trim }).count == 1) {
+            errorMessage = "\(errorMessage)Invalid origin airport\n"
         }
-        if !(self.airports.filter({ $0.code.lowercased() == viewStateOut.destination.lowercased().trim }).count == 1) {
-            errorMessage = "\(errorMessage)\nInvalid destination airport"
+
+        // View data validations : if the airport code have right shape, see it exists...
+        if viewOut.destination.trim.count == 3 && !(self.airports.filter({ $0.code.lowercased() == viewOut.destination.lowercased().trim }).count == 1) {
+            errorMessage = "\(errorMessage)Invalid destination airport\n"
         }
-        guard viewStateOut.errorMessage.count == 0 else {
+        guard errorMessage.count == 0 else {
             display(errorMessage)
             return
         }
@@ -170,12 +184,12 @@ private extension RyanairView1ViewModel {
         // Fetch
         isLoading = true
 
-        let origin = viewStateOut.origin.trim.uppercased()
-        let destination = viewStateOut.destination.trim.uppercased()
-        let dateout = DateFormatters.yearMonthDayFormatter.string(from: viewStateOut.dateDeparture)
-        let adt = viewStateOut.adult
-        let teen = viewStateOut.teen
-        let chd = viewStateOut.children
+        let origin = viewOut.origin.trim.uppercased()
+        let destination = viewOut.destination.trim.uppercased()
+        let dateout = DateFormatters.yearMonthDayFormatter.string(from: viewOut.dateDeparture)
+        let adt = viewOut.adult
+        let teen = viewOut.teen
+        let chd = viewOut.children
         let apiRequest = RyanairRequestDto.Availability(origin: origin,
                                                         destination: destination,
                                                         dateout: dateout,
@@ -212,10 +226,9 @@ extension RyanairView1ViewModel.ViewStateOut {
             acc = "\(acc)Add passengers...\n"
         }
         // Airports info filled
-        if origin.count < 3 || destination.count < 3 {
+        if origin.trim.count == 0 || destination.trim.count == 0 {
             acc = "\(acc)Add airports\n"
-        }
-        if origin.count > 3 || destination.count > 3 {
+        } else if origin.trim.count != 3 || destination.trim.count != 3 {
             acc = "\(acc)Invalid airport code format\n"
         }
 

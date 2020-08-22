@@ -5,11 +5,13 @@
 
 import Foundation
 import Combine
+//
+import Utils_Extensions
 
 public class SimpleNetworkAgent_B: SimpleNetworkAgentProtocol {
-    private init() { self.session = .shared }
+    private init() { self.session = URLSession.defaultForConnectivity }
     public var session: URLSession
-    public init(session: URLSession = .shared) {
+    public init(session: URLSession = URLSession.defaultForConnectivity) {
         self.session = session
     }
 }

@@ -128,6 +128,8 @@
 		D774F4EA24F18A3400D01370 /* RyanairMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4E924F18A3400D01370 /* RyanairMappers.swift */; };
 		D774F4EC24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4EB24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift */; };
 		D774F4EE24F1A8E400D01370 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */; };
+		D774F4F224F1C47C00D01370 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4F124F1C47B00D01370 /* URLSession+Extensions.swift */; };
+		D774F4F624F1C56100D01370 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4F524F1C56100D01370 /* NetworkUtils.swift */; };
 		D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */; };
 		D78FABCC24D0B78F0069809D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */; };
 		D78FABCE24D0B8650069809D /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */; };
@@ -754,6 +756,8 @@
 		D774F4E924F18A3400D01370 /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
 		D774F4EB24F18A3D00D01370 /* RyanairMappers.ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.ListItemModel.swift; sourceTree = "<group>"; };
 		D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		D774F4F124F1C47B00D01370 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		D774F4F524F1C56100D01370 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		D78FABC924D0B6410069809D /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		D78FABCB24D0B78F0069809D /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		D78FABCD24D0B8650069809D /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -826,7 +830,7 @@
 		D7B6DF4524ED695D00A94EE5 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B6DF4724ED695D00A94EE5 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		D7B6DF4824ED695D00A94EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7B6DF5124ED697B00A94EE5 /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelBag.swift; path = Utilities/CancelBag.swift; sourceTree = "<group>"; };
+		D7B6DF5124ED697B00A94EE5 /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		D7B6DF6124ED6A7000A94EE5 /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		D7B6DF6724ED6AE700A94EE5 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		D7B6DF6924ED6B1200A94EE5 /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
@@ -1226,26 +1230,10 @@
 		D769898324D7252E005F851F /* Utils.Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D774F4F324F1C48400D01370 /* Code */,
 				D769898424D7252E005F851F /* Extensions.h */,
-				D76989B524D72747005F851F /* UIScreen+Extensions.swift */,
-				D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */,
 				D7B6DF6E24ED6CE100A94EE5 /* README.md */,
-				D79B2EC324DDA569009B84A4 /* Array+Filtering.swift */,
-				D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */,
-				D76989E924D8406C005F851F /* Text+Extensions.swift */,
-				D751738724E04758004822B2 /* TextField+Extensions.swift */,
-				D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */,
-				D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */,
-				D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */,
 				D769898524D7252E005F851F /* Info.plist */,
-				D7611BBB24E1F0B700B53E61 /* String+Extensions.swift */,
-				D7B6DF6124ED6A7000A94EE5 /* Locale+Extensions.swift */,
-				D7B6DF6724ED6AE700A94EE5 /* Result+Extensions.swift */,
-				D7B6DF6924ED6B1200A94EE5 /* ProcessInfo.swift */,
-				D7B6DF7524ED6FEF00A94EE5 /* Just+Extensions.swift */,
-				D7B6DF7724ED700700A94EE5 /* Publisher+Publisher.swift */,
-				D7B6DF7924ED701A00A94EE5 /* Subscribers+Extensions.swift */,
-				D7B6DF7B24ED702400A94EE5 /* Error+Extensions.swift */,
 			);
 			path = Utils.Extensions;
 			sourceTree = "<group>";
@@ -1422,6 +1410,43 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		D774F4F324F1C48400D01370 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				D7611BBB24E1F0B700B53E61 /* String+Extensions.swift */,
+				D7B6DF6124ED6A7000A94EE5 /* Locale+Extensions.swift */,
+				D7B6DF6724ED6AE700A94EE5 /* Result+Extensions.swift */,
+				D7B6DF6924ED6B1200A94EE5 /* ProcessInfo.swift */,
+				D7B6DF7524ED6FEF00A94EE5 /* Just+Extensions.swift */,
+				D7B6DF7724ED700700A94EE5 /* Publisher+Publisher.swift */,
+				D7B6DF7924ED701A00A94EE5 /* Subscribers+Extensions.swift */,
+				D7B6DF7B24ED702400A94EE5 /* Error+Extensions.swift */,
+				D76989B524D72747005F851F /* UIScreen+Extensions.swift */,
+				D774F4ED24F1A8E400D01370 /* Date+Extensions.swift */,
+				D774F4F124F1C47B00D01370 /* URLSession+Extensions.swift */,
+				D79B2EC324DDA569009B84A4 /* Array+Filtering.swift */,
+				D7B996A124DB2DA8000DAFD2 /* OSLog+Extension.swift */,
+				D76989E924D8406C005F851F /* Text+Extensions.swift */,
+				D751738724E04758004822B2 /* TextField+Extensions.swift */,
+				D7B5601B2493A12C00E9EC7D /* Image+Extensions.swift */,
+				D7B5601D2493A16600E9EC7D /* UIColor+Extensions.swift */,
+				D7B560192493A0B300E9EC7D /* UIView+Extensions.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		D774F4F424F1C55500D01370 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */,
+				D7B6DF5124ED697B00A94EE5 /* CancelBag.swift */,
+				D7F142EB24D95EAD00B910A7 /* DateFormatters.swift */,
+				D774F43824EDB20300D01370 /* PointFreeFunctions.swift */,
+				D774F4F524F1C56100D01370 /* NetworkUtils.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
 		D78FABD424D0BD740069809D /* Documents.Visual */ = {
 			isa = PBXGroup;
 			children = (
@@ -1548,13 +1573,10 @@
 		D7B6DF4624ED695D00A94EE5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D774F4F424F1C55500D01370 /* Code */,
 				D7B6DF4724ED695D00A94EE5 /* Utils.h */,
 				D7B6DF7424ED6D4000A94EE5 /* README.md */,
 				D7B6DF4824ED695D00A94EE5 /* Info.plist */,
-				D7611BCD24E1F7CD00B53E61 /* AppUserDefaults.swift */,
-				D7B6DF5124ED697B00A94EE5 /* CancelBag.swift */,
-				D7F142EB24D95EAD00B910A7 /* DateFormatters.swift */,
-				D774F43824EDB20300D01370 /* PointFreeFunctions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -2482,6 +2504,7 @@
 				D751738824E04758004822B2 /* TextField+Extensions.swift in Sources */,
 				D7B6DF6224ED6A7000A94EE5 /* Locale+Extensions.swift in Sources */,
 				D769898E24D72555005F851F /* Image+Extensions.swift in Sources */,
+				D774F4F224F1C47C00D01370 /* URLSession+Extensions.swift in Sources */,
 				D7B996A324DB3141000DAFD2 /* OSLog+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2601,6 +2624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D774F4F624F1C56100D01370 /* NetworkUtils.swift in Sources */,
 				D774F4B324EECAA100D01370 /* AppUserDefaults.swift in Sources */,
 				D774F43924EDB20300D01370 /* PointFreeFunctions.swift in Sources */,
 				D774F41024EDA0BF00D01370 /* DateFormatters.swift in Sources */,
