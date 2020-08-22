@@ -16,9 +16,9 @@ public extension RyanairMappers {
         trips.forEach { (trip) in
             trip.flights.forEach { (flight) in
                 let flightNumber = flight.flightNumber
-                let (date) = DateFormatters.medium.string(from: Date.with(string: flight.timeUTC.first!))
-                let title = "\(flightNumber)"
-                let subTitle = "\(flight.regularFare!.fares.first!.amount)€ | \(date)"
+                let date = DateFormatters.medium.string(from: Date.with(string: flight.timeUTC.first!))
+                let title = "\(flightNumber), \(flight.regularFare!.fares.first!.amount)€"
+                let subTitle = "\(date)"
                 acc.append(ListItemModel(id: flight.id, title: title, subtitle: subTitle))
             }
         }

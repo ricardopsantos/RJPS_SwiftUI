@@ -29,13 +29,28 @@ public struct DateFormatters {
     public static let medium: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
         return formatter
     }()
 
     public static let short: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
+        formatter.timeStyle = .short
         return formatter
     }()
 
+    public static let long: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .long
+        return formatter
+    }()
+
+    public static let full: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .full
+        return formatter
+    }()
 }

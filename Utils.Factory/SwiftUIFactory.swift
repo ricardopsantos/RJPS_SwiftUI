@@ -54,19 +54,25 @@ public struct SwiftUIFactory {
 
     public struct ListItem: View {
         public let imageName: String
-        public let imageColor: Color
+        public let imageColor1: Color?
+        public let imageColor2: Color?
         public let title: String
         public let value: String
-        public init(title: String, value:String, imageName: String="", imageColor: Color=Color.clear) {
+        public init(title: String,
+                    value:String,
+                    imageName: String = "",
+                    imageColor1: Color = Color.clear,
+                    imageColor2: Color = Color.clear) {
             self.title = title
             self.value = value
             self.imageName = imageName
-            self.imageColor = imageColor
+            self.imageColor1 = imageColor1
+            self.imageColor2 = imageColor2
         }
         public var body: some View {
             HStack {
-                if imageName.count != 0 {
-                    Image(systemName: imageName).frame(width: 28, height: 28).background(imageColor).cornerRadius(6)
+                if imageName.count > 0 {
+                    Image(systemName: imageName).tint(color: imageColor2!).frame(width: 28, height: 28).background(imageColor1!) .cornerRadius(6)
                 }
                 VStack(alignment: .leading) {
                     Text(title).font(.body).bold().foregroundColor(Color(UIColor.label))

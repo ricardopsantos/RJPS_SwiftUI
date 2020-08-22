@@ -61,7 +61,11 @@ extension RyanairView1 {
     var outputViewList: some View {
         ForEach(self.viewModel.viewStateIn.outputList, id: \.self) { some in
             NavigationLink(destination: self.viewModel.routeWithFight(id: some.id) ) {
-                SwiftUIFactory.ListItem(title: some.title, value: some.subtitle, imageName: "paperplane.fill", imageColor: Color.red)
+                SwiftUIFactory.ListItem(title: some.title,
+                                        value: some.subtitle,
+                                        imageName: "paperplane.fill",
+                                        imageColor1: Color(UIColor(red: 238.0/255.0, green: 202.0/255.0, blue: 85.0/255.0, alpha: 1)),
+                                        imageColor2: Color(UIColor(red: 48.0/255.0, green: 71.0/255.0, blue: 117.0/255.0, alpha: 1)))
             }
         }
     }
@@ -76,7 +80,9 @@ extension RyanairView1 {
             if self.viewModel.viewStateIn.airportsDepartureSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewStateIn.airportsDepartureSuggestions, id: \.self) { some in
-                        SwiftUIFactory.ListItem(title: some.code, value: some.name, imageName: "paperplane.fill", imageColor: Color.red)
+                        SwiftUIFactory.ListItem(title: some.code,
+                                                value: some.name,
+                                                imageName: "")
                     }
                 }
             }
@@ -89,7 +95,9 @@ extension RyanairView1 {
             if self.viewModel.viewStateIn.airportsArrivalSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewStateIn.airportsArrivalSuggestions, id: \.self) { some in
-                        SwiftUIFactory.ListItem(title: some.code, value: some.name, imageName: "paperplane.fill", imageColor: Color.red)
+                        SwiftUIFactory.ListItem(title: some.code,
+                                                value: some.name,
+                                                imageName: "")
                     }
                 }
             }
