@@ -38,7 +38,14 @@ struct RyanairView2: View {
 
 struct RyanairView2_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        let flight = RyanairResponseDto.Flight(faresLeft: 1, flightKey: "flightKey", infantsLeft: 1, operatedBy: "operatedBy", flightNumber: "flightNumber", time: ["time"], timeUTC: ["timeUTC"], duration: "12")
+        let flight = RyanairResponseDto.Flight(faresLeft: 1,
+                                               flightKey: "flightKey",
+                                               infantsLeft: 1,
+                                               operatedBy: "operatedBy",
+                                               flightNumber: "flightNumber",
+                                               time: ["time"],
+                                               timeUTC: ["timeUTC"],
+                                               duration: "12")
         return RyanairView2Builder.buildView(flight: flight)
     }
 }

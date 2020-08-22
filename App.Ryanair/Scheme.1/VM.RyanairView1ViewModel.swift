@@ -14,7 +14,7 @@ import Base_Domain
 
 public class RyanairView1ViewModel: ObservableObject {
 
-    class ViewRequestState: ObservableObject {
+    class ViewStateOut: ObservableObject {
         @Published var children = 0
         @Published var teen = 0
         @Published var adult = 0
@@ -26,7 +26,7 @@ public class RyanairView1ViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var outputText: String = ""
     @Published var outputList: [ListItemModel] = []
-    @Published var viewRequest: ViewRequestState = ViewRequestState()
+    @Published var viewStateOut: ViewStateOut = ViewStateOut()
     @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
     @Published var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
 
@@ -65,18 +65,18 @@ private extension RyanairView1ViewModel {
     func observeUserInteractions() {
 
         // Observer Origin/Destination (TextField) changes
-        let origin = viewRequest.$origin.debounce(for: 0.8, scheduler: RunLoop.main)
-        let destination = viewRequest.$destination.debounce(for: 0.8, scheduler: RunLoop.main)
-        let dateDeparture = viewRequest.$dateDeparture.debounce(for: 0.8, scheduler: RunLoop.main)
+        let origin = viewStateOut.$origin.debounce(for: 0.8, scheduler: RunLoop.main)
+        let destination = viewStateOut.$destination.debounce(for: 0.8, scheduler: RunLoop.main)
+        let dateDeparture = viewStateOut.$dateDeparture.debounce(for: 0.8, scheduler: RunLoop.main)
 
         Publishers.CombineLatest3(origin, destination, dateDeparture).sink(receiveValue: { [weak self] _ in
             self?.fetchResults()
         }).store(in: cancelBag)
 
         // Observer passenger changes
-        let adult = viewRequest.$adult.debounce(for: 0.8, scheduler: RunLoop.main)
-        let children = viewRequest.$children.debounce(for: 0.8, scheduler: RunLoop.main)
-        let teen = viewRequest.$teen.debounce(for: 0.8, scheduler: RunLoop.main)
+        let adult = viewStateOut.$adult.debounce(for: 0.8, scheduler: RunLoop.main)
+        let children = viewStateOut.$children.debounce(for: 0.8, scheduler: RunLoop.main)
+        let teen = viewStateOut.$teen.debounce(for: 0.8, scheduler: RunLoop.main)
         Publishers.CombineLatest3(adult, children, teen).sink(receiveValue: { [weak self] _ in
             self?.fetchResults()
         }).store(in: cancelBag)
@@ -151,22 +151,22 @@ private extension RyanairView1ViewModel {
 
     func fetchResults() {
         cleanViewOutput()
-        guard viewRequest.errorMessage.count == 0 else {
-            display(viewRequest.errorMessage)
+        guard viewStateOut.errorMessage.count == 0 else {
+            display(viewStateOut.errorMessage)
             return
         }
         isLoading = true
-        let apiRequest = RyanairRequestDto.Availability(origin: viewRequest.origin.trim.uppercased(),
-                                                        destination: viewRequest.destination.trim.uppercased(),
-                                                        dateout: Formatters.yearMonthDayFormatter.string(from: viewRequest.dateDeparture),
+        let apiRequest = RyanairRequestDto.Availability(origin: viewStateOut.origin.trim.uppercased(),
+                                                        destination: viewStateOut.destination.trim.uppercased(),
+                                                        dateout: Formatters.yearMonthDayFormatter.string(from: viewStateOut.dateDeparture),
                                                         datein: "",
                                                         flexdaysbeforeout: "3",
                                                         flexdaysout: "3",
                                                         flexdaysbeforein: "3",
                                                         flexdaysin: "3",
-                                                        adt: viewRequest.adult,
-                                                        teen: viewRequest.teen,
-                                                        chd: viewRequest.children,
+                                                        adt: viewStateOut.adult,
+                                                        teen: viewStateOut.teen,
+                                                        chd: viewStateOut.children,
                                                         roundtrip: true,
                                                         ToUs: "AGREED")
         let availability = self.fetcher.availability(request: apiRequest, cache: .cacheElseLoad)
@@ -184,7 +184,7 @@ private extension RyanairView1ViewModel {
     }
 }
 
-extension RyanairView1ViewModel.ViewRequestState {
+extension RyanairView1ViewModel.ViewStateOut {
     var errorMessage: String {
         var acc = ""
         // Don't allow any negative passenger

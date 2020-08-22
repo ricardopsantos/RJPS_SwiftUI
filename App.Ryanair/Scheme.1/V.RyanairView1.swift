@@ -82,7 +82,7 @@ extension RyanairView1 {
 extension RyanairView1 {
     var originStationView: some View {
         VStack {
-            TextField("Origin. Ex: DUB", text: $viewModel.viewRequest.origin)
+            TextField("Origin. Ex: DUB", text: $viewModel.viewState.origin)
             if self.viewModel.airportsDepartureSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.airportsDepartureSuggestions, id: \.self) { some in
@@ -95,7 +95,7 @@ extension RyanairView1 {
 
     var destinationStationView: some View {
         VStack {
-            TextField("Destination. Ex: STN", text: $viewModel.viewRequest.destination)
+            TextField("Destination. Ex: STN", text: $viewModel.viewState.destination)
             if self.viewModel.airportsArrivalSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.airportsArrivalSuggestions, id: \.self) { some in
@@ -110,7 +110,7 @@ extension RyanairView1 {
 extension RyanairView1 {
     var departureDateView: some View {
         return VStack {
-            DatePicker("Departure", selection: $viewModel.viewRequest.dateDeparture, displayedComponents: .date)
+            DatePicker("Departure", selection: $viewModel.viewState.dateDeparture, displayedComponents: .date)
         }
     }
 }
@@ -118,25 +118,25 @@ extension RyanairView1 {
 extension RyanairView1 {
     var adultsView: some View {
         VStack {
-            Stepper(value: $viewModel.viewRequest.adult,
+            Stepper(value: $viewModel.viewState.adult,
                     onEditingChanged: { _ in  },
-                    label: { Text("Adults: \(viewModel.viewRequest.adult)") })
+                    label: { Text("Adults: \(viewModel.viewState.adult)") })
         }
     }
 
     var teensView: some View {
         VStack {
-            Stepper(value: $viewModel.viewRequest.teen,
+            Stepper(value: $viewModel.viewState.teen,
                     onEditingChanged: { _ in  },
-                    label: { Text("Teens: \(viewModel.viewRequest.teen)") })
+                    label: { Text("Teens: \(viewModel.viewState.teen)") })
         }
     }
 
     var childrenView: some View {
         VStack {
-            Stepper(value: $viewModel.viewRequest.children,
+            Stepper(value: $viewModel.viewState.children,
                     onEditingChanged: { _ in  },
-                    label: { Text("Children: \(viewModel.viewRequest.children)") })
+                    label: { Text("Children: \(viewModel.viewState.children)") })
         }
     }
 }
