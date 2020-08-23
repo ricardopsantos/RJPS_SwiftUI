@@ -41,6 +41,34 @@ See `FetcherRyanair.swift`
 
 See `FetcherRyanairMock.swift`
 
+```
+extension FetcherRyanairMock: APIRyanairProtocol {
+    public func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError> {
+        let data = Data(stationsMock.utf8)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return Just(data)
+            .decode(type: RyanairResponseDto.Stations.self, decoder: decoder)
+            .mapError { error in
+                os_log("Error : \(error)", type: .error)
+            return .parsing(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+
+    public func availability(request: RyanairRequestDto.Availability, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Availability, APIError> {
+        let data = Data(availabilityMock.utf8)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return Just(data)
+            .decode(type: RyanairResponseDto.Availability.self, decoder: decoder)
+            .mapError { error in
+                os_log("Error : \(error)", type: .error)
+            return .parsing(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
+    }
+}
+```
+
 ### Extra: Internet connection fail safe
 
 * If theres no internet connection, the app will wait 300s and retry the request. (will return cache value anyway if available)
@@ -56,3 +84,38 @@ public extension URLSession {
     }
 }
 ```
+
+### Extra: Screen Previews
+
+Screen previews for faster development. 
+
+__With real data__
+
+```
+struct RyanairView1_PreviewProvider1: PreviewProvider {
+    static var previews: some View {
+        RyanairView1Builder.buildView()
+    }
+}
+```
+
+__With mock data__
+
+```
+struct RyanairView1_PreviewProvider2: PreviewProvider {
+    static var previews: some View {
+        RyanairView1Builder.buildMockView()
+    }
+}
+```
+
+See `Preview.Mock.png` (with real mock data) and `Preview.Multiple.png`
+
+## Future
+
+### Map all `RyanairResponseDto` objects
+
+Map all `RyanairResponseDto` objects into mirror  `Model` objects so that the ViewModel dont know `RyanairResponseDto` objects
+
+### DDD
+

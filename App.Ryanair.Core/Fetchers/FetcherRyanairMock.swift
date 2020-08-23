@@ -9,6 +9,8 @@ import Foundation
 import Combine
 //
 import Base_Domain
+//
+import Utils_Extensions
 
 public class FetcherRyanairMock {
     public init() { }
@@ -18,18 +20,31 @@ public class FetcherRyanairMock {
 
 extension FetcherRyanairMock: APIRyanairProtocol {
     public func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError> {
-        fatalError("not implemented")
+        let data = Data(stationsMock.utf8)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return Just(data)
+            .decode(type: RyanairResponseDto.Stations.self, decoder: decoder)
+            .mapError { error in
+                os_log("Error : \(error)", type: .error)
+            return .parsing(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
     }
+
     public func availability(request: RyanairRequestDto.Availability, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Availability, APIError> {
-        fatalError("not implemented")
+        let data = Data(availabilityMock.utf8)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        return Just(data)
+            .decode(type: RyanairResponseDto.Availability.self, decoder: decoder)
+            .mapError { error in
+                os_log("Error : \(error)", type: .error)
+            return .parsing(description: error.localizedDescription)
+        }.eraseToAnyPublisher()
     }
 }
 
-fileprivate extension FetcherRyanairMock {
-
-}
-
-private let searchMock = """
+private let availabilityMock = """
 {
   "termsOfUse": "https://www.ryanair.com/ie/en/corporate/terms-of-use=AGREED",
   "currency": "EUR",

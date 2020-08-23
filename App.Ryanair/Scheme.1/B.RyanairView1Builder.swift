@@ -19,4 +19,11 @@ public struct RyanairView1Builder: BuilderProtocol {
         let viewModel  = RyanairView1ViewModel(fetcher: fetcher, repository: repository)
         return RyanairView1(viewModel: viewModel)
     }
+
+    public static func buildMockView() -> some View {
+        let fetcher: APIRyanairProtocol = FetcherRyanairMock()
+        let repository: RepositoryRyanairProtocol = RepositoryRyanair()
+        let viewModel  = RyanairView1ViewModel(fetcher: fetcher, repository: repository)
+        return RyanairView1(viewModel: viewModel)
+    }
 }

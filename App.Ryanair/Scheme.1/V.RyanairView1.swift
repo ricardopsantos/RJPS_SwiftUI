@@ -87,9 +87,14 @@ extension RyanairView1 {
             if self.viewModel.viewIn.airportsDepartureSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewIn.airportsDepartureSuggestions, id: \.self) { some in
-                        Text("\(some.code) : \(some.name)").font(.footnote)
+                        HStack {
+                            Text("\(some.code) : \(some.name)").font(.footnote)
+                            Spacer()
+                        }
                     }
-                }
+                }.multilineTextAlignment(.leading)
+            } else {
+                Spacer()
             }
         }
     }
@@ -100,9 +105,14 @@ extension RyanairView1 {
             if self.viewModel.viewIn.airportsArrivalSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewIn.airportsArrivalSuggestions, id: \.self) { some in
-                        Text("\(some.code) : \(some.name)").font(.footnote)
+                        HStack {
+                            Spacer()
+                            Text("\(some.code) : \(some.name)").font(.footnote)
+                        }
                     }
                 }
+            } else {
+                Spacer()
             }
         }
     }
@@ -142,8 +152,14 @@ extension RyanairView1 {
     }
 }
 
-struct RyanairView1_PreviewProvider: PreviewProvider {
+struct RyanairView1_PreviewProvider1: PreviewProvider {
     static var previews: some View {
         RyanairView1Builder.buildView()
+    }
+}
+
+struct RyanairView1_PreviewProvider2: PreviewProvider {
+    static var previews: some View {
+        RyanairView1Builder.buildMockView()
     }
 }

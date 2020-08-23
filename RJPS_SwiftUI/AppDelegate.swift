@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = UIHostingController(rootView: WeeklyWeatherBuilder.buildView())
         case .ryanair:
             self.window?.rootViewController = UIHostingController(rootView: RyanairView1Builder.buildView())
-
+            //self.window?.rootViewController = UIHostingController(rootView: RyanairView1Builder.buildMockView())
         }
         return true
     }
