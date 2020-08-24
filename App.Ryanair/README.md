@@ -85,6 +85,26 @@ public extension URLSession {
 }
 ```
 
+### Extra: UI Testing (auto-complete airport)
+
+```
+func testSuggestions() {
+    let app = XCUIApplication()
+    app.launch()
+
+    // Wait some seconds for launch
+    XCTAssertTrue(app.waitForExistence(timeout: 1))
+
+    let txtOrigin = app.textFields["TextField.origin"]
+    if txtOrigin.exists {
+        txtOrigin.tap()
+        txtOrigin.typeText("DU")
+    }
+
+    XCTAssertTrue(app.tables.staticTexts["DUB : Dublin"].waitForExistence(timeout: 1))
+}
+```
+
 ### Extra: Screen Previews
 
 Screen previews for faster development. 

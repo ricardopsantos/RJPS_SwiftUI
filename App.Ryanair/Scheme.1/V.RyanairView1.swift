@@ -8,7 +8,6 @@ import Combine
 import SwiftUI
 //
 import Utils_Designables
-import Utils_Factory
 import Utils
 //
 import App_Ryanair_Core
@@ -57,10 +56,7 @@ extension RyanairView1 {
 
     var outputView: some View {
         VStack {
-            Text(viewModel.viewIn.outputText)
-                .font(.caption)
-                .foregroundColor(Color.red)
-                .multilineTextAlignment(.center)
+            DesignablesFactory.ErrorView(message: viewModel.viewIn.outputText)
             ConnectivityView(subTitle: "Will try to use cache if available")
         }
     }
@@ -68,7 +64,7 @@ extension RyanairView1 {
     var outputViewList: some View {
         ForEach(self.viewModel.viewIn.outputList, id: \.self) { some in
             NavigationLink(destination: self.viewModel.routeWithFight(id: some.id) ) {
-                SwiftUIFactory.ListItem(title: some.title,
+                DesignablesFactory.ListItem(title: some.title,
                                         value: some.subtitle,
                                         imageName: "paperplane.fill",
                                         imageColor1: Color(UIColor(red: 238.0/255.0, green: 202.0/255.0, blue: 85.0/255.0, alpha: 1)),
@@ -84,6 +80,7 @@ extension RyanairView1 {
     var originStationView: some View {
         VStack {
             TextField("Origin. Ex: DUB", text: $viewModel.viewOut.origin)
+                .accessibility(identifier: "TextField.origin")
             if self.viewModel.viewIn.airportsDepartureSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewIn.airportsDepartureSuggestions, id: \.self) { some in
@@ -102,6 +99,7 @@ extension RyanairView1 {
     var destinationStationView: some View {
         VStack {
             TextField("Destination. Ex: STN", text: $viewModel.viewOut.destination)
+                .accessibility(identifier: "TextField.destination")
             if self.viewModel.viewIn.airportsArrivalSuggestions.count > 0 {
                 List {
                     ForEach(self.viewModel.viewIn.airportsArrivalSuggestions, id: \.self) { some in
@@ -132,6 +130,7 @@ extension RyanairView1 {
             Stepper(value: $viewModel.viewOut.adult,
                     onEditingChanged: { _ in  },
                     label: { Text("Adults: \(viewModel.viewOut.adult)") })
+                .accessibility(identifier: "Stepper.adult")
         }
     }
 
@@ -140,6 +139,7 @@ extension RyanairView1 {
             Stepper(value: $viewModel.viewOut.teen,
                     onEditingChanged: { _ in  },
                     label: { Text("Teens: \(viewModel.viewOut.teen)") })
+                .accessibility(identifier: "Stepper.teen")
         }
     }
 
@@ -148,6 +148,7 @@ extension RyanairView1 {
             Stepper(value: $viewModel.viewOut.children,
                     onEditingChanged: { _ in  },
                     label: { Text("Children: \(viewModel.viewOut.children)") })
+            .accessibility(identifier: "Stepper.children")
         }
     }
 }

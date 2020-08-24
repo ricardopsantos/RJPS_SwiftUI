@@ -9,7 +9,6 @@ import SwiftUI
 //
 import Utils_Designables
 import Utils_Extensions
-import Utils_Factory
 //
 import App_Ryanair_Core
 
@@ -25,12 +24,10 @@ struct RyanairView2: View {
         ScrollView {
             Text("Flight details").font(.title)
             VStack {
-                SwiftUIFactory.TitleAndValue(title: "Number", value: viewModel.flight?.flightNumber ?? "")
-                SwiftUIFactory.TitleAndValue(title: "Key", value: viewModel.flight?.flightKey ?? "")
-                SwiftUIFactory.TitleAndValue(title: "Duration", value: viewModel.flight?.duration ?? "")
-                SwiftUIFactory.TitleAndValue(title: "Fares left", value: "\(viewModel.flight?.faresLeft)")
-                Spacer()
-                SwiftUIFactory.TitleAndValue(title: "Full details", value: "\(viewModel.flight)")
+                DesignablesFactory.TitleAndValue(title: "Number", value: viewModel.flight?.flightNumber ?? "")
+                DesignablesFactory.TitleAndValue(title: "Key", value: viewModel.flight?.flightKey ?? "")
+                DesignablesFactory.TitleAndValue(title: "Duration", value: viewModel.flight?.duration ?? "")
+                DesignablesFactory.TitleAndValue(title: "Fares left", value: "\(viewModel.flight?.faresLeft ?? 0)")
             }.padding()
         }
     }

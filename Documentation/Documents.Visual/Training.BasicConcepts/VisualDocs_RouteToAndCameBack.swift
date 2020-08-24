@@ -8,8 +8,8 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import Utils_Factory
 import Utils_Extensions
+import Utils_Designables
 
 // MARK: VisualDocs_RouteToAndCameBack_Sample_I
 
@@ -63,7 +63,7 @@ struct VisualDocs_RouteToAndCameBack_Sample_II: View {
     var body: some View {
         ZStack {
             VStack(alignment: .center) {
-                SwiftUIFactory.Button(title: tapToDetails, action: {
+                DesignablesFactory.Button(title: tapToDetails, action: {
                     self.model = VisualDocs_RouteToAndCameBack_Identifiable(param: "Hi!")
                 }).sheet(item: $model, content: { some in
                     VisualDocs_RouteToAndCameBack_Sample_II_Details(param: some.param)
@@ -94,7 +94,7 @@ struct VisualDocs_RouteToAndCameBack_Sample_III_Page1: View {
     var body: some View {
         VStack {
             Image("happyDog").contentMode(.fit)
-            SwiftUIFactory.Button(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page2)", subTitle: "") {
+            DesignablesFactory.Button(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page2)", subTitle: "") {
                 self.viewRouter.currentPage = .page2
             }
         }
@@ -106,7 +106,7 @@ struct VisualDocs_RouteToAndCameBack_Sample_III_Page2: View {
     var body: some View {
         VStack {
             Image("grumpyDog").contentMode(.fit)
-            SwiftUIFactory.Button(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page1)", subTitle: "") {
+            DesignablesFactory.Button(title: "Go to \(VisualDocs_RouteToAndCameBack_Sample_III_Pages.page1)", subTitle: "") {
                 self.viewRouter.currentPage = .page1
             }
         }

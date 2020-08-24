@@ -14,7 +14,7 @@ import Combine
 
 public class CombineTesting {
 
-    private init() { }
+    private init() { }
     public static var shared = CombineTesting()
     var subscriptions: Set<AnyCancellable> = []
 
@@ -54,7 +54,7 @@ public class CombineTesting {
 
         var1.sink { print("# var1 : \($0)") }.store(in: &subscriptions)
         var2.sink { print("# var2 : \($0)") }.store(in: &subscriptions)
-        var3.sink { print("# var3 : \($0)") }.store(in: &subscriptions)
+        var3.sink { print("# var3 : \(String(describing: $0))") }.store(in: &subscriptions)
 
         // OBSERVE Combine 2
 

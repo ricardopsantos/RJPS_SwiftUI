@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 //
 import Utils_Extensions
-import Utils_Factory
+import Utils_Designables
 
 struct VisualDocs_Buttons: View {
     let size_w: CGFloat = 50
@@ -19,11 +19,11 @@ struct VisualDocs_Buttons: View {
 
             VStack {
                 Divider()
-                Text("SwiftUIFactory.ButtonView").font(.headline)
+                Text("DesignablesFactory.ButtonView").font(.headline)
                 Spacer()
-                SwiftUIFactory.Button(title: "SwiftUIFactory : 1")
+                DesignablesFactory.Button(title: "SwiftUIFactory : 1")
                 Spacer()
-                SwiftUIFactory.Button(title: "SwiftUIFactory : 2", subTitle: "subTitle") { print("Tapped") }
+                DesignablesFactory.Button(title: "SwiftUIFactory : 2", subTitle: "subTitle") { print("Tapped") }
             }
 
             // Tap options
