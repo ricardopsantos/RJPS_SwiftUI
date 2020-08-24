@@ -7,11 +7,11 @@ Design Pattern : MVVM
 ### Others
 
 * Use of Combine for reacting UI
-* UI (`App.Ryanair.framework`) separated from business (`App.Ryanair.core.framework`) for better modularity and code re-use
+* UI - `App.Ryanair.framework` - separated from business  - `App.Ryanair.core.framework` - for better modularity and code re-use
 
 ## Features
 
-### Search
+### Search by:
 
 * Origin station 
 * Destination station 
@@ -19,9 +19,13 @@ Design Pattern : MVVM
 * Teen 
 * Children
 
+---
+
 ### Airports auto-complete
 
 See `Previews/Form.Autocomplete.png`
+
+---
 
 ### Extra : Cache (of 60m) support (for repeated calls)
 
@@ -33,15 +37,19 @@ case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscri
 case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
 ```
 
+---
+
 ### Extra: API with cached values
 
 See `FetcherRyanair.swift`
+
+---
 
 ### Extra: Mock suport
 
 See `FetcherRyanairMock.swift`
 
-```
+```swift
 extension FetcherRyanairMock: APIRyanairProtocol {
     public func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError> {
         let data = Data(stationsMock.utf8)
@@ -69,12 +77,14 @@ extension FetcherRyanairMock: APIRyanairProtocol {
 }
 ```
 
+---
+
 ### Extra: Internet connection fail safe
 
 * If theres no internet connection, the app will wait 300s and retry the request. (will return cache value anyway if available)
 * UI changes if there is no internet connection. See `Previews/Form.Internet.1.png`
 
-```
+```swift
 public extension URLSession {
     static var defaultForConnectivity: URLSession {
         let config = URLSessionConfiguration.default
@@ -85,9 +95,11 @@ public extension URLSession {
 }
 ```
 
+---
+
 ### Extra: UI Testing (auto-complete airport)
 
-```
+```swift
 func testSuggestions() {
     let app = XCUIApplication()
     app.launch()
@@ -105,13 +117,21 @@ func testSuggestions() {
 }
 ```
 
+---
+
+### Extra: Dark mode support
+
+See `Previews.DarkMode.png`
+
+---
+
 ### Extra: Screen Previews
 
 Screen previews for faster development. 
 
 __With real data__
 
-```
+```swift
 struct RyanairView1_PreviewProvider1: PreviewProvider {
     static var previews: some View {
         RyanairView1Builder.buildView()
@@ -121,7 +141,7 @@ struct RyanairView1_PreviewProvider1: PreviewProvider {
 
 __With mock data__
 
-```
+```swift
 struct RyanairView1_PreviewProvider2: PreviewProvider {
     static var previews: some View {
         RyanairView1Builder.buildMockView()
@@ -137,5 +157,9 @@ See `Preview.Mock.png` (with real mock data) and `Preview.Multiple.png`
 
 Map all `RyanairResponseDto` objects into mirror  `Model` objects so that the ViewModel dont know `RyanairResponseDto` objects
 
+---
+
 ### DDD
+
+See [Domain driven design](https://en.wikipedia.org/wiki/Domain-driven_design)
 
