@@ -389,7 +389,6 @@
 		9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
 		9FE143F421AF2F520026BDFC /* Active.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Active.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE5097D231FB14E0081E1DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D70C19DA24806D2700125742 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D751737224DEAA3E004822B2 /* Base_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D751737424DEAA3E004822B2 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		D751737524DEAA3E004822B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -618,7 +617,8 @@
 		9F288F1B20F8089F008A9539 = {
 			isa = PBXGroup;
 			children = (
-				D70C19DA24806D2700125742 /* README.md */,
+				D774F50124F1D8AB00D01370 /* README.md */,
+				D774F4FA24F1D6B500D01370 /* Previews */,
 				D7B560222493A2EA00E9EC7D /* .swiftlint.yml */,
 				9F288F2620F8089F008A9539 /* RJPS_SwiftUI */,
 				D774F44024EDB27400D01370 /* App.Ryanair */,
@@ -767,8 +767,6 @@
 		D774F44024EDB27400D01370 /* App.Ryanair */ = {
 			isa = PBXGroup;
 			children = (
-				D774F50124F1D8AB00D01370 /* README.md */,
-				D774F4FA24F1D6B500D01370 /* Previews */,
 				D774F46124EDB3A500D01370 /* Scheme.1 */,
 				D774F4D824EFB23F00D01370 /* Scheme.2 */,
 				D774F44124EDB27400D01370 /* App_Ryanair.h */,
