@@ -68,7 +68,7 @@ public extension View {
         self.overlay(RoundedRectangle(cornerRadius: 0).addDashedStroke(color: color, width: width))
     }
 
-    func debug3(color: UIColor = .red, width: CGFloat=3) -> some View {
+    func debugComposed(color: UIColor = .red, width: CGFloat=3) -> some View {
         self.debugWithDashedStroke(color: color, width: width).padding(width).debugWithSimpleStroke(color: color, width: width)
     }
 }
@@ -125,9 +125,9 @@ public struct ExtensionsView: View {
                         Button(action: {}) { Text("Button") }.debugWithDashedStroke()
                     }
                     HStack {
-                        Text("Text").debug3()
-                        TextField("TextField", text: $text).debug3()
-                        Button(action: {}) { Text("Button") }.debug3()
+                        Text("Text").debugComposed()
+                        TextField("TextField", text: $text).debugComposed()
+                        Button(action: {}) { Text("Button") }.debugComposed()
                     }
                 }
             }.padding()

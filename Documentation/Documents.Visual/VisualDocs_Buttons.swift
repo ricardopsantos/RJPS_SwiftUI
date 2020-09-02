@@ -16,9 +16,9 @@ struct VisualDocs_Buttons: View {
     let size_h: CGFloat = 50
     var body: some View {
         ScrollView {
-
+            Text("Buttons").font(.title)
+            Divider()
             VStack {
-                Divider()
                 Text("DesignablesFactory.ButtonView").font(.headline)
                 Spacer()
                 DesignablesFactory.Button(title: "SwiftUIFactory : 1")

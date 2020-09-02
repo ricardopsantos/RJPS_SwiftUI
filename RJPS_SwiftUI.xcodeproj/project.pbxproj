@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F4A421B23228FC600FE5BC7 /* Tab1_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A421A23228FC600FE5BC7 /* Tab1_View.swift */; };
 		9F69CB1422BE8544008D305D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F69CB1322BE8544008D305D /* AVKit.framework */; };
 		9FE143C021AF2F520026BDFC /* Auxiliar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F288F2720F8089F008A9539 /* Auxiliar.swift */; };
-		9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE50979231FB10E0081E1DB /* TabView_View.swift */; };
+		9FE5097C231FB10E0081E1DB /* AppRoot_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE50979231FB10E0081E1DB /* AppRoot_View.swift */; };
 		9FE5097E231FB14E0081E1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE5097D231FB14E0081E1DB /* AppDelegate.swift */; };
+		D71849AE24FFED100023FAD8 /* DevTools+FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71849AD24FFED100023FAD8 /* DevTools+FeatureFlag.swift */; };
 		D72BD65724D4587300671712 /* VisualDocs_WaysToReactToState_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65624D4587300671712 /* VisualDocs_WaysToReactToState_II.swift */; };
 		D72BD65924D45CC900671712 /* VisualDocs_@Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65824D45CC900671712 /* VisualDocs_@Binding.swift */; };
 		D72BD65B24D4633800671712 /* VisualDocs_TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65A24D4633800671712 /* VisualDocs_TimerView.swift */; };
@@ -619,14 +619,14 @@
 /* Begin PBXFileReference section */
 		9F288F2720F8089F008A9539 /* Auxiliar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auxiliar.swift; sourceTree = "<group>"; };
 		9F46132A2321814F00F24162 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
-		9F4A421A23228FC600FE5BC7 /* Tab1_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab1_View.swift; sourceTree = "<group>"; };
 		9F69CB1322BE8544008D305D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		9FA68D4C231FEE58007353EF /* DesignablesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignablesFactory.swift; sourceTree = "<group>"; };
 		9FBEA89F2322944F00E4B6FE /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
 		9FE143F421AF2F520026BDFC /* Active.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Active.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE50979231FB10E0081E1DB /* TabView_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView_View.swift; sourceTree = "<group>"; };
+		9FE50979231FB10E0081E1DB /* AppRoot_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoot_View.swift; sourceTree = "<group>"; };
 		9FE5097D231FB14E0081E1DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70C19DA24806D2700125742 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D71849AD24FFED100023FAD8 /* DevTools+FeatureFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DevTools+FeatureFlag.swift"; sourceTree = "<group>"; };
 		D72BD65624D4587300671712 /* VisualDocs_WaysToReactToState_II.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_WaysToReactToState_II.swift; sourceTree = "<group>"; };
 		D72BD65824D45CC900671712 /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
 		D72BD65A24D4633800671712 /* VisualDocs_TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TimerView.swift; sourceTree = "<group>"; };
@@ -1052,14 +1052,6 @@
 			path = RJPS_SwiftUI;
 			sourceTree = "<group>";
 		};
-		9F85457A2321194000F08379 /* Tab_1 */ = {
-			isa = PBXGroup;
-			children = (
-				9F4A421A23228FC600FE5BC7 /* Tab1_View.swift */,
-			);
-			path = Tab_1;
-			sourceTree = "<group>";
-		};
 		9FA68D4B231FB7CD007353EF /* Comom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1072,8 +1064,7 @@
 		9FE50976231FB10E0081E1DB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				9FE50979231FB10E0081E1DB /* TabView_View.swift */,
-				9F85457A2321194000F08379 /* Tab_1 */,
+				9FE50979231FB10E0081E1DB /* AppRoot_View.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -1172,6 +1163,7 @@
 				D7B6DF7224ED6D2100A94EE5 /* README.md */,
 				D774F51D24F40A0800D01370 /* DevTools.swift */,
 				D774F51F24F40A2200D01370 /* DevTools+Log.swift */,
+				D71849AD24FFED100023FAD8 /* DevTools+FeatureFlag.swift */,
 				D7611BC424E1F7A800B53E61 /* DevTools.h */,
 				D7611BC524E1F7A800B53E61 /* Info.plist */,
 			);
@@ -2420,7 +2412,6 @@
 				D751738624E01143004822B2 /* VisualDocs_sheet.swift in Sources */,
 				D72BD65924D45CC900671712 /* VisualDocs_@Binding.swift in Sources */,
 				D7B560252493AA5400E9EC7D /* Recreating.Settings.swift in Sources */,
-				9F4A421B23228FC600FE5BC7 /* Tab1_View.swift in Sources */,
 				D78FABCA24D0B6410069809D /* Recreating.Messages_II.swift in Sources */,
 				D7B6DF6B24ED6C8A00A94EE5 /* VisualDocs_UserDefaults.swift in Sources */,
 				9FE143C021AF2F520026BDFC /* Auxiliar.swift in Sources */,
@@ -2445,7 +2436,7 @@
 				D72BD65B24D4633800671712 /* VisualDocs_TimerView.swift in Sources */,
 				D78FAC2E24D418BC0069809D /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift in Sources */,
 				D78FABE324D0C2590069809D /* Recreating.AppStore.swift in Sources */,
-				9FE5097C231FB10E0081E1DB /* TabView_View.swift in Sources */,
+				9FE5097C231FB10E0081E1DB /* AppRoot_View.swift in Sources */,
 				D78FABF124D165DF0069809D /* VisualDocs_Colors.swift in Sources */,
 				D755B14024D4A21300C6215C /* VisualDocs_@Published.swift in Sources */,
 				D78FABEF24D164AC0069809D /* VisualDocs_Padding.swift in Sources */,
@@ -2486,6 +2477,7 @@
 			files = (
 				D774F52124F40A6900D01370 /* OSLog+Extension.swift in Sources */,
 				D774F51E24F40A0800D01370 /* DevTools.swift in Sources */,
+				D71849AE24FFED100023FAD8 /* DevTools+FeatureFlag.swift in Sources */,
 				D774F52024F40A2200D01370 /* DevTools+Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

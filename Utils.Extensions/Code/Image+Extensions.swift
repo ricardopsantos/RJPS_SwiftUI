@@ -115,12 +115,14 @@ public enum ImageNames: String, CaseIterable {
     }
 }
 
-public struct VisualDocs_Images: View {
+public struct VisualDocs_ImageName: View {
+    public init() { }
     @State var imageNames = ImageNames.allCases
     public var body: some View {
         VStack {
-            Text("ImageNames.allCases").font(.title)
-            ScrollView {
+             ScrollView {
+                Text("ImageNames").font(.title)
+                Divider()
                 ForEach(self.imageNames, id: \.self) { imageName in
                     VStack {
                         Divider()
@@ -177,8 +179,8 @@ public struct VisualDocs_Images: View {
 
 // MARK: - Preview
 
-public struct VisualDocs_Images_PreviewProvider: PreviewProvider {
+public struct VisualDocs_ImageName_PreviewProvider: PreviewProvider {
     public static var previews: some View {
-        VisualDocs_Images()
+        VisualDocs_ImageName()
     }
 }

@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let testing = RyanairCoreTesting()
         //testing.test1()
 
-        self.window?.rootViewController = UIHostingController(rootView: TabView_View())
+        self.window?.rootViewController = UIHostingController(rootView: AppRoot_View())
 
         return true
     }
@@ -35,6 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 struct AppDelegate_Previews: PreviewProvider {
     static var previews: some View {
-        TabView_View()
+        AppRoot_View()
     }
 }

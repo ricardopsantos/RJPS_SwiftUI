@@ -12,6 +12,8 @@ struct VisualDocs_Fonts: View {
     let size: CGFloat = 20
     var body: some View {
         ScrollView {
+            Text("Fonts").font(.title)
+            Divider()
             VStack {
                 Text("system.ultraLight").font(.system(size: size, weight: .ultraLight))
                 Text("system.thin").font(.system(size: size, weight: .thin))

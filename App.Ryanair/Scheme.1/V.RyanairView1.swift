@@ -41,7 +41,7 @@ struct RyanairView1: View {
                         Section(header: Text("Book results")) {
                             outputViewList
                         }
-                    }.navigationBarTitle(Text("Book flight"))
+                    }.navigationBarTitle(Text("Book flight ✈️"))
                     outputView
                 }
                 ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)

@@ -102,31 +102,8 @@ public extension DesignablesFactory {
 
 // MARK: - Preview
 
-public struct DesignablesFactorySample: View {
-    var food = ["Spaghetti", "Cheese Burger", "Pizza", "Fried Rice"]
-
-    public var body: some View {
-        VStack {
-            DesignablesFactory.Button(title: "Title", action: { print("!action!") })
-            Spacer()
-            DesignablesFactory.TitleAndValue(title: "T&V.Title", value: "T&V.value")
-            Spacer()
-            DesignablesFactory.ErrorView(message: "Some error")
-            Spacer()
-                Section(header: Text("DesignablesFactory.ListItem")) {
-                    List {
-                        DesignablesFactory.ListItem(title: "LI.Title1", value: "LI.Value1")
-                            DesignablesFactory.ListItem(title: "LI.Title1", value: "LI.Value1", imageName: "paperplane.fill", imageColor1: Color.red, imageColor2: Color.blue)
-                        DesignablesFactory.ListItem(title: "LI.Title1", value: "LI.Value1", imageName: "paperplane.fill")
-                    }
-                }
-
-        }.padding()
-    }
-}
-
 struct DesignablesFactory_Preview: PreviewProvider {
     static var previews: some View {
-        DesignablesFactorySample()
+        Designables_View()
     }
 }

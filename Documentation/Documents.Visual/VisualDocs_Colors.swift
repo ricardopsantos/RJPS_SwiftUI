@@ -13,12 +13,9 @@ struct VisualDocs_Colors: View {
     var body: some View {
         ScrollView {
 
-            // Color.systemXXX
-            // Color.systemXXX
-            // Color.systemXXX
-
             VStack {
                 Text("Color.systemXXX").font(.title)
+                Divider()
                 HStack {
                     Text("systemIndigo")
                     Circle().frame(width: 20, height: 20).foregroundColor(Color(UIColor.systemIndigo))

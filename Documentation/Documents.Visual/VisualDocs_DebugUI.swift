@@ -17,15 +17,34 @@ var baseView: some View {
 struct VisualDocs_DebugUI: View {
     var body: some View {
         ScrollView {
+            Text("Debug UI").font(.title)
+            Divider()
             VStack {
-                baseView
+                HStack {
+                    baseView
+                    Text("Base").font(.footnote)
+                }
                 Spacer()
-                baseView.debugWithSimpleStroke()
+                HStack {
+                    baseView.debugWithSimpleStroke()
+                    Text(".debugWithSimpleStroke").font(.footnote)
+                }
                 Spacer()
-                baseView.debugWithDashedStroke()
+                HStack {
+                    baseView.debugWithDashedStroke()
+                    Text(".debugWithDashedStroke").font(.footnote)
+                }
                 Spacer()
-                baseView.debug3()
-            }.padding().debug3(color: .blue, width: 3)
+                HStack {
+                    baseView.debugComposed()
+                    Text(".debugComposed").font(.footnote)
+                }
+                Spacer()
+                HStack {
+                    baseView.debugComposed(color: .blue, width: 3)
+                    Text(".debugComposed(color: .blue, width: 3)").font(.footnote)
+                }
+            }.padding()
         }
     }
 }
