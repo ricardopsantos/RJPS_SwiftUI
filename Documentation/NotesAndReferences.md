@@ -14,19 +14,51 @@ We’re building the logic of a program, without describing its control flow. Th
 
 __Combine = Publishers + Subscribers + Operators__
 
+![Combine_I](Combine_I.png)
+
 ### Publisher
 
-Publisher sends sequences of values over time to one or more Subscribers. 
+`Publisher` sends sequences of values over time to one or more `Subscribers`. 
 
 A publisher can send values or terminate with either success or error. `Output` defines what kind of values a publisher can send. Failure defines the type of error it may fail with.
 
+They can emit values over time. Those values are consumed by subscriber instances. In this way, a publisher can emit several events of the following types:
+* The publisher’s output value, that’s a generic Output type.
+* A successful completion
+* An error completion. Failure type that it may publish.
+
+These `Output` and `Failure` types are included in the protocol that a publisher conforms. Moreover note that a publisher can emit zero or more Output values but one completion. Once this is sent, publisher ends up its activity.
+
+Apart from that, publisher implements the `receive(subscriber:)` method to connect with a subscriber. In other words, publisher’s output matches with subscriber’s input and the same for the failure types.
+
+![Publishers_1](Publishers_1.png)
+
+### Operators
+
+Special methods declared on the publisher protocol that returns another publisher. They have input/output and error handling. Apart from that, they can be combined (😉) making operators chains to implement complex logic.
+
+That way of creating and connecting asynchronous elements avoids having a shared state of data. That problem commented on previously.
+Continue with the example of the Fibonacci publisher, we can have two operators that convert the `<Int, Error>` input into a` <String, Never>` output. That String could be the Fibonacci number and its representation (i.e. "F(8) = 21"):
+
+![Operators_1](Operators_1.png)
+
+
 ### Subscriber
 
-Subscriber receives values from a publisher.
+* Subscriber receives values from a publisher.
 
-A subscriber can receive a value of type `Input` or a termination event with either success or `Failure`.
+* A subscriber can receive a value of type `Input` or a termination event with either success or `Failure`.
 
-### Connecting Publisher to Subscriber
+* Any of these chains of publishers and operators end up with a subscriber. This receives those values. Combine provide two built-in subscribers:
+    * `sink(receiveCompletion:receiveValue:)` : Use os closures to handle elements received and completion events.
+    * `assign(to:on:)` : Bind the element received in a property of your data model or on a UI control. That property is identified by a key path.
+
+![Subscribers_1](Subscribers_1.png)
+
+
+## Combine
+
+### Combine Sample : Connecting Publisher to Subscriber
 
 Combine has two built-in subscribers: `Subscribers.Sink` and `Subscribers.Assign`. You can connect them by calling either of these methods on a publisher :
 
@@ -44,7 +76,7 @@ publisher.sink(receiveCompletion: { _ in
 })
 ```
 
-## Combine
+---
 
 ### Combine : `PassthroughSubject`
 
@@ -77,6 +109,8 @@ class SampleUserSettings: ObservableObject {
 }
 ```
 
+---
+
 ### `CurrentValueSubject`
 
 As on [Apple Docs](https://developer.apple.com/documentation/combine/currentvaluesubject) : _A subject that wraps a single value and publishes a new element whenever the value changes._
@@ -94,6 +128,8 @@ var1.send(["test", "test1"])
 var2.send(1)
 var3.send(Date())
 ```
+
+---
 
 ### `@Published`
 
@@ -137,6 +173,8 @@ Note that `@State` variables are also great while prototyping your app. For exam
 @State var text = ""
 ```
 
+---
+
 ### SwiftUI : `@Binding`
 
 As stated on [Apple Docs](https://developer.apple.com/documentation/swiftui/binding) : _A property wrapper type that can read and write a value owned by a source of truth._
@@ -165,6 +203,8 @@ struct VisualDocs_Binding_I: View {
     }
 }
 ```
+
+---
 
 ### SwiftUI : `@EnvironmentObject`
 
@@ -222,6 +262,8 @@ __More__
 
 * [How to navigate between views in SwiftUI by using an @EnvironmentObject](https://www.blckbirds.com/post/how-to-navigate-between-views-in-swiftui-by-using-an-environmentobject)
 
+---
+
 ### SwiftUI : `@ObservedObject`
 
 As on [Apple Docs](https://developer.apple.com/documentation/swiftui/ObservedObject) : _A property wrapper type that subscribes to an observable object and invalidates a view whenever the observable object changes._
@@ -240,6 +282,7 @@ __Code Sample__ : See section @EnvironmentObject
 * [About SwiftUI](https://github.com/swiftui-lab/About-SwiftUI)
 
 ## Combine References
+* [Basics of the Combine framework](https://levelup.gitconnected.com/basics-of-combine-framework-64dbd18da341)
 * [Swift Combine Framework Tutorial: Getting Started](https://www.vadimbulavin.com/swift-combine-framework-tutorial-getting-started/)
 * [The difference between @StateObject, @EnvironmentObject, and @ObservedObject in SwiftUI](https://swiftwithmajid.com/2020/07/02/the-difference-between-stateobject-environmentobject-and-observedobject-in-swiftui/)
 

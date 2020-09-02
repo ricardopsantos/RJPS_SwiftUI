@@ -7,19 +7,31 @@ import UIKit
 import Foundation
 import SwiftUI
 import Combine
-
+//
+import App_Weather
+import App_HourlyChallenge
+import App_Ryanair
+//
+import Utils_Extensions
 struct TabView_View: View {
 
-    var tab1 : some View { Tab1_View().tabItem({ Text("Tab_1") }).tag(1) }
+    var tab1 : some View { WeeklyWeatherBuilder.buildView().tabItem({
+        VStack { ImageNames.cloud.image; Text("Weather") }
+    })}
+
+    var tab2 : some View { RyanairView1Builder.buildView().tabItem({
+        VStack { ImageNames.paperplane.image; Text("Ryanair") }
+    })}
+
+    var tab3 : some View { DashboardViewBuilder.buildView().tabItem({
+        VStack { ImageNames.clock.image; Text("Hourly") }
+    })}
+
     var body : some View {
-        VStack(alignment: .center, spacing: 20) {
-            Text("TabBar App").bold()
-            Divider()
-            TabView {
-                tab1
-                tab1
-                tab1
-            }
+        TabView {
+            tab1
+            tab2
+            tab3
         }
     }
 }

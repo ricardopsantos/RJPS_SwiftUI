@@ -11,6 +11,7 @@ import Combine
 import Base_Domain
 //
 import Utils_Extensions
+import DevTools
 
 public class FetcherRyanairMock {
     public init() { }
@@ -26,7 +27,7 @@ extension FetcherRyanairMock: APIRyanairProtocol {
         return Just(data)
             .decode(type: RyanairResponseDto.Stations.self, decoder: decoder)
             .mapError { error in
-                os_log("Error : \(error)", type: .error)
+                DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
@@ -38,7 +39,7 @@ extension FetcherRyanairMock: APIRyanairProtocol {
         return Just(data)
             .decode(type: RyanairResponseDto.Availability.self, decoder: decoder)
             .mapError { error in
-                os_log("Error : \(error)", type: .error)
+                DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }

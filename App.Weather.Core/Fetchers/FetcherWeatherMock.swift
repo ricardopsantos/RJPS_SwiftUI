@@ -9,6 +9,7 @@ import Foundation
 import Combine
 //
 import Utils_Extensions
+import DevTools
 //
 import Base_Domain
 
@@ -27,7 +28,7 @@ extension FetcherWeatherMock: APIWeatherProtocol {
         return Just(data)
             .decode(type: WeatherDto.WeeklyForecastEntity.self, decoder: decoder)
             .mapError { error in
-                os_log("Error : \(error)", type: .error)
+                DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
@@ -36,7 +37,7 @@ extension FetcherWeatherMock: APIWeatherProtocol {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data).decode(type: WeatherDto.CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
-            os_log("Error : \(error)", type: .error)
+            DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }

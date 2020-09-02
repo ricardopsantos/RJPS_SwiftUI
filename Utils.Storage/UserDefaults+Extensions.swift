@@ -10,3 +10,21 @@ public extension UserDefaults {
         UserDefaults.standard.set(kvStorableRecord.toData, forKey: kvStorableRecord.key)
     }
 }
+
+public extension UserDefaults {
+    /**
+    [Source](https://medium.com/swlh/a-type-safe-userdefaults-in-swift-45a5cfc54b1b)
+
+    ```
+    UserDefaults.standard.userID = "123"
+    if let userID = UserDefaults.standard.userID {
+        print(userID)
+    }
+    ```
+    */
+
+    var userID: String? {
+        get { return string(forKey: #function) }
+        set { set(newValue, forKey: #function) }
+    }
+}
