@@ -23,8 +23,8 @@ struct RyanairView1: View {
     }
 
     var body: some View {
-        NavigationView {
-            ZStack {
+        ZStack {
+            NavigationView {
                 VStack {
                     Form {
                         Section(header: Text("Book options")) {
@@ -44,8 +44,9 @@ struct RyanairView1: View {
                     }.navigationBarTitle(Text("Book flight ✈️"))
                     outputView
                 }
-                ActivityIndicatorRepresentable(isAnimating: viewModel.isLoading)
             }
+            .disabled(viewModel.isLoading).blur(radius: viewModel.isLoading ? 3 : 0)
+            ActivityIndicator_V3(isAnimating: $viewModel.isLoading)
         }
     }
 }
@@ -162,5 +163,13 @@ struct RyanairView1_PreviewProvider1: PreviewProvider {
 struct RyanairView1_PreviewProvider2: PreviewProvider {
     static var previews: some View {
         RyanairView1Builder.buildMockView()
+    }
+}
+
+struct RyanairView1_PreviewProvider3: PreviewProvider {
+    static var previews: some View {
+        LoadingView(isAnimating: .constant(true), content: {
+            RyanairView1Builder.buildMockView()
+        })
     }
 }

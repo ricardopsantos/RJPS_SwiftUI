@@ -53,7 +53,7 @@ public struct WeeklyWeatherView: View {
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Weather ⛅️")
             }
-            ActivityIndicatorRepresentable(isAnimating: viewModel.isAnimating)
+            ActivityIndicator_V2(isAnimating: viewModel.isAnimating)
         }
     }
 }

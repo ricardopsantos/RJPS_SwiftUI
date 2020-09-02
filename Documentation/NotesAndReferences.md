@@ -42,7 +42,6 @@ Continue with the example of the Fibonacci publisher, we can have two operators 
 
 ![Operators_1](Operators_1.png)
 
-
 ### Subscriber
 
 * Subscriber receives values from a publisher.
