@@ -7,8 +7,9 @@ import Foundation
 import SwiftUI
 
 public struct Designables_View: View {
-    var food = ["Spaghetti", "Cheese Burger", "Pizza", "Fried Rice"]
     public init() { }
+    @State private var valuesFloatingTextField = ""
+
     public var body: some View {
         VStack {
             VStack {
@@ -23,6 +24,12 @@ public struct Designables_View: View {
             VStack {
                 Text("Button 1").font(.caption)
                 DesignablesFactory.Button(title: "Title", action: { print("!action!") })
+                Divider()
+            }
+            VStack {
+                Text("FloatingTextField").font(.caption)
+                DesignablesFactory.FloatingTextField(title: "First Name", text: $valuesFloatingTextField)
+                Text(valuesFloatingTextField)
                 Divider()
             }
             VStack {
@@ -45,8 +52,8 @@ public struct Designables_View: View {
     }
 }
 
-struct Designables_Previews: PreviewProvider {
-    static var previews: some View {
+public struct Designables_Previews: PreviewProvider {
+    public static var previews: some View {
         return Designables_View()
     }
 }

@@ -46,7 +46,7 @@ struct RyanairView1: View {
                 }
             }
             .disabled(viewModel.isLoading).blur(radius: viewModel.isLoading ? 3 : 0)
-            ActivityIndicator_V3(isAnimating: $viewModel.isLoading)
+            ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
         }
     }
 }
@@ -168,7 +168,7 @@ struct RyanairView1_PreviewProvider2: PreviewProvider {
 
 struct RyanairView1_PreviewProvider3: PreviewProvider {
     static var previews: some View {
-        LoadingView(isAnimating: .constant(true), content: {
+        ActivityIndicator_V3(isAnimating: .constant(true), message: .constant("Loading..."), content: {
             RyanairView1Builder.buildMockView()
         })
     }

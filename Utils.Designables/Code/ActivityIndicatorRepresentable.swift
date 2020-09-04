@@ -8,35 +8,28 @@ import Foundation
 import SwiftUI
 import Combine
 
-public struct LoadingView<Content>: View where Content: View {
-    @Binding public var isAnimating: Bool
-    var content: (() -> Content)?
-    public init(isAnimating: Binding<Bool>, content: @escaping () -> Content) {
-        // https://stackoverflow.com/questions/56973959/swiftui-how-to-implement-a-custom-init-with-binding-variables
-        self._isAnimating = isAnimating // beta 4
-        self.content = content
+//
+// More samples @ https://medium.com/better-programming/activity-indicators-in-swiftui-17b66e6c0137
+//
+
+public struct ActivityIndicator_V1: UIViewRepresentable {
+    public var isAnimating: Bool
+    public init(isAnimating: Bool) {
+        self.isAnimating = isAnimating
     }
-    public var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .center) {
-                self.content?().disabled(self.isAnimating).blur(radius: self.isAnimating ? 3 : 0)
-                VStack {
-                    Text("Loading...")
-                    //ActivityIndicator_V1(isAnimating: true)
-                    //ActivityIndicator_V2(isAnimating: .constant(true), style: .large)
-                    ActivityIndicator_V3(isAnimating: .constant(true)).frame(width: 50, height: 50)
-                }
-                .frame(width: geometry.size.width / 2, height: geometry.size.height / 5)
-                .background(Color.secondary.colorInvert())
-                .foregroundColor(Color.primary)
-                .cornerRadius(20)
-                .opacity(self.isAnimating ? 1 : 0)
-            }
+    public func makeUIView(context: Context) -> UIActivityIndicatorView {
+        return UIActivityIndicatorView(style: .large)
+    }
+    public func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
+        if isAnimating {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
         }
     }
 }
 
-public struct ActivityIndicator_V3: View {
+public struct ActivityIndicator_V2: View {
     @State var isDoingAnimation: Bool = false
     @Binding var isAnimating: Bool
     public init(isAnimating: Binding<Bool>) {
@@ -67,69 +60,57 @@ public struct ActivityIndicator_V3: View {
     }
 }
 
-public struct ActivityIndicator_V2: UIViewRepresentable {
-    @State public var isAnimating: Bool = false
-    public init(isAnimating: Bool) {
-        self.isAnimating = isAnimating
+public struct ActivityIndicator_V3<Content>: View where Content: View {
+    @Binding public var isAnimating: Bool
+    @Binding public var message: String
+    var content: (() -> Content)?
+    public init(isAnimating: Binding<Bool>, message: Binding<String>, content: @escaping () -> Content) {
+        // https://stackoverflow.com/questions/56973959/swiftui-how-to-implement-a-custom-init-with-binding-variables
+        self._isAnimating = isAnimating // beta 4
+        self._message = message
+        self.content = content
     }
-    var style: UIActivityIndicatorView.Style = .large
-    public func makeUIView(context: UIViewRepresentableContext<ActivityIndicator_V2>) -> UIActivityIndicatorView {
-        return UIActivityIndicatorView(style: style)
-    }
-    public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator_V2>) {
-        isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
-    }
-}
-
-public struct ActivityIndicator_V1: UIViewRepresentable {
-    public var isAnimating: Bool
-    public init(isAnimating: Bool) {
-        self.isAnimating = isAnimating
-    }
-    public func makeUIView(context: Context) -> UIActivityIndicatorView {
-        return UIActivityIndicatorView(style: .large)
-    }
-    public func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
-        if isAnimating {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
+    public var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .center) {
+                self.content?().disabled(self.isAnimating).blur(radius: self.isAnimating ? 3 : 0)
+                VStack {
+                    Text(self.message)
+                    ActivityIndicator_V2(isAnimating: .constant(true)).frame(width: 50, height: 50)
+                }
+                .frame(width: geometry.size.width / 2, height: geometry.size.height / 5)
+                .background(Color.secondary.colorInvert())
+                .foregroundColor(Color.primary)
+                .cornerRadius(20)
+                .opacity(self.isAnimating ? 1 : 0)
+            }
         }
     }
 }
 
 // MARK: - Previews
 
-struct ActivityIndicator_V1_Preview: PreviewProvider {
-    static var previews: some View {
+public struct ActivityIndicator_V1_Preview: PreviewProvider {
+    public static var previews: some View {
         ZStack {
-            Designables_View()
+            Designables_View().disabled(true).blur(radius: true ? 3 : 0)
             ActivityIndicator_V1(isAnimating: true)
         }
     }
 }
 
-struct ActivityIndicator_V2_Preview: PreviewProvider {
-    static var previews: some View {
+public struct ActivityIndicator_V2_Preview: PreviewProvider {
+    public static var previews: some View {
         ZStack {
-            Designables_View()
-            ActivityIndicator_V2(isAnimating: true)
+            Designables_View().disabled(true).blur(radius: true ? 3 : 0)
+            ActivityIndicator_V2(isAnimating: .constant(true)).frame(width: 75, height: 75)
         }
     }
 }
 
-struct ActivityIndicator_V3_Preview: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Designables_View()
-            ActivityIndicator_V3(isAnimating: .constant(true)).frame(width: 75, height: 75)
-        }
-    }
-}
-
-struct ActivityIndicator_LoadingView_Preview: PreviewProvider {
-    static var previews: some View {
-        LoadingView(isAnimating: .constant(true), content: {
+public struct ActivityIndicator_V3_Preview: PreviewProvider {
+    public static var previews: some View {
+        ActivityIndicator_V3(isAnimating: .constant(true), message: .constant("Loading"), content: {
             Designables_View()
         })
     }

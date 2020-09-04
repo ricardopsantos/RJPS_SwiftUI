@@ -29,32 +29,12 @@ struct AppRoot_View: View {
         VStack { ImageNames.clock.image; Text("Hourly") }
     })}
 
-    var devView : some View {
-        NavigationView {
-            List {
-                Section {
-                    NavigationLink(destination: VisualDocs_Colors()) { Text("Color WIKI") }
-                    NavigationLink(destination: VisualDocs_Fonts()) { Text("Fonts WIKI") }
-                    NavigationLink(destination: VisualDocs_ImageName()) { Text("Images WIKI") }
-                    NavigationLink(destination: VisualDocs_Shapes()) { Text("Shapes WIKI") }
-                }
-                Section {
-                    NavigationLink(destination: VisualDocs_DebugUI()) { Text("DebugUI") }
-                    NavigationLink(destination: VisualDocs_Buttons()) { Text("Buttons") }
-                    NavigationLink(destination: Designables_View()) { Text("Designables") }
-                }
-            }
-            .listStyle(GroupedListStyle())
-            .navigationBarTitle("Dev utils")
-        }
-        .tabItem({ VStack { ImageNames.heart.image; Text("Dev") } })}
-
     var body : some View {
         TabView {
             tab1
             tab2
             tab3
-            devView
+            DevScreen_PreviewProvider.previews
         }
     }
 }

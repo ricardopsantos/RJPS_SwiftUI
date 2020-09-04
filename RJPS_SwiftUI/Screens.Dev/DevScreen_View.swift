@@ -1,0 +1,92 @@
+//
+//  Created by Ricardo P Santos on 2019.
+//  Copyright © 2019 Ricardo P Santos. All rights reserved.
+//
+
+import UIKit
+import Foundation
+import SwiftUI
+import Combine
+//
+import App_Weather
+import App_HourlyChallenge
+import App_Ryanair
+import Utils_Extensions
+import Utils_Designables
+//
+
+struct DevScreen_View: View {
+    var body : some View {
+        NavigationView {
+            List {
+                Section(header: Text("WIKI Reference")) {
+                    NavigationLink(destination: VisualDocs_Colors_PreviewProvider.previews) { Text("Color WIKI") }
+                    NavigationLink(destination: VisualDocs_Fonts_PreviewProvider.previews) { Text("Fonts WIKI") }
+                    NavigationLink(destination: VisualDocs_ImageName_PreviewProvider.previews) { Text("Images WIKI") }
+                    NavigationLink(destination: VisualDocs_Shapes_PreviewProvider.previews) { Text("Shapes WIKI") }
+                }
+                Section(header: Text("Personal Components Reference")) {
+                    NavigationLink(destination: Designables_Previews.previews) { Text("My Designables") }
+                    NavigationLink(destination: VisualDocs_Buttons_PreviewProvider.previews) { Text("Buttons") }
+                    NavigationLink(destination: VisualDocs_Shadows_PreviewProvider.previews) { Text("Shadows") }
+                    NavigationLink(destination: ExtensionsViewSample_PreviewProvider.previews) { Text("View+Extensions") }
+                }
+                Section(header: Text("SwiftUI Components Reference")) {
+                    NavigationLink(destination: ForEach_PreviewProvider.previews) { Text("ForEach") }
+                    NavigationLink(destination: Lists_PreviewProvider.previews) { Text("Lists") }
+                    NavigationLink(destination: Form_PreviewProvider.previews) { Text("Form") }
+                    NavigationLink(destination: TabView_PreviewProvider.previews) { Text("TabView") }
+                    NavigationLink(destination: Padding_PreviewProvider.previews) { Text("Padding") }
+                }
+                Section(header: Text("Combine & Events")) {
+                    NavigationLink(destination: Combine_PreviewProvider.previews) { Text("Combine") }
+                    NavigationLink(destination: OnEditingChanged_PreviewProvider.previews) { Text("onEditingChanged") }
+                    NavigationLink(destination: OnReceive_PreviewProvider.previews) { Text("onReceive") }
+                    NavigationLink(destination: OnDelete_PreviewProvider.previews) { Text("onDelete") }
+                }
+                Section(header: Text("Util")) {
+                    NavigationLink(destination: PasswordChecker_PreviewProvider.previews) { Text("PasswordChecker") }
+                    NavigationLink(destination: InfiniteScrollView_PreviewProvider.previews) { Text("InfiniteScrollView") }
+                    NavigationLink(destination: SimpleMVVM_PreviewProvider.previews) { Text("SimpleMVVM") }
+                    NavigationLink(destination: ScrollEffect3D_PreviewProvider.previews) { Text("ScrollEffect3D") }
+                }
+                Section(header: Text("Recreating")) {
+                    Group {
+                        NavigationLink(destination: Breathe_PreviewProvider.previews) { Text("Breathe") }
+                        NavigationLink(destination: Settings_PreviewProvider.previews) { Text("Settings") }
+                        NavigationLink(destination: Twitter_PreviewProvider.previews) { Text("Twitter") }
+                        NavigationLink(destination: Instragram_PreviewProvider.previews) { Text("Instragram") }
+                        NavigationLink(destination: InstagramMessages_PreviewProvider.previews) { Text("InstagramMessages") }
+                    }
+                    Group {
+                        NavigationLink(destination: HomeScreen_PreviewProvider.previews) { Text("HomeScreen") }
+                        NavigationLink(destination: LockScreen_PreviewProvider.previews) { Text("LockScreen") }
+                        NavigationLink(destination: Tinder_PreviewProvider.previews) { Text("Tinder") }
+                        NavigationLink(destination: Messages_I_PreviewProvider.previews) { Text("Messages_I") }
+                        NavigationLink(destination: Messages_II_PreviewProvider.previews) { Text("Messages_II") }
+                    }
+                    Group {
+                        NavigationLink(destination: Messages_III_PreviewProvider.previews) { Text("Messages_III") }
+                        NavigationLink(destination: IPhone12ProWebsite_PreviewProvider.previews) { Text("IPhone12ProWebsite") }
+                        NavigationLink(destination: AppStore_PreviewProvider.previews) { Text("AppStore") }
+                        NavigationLink(destination: Reminder_PreviewProvider.previews) { Text("Reminder") }
+                        NavigationLink(destination: Maps_I_PreviewProvider.previews) { Text("Maps_I") }
+                    }
+                    Group {
+                        NavigationLink(destination: Maps_II_PreviewProvider.previews) { Text("Maps_II") }
+                    }
+                }
+            }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle("Dev Screen")
+        }
+        .tabItem({ VStack { ImageNames.heart.image; Text("Dev") } })}
+}
+
+// MARK: - Preview
+
+public struct DevScreen_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
+        DevScreen_View()
+    }
+}
