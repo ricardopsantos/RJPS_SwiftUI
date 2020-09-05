@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/ricardosantos/Desktop/GitHub/RJPS_SwiftUI/RJPS_SwiftUI.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

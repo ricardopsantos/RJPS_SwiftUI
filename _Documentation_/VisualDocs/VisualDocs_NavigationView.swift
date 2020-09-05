@@ -31,39 +31,16 @@ struct VisualDocs_NavigationView_A: View {
                     Text("Choose Tails")
                 }
             }
-            .navigationBarTitle("Navigation")
-            .navigationBarItems(leading: Button("leading") { }, trailing: Button("trailing") { })
+            .navigationBarTitle("NavigationView with BarItems")
+            .navigationBarItems(leading: Button("<") { print("leading tap") }, trailing: Button(">") { print("leading tap") })
         }
     }
 }
 
 // MARK: - Preview
 
-struct VisualDocs_NavigationView_A_PreviewProvider: PreviewProvider {
+struct VisualDocs_VisualDocs_NavigationView_A_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_NavigationView_A()
-    }
-}
-
-struct VisualDocs_NavigationView_B: View {
-    var body: some View {
-        NavigationView {
-            VStack(spacing: 30) {
-                Text("You're going to flip a coin – do you want to choose heads or tails?")
-                NavigationLink(destination: ResultView(choice: "Heads")) {
-                    Text("Choose Heads")
-                }
-                NavigationLink(destination: ResultView(choice: "Tails")) {
-                    Text("Choose Tails")
-                }
-            }
-            .navigationBarTitle("Navigation")
-        }
-    }
-}
-
-struct VisualDocs_NavigationView_B_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_NavigationView_B()
     }
 }

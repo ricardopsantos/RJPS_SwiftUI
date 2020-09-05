@@ -21,6 +21,10 @@ public extension RoundedRectangle {
 
 public extension View {
 
+    func eraseToAnyView() -> AnyView {
+        AnyView(self)
+    }
+
     func doIf <T: View>(_ condition: Bool, transform: (Self) -> T) -> some View {
         Group {
             if condition {
@@ -73,7 +77,7 @@ public extension View {
     }
 }
 
-public struct ExtensionsViewSample_View: View {
+public struct ViewExtensions: View {
     @State var text = "some sample text"
     let color = Color(UIColor.blue)
     let uiColor = UIColor.blue
@@ -86,9 +90,8 @@ public struct ExtensionsViewSample_View: View {
             Text("View+Extensions").font(.title)
             Divider()
             VStack(alignment: .center) {
-                Text("addCorner").font(.footnote)
                 VStack {
-                    Text("addCorner(color:lineWidth:padding)").bold()
+                    Text("addCorner(color:lineWidth:padding)").font(.footnote)
                     HStack {
                         Text("Text").addCorner(color: color, lineWidth: lineWidth, padding: false)
                         TextField("TextField", text: $text).addCorner(color: color, lineWidth: lineWidth, padding: false)
@@ -101,7 +104,7 @@ public struct ExtensionsViewSample_View: View {
                     }
                 }.padding()
                 VStack {
-                    Text("addOuterCornerOverlaying(color:radius:width:padding)").bold()
+                    Text("addOuterCornerOverlaying(color:radius:width:padding)").font(.footnote)
                     HStack {
                         Text("Text").addOuterCornerOverlaying(color: uiColor, radius: radius, width: lineWidth, padding: false)
                         TextField("TextField", text: $text).addOuterCornerOverlaying(color: uiColor, radius: radius, width: lineWidth, padding: false)
@@ -160,8 +163,8 @@ public struct ExtensionsViewSample_View: View {
     }
 }
 
-public struct ExtensionsViewSample_PreviewProvider: PreviewProvider {
+public struct VisualDocs_ViewExtensions_PreviewProvider: PreviewProvider {
     public static var previews: some View {
-        ExtensionsViewSample_View()
+        ViewExtensions()
     }
 }

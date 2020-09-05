@@ -273,6 +273,7 @@ __Code Sample__ : See section @EnvironmentObject
 
 ## SwiftUI References
 
+* [The Complete SwiftUI Documentation You’ve Been Waiting For](https://medium.com/better-programming/the-complete-swiftui-documentation-youve-been-waiting-for-fdfe7241add9)
 * [Fucking SwiftUI](https://fuckingswiftui.com)
 * [SwiftUI tips and tricks](https://www.hackingwithswift.com/quick-start/swiftui/swiftui-tips-and-tricks)
 * [SwiftUI Framework Learning and Usage Guide](https://jinxiansen.github.io/SwiftUI/)

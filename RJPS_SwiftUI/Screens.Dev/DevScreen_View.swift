@@ -26,29 +26,42 @@ struct DevScreen_View: View {
                     NavigationLink(destination: VisualDocs_Shapes_PreviewProvider.previews) { Text("Shapes WIKI") }
                 }
                 Section(header: Text("Personal Components Reference")) {
-                    NavigationLink(destination: Designables_Previews.previews) { Text("My Designables") }
-                    NavigationLink(destination: VisualDocs_Buttons_PreviewProvider.previews) { Text("Buttons") }
-                    NavigationLink(destination: VisualDocs_Shadows_PreviewProvider.previews) { Text("Shadows") }
-                    NavigationLink(destination: ExtensionsViewSample_PreviewProvider.previews) { Text("View+Extensions") }
+                    NavigationLink(destination: VisualDocs_Designables_Previews.previews) { Text("My Designables") }
+                    NavigationLink(destination: VisualDocs_ViewExtensions_PreviewProvider.previews) { Text("View+Extensions") }
+                    NavigationLink(destination: VisualDocs_Buttons_PreviewProvider.previews) { Text("Sample Buttons") }
+                    NavigationLink(destination: VisualDocs_Shadows_PreviewProvider.previews) { Text("Sample Shadows") }
+                    NavigationLink(destination: VisualDocs_Image_PreviewProvider.previews) { Text("Sample Images") }
                 }
                 Section(header: Text("SwiftUI Components Reference")) {
-                    NavigationLink(destination: ForEach_PreviewProvider.previews) { Text("ForEach") }
-                    NavigationLink(destination: Lists_PreviewProvider.previews) { Text("Lists") }
-                    NavigationLink(destination: Form_PreviewProvider.previews) { Text("Form") }
-                    NavigationLink(destination: TabView_PreviewProvider.previews) { Text("TabView") }
+                    NavigationLink(destination: VisualDocs_ForEach_PreviewProvider.previews) { Text("ForEach") }
+                    NavigationLink(destination: VisualDocs_Lists_PreviewProvider.previews) { Text("Lists") }
+                    NavigationLink(destination: VisualDocs_Form_PreviewProvider.previews) { Text("Form") }
+                    NavigationLink(destination: VisualDocs_TabView_PreviewProvider.previews) { Text("TabView") }
+                    NavigationLink(destination: VisualDocs_Sheet_PreviewProvider.previews) { Text("Sheet") }
+                    NavigationLink(destination: VisualDocs_VisualDocs_NavigationView_A_PreviewProvider.previews) { Text("NavigationView") }
+                }
+                Section(header: Text("SwiftUI operators Reference")) {
                     NavigationLink(destination: Padding_PreviewProvider.previews) { Text("Padding") }
                 }
-                Section(header: Text("Combine & Events")) {
+                Section(header: Text("Combine & State")) {
                     NavigationLink(destination: Combine_PreviewProvider.previews) { Text("Combine") }
+                    NavigationLink(destination: VisualDocs_State_PreviewProvider.previews) { Text("@State") }
+                    NavigationLink(destination: VisualDocs_EnvironmentObject_PreviewProvider.previews) { Text("@EnvironmentObject & @ObservedObject") }
+                    NavigationLink(destination: VisualDocs_Published_PreviewProvider.previews) { Text("@Published & @ObservedObject") }
+                }
+                Section(header: Text("Events")) {
                     NavigationLink(destination: OnEditingChanged_PreviewProvider.previews) { Text("onEditingChanged") }
                     NavigationLink(destination: OnReceive_PreviewProvider.previews) { Text("onReceive") }
                     NavigationLink(destination: OnDelete_PreviewProvider.previews) { Text("onDelete") }
                 }
-                Section(header: Text("Util")) {
+                Section(header: Text("Misc")) {
+                    NavigationLink(destination: VisualDocs_Background_PreviewProvider.previews) { Text("Background") }
+                    NavigationLink(destination: VisualDocs_ActivityIndicatorX_PreviewProvider.previews) { Text("Loading...") }
                     NavigationLink(destination: PasswordChecker_PreviewProvider.previews) { Text("PasswordChecker") }
                     NavigationLink(destination: InfiniteScrollView_PreviewProvider.previews) { Text("InfiniteScrollView") }
                     NavigationLink(destination: SimpleMVVM_PreviewProvider.previews) { Text("SimpleMVVM") }
                     NavigationLink(destination: ScrollEffect3D_PreviewProvider.previews) { Text("ScrollEffect3D") }
+                    NavigationLink(destination: VisualDocs_TimerView_PreviewProvider.previews) { Text("TimerView") }
                 }
                 Section(header: Text("Recreating")) {
                     Group {

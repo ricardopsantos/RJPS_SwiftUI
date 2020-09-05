@@ -18,7 +18,7 @@ public struct Designables_View: View {
             }
             VStack {
                 Text("ConnectivityView").font(.caption)
-                ConnectivityView(subTitle: "Try again latter")//.debugComposed()
+                ConnectivityView(subTitle: "Try again latter")
                 Divider()
             }
             VStack {
@@ -52,7 +52,7 @@ public struct Designables_View: View {
     }
 }
 
-public struct Designables_Previews: PreviewProvider {
+public struct VisualDocs_Designables_Previews: PreviewProvider {
     public static var previews: some View {
         return Designables_View()
     }

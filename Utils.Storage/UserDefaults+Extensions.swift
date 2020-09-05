@@ -6,7 +6,7 @@
 import Foundation
 
 public extension UserDefaults {
-    func save(kvStorableRecord: GenericKeyValueStorableRecord) {
+    func save(kvStorableRecord: GenericStorableKeyValueModel) {
         UserDefaults.standard.set(kvStorableRecord.toData, forKey: kvStorableRecord.key)
     }
 }

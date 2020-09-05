@@ -5,10 +5,10 @@
 
 import Foundation
 
-public class LiveCacheManager {
+public class HotCacheManager {
 
     private init() {}
-    public static let shared = LiveCacheManager()
+    public static let shared = HotCacheManager()
 
     private var _cache = NSCache<NSString, AnyObject>()
 

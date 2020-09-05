@@ -115,3 +115,13 @@ public struct ActivityIndicator_V3_Preview: PreviewProvider {
         })
     }
 }
+
+public struct VisualDocs_ActivityIndicatorX_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
+        TabView {
+            ActivityIndicator_V1_Preview.previews.tabItem({ Text("1") })
+            ActivityIndicator_V2_Preview.previews.tabItem({ Text("2") })
+            ActivityIndicator_V3_Preview.previews.tabItem({ Text("3") })
+        }
+    }
+}

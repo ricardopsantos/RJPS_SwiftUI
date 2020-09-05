@@ -34,7 +34,7 @@ private var sampleBody: some View {
 struct VisualDocs_Background_III: View {
     // https://stackoverflow.com/questions/57685679/how-to-change-background-color-of-the-navigationview-in-swiftui
     // For other NavigationBar changes, look here:(https://stackoverflow.com/a/57509555/5623035)
-    init() { UINavigationBar.appearance().backgroundColor = baseColor }
+    init() { if false { UINavigationBar.appearance().backgroundColor = baseColor } }
     var body: some View {
         ZStack {
             background_III
@@ -68,20 +68,12 @@ struct VisualDocs_Background_I: View {
 
 // MARK: - Preview
 
-struct VisualDocs_Background_I_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_Background_I()
-    }
-}
-
-struct VisualDocs_Background_II_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_Background_II()
-    }
-}
-
-struct VisualDocs_Background_III_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_Background_III()
+struct VisualDocs_Background_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
+        TabView {
+            VisualDocs_Background_I().tabItem({ Text("1") })
+            VisualDocs_Background_II().tabItem({ Text("2") })
+            VisualDocs_Background_III().tabItem({ Text("3") })
+        }
     }
 }

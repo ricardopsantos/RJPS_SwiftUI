@@ -31,7 +31,7 @@ struct VisualDocs_Form: View {
 
 // MARK: - Preview
 
-struct Form_PreviewProvider: PreviewProvider {
+struct VisualDocs_Form_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_Form()
     }

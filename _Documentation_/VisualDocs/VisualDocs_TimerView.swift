@@ -19,7 +19,7 @@ import Combine
 // For example, this code creates a timer publisher that fires every second, updating a label with the current time:
 //
 
-struct VisualDocs_TimerView_1: View {
+struct VisualDocs_TimerView_I: View {
     @State var currentDate = Date()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -30,7 +30,7 @@ struct VisualDocs_TimerView_1: View {
     }
 }
 
-struct VisualDocs_TimerView_2: View {
+struct VisualDocs_TimerView_II: View {
     @State var timeRemaining = 10
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -43,18 +43,13 @@ struct VisualDocs_TimerView_2: View {
     }
 }
 
-// MARK: - Preview VisualDocs_TimerView_1
+// MARK: - Preview
 
-struct VisualDocs_TimerView_1_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_TimerView_1()
-    }
-}
-
-// MARK: - Preview VisualDocs_TimerView_2
-
-struct VisualDocs_TimerView_2_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_TimerView_2()
+struct VisualDocs_TimerView_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
+        TabView {
+            VisualDocs_TimerView_I().tabItem({ Text("1") })
+            VisualDocs_TimerView_II().tabItem({ Text("2") })
+        }
     }
 }
