@@ -14,7 +14,7 @@
 		D70980E7250423780037A69A /* PublicCode.h in Headers */ = {isa = PBXBuildFile; fileRef = D70980E5250423780037A69A /* PublicCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D70980EA250423780037A69A /* PublicCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70980E3250423780037A69A /* PublicCode.framework */; };
 		D70980EB250423780037A69A /* PublicCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D70980E3250423780037A69A /* PublicCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D70980EE250423980037A69A /* MDText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70980DC250423020037A69A /* MDText.swift */; };
+		D70980F0250429750037A69A /* MDText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70980DC250423020037A69A /* MDText.swift */; };
 		D716EC45250167A9008D40B6 /* VisualDocs_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B33CB724E52F4E00DA77B2 /* VisualDocs_Combine.swift */; };
 		D716EC4725023F21008D40B6 /* VisualDocs_RemoteImageLoadging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716EC4625023F21008D40B6 /* VisualDocs_RemoteImageLoadging.swift */; };
 		D71849AE24FFED100023FAD8 /* DevTools+FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71849AD24FFED100023FAD8 /* DevTools+FeatureFlag.swift */; };
@@ -2487,6 +2487,7 @@
 				D7B560202493A18100E9EC7D /* typelias.swift in Sources */,
 				D751738F24E073AE004822B2 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */,
 				D76989E824D7F994005F851F /* SendEMailViewControllerRepresentable.swift in Sources */,
+				D70980F0250429750037A69A /* MDText.swift in Sources */,
 				D751739524E07EEE004822B2 /* SimpleMVVM.swift in Sources */,
 				D716EC4725023F21008D40B6 /* VisualDocs_RemoteImageLoadging.swift in Sources */,
 				D78FAC0B24D3584D0069809D /* VisualDocs_ForEach.swift in Sources */,
@@ -2541,7 +2542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70980EE250423980037A69A /* MDText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,12 @@ public extension RoundedRectangle {
 
 public extension View {
 
+    // https://stackoverflow.com/questions/56517813/how-to-print-to-xcode-console-in-swiftui
+    func Print(_ vars: Any...) -> some View {
+        for v in vars { print(v) }
+        return EmptyView()
+    }
+
     func eraseToAnyView() -> AnyView {
         AnyView(self)
     }
@@ -87,7 +93,7 @@ public struct ViewExtensions: View {
 
     public var body: some View {
         ScrollView {
-            Text("View+Extensions").font(.title)
+            Text("View+Extensions").font(.title).Print("Hi", $text, "Goodbye")
             Divider()
             VStack(alignment: .center) {
                 VStack {
