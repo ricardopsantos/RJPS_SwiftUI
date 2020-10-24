@@ -294,6 +294,7 @@ struct Example3PolygonShape: Shape {
     var sides: Double
     var scale: Double
 
+    // The Animatable protocol is available on iOS 13+. It defines the type that can be animated.
     var animatableData: AnimatablePair<Double, Double> {
         get { AnimatablePair(sides, scale) }
         set {
@@ -379,6 +380,7 @@ struct Example4PolygonShape: Shape {
     var sides: Double
     var scale: Double
 
+    // The Animatable protocol is available on iOS 13+. It defines the type that can be animated.
     var animatableData: AnimatablePair<Double, Double> {
         get { AnimatablePair(sides, scale) }
         set {

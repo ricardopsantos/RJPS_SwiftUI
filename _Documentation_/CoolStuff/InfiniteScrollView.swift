@@ -58,6 +58,9 @@ struct RepositoryRow: View {
             Text("⭐️ \(repo.stargazers_count)")
             repo.description.map(Text.init)?.font(.body)
         }
+        // By default, views occupy minimal space on the screen.
+        // To expand the views to fill the super view space, we can leverage the frame
+        // modifier and set the maxWidth and maxHeight properties in it to infinity
         .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
     }
 }

@@ -20,6 +20,9 @@ struct ViewHeightKey: PreferenceKey {
 
 struct FriendsHorizontalScrollView: View {
     var body: some View {
+        // By default, views occupy minimal space on the screen.
+        // To expand the views to fill the super view space, we can leverage the frame
+        // modifier and set the maxWidth and maxHeight properties in it to infinity
         Text("Horizontal Scroller").frame(maxWidth: .infinity).frame(height: 100).background(Color.green)
     }
 }

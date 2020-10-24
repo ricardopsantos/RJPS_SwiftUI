@@ -8,7 +8,17 @@ import UIKit
 import SwiftUI
 import Combine
 
-// https://nshipster.com/propertywrapper/
+/*
+
+ // https://nshipster.com/propertywrapper/
+ // https://medium.com/swlh/easy-dependency-injection-with-property-wrappers-in-swift-886a93c28ed4
+
+ If you’re not familiar with Property Wrappers in Swift 5.1, it’s not a big deal:
+ * We created a struct;
+ * Added @propertyWrapper before its declaration;
+ * Every Property Wrapper has to have wrappedValue. In our case, it has a generic type T;
+ * init gets one parameter: keyPath to the variable in UserDefault;
+ */
 @propertyWrapper
 struct UserDefault<T> {
     let key: String

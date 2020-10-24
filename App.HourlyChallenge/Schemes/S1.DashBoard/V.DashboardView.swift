@@ -18,9 +18,15 @@ import Utils_Designables
 
 // MARK: - Preview
 
-struct BasicApps_LastShelter: PreviewProvider {
+struct BasicApps_LastShelter1: PreviewProvider {
     static var previews: some View {
         DashboardViewBuilder.buildView()
+    }
+}
+
+struct BasicApps_LastShelter2: PreviewProvider {
+    static var previews: some View {
+        DashboardViewBuilder.buildView().environment(\.colorScheme, .dark)
     }
 }
 

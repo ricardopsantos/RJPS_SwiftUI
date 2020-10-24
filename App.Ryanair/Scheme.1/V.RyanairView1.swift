@@ -173,3 +173,9 @@ struct RyanairView1_PreviewProvider3: PreviewProvider {
         })
     }
 }
+
+struct RyanairView1_PreviewProvider4: PreviewProvider {
+    static var previews: some View {
+        RyanairView1Builder.buildView().environment(\.colorScheme, .dark)
+    }
+}

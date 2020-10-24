@@ -27,17 +27,34 @@ public extension View {
         return EmptyView()
     }
 
+    // https://medium.com/better-programming/swiftui-tips-and-tricks-c7840d8eb01b
+    func embedInNavigation() -> some View {
+        NavigationView { self }
+    }
+
     func eraseToAnyView() -> AnyView {
         AnyView(self)
     }
 
-    func doIf <T: View>(_ condition: Bool, transform: (Self) -> T) -> some View {
+    // Wrap Views in AnyView or Groups When You Have Different Types
+    // https://medium.com/better-programming/swiftui-tips-and-tricks-c7840d8eb01b
+    func doIf_v1 <T: View>(_ condition: Bool, transform: (Self) -> T) -> some View {
         Group {
             if condition {
                 transform(self)
             } else {
                 self
             }
+        }
+    }
+
+    // Wrap Views in AnyView or Groups When You Have Different Types
+    // https://medium.com/better-programming/swiftui-tips-and-tricks-c7840d8eb01b
+    func doIf_v2 <T: View>(_ condition: Bool, transform: (Self) -> T) -> some View {
+        if condition {
+            return transform(self).eraseToAnyView()
+        } else {
+            return self.eraseToAnyView()
         }
     }
 
@@ -59,14 +76,14 @@ public extension View {
 
     func addCorner(color: Color, lineWidth: CGFloat, padding: Bool) -> some View {
         self
-            .doIf(padding) {$0.padding(8) }
+            .doIf_v1(padding) {$0.padding(8) }
             .overlay(Capsule(style: .continuous).stroke(color, lineWidth: lineWidth).foregroundColor(Color.clear))
     }
 
     // Draw a corner, outside the View
     func addOuterCornerOverlaying(color: UIColor, radius: CGFloat = 3, width: CGFloat = 2, padding: Bool) -> some View {
         self
-            .doIf(padding) {$0.padding(8) }
+            .doIf_v1(padding) {$0.padding(8) }
             .overlay(RoundedRectangle(cornerRadius: radius).addSimpleStroke(color: color, width: width))
     }
 

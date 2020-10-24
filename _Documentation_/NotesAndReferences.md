@@ -27,32 +27,47 @@ They can emit values over time. Those values are consumed by subscriber instance
 * A successful completion
 * An error completion. Failure type that it may publish.
 
-These `Output` and `Failure` types are included in the protocol that a publisher conforms. Moreover note that a publisher can emit zero or more Output values but one completion. Once this is sent, publisher ends up its activity.
+There are four kinds of messages:
+
+* subscription — connection of a subscriber to a publisher
+* value — an element in the sequence, the publisher can produce zero or more values
+* error — first terminal message. Indicates that sequence ended with error
+* complete — second terminal message. Indicates that publisher finished successfully
 
 Apart from that, publisher implements the `receive(subscriber:)` method to connect with a subscriber. In other words, publisher’s output matches with subscriber’s input and the same for the failure types.
 
 ![Publishers_1](Publishers_1.png)
 
+### Subscriber
+
+Subscribers, on the other hand, subscribe to one specific publisher instance, and receive a stream of values, until the subscription is canceled.
+
+Any of these chains of publishers and operators end up with a subscriber. This receives those values. Combine provide two built-in subscribers:
+
+* `sink(receiveCompletion:receiveValue:)` : Use os closures to handle elements received and completion events.
+
+* `assign(to:on:)` : Bind the element received in a property of your data model or on a UI control. That property is identified by a key path.
+
+![Subscribers_1](Subscribers_1.png)
+
+They describe three events that can occur in one’s lifetime and are related to the four messages described above.
+
+* `receive(subscription: Subscription)` : successfully subscribed to the publisher. Called exactly once
+* `receive(_ value: Input) -> Subscribers.Demand` : Publisher can provide zero or more values to the Subscriber
+* `receive(completion: Subscribers.Completion<Failure>)` : Publisher can send exactly one completion. It can indicate successful completion or error
+* 
 ### Operators
 
-Special methods declared on the publisher protocol that returns another publisher. They have input/output and error handling. Apart from that, they can be combined (😉) making operators chains to implement complex logic.
+Publishers and subscribers are the backbones of SwiftUI’s two-way synchronization between the UI and the underlying model. I think you will agree that it has never been easier to keep your UI and model in sync than with SwiftUI, and this is all thanks to this part of the Combine framework.
+Operators, however, are Combine’s superpower. They are methods that operate on a Publisher, perform some computation, and produce another Publisher in return.
 
-That way of creating and connecting asynchronous elements avoids having a shared state of data. That problem commented on previously.
-Continue with the example of the Fibonacci publisher, we can have two operators that convert the `<Int, Error>` input into a` <String, Never>` output. That String could be the Fibonacci number and its representation (i.e. "F(8) = 21"):
+* For example, you can use the `filter` operator to ignore values based on certain conditions
+* Or, if you need to perform an expensive task (such as fetching information across the network), you could use the `debounce` operator to wait until the user stops typing
+* The `map` operator allows you to transform input values of a certain type into output values of a different type
 
 ![Operators_1](Operators_1.png)
 
-### Subscriber
 
-* Subscriber receives values from a publisher.
-
-* A subscriber can receive a value of type `Input` or a termination event with either success or `Failure`.
-
-* Any of these chains of publishers and operators end up with a subscriber. This receives those values. Combine provide two built-in subscribers:
-    * `sink(receiveCompletion:receiveValue:)` : Use os closures to handle elements received and completion events.
-    * `assign(to:on:)` : Bind the element received in a property of your data model or on a UI control. That property is identified by a key path.
-
-![Subscribers_1](Subscribers_1.png)
 
 
 ## Combine
