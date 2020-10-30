@@ -2,7 +2,7 @@
 
 ## About
 
-Developer helping tools like logs, etc
+Developer helping tools like logs, feature flag support, etc
 
 ## Allowed Dependencies
 

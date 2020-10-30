@@ -19,7 +19,6 @@ struct DevScreen_View: View {
     var body : some View {
         NavigationView {
             List {
-                MDTextSampleView()
                 Section(header: Text("WIKI Reference")) {
                     NavigationLink(destination: VisualDocs_Colors_PreviewProvider.previews) { Text("Color WIKI") }
                     NavigationLink(destination: VisualDocs_Fonts_PreviewProvider.previews) { Text("Fonts WIKI") }

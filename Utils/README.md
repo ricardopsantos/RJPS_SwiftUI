@@ -2,7 +2,7 @@
 
 ## About
 
-Generic utilities
+Generic utilities like UserDefaults utils, date formatters, network utils, etc...
 
 ## Allowed Dependencies
 

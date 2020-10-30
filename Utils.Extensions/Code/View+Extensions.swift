@@ -48,6 +48,26 @@ public extension View {
         }
     }
 
+    // https://matteo-puccinelli.medium.com/conditionally-apply-modifiers-in-swiftui-51c1cf7f61d1
+    @ViewBuilder
+    func ifCondition<TrueContent: View, FalseContent: View>(_ condition: Bool, then trueContent: (Self) -> TrueContent, else falseContent: (Self) -> FalseContent) -> some View {
+        if condition {
+            trueContent(self)
+        } else {
+            falseContent(self)
+        }
+    }
+
+    // https://matteo-puccinelli.medium.com/conditionally-apply-modifiers-in-swiftui-51c1cf7f61d1
+    @ViewBuilder
+    func ifCondition<TrueContent: View>(_ condition: Bool, then trueContent: (Self) -> TrueContent) -> some View {
+        if condition {
+            trueContent(self)
+        } else {
+            self
+        }
+    }
+
     // Wrap Views in AnyView or Groups When You Have Different Types
     // https://medium.com/better-programming/swiftui-tips-and-tricks-c7840d8eb01b
     func doIf_v2 <T: View>(_ condition: Bool, transform: (Self) -> T) -> some View {

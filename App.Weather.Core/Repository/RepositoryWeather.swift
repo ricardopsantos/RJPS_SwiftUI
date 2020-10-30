@@ -7,7 +7,6 @@ import Foundation
 import UIKit
 import SwiftUI
 import Combine
-import MessageUI
 //
 import Utils_Designables
 import Utils
