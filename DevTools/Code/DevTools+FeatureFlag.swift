@@ -13,8 +13,6 @@ public extension DevTools {
         case appLogsEnabled            = "Logs: enabled"
         case debugRequests             = "If [true] log API requests"
 
-        case showScene_carTrack    = "Scene Enabled: Exam.CarTrack"
-
         // Default value
         public var defaultValue: Bool {
             switch self {
@@ -22,8 +20,6 @@ public extension DevTools {
             case .showDebugStatsViewOnView: return DevTools.devModeIsEnabled
             case .devTeam_useMockedData:    return false
             case .debugRequests:            return false
-
-            case .showScene_carTrack:    return true
             }
         }
 
@@ -34,8 +30,6 @@ public extension DevTools {
              case .appLogsEnabled:           return true
              case .showDebugStatsViewOnView: return true
              case .debugRequests:            return true
-
-             case .showScene_carTrack:       return true
             }
         }
 

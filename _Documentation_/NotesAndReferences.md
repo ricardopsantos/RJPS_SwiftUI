@@ -224,7 +224,7 @@ struct VisualDocs_Binding_I: View {
 
 As stated on [Apple Docs](https://developer.apple.com/documentation/swiftui/environmentobject) : _A property wrapper type for an observable object supplied by a parent or ancestor view._
 
-An EnvironmentObject is a data model which, once initialised, can share data to all view’s of your app. 
+An _EnvironmentObject_ is a data model which, once initialised, can share data to all view’s of your app. Is property wrapper to define "an observable object supplied by a parent or ancestor view." Every time the wrapped _ObservableObject_ emits a change, the framework will invalidate the view, resulting in a redraw.
 
 __Code Sample__
 
