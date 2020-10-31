@@ -63,10 +63,10 @@ public extension SimpleNetworkAgent_B {
         return Just(dataFormatEscaped)
             .decode(type: T.self, decoder: decoder)
             .mapError { error in
-                print("####################################")
-                print("# Expected : \(T.self)\n")
-                print("# Error : \(error.localizedDescription)")
-                print("# Error full \(error)\n")
+                print("########################## DECODE ERROR ########################## ")
+                print("# Expected   : \(T.self)")
+                print("# Error      : \(error.localizedDescription)")
+                print("# Error full : \(error)\n")
                 return APIError.parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
