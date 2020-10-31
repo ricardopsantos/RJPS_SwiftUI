@@ -24,10 +24,10 @@ struct RyanairView2: View {
         ScrollView {
             Text("Flight details").font(.title)
             VStack {
-                DesignablesFactory.TitleAndValue(title: "Number", value: viewModel.flight?.flightNumber ?? "")
-                DesignablesFactory.TitleAndValue(title: "Key", value: viewModel.flight?.flightKey ?? "")
-                DesignablesFactory.TitleAndValue(title: "Duration", value: viewModel.flight?.duration ?? "")
-                DesignablesFactory.TitleAndValue(title: "Fares left", value: "\(viewModel.flight?.faresLeft ?? 0)")
+                DesignablesFactory.TitleAndValue(title: "Number", value: viewModel.viewIn.flight?.flightNumber ?? "")
+                DesignablesFactory.TitleAndValue(title: "Key", value: viewModel.viewIn.flight?.flightKey ?? "")
+                DesignablesFactory.TitleAndValue(title: "Duration", value: viewModel.viewIn.flight?.duration ?? "")
+                DesignablesFactory.TitleAndValue(title: "Fares left", value: "\(viewModel.viewIn.flight?.faresLeft ?? 0)")
             }.padding()
         }
     }

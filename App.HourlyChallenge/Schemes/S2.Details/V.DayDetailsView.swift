@@ -25,14 +25,14 @@ public struct DayDetailsView: View {
     public var body : some View {
         ScrollView {
             VStack {
-                Text(viewModel.day).font(.title)
+                Text(viewModel.viewIn.day).font(.title)
                 Spacer()
                 Text("Current challenge: ").font(.footnote).bold()
-                Text(viewModel.taskNow)
+                Text(viewModel.viewIn.taskNow)
             }.scaledToFill().padding(.vertical)
             Spacer()
             Text("Today Challenges Schedule").font(.title)
-            ForEach(viewModel.availableHours, id: \.self) { some in
+            ForEach(viewModel.viewIn.availableHours, id: \.self) { some in
                 VStack {
                     Divider()
                     HStack(alignment: .top, spacing: 3) {

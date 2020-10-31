@@ -13,6 +13,12 @@ import App_Ryanair_Core
 
 public class RyanairView2ViewModel: ObservableObject {
 
+    // Encapsulate that the ViewModel internal/auxiliar state properties
+    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    class ViewModelState: ObservableObject {
+
+    }
+
     // Encapsulate that the View properties that the ViewModel needs to read on to work
     @Published var viewOut: ViewStateOut = ViewStateOut()
     class ViewStateOut: ObservableObject {
@@ -22,13 +28,13 @@ public class RyanairView2ViewModel: ObservableObject {
     // Encapsulate that the View properties that the ViewModel updates in order to change UI
     @Published var viewIn: ViewStateIn = ViewStateIn()
     class ViewStateIn: ObservableObject {
-        @Published var isLoading: Bool = false
+        @Published fileprivate(set) var isLoading: Bool = false
+        @Published var flight: RyanairResponseDto.Flight?
     }
 
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
-    var flight: RyanairResponseDto.Flight?
 
     public init(fetcher: APIRyanairProtocol,
                 repository: RepositoryRyanairProtocol,
@@ -36,7 +42,7 @@ public class RyanairView2ViewModel: ObservableObject {
                 flight: RyanairResponseDto.Flight?) {
         self.fetcher = fetcher
         self.repository = repository
-        self.flight = flight
+        self.viewIn.flight = flight
         self.viewIn.isLoading = true
     }
 }

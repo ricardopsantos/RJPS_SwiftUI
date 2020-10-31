@@ -12,26 +12,39 @@ import Utils
 
 public class DayDetailsViewModel: ObservableObject {
 
-    let availableHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+    // Encapsulate that the ViewModel internal/auxiliar state properties
+    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    class ViewModelState: ObservableObject {
+        @Published var weekDay: Int = 0
+        @Published var timeZone: Int = 0
+    }
+
+    // Encapsulate that the View properties that the ViewModel needs to read on to work
+    @Published var viewOut: ViewStateOut = ViewStateOut()
+    class ViewStateOut: ObservableObject {
+
+    }
+
+    // Encapsulate that the View properties that the ViewModel updates in order to change UI
+    @Published var viewIn: ViewStateIn = ViewStateIn()
+    class ViewStateIn: ObservableObject {
+        @Published fileprivate(set) var taskNow = ""
+        @Published fileprivate(set) var day = ""
+        let availableHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+    }
 
     private let fetcher: APIProtocol
-    private let weekDay: Int
-    private let timeZone: Int
-
     private var cancelBag = CancelBag()
-
-    @Published var taskNow = ""
-    @Published var day = ""
 
     public init(weekDay: Int, timeZone: Int, fetcher: APIProtocol) {
         self.fetcher = fetcher
-        self.weekDay = weekDay
-        self.timeZone = timeZone
+        self.viewModelInternalState.weekDay = weekDay
+        self.viewModelInternalState.timeZone = timeZone
     }
 
     func refresh() {
-        taskNow(weekDay: weekDay, timeZone: timeZone)
-        day(weekDay: weekDay)
+        taskNow(weekDay: viewModelInternalState.weekDay, timeZone: viewModelInternalState.timeZone)
+        day(weekDay: viewModelInternalState.weekDay)
     }
 
     func task(weekDay: Int, hour: String) -> String {
@@ -48,7 +61,7 @@ private extension DayDetailsViewModel {
             }
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
-            self.taskNow = value
+            self.viewIn.taskNow = value
         }).store(in: cancelBag)
     }
 
@@ -60,7 +73,7 @@ private extension DayDetailsViewModel {
             }
         }, receiveValue: { [weak self] value in
             guard let self = self else { return }
-            self.day = value
+            self.viewIn.day = value
         }).store(in: cancelBag)
     }
 

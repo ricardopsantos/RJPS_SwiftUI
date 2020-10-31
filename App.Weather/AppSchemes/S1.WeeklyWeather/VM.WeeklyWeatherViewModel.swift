@@ -17,6 +17,12 @@ import App_Weather_Core
 
 public class WeeklyWeatherViewModel: ObservableObject {
 
+    // Encapsulate that the ViewModel internal/auxiliar state properties
+    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    class ViewModelState: ObservableObject {
+
+    }
+    
     // Encapsulate that the View properties that the ViewModel needs to read on to work
     @Published var viewOut: ViewStateOut = ViewStateOut()
     class ViewStateOut: ObservableObject {
@@ -27,7 +33,7 @@ public class WeeklyWeatherViewModel: ObservableObject {
     @Published var viewIn: ViewStateIn = ViewStateIn()
     class ViewStateIn: ObservableObject {
         @Published var isLoading: Bool = false
-        @Published var dataSource: [VM.DailyWeatherRowViewModel] = []
+        @Published fileprivate(set) var dataSource: [VM.DailyWeatherRowViewModel] = []
     }
 
     private let fetcher: APIWeatherProtocol

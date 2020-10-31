@@ -14,6 +14,12 @@ import Base_Domain
 
 public class RyanairView1ViewModel: ObservableObject {
 
+    // Encapsulate that the ViewModel internal/auxiliar state properties
+    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    class ViewModelState: ObservableObject {
+
+    }
+    
     // Encapsulate that the View properties that the ViewModel needs to read on to work
     @Published var viewOut: ViewStateOut = ViewStateOut()
     class ViewStateOut: ObservableObject {
@@ -28,10 +34,10 @@ public class RyanairView1ViewModel: ObservableObject {
     // Encapsulate that the View properties that the ViewModel updates in order to change UI
     @Published var viewIn: ViewStateIn = ViewStateIn()
     class ViewStateIn: ObservableObject {
-        @Published var outputText: String = ""
-        @Published var outputList: [ListItemModel] = []
-        @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
-        @Published var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
+        @Published fileprivate(set) var outputText: String = ""
+        @Published fileprivate(set) var outputList: [ListItemModel] = []
+        @Published fileprivate(set) var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
+        @Published fileprivate(set) var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
         @Published var isLoading: Bool = false
     }
 
