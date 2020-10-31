@@ -14,7 +14,7 @@ import App_Ryanair_Core
 public class RyanairView2ViewModel: ObservableObject {
 
     // Encapsulate that the ViewModel internal/auxiliar state properties
-    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    @Published private var vmInternalState: ViewModelState = ViewModelState()
     class ViewModelState: ObservableObject {
 
     }

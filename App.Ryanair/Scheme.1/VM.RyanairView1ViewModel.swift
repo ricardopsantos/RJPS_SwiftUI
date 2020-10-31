@@ -15,9 +15,9 @@ import Base_Domain
 public class RyanairView1ViewModel: ObservableObject {
 
     // Encapsulate that the ViewModel internal/auxiliar state properties
-    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    @Published private var vmInternalState: ViewModelState = ViewModelState()
     class ViewModelState: ObservableObject {
-
+        fileprivate var airports: [RyanairModel.AirPort] = []
     }
     
     // Encapsulate that the View properties that the ViewModel needs to read on to work
@@ -44,7 +44,7 @@ public class RyanairView1ViewModel: ObservableObject {
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
-    fileprivate var airports: [RyanairModel.AirPort] = []
+
     private var trips: [RyanairResponseDto.Trip] = [] {
         didSet {
             self.viewIn.outputList = []
@@ -95,7 +95,7 @@ private extension RyanairView1ViewModel {
             self.viewIn.airportsDepartureSuggestions = []
             guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
-            let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            let matchs = self.vmInternalState.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
             self.viewIn.airportsDepartureSuggestions.append(contentsOf: matchs.prefix(5))
 
         }.store(in: cancelBag)
@@ -106,7 +106,7 @@ private extension RyanairView1ViewModel {
             self.viewIn.airportsArrivalSuggestions = []
             guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
-            let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            let matchs = self.vmInternalState.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
             self.viewIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(5))
         }.store(in: cancelBag)
     }
@@ -146,13 +146,13 @@ private extension RyanairView1ViewModel {
             self?.hideLoading()
         }) { [weak self] (result) in
             guard let self = self else { return }
-            self.airports = result.stations.map({ RyanairModel.AirPort(name: $0.name, code: $0.code) })
+            self.vmInternalState.airports = result.stations.map({ RyanairModel.AirPort(name: $0.name, code: $0.code) })
         }.store(in: cancelBag)
     }
 
     func fetchResults() {
 
-        guard self.airports.count > 0 else {
+        guard self.vmInternalState.airports.count > 0 else {
             return
         }
 
@@ -163,12 +163,12 @@ private extension RyanairView1ViewModel {
         var errorMessage = viewOut.errorMessage
 
         // View data validations : if the airport code have right shape, see it exists...
-        if viewOut.origin.trim.count == 3 && !(self.airports.filter({ $0.code.lowercased() == viewOut.origin.lowercased().trim }).count == 1) {
+        if viewOut.origin.trim.count == 3 && !(self.vmInternalState.airports.filter({ $0.code.lowercased() == viewOut.origin.lowercased().trim }).count == 1) {
             errorMessage = "\(errorMessage)Invalid origin airport\n"
         }
 
         // View data validations : if the airport code have right shape, see it exists...
-        if viewOut.destination.trim.count == 3 && !(self.airports.filter({ $0.code.lowercased() == viewOut.destination.lowercased().trim }).count == 1) {
+        if viewOut.destination.trim.count == 3 && !(self.vmInternalState.airports.filter({ $0.code.lowercased() == viewOut.destination.lowercased().trim }).count == 1) {
             errorMessage = "\(errorMessage)Invalid destination airport\n"
         }
         guard errorMessage.count == 0 else {

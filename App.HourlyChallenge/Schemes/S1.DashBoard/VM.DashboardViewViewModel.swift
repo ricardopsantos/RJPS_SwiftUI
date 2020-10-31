@@ -13,7 +13,7 @@ import Utils
 public class DashBoardViewModel: ObservableObject {
 
     // Encapsulate that the ViewModel internal/auxiliar state properties
-    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    @Published private var vmInternalState: ViewModelState = ViewModelState()
     class ViewModelState: ObservableObject {
 
     }

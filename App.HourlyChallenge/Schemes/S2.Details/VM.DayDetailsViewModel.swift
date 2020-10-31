@@ -13,10 +13,10 @@ import Utils
 public class DayDetailsViewModel: ObservableObject {
 
     // Encapsulate that the ViewModel internal/auxiliar state properties
-    @Published private var viewModelInternalState: ViewModelState = ViewModelState()
+    @Published private var vmInternalState: ViewModelState = ViewModelState()
     class ViewModelState: ObservableObject {
-        @Published var weekDay: Int = 0
-        @Published var timeZone: Int = 0
+        var weekDay: Int = 0
+        var timeZone: Int = 0
     }
 
     // Encapsulate that the View properties that the ViewModel needs to read on to work
@@ -38,13 +38,13 @@ public class DayDetailsViewModel: ObservableObject {
 
     public init(weekDay: Int, timeZone: Int, fetcher: APIProtocol) {
         self.fetcher = fetcher
-        self.viewModelInternalState.weekDay = weekDay
-        self.viewModelInternalState.timeZone = timeZone
+        self.vmInternalState.weekDay = weekDay
+        self.vmInternalState.timeZone = timeZone
     }
 
     func refresh() {
-        taskNow(weekDay: viewModelInternalState.weekDay, timeZone: viewModelInternalState.timeZone)
-        day(weekDay: viewModelInternalState.weekDay)
+        fetchTaskNow(weekDay: vmInternalState.weekDay, timeZone: vmInternalState.timeZone)
+        fetchDay(weekDay: vmInternalState.weekDay)
     }
 
     func task(weekDay: Int, hour: String) -> String {
@@ -53,7 +53,7 @@ public class DayDetailsViewModel: ObservableObject {
 }
 
 private extension DayDetailsViewModel {
-    private func taskNow(weekDay: Int, timeZone: Int) {
+    func fetchTaskNow(weekDay: Int, timeZone: Int) {
         fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
@@ -65,7 +65,7 @@ private extension DayDetailsViewModel {
         }).store(in: cancelBag)
     }
 
-    private func day(weekDay: Int) {
+    func fetchDay(weekDay: Int) {
         fetcher.day(weekDay: weekDay).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
