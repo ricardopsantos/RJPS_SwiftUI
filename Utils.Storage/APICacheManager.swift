@@ -7,6 +7,7 @@ import Foundation
 import Combine
 //
 import Base_Domain
+import Utils_Extensions
 
 public extension Publisher {
     var genericError: AnyPublisher<Self.Output, Error> {
@@ -55,25 +56,13 @@ public class APICacheManager {
 }
 
 private extension APICacheManager {
-
     func get<T: Codable>(composedKey: String, type: T.Type) -> T? {
         if let cached = GenericStorableKeyValueModel.get(composedKey: composedKey),
             let value = cached.value,
             let data = value.data(using: .utf8),
-            let result = try? JSONDecoder().decode(type, from: data) {
+            let result = try? JSONDecoder().decodeSafe(type, from: data) {
                 return result
         }
         return nil
     }
-    /*
-    func get<T: Codable>(composedKey: String, type: T.Type) -> T? {
-        if let cached = UserDefaults.standard.data(forKey: composedKey),
-            let dRes = try? JSONDecoder().decode(GenericStorableKeyValueModel.self, from: cached),
-            let value = dRes.value,
-            let data = value.data(using: .utf8),
-            let result = try? JSONDecoder().decode(type, from: data) {
-                return result
-        }
-        return nil
-    }*/
 }

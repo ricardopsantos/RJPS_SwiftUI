@@ -137,7 +137,7 @@ private extension RyanairView1ViewModel {
         cleanViewOutput()
         isLoading = true
         let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
-        _ = stations.sink(receiveCompletion: { [weak self] (result) in
+        stations.sink(receiveCompletion: { [weak self] (result) in
             self?.hideLoading()
         }) { [weak self] (result) in
             guard let self = self else { return }

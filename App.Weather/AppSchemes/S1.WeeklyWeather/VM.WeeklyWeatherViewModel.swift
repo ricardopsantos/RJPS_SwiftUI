@@ -39,15 +39,14 @@ public class WeeklyWeatherViewModel: ObservableObject {
         let observer = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
 
         // 1 - call fetchWeather
-        _ = observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
+        observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
 
         // 2 - Update AppDefaultsRepository.shared.lastCity on change
-        _ = observer.sink(receiveValue: { [weak self] (some) in
+        observer.sink(receiveValue: { [weak self] (some) in
             self?.repository.lastCity = some
         }).store(in: cancelBag)
 
-        // After the observers, so that when we change the value of [city] the app will react
-        // and refresh
+        // This code is after the observers, so that when we change the value of [city] the app will react and refresh
         self.city = repository.lastCity
     }
 }
