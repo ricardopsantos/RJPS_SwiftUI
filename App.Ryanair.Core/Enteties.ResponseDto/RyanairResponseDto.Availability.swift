@@ -98,8 +98,8 @@ public extension RyanairResponseDto {
         case j = "J"
         case e = "E"
         case r = "R"
-        case w = "w"
-        case p = "p"
+        case w = "W"
+        case p = "P"
         case b = "b"
         case y = "Y"
         case h = "H"
@@ -113,6 +113,7 @@ public extension RyanairResponseDto {
         case q = "Q"
         case o = "O"
         case c = "C"
+        case t = "T"
     }
 
     // MARK: - Fare
