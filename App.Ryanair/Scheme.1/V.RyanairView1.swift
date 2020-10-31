@@ -45,8 +45,8 @@ struct RyanairView1: View {
                     outputView
                 }
             }
-            .disabled(viewModel.isLoading).blur(radius: viewModel.isLoading ? 3 : 0)
-            ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
+            .disabled(viewModel.viewIn.isLoading).blur(radius: viewModel.viewIn.isLoading ? 3 : 0)
+            ActivityIndicator_V2(isAnimating: $viewModel.viewIn.isLoading)
         }
     }
 }
@@ -154,15 +154,17 @@ extension RyanairView1 {
     }
 }
 
+// MARK: - Preview
+
 struct RyanairView1_PreviewProvider1: PreviewProvider {
     static var previews: some View {
-        RyanairView1Builder.buildView()
+        RyanairView1Builder.buildView().buildPreviews()
     }
 }
 
 struct RyanairView1_PreviewProvider2: PreviewProvider {
     static var previews: some View {
-        RyanairView1Builder.buildMockView()
+        RyanairView1Builder.buildMockView().buildPreviews()
     }
 }
 
@@ -174,8 +176,3 @@ struct RyanairView1_PreviewProvider3: PreviewProvider {
     }
 }
 
-struct RyanairView1_PreviewProvider4: PreviewProvider {
-    static var previews: some View {
-        RyanairView1Builder.buildView().environment(\.colorScheme, .dark)
-    }
-}

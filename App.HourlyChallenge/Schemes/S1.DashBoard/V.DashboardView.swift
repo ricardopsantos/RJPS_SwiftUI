@@ -16,20 +16,6 @@ import MessageUI
 //
 import Utils_Designables
 
-// MARK: - Preview
-
-struct BasicApps_LastShelter1: PreviewProvider {
-    static var previews: some View {
-        DashboardViewBuilder.buildView()
-    }
-}
-
-struct BasicApps_LastShelter2: PreviewProvider {
-    static var previews: some View {
-        DashboardViewBuilder.buildView().environment(\.colorScheme, .dark)
-    }
-}
-
 // MARK: - View
 
 public struct DashboardView: View {
@@ -66,7 +52,7 @@ public struct DashboardView: View {
                         }
                         HStack {
                             Spacer()
-                            Text("\(Date.serverTime(timeZone: viewModel.timeZoneServer))").onReceive(timer) { _ in }.font(.footnote)
+                            Text("\(Date.serverTime(timeZone: viewModel.viewIn.timeZoneServer))").onReceive(timer) { _ in }.font(.footnote)
                             Spacer()
                         }
                     }
@@ -81,7 +67,7 @@ public struct DashboardView: View {
                         }
                         HStack {
                             Spacer()
-                            Text("\(viewModel.taskNow)").font(.title).bold()
+                            Text("\(viewModel.viewIn.taskNow)").font(.title).bold()
                             Spacer()
                         }
                         Spacer()
@@ -93,29 +79,29 @@ public struct DashboardView: View {
                         Spacer()
                         HStack {
                             Spacer()
-                            Text("\(viewModel.taskNext1)").font(.footnote)
+                            Text("\(viewModel.viewIn.taskNext1)").font(.footnote)
                             Spacer()
                         }
                         HStack {
                             Spacer()
-                            Text("\(viewModel.taskNext2)").font(.footnote)
+                            Text("\(viewModel.viewIn.taskNext2)").font(.footnote)
                             Spacer()
                         }
                         HStack {
                             Spacer()
-                            Text("\(viewModel.taskNext3)").font(.footnote)
+                            Text("\(viewModel.viewIn.taskNext3)").font(.footnote)
                             Spacer()
                         }
                     }
                 }
 
-                Stepper(value: $viewModel.settings.timeZone,
+                Stepper(value: $viewModel.viewOut.settings.timeZone,
                         onEditingChanged: { _ in self.viewModel.refresh() },
-                        label: { Text("Adjust TimeZone: \(viewModel.settings.timeZone)") })
+                        label: { Text("Adjust TimeZone: \(viewModel.viewOut.settings.timeZone)") })
 
                 Section {
                     ForEach([1, 2, 3, 4, 5, 6, 7], id: \.self) { day in
-                        NavigationLink(destination: DayDetailsViewBuilder.buildView(day, self.viewModel.timeZoneServer)) { self.listItem(weekDay: day) }
+                        NavigationLink(destination: DayDetailsViewBuilder.buildView(day, self.viewModel.viewIn.timeZoneServer)) { self.listItem(weekDay: day) }
                     }
                 }
 
@@ -174,5 +160,13 @@ fileprivate extension DashboardView {
 
     func weedDayDetailsBody(weekDay: Int, timeZone: Int) -> some View {
         return Text("")
+    }
+}
+
+// MARK: - Preview
+
+struct BasicApps_LastShelter1: PreviewProvider {
+    static var previews: some View {
+        DashboardViewBuilder.buildView().buildPreviews()
     }
 }

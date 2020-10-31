@@ -1414,7 +1414,7 @@ struct AnimatableColorText: View {
     }
 }
 
-struct VisualDocs_SwiftUI_Lab_AdvancedAnimations: PreviewProvider {
+struct VisualDocs_SwiftUI_Lab_AdvancedAnimations_PreviewProvider: PreviewProvider {
     static var previews: some View {
         AdvancedAnimations()
     }

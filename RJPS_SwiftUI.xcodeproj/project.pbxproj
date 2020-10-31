@@ -20,6 +20,10 @@
 		D72BD65924D45CC900671712 /* VisualDocs_@Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65824D45CC900671712 /* VisualDocs_@Binding.swift */; };
 		D72BD65B24D4633800671712 /* VisualDocs_TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65A24D4633800671712 /* VisualDocs_TimerView.swift */; };
 		D72BD65D24D4684800671712 /* VisualDocs_onReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BD65C24D4684800671712 /* VisualDocs_onReceive.swift */; };
+		D7452596254DAF7F000C0F24 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7452595254DAF7F000C0F24 /* JSONDecoder+Extensions.swift */; };
+		D74525CF254DB22B000C0F24 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
+		D74525DE254DB22E000C0F24 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
+		D74525ED254DB232000C0F24 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D751736124DDBC79004822B2 /* E.HourlyErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751736024DDBC79004822B2 /* E.HourlyErrorEntity.swift */; };
 		D751736424DDD0FD004822B2 /* VM.DashboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751736324DDD0FD004822B2 /* VM.DashboardViewViewModel.swift */; };
 		D751736824DEA18E004822B2 /* B.DashboardViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751736724DEA18E004822B2 /* B.DashboardViewBuilder.swift */; };
@@ -30,7 +34,6 @@
 		D751737A24DEAA3E004822B2 /* Base_Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D751737224DEAA3E004822B2 /* Base_Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D751737E24DEAA5F004822B2 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751737D24DEAA5F004822B2 /* BuilderProtocol.swift */; };
 		D751738124DEC44F004822B2 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751737F24DEC3DB004822B2 /* PasswordChecker.swift */; };
-		D751738324E007D9004822B2 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D751738624E01143004822B2 /* VisualDocs_sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751738424E00F76004822B2 /* VisualDocs_sheet.swift */; };
 		D751738824E04758004822B2 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751738724E04758004822B2 /* TextField+Extensions.swift */; };
 		D751738D24E0710A004822B2 /* Recreating.Maps_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = D751738C24E0710A004822B2 /* Recreating.Maps_II.swift */; };
@@ -72,9 +75,6 @@
 		D76989C324D72A7D005F851F /* Utils_Designables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76989BC24D72A7D005F851F /* Utils_Designables.framework */; };
 		D76989C424D72A7D005F851F /* Utils_Designables.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D76989BC24D72A7D005F851F /* Utils_Designables.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D76989C724D72A97005F851F /* Designables_PassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14C24D59A7000C6215C /* Designables_PassCode.swift */; };
-		D76989CA24D72ABA005F851F /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
-		D76989CC24D72ABB005F851F /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
-		D76989CD24D72ABB005F851F /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D76989E824D7F994005F851F /* SendEMailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B14624D5736C00C6215C /* SendEMailViewControllerRepresentable.swift */; };
 		D76989EA24D8406C005F851F /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76989E924D8406C005F851F /* Text+Extensions.swift */; };
 		D774EC9E2544C22000D22223 /* VisualDocs_ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774EC8F2544C1B800D22223 /* VisualDocs_ErrorHandling.swift */; };
@@ -108,7 +108,6 @@
 		D774F46924EE645300D01370 /* V.RyanairView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F46824EE645300D01370 /* V.RyanairView1.swift */; };
 		D774F46B24EE646300D01370 /* VM.RyanairView1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F46A24EE646300D01370 /* VM.RyanairView1ViewModel.swift */; };
 		D774F46D24EE647200D01370 /* B.RyanairView1Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F46C24EE647200D01370 /* B.RyanairView1Builder.swift */; };
-		D774F48F24EE690800D01370 /* RepositoryHourlyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F48E24EE690800D01370 /* RepositoryHourlyChallenge.swift */; };
 		D774F49D24EE6D0A00D01370 /* APIRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F49C24EE6D0A00D01370 /* APIRyanair.swift */; };
 		D774F49F24EE8C8000D01370 /* DtoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F49E24EE8C8000D01370 /* DtoProtocol.swift */; };
 		D774F4A124EE8D0A00D01370 /* RyanairResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D774F4A024EE8D0A00D01370 /* RyanairResponseDto.swift */; };
@@ -175,7 +174,6 @@
 		D7A7184724D8BBFB00EC53FB /* App_HourlyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7184024D8BBFB00EC53FB /* App_HourlyChallenge.framework */; };
 		D7A7184824D8BBFB00EC53FB /* App_HourlyChallenge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7184024D8BBFB00EC53FB /* App_HourlyChallenge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7A7184B24D8BC2A00EC53FB /* V.DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755B15024D5E70D00C6215C /* V.DashboardView.swift */; };
-		D7A7184C24D8BC9100EC53FB /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 		D7A7184E24D8BCC700EC53FB /* MailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7184D24D8BCC700EC53FB /* MailViewControllerRepresentable.swift */; };
 		D7A7185224D8BD3900EC53FB /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185124D8BD3900EC53FB /* DateUtils.swift */; };
 		D7A7185424D8BDC500EC53FB /* AppDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A7185324D8BDC500EC53FB /* AppDefaultsRepository.swift */; };
@@ -232,7 +230,6 @@
 		D7F1431C24D95EAD00B910A7 /* V.WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F142FD24D95EAD00B910A7 /* V.WeeklyWeatherView.swift */; };
 		D7F1431D24D95EAD00B910A7 /* VM.CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F142FF24D95EAD00B910A7 /* VM.CurrentWeatherViewModel.swift */; };
 		D7F1431F24D95EAD00B910A7 /* V.CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1430124D95EAD00B910A7 /* V.CurrentWeatherView.swift */; };
-		D7F1432124D95EF300B910A7 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5601F2493A18100E9EC7D /* typelias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -646,6 +643,7 @@
 		D72BD65824D45CC900671712 /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
 		D72BD65A24D4633800671712 /* VisualDocs_TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TimerView.swift; sourceTree = "<group>"; };
 		D72BD65C24D4684800671712 /* VisualDocs_onReceive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualDocs_onReceive.swift; sourceTree = "<group>"; };
+		D7452595254DAF7F000C0F24 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		D748DAFF254CB1AC003E4174 /* Designables_Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Designables_Preview.png; sourceTree = "<group>"; };
 		D751736024DDBC79004822B2 /* E.HourlyErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.HourlyErrorEntity.swift; sourceTree = "<group>"; };
 		D751736324DDD0FD004822B2 /* VM.DashboardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DashboardViewViewModel.swift; sourceTree = "<group>"; };
@@ -721,7 +719,6 @@
 		D774F46824EE645300D01370 /* V.RyanairView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView1.swift; sourceTree = "<group>"; };
 		D774F46A24EE646300D01370 /* VM.RyanairView1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView1ViewModel.swift; sourceTree = "<group>"; };
 		D774F46C24EE647200D01370 /* B.RyanairView1Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView1Builder.swift; sourceTree = "<group>"; };
-		D774F48E24EE690800D01370 /* RepositoryHourlyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHourlyChallenge.swift; sourceTree = "<group>"; };
 		D774F49C24EE6D0A00D01370 /* APIRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanair.swift; sourceTree = "<group>"; };
 		D774F49E24EE8C8000D01370 /* DtoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoProtocol.swift; sourceTree = "<group>"; };
 		D774F4A024EE8D0A00D01370 /* RyanairResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.swift; sourceTree = "<group>"; };
@@ -1024,10 +1021,10 @@
 				D7B560222493A2EA00E9EC7D /* .swiftlint.yml */,
 				D755B14E24D5E68B00C6215C /* _Documentation_ */,
 				9F288F2620F8089F008A9539 /* RJPS_SwiftUI */,
-				D7F142CE24D95DD600B910A7 /* App.Weather */,
-				D774F41724EDA1DC00D01370 /* App.Weather.Core */,
 				D7A7184124D8BBFB00EC53FB /* App.HourlyChallenge */,
+				D7F142CE24D95DD600B910A7 /* App.Weather */,
 				D774F44024EDB27400D01370 /* App.Ryanair */,
+				D774F41724EDA1DC00D01370 /* App.Weather.Core */,
 				D774F45024EDB28D00D01370 /* App.Ryanair.Core */,
 				D751737324DEAA3E004822B2 /* Base.Domain */,
 				D7611BC324E1F7A800B53E61 /* DevTools */,
@@ -1070,28 +1067,20 @@
 			children = (
 				D78FAC3A24D41C570069809D /* README.md */,
 				9FE5097D231FB14E0081E1DB /* AppDelegate.swift */,
-				9FA68D4B231FB7CD007353EF /* Comom */,
-				9FE50976231FB10E0081E1DB /* Screens */,
-				D7636D4225010E1D005829B3 /* Screens.Dev */,
+				D7B5601F2493A18100E9EC7D /* typelias.swift */,
+				9FE50976231FB10E0081E1DB /* AppSchemes */,
 				D78FABD524D0BE7B0069809D /* SupportingFiles */,
 			);
 			path = RJPS_SwiftUI;
 			sourceTree = "<group>";
 		};
-		9FA68D4B231FB7CD007353EF /* Comom */ = {
-			isa = PBXGroup;
-			children = (
-				D7B5601F2493A18100E9EC7D /* typelias.swift */,
-			);
-			path = Comom;
-			sourceTree = "<group>";
-		};
-		9FE50976231FB10E0081E1DB /* Screens */ = {
+		9FE50976231FB10E0081E1DB /* AppSchemes */ = {
 			isa = PBXGroup;
 			children = (
 				9FE50979231FB10E0081E1DB /* AppRoot_View.swift */,
+				D7636D402500E886005829B3 /* DevScreen_View.swift */,
 			);
-			path = Screens;
+			path = AppSchemes;
 			sourceTree = "<group>";
 		};
 		D70980E4250423780037A69A /* PublicCode */ = {
@@ -1215,14 +1204,6 @@
 				D7AA23142497F7DD00D24169 /* SampleAPI_Testing.swift */,
 			);
 			path = Testing_Agents;
-			sourceTree = "<group>";
-		};
-		D7636D4225010E1D005829B3 /* Screens.Dev */ = {
-			isa = PBXGroup;
-			children = (
-				D7636D402500E886005829B3 /* DevScreen_View.swift */,
-			);
-			path = Screens.Dev;
 			sourceTree = "<group>";
 		};
 		D769898324D7252E005F851F /* Utils.Extensions */ = {
@@ -1404,6 +1385,7 @@
 			isa = PBXGroup;
 			children = (
 				D7611BBB24E1F0B700B53E61 /* String+Extensions.swift */,
+				D7452595254DAF7F000C0F24 /* JSONDecoder+Extensions.swift */,
 				D7B6DF6124ED6A7000A94EE5 /* Locale+Extensions.swift */,
 				D7B6DF6724ED6AE700A94EE5 /* Result+Extensions.swift */,
 				D7B6DF6924ED6B1200A94EE5 /* ProcessInfo.swift */,
@@ -1559,7 +1541,6 @@
 		D7A7184124D8BBFB00EC53FB /* App.HourlyChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				D774F48E24EE690800D01370 /* RepositoryHourlyChallenge.swift */,
 				D7B99F9024DCB08A005FA84A /* Utils */,
 				D7F1432D24D9D54F00B910A7 /* Schemes */,
 				D7F1432C24D9D54700B910A7 /* AppCore */,
@@ -2503,7 +2484,6 @@
 				D774F4A724EE9E1100D01370 /* Response<T>.swift in Sources */,
 				D774F49F24EE8C8000D01370 /* DtoProtocol.swift in Sources */,
 				D774F4E024F161E100D01370 /* ListItemModel.swift in Sources */,
-				D751738324E007D9004822B2 /* typelias.swift in Sources */,
 				D7D6CACD24E80A7600648118 /* CachePolicy.swift in Sources */,
 				D751737E24DEAA5F004822B2 /* BuilderProtocol.swift in Sources */,
 				D7D6CAC224E7EA2800648118 /* APIError.swift in Sources */,
@@ -2531,7 +2511,7 @@
 				D7B6DF7A24ED701A00A94EE5 /* Subscribers+Extensions.swift in Sources */,
 				D7611BBC24E1F0B700B53E61 /* String+Extensions.swift in Sources */,
 				D774F51C24F4068700D01370 /* NSObject+Extensions.swift in Sources */,
-				D76989CA24D72ABA005F851F /* typelias.swift in Sources */,
+				D7452596254DAF7F000C0F24 /* JSONDecoder+Extensions.swift in Sources */,
 				D769898D24D72555005F851F /* View+Extensions.swift in Sources */,
 				D774F4EE24F1A8E400D01370 /* Date+Extensions.swift in Sources */,
 				D76989B624D72747005F851F /* UIScreen+Extensions.swift in Sources */,
@@ -2551,7 +2531,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76989CC24D72ABB005F851F /* typelias.swift in Sources */,
 				D76989B124D726D0005F851F /* SimpleNetworkAgent_A.swift in Sources */,
 				D76989B224D726D3005F851F /* TestingAPI_VersionA.swift in Sources */,
 				D76989B324D726D6005F851F /* SampleAPI_Testing.swift in Sources */,
@@ -2568,7 +2547,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76989CD24D72ABB005F851F /* typelias.swift in Sources */,
 				D774F4F824F1D15C00D01370 /* ConnectivityView.swift in Sources */,
 				D75BEEE62502EEBC00ADD863 /* NavigationStack.swift in Sources */,
 				D774F51424F3ACE200D01370 /* Designables_Preview.swift in Sources */,
@@ -2603,6 +2581,7 @@
 				D774F4DE24EFB25E00D01370 /* V.RyanairView2.swift in Sources */,
 				D774F46B24EE646300D01370 /* VM.RyanairView1ViewModel.swift in Sources */,
 				D774F46924EE645300D01370 /* V.RyanairView1.swift in Sources */,
+				D74525DE254DB22E000C0F24 /* typelias.swift in Sources */,
 				D774F4DD24EFB25E00D01370 /* B.RyanairView2Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2648,12 +2627,11 @@
 				D7A7184E24D8BCC700EC53FB /* MailViewControllerRepresentable.swift in Sources */,
 				D79B2EC224DDA49A009B84A4 /* APIProtocol.swift in Sources */,
 				D7A7185224D8BD3900EC53FB /* DateUtils.swift in Sources */,
-				D7A7184C24D8BC9100EC53FB /* typelias.swift in Sources */,
+				D74525ED254DB232000C0F24 /* typelias.swift in Sources */,
 				D7A7184B24D8BC2A00EC53FB /* V.DashboardView.swift in Sources */,
 				D751736A24DEA3A5004822B2 /* VM.DayDetailsViewModel.swift in Sources */,
 				D751736C24DEA3DD004822B2 /* B.DayDetailsView.swift in Sources */,
 				D7611BD824E2D1DF00B53E61 /* RepositoryProtocol.swift in Sources */,
-				D774F48F24EE690800D01370 /* RepositoryHourlyChallenge.swift in Sources */,
 				D79B2EC024DDA44F009B84A4 /* Fetcher.swift in Sources */,
 				D751736824DEA18E004822B2 /* B.DashboardViewBuilder.swift in Sources */,
 				D751736124DDBC79004822B2 /* E.HourlyErrorEntity.swift in Sources */,
@@ -2692,7 +2670,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F1431124D95EAD00B910A7 /* V.MapViewRepresentable.swift in Sources */,
-				D7F1432124D95EF300B910A7 /* typelias.swift in Sources */,
 				D7F1431B24D95EAD00B910A7 /* VM.WeeklyWeatherViewModel.swift in Sources */,
 				D7F1431A24D95EAD00B910A7 /* B.WeeklyWeatherBuilder.swift in Sources */,
 				D7F1431524D95EAD00B910A7 /* VM.CurrentWeatherRowViewModel.swift in Sources */,
@@ -2700,6 +2677,7 @@
 				D7B33CB224E48A5900DA77B2 /* B.CurrentWeatherViewBuilder.swift in Sources */,
 				D7F1431C24D95EAD00B910A7 /* V.WeeklyWeatherView.swift in Sources */,
 				D7F1431424D95EAD00B910A7 /* VM.DailyWeatherRowViewModel.swift in Sources */,
+				D74525CF254DB22B000C0F24 /* typelias.swift in Sources */,
 				D7F1431D24D95EAD00B910A7 /* VM.CurrentWeatherViewModel.swift in Sources */,
 				D7F1431724D95EAD00B910A7 /* V.CurrentWeatherRowView.swift in Sources */,
 				D7F1431F24D95EAD00B910A7 /* V.CurrentWeatherView.swift in Sources */,

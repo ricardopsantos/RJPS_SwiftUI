@@ -8,5 +8,6 @@ import Combine
 import SwiftUI
 
 public protocol BuilderProtocol {
-
+    associatedtype T
+    static func buildView() -> T
 }

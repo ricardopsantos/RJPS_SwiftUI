@@ -8,9 +8,6 @@ import Foundation
 import SwiftUI
 import Combine
 //
-import App_Weather
-import App_HourlyChallenge
-import App_Ryanair
 import Utils_Extensions
 import Utils_Designables
 //
@@ -26,7 +23,7 @@ struct DevScreen_View: View {
                     NavigationLink(destination: VisualDocs_Shapes_PreviewProvider.previews) { Text("Shapes WIKI") }
                 }
                 Section(header: Text("Personal Components Reference")) {
-                    NavigationLink(destination: VisualDocs_Designables_Previews.previews) { Text("My Designables") }
+                    NavigationLink(destination: VisualDocs_Designables.previews) { Text("My Designables") }
                     NavigationLink(destination: VisualDocs_ViewExtensions_PreviewProvider.previews) { Text("View+Extensions") }
                     NavigationLink(destination: VisualDocs_Buttons_PreviewProvider.previews) { Text("Sample Buttons") }
                     NavigationLink(destination: VisualDocs_Shadows_PreviewProvider.previews) { Text("Sample Shadows") }
@@ -41,18 +38,18 @@ struct DevScreen_View: View {
                     NavigationLink(destination: VisualDocs_VisualDocs_NavigationView_A_PreviewProvider.previews) { Text("NavigationView") }
                 }
                 Section(header: Text("SwiftUI operators Reference")) {
-                    NavigationLink(destination: Padding_PreviewProvider.previews) { Text("Padding") }
+                    NavigationLink(destination: VisualDocs_Padding_PreviewProvider.previews) { Text("Padding") }
                 }
                 Section(header: Text("Combine & State")) {
-                    NavigationLink(destination: Combine_PreviewProvider.previews) { Text("Combine") }
+                    NavigationLink(destination: VisualDocs_Combine_PreviewProvider.previews) { Text("Combine") }
                     NavigationLink(destination: VisualDocs_State_PreviewProvider.previews) { Text("@State") }
                     NavigationLink(destination: VisualDocs_EnvironmentObject_PreviewProvider.previews) { Text("@EnvironmentObject & @ObservedObject") }
                     NavigationLink(destination: VisualDocs_Published_PreviewProvider.previews) { Text("@Published & @ObservedObject") }
                 }
                 Section(header: Text("Events")) {
-                    NavigationLink(destination: OnEditingChanged_PreviewProvider.previews) { Text("onEditingChanged") }
-                    NavigationLink(destination: OnReceive_PreviewProvider.previews) { Text("onReceive") }
-                    NavigationLink(destination: OnDelete_PreviewProvider.previews) { Text("onDelete") }
+                    NavigationLink(destination: VisualDocs_OnEditingChanged_PreviewProvider.previews) { Text("onEditingChanged") }
+                    NavigationLink(destination: VisualDocs_OnReceive_PreviewProvider.previews) { Text("onReceive") }
+                    NavigationLink(destination: VisualDocs_OnDelete_PreviewProvider.previews) { Text("onDelete") }
                 }
                 Section(header: Text("Misc")) {
                     NavigationLink(destination: VisualDocs_Background_PreviewProvider.previews) { Text("Background") }
@@ -68,7 +65,7 @@ struct DevScreen_View: View {
                         NavigationLink(destination: Breathe_PreviewProvider.previews) { Text("Breathe") }
                         NavigationLink(destination: Settings_PreviewProvider.previews) { Text("Settings") }
                         NavigationLink(destination: Twitter_PreviewProvider.previews) { Text("Twitter") }
-                        NavigationLink(destination: Instragram_PreviewProvider.previews) { Text("Instragram") }
+                        NavigationLink(destination: Instragram_PreviewProvider.previews) { Text("Instagram") }
                         NavigationLink(destination: InstagramMessages_PreviewProvider.previews) { Text("InstagramMessages") }
                     }
                     Group {
@@ -100,6 +97,6 @@ struct DevScreen_View: View {
 
 public struct DevScreen_PreviewProvider: PreviewProvider {
     public static var previews: some View {
-        DevScreen_View()
+        DevScreen_View().buildPreviews()
     }
 }

@@ -22,6 +22,7 @@ public class Fetcher {
 }
 
 extension Fetcher: APIProtocol {
+
     public func day(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.day(weekDay: weekDay))
             .mapError { error in
@@ -29,6 +30,7 @@ extension Fetcher: APIProtocol {
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
+
     public func mainTask(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.mainTask(weekDay: weekDay))
             .mapError { error in
@@ -36,6 +38,7 @@ extension Fetcher: APIProtocol {
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
+
     public func imageName(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.imageName(weekDay: weekDay))
             .mapError { error in
@@ -43,6 +46,7 @@ extension Fetcher: APIProtocol {
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
+
     public func color(weekDay: Int) -> AnyPublisher<Color, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.color(weekDay: weekDay))
             .mapError { error in
@@ -50,6 +54,7 @@ extension Fetcher: APIProtocol {
             return .customError(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
+
     public func task(weekDay: Int, hour: String) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.task(weekDay: weekDay, hour: hour))
             .mapError { error in
@@ -188,11 +193,5 @@ struct HourlyChallengeData {
             }
         }
         return ""
-    }
-}
-
-struct Fetcher_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

@@ -252,7 +252,7 @@ struct CPUWheel: View {
 
 }
 
-struct VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State: PreviewProvider {
+struct VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State_PreviewProvider: PreviewProvider {
     static var previews: some View {
         CustomView()
     }

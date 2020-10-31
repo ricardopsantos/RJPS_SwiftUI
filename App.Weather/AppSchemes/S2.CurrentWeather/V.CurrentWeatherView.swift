@@ -5,8 +5,6 @@
 
 import SwiftUI
 
-// MARK: - Preview
-
 // MARK: - View
 
 public struct CurrentWeatherView: View {

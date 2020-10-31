@@ -100,7 +100,7 @@ public extension RyanairResponseDto {
         case r = "R"
         case w = "W"
         case p = "P"
-        case b = "b"
+        case b = "B"
         case y = "Y"
         case h = "H"
         case k = "K"

@@ -59,7 +59,7 @@ struct VisualDocs_UserDefaults: View {
 
 // MARK: - Preview
 
-struct UserDefaults_PreviewProvider: PreviewProvider {
+struct VisualDocs_UserDefaults_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_UserDefaults()
     }

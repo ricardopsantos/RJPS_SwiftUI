@@ -14,7 +14,14 @@ import Base_Domain
 
 public class RyanairView1ViewModel: ObservableObject {
 
+    // Encapsulate that the ViewModel internal/auxiliar state properties
+    @Published private var vmInternalState: ViewModelState = ViewModelState()
+    class ViewModelState: ObservableObject {
+        fileprivate var airports: [RyanairModel.AirPort] = []
+    }
+    
     // Encapsulate that the View properties that the ViewModel needs to read on to work
+    @Published var viewOut: ViewStateOut = ViewStateOut()
     class ViewStateOut: ObservableObject {
         @Published var children = 0
         @Published var teen = 0
@@ -25,21 +32,19 @@ public class RyanairView1ViewModel: ObservableObject {
     }
 
     // Encapsulate that the View properties that the ViewModel updates in order to change UI
-    class ViewStateIn: ObservableObject {
-        @Published var outputText: String = ""
-        @Published var outputList: [ListItemModel] = []
-        @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
-        @Published var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
-    }
-
-    @Published var isLoading: Bool = false
-    @Published var viewOut: ViewStateOut = ViewStateOut()
     @Published var viewIn: ViewStateIn = ViewStateIn()
+    class ViewStateIn: ObservableObject {
+        @Published fileprivate(set) var outputText: String = ""
+        @Published fileprivate(set) var outputList: [ListItemModel] = []
+        @Published fileprivate(set) var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
+        @Published fileprivate(set) var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
+        @Published var isLoading: Bool = false
+    }
 
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
     private var cancelBag = CancelBag()
-    fileprivate var airports: [RyanairModel.AirPort] = []
+
     private var trips: [RyanairResponseDto.Trip] = [] {
         didSet {
             self.viewIn.outputList = []
@@ -54,7 +59,7 @@ public class RyanairView1ViewModel: ObservableObject {
 
     public init(fetcher: APIRyanairProtocol,
                 repository: RepositoryRyanairProtocol,
-                scheduler: DispatchQueue = DispatchQueue(label: "Schemes1TemplateViewModel")) {
+                scheduler: DispatchQueue = DispatchQueue(label: "RyanairView1ViewModel")) {
         self.fetcher = fetcher
         self.repository = repository
         fetchStations()
@@ -90,7 +95,7 @@ private extension RyanairView1ViewModel {
             self.viewIn.airportsDepartureSuggestions = []
             guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
-            let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            let matchs = self.vmInternalState.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
             self.viewIn.airportsDepartureSuggestions.append(contentsOf: matchs.prefix(5))
 
         }.store(in: cancelBag)
@@ -101,7 +106,7 @@ private extension RyanairView1ViewModel {
             self.viewIn.airportsArrivalSuggestions = []
             guard some.count > 0 && some.count < 3 else { return } // User must type 2 chars for autocomplete
             let value = some.lowercased()
-            let matchs = self.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
+            let matchs = self.vmInternalState.airports.filter({ $0.name.lowercased().contains(value) || $0.code.lowercased().contains(value) })
             self.viewIn.airportsArrivalSuggestions.append(contentsOf: matchs.prefix(5))
         }.store(in: cancelBag)
     }
@@ -111,7 +116,7 @@ private extension RyanairView1ViewModel {
 
 private extension RyanairView1ViewModel {
     func hideLoading() {
-        self.isLoading = false
+        self.viewIn.isLoading = false
     }
 
     func display(_ message: String) {
@@ -125,7 +130,7 @@ private extension RyanairView1ViewModel {
         self.viewIn.airportsDepartureSuggestions = []
         self.viewIn.outputList = []
         self.viewIn.outputText = ""
-        self.isLoading = false
+        self.viewIn.isLoading = false
     }
 }
 
@@ -135,19 +140,19 @@ private extension RyanairView1ViewModel {
 
     func fetchStations() {
         cleanViewOutput()
-        isLoading = true
+        viewIn.isLoading = true
         let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
-        _ = stations.sink(receiveCompletion: { [weak self] (result) in
+        stations.sink(receiveCompletion: { [weak self] (result) in
             self?.hideLoading()
         }) { [weak self] (result) in
             guard let self = self else { return }
-            self.airports = result.stations.map({ RyanairModel.AirPort(name: $0.name, code: $0.code) })
+            self.vmInternalState.airports = result.stations.map({ RyanairModel.AirPort(name: $0.name, code: $0.code) })
         }.store(in: cancelBag)
     }
 
     func fetchResults() {
 
-        guard self.airports.count > 0 else {
+        guard self.vmInternalState.airports.count > 0 else {
             return
         }
 
@@ -158,12 +163,12 @@ private extension RyanairView1ViewModel {
         var errorMessage = viewOut.errorMessage
 
         // View data validations : if the airport code have right shape, see it exists...
-        if viewOut.origin.trim.count == 3 && !(self.airports.filter({ $0.code.lowercased() == viewOut.origin.lowercased().trim }).count == 1) {
+        if viewOut.origin.trim.count == 3 && !(self.vmInternalState.airports.filter({ $0.code.lowercased() == viewOut.origin.lowercased().trim }).count == 1) {
             errorMessage = "\(errorMessage)Invalid origin airport\n"
         }
 
         // View data validations : if the airport code have right shape, see it exists...
-        if viewOut.destination.trim.count == 3 && !(self.airports.filter({ $0.code.lowercased() == viewOut.destination.lowercased().trim }).count == 1) {
+        if viewOut.destination.trim.count == 3 && !(self.vmInternalState.airports.filter({ $0.code.lowercased() == viewOut.destination.lowercased().trim }).count == 1) {
             errorMessage = "\(errorMessage)Invalid destination airport\n"
         }
         guard errorMessage.count == 0 else {
@@ -172,7 +177,7 @@ private extension RyanairView1ViewModel {
         }
 
         // Fetch
-        isLoading = true
+        viewIn.isLoading = true
 
         let origin = viewOut.origin.trim.uppercased()
         let destination = viewOut.destination.trim.uppercased()

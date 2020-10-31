@@ -12,7 +12,6 @@ import App_Weather
 import App_HourlyChallenge
 import App_Ryanair
 import Utils_Extensions
-import Utils_Designables
 //
 
 struct AppRoot_View: View {
@@ -34,7 +33,7 @@ struct AppRoot_View: View {
             tab1
             tab2
             tab3
-            DevScreen_PreviewProvider.previews
+            DevScreen_View()
         }
     }
 }
@@ -43,6 +42,6 @@ struct AppRoot_View: View {
 
 struct AppRoot_View_Previews_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        AppRoot_View()
+        AppRoot_View().buildPreviews()
     }
 }

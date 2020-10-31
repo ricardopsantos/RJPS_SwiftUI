@@ -52,7 +52,7 @@ struct VisualDocs_Binding_I: View {
     }
 }
 
-struct Binding_PreviewProvider: PreviewProvider {
+struct VisualDocs_Binding_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         TabView {
             VisualDocs_Binding_Intro().tabItem({ Text("Intro") })

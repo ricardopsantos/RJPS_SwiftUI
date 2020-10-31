@@ -4,6 +4,8 @@
 //
 
 import Foundation
+//
+import Utils_Extensions
 
 public class GenericStorableKeyValueModel: Codable {
     public var keyBase: String = ""
@@ -75,7 +77,7 @@ extension GenericStorableKeyValueModel {
 
     static func get(composedKey: String) -> GenericStorableKeyValueModel? {
         if let cached = UserDefaults.standard.data(forKey: composedKey),
-            let result = try? JSONDecoder().decode(GenericStorableKeyValueModel.self, from: cached),
+            let result = try? JSONDecoder().decodeSafe(GenericStorableKeyValueModel.self, from: cached),
             result.value != nil {
             return result
         }

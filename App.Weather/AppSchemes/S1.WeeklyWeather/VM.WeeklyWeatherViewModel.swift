@@ -17,16 +17,24 @@ import App_Weather_Core
 
 public class WeeklyWeatherViewModel: ObservableObject {
 
-    // The properly delegate @Published modifier makes it possible to observe
-    // the city property. You’ll see in a moment how to leverage this.
-    @Published var city: String = ""
-    @Published var isAnimating: Bool = false
+    // Encapsulate that the ViewModel internal/auxiliar state properties
+    @Published private var vmInternalState: ViewModelState = ViewModelState()
+    class ViewModelState: ObservableObject {
 
-    // You’ll keep the View’s data source in the ViewModel. This is in contrast
-    // to what you might be used to doing in MVC. Because the property is marked @Published,
-    // the compiler automatically synthesizes a publisher for it. SwiftUI subscribes to
-    // that publisher and redraws the screen when you change the property.
-    @Published var dataSource: [VM.DailyWeatherRowViewModel] = []
+    }
+    
+    // Encapsulate that the View properties that the ViewModel needs to read on to work
+    @Published var viewOut: ViewStateOut = ViewStateOut()
+    class ViewStateOut: ObservableObject {
+        @Published var city: String = ""
+    }
+
+    // Encapsulate that the View properties that the ViewModel updates in order to change UI
+    @Published var viewIn: ViewStateIn = ViewStateIn()
+    class ViewStateIn: ObservableObject {
+        @Published var isLoading: Bool = false
+        @Published fileprivate(set) var dataSource: [VM.DailyWeatherRowViewModel] = []
+    }
 
     private let fetcher: APIWeatherProtocol
     private var repository: RepositoryWeatherProtocol
@@ -36,19 +44,18 @@ public class WeeklyWeatherViewModel: ObservableObject {
         self.fetcher = fetcher
         self.repository = repository
 
-        let observer = $city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+        let observer = self.viewOut.$city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
 
         // 1 - call fetchWeather
-        _ = observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
+        observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
 
         // 2 - Update AppDefaultsRepository.shared.lastCity on change
-        _ = observer.sink(receiveValue: { [weak self] (some) in
+        observer.sink(receiveValue: { [weak self] (some) in
             self?.repository.lastCity = some
         }).store(in: cancelBag)
 
-        // After the observers, so that when we change the value of [city] the app will react
-        // and refresh
-        self.city = repository.lastCity
+        // This code is after the observers, so that when we change the value of [city] the app will react and refresh
+        self.viewOut.city = repository.lastCity
     }
 }
 
@@ -56,7 +63,7 @@ private extension WeeklyWeatherViewModel {
 
     func fetchWeather(forCity city: String) {
 
-        isAnimating = true
+        self.viewIn.isLoading = true
         // Start by making a new request to fetch the information from the OpenWeatherMap API.
         // Pass the city name as the argument.
         fetcher.weeklyWeatherForecast(forCity: city)
@@ -82,16 +89,16 @@ private extension WeeklyWeatherViewModel {
             // completion — either a successful or failed one — happens separately from handling values.
             .sink(
                 receiveCompletion: { [weak self] value in
-                    self?.isAnimating = false
+                    self?.viewIn.isLoading = false
                     guard let self = self else { return }
                     switch value {
-                    case .failure: self.dataSource = []
+                    case .failure: self.viewIn.dataSource = []
                     case .finished: break
                     }
                 },
                 receiveValue: { [weak self] forecast in
                     guard let self = self else { return }
-                    self.dataSource = forecast
+                    self.viewIn.dataSource = forecast
             })
             // Finally, add the cancellable reference to the disposables set. As previously
             // mentioned, without keeping this reference alive, the network publisher will terminate immediately.
@@ -101,7 +108,7 @@ private extension WeeklyWeatherViewModel {
 
 extension WeeklyWeatherViewModel {
     var currentWeatherView: some View {
-        let viewModel = VM.CurrentWeatherViewModel(city: city, weatherFetcher: fetcher)
+        let viewModel = VM.CurrentWeatherViewModel(city: viewOut.city, weatherFetcher: fetcher)
         return CurrentWeatherView(viewModel: viewModel)
     }
 }

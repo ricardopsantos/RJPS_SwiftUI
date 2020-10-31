@@ -23,7 +23,3 @@ final class AppDefaultsRepository: ObservableObject {
     @AppUserDefaults("\(id).timeZone", defaultValue: 0)
     var timeZone: Int { willSet { objectWillChange.send() } }
 }
-
-final class Repository: ObservableObject {
-
-}
