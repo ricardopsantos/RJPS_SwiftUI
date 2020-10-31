@@ -12,6 +12,18 @@ import Utils
 
 public class DashBoardViewModel: ObservableObject {
 
+    // Encapsulate that the View properties that the ViewModel needs to read on to work
+    @Published var viewOut: ViewStateOut = ViewStateOut()
+    class ViewStateOut: ObservableObject {
+
+    }
+
+    // Encapsulate that the View properties that the ViewModel updates in order to change UI
+    @Published var viewIn: ViewStateIn = ViewStateIn()
+    class ViewStateIn: ObservableObject {
+
+    }
+
     private let fetcher: APIProtocol
     private var cancelBag = CancelBag()
     @ObservedObject var settings = AppDefaultsRepository.shared

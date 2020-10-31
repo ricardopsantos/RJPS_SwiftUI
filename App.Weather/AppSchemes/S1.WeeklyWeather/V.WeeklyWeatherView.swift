@@ -25,9 +25,9 @@ public struct WeeklyWeatherView: View {
                 List {
                     // Search Field
                     HStack(alignment: .center) {
-                        TextField("e.g. Cupertino", text: $viewModel.city)
+                        TextField("e.g. Cupertino", text: $viewModel.viewOut.city)
                     }
-                    if viewModel.dataSource.isEmpty {
+                    if viewModel.viewIn.dataSource.isEmpty {
                         // Empty Section
                         Section {
                              Text("No results").foregroundColor(.gray)
@@ -37,14 +37,14 @@ public struct WeeklyWeatherView: View {
                         Section {
                             NavigationLink(destination: viewModel.currentWeatherView) {
                                 VStack(alignment: .leading) {
-                                    Text(viewModel.city)
+                                    Text(viewModel.viewOut.city)
                                     Text("Weather today").font(.caption).foregroundColor(.gray)
                                 }
                             }
                         }
                         // Forecast Section
                         Section {
-                            ForEach(viewModel.dataSource, id: \.self) { some in
+                            ForEach(viewModel.viewIn.dataSource, id: \.self) { some in
                                 DailyWeatherRowView.init(viewModel: some)
                             }
                         }
@@ -53,7 +53,7 @@ public struct WeeklyWeatherView: View {
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Weather ⛅️")
             }
-            ActivityIndicator_V2(isAnimating: $viewModel.isAnimating)
+            ActivityIndicator_V2(isAnimating: $viewModel.viewIn.isLoading)
         }
     }
 }

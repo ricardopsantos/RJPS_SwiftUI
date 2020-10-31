@@ -45,8 +45,8 @@ struct RyanairView1: View {
                     outputView
                 }
             }
-            .disabled(viewModel.isLoading).blur(radius: viewModel.isLoading ? 3 : 0)
-            ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
+            .disabled(viewModel.viewIn.isLoading).blur(radius: viewModel.viewIn.isLoading ? 3 : 0)
+            ActivityIndicator_V2(isAnimating: $viewModel.viewIn.isLoading)
         }
     }
 }

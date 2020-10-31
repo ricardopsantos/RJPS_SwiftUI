@@ -15,6 +15,7 @@ import Base_Domain
 public class RyanairView1ViewModel: ObservableObject {
 
     // Encapsulate that the View properties that the ViewModel needs to read on to work
+    @Published var viewOut: ViewStateOut = ViewStateOut()
     class ViewStateOut: ObservableObject {
         @Published var children = 0
         @Published var teen = 0
@@ -25,16 +26,14 @@ public class RyanairView1ViewModel: ObservableObject {
     }
 
     // Encapsulate that the View properties that the ViewModel updates in order to change UI
+    @Published var viewIn: ViewStateIn = ViewStateIn()
     class ViewStateIn: ObservableObject {
         @Published var outputText: String = ""
         @Published var outputList: [ListItemModel] = []
         @Published var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
         @Published var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
+        @Published var isLoading: Bool = false
     }
-
-    @Published var isLoading: Bool = false
-    @Published var viewOut: ViewStateOut = ViewStateOut()
-    @Published var viewIn: ViewStateIn = ViewStateIn()
 
     private let fetcher: APIRyanairProtocol
     private var repository: RepositoryRyanairProtocol
@@ -54,7 +53,7 @@ public class RyanairView1ViewModel: ObservableObject {
 
     public init(fetcher: APIRyanairProtocol,
                 repository: RepositoryRyanairProtocol,
-                scheduler: DispatchQueue = DispatchQueue(label: "Schemes1TemplateViewModel")) {
+                scheduler: DispatchQueue = DispatchQueue(label: "RyanairView1ViewModel")) {
         self.fetcher = fetcher
         self.repository = repository
         fetchStations()
@@ -111,7 +110,7 @@ private extension RyanairView1ViewModel {
 
 private extension RyanairView1ViewModel {
     func hideLoading() {
-        self.isLoading = false
+        self.viewIn.isLoading = false
     }
 
     func display(_ message: String) {
@@ -125,7 +124,7 @@ private extension RyanairView1ViewModel {
         self.viewIn.airportsDepartureSuggestions = []
         self.viewIn.outputList = []
         self.viewIn.outputText = ""
-        self.isLoading = false
+        self.viewIn.isLoading = false
     }
 }
 
@@ -135,7 +134,7 @@ private extension RyanairView1ViewModel {
 
     func fetchStations() {
         cleanViewOutput()
-        isLoading = true
+        viewIn.isLoading = true
         let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
         stations.sink(receiveCompletion: { [weak self] (result) in
             self?.hideLoading()
@@ -172,7 +171,7 @@ private extension RyanairView1ViewModel {
         }
 
         // Fetch
-        isLoading = true
+        viewIn.isLoading = true
 
         let origin = viewOut.origin.trim.uppercased()
         let destination = viewOut.destination.trim.uppercased()
