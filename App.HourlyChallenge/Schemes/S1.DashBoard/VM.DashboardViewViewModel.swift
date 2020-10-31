@@ -12,7 +12,7 @@ import Utils
 
 public class DashBoardViewModel: ObservableObject {
 
-    // Encapsulate that the ViewModel internal/auxiliar state properties
+    // Encapsulate the ViewModel internal/auxiliar state properties
     @Published private var vmInternalState: ViewModelState = ViewModelState()
     class ViewModelState: ObservableObject {
 
@@ -21,13 +21,13 @@ public class DashBoardViewModel: ObservableObject {
     // Encapsulate that the View properties that the ViewModel needs to read on to work
     @Published var viewOut: ViewStateOut = ViewStateOut()
     class ViewStateOut: ObservableObject {
-        @ObservedObject var settings = AppDefaultsRepository.shared
+        @ObservedObject var settings = RepositoryHourlyChallenge.shared
     }
 
     // Encapsulate that the View properties that the ViewModel updates in order to change UI
     @Published var viewIn: ViewStateIn = ViewStateIn()
     class ViewStateIn: ObservableObject {
-        var timeZoneServer: Int { return AppDefaultsRepository.shared.timeZone - 3 }
+        var timeZoneServer: Int { return RepositoryHourlyChallenge.shared.timeZone - 3 }
         @Published fileprivate(set) var taskNow: String = ""
         @Published fileprivate(set) var taskNext1: String = ""
         @Published fileprivate(set) var taskNext2: String = ""
@@ -73,7 +73,7 @@ public class DashBoardViewModel: ObservableObject {
 
 private extension DashBoardViewModel {
     private func fetchTaskNow(weekDay: Int, timeZone: Int) {
-        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(
+        fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(
             receiveCompletion: { value in
             switch value {
             case .failure: break
@@ -86,7 +86,7 @@ private extension DashBoardViewModel {
     }
 
     private func fetchTaskNext1(weekDay: Int, timeZone: Int) {
-        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+1)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+        fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+1)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
             case .finished: break
@@ -98,7 +98,7 @@ private extension DashBoardViewModel {
     }
 
     private func fetchTaskNext2(weekDay: Int, timeZone: Int) {
-        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+2)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+        fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+2)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
             case .finished: break
@@ -110,7 +110,7 @@ private extension DashBoardViewModel {
     }
 
     private func fetchTaskNext3(weekDay: Int, timeZone: Int) {
-        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+3)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+        fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+3)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
             case .finished: break

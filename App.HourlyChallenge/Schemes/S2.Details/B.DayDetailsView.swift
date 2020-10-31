@@ -7,9 +7,20 @@ import Foundation
 import UIKit
 import SwiftUI
 import Combine
+//
+import Base_Domain
 
-struct DayDetailsViewBuilder {
+//
+// The Builder is responsible to build a View and setup the Fetcher and ViewModel
+// The method [static func buildView()] is mandatory, but we can have more
+//
+
+struct DayDetailsViewBuilder : BuilderProtocol {
     private init() { }
+
+    static func buildView() -> some View {
+        return buildView(0, 0)
+    }
 
     static func buildView(_ weekDay: Int, _ timeZone: Int) -> some View {
         let fetcher: APIProtocol = Fetcher()

@@ -9,6 +9,7 @@ import SwiftUI
 //
 import Utils_Designables
 import Utils
+import Utils_Extensions
 //
 import App_Ryanair_Core
 import Base_Domain
@@ -67,7 +68,7 @@ extension RyanairView1 {
             NavigationLink(destination: self.viewModel.routeWithFight(id: some.id) ) {
                 DesignablesFactory.ListItem(title: some.title,
                                         value: some.subtitle,
-                                        imageName: "paperplane.fill",
+                                        imageName: ImageNames.paperplane.rawValue,
                                         imageColor1: Color(UIColor(red: 238.0/255.0, green: 202.0/255.0, blue: 85.0/255.0, alpha: 1)),
                                         imageColor2: Color(UIColor(red: 48.0/255.0, green: 71.0/255.0, blue: 117.0/255.0, alpha: 1)))
             }

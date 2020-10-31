@@ -9,6 +9,11 @@ import SwiftUI
 import Base_Domain
 import App_Ryanair_Core
 
+//
+// The Builder is responsible to build a View and setup the Fetcher and ViewModel
+// The method [static func buildView()] is mandatory, but we can have more
+//
+
 public struct RyanairView1Builder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {

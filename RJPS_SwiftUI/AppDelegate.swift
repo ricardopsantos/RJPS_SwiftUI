@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        var printer: (String) -> Void = { print($0) }
+        printer("teste")
+        
+        // Apple provides a very basic UIViewController subclass for hosting SwiftUI, UIHostingController
         self.window?.rootViewController = UIHostingController(rootView: AppRoot_View())
         return true
     }

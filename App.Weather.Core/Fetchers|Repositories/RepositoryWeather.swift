@@ -9,22 +9,23 @@ import SwiftUI
 import Combine
 //
 import Utils
+import Utils_Storage
 
 public class RepositoryWeather: ObservableObject, RepositoryWeatherProtocol {
     public init() { }
 
     public var lastCity: String {
-        get { return RepositoryAppUserDefaults.shared.lastCity }
-        set { RepositoryAppUserDefaults.shared.lastCity = newValue }
+        get { return RepositoryWeatherLogic.shared.lastCity }
+        set { RepositoryWeatherLogic.shared.lastCity = newValue }
     }
 }
 
-private final class RepositoryAppUserDefaults: ObservableObject {
+private final class RepositoryWeatherLogic: ObservableObject {
     private init() {}
-    static let shared = RepositoryAppUserDefaults()
+    static let shared = RepositoryWeatherLogic()
     let objectWillChange = PassthroughSubject<Void, Never>()
     static var id: String { return Bundle.main.bundleIdentifier! }
 
-    @AppUserDefaults("\(id).lastCity", defaultValue: "")
+    @UserDefaultsPropertyWrapper("\(id).lastCity", defaultValue: "")
     var lastCity: String { willSet { objectWillChange.send() } }
 }

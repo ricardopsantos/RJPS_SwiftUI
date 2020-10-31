@@ -14,7 +14,7 @@ import Base_Domain
 
 public class RyanairView1ViewModel: ObservableObject {
 
-    // Encapsulate that the ViewModel internal/auxiliar state properties
+    // Encapsulate the ViewModel internal/auxiliar state properties
     @Published private var vmInternalState: ViewModelState = ViewModelState()
     class ViewModelState: ObservableObject {
         fileprivate var airports: [RyanairModel.AirPort] = []
