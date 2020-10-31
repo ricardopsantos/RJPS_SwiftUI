@@ -53,7 +53,7 @@ struct VisualDocs_onDelete: View {
 
 // MARK: - Preview 
 
-struct OnDelete_PreviewProvider: PreviewProvider {
+struct VisualDocs_OnDelete_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_onDelete()
     }

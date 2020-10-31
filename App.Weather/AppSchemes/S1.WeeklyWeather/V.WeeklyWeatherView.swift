@@ -64,14 +64,10 @@ fileprivate extension WeeklyWeatherView {
 
 }
 
-struct WeeklyWeatherView_PreviewProvider1: PreviewProvider {
-    static var previews: some View {
-        WeeklyWeatherBuilder.buildView()
-    }
-}
+// MARK: - PreviewProvider
 
-struct WeeklyWeatherView_PreviewProvider2: PreviewProvider {
+struct WeeklyWeatherView_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        WeeklyWeatherBuilder.buildView().environment(\.colorScheme, .dark)
+        WeeklyWeatherBuilder.buildView().buildPreviews()
     }
 }

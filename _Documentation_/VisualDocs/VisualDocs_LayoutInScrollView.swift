@@ -76,7 +76,7 @@ struct VisualDocs_LayoutInScrollView: View {
     }
 }
 
-struct LayoutInScrollView_PreviewProvider: PreviewProvider {
+struct VisualDocs_LayoutInScrollView_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_LayoutInScrollView()
     }

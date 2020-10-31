@@ -51,14 +51,8 @@ struct VisualDocs_Published_I: View {
         .environmentObject(user)
     }
 }
-/*
-struct Published_I_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_Published_I()
-    }
-}*/
 
-struct VisualDocs_Published_PreviewProvider: PreviewProvider {
+public struct VisualDocs_Published_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         TabView {
             VisualDocs_Published_Intro().tabItem({ Text("Into") })

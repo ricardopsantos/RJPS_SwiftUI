@@ -182,7 +182,7 @@ struct VisualDocs_Combine: View {
 
 // MARK: - Preview
 
-public struct Combine_PreviewProvider: PreviewProvider {
+public struct VisualDocs_Combine_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         VisualDocs_Combine()
     }

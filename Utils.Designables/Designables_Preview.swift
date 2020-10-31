@@ -52,8 +52,10 @@ public struct Designables_View: View {
     }
 }
 
-public struct VisualDocs_Designables_Previews: PreviewProvider {
+// MARK: - Preview
+
+public struct VisualDocs_Designables: PreviewProvider {
     public static var previews: some View {
-        return Designables_View()
+        return Designables_View().buildPreviews()
     }
 }

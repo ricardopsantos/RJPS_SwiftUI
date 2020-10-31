@@ -43,6 +43,6 @@ struct RyanairView2_PreviewProvider: PreviewProvider {
                                                time: ["time"],
                                                timeUTC: ["timeUTC"],
                                                duration: "12")
-        return RyanairView2Builder.buildView(flight: flight)
+        return RyanairView2Builder.buildView(flight: flight).buildPreviews()
     }
 }

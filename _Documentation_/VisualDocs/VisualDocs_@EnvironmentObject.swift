@@ -69,14 +69,8 @@ struct VisualDocs_EnvironmentObject_I: View {
         .environmentObject(someObservedObject)
     }
 }
-/*
-struct EnvironmentObject_I_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VisualDocs_EnvironmentObject_I()
-    }
-}*/
 
-struct VisualDocs_EnvironmentObject_PreviewProvider: PreviewProvider {
+public struct VisualDocs_EnvironmentObject_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         TabView {
             VisualDocs_EnvironmentObject_Intro().tabItem({ Text("Into") })

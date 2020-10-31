@@ -106,7 +106,7 @@ struct FlyTransition: GeometryEffect {
     }
 }
 
-struct VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo: PreviewProvider {
+struct VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo_PreviewProvider: PreviewProvider {
     static var previews: some View {
         GeometryEffectTransitionsDemo()
     }

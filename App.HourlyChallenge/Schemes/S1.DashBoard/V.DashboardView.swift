@@ -16,20 +16,6 @@ import MessageUI
 //
 import Utils_Designables
 
-// MARK: - Preview
-
-struct BasicApps_LastShelter1: PreviewProvider {
-    static var previews: some View {
-        DashboardViewBuilder.buildView()
-    }
-}
-
-struct BasicApps_LastShelter2: PreviewProvider {
-    static var previews: some View {
-        DashboardViewBuilder.buildView().environment(\.colorScheme, .dark)
-    }
-}
-
 // MARK: - View
 
 public struct DashboardView: View {
@@ -174,5 +160,13 @@ fileprivate extension DashboardView {
 
     func weedDayDetailsBody(weekDay: Int, timeZone: Int) -> some View {
         return Text("")
+    }
+}
+
+// MARK: - Preview
+
+struct BasicApps_LastShelter1: PreviewProvider {
+    static var previews: some View {
+        DashboardViewBuilder.buildView().buildPreviews()
     }
 }

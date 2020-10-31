@@ -22,7 +22,7 @@ struct VisualDocs_HorizontalSizeClass: View {
     }
 }
 
-struct HorizontalSizeClassPreviewProvider: PreviewProvider {
+struct VisualDocs_HorizontalSizeClass_PreviewProvider: PreviewProvider {
     static var previews: some View {
         return VisualDocs_HorizontalSizeClass()
     }

@@ -8,14 +8,6 @@ import Combine
 import SwiftUI
 import UIKit
 
-// MARK: - Preview
-
-struct DayDetailsView_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        DayDetailsViewBuilder.buildView(1, 0)
-    }
-}
-
 // MARK: - View
 
 public struct DayDetailsView: View {
@@ -63,4 +55,12 @@ public struct DayDetailsView: View {
 
 fileprivate extension DayDetailsView {
     
+}
+
+// MARK: - Preview
+
+struct DayDetailsView_PreviewProvider: PreviewProvider {
+    static var previews: some View {
+        DayDetailsViewBuilder.buildView(1, 0).buildPreviews()
+    }
 }

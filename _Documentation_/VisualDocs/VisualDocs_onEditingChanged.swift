@@ -29,7 +29,7 @@ struct VisualDocs_onEditingChanged: View {
 
 // MARK: - Preview VisualDocs_ReactingEvents
 
-struct OnEditingChanged_PreviewProvider: PreviewProvider {
+struct VisualDocs_OnEditingChanged_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VisualDocs_onEditingChanged()
     }

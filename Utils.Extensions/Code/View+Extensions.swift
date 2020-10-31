@@ -21,6 +21,15 @@ public extension RoundedRectangle {
 
 public extension View {
 
+    func buildPreviews() -> some View {
+        Group {
+            self
+            self.environment(\.colorScheme, .dark)
+            self.previewDevice("iPhone 8")
+            self.previewDevice("iPhone 11 Pro")
+        }
+    }
+
     // https://stackoverflow.com/questions/56517813/how-to-print-to-xcode-console-in-swiftui
     func Print(_ vars: Any...) -> some View {
         for v in vars { print(v) }
