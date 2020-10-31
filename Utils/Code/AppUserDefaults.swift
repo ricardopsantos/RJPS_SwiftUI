@@ -6,6 +6,7 @@
 import Foundation
 import Combine
 
+#warning("delete")
 /** Usage
 
 ```
@@ -33,7 +34,7 @@ private final class RepositorySampleUserDefaults: ObservableObject {
 }
 ```
 */
-
+/*
 // https://nshipster.com/propertywrapper/
 @propertyWrapper
 public struct AppUserDefaults<T> {
@@ -48,3 +49,4 @@ public struct AppUserDefaults<T> {
         set { UserDefaults.standard.set(newValue, forKey: key) }
     }
 }
+*/

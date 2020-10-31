@@ -9,9 +9,9 @@ import SwiftUI
 import Combine
 
 public protocol APIProtocol {
-    func day(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity>
-    func mainTask(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity>
-    func imageName(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity>
-    func color(weekDay: Int) -> AnyPublisher<Color, E.HourlyErrorEntity>
-    func task(weekDay: Int, hour: String) -> AnyPublisher<String, E.HourlyErrorEntity>
+    func fetchDay(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity>
+    func fetchMainTask(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity>
+    func fetchImageName(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity>
+    func fetchColor(weekDay: Int) -> AnyPublisher<Color, E.HourlyErrorEntity>
+    func fetchTask(weekDay: Int, hour: String) -> AnyPublisher<String, E.HourlyErrorEntity>
 }

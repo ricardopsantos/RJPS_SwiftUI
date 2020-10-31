@@ -12,7 +12,7 @@ import Utils
 
 public class DayDetailsViewModel: ObservableObject {
 
-    // Encapsulate that the ViewModel internal/auxiliar state properties
+    // Encapsulate the ViewModel internal/auxiliar state properties
     @Published private var vmInternalState: ViewModelState = ViewModelState()
     class ViewModelState: ObservableObject {
         var weekDay: Int = 0
@@ -54,7 +54,7 @@ public class DayDetailsViewModel: ObservableObject {
 
 private extension DayDetailsViewModel {
     func fetchTaskNow(weekDay: Int, timeZone: Int) {
-        fetcher.task(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+        fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
             case .finished: break
@@ -66,7 +66,7 @@ private extension DayDetailsViewModel {
     }
 
     func fetchDay(weekDay: Int) {
-        fetcher.day(weekDay: weekDay).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
+        fetcher.fetchDay(weekDay: weekDay).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
             case .finished: break

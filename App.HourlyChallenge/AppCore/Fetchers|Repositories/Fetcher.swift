@@ -23,7 +23,7 @@ public class Fetcher {
 
 extension Fetcher: APIProtocol {
 
-    public func day(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
+    public func fetchDay(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.day(weekDay: weekDay))
             .mapError { error in
                 DevTools.log(error: "Error : \(error)")
@@ -31,7 +31,7 @@ extension Fetcher: APIProtocol {
         }.eraseToAnyPublisher()
     }
 
-    public func mainTask(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
+    public func fetchMainTask(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.mainTask(weekDay: weekDay))
             .mapError { error in
             DevTools.log(error: "Error : \(error)")
@@ -39,7 +39,7 @@ extension Fetcher: APIProtocol {
         }.eraseToAnyPublisher()
     }
 
-    public func imageName(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
+    public func fetchImageName(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.imageName(weekDay: weekDay))
             .mapError { error in
             DevTools.log(error: "Error : \(error)")
@@ -47,7 +47,7 @@ extension Fetcher: APIProtocol {
         }.eraseToAnyPublisher()
     }
 
-    public func color(weekDay: Int) -> AnyPublisher<Color, E.HourlyErrorEntity> {
+    public func fetchColor(weekDay: Int) -> AnyPublisher<Color, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.color(weekDay: weekDay))
             .mapError { error in
             DevTools.log(error: "Error : \(error)")
@@ -55,7 +55,7 @@ extension Fetcher: APIProtocol {
         }.eraseToAnyPublisher()
     }
 
-    public func task(weekDay: Int, hour: String) -> AnyPublisher<String, E.HourlyErrorEntity> {
+    public func fetchTask(weekDay: Int, hour: String) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.task(weekDay: weekDay, hour: hour))
             .mapError { error in
             DevTools.log(error: "Error : \(error)")
