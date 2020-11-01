@@ -16,10 +16,10 @@ import Base_Domain
 
 struct RyanairView1: View {
 
-    @ObservedObject private var viewModel: RyanairView1ViewModel
+    @ObservedObject private var viewModel: VM.RyanairView1ViewModel
     @State var date: Date = Date()
 
-    public init(viewModel: RyanairView1ViewModel) {
+    public init(viewModel: VM.RyanairView1ViewModel) {
         self.viewModel = viewModel
     }
 
@@ -46,8 +46,8 @@ struct RyanairView1: View {
                     outputView
                 }
             }
-            .disabled(viewModel.viewIn.isLoading).blur(radius: viewModel.viewIn.isLoading ? 3 : 0)
-            ActivityIndicator_V2(isAnimating: $viewModel.viewIn.isLoading)
+            .disabled(viewModel.isLoading).blur(radius: viewModel.isLoading ? 3 : 0)
+            ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
         }
     }
 }

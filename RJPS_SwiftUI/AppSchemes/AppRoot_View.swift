@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 import Combine
 //
+import Base_Domain
 import App_Weather
 import App_HourlyChallenge
 import App_Ryanair

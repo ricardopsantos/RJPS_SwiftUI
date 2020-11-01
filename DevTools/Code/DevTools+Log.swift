@@ -25,13 +25,15 @@ public extension DevTools {
     static func log(info: String) { DevTools.log(info, type: .info) }
     static func log(error: String) { DevTools.log(error, type: .error) }
 
-    static func log(_ message: String, type: LogType = .default) {
+    static func log(_ message: String, type: LogType = .default, function: String = #function) {
+        let whereWasIt = function
+        let finalMessage = "[\(whereWasIt)] : [\(message)]"
         switch type {
-        case .default: os_log("%{public}@", log: OSLog.myApp, type: .default, message)
-        case .info: os_log("%{public}@", log: OSLog.myApp, type: .info, message)
-        case .debug: os_log("%{public}@", log: OSLog.myApp, type: .debug, message)
-        case .error: os_log("%{public}@", log: OSLog.myApp, type: .error, message)
-        case .fault: os_log("%{public}@", log: OSLog.myApp, type: .fault, message)
+        case .default: os_log("%{public}@", log: OSLog.myApp, type: .default, finalMessage)
+        case .info: os_log("%{public}@", log: OSLog.myApp, type: .info, finalMessage)
+        case .debug: os_log("%{public}@", log: OSLog.myApp, type: .debug, finalMessage)
+        case .error: os_log("%{public}@", log: OSLog.myApp, type: .error, finalMessage)
+        case .fault: os_log("%{public}@", log: OSLog.myApp, type: .fault, finalMessage)
         }
     }
 

@@ -10,69 +10,72 @@ import Combine
 //
 import Utils
 
-public class DashBoardViewModel: ObservableObject {
+public extension VM {
 
-    // Encapsulate the ViewModel internal/auxiliar state properties
-    @Published private var vmInternalState: ViewModelState = ViewModelState()
-    class ViewModelState: ObservableObject {
+    class DashBoardViewModel: ObservableObject {
+
+        // Encapsulate the ViewModel internal/auxiliar state properties
+        @Published private var vmInternalState: ViewModelState = ViewModelState()
+        class ViewModelState: ObservableObject {
+
+        }
+
+        // Encapsulate that the View properties that the ViewModel needs to read on to work
+        @Published var viewOut: ViewStateOut = ViewStateOut()
+        class ViewStateOut: ObservableObject {
+            @ObservedObject var settings = RepositoryHourlyChallenge.shared
+        }
+
+        // Encapsulate that the View properties that the ViewModel updates in order to change UI
+        @Published var viewIn: ViewStateIn = ViewStateIn()
+        class ViewStateIn: ObservableObject {
+            var timeZoneServer: Int { return RepositoryHourlyChallenge.shared.timeZone - 3 }
+            @Published fileprivate(set) var taskNow: String = ""
+            @Published fileprivate(set) var taskNext1: String = ""
+            @Published fileprivate(set) var taskNext2: String = ""
+            @Published fileprivate(set) var taskNext3: String = ""
+        }
+
+        private let fetcher: APIProtocol
+        private var cancelBag = CancelBag()
+
+        public init(fetcher: APIProtocol) {
+            self.fetcher = fetcher
+        }
+
+        func day(weekDay: Int) -> String {
+            return FetcherStaticData.day(weekDay: weekDay)
+        }
+
+        func mainTask(weekDay: Int) -> String {
+            return FetcherStaticData.mainTask(weekDay: weekDay)
+        }
+
+        func imageName(weekDay: Int) -> String {
+            return FetcherStaticData.imageName(weekDay: weekDay)
+        }
+
+        func color(weekDay: Int) -> Color {
+            return FetcherStaticData.color(weekDay: weekDay)
+        }
+
+        func task(weekDay: Int, hour: String) -> String {
+            return FetcherStaticData.task(weekDay: weekDay, hour: hour)
+        }
+
+        func refresh() {
+            let weekDay = Date.dayOfWeek!
+            fetchTaskNow(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
+            fetchTaskNext1(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
+            fetchTaskNext2(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
+            fetchTaskNext3(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
+        }
 
     }
-
-    // Encapsulate that the View properties that the ViewModel needs to read on to work
-    @Published var viewOut: ViewStateOut = ViewStateOut()
-    class ViewStateOut: ObservableObject {
-        @ObservedObject var settings = RepositoryHourlyChallenge.shared
-    }
-
-    // Encapsulate that the View properties that the ViewModel updates in order to change UI
-    @Published var viewIn: ViewStateIn = ViewStateIn()
-    class ViewStateIn: ObservableObject {
-        var timeZoneServer: Int { return RepositoryHourlyChallenge.shared.timeZone - 3 }
-        @Published fileprivate(set) var taskNow: String = ""
-        @Published fileprivate(set) var taskNext1: String = ""
-        @Published fileprivate(set) var taskNext2: String = ""
-        @Published fileprivate(set) var taskNext3: String = ""
-    }
-
-    private let fetcher: APIProtocol
-    private var cancelBag = CancelBag()
-
-    public init(fetcher: APIProtocol) {
-        self.fetcher = fetcher
-    }
-
-    func day(weekDay: Int) -> String {
-        return FetcherStaticData.day(weekDay: weekDay)
-    }
-
-    func mainTask(weekDay: Int) -> String {
-        return FetcherStaticData.mainTask(weekDay: weekDay)
-    }
-
-    func imageName(weekDay: Int) -> String {
-        return FetcherStaticData.imageName(weekDay: weekDay)
-    }
-
-    func color(weekDay: Int) -> Color {
-        return FetcherStaticData.color(weekDay: weekDay)
-    }
-
-    func task(weekDay: Int, hour: String) -> String {
-        return FetcherStaticData.task(weekDay: weekDay, hour: hour)
-    }
-
-    func refresh() {
-        let weekDay = Date.dayOfWeek!
-        fetchTaskNow(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
-        fetchTaskNext1(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
-        fetchTaskNext2(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
-        fetchTaskNext3(weekDay: weekDay, timeZone: viewIn.timeZoneServer)
-    }
-    
 }
 
-private extension DashBoardViewModel {
-    private func fetchTaskNow(weekDay: Int, timeZone: Int) {
+private extension VM.DashBoardViewModel {
+    func fetchTaskNow(weekDay: Int, timeZone: Int) {
         fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(
             receiveCompletion: { value in
             switch value {
@@ -85,7 +88,7 @@ private extension DashBoardViewModel {
         }).store(in: cancelBag)
     }
 
-    private func fetchTaskNext1(weekDay: Int, timeZone: Int) {
+    func fetchTaskNext1(weekDay: Int, timeZone: Int) {
         fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+1)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
@@ -97,7 +100,7 @@ private extension DashBoardViewModel {
         }).store(in: cancelBag)
     }
 
-    private func fetchTaskNext2(weekDay: Int, timeZone: Int) {
+    func fetchTaskNext2(weekDay: Int, timeZone: Int) {
         fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+2)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break
@@ -109,7 +112,7 @@ private extension DashBoardViewModel {
         }).store(in: cancelBag)
     }
 
-    private func fetchTaskNext3(weekDay: Int, timeZone: Int) {
+    func fetchTaskNext3(weekDay: Int, timeZone: Int) {
         fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone+3)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {
             case .failure: break

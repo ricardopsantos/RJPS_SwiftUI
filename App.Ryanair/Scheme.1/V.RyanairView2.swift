@@ -14,9 +14,9 @@ import App_Ryanair_Core
 
 struct RyanairView2: View {
 
-    @ObservedObject private var viewModel: RyanairView2ViewModel
+    @ObservedObject private var viewModel: VM.RyanairView2ViewModel
 
-    public init(viewModel: RyanairView2ViewModel) {
+    public init(viewModel: VM.RyanairView2ViewModel) {
         self.viewModel = viewModel
     }
 

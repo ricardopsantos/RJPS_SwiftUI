@@ -5,7 +5,7 @@
 
 import Foundation
 
-public extension WeatherDto {
+public extension WeatherResponseDto {
     struct WeeklyForecastEntity: Codable {
         public let list: [Item]
 

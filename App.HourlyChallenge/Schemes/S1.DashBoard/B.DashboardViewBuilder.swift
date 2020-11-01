@@ -4,9 +4,7 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
-import Combine
 //
 import Base_Domain
 
@@ -19,7 +17,7 @@ public struct DashboardViewBuilder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
         let fetcher: APIProtocol = Fetcher()
-        let viewModel = DashBoardViewModel(fetcher: fetcher)
+        let viewModel = VM.DashBoardViewModel(fetcher: fetcher)
         return DashboardView(viewModel: viewModel)
     }
 }

@@ -13,9 +13,9 @@ import Utils_Designables
 // MARK: - View
 
 public struct WeeklyWeatherView: View {
-    @ObservedObject private var viewModel: WeeklyWeatherViewModel
+    @ObservedObject private var viewModel: VM.WeeklyWeatherViewModel
 
-    public init(viewModel: WeeklyWeatherViewModel) {
+    public init(viewModel: VM.WeeklyWeatherViewModel) {
         self.viewModel = viewModel
     }
 
@@ -27,11 +27,12 @@ public struct WeeklyWeatherView: View {
                     HStack(alignment: .center) {
                         TextField("e.g. Cupertino", text: $viewModel.viewOut.city)
                     }
-                    if viewModel.viewIn.dataSource.isEmpty {
+
+                    if viewModel.viewIn.dataSourceB.isEmpty {
                         // Empty Section
                         Section {
                              Text("No results").foregroundColor(.gray)
-                         }
+                        }
                     } else {
                         // City Hourly Weather Section
                         Section {
@@ -44,8 +45,10 @@ public struct WeeklyWeatherView: View {
                         }
                         // Forecast Section
                         Section {
-                            ForEach(viewModel.viewIn.dataSource, id: \.self) { some in
-                                DailyWeatherRowView.init(viewModel: some)
+                            ForEach(viewModel.viewIn.dataSourceB, id: \.self) { some in
+                                Group {
+                                    DailyWeatherRowView.init(viewModel: some)
+                                }
                             }
                         }
                     }
@@ -53,7 +56,7 @@ public struct WeeklyWeatherView: View {
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Weather ⛅️")
             }
-            ActivityIndicator_V2(isAnimating: $viewModel.viewIn.isLoading)
+            ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
         }
     }
 }

@@ -14,8 +14,8 @@ public struct DayDetailsView: View {
     var weekDay: Int
     var timeZone: Int
 
-    @ObservedObject private var viewModel: DayDetailsViewModel
-    public init(weekDay: Int, timeZone: Int, viewModel: DayDetailsViewModel) {
+    @ObservedObject private var viewModel: VM.DayDetailsViewModel
+    public init(weekDay: Int, timeZone: Int, viewModel: VM.DayDetailsViewModel) {
         self.viewModel = viewModel
         self.weekDay = weekDay
         self.timeZone = timeZone

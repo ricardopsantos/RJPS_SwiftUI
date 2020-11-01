@@ -537,7 +537,7 @@ struct ClockTime {
         self.seconds = s
     }
 
-    // Initializer with total of seconds
+    // inItializer with total of seconds
     init(_ seconds: Double) {
         let h = Int(seconds) / 3600
         let m = (Int(seconds) - (h * 3600)) / 60

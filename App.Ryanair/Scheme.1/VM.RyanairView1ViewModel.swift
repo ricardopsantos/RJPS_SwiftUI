@@ -12,64 +12,91 @@ import Utils
 import App_Ryanair_Core
 import Base_Domain
 
-public class RyanairView1ViewModel: ObservableObject {
+public extension VM {
+    class RyanairView1ViewModel: ObservableObject {
 
-    // Encapsulate the ViewModel internal/auxiliar state properties
-    @Published private var vmInternalState: ViewModelState = ViewModelState()
-    class ViewModelState: ObservableObject {
-        fileprivate var airports: [RyanairModel.AirPort] = []
-    }
-    
-    // Encapsulate that the View properties that the ViewModel needs to read on to work
-    @Published var viewOut: ViewStateOut = ViewStateOut()
-    class ViewStateOut: ObservableObject {
-        @Published var children = 0
-        @Published var teen = 0
-        @Published var adult = 0
-        @Published var origin = "" { didSet { if origin.count > 3 && oldValue.count <= 3 { origin = oldValue } } } // Limit size
-        @Published var destination = "" { didSet { if destination.count > 3 && oldValue.count <= 3 { destination = oldValue } } } // Limit size
-        @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
-    }
+        // Encapsulate the ViewModel internal/auxiliar state properties
+        @Published private var vmInternalState: ViewModelState = ViewModelState()
+        class ViewModelState: ObservableObject {
+            fileprivate var airports: [RyanairModel.AirPort] = []
+        }
 
-    // Encapsulate that the View properties that the ViewModel updates in order to change UI
-    @Published var viewIn: ViewStateIn = ViewStateIn()
-    class ViewStateIn: ObservableObject {
-        @Published fileprivate(set) var outputText: String = ""
-        @Published fileprivate(set) var outputList: [ListItemModel] = []
-        @Published fileprivate(set) var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
-        @Published fileprivate(set) var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
-        @Published var isLoading: Bool = false
-    }
+        // Encapsulate that the View properties that the ViewModel needs to read on to work
+        @Published var viewOut: ViewStateOut = ViewStateOut()
+        class ViewStateOut: ObservableObject {
+            @Published var children = 0
+            @Published var teen = 0
+            @Published var adult = 0
+            @Published var origin = "" { didSet { if origin.count > 3 && oldValue.count <= 3 { origin = oldValue } } } // Limit size
+            @Published var destination = "" { didSet { if destination.count > 3 && oldValue.count <= 3 { destination = oldValue } } } // Limit size
+            @Published var dateDeparture = Calendar.current.date(byAdding: .day, value: 1, to: Date())! // Tomorrow...
+            var errorMessage: String {
+                var acc = ""
+                // Don't allow any negative passenger
+                if children < 0 || adult < 0 || teen < 0 {
+                    acc = "\(acc)No negative passengers...\n"
+                }
+                // At least one passenger
+                if children == 0 && adult == 0 && teen == 0 {
+                    acc = "\(acc)Add passengers...\n"
+                }
+                // Airports info filled
+                if origin.trim.count == 0 || destination.trim.count == 0 {
+                    acc = "\(acc)Add airports\n"
+                } else if origin.trim.count != 3 || destination.trim.count != 3 {
+                    acc = "\(acc)Invalid airport code format\n"
+                }
 
-    private let fetcher: APIRyanairProtocol
-    private var repository: RepositoryRyanairProtocol
-    private var cancelBag = CancelBag()
-
-    private var trips: [RyanairResponseDto.Trip] = [] {
-        didSet {
-            self.viewIn.outputList = []
-            self.viewIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
-            if self.viewIn.outputList.count == 0 {
-                self.display("No results")
-            } else {
-                self.display("")
+                // Departure date filled (improve validation!)
+                if dateDeparture < Date() {
+                    acc = "\(acc)Invalid departure date\n"
+                }
+                return acc
             }
         }
-    }
 
-    public init(fetcher: APIRyanairProtocol,
-                repository: RepositoryRyanairProtocol,
-                scheduler: DispatchQueue = DispatchQueue(label: "RyanairView1ViewModel")) {
-        self.fetcher = fetcher
-        self.repository = repository
-        fetchStations()
-        observeUserInteractions()
+        // Encapsulate that the View properties that the ViewModel updates in order to change UI
+        @Published var viewIn: ViewStateIn = ViewStateIn()
+        class ViewStateIn: ObservableObject {
+            @Published fileprivate(set) var outputText: String = ""
+            @Published fileprivate(set) var outputList: [ListItemModel] = []
+            @Published fileprivate(set) var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
+            @Published fileprivate(set) var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
+        }
+
+        @Published var isLoading: Bool = false
+
+        private let fetcher: APIRyanairProtocol
+        private var repository: RepositoryRyanairProtocol
+        private var cancelBag = CancelBag()
+
+        private var trips: [RyanairResponseDto.Trip] = [] {
+            didSet {
+                self.viewIn.outputList = []
+                self.viewIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
+                if self.viewIn.outputList.count == 0 {
+                    self.display("No results")
+                } else {
+                    self.display("")
+                }
+            }
+        }
+
+        public init(fetcher: APIRyanairProtocol,
+                    repository: RepositoryRyanairProtocol,
+                    scheduler: DispatchQueue = DispatchQueue(label: "RyanairView1ViewModel")) {
+            self.fetcher = fetcher
+            self.repository = repository
+            fetchStations()
+            observeUserInteractions()
+        }
     }
 }
 
+
 // MARK: - Combine
 
-private extension RyanairView1ViewModel {
+private extension VM.RyanairView1ViewModel {
     func observeUserInteractions() {
 
         // Observer Origin/Destination (TextField) changes
@@ -114,9 +141,9 @@ private extension RyanairView1ViewModel {
 
 // MARK: - Private in/out
 
-private extension RyanairView1ViewModel {
+private extension VM.RyanairView1ViewModel {
     func hideLoading() {
-        self.viewIn.isLoading = false
+        self.isLoading = false
     }
 
     func display(_ message: String) {
@@ -130,17 +157,17 @@ private extension RyanairView1ViewModel {
         self.viewIn.airportsDepartureSuggestions = []
         self.viewIn.outputList = []
         self.viewIn.outputText = ""
-        self.viewIn.isLoading = false
+        self.isLoading = false
     }
 }
 
 // MARK: - Private fetchers
 
-private extension RyanairView1ViewModel {
+private extension VM.RyanairView1ViewModel {
 
     func fetchStations() {
         cleanViewOutput()
-        viewIn.isLoading = true
+        self.isLoading = true
         let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
         stations.sink(receiveCompletion: { [weak self] (result) in
             self?.hideLoading()
@@ -177,7 +204,7 @@ private extension RyanairView1ViewModel {
         }
 
         // Fetch
-        viewIn.isLoading = true
+        self.isLoading = true
 
         let origin = viewOut.origin.trim.uppercased()
         let destination = viewOut.destination.trim.uppercased()
@@ -209,35 +236,12 @@ private extension RyanairView1ViewModel {
     }
 }
 
-extension RyanairView1ViewModel.ViewStateOut {
-    var errorMessage: String {
-        var acc = ""
-        // Don't allow any negative passenger
-        if children < 0 || adult < 0 || teen < 0 {
-            acc = "\(acc)No negative passengers...\n"
-        }
-        // At least one passenger
-        if children == 0 && adult == 0 && teen == 0 {
-            acc = "\(acc)Add passengers...\n"
-        }
-        // Airports info filled
-        if origin.trim.count == 0 || destination.trim.count == 0 {
-            acc = "\(acc)Add airports\n"
-        } else if origin.trim.count != 3 || destination.trim.count != 3 {
-            acc = "\(acc)Invalid airport code format\n"
-        }
-
-        // Departure date filled (improve validation!)
-        if dateDeparture < Date() {
-            acc = "\(acc)Invalid departure date\n"
-        }
-        return acc
-    }
-}
 
 // MARK: - Router
 
-public extension RyanairView1ViewModel {
+#warning("create some router")
+
+public extension VM.RyanairView1ViewModel {
     func routeWithFight(id: String) -> some View {
         var param: RyanairResponseDto.Flight!
         trips.forEach { (trip) in

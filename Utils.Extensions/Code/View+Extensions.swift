@@ -31,8 +31,36 @@ public extension View {
     }
 
     // https://stackoverflow.com/questions/56517813/how-to-print-to-xcode-console-in-swiftui
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
+    func SwiftUIDebugPrint(_ vars: Any..., function: String=#function) -> some View {
+        let wereWasIt = function
+        for some in vars { print("\(wereWasIt) : \(some)") }
+        return EmptyView()
+    }
+
+    func SwiftUIDebugPrintOnReload(function: String=#function) -> some View {
+        return self.SwiftUIDebugPrint("[\(self)] was reloaded", function: function)
+    }
+
+    // IfOnSimulator(view: Text("\(Date()) - Reloaded").eraseToAnyView())
+    func IfOnSimulator(view: AnyView) -> some View {
+        #if (arch(i386) || arch(x86_64))
+        return view.eraseToAnyView()
+        #else
+        return EmptyView()
+        #endif
+    }
+
+    // Perform { print("rendered") }
+    // Perform(if: true) { print("rendered") }
+    func Perform(_ block: () -> Void) -> some View {
+        block()
+        return EmptyView()
+    }
+
+    func Perform(if condition: Bool, _ block: () -> Void) -> some View {
+        if condition {
+            block()
+        }
         return EmptyView()
     }
 
@@ -58,6 +86,7 @@ public extension View {
     }
 
     // https://matteo-puccinelli.medium.com/conditionally-apply-modifiers-in-swiftui-51c1cf7f61d1
+    // How to conditionally apply modifiers in SwiftUI
     @ViewBuilder
     func ifCondition<TrueContent: View, FalseContent: View>(_ condition: Bool, then trueContent: (Self) -> TrueContent, else falseContent: (Self) -> FalseContent) -> some View {
         if condition {
@@ -68,6 +97,7 @@ public extension View {
     }
 
     // https://matteo-puccinelli.medium.com/conditionally-apply-modifiers-in-swiftui-51c1cf7f61d1
+    // How to conditionally apply modifiers in SwiftUI
     @ViewBuilder
     func ifCondition<TrueContent: View>(_ condition: Bool, then trueContent: (Self) -> TrueContent) -> some View {
         if condition {
@@ -105,14 +135,14 @@ public extension View {
 
     func addCorner(color: Color, lineWidth: CGFloat, padding: Bool) -> some View {
         self
-            .doIf_v1(padding) {$0.padding(8) }
+            .doIf_v1(padding) { $0.padding(8) }
             .overlay(Capsule(style: .continuous).stroke(color, lineWidth: lineWidth).foregroundColor(Color.clear))
     }
 
     // Draw a corner, outside the View
     func addOuterCornerOverlaying(color: UIColor, radius: CGFloat = 3, width: CGFloat = 2, padding: Bool) -> some View {
         self
-            .doIf_v1(padding) {$0.padding(8) }
+            .doIf_v1(padding) { $0.padding(8) }
             .overlay(RoundedRectangle(cornerRadius: radius).addSimpleStroke(color: color, width: width))
     }
 
@@ -139,7 +169,7 @@ public struct ViewExtensions: View {
 
     public var body: some View {
         ScrollView {
-            Text("View+Extensions").font(.title).Print("Hi", $text, "Goodbye")
+            Text("View+Extensions").font(.title).SwiftUIDebugPrint("Hi", $text, "Goodbye")
             Divider()
             VStack(alignment: .center) {
                 VStack {

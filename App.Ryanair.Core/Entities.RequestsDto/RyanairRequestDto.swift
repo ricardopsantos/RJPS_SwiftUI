@@ -5,6 +5,8 @@
 
 import Foundation
 
+// Encapsulate RequestDtos
+
 public struct RyanairRequestDto {
     private init() {}
 }

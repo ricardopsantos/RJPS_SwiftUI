@@ -24,8 +24,8 @@ public struct DashboardView: View {
     @State private var result: Result<MFMailComposeResult, Error>?
     @State private var isShowingMailView = false
 
-    @ObservedObject private var viewModel: DashBoardViewModel
-    public init(viewModel: DashBoardViewModel) {
+    @ObservedObject private var viewModel: VM.DashBoardViewModel
+    public init(viewModel: VM.DashBoardViewModel) {
         self.viewModel = viewModel
     }
 

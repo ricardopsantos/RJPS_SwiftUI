@@ -16,7 +16,7 @@ __Combine = Publishers + Subscribers + Operators__
 
 ![Combine_I](Combine_I.png)
 
-### Publisher
+### Combine Intro (1/3) - Publisher
 
 `Publisher` sends sequences of values over time to one or more `Subscribers`. 
 
@@ -38,7 +38,7 @@ Apart from that, publisher implements the `receive(subscriber:)` method to conne
 
 ![Publishers_1](Publishers_1.png)
 
-### Subscriber
+### Combine Intro (2/3) - Subscriber
 
 Subscribers, on the other hand, subscribe to one specific publisher instance, and receive a stream of values, until the subscription is canceled.
 
@@ -55,8 +55,8 @@ They describe three events that can occur in one’s lifetime and are related to
 * `receive(subscription: Subscription)` : successfully subscribed to the publisher. Called exactly once
 * `receive(_ value: Input) -> Subscribers.Demand` : Publisher can provide zero or more values to the Subscriber
 * `receive(completion: Subscribers.Completion<Failure>)` : Publisher can send exactly one completion. It can indicate successful completion or error
-* 
-### Operators
+
+### Combine Intro (3/3) - Operators
 
 Publishers and subscribers are the backbones of SwiftUI’s two-way synchronization between the UI and the underlying model. I think you will agree that it has never been easier to keep your UI and model in sync than with SwiftUI, and this is all thanks to this part of the Combine framework.
 Operators, however, are Combine’s superpower. They are methods that operate on a Publisher, perform some computation, and produce another Publisher in return.
@@ -67,17 +67,16 @@ Operators, however, are Combine’s superpower. They are methods that operate on
 
 ![Operators_1](Operators_1.png)
 
-
-
-
 ## Combine
 
-### Combine Sample : Connecting Publisher to Subscriber
+### Combine : Publisher + Subscriber
 
 Combine has two built-in subscribers: `Subscribers.Sink` and `Subscribers.Assign`. You can connect them by calling either of these methods on a publisher :
 
 * `sink(receiveCompletion:receiveValue:)` to handle new element or completion event in a closure.
 * `assign(to:on:)` to write new element to a property.
+
+__Code sample__
 
 ```swift
 // 1
@@ -101,11 +100,7 @@ __Code Sample__
 ```swift
 class Tab5_ViewRouter: ObservableObject {
     let objectWillChange = PassthroughSubject<Tab5_ViewRouter, Never>() 
-    var currentPage: Tab5Pages = .page1 {
-        didSet {
-            objectWillChange.send(self)
-        }
-    }
+    var currentPage: Tab5Pages = .page1 { didSet { objectWillChange.send(self) } }
 }
 ```
 
@@ -115,17 +110,24 @@ __Code Sample__
 class SampleUserSettings: ObservableObject {
     let objectWillChange = PassthroughSubject<Void, Never>()
     @UserDefault("ShowOnStart", defaultValue: true)
-    var showOnStart: Bool {
-        willSet {
-            objectWillChange.send()
-        }
-    }
+    var showOnStart: Bool { willSet { objectWillChange.send() } }
 }
 ```
+---
+
+### Combine :  `@Published`
+
+As on [Apple Docs](https://developer.apple.com/documentation/combine/published) : _A type that publishes a property marked with an attribute._
+
+@Published is one of the most useful property wrappers in SwiftUI, allowing us to create __observable objects that automatically announce when changes occur.__
+
+SwiftUI will automatically monitor for such changes, and re-invoke the body property of any views that rely on the data. In practical terms, that means whenever an object with a property marked @Published is changed, all views using that object will be reloaded to reflect those changes.
+
+__Code Sample__ : See @ObservableObjectClass section
 
 ---
 
-### `CurrentValueSubject`
+###  Combine : `CurrentValueSubject`
 
 As on [Apple Docs](https://developer.apple.com/documentation/combine/currentvaluesubject) : _A subject that wraps a single value and publishes a new element whenever the value changes._
 
@@ -142,19 +144,6 @@ var1.send(["test", "test1"])
 var2.send(1)
 var3.send(Date())
 ```
-
----
-
-### `@Published`
-
-As on [Apple Docs](https://developer.apple.com/documentation/combine/published) : _A type that publishes a property marked with an attribute._
-
-@Published is one of the most useful property wrappers in SwiftUI, allowing us to create observable objects that automatically announce when changes occur.
-
-SwiftUI will automatically monitor for such changes, and re-invoke the body property of any views that rely on the data. In practical terms, that means whenever an object with a property marked @Published is changed, all views using that object will be reloaded to reflect those changes.
-
-__Code Sample__ : See @ObservableObjectClass section
-
 
 ## SwiftUI
 
@@ -187,13 +176,11 @@ Note that `@State` variables are also great while prototyping your app. For exam
 @State var text = ""
 ```
 
----
-
 ### SwiftUI : `@Binding`
 
 As stated on [Apple Docs](https://developer.apple.com/documentation/swiftui/binding) : _A property wrapper type that can read and write a value owned by a source of truth._
 
-Use a binding to create a two-way connection between a property that stores data, and a view that displays and changes the data. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. 
+Use a binding to __create a two-way connection between a property that stores data, and a view that displays and changes the data__. A binding connects a property to a source of truth stored elsewhere, instead of storing data directly. 
 
 __Code Sample__
 
@@ -220,11 +207,24 @@ struct VisualDocs_Binding_I: View {
 
 ---
 
+### SwiftUI : `@Environmentate`
+
+In SwiftUI, the _environment_ is a global set of variables that work to describe the environment in which the app is running. Things like are we in Light or Dark mode? What’s the current vertical size class? Horizontal?
+These variables can be queried to determine that current state of the device and the app so that you can do the right thing at the right time.
+You can also add your own information to the environment and access it later on, further down the view hierarchy.
+
+```swift
+@EnvironmentObject var settings: UserSettings
+@Environment(\.colorScheme) var colorScheme: ColorScheme
+```
+
+---
+
 ### SwiftUI : `@EnvironmentObject`
 
 As stated on [Apple Docs](https://developer.apple.com/documentation/swiftui/environmentobject) : _A property wrapper type for an observable object supplied by a parent or ancestor view._
 
-An _EnvironmentObject_ is a data model which, once initialised, can share data to all view’s of your app. Is property wrapper to define "an observable object supplied by a parent or ancestor view." Every time the wrapped _ObservableObject_ emits a change, the framework will invalidate the view, resulting in a redraw.
+An _EnvironmentObject_ is a data model which, __once initialised, can share data to all view’s of your app__. Is property wrapper to define "an observable object supplied by a parent or ancestor view." Every time the wrapped _ObservableObject_ emits a change, the framework will invalidate the view, resulting in a redraw.
 
 __Code Sample__
 

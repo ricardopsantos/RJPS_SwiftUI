@@ -21,14 +21,14 @@ public struct RyanairView1Builder: BuilderProtocol {
         let apiRyanair_B = APIRyanair_B()
         let fetcher: APIRyanairProtocol = FetcherRyanair(webAPI_A: apiRyanair_A, webAPI_B: apiRyanair_B)
         let repository: RepositoryRyanairProtocol = RepositoryRyanair()
-        let viewModel  = RyanairView1ViewModel(fetcher: fetcher, repository: repository)
+        let viewModel = VM.RyanairView1ViewModel(fetcher: fetcher, repository: repository)
         return RyanairView1(viewModel: viewModel)
     }
 
     public static func buildMockView() -> some View {
         let fetcher: APIRyanairProtocol = FetcherRyanairMock()
         let repository: RepositoryRyanairProtocol = RepositoryRyanair()
-        let viewModel  = RyanairView1ViewModel(fetcher: fetcher, repository: repository)
+        let viewModel = VM.RyanairView1ViewModel(fetcher: fetcher, repository: repository)
         return RyanairView1(viewModel: viewModel)
     }
 }
