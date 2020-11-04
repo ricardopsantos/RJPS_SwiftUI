@@ -11,7 +11,7 @@ import UIKit
 import Utils
 
 public extension VM {
-    public class DayDetailsViewModel: ObservableObject {
+    class DayDetailsViewModel: ObservableObject {
 
         // Encapsulate the ViewModel internal/auxiliar state properties
         @Published private var vmInternalState: ViewModelState = ViewModelState()

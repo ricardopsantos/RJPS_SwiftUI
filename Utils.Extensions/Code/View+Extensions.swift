@@ -23,10 +23,10 @@ public extension View {
 
     func buildPreviews() -> some View {
         Group {
-            self
-            self.environment(\.colorScheme, .dark)
-            self.previewDevice("iPhone 8")
-            self.previewDevice("iPhone 11 Pro")
+            self.previewDisplayName("Default")
+            self.environment(\.colorScheme, .dark).previewDisplayName("Dark")
+            self.previewDevice("iPhone 8").previewDisplayName("Default - iPhone8")
+            self.previewDevice("iPhone 11 Pro").previewDisplayName("Default - iPhone11")
         }
     }
 

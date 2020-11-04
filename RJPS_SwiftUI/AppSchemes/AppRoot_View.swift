@@ -43,6 +43,11 @@ struct AppRoot_View: View {
 
 struct AppRoot_View_Previews_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        AppRoot_View().buildPreviews()
+        Group {
+            AppRoot_View().previewDisplayName("Default")
+            AppRoot_View().environment(\.colorScheme, .dark).previewDisplayName("Dark")
+            AppRoot_View().previewDevice("iPhone 8").previewDisplayName("Default - iPhone8")
+            AppRoot_View().previewDevice("iPhone 11 Pro").previewDisplayName("Default - iPhone11")
+        }
     }
 }
