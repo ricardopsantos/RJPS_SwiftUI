@@ -16,7 +16,9 @@ __Combine = Publishers + Subscribers + Operators__
 
 ![Combine_I](Combine_I.png)
 
-### Combine Intro (1/3) - Publisher
+---
+
+### Combine Intro (1/3) : Publisher
 
 `Publisher` sends sequences of values over time to one or more `Subscribers`. 
 
@@ -38,7 +40,9 @@ Apart from that, publisher implements the `receive(subscriber:)` method to conne
 
 ![Publishers_1](Publishers_1.png)
 
-### Combine Intro (2/3) - Subscriber
+---
+
+### Combine Intro (2/3) : Subscriber
 
 Subscribers, on the other hand, subscribe to one specific publisher instance, and receive a stream of values, until the subscription is canceled.
 
@@ -56,7 +60,9 @@ They describe three events that can occur in one’s lifetime and are related to
 * `receive(_ value: Input) -> Subscribers.Demand` : Publisher can provide zero or more values to the Subscriber
 * `receive(completion: Subscribers.Completion<Failure>)` : Publisher can send exactly one completion. It can indicate successful completion or error
 
-### Combine Intro (3/3) - Operators
+---
+
+### Combine Intro (3/3) : Operators
 
 Publishers and subscribers are the backbones of SwiftUI’s two-way synchronization between the UI and the underlying model. I think you will agree that it has never been easier to keep your UI and model in sync than with SwiftUI, and this is all thanks to this part of the Combine framework.
 Operators, however, are Combine’s superpower. They are methods that operate on a Publisher, perform some computation, and produce another Publisher in return.
@@ -91,7 +97,7 @@ publisher.sink(receiveCompletion: { _ in
 
 ---
 
-### Combine : `PassthroughSubject`
+### Combine (1/3) : `PassthroughSubject`
 
 As in [Apple Docs](https://developer.apple.com/documentation/combine/passthroughsubject) : _A subject that broadcasts elements to downstream subscribers._
 
@@ -115,7 +121,7 @@ class SampleUserSettings: ObservableObject {
 ```
 ---
 
-### Combine :  `@Published`
+### Combine (2/3) : `@Published`
 
 As on [Apple Docs](https://developer.apple.com/documentation/combine/published) : _A type that publishes a property marked with an attribute._
 
@@ -127,7 +133,7 @@ __Code Sample__ : See @ObservableObjectClass section
 
 ---
 
-###  Combine : `CurrentValueSubject`
+###  Combine (3/3) : `CurrentValueSubject`
 
 As on [Apple Docs](https://developer.apple.com/documentation/combine/currentvaluesubject) : _A subject that wraps a single value and publishes a new element whenever the value changes._
 
@@ -147,7 +153,27 @@ var3.send(Date())
 
 ## SwiftUI
 
-### SwiftUI : `@State`
+### SwiftUI Intro
+
+These three play together to give us a way to change individual properties of a reference type and still communicate changes to SwiftUI, so it knows to re-render.
+
+__ObservableObject__ is a protocol you adopt on your reference type and __@ObservedObject__ is a property wrapper for a view property, which holds a reference.
+
+By using __@ObservedObject__ on a property, you are basically saying to SwiftUI to go and look inside the object that the property holds a reference to. 
+
+Look inside and subscribe to changes from properties that are marked with __@Published__.
+
+__@Published__ wraps a property on a reference type with the observable container, just like __@State__ does it for view properties.
+
+![ObservableObject](ObservableObject_I.png)
+
+---
+
+### SwiftUI (1/7) : `@Published`
+
+---
+
+### SwiftUI (2/7) : `@State`
 
 As in [Apple Docs](https://developer.apple.com/documentation/swiftui/state) : _A property wrapper type that can read and write a value managed by SwiftUI._
 
@@ -176,7 +202,35 @@ Note that `@State` variables are also great while prototyping your app. For exam
 @State var text = ""
 ```
 
-### SwiftUI : `@Binding`
+---
+
+__State with value type__
+
+![](State_I.png)
+
+`@State` creates an observable container for our property and puts it outside of the view. SwiftUI now keeps the connection between our view and the observed data. So that next time this view is re-created, it can inject the data into the corresponding property of the view.
+
+---
+
+__State with reference type__
+
+You just need to keep in mind that the property you wrap with@State will hold a reference, and a reference will be the only thing SwiftUI will store in the state and observe for changes.
+
+![](State_II.png)
+
+---
+
+### SwiftUI (3/7) : `@StateObject`
+
+It does all the same things as @ObservedObject but additionally puts observed properties into the state outside of the view hierarchy.
+
+![](StateObject_I.png)
+
+__When to use @ObservedObject instead of @StateObject? : Use @StateObject in the view which creates an object. Use @ObservedObject when the view receives objects from outside.__
+
+---
+
+### SwiftUI (4/7) : `@Binding`
 
 As stated on [Apple Docs](https://developer.apple.com/documentation/swiftui/binding) : _A property wrapper type that can read and write a value owned by a source of truth._
 
@@ -207,7 +261,7 @@ struct VisualDocs_Binding_I: View {
 
 ---
 
-### SwiftUI : `@Environmentate`
+### SwiftUI (5/7) : `@Environmentate`
 
 In SwiftUI, the _environment_ is a global set of variables that work to describe the environment in which the app is running. Things like are we in Light or Dark mode? What’s the current vertical size class? Horizontal?
 These variables can be queried to determine that current state of the device and the app so that you can do the right thing at the right time.
@@ -220,7 +274,7 @@ You can also add your own information to the environment and access it later on,
 
 ---
 
-### SwiftUI : `@EnvironmentObject`
+### SwiftUI (6/7) : `@EnvironmentObject`
 
 As stated on [Apple Docs](https://developer.apple.com/documentation/swiftui/environmentobject) : _A property wrapper type for an observable object supplied by a parent or ancestor view._
 
@@ -278,11 +332,13 @@ __More__
 
 ---
 
-### SwiftUI : `@ObservedObject`
+### SwiftUI (7/7) : `@ObservedObject`
 
 As on [Apple Docs](https://developer.apple.com/documentation/swiftui/ObservedObject) : _A property wrapper type that subscribes to an observable object and invalidates a view whenever the observable object changes._
 
 It is external to the view, it is a reference value (e.g., a class) and its storage is managed by you, giving you more flexibility to implement your own logic.
+
+__When to use @ObservedObject instead of @StateObject? : Use @StateObject in the view which creates an object. Use @ObservedObject when the view receives objects from outside.__
 
 __Code Sample__ : See section @EnvironmentObject
 
