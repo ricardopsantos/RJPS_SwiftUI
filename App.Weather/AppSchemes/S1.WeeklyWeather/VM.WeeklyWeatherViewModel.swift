@@ -6,69 +6,71 @@
 import SwiftUI
 import Combine
 //
+import DevTools
 import Utils_Extensions
 import Utils
 //
 import App_Weather_Core
 
-// Make WeeklyWeatherViewModel conform to ObservableObject and Identifiable.
-// Conforming to these means that the WeeklyWeatherViewModel‘s properties can
-// be used as bindings. You’ll see how to create them once you reach the View layer.]
+public extension VM {
 
-public class WeeklyWeatherViewModel: ObservableObject {
+    class WeeklyWeatherViewModel: ObservableObject {
 
-    // Encapsulate the ViewModel internal/auxiliar state properties
-    @Published private var vmInternalState: ViewModelState = ViewModelState()
-    class ViewModelState: ObservableObject {
+        // Encapsulate the ViewModel internal/auxiliar state properties
+        @Published private var vmInternalState: ViewModelState = ViewModelState()
+        class ViewModelState: ObservableObject {
 
-    }
-    
-    // Encapsulate that the View properties that the ViewModel needs to read on to work
-    @Published var viewOut: ViewStateOut = ViewStateOut()
-    class ViewStateOut: ObservableObject {
-        @Published var city: String = ""
-    }
+        }
 
-    // Encapsulate that the View properties that the ViewModel updates in order to change UI
-    @Published var viewIn: ViewStateIn = ViewStateIn()
-    class ViewStateIn: ObservableObject {
+        // Encapsulate that the View properties that the ViewModel needs to read on to work
+        @Published var viewOut: ViewStateOut = ViewStateOut()
+        class ViewStateOut: ObservableObject {
+            @Published var city: String = ""
+        }
+
+        // Encapsulate that the View properties that the ViewModel updates in order to change UI
+        @Published var viewIn: ViewStateIn = ViewStateIn()
+        class ViewStateIn: ObservableObject {
+            @Published fileprivate(set) var dataSourceB: [VM.DailyWeatherRowViewModel] = []
+        }
+
         @Published var isLoading: Bool = false
-        @Published fileprivate(set) var dataSource: [VM.DailyWeatherRowViewModel] = []
-    }
 
-    private let fetcher: APIWeatherProtocol
-    private var repository: RepositoryWeatherProtocol
-    private var cancelBag = CancelBag()
+        private let fetcher: APIWeatherProtocol
+        private var repository: RepositoryWeatherProtocol
+        private var cancelBag = CancelBag()
 
-    public init(fetcher: APIWeatherProtocol, repository: RepositoryWeatherProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
-        self.fetcher = fetcher
-        self.repository = repository
+        public init(fetcher: APIWeatherProtocol, repository: RepositoryWeatherProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
+            self.fetcher = fetcher
+            self.repository = repository
 
-        let observer = self.viewOut.$city.dropFirst(1).debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            let observer = self.viewOut.$city.dropFirst(1).debounce(for: .seconds(1), scheduler: DispatchQueue.main)
 
-        // 1 - call fetchWeather
-        observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
+            // 1 - call fetchWeather
+            observer.sink(receiveValue: fetchWeather(forCity:)).store(in: cancelBag)
 
-        // 2 - Update AppDefaultsRepository.shared.lastCity on change
-        observer.sink(receiveValue: { [weak self] (some) in
-            self?.repository.lastCity = some
-        }).store(in: cancelBag)
+            // 2 - Update AppDefaultsRepository.shared.lastCity on change
+            observer.sink(receiveValue: { [weak self] (some) in
+                self?.repository.lastCity = some
+            }).store(in: cancelBag)
 
-        // This code is after the observers, so that when we change the value of [city] the app will react and refresh
-        self.viewOut.city = repository.lastCity
+            // This code is after the observers, so that when we change the value of [city] the app will react and refresh
+            self.viewOut.city = repository.lastCity
+            
+        }
     }
 }
 
-private extension WeeklyWeatherViewModel {
+private extension VM.WeeklyWeatherViewModel {
 
     func fetchWeather(forCity city: String) {
 
-        self.viewIn.isLoading = true
+        self.isLoading = true
         // Start by making a new request to fetch the information from the OpenWeatherMap API.
         // Pass the city name as the argument.
         fetcher.weeklyWeatherForecast(forCity: city)
             .map {
-                // Map the response (WeeklyForecastResponse object) to an array of DailyWeatherRowViewModel
+                // Map the response (WeatherResponseDto.WeeklyForecastEntity object) to an array of DailyWeatherRowViewModel
                 // objects. This entity represents a single row in the list. You can check the
                 // implementation located in DailyWeatherRowViewModel.swift. With MVVM, it’s paramount
                 // for the ViewModel layer to expose to the View exactly the data it will need. It
@@ -89,16 +91,17 @@ private extension WeeklyWeatherViewModel {
             // completion — either a successful or failed one — happens separately from handling values.
             .sink(
                 receiveCompletion: { [weak self] value in
-                    self?.viewIn.isLoading = false
                     guard let self = self else { return }
+                    self.isLoading = false
                     switch value {
-                    case .failure: self.viewIn.dataSource = []
+                    case .failure: self.viewIn.dataSourceB = []
                     case .finished: break
                     }
                 },
-                receiveValue: { [weak self] forecast in
+                receiveValue: { [weak self] records in
                     guard let self = self else { return }
-                    self.viewIn.dataSource = forecast
+                    self.viewIn.dataSourceB = records
+                    DevTools.log("Received \(records.count) records. \(records.map({ $0.temperature }))")
             })
             // Finally, add the cancellable reference to the disposables set. As previously
             // mentioned, without keeping this reference alive, the network publisher will terminate immediately.
@@ -106,7 +109,7 @@ private extension WeeklyWeatherViewModel {
     }
 }
 
-extension WeeklyWeatherViewModel {
+extension VM.WeeklyWeatherViewModel {
     var currentWeatherView: some View {
         let viewModel = VM.CurrentWeatherViewModel(city: viewOut.city, weatherFetcher: fetcher)
         return CurrentWeatherView(viewModel: viewModel)

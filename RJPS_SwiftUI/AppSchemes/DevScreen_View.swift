@@ -14,6 +14,7 @@ import Utils_Designables
 
 struct DevScreen_View: View {
     var body : some View {
+
         NavigationView {
             List {
                 Section(header: Text("WIKI Reference")) {
@@ -93,10 +94,11 @@ struct DevScreen_View: View {
         .tabItem({ VStack { ImageNames.heart.image; Text("Dev") } })}
 }
 
-// MARK: - Preview
-
 public struct DevScreen_PreviewProvider: PreviewProvider {
     public static var previews: some View {
-        DevScreen_View().buildPreviews()
+        Group {
+            DevScreen_View().previewDisplayName("Default")
+            DevScreen_View().environment(\.colorScheme, .dark).previewDisplayName("Dark")
+        }
     }
 }

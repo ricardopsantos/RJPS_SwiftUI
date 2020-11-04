@@ -10,49 +10,50 @@ import UIKit
 //
 import Utils
 
-public class DayDetailsViewModel: ObservableObject {
+public extension VM {
+    class DayDetailsViewModel: ObservableObject {
 
-    // Encapsulate the ViewModel internal/auxiliar state properties
-    @Published private var vmInternalState: ViewModelState = ViewModelState()
-    class ViewModelState: ObservableObject {
-        var weekDay: Int = 0
-        var timeZone: Int = 0
-    }
+        // Encapsulate the ViewModel internal/auxiliar state properties
+        @Published private var vmInternalState: ViewModelState = ViewModelState()
+        class ViewModelState: ObservableObject {
+            var weekDay: Int = 0
+            var timeZone: Int = 0
+        }
 
-    // Encapsulate that the View properties that the ViewModel needs to read on to work
-    @Published var viewOut: ViewStateOut = ViewStateOut()
-    class ViewStateOut: ObservableObject {
+        // Encapsulate that the View properties that the ViewModel needs to read on to work
+        @Published var viewOut: ViewStateOut = ViewStateOut()
+        class ViewStateOut: ObservableObject {
 
-    }
+        }
 
-    // Encapsulate that the View properties that the ViewModel updates in order to change UI
-    @Published var viewIn: ViewStateIn = ViewStateIn()
-    class ViewStateIn: ObservableObject {
-        @Published fileprivate(set) var taskNow = ""
-        @Published fileprivate(set) var day = ""
-        let availableHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
-    }
+        // Encapsulate that the View properties that the ViewModel updates in order to change UI
+        @Published var viewIn: ViewStateIn = ViewStateIn()
+        class ViewStateIn: ObservableObject {
+            @Published fileprivate(set) var taskNow = ""
+            @Published fileprivate(set) var day = ""
+            let availableHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+        }
 
-    private let fetcher: APIProtocol
-    private var cancelBag = CancelBag()
+        private let fetcher: APIProtocol
+        private var cancelBag = CancelBag()
 
-    public init(weekDay: Int, timeZone: Int, fetcher: APIProtocol) {
-        self.fetcher = fetcher
-        self.vmInternalState.weekDay = weekDay
-        self.vmInternalState.timeZone = timeZone
-    }
+        public init(weekDay: Int, timeZone: Int, fetcher: APIProtocol) {
+            self.fetcher = fetcher
+            self.vmInternalState.weekDay = weekDay
+            self.vmInternalState.timeZone = timeZone
+        }
 
-    func refresh() {
-        fetchTaskNow(weekDay: vmInternalState.weekDay, timeZone: vmInternalState.timeZone)
-        fetchDay(weekDay: vmInternalState.weekDay)
-    }
+        func refresh() {
+            fetchTaskNow(weekDay: vmInternalState.weekDay, timeZone: vmInternalState.timeZone)
+            fetchDay(weekDay: vmInternalState.weekDay)
+        }
 
-    func task(weekDay: Int, hour: String) -> String {
-        FetcherStaticData.task(weekDay: weekDay, hour: hour)
+        func task(weekDay: Int, hour: String) -> String {
+            FetcherStaticData.task(weekDay: weekDay, hour: hour)
+        }
     }
 }
-
-private extension DayDetailsViewModel {
+private extension VM.DayDetailsViewModel {
     func fetchTaskNow(weekDay: Int, timeZone: Int) {
         fetcher.fetchTask(weekDay: weekDay, hour: Date.getUserHour(diff: timeZone)).receive(on: DispatchQueue.main).sink(receiveCompletion: { value in
             switch value {

@@ -12,8 +12,9 @@ import Utils
 import App_Weather_Core
 
 public extension VM {
+    
     struct DailyWeatherRowViewModel: Identifiable {
-        private let item: WeatherDto.WeeklyForecastEntity.Item
+        private let item: WeatherResponseDto.WeeklyForecastEntity.Item
 
         public var id: String { return day + temperature + title }
         var day: String { return DateFormatters.dayFormatter.string(from: item.date) }
@@ -31,20 +32,18 @@ public extension VM {
             return description
         }
         
-        init(item: WeatherDto.WeeklyForecastEntity.Item) {
+        init(item: WeatherResponseDto.WeeklyForecastEntity.Item) {
             self.item = item
         }
     }
 }
 
-// Used to hash on just the day in order to produce a single view model for each
-// day when there are multiple items per each day.
 extension VM.DailyWeatherRowViewModel: Hashable {
     public static func == (lhs: VM.DailyWeatherRowViewModel, rhs: VM.DailyWeatherRowViewModel) -> Bool {
-        return lhs.day == rhs.day
+        return lhs.id == rhs.id
     }
     
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(self.day)
+        hasher.combine(self.id)
     }
 }

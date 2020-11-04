@@ -5,7 +5,8 @@
 
 import Foundation
 
-// Encapsulate Dtos
-public struct WeatherDto {
+// Encapsulate all WeatherRequestDto
+
+public struct WeatherRequestDto {
 
 }

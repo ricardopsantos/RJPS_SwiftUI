@@ -5,7 +5,7 @@
 
 import Foundation
 
-public extension WeatherDto {
+public extension WeatherResponseDto {
     struct CurrentWeatherForecastEntity: Decodable {
         public let coord: Coord
         public let main: Main

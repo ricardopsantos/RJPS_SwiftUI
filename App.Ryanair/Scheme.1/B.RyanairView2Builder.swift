@@ -21,7 +21,7 @@ public struct RyanairView2Builder: BuilderProtocol {
         let apiRyanair_B = APIRyanair_B()
         let fetcher: APIRyanairProtocol = FetcherRyanair(webAPI_A: apiRyanair_A, webAPI_B: apiRyanair_B)
         let repository: RepositoryRyanairProtocol = RepositoryRyanair()
-        let viewModel = RyanairView2ViewModel(fetcher: fetcher, repository: repository, flight: nil)
+        let viewModel = VM.RyanairView2ViewModel(fetcher: fetcher, repository: repository, flight: nil)
         return RyanairView2(viewModel: viewModel)
     }
 
@@ -30,7 +30,7 @@ public struct RyanairView2Builder: BuilderProtocol {
         let apiRyanair_B = APIRyanair_B()
         let fetcher: APIRyanairProtocol = FetcherRyanair(webAPI_A: apiRyanair_A, webAPI_B: apiRyanair_B)
         let repository: RepositoryRyanairProtocol = RepositoryRyanair()
-        let viewModel  = RyanairView2ViewModel(fetcher: fetcher, repository: repository, flight: flight)
+        let viewModel = VM.RyanairView2ViewModel(fetcher: fetcher, repository: repository, flight: flight)
         return RyanairView2(viewModel: viewModel)
     }
 }

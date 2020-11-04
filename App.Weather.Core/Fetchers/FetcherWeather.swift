@@ -18,11 +18,11 @@ public class FetcherWeather {
 }
 
 extension FetcherWeather: APIWeatherProtocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeatherDto.WeeklyForecastEntity, APIError> {
+    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {
         return forecast(with: APIWeather.makeWeeklyForecastComponents(withCity: city))
     }
 
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<WeatherDto.CurrentWeatherForecastEntity, APIError> {
+    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError> {
         return forecast(with: APIWeather.makeCurrentDayForecastComponents(withCity: city))
     }
 }

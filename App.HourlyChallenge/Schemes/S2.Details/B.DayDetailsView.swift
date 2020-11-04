@@ -4,9 +4,7 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
-import Combine
 //
 import Base_Domain
 
@@ -15,16 +13,16 @@ import Base_Domain
 // The method [static func buildView()] is mandatory, but we can have more
 //
 
-struct DayDetailsViewBuilder : BuilderProtocol {
+public struct DayDetailsViewBuilder : BuilderProtocol {
     private init() { }
 
-    static func buildView() -> some View {
+    public static func buildView() -> some View {
         return buildView(0, 0)
     }
 
     static func buildView(_ weekDay: Int, _ timeZone: Int) -> some View {
         let fetcher: APIProtocol = Fetcher()
-        let viewModel = DayDetailsViewModel(weekDay: weekDay, timeZone: timeZone, fetcher: fetcher)
+        let viewModel = VM.DayDetailsViewModel(weekDay: weekDay, timeZone: timeZone, fetcher: fetcher)
         return DayDetailsView(weekDay: weekDay, timeZone: timeZone, viewModel: viewModel)
     }
 }
