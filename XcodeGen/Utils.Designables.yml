@@ -1,0 +1,8 @@
+  Utils.Designables:
+    templates:
+      - Framework
+    sources:
+      - path: ../Utils.Designables
+    dependencies:
+      - target: DevTools
+        link: false

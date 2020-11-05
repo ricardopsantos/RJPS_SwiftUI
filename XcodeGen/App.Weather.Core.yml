@@ -1,0 +1,8 @@
+  App.Weather.Core:
+    templates:
+      - Framework
+    sources:
+      - path: ../App.Weather.Core
+    dependencies:
+      - target: DevTools
+        link: false

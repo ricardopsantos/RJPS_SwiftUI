@@ -1,0 +1,5 @@
+  PublicCode:
+    templates:
+      - Framework
+    sources:
+      - path: ../PublicCode

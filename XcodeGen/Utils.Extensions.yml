@@ -1,0 +1,8 @@
+  Utils.Extensions:
+    templates:
+      - Framework
+    sources:
+      - path: ../Utils.Extensions
+    dependencies:
+      - target: DevTools
+        link: false

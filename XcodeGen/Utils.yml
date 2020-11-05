@@ -1,0 +1,8 @@
+Utils:
+    templates:
+      - Framework
+    sources:
+      - path: ../Utils
+    dependencies:
+      - target: DevTools
+        link: false

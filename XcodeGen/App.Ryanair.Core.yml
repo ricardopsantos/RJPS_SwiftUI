@@ -1,0 +1,8 @@
+  App.Ryanair.Core:
+    templates:
+      - Framework
+    sources:
+      - path: ../App.Ryanair.Core
+    dependencies:
+      - target: DevTools
+        link: false

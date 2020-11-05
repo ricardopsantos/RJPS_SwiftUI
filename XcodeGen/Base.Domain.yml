@@ -1,0 +1,8 @@
+  Base.Domain:
+    templates:
+      - Framework
+    sources:
+      - path: ../Base.Domain
+    dependencies:
+      - target: DevTools
+        link: false

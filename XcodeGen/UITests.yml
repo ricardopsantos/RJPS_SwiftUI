@@ -1,0 +1,5 @@
+  UITests:
+    templates:
+      - Framework
+    sources:
+      - path: ../UITests
