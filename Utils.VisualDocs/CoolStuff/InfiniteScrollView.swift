@@ -142,7 +142,7 @@ class RepositoriesViewModel: ObservableObject {
     }
 }
 
-struct InfiniteScrollView_PreviewProvider: PreviewProvider {
+public struct InfiniteScrollView_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         InfiniteScrollView(viewModel: RepositoriesViewModel())
     }

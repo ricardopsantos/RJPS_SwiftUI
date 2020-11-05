@@ -47,8 +47,8 @@ struct VisualDocs_Padding: View {
 
 // MARK: - Preview
 
-struct VisualDocs_Padding_PreviewProvider: PreviewProvider {
-    static var previews: some View {
+public struct VisualDocs_Padding_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
         VisualDocs_Padding()
     }
 }

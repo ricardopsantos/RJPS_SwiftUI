@@ -165,7 +165,7 @@ struct WelcomeView: View {
 
 // MARK: - Preview VisualDocs_Binding_State
 
-struct PasswordChecker_PreviewProvider: PreviewProvider {
+public struct PasswordChecker_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         PasswordChecker()
     }
