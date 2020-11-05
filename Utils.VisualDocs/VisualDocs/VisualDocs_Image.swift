@@ -87,8 +87,8 @@ struct VisualDocs_Image: View {
 
 // MARK: - Preview
 
-struct VisualDocs_Image_PreviewProvider: PreviewProvider {
-    static var previews: some View {
+public struct VisualDocs_Image_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
         VisualDocs_Image()
     }
 }

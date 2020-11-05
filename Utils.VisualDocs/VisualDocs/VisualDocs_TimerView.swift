@@ -45,7 +45,7 @@ struct VisualDocs_TimerView_II: View {
 
 // MARK: - Preview
 
-struct VisualDocs_TimerView_PreviewProvider: PreviewProvider {
+public struct VisualDocs_TimerView_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         TabView {
             VisualDocs_TimerView_I().tabItem({ Text("1") })

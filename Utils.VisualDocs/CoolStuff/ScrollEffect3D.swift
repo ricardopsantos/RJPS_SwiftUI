@@ -29,7 +29,7 @@ struct ScrollEffect3D: View {
     }
 }
 
-struct ScrollEffect3D_PreviewProvider: PreviewProvider {
+public struct ScrollEffect3D_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         let colors = [Color.pink, Color.red, Color.blue, Color.orange]
         return ScrollEffect3D(colors: colors)

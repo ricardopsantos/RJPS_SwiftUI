@@ -44,8 +44,8 @@ struct VisualDocs_TabView: View {
 
 // MARK: - Preview
 
-struct VisualDocs_TabView_PreviewProvider: PreviewProvider {
-    static var previews: some View {
+public struct VisualDocs_TabView_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
         VisualDocs_TabView()
     }
 }

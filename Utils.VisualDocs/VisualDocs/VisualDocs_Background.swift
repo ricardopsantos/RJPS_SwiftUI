@@ -68,7 +68,7 @@ struct VisualDocs_Background_I: View {
 
 // MARK: - Preview
 
-struct VisualDocs_Background_PreviewProvider: PreviewProvider {
+public struct VisualDocs_Background_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         TabView {
             VisualDocs_Background_I().tabItem({ Text("1") })

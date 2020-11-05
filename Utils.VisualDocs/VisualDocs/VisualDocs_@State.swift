@@ -140,7 +140,7 @@ struct VisualDocs_State_IV: View {
 
 // MARK: - Preview All
 
-struct VisualDocs_State_PreviewProvider: PreviewProvider {
+public struct VisualDocs_State_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         TabView {
             VisualDocs_State_Intro().tabItem({ Text("Intro") })

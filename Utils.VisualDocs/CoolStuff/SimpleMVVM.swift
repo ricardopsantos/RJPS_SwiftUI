@@ -32,7 +32,7 @@ class SimpleMVVM_ViewModel: ObservableObject {
     public func countDown() { count = SimpleMVVM_Model.decrementCount(currentCount: count) }
 }
 
-struct SimpleMVVM_PreviewProvider: PreviewProvider {
+public struct SimpleMVVM_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         SimpleMVVM().environmentObject(SimpleMVVM_ViewModel())
     }

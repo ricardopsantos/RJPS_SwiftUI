@@ -101,7 +101,7 @@ struct VisualDocs_ForEach: View {
 
 // MARK: - Preview
 
-struct VisualDocs_ForEach_PreviewProvider: PreviewProvider {
+public struct VisualDocs_ForEach_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         VisualDocs_ForEach()
     }

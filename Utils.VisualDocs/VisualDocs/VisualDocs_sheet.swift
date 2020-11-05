@@ -71,7 +71,7 @@ struct VisualDocs_Sheet_BaseII: View {
 
 // MARK: - Preview
 
-struct VisualDocs_Sheet_PreviewProvider: PreviewProvider {
+public struct VisualDocs_Sheet_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         TabView {
             VisualDocs_Sheet_BaseI().tabItem({ Text("1") })

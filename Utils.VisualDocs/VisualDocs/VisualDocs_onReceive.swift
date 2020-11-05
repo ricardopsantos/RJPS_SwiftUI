@@ -32,8 +32,8 @@ struct VisualDocs_onReceive: View {
 
 // MARK: - Preview 
 
-struct VisualDocs_OnReceive_PreviewProvider: PreviewProvider {
-    static var previews: some View {
+public struct VisualDocs_OnReceive_PreviewProvider: PreviewProvider {
+    public static var previews: some View {
         VisualDocs_onReceive()
     }
 }
