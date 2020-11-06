@@ -7,10 +7,10 @@ import SwiftUI
 import Combine
 //
 import DevTools
-import Utils_Extensions
+import UtilsExtensions
 import Utils
 //
-import App_Weather_Core
+import AppWeatherCore
 
 public extension VM {
 

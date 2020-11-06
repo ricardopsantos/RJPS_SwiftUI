@@ -5,6 +5,8 @@
 
 import Foundation
 
+#warning("mudar o extension onde está")
+
 public extension E {
      enum HourlyErrorEntity: Error {
         case customError(description: String)

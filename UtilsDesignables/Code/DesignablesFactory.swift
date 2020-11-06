@@ -7,7 +7,7 @@ import UIKit
 import Foundation
 import SwiftUI
 //
-import Utils_Extensions
+import UtilsExtensions
 
 public struct DesignablesFactory {
     private init() { }

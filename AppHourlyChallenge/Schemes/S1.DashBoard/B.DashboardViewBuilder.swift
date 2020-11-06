@@ -16,7 +16,7 @@ import BaseDomain
 public struct DashboardViewBuilder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
-        let fetcher: APIProtocol = Fetcher()
+        let fetcher: APIProtocol = FetcherHourlyChallenge()
         let viewModel = VM.DashBoardViewModel(fetcher: fetcher)
         return DashboardView(viewModel: viewModel)
     }

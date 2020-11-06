@@ -5,7 +5,7 @@
 
 import Foundation
 //
-import Base_Domain
+import BaseDomain
 
 public extension RyanairResponseDto {
 

@@ -6,7 +6,7 @@
 import Foundation
 import Combine
 //
-import Utils_Extensions
+import UtilsExtensions
 
 public class SimpleNetworkAgent_B: SimpleNetworkAgentProtocol {
     private init() { self.session = URLSession.defaultForConnectivity }

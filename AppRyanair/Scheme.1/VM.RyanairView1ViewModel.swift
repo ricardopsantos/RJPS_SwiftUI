@@ -6,11 +6,11 @@
 import SwiftUI
 import Combine
 //
-import Utils_Extensions
+import UtilsExtensions
 import Utils
 //
 import App_Ryanair_Core
-import Base_Domain
+import BaseDomain
 
 public extension VM {
     class RyanairView1ViewModel: ObservableObject {

@@ -6,8 +6,8 @@
 import Foundation
 import Combine
 //
-import Utils_Storage
-import Utils_Networking
+import UtilsStorage
+import UtilsNetworking
 
 public struct APIRyanair_A {
     public init() {}

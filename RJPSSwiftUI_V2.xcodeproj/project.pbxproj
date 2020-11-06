@@ -9,218 +9,185 @@
 /* Begin PBXBuildFile section */
 		0248E15A4E4A5B1FDD6D9B17 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2EFDE664CB56797D4114E /* APIError.swift */; };
 		04EF128BBB67BCB2716968D5 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B9FA6D389E15ED676272 /* typelias.swift */; };
-		0514DB51E12580E0E0D799CA /* VisualDocs_LayoutInScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D52154EA978B5A93AF1D79 /* VisualDocs_LayoutInScrollView.swift */; };
 		06C9432AD11F9BE416B00EBB /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BED57BB0DE1AE39345F92 /* APIProtocol.swift */; };
+		09D3A30B585E24BEF241F011 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37813D51A12394580FC1138 /* typelias.swift */; };
 		0B0450A7F696945C3B13484F /* Form.Autocomplete.png in Resources */ = {isa = PBXBuildFile; fileRef = D71187CE3B40946CA1DEE71C /* Form.Autocomplete.png */; };
 		0B06B36CC4FF8F1001690B9A /* Error+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32656132416D5362C50DD179 /* Error+Extensions.swift */; };
 		0B06EBAA7F88F654FF3802D1 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53D7FFD1A7793E29DA5EB76 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift */; };
 		0C1BCBB88929A127884D7079 /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A07A978302F7EA9725C202 /* NavigationStack.swift */; };
 		0D340530E6D9DA51F8A01602 /* AppWeather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA47ADF484C65D38C73F6E1F /* AppWeather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0DA1F188814DA7C472369B56 /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E124E42C56D3444D658CA6 /* InfiniteScrollView.swift */; };
 		0F1396718E8670DEE7067097 /* VM.DashboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A0E411ECEC1B71D256565B /* VM.DashboardViewViewModel.swift */; };
 		0F38C655C290674D121EC8B6 /* Form.Results.1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8CC877033BD59D91F9634F2 /* Form.Results.1.png */; };
-		10F5C57BDEA7B825B3719754 /* Recreating.AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CBAA6EDE8E4513D9F514D4 /* Recreating.AppStore.swift */; };
 		12DACDC0A18674B1DF33062B /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E51CAEC4C7514346E6527A5 /* UserDefaultsPropertyWrapper.swift */; };
-		157EEBF42BAAAFD568A17DEA /* FetcherRyanairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3AC8CC94D1B2516AD0A3B /* FetcherRyanairMock.swift */; };
-		158B111127ECE594EAE0983C /* SendEMailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43A761D9B5913D34E12FD /* SendEMailViewControllerRepresentable.swift */; };
 		18A5D3C74D862973F24C2BA5 /* App_HourlyChallenge.h in Headers */ = {isa = PBXBuildFile; fileRef = 027DDC1D4B5A1EEBA8E49BBE /* App_HourlyChallenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1913D8E4C19A17C12F0B0419 /* E.HourlyErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C736DCFF49568E817CCDA35C /* E.HourlyErrorEntity.swift */; };
-		1B9D593F4227E02896A9718A /* VisualDocs_Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0005DF39895AC1C55C9C8BE2 /* VisualDocs_Shadows.swift */; };
 		1D2B6B78EB8AACC3B3C0465E /* CachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC43BB53AFD1B2E7016568B /* CachePolicy.swift */; };
 		1D2E622C927090B5AA19189B /* DevScreen_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E26BC311E92868D55DC5519 /* DevScreen_View.swift */; };
+		1E01295F3DEFB0024A7A8406 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC85B9A8CB07E486A4E649 /* typelias.swift */; };
 		1E324AA233363664477C48E8 /* Form.Details.1.png in Resources */ = {isa = PBXBuildFile; fileRef = A95D19CA35BD642C0605B3D6 /* Form.Details.1.png */; };
-		1ED4B0A7BD061B89D1394DE7 /* VisualDocs_ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F5AA1C4919D829CD9E738E /* VisualDocs_ForEach.swift */; };
 		20611C9DE861B2D5E5F34A17 /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DD07816282DCFAB21D2D61 /* ActivityIndicatorRepresentable.swift */; };
-		21410E6D7EE43E872F80CC22 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191B996509BF0E0EC325DEF /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */; };
-		22F0855F07654D8B33B8315F /* VisualDocs_Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15DC349C26A96B793B6AD9 /* VisualDocs_Form.swift */; };
-		24A3F1643156A52AF336FBE1 /* FetcherRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB05AC7ACF323FCB5512CF /* FetcherRyanair.swift */; };
+		22769483F309E58606C45A09 /* HourlyChallengeResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB083487B5DC5D3AEC3E5991 /* HourlyChallengeResponseDto.swift */; };
 		25051AEC2DD3ABA2F0F0C881 /* APIWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4745BB0634E393057F056A89 /* APIWeather.swift */; };
-		26544D90B593100F27A5998E /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFBA3DF6D5C431405B384A2 /* Recreating.Messages_III.swift */; };
-		26B03EB555FF085DEA3E40B1 /* FetcherWeatherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6018ED6FF7B539F3AFA24F98 /* FetcherWeatherMock.swift */; };
 		28B7CFA6256D2E7991F78F27 /* RepositoryHourlyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD31AC2C437AB2F267DFB6A /* RepositoryHourlyChallenge.swift */; };
-		290DC6FEEE37AC72360E0B73 /* VisualDocs_sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7D18EB3F0C9E0DB988CDA /* VisualDocs_sheet.swift */; };
 		29BFD8105157FF6B2A43E9FC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8F7161FD969EB4C9911D1 /* ActivityIndicator.swift */; };
 		29F41850752C46E1752146D8 /* SimpleNetworkAgent_B.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CD829A77DE0CA9CC2A59CE /* SimpleNetworkAgent_B.swift */; };
 		2A3BD81F00A49E6DC6443B55 /* SimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17FB548F4A1E4F72E300144 /* SimpleNetworkAgentProtocol.swift */; };
-		2B92B22393992BB30AA737D5 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ACB1723560B384564ACE69 /* PasswordChecker.swift */; };
-		2C748ABEE66EEA537AEAE229 /* VisualDocs_SwiftUI_Lab_Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C54685C316B2CD25BA62D /* VisualDocs_SwiftUI_Lab_Triangle.swift */; };
+		2C415D6D2356E5DAE91DBEA4 /* FetcherHourlyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AE907CB9C6588BAB5B453 /* FetcherHourlyChallenge.swift */; };
 		2D492973C424503F7F5A4523 /* Form.Results.2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D111911EBC5C6E07049F391 /* Form.Results.2.png */; };
-		2D7F97E0E2D878C9B1A23A8E /* ShowAlertContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFCCDA89713BEB82B6E718 /* ShowAlertContentView.swift */; };
 		2F854AF8B4656FB44B6D606D /* DevTools+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14062032218BC9B83167BC /* DevTools+Log.swift */; };
 		2FF13434146DDA7239BABF38 /* V.DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55ACEC6AFC2546A60FD4577 /* V.DashboardView.swift */; };
-		30FF29DBE8B21EDF366BEBC3 /* VisualDocs_onReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBE40A7C89841059B17700 /* VisualDocs_onReceive.swift */; };
 		3375B182B5B7E515BD96AD7F /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7CF663E514F96ACDA0971B /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33966C710B4B5A745CCAF7A1 /* TestingAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA875C4E2BA4CABC6B8D3F /* TestingAPIProtocol.swift */; };
 		346C29DABEED4BB69823BFB7 /* Form.Validations.1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4DBC0413BAECCE1BD087DC2 /* Form.Validations.1.png */; };
-		3541AC58243B0DFE0C4FCAB0 /* LastShelterHourlyMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8989AC3087583D0CC6D707 /* LastShelterHourlyMainScreen.swift */; };
 		368EF23E355B5FF7EEDC956F /* AppRyanair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A28512F7BBD69CF2ACC7885 /* AppRyanair.framework */; };
-		36ADD2A9B6331E5FCB388568 /* VisualDocs_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEC029FCB7DF7968D59A81 /* VisualDocs_Image.swift */; };
 		37A641364AE0548B7FC097B1 /* B.DashboardViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58765EF7DD31B34B8C2920 /* B.DashboardViewBuilder.swift */; };
 		38AFCB9244A1DE21E091F183 /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EB8A10D058DF3340A9FB3 /* APICacheManager.swift */; };
 		398DD451129BEC57FD0F7C2F /* RepositoryWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCE50FD26534FECAC45C62 /* RepositoryWeatherProtocol.swift */; };
-		3B07D6175FB6FA0A67B69ABB /* VisualDocs_TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E053024B9870BB5AE2DA11C9 /* VisualDocs_TimerView.swift */; };
 		3B945F6C30E508A25919EF1E /* SampleAPI_Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E2AEA0F476C7EA31644F0 /* SampleAPI_Testing.swift */; };
 		3C207E298E87B14E15CA55C0 /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19317EC144F39C3D4BF9A59F /* DevTools.swift */; };
 		3CFC580CE2AAA51DD446A336 /* APIWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EF9F76794822F75BCA5C /* APIWeatherProtocol.swift */; };
 		3F4CA7CB23107ED6EEBECDC0 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774C2F7342A2F565AD68FD08 /* ProcessInfo.swift */; };
-		3F9102DCC042EE33ADD36926 /* Utils_VisualDocs.h in Headers */ = {isa = PBXBuildFile; fileRef = 335DEE055F8E0597B4CB79D1 /* Utils_VisualDocs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40B382D8C3E0D3B6BE03E805 /* Recreating.HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D09C854073E01B33283ACC /* Recreating.HomeScreen.swift */; };
 		44AB43AE5882E1718C2310DA /* B.CurrentWeatherViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783877FBE44C08E222285EB /* B.CurrentWeatherViewBuilder.swift */; };
 		454195639565AEE46363DBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B537ECD7A3952AEB70B78C6 /* LaunchScreen.storyboard */; };
 		475C2E11817777FC897D643C /* V.DailyWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200E653AF8CEA7C89DFB331 /* V.DailyWeatherRowView.swift */; };
-		491624E423A77F7516FE038E /* VisualDocs_RemoteImageLoadging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C717B6ABE728167C785CDA /* VisualDocs_RemoteImageLoadging.swift */; };
-		4A11245C2F540F05F59C2D8B /* VisualDocs_Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24411E79DDE97020CE8F812 /* VisualDocs_Buttons.swift */; };
-		4B11C3900F816E623147EB0D /* VisualDocs_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = E373D812E02A8FB0E75491AC /* VisualDocs_onDelete.swift */; };
 		4B64A71610FD99D2CA2F517B /* VM.CurrentWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E18D2E8D24C8E2555DF69B /* VM.CurrentWeatherRowViewModel.swift */; };
 		4BC6B0526701E5C00C2FA77F /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F9E00BCD0822A0CFE158A /* Result+Extensions.swift */; };
+		4E6C98C2A3781BE547CD064A /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16951FC4AEB4B290AD72393C /* typelias.swift */; };
 		52278F6AF4831A1CCC624993 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EC9229AB1F64A3D9B95B01 /* ListItemModel.swift */; };
 		527B94B1A58DEF22B2F61B7F /* Storage.typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8766722FDB490E5B8EE7F55C /* Storage.typealias.swift */; };
 		566360BB52D770B83E04A9CD /* Designables.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E59A92F3552E157B82C7F4E /* Designables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		589009855EB7C0B5D8C095F9 /* V.MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F4059A90EB022B056A30 /* V.MapViewRepresentable.swift */; };
 		58F47D550601251EC58D9325 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B20ECAF2E2791B8A7CEA1B /* URLSession+Extensions.swift */; };
 		594DD4F8FB6B747B8A55A7B7 /* B.DayDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694B30BC0E63B2237A64DE4 /* B.DayDetailsView.swift */; };
-		5BB8D11513D0AC42CD8CD72B /* Recreating.Maps_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E92C789B832E3DA7592F83 /* Recreating.Maps_II.swift */; };
+		5A084EFA8BEEE04CB804EAA6 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F95DA534949AF911D18E9F /* typelias.swift */; };
 		5EC204CB7C1F40EFE7CCD4A8 /* RyanairMappers.ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D891405A58F35680F25497B /* RyanairMappers.ListItemModel.swift */; };
 		5F44B1F06DCF0BABD498C29C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FDE0D1000334B6DA80E4F6 /* LaunchScreen.storyboard */; };
-		5FFFD18B7C4FA697DD594DAE /* Recreating.Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D91D50C30610FD8C2CE3C0 /* Recreating.Reminder.swift */; };
-		6173BFCF8BD284B6C036A106 /* VisualDocs_Binding.State copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F80CFFA178387763547F7C /* VisualDocs_Binding.State copy.swift */; };
-		61868A1C73F911D557D807CF /* VisualDocs_WaysToReactToState_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5645E64E5E07500E33D7C5 /* VisualDocs_WaysToReactToState_I.swift */; };
 		618FAFFA130EF82B82636D5E /* Response<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C26B950C6D640F1EA78B7 /* Response<T>.swift */; };
 		6223D535930BE49A07B88018 /* PointFreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B06B849BEB1709D0E84D8 /* PointFreeFunctions.swift */; };
-		62EDD6BDB506E9BB71A449BF /* VisualDocs_onEditingChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9B684B4469928167BFD38 /* VisualDocs_onEditingChanged.swift */; };
 		635A4720109EFDAE793B0CB1 /* GenericStorableKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB0D05C0CA9D6554EED2C62 /* GenericStorableKeyValueModel.swift */; };
 		641C699E23B7E532B5492D3D /* RepositoryRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706F4E8A13BBBF6F75688F8 /* RepositoryRyanair.swift */; };
 		6562DD128F53BEE73C9B6253 /* AppRyanair.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A28512F7BBD69CF2ACC7885 /* AppRyanair.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6735AB758BAB569105180BED /* RyanairRequestDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED23E562D9EA44A00B7A9C /* RyanairRequestDto.Availability.swift */; };
-		68F6BFBC3FA2FBC2D9C3ED10 /* SimpleMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EA84A90D5432E7DE8A330D /* SimpleMVVM.swift */; };
 		6BB1C4F2E4FBD3F8720AADF9 /* V.DayDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EF7FA45E3890ACCCC47E5A /* V.DayDetailsView.swift */; };
-		7256E383E4F7BB1995D4A463 /* VisualDocs_UserDefaultsWithPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422836C835C90720860B64C /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */; };
+		6D293C93C502B78EF8ECA253 /* FetcherWeatherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D95C0F1F079A377B6138FC /* FetcherWeatherMock.swift */; };
 		73A061D7D37BC3C0E8E02CF9 /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3F7592C9A28F37096886 /* OSLog+Extension.swift */; };
 		750D9D0F5A44C912D93D6815 /* App_Ryanair.h in Headers */ = {isa = PBXBuildFile; fileRef = 78FE48541F227A5D4C2C5E0C /* App_Ryanair.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		766EE58384FAFF21E8B6EC36 /* WeatherResponseDto.WeeklyForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38315D271FB3ACA27CEC61B8 /* WeatherResponseDto.WeeklyForecastEntity.swift */; };
 		784B735FF1722869EFB354C9 /* RyanairRequestDto.Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400FC51D2C7E81A63867592F /* RyanairRequestDto.Stations.swift */; };
 		7903EC17A48CAED3A48CD82F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E72A2C48119A800C421AD /* AppDelegate.swift */; };
-		79BFDAFE1AB93E8938713183 /* VisualDocs_@EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59567EBEBD72FCEB932F5549 /* VisualDocs_@EnvironmentObject.swift */; };
-		7BD65AFD47C67234488B7C02 /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56170ED13603A6068534DFBC /* Recreating.Tinder.swift */; };
-		7D2C1E7FA233126626E4E5C3 /* VisualDocs_WaysToReactToState_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A45F9CC9CE0D467C04E9C9 /* VisualDocs_WaysToReactToState_II.swift */; };
 		7D68F64B97D6E20A70604B44 /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F06C719CBC0149E0C042BB /* Storage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DD05F7DACFCB66F2624A914 /* RyanairResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBEE21375584F167AB733F /* RyanairResponseDto.swift */; };
-		7F5D6ABCD9F42B2CEF7AA94E /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD151813DC3AEE9434F198A /* Recreating.Messages_I.swift */; };
 		8074656ABC83F3B5AFDDA9FE /* RyanairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75D3198CF7F4B5C35553AE4 /* RyanairModel.swift */; };
 		820E85EE8DF8658BFCFA20BB /* RepositorRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541A1B76385F1992F42EBF4 /* RepositorRyanairProtocol.swift */; };
 		828A687C6D411526FC70AAC5 /* V.CurrentWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB88EC5F9B9DC72B4F7DF78 /* V.CurrentWeatherRowView.swift */; };
+		82C0018B8CF1EFD8A099D466 /* FetcherRyanairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92C182C75BB93951CFBD7D /* FetcherRyanairMock.swift */; };
 		8347D61CEB62A2E8D3F355DA /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBDCE4BC9C419876BF9EE64 /* CancelBag.swift */; };
 		838686A1248123A19D04965B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570276D910DFFE7AEFA29D63 /* String+Extensions.swift */; };
-		8426BB2DC297DD1525DAEFFB /* VisualDocs_Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E771E124697BBF7DBD1BE5 /* VisualDocs_Fonts.swift */; };
 		87904AFFE770B38355D204C5 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5424136BF7E4057AD12FFB93 /* NetworkUtils.swift */; };
-		8855A860E80AFFFA3D5211F9 /* VisualDocs_Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C9DCF09C999E2F1E63B01 /* VisualDocs_Shapes.swift */; };
 		88E9132E3CA078D160AE1C3B /* App_WeatherApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 953A9C8BB28787584D210806 /* App_WeatherApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89E0173BEE954902382E66BE /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDD3C846570DD2DE10B496D /* UIScreen+Extensions.swift */; };
 		89F64E0978B34DB9A80E8054 /* WeatherResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA16A503E1A8AB18B6510F /* WeatherResponseDto.swift */; };
 		8BCD02E4560A41C2A4DD28D1 /* DtoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115D0836B3F84D38B35BCC2 /* DtoProtocol.swift */; };
 		8BDB99A044B47C397BFB7766 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE910976B705E5EEA35FC5 /* UserDefaults+Extensions.swift */; };
 		8CEA6F0232FD4C20E35098ED /* APIResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76258898BB584EA08B93E6 /* APIResponseDto.swift */; };
-		8D38A16F63B161C43858C36F /* VisualDocs_Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5B35B6032144AC7C21CD98 /* VisualDocs_Text.swift */; };
 		8D976776BA01471DC5D5DC44 /* MailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272CE4CDC48F084D4CDDCF69 /* MailViewControllerRepresentable.swift */; };
-		8DCCB222750767A12350408C /* VisualDocs_Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2895B34003B462D8FB442 /* VisualDocs_Background.swift */; };
-		8FCA7034ECC4EA998DB8CC5A /* VisualDocs_RouteToAndCameBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07D4D793400A6F48AB21BED /* VisualDocs_RouteToAndCameBack.swift */; };
 		904A3819DC5100CDBDB6B3B4 /* HotCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6521B98EBA27A00B2CCF9B /* HotCacheManager.swift */; };
 		921C58FD88F96A334CDD1B9D /* RepositoryHourlyChallengeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF195719F0519F4C1C6175 /* RepositoryHourlyChallengeProtocol.swift */; };
 		921FE44D61CBE351303424F4 /* RyanairRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F95EE2FC42097F534BC3740 /* RyanairRequestDto.swift */; };
 		93D99FF2A27357BD36A617C0 /* Designables_PassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40149D00AAA923D935CA0517 /* Designables_PassCode.swift */; };
-		94288BB837497FF50E854E5C /* VisualDocs_TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D52EC7D85F69FA35B120B58 /* VisualDocs_TabView.swift */; };
 		948B2074F698C828DA8D7B88 /* V.CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2B15566CB3D4A2A047CA8 /* V.CurrentWeatherView.swift */; };
 		9642BCBFB69797761EB1F434 /* App_Ryanair_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 371075B99E5DCC8C68F26662 /* App_Ryanair_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96BCD6AEF421B769574F50C4 /* Publisher+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AC4E4A6D71101D9784402C /* Publisher+Publisher.swift */; };
 		96DD398D3FB92941153BB07C /* RyanairMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7670EF8675C23D5696771FC /* RyanairMappers.swift */; };
 		9701B4863D53F196DDD46250 /* AppHourlyChallenge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11FA5AC7F76911E93DB92EAB /* AppHourlyChallenge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		985CD3D0A0A90F11929CC6D3 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72112575FCE8BC4D7FEC8F3B /* DateFormatters.swift */; };
-		9CDF50BFDDB81AF120AE383D /* VisualDocs_horizontalSizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8E802EB6FBE3F4EECB5BF /* VisualDocs_horizontalSizeClass.swift */; };
-		9EE1D0F83C38BAD384D6F792 /* Recreating.Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F174C9A7195AAC68B82FE9 /* Recreating.Settings.swift */; };
-		9FB692CE2A2F0BA01035F0F9 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AB53EA5271CB2B2F523F7 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift */; };
 		A04BCDF80A39817B16A4593A /* RyanairResponseDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1386E278EF424DD09A2743AA /* RyanairResponseDto.Availability.swift */; };
-		A0BF6666C3881E4312769AF8 /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7016CA9A127EBDDEA4357 /* Recreating.Messages_II.swift */; };
 		A115735698FEE223EB2EE703 /* VM.DayDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4837523BC9DCB636D0F5AD6E /* VM.DayDetailsViewModel.swift */; };
-		A15035457129B65010EE0192 /* VisualDocs_@Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD8483CB172FD0FFC0E082 /* VisualDocs_@Binding.swift */; };
 		A17499D985FC58AEE98B07DE /* TestingAPI_VersionB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB623939C629D31724FAC /* TestingAPI_VersionB.swift */; };
 		A2176AC88993F48C888B1A65 /* PublicCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA2E66C45120762EFBA4CE5 /* PublicCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A22CD091E0CFB70C4D708474 /* Preview.Multiple.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F16695B697A2995579A6ED /* Preview.Multiple.png */; };
 		A2B3AA94DB571EC0E18C9D40 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8802CACCB121B22F1226275D /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A498CD51089D570712189B69 /* RyanairResponseDto.Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A66464A3865FDE55F1C41F /* RyanairResponseDto.Stations.swift */; };
 		A69B367E4DD785962DB25012 /* RyanairModel.AirPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADC1EBCEADAF05E2713D6ED /* RyanairModel.AirPort.swift */; };
-		A74EF6E86CF5923780553546 /* Recreating.Maps_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBD07DB8B389B191D50BBE /* Recreating.Maps_I.swift */; };
 		A7605E7929E1B17E22AC5BB2 /* RepositoryWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0BF5816437C466B2D0CC5 /* RepositoryWeather.swift */; };
 		A81F6CBE2B3A13C35E929FC5 /* SimpleNetworkAgent_A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3164456653A12F446EB49E4E /* SimpleNetworkAgent_A.swift */; };
 		A88755DE1F47F5C34884ABAB /* VM.CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1820D44812A4EF3F9C5E1 /* VM.CurrentWeatherViewModel.swift */; };
-		A9C8D086DB917D6BE9B9C1F5 /* FetcherWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED885C938BAF5A7E979C5B73 /* FetcherWeather.swift */; };
 		AB80BE581E9AF4DD54E155A6 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671E06613D542228CED39B16 /* Text+Extensions.swift */; };
-		AB84028581FE24C77319C49F /* VisualDocs_@Published.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D83B4114F74AFFCEF24645 /* VisualDocs_@Published.swift */; };
 		ABDB560609D69408C86FFF8F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8B2BD7EF47E366372F740 /* View+Extensions.swift */; };
 		AC9F121479A40ADD2F74AC63 /* WeatherRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25DF826783574C3251B952 /* WeatherRequestDto.swift */; };
 		ADD7347E2F4B9CE641EA9873 /* VM.WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9534E47930F8C6673A0FD5 /* VM.WeeklyWeatherViewModel.swift */; };
-		B231A525BFC5CDF6F2D39AD8 /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38425713A15C919A12F66F /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */; };
-		B2B12B5A4434AADA0037ECF7 /* Recreating.iPhone12ProWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A81EBE0E25BF376417FB392 /* Recreating.iPhone12ProWebsite.swift */; };
-		B3F280F7B88934CD2B4BDA91 /* Recrating.InstagramMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B601C84863DE1DB38C4F55 /* Recrating.InstagramMessages.swift */; };
-		B57B057337053252984C0857 /* ScrollEffect3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF359E00D8AF0BAAC33E7E /* ScrollEffect3D.swift */; };
 		B8CD4AD03343F2867DD0F61B /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = AA22515626316068ED33688D /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA93AC05BC6CB26BFAFF5669 /* Recreating.Instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899011287D9461416EE098B7 /* Recreating.Instagram.swift */; };
 		C0A2E1DC1BF2D5226E5F071F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB261E3417A651FA9853BFAE /* Assets.xcassets */; };
 		C391159223E71B95ED072EB2 /* HourlyChallengeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF2EAA81CE0DD12FB408E09 /* HourlyChallengeFetcher.swift */; };
 		C467488F4111780F2F7296F2 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB8A1C026BEBAC24536BD /* Locale+Extensions.swift */; };
-		C5FF98A4946CF3E15BD42751 /* VisualDocs_Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADCEE5EC0E559E7EDA5DB9 /* VisualDocs_Lists.swift */; };
 		C6FC5D49106CA20EAD3829DA /* Form.Internet.1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8541BEDB578A377497D85C9 /* Form.Internet.1.png */; };
 		CA410037013DD307ABF6D331 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB64ECDA4A220820F6AE6480 /* CacheUtils.swift */; };
 		CB7783B3F15A111C97A993C3 /* AppWe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B4155C681EF50980E65D4DD /* AppWe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBF34CE497B6AE7A79701028 /* Preview.Mock.png in Resources */ = {isa = PBXBuildFile; fileRef = 82810501F058578718570AE3 /* Preview.Mock.png */; };
 		CD961F60C0ADF380D660006C /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE61FE46C6A1F10A9E8260B7 /* Image+Extensions.swift */; };
 		CE0E4E397F687205649F0533 /* DevTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CD745512419492075010983 /* DevTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D09ED045E16237ADF9814EF7 /* LastShelter_DayDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01540115F8B540E49A29C730 /* LastShelter_DayDetails.swift */; };
-		D0A1B0950E34F163A9E01932 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2521BEE2DF59B085458C965 /* Fetcher.swift */; };
+		D385A2A69561FA2DBD16AC3A /* FetcherRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = F783D728A0EA1BC9DF8ED1E6 /* FetcherRyanair.swift */; };
 		D3F8597D3EB98FD5825546C2 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6F6F63345F753FD0BFCD4C /* BuilderProtocol.swift */; };
 		D45F31D2DB0E2B703EE4A7CD /* APIRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF63C7A1D6830A7B476C131 /* APIRyanair.swift */; };
 		D493FCAFBBD280EADDA2B746 /* Scheme.1 in Resources */ = {isa = PBXBuildFile; fileRef = 821287E4C3CD8175D9A5DACD /* Scheme.1 */; };
 		D59D24EC811786B1634762AD /* Array+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D34D4596AB27F3EA2FAA91 /* Array+Filtering.swift */; };
+		D72766D72EE0D607FE3E0D59 /* FetcherWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BA4C7A5B16A138A9FEB71A /* FetcherWeather.swift */; };
 		D8C2213898B64B0892FD6938 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449894BA7D18006ACFCB7080 /* TextField+Extensions.swift */; };
 		DAB9D77B7A2C2C8E418F070B /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852842A5B423F03268064BF /* APIKeys.swift */; };
 		DD2A6CF8230C5BBE6661BAF6 /* AppRoot_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD323D5B174A074563ED746 /* AppRoot_View.swift */; };
 		DDC0DEC4745172284B6388D3 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102099EE37512AE9AC15006F /* JSONDecoder+Extensions.swift */; };
 		E1220C02675A312F28215D23 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 19FA3A641ABD70C05EC65173 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E16587C33E0D4476AC43A502 /* VisualDocs_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE862A640E3009256F39C2D /* VisualDocs_Combine.swift */; };
-		E3071A57451E10567378F606 /* Recreating.LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8C6996D9B872BBB430F86 /* Recreating.LockScreen.swift */; };
-		E3230EEFED07B15C7C5902B4 /* Networking.typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A19E1C873E8126B2A8C55C /* Networking.typelias.swift */; };
 		E3A15E87C5186E7D3290F932 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 720CEC21F8DFEEF084E1B69B /* Keys.plist */; };
 		E5D0AC7D9A9452FF095F4201 /* Subscribers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3557AF76EB8A924307F5EE /* Subscribers+Extensions.swift */; };
 		E5F7945DAB0D1DCA8F275299 /* DevTools+FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224944403F7DCA8B5C23E999 /* DevTools+FeatureFlag.swift */; };
 		E6763124E15DE61B2D1E9DAC /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C532D495F0B9DD31CB848 /* ConnectivityView.swift */; };
-		E73880E15F9577E2E2BAD352 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBC96CC533DAEB4FA9385A /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */; };
-		E764FCB199D70AC48AB0E8A8 /* VisualDocs_Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B03820768603732DC2DA15 /* VisualDocs_Padding.swift */; };
-		E7FDDBBF2074647982297D9C /* VisualDocs_ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A76F3F87F8897273D2E30E /* VisualDocs_ErrorHandling.swift */; };
 		E81B78866614A2DB01125458 /* DesignablesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2B2B3EB3442EB46A44BF7 /* DesignablesFactory.swift */; };
 		EA72C4493216D15DEFBC285A /* VM.DailyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC803950BBCAB32749E813 /* VM.DailyWeatherRowViewModel.swift */; };
 		EAA7FBB64D5399E55244BDFC /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671DFFCD24D9580F568A94D8 /* NSObject+Extensions.swift */; };
 		EB14314D7608CE116D688A18 /* V.WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837378564AAC88BB00342C34 /* V.WeeklyWeatherView.swift */; };
-		EBAB1D71EE2DCDF99F2E2325 /* Recreating.Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419F8EC30765C8E8C0782E1 /* Recreating.Twitter.swift */; };
-		ED606CB42C4423D729A0C714 /* VisualDocs_@State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F24FB5C728C4CA2BDCF2A /* VisualDocs_@State.swift */; };
 		EDB17148B9D45CB6FE3608B8 /* Designables_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02B0AF777D30E275D3ACA1 /* Designables_Preview.swift */; };
 		EF4887C449D7055E7E75302C /* Just+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6F001F078EB4A3049F0D04 /* Just+Extensions.swift */; };
-		F039FC45B54EEBFD26BA4F89 /* AppDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782DD7C492FE4847EE1C879 /* AppDefaultsRepository.swift */; };
 		F048A334D94915342EF9DC25 /* APIRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC940EDD5F10E7E7E2777B /* APIRyanairProtocol.swift */; };
+		F103064C18BB17330CD37B5F /* HourlyChallengeResponseDto.HourlyErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F9411610ED360B8E238BA /* HourlyChallengeResponseDto.HourlyErrorEntity.swift */; };
 		F1534BEA2883C901EEC4EC10 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D53C5A1113FC97CFD9737 /* UIColor+Extensions.swift */; };
 		F2F6FB7369B0AB6F4A116BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32066CA8C3E039529417B29 /* Assets.xcassets */; };
-		F46A54187580E5C7CB601C72 /* VisualDocs_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB843D92C3BBBE0B9BCCB68E /* VisualDocs_Colors.swift */; };
 		F498D16BBBCC43BE8EFABA42 /* DarkMode.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F5993CC16E205B3973132DB /* DarkMode.png */; };
 		F71C8801145E5AB316C43D0A /* B.WeeklyWeatherBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23DBFC820DF61C3EA8F7F8 /* B.WeeklyWeatherBuilder.swift */; };
-		F798DB9F204D80AB5491FED3 /* VisualDocs_NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5750DC679454B240C244C8E5 /* VisualDocs_NavigationView.swift */; };
 		F8B6E30D3913AB9E7A50BCB2 /* AppHourlyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FA5AC7F76911E93DB92EAB /* AppHourlyChallenge.framework */; };
 		F98A641F92BB32E5874A2545 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F08CC8340B85AC4B6CB4EA /* DateUtils.swift */; };
 		FB558C580611F90C95C4B80D /* AppWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47ADF484C65D38C73F6E1F /* AppWeather.framework */; };
-		FBE0D2C237048D4E73F2715A /* VisualDocs_Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C19851170E99AD363E8508 /* VisualDocs_Animations.swift */; };
 		FC63DEBE1DE8D12AE1C9F295 /* TestingAPI_VersionA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525EB7793D16A1FCCE39B15 /* TestingAPI_VersionA.swift */; };
 		FD9BF2F84C68B318B8936A3A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA74F06BDB51078BA768426 /* Date+Extensions.swift */; };
-		FF065E2225ABBE3549CDA87B /* Recreating.Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C15D530F271AAA47829FFF /* Recreating.Breathe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		14AC4D8DA784EB2A4EFEB27F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4886B4BF174E99AB1982127D;
+			remoteInfo = DevTools;
+		};
+		181012825043ED9B175FEE40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB41D4AE41EFEC25BE3D8A80;
+			remoteInfo = AppWeatherCore;
+		};
+		21F0880FED9176155737F963 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 559B8E96039B85D8BD495880;
+			remoteInfo = UtilsNetworking;
+		};
+		2489B9CF78EC3C76525BF37D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E71F3BD7B06D7D592696DD9D;
+			remoteInfo = Utils;
+		};
 		24F3468E040731B43BDC84B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
@@ -249,19 +216,40 @@
 			remoteGlobalIDString = 1B11CA5DB3DD17B41FB4C1EC;
 			remoteInfo = BaseDomain;
 		};
-		857280864FC5F1D457613734 /* PBXContainerItemProxy */ = {
+		69113F738901D46BAA938203 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 662B48486B4B1507C7499A00;
-			remoteInfo = UtilsDesignables;
+			remoteGlobalIDString = DB8F4869241B49335512A85D;
+			remoteInfo = AppRyanairCore;
 		};
-		B99BD34961042E5459CE44B2 /* PBXContainerItemProxy */ = {
+		7158123A42762AB5AAC2D541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E8B798166AF3C5EF938D16;
+			remoteInfo = UtilsStorage;
+		};
+		8F7C001F9260857B59CC7FF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B11CA5DB3DD17B41FB4C1EC;
+			remoteInfo = BaseDomain;
+		};
+		B4053E4373BCFB9AF0C75599 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 29ABC7E7DE1F8E032C4A9C81;
 			remoteInfo = UtilsExtensions;
+		};
+		C47CA3E7C78A0947485EB06F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B11CA5DB3DD17B41FB4C1EC;
+			remoteInfo = BaseDomain;
 		};
 		CD2E7C00D6819DCBCFEED0F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -310,108 +298,79 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0005DF39895AC1C55C9C8BE2 /* VisualDocs_Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Shadows.swift; sourceTree = "<group>"; };
-		01540115F8B540E49A29C730 /* LastShelter_DayDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShelter_DayDetails.swift; sourceTree = "<group>"; };
-		0191B996509BF0E0EC325DEF /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift; sourceTree = "<group>"; };
 		01C769B6C0F6821EA29F8894 /* AppWeatherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDC1D4B5A1EEBA8E49BBE /* App_HourlyChallenge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_HourlyChallenge.h; sourceTree = "<group>"; };
 		03C8F7161FD969EB4C9911D1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		03EA875C4E2BA4CABC6B8D3F /* TestingAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPIProtocol.swift; sourceTree = "<group>"; };
 		0541A1B76385F1992F42EBF4 /* RepositorRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorRyanairProtocol.swift; sourceTree = "<group>"; };
 		05AE80C74580F305CF034662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		06EA84A90D5432E7DE8A330D /* SimpleMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVM.swift; sourceTree = "<group>"; };
-		0782DD7C492FE4847EE1C879 /* AppDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaultsRepository.swift; sourceTree = "<group>"; };
 		07E8E4A205F201D470A440C0 /* Operators_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Operators_1.png; sourceTree = "<group>"; };
 		0B4155C681EF50980E65D4DD /* AppWe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWe.h; sourceTree = "<group>"; };
-		0BBDE1C9C5F9D687AC577A08 /* UtilsVisualDocs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsVisualDocs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CB9B684B4469928167BFD38 /* VisualDocs_onEditingChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onEditingChanged.swift; sourceTree = "<group>"; };
 		0CD745512419492075010983 /* DevTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevTools.h; sourceTree = "<group>"; };
 		0CDC909DE193B6496C70931E /* State_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_II.png; sourceTree = "<group>"; };
 		102099EE37512AE9AC15006F /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
-		10A45F9CC9CE0D467C04E9C9 /* VisualDocs_WaysToReactToState_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_WaysToReactToState_II.swift; sourceTree = "<group>"; };
 		11FA5AC7F76911E93DB92EAB /* AppHourlyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppHourlyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		127751B7109AA5EE18259512 /* UtilsDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1386E278EF424DD09A2743AA /* RyanairResponseDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Availability.swift; sourceTree = "<group>"; };
 		1619FB3DBF7C02D193113D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		16951FC4AEB4B290AD72393C /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		1852842A5B423F03268064BF /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		18E09F0C6C8C497667CCDB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		19317EC144F39C3D4BF9A59F /* DevTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTools.swift; sourceTree = "<group>"; };
 		19FA3A641ABD70C05EC65173 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		1A81EBE0E25BF376417FB392 /* Recreating.iPhone12ProWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.iPhone12ProWebsite.swift; sourceTree = "<group>"; };
 		1AF2EAA81CE0DD12FB408E09 /* HourlyChallengeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyChallengeFetcher.swift; sourceTree = "<group>"; };
 		1B8CED952F9503141933A9A6 /* State_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_I.png; sourceTree = "<group>"; };
-		1D52EC7D85F69FA35B120B58 /* VisualDocs_TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TabView.swift; sourceTree = "<group>"; };
-		1DB965D88ABE12AFE65D624B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1E25DF826783574C3251B952 /* WeatherRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.swift; sourceTree = "<group>"; };
 		1E59A92F3552E157B82C7F4E /* Designables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Designables.h; sourceTree = "<group>"; };
-		1F15DC349C26A96B793B6AD9 /* VisualDocs_Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Form.swift; sourceTree = "<group>"; };
 		1FBCE50FD26534FECAC45C62 /* RepositoryWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeatherProtocol.swift; sourceTree = "<group>"; };
 		224944403F7DCA8B5C23E999 /* DevTools+FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+FeatureFlag.swift"; sourceTree = "<group>"; };
 		249F6AB264F5D51992E658CB /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
+		25D95C0F1F079A377B6138FC /* FetcherWeatherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeatherMock.swift; sourceTree = "<group>"; };
 		25FC803950BBCAB32749E813 /* VM.DailyWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DailyWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		272CE4CDC48F084D4CDDCF69 /* MailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewControllerRepresentable.swift; sourceTree = "<group>"; };
-		27F5AA1C4919D829CD9E738E /* VisualDocs_ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ForEach.swift; sourceTree = "<group>"; };
-		2AD151813DC3AEE9434F198A /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		2BD1820D44812A4EF3F9C5E1 /* VM.CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 		2C6F6F63345F753FD0BFCD4C /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		2CFBEE21375584F167AB733F /* RyanairResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.swift; sourceTree = "<group>"; };
 		2F76258898BB584EA08B93E6 /* APIResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseDto.swift; sourceTree = "<group>"; };
-		30F80CFFA178387763547F7C /* VisualDocs_Binding.State copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_Binding.State copy.swift"; sourceTree = "<group>"; };
 		3164456653A12F446EB49E4E /* SimpleNetworkAgent_A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_A.swift; sourceTree = "<group>"; };
-		31BF359E00D8AF0BAAC33E7E /* ScrollEffect3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3D.swift; sourceTree = "<group>"; };
 		32656132416D5362C50DD179 /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
-		335DEE055F8E0597B4CB79D1 /* Utils_VisualDocs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils_VisualDocs.h; sourceTree = "<group>"; };
 		33EF7FA45E3890ACCCC47E5A /* V.DayDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.DayDetailsView.swift; sourceTree = "<group>"; };
 		3651BD6C12EDB8A44E91E64E /* ObservableObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObservableObject_I.png; sourceTree = "<group>"; };
 		371075B99E5DCC8C68F26662 /* App_Ryanair_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_Ryanair_Core.h; sourceTree = "<group>"; };
 		38315D271FB3ACA27CEC61B8 /* WeatherResponseDto.WeeklyForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.WeeklyForecastEntity.swift; sourceTree = "<group>"; };
 		3BEF195719F0519F4C1C6175 /* RepositoryHourlyChallengeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHourlyChallengeProtocol.swift; sourceTree = "<group>"; };
-		3D05E5C7D5C3CB8CA1F3926C /* Utils.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Utils.README.md; sourceTree = "<group>"; };
 		3DA6789C533798CE76863F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3EA74F06BDB51078BA768426 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		3F5F79D5583CA2D820CF16B9 /* UtilsDesignables.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsDesignables.README.md; sourceTree = "<group>"; };
 		400FC51D2C7E81A63867592F /* RyanairRequestDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Stations.swift; sourceTree = "<group>"; };
 		40149D00AAA923D935CA0517 /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
+		41106B4DF4A4BE987C161CC3 /* DevTools.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DevTools.README.md; sourceTree = "<group>"; };
 		42AC4E4A6D71101D9784402C /* Publisher+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Publisher.swift"; sourceTree = "<group>"; };
 		4322D21FBFA059A25040917B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		43A2895B34003B462D8FB442 /* VisualDocs_Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Background.swift; sourceTree = "<group>"; };
 		449894BA7D18006ACFCB7080 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
-		44C19851170E99AD363E8508 /* VisualDocs_Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Animations.swift; sourceTree = "<group>"; };
 		4745BB0634E393057F056A89 /* APIWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeather.swift; sourceTree = "<group>"; };
 		4798102BE167A50AA5B91DCB /* UtilsStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4837523BC9DCB636D0F5AD6E /* VM.DayDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DayDetailsViewModel.swift; sourceTree = "<group>"; };
-		49D8729663FD54E31FFE5115 /* BaseDomain.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BaseDomain.README.md; sourceTree = "<group>"; };
 		4AA3A0435C6A815C34EACA68 /* UtilsExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8BED57BB0DE1AE39345F92 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
-		4D8989AC3087583D0CC6D707 /* LastShelterHourlyMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShelterHourlyMainScreen.swift; sourceTree = "<group>"; };
 		4E11F4059A90EB022B056A30 /* V.MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.MapViewRepresentable.swift; sourceTree = "<group>"; };
-		4F844B10776E295ABD9EDAAC /* UtilsDesignables.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsDesignables.README.md; sourceTree = "<group>"; };
 		4F95EE2FC42097F534BC3740 /* RyanairRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.swift; sourceTree = "<group>"; };
 		5015373A8571EFA6AE752A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		50A66464A3865FDE55F1C41F /* RyanairResponseDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Stations.swift; sourceTree = "<group>"; };
-		51ACB1723560B384564ACE69 /* PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
-		53A19E1C873E8126B2A8C55C /* Networking.typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.typelias.swift; sourceTree = "<group>"; };
+		52BA4C7A5B16A138A9FEB71A /* FetcherWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeather.swift; sourceTree = "<group>"; };
 		5424136BF7E4057AD12FFB93 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		55B35950183FE0EF5158B79F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		56170ED13603A6068534DFBC /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 		570276D910DFFE7AEFA29D63 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		5750DC679454B240C244C8E5 /* VisualDocs_NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_NavigationView.swift; sourceTree = "<group>"; };
-		57E8E802EB6FBE3F4EECB5BF /* VisualDocs_horizontalSizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_horizontalSizeClass.swift; sourceTree = "<group>"; };
-		59567EBEBD72FCEB932F5549 /* VisualDocs_@EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@EnvironmentObject.swift"; sourceTree = "<group>"; };
-		59F174C9A7195AAC68B82FE9 /* Recreating.Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Settings.swift; sourceTree = "<group>"; };
+		5780BE24C83C9FB3F92DF177 /* UtilsExtensions.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsExtensions.README.md; sourceTree = "<group>"; };
+		58534EA6E7683AD76E090B05 /* AppRyanair.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppRyanair.README.md; sourceTree = "<group>"; };
 		5A28512F7BBD69CF2ACC7885 /* AppRyanair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A607F053A93A219D9243DF7 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
-		5B85E362CE164DD38DB8EF92 /* UtilsExtensions.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsExtensions.README.md; sourceTree = "<group>"; };
 		5E121CE990B04AFA70CA92C6 /* Designables_Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Designables_Preview.png; sourceTree = "<group>"; };
 		5E9C26B950C6D640F1EA78B7 /* Response<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response<T>.swift"; sourceTree = "<group>"; };
+		5EEC85B9A8CB07E486A4E649 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		5F5993CC16E205B3973132DB /* DarkMode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkMode.png; sourceTree = "<group>"; };
 		5FD31AC2C437AB2F267DFB6A /* RepositoryHourlyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHourlyChallenge.swift; sourceTree = "<group>"; };
-		5FFBA3DF6D5C431405B384A2 /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
-		6018ED6FF7B539F3AFA24F98 /* FetcherWeatherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeatherMock.swift; sourceTree = "<group>"; };
-		60E92C789B832E3DA7592F83 /* Recreating.Maps_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_II.swift; sourceTree = "<group>"; };
-		61AE1C00560B643F219A52DD /* DevTools.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DevTools.README.md; sourceTree = "<group>"; };
-		61E7016CA9A127EBDDEA4357 /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
-		62D09C854073E01B33283ACC /* Recreating.HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.HomeScreen.swift; sourceTree = "<group>"; };
-		6419F8EC30765C8E8C0782E1 /* Recreating.Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Twitter.swift; sourceTree = "<group>"; };
+		61D5753080FE65BF7DFD6638 /* BaseDomain.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BaseDomain.README.md; sourceTree = "<group>"; };
 		646E4C67B740AF1E2C2CCB18 /* MVVM.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVVM.README.md; sourceTree = "<group>"; };
 		6525EB7793D16A1FCCE39B15 /* TestingAPI_VersionA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionA.swift; sourceTree = "<group>"; };
 		660CB92AB5E19EF7DB176CAF /* DevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -419,8 +378,6 @@
 		671DFFCD24D9580F568A94D8 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		671E06613D542228CED39B16 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
 		67EC9229AB1F64A3D9B95B01 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
-		68C717B6ABE728167C785CDA /* VisualDocs_RemoteImageLoadging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RemoteImageLoadging.swift; sourceTree = "<group>"; };
-		69A43A761D9B5913D34E12FD /* SendEMailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEMailViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		6A14062032218BC9B83167BC /* DevTools+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+Log.swift"; sourceTree = "<group>"; };
 		6BE8B2BD7EF47E366372F740 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		6D891405A58F35680F25497B /* RyanairMappers.ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.ListItemModel.swift; sourceTree = "<group>"; };
@@ -429,14 +386,12 @@
 		70F2B2B3EB3442EB46A44BF7 /* DesignablesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignablesFactory.swift; sourceTree = "<group>"; };
 		720CEC21F8DFEEF084E1B69B /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Keys.plist; sourceTree = "<group>"; };
 		72112575FCE8BC4D7FEC8F3B /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
-		74CBAA6EDE8E4513D9F514D4 /* Recreating.AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.AppStore.swift; sourceTree = "<group>"; };
 		7661458154A662446E42992C /* UtilsNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76F95DA534949AF911D18E9F /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		774C2F7342A2F565AD68FD08 /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 		78FE48541F227A5D4C2C5E0C /* App_Ryanair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_Ryanair.h; sourceTree = "<group>"; };
-		79D83B4114F74AFFCEF24645 /* VisualDocs_@Published.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Published.swift"; sourceTree = "<group>"; };
 		79E2EFDE664CB56797D4114E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		7AB0D05C0CA9D6554EED2C62 /* GenericStorableKeyValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorableKeyValueModel.swift; sourceTree = "<group>"; };
-		7BE862A640E3009256F39C2D /* VisualDocs_Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Combine.swift; sourceTree = "<group>"; };
 		7DA2E66C45120762EFBA4CE5 /* PublicCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicCode.h; sourceTree = "<group>"; };
 		7DB88EC5F9B9DC72B4F7DF78 /* V.CurrentWeatherRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherRowView.swift; sourceTree = "<group>"; };
 		7FF63C7A1D6830A7B476C131 /* APIRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanair.swift; sourceTree = "<group>"; };
@@ -445,23 +400,19 @@
 		82810501F058578718570AE3 /* Preview.Mock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Preview.Mock.png; sourceTree = "<group>"; };
 		830FC817BD726FFE5A848230 /* AppRyanairCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837378564AAC88BB00342C34 /* V.WeeklyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.WeeklyWeatherView.swift; sourceTree = "<group>"; };
-		8422836C835C90720860B64C /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_UserDefaultsWithPropertyWrapper.swift; sourceTree = "<group>"; };
 		8487B9FA6D389E15ED676272 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		84F3AC8CC94D1B2516AD0A3B /* FetcherRyanairMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanairMock.swift; sourceTree = "<group>"; };
-		867A7042037B7551F5F2EB1B /* UtilsStorage.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsStorage.README.md; sourceTree = "<group>"; };
 		8766722FDB490E5B8EE7F55C /* Storage.typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.typealias.swift; sourceTree = "<group>"; };
 		87BA8FC8BC734D490224B5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8802CACCB121B22F1226275D /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		880AB623939C629D31724FAC /* TestingAPI_VersionB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionB.swift; sourceTree = "<group>"; };
 		884AC9DCD99182C4F0CED742 /* Publishers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Publishers_1.png; sourceTree = "<group>"; };
-		899011287D9461416EE098B7 /* Recreating.Instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Instagram.swift; sourceTree = "<group>"; };
 		89D848E728F4F5F7ECBE6559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8C9C9DCF09C999E2F1E63B01 /* VisualDocs_Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Shapes.swift; sourceTree = "<group>"; };
 		8CFC940EDD5F10E7E7E2777B /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		8D111911EBC5C6E07049F391 /* Form.Results.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Results.2.png; sourceTree = "<group>"; };
 		8FC43BB53AFD1B2E7016568B /* CachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicy.swift; sourceTree = "<group>"; };
+		90156D5ED0605359DC5E3345 /* Utils.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Utils.README.md; sourceTree = "<group>"; };
+		915AE907CB9C6588BAB5B453 /* FetcherHourlyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherHourlyChallenge.swift; sourceTree = "<group>"; };
 		928E72A2C48119A800C421AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92ADCEE5EC0E559E7EDA5DB9 /* VisualDocs_Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Lists.swift; sourceTree = "<group>"; };
 		945EB8A10D058DF3340A9FB3 /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
 		94B20ECAF2E2791B8A7CEA1B /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		953A9C8BB28787584D210806 /* App_WeatherApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_WeatherApp.h; sourceTree = "<group>"; };
@@ -469,20 +420,13 @@
 		96B0BF5816437C466B2D0CC5 /* RepositoryWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeather.swift; sourceTree = "<group>"; };
 		97D4EF9F76794822F75BCA5C /* APIWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeatherProtocol.swift; sourceTree = "<group>"; };
 		97FF70B17C12EA8929A9ECC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		99AEC029FCB7DF7968D59A81 /* VisualDocs_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Image.swift; sourceTree = "<group>"; };
 		99EC43A417E7A538FCEC3E95 /* StateObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StateObject_I.png; sourceTree = "<group>"; };
 		9B58765EF7DD31B34B8C2920 /* B.DashboardViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.DashboardViewBuilder.swift; sourceTree = "<group>"; };
-		9BF8C6996D9B872BBB430F86 /* Recreating.LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.LockScreen.swift; sourceTree = "<group>"; };
 		9C3557AF76EB8A924307F5EE /* Subscribers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subscribers+Extensions.swift"; sourceTree = "<group>"; };
 		9D3547569CA5446DD95C99A0 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E178BFE55B38A9EB71870A3 /* PublicCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PublicCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E26BC311E92868D55DC5519 /* DevScreen_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevScreen_View.swift; sourceTree = "<group>"; };
-		9E38425713A15C919A12F66F /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift; sourceTree = "<group>"; };
-		9EDFCCDA89713BEB82B6E718 /* ShowAlertContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertContentView.swift; sourceTree = "<group>"; };
-		A0A76F3F87F8897273D2E30E /* VisualDocs_ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ErrorHandling.swift; sourceTree = "<group>"; };
-		A21B0387F891B31C52D4EC9C /* UtilsNetworking.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsNetworking.README.md; sourceTree = "<group>"; };
 		A32066CA8C3E039529417B29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A5B601C84863DE1DB38C4F55 /* Recrating.InstagramMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recrating.InstagramMessages.swift; sourceTree = "<group>"; };
 		A6A0E411ECEC1B71D256565B /* VM.DashboardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DashboardViewViewModel.swift; sourceTree = "<group>"; };
 		A6F06C719CBC0149E0C042BB /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
 		A82B06B849BEB1709D0E84D8 /* PointFreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFreeFunctions.swift; sourceTree = "<group>"; };
@@ -490,81 +434,63 @@
 		A95D19CA35BD642C0605B3D6 /* Form.Details.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Details.1.png; sourceTree = "<group>"; };
 		AA22515626316068ED33688D /* Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extensions.h; sourceTree = "<group>"; };
 		AA7CF663E514F96ACDA0971B /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
-		AABBE40A7C89841059B17700 /* VisualDocs_onReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onReceive.swift; sourceTree = "<group>"; };
 		AAD6AF6837727E75ACF4344A /* Subscribers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subscribers_1.png; sourceTree = "<group>"; };
-		AB843D92C3BBBE0B9BCCB68E /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
+		AC41EF29018A7CB7F8966DAB /* Simulator Screen Shot - iPod touch (7th generation) - 2020-11-06 at 10.50.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPod touch (7th generation) - 2020-11-06 at 10.50.54.png"; sourceTree = "<group>"; };
 		ADDD3C846570DD2DE10B496D /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
-		B07D4D793400A6F48AB21BED /* VisualDocs_RouteToAndCameBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RouteToAndCameBack.swift; sourceTree = "<group>"; };
 		B2574D986FBC1B4751243F95 /* Combine_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_I.png; sourceTree = "<group>"; };
 		B28F82377033CE67F571E930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F08CC8340B85AC4B6CB4EA /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
-		B4CD8483CB172FD0FFC0E082 /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
 		B5A07A978302F7EA9725C202 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
-		B69F24FB5C728C4CA2BDCF2A /* VisualDocs_@State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@State.swift"; sourceTree = "<group>"; };
 		B75D3198CF7F4B5C35553AE4 /* RyanairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.swift; sourceTree = "<group>"; };
 		B8541BEDB578A377497D85C9 /* Form.Internet.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Internet.1.png; sourceTree = "<group>"; };
 		B8CC877033BD59D91F9634F2 /* Form.Results.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Results.1.png; sourceTree = "<group>"; };
 		BD23DBFC820DF61C3EA8F7F8 /* B.WeeklyWeatherBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.WeeklyWeatherBuilder.swift; sourceTree = "<group>"; };
-		BD5B35B6032144AC7C21CD98 /* VisualDocs_Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Text.swift; sourceTree = "<group>"; };
 		BEBDCE4BC9C419876BF9EE64 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		BFBB3F7592C9A28F37096886 /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		C097FD54048CEAAC39599530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C17FB548F4A1E4F72E300144 /* SimpleNetworkAgentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentProtocol.swift; sourceTree = "<group>"; };
 		C23C532D495F0B9DD31CB848 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
 		C2F16695B697A2995579A6ED /* Preview.Multiple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Preview.Multiple.png; sourceTree = "<group>"; };
+		C37813D51A12394580FC1138 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		C3FB0748A29900FCDA5AEF49 /* MVVM_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVVM_I.png; sourceTree = "<group>"; };
 		C4929D4A0A24DA2A902C521C /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DBC0413BAECCE1BD087DC2 /* Form.Validations.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Validations.1.png; sourceTree = "<group>"; };
 		C53D7FFD1A7793E29DA5EB76 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.CurrentWeatherForecastEntity.swift; sourceTree = "<group>"; };
 		C55ACEC6AFC2546A60FD4577 /* V.DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.DashboardView.swift; sourceTree = "<group>"; };
-		C5C15D530F271AAA47829FFF /* Recreating.Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Breathe.swift; sourceTree = "<group>"; };
-		C736DCFF49568E817CCDA35C /* E.HourlyErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.HourlyErrorEntity.swift; sourceTree = "<group>"; };
 		C783877FBE44C08E222285EB /* B.CurrentWeatherViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.CurrentWeatherViewBuilder.swift; sourceTree = "<group>"; };
-		CB5AB53EA5271CB2B2F523F7 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_ViewTree_1a.swift; sourceTree = "<group>"; };
+		CB083487B5DC5D3AEC3E5991 /* HourlyChallengeResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyChallengeResponseDto.swift; sourceTree = "<group>"; };
 		CB64ECDA4A220820F6AE6480 /* CacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
 		CC02B0AF777D30E275D3ACA1 /* Designables_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_Preview.swift; sourceTree = "<group>"; };
 		CC426A15B8CA921B698B7014 /* Combine_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_II.png; sourceTree = "<group>"; };
 		CC6F001F078EB4A3049F0D04 /* Just+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Just+Extensions.swift"; sourceTree = "<group>"; };
 		CF9534E47930F8C6673A0FD5 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
 		D07E2AEA0F476C7EA31644F0 /* SampleAPI_Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI_Testing.swift; sourceTree = "<group>"; };
-		D0B03820768603732DC2DA15 /* VisualDocs_Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Padding.swift; sourceTree = "<group>"; };
-		D0D91D50C30610FD8C2CE3C0 /* Recreating.Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Reminder.swift; sourceTree = "<group>"; };
-		D2521BEE2DF59B085458C965 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		D24C8B1A564332780684A9C3 /* UtilsStorage.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsStorage.README.md; sourceTree = "<group>"; };
 		D5D34D4596AB27F3EA2FAA91 /* Array+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Filtering.swift"; sourceTree = "<group>"; };
 		D71187CE3B40946CA1DEE71C /* Form.Autocomplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Autocomplete.png; sourceTree = "<group>"; };
 		D7670EF8675C23D5696771FC /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
 		D8FE85931E17F8FEE742233A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DA47ADF484C65D38C73F6E1F /* AppWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA92C182C75BB93951CFBD7D /* FetcherRyanairMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanairMock.swift; sourceTree = "<group>"; };
 		DB1DA58711A99E2583FA54E3 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB261E3417A651FA9853BFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DEDBD07DB8B389B191D50BBE /* Recreating.Maps_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_I.swift; sourceTree = "<group>"; };
-		DF5C54685C316B2CD25BA62D /* VisualDocs_SwiftUI_Lab_Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Triangle.swift; sourceTree = "<group>"; };
-		E053024B9870BB5AE2DA11C9 /* VisualDocs_TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TimerView.swift; sourceTree = "<group>"; };
+		DD0E8D715F6C71DAE3DECD8B /* UtilsNetworking.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsNetworking.README.md; sourceTree = "<group>"; };
 		E115D0836B3F84D38B35BCC2 /* DtoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoProtocol.swift; sourceTree = "<group>"; };
 		E1A2B15566CB3D4A2A047CA8 /* V.CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherView.swift; sourceTree = "<group>"; };
 		E1DD07816282DCFAB21D2D61 /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
-		E24411E79DDE97020CE8F812 /* VisualDocs_Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Buttons.swift; sourceTree = "<group>"; };
-		E373D812E02A8FB0E75491AC /* VisualDocs_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onDelete.swift; sourceTree = "<group>"; };
-		E3E124E42C56D3444D658CA6 /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		E3EA16A503E1A8AB18B6510F /* WeatherResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.swift; sourceTree = "<group>"; };
-		E4E771E124697BBF7DBD1BE5 /* VisualDocs_Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Fonts.swift; sourceTree = "<group>"; };
-		E5C7D18EB3F0C9E0DB988CDA /* VisualDocs_sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_sheet.swift; sourceTree = "<group>"; };
 		E65DB66002FBF64E1DEF3BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E99D53C5A1113FC97CFD9737 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		EA5645E64E5E07500E33D7C5 /* VisualDocs_WaysToReactToState_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_WaysToReactToState_I.swift; sourceTree = "<group>"; };
 		EADC1EBCEADAF05E2713D6ED /* RyanairModel.AirPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.AirPort.swift; sourceTree = "<group>"; };
-		EAE87AADAA4669C48ED1B1E8 /* AppRyanair.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppRyanair.README.md; sourceTree = "<group>"; };
 		EB6521B98EBA27A00B2CCF9B /* HotCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCacheManager.swift; sourceTree = "<group>"; };
-		ED885C938BAF5A7E979C5B73 /* FetcherWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeather.swift; sourceTree = "<group>"; };
 		ED8F9E00BCD0822A0CFE158A /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		EFD323D5B174A074563ED746 /* AppRoot_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot_View.swift; sourceTree = "<group>"; };
 		F2BCB8A1C026BEBAC24536BD /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
-		F6D52154EA978B5A93AF1D79 /* VisualDocs_LayoutInScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_LayoutInScrollView.swift; sourceTree = "<group>"; };
+		F783D728A0EA1BC9DF8ED1E6 /* FetcherRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanair.swift; sourceTree = "<group>"; };
 		F7E18D2E8D24C8E2555DF69B /* VM.CurrentWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		F9CD829A77DE0CA9CC2A59CE /* SimpleNetworkAgent_B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_B.swift; sourceTree = "<group>"; };
-		FBEB05AC7ACF323FCB5512CF /* FetcherRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanair.swift; sourceTree = "<group>"; };
 		FBED23E562D9EA44A00B7A9C /* RyanairRequestDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Availability.swift; sourceTree = "<group>"; };
-		FDDBC96CC533DAEB4FA9385A /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift; sourceTree = "<group>"; };
+		FE0F9411610ED360B8E238BA /* HourlyChallengeResponseDto.HourlyErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyChallengeResponseDto.HourlyErrorEntity.swift; sourceTree = "<group>"; };
 		FE61FE46C6A1F10A9E8260B7 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		FECE910976B705E5EEA35FC5 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -624,18 +550,6 @@
 			path = Tab_1;
 			sourceTree = "<group>";
 		};
-		080180234BBBCD28C0AD34B3 /* ExternalSources.SwiftUI-Lab */ = {
-			isa = PBXGroup;
-			children = (
-				0191B996509BF0E0EC325DEF /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */,
-				FDDBC96CC533DAEB4FA9385A /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */,
-				9E38425713A15C919A12F66F /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */,
-				DF5C54685C316B2CD25BA62D /* VisualDocs_SwiftUI_Lab_Triangle.swift */,
-				CB5AB53EA5271CB2B2F523F7 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift */,
-			);
-			path = "ExternalSources.SwiftUI-Lab";
-			sourceTree = "<group>";
-		};
 		0905FAAFA452136E7F13F2C0 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -643,23 +557,6 @@
 				D7670EF8675C23D5696771FC /* RyanairMappers.swift */,
 			);
 			path = Mappers;
-			sourceTree = "<group>";
-		};
-		0D3CCC6CB7CA291CD6A68D1F /* Fetchers */ = {
-			isa = PBXGroup;
-			children = (
-				FBEB05AC7ACF323FCB5512CF /* FetcherRyanair.swift */,
-				84F3AC8CC94D1B2516AD0A3B /* FetcherRyanairMock.swift */,
-			);
-			path = Fetchers;
-			sourceTree = "<group>";
-		};
-		0FE2D5DB26894DF4AF807073 /* Binding */ = {
-			isa = PBXGroup;
-			children = (
-				30F80CFFA178387763547F7C /* VisualDocs_Binding.State copy.swift */,
-			);
-			path = Binding;
 			sourceTree = "<group>";
 		};
 		129EBF6CBE7F434E3D5636DD /* AuxiliarViews */ = {
@@ -680,7 +577,6 @@
 				C0D562C88E92818593755B3D /* API */,
 				03719A01169A9F00AB2B0D90 /* Enteties.ResponseDto */,
 				607DA0C2013B9AA7AA03A78D /* Entities.RequestsDto */,
-				2C66F9FC355308ADB44720FB /* Fetchers */,
 				7DE5EBADC14350BDF682DB9A /* Fetchers|Repositories */,
 				031D1EE1002DE39B11397DE6 /* Models */,
 			);
@@ -718,8 +614,18 @@
 				4322D21FBFA059A25040917B /* Info.plist */,
 				67EC9229AB1F64A3D9B95B01 /* ListItemModel.swift */,
 				5E9C26B950C6D640F1EA78B7 /* Response<T>.swift */,
+				76F95DA534949AF911D18E9F /* typelias.swift */,
 			);
 			path = BaseDomain;
+			sourceTree = "<group>";
+		};
+		1FD2296328D9D05871BBA068 /* Enteties.ResponseDto */ = {
+			isa = PBXGroup;
+			children = (
+				FE0F9411610ED360B8E238BA /* HourlyChallengeResponseDto.HourlyErrorEntity.swift */,
+				CB083487B5DC5D3AEC3E5991 /* HourlyChallengeResponseDto.swift */,
+			);
+			path = Enteties.ResponseDto;
 			sourceTree = "<group>";
 		};
 		266098B7D5223CB656446A03 /* AppRyanair */ = {
@@ -732,15 +638,6 @@
 				A44B6FEBB82E28769EB75A9E /* Scheme.2 */,
 			);
 			path = AppRyanair;
-			sourceTree = "<group>";
-		};
-		2C66F9FC355308ADB44720FB /* Fetchers */ = {
-			isa = PBXGroup;
-			children = (
-				ED885C938BAF5A7E979C5B73 /* FetcherWeather.swift */,
-				6018ED6FF7B539F3AFA24F98 /* FetcherWeatherMock.swift */,
-			);
-			path = Fetchers;
 			sourceTree = "<group>";
 		};
 		2E1C83ED7B129D2F06C4926F /* Enteties.ResponseDto */ = {
@@ -758,6 +655,7 @@
 			children = (
 				027DDC1D4B5A1EEBA8E49BBE /* App_HourlyChallenge.h */,
 				87BA8FC8BC734D490224B5F2 /* Info.plist */,
+				5EEC85B9A8CB07E486A4E649 /* typelias.swift */,
 				CA587F3AB4541FC7FEF780E0 /* AppCore */,
 				304DAF878E19DB61571CCC85 /* Schemes */,
 				D211953BC05378BFCE8B748F /* Utils */,
@@ -768,8 +666,6 @@
 		304DAF878E19DB61571CCC85 /* Schemes */ = {
 			isa = PBXGroup;
 			children = (
-				01540115F8B540E49A29C730 /* LastShelter_DayDetails.swift */,
-				4D8989AC3087583D0CC6D707 /* LastShelterHourlyMainScreen.swift */,
 				129EBF6CBE7F434E3D5636DD /* AuxiliarViews */,
 				A6478775914C22A90B66818A /* S1.DashBoard */,
 				1482469861E574BFC9626CFB /* S2.Details */,
@@ -800,6 +696,7 @@
 			children = (
 				953A9C8BB28787584D210806 /* App_WeatherApp.h */,
 				1619FB3DBF7C02D193113D83 /* Info.plist */,
+				C37813D51A12394580FC1138 /* typelias.swift */,
 				CB9254C2CAB4BA2BBE4EFAEB /* AppSchemes */,
 				A0A348E3DD9F44757D6B9FFF /* Supporting Files */,
 			);
@@ -824,7 +721,6 @@
 				9F3C7ADE81F5C6E138F6EBA7 /* UtilsExtensions */,
 				B7A968571546CE739CFD4EF9 /* UtilsNetworking */,
 				7AB9A9646F7E1D4392DEC8AD /* UtilsStorage */,
-				ED7AE604F8D1F67CFBFFF7B3 /* UtilsVisualDocs */,
 				93B02E0CD3C56AC61DF1599E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -859,19 +755,6 @@
 				013F51A0C17276984A961E72 /* Auxiliar.DailyWeatherRow */,
 			);
 			path = S1.WeeklyWeather;
-			sourceTree = "<group>";
-		};
-		56F63C85EBAB15611397C106 /* CoolStuff */ = {
-			isa = PBXGroup;
-			children = (
-				E3E124E42C56D3444D658CA6 /* InfiniteScrollView.swift */,
-				51ACB1723560B384564ACE69 /* PasswordChecker.swift */,
-				31BF359E00D8AF0BAAC33E7E /* ScrollEffect3D.swift */,
-				69A43A761D9B5913D34E12FD /* SendEMailViewControllerRepresentable.swift */,
-				9EDFCCDA89713BEB82B6E718 /* ShowAlertContentView.swift */,
-				06EA84A90D5432E7DE8A330D /* SimpleMVVM.swift */,
-			);
-			path = CoolStuff;
 			sourceTree = "<group>";
 		};
 		607DA0C2013B9AA7AA03A78D /* Entities.RequestsDto */ = {
@@ -958,6 +841,8 @@
 		7DE5EBADC14350BDF682DB9A /* Fetchers|Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				52BA4C7A5B16A138A9FEB71A /* FetcherWeather.swift */,
+				25D95C0F1F079A377B6138FC /* FetcherWeatherMock.swift */,
 				96B0BF5816437C466B2D0CC5 /* RepositoryWeather.swift */,
 			);
 			path = "Fetchers|Repositories";
@@ -978,6 +863,8 @@
 		864667F065D11B9F7057313A /* Fetchers|Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				F783D728A0EA1BC9DF8ED1E6 /* FetcherRyanair.swift */,
+				DA92C182C75BB93951CFBD7D /* FetcherRyanairMock.swift */,
 				6706F4E8A13BBBF6F75688F8 /* RepositoryRyanair.swift */,
 			);
 			path = "Fetchers|Repositories";
@@ -1012,7 +899,6 @@
 				4AA3A0435C6A815C34EACA68 /* UtilsExtensions.framework */,
 				7661458154A662446E42992C /* UtilsNetworking.framework */,
 				4798102BE167A50AA5B91DCB /* UtilsStorage.framework */,
-				0BBDE1C9C5F9D687AC577A08 /* UtilsVisualDocs.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1061,37 +947,6 @@
 			path = S1.DashBoard;
 			sourceTree = "<group>";
 		};
-		AAA71297899A085076891BEE /* ExternalSources.Recreating */ = {
-			isa = PBXGroup;
-			children = (
-				A5B601C84863DE1DB38C4F55 /* Recrating.InstagramMessages.swift */,
-				74CBAA6EDE8E4513D9F514D4 /* Recreating.AppStore.swift */,
-				C5C15D530F271AAA47829FFF /* Recreating.Breathe.swift */,
-				62D09C854073E01B33283ACC /* Recreating.HomeScreen.swift */,
-				899011287D9461416EE098B7 /* Recreating.Instagram.swift */,
-				1A81EBE0E25BF376417FB392 /* Recreating.iPhone12ProWebsite.swift */,
-				9BF8C6996D9B872BBB430F86 /* Recreating.LockScreen.swift */,
-				DEDBD07DB8B389B191D50BBE /* Recreating.Maps_I.swift */,
-				60E92C789B832E3DA7592F83 /* Recreating.Maps_II.swift */,
-				2AD151813DC3AEE9434F198A /* Recreating.Messages_I.swift */,
-				61E7016CA9A127EBDDEA4357 /* Recreating.Messages_II.swift */,
-				5FFBA3DF6D5C431405B384A2 /* Recreating.Messages_III.swift */,
-				D0D91D50C30610FD8C2CE3C0 /* Recreating.Reminder.swift */,
-				59F174C9A7195AAC68B82FE9 /* Recreating.Settings.swift */,
-				56170ED13603A6068534DFBC /* Recreating.Tinder.swift */,
-				6419F8EC30765C8E8C0782E1 /* Recreating.Twitter.swift */,
-			);
-			path = ExternalSources.Recreating;
-			sourceTree = "<group>";
-		};
-		AD5E997DF288BB715893D1F2 /* Enteties */ = {
-			isa = PBXGroup;
-			children = (
-				C736DCFF49568E817CCDA35C /* E.HourlyErrorEntity.swift */,
-			);
-			path = Enteties;
-			sourceTree = "<group>";
-		};
 		B17FEB8A1A55E78607EFC2D2 /* Previews */ = {
 			isa = PBXGroup;
 			children = (
@@ -1127,7 +982,6 @@
 				CFE403FDEAA623670135AEEC /* API */,
 				2E1C83ED7B129D2F06C4926F /* Enteties.ResponseDto */,
 				52C62056C9B350E94DA20CE0 /* Entities.RequestsDto */,
-				0D3CCC6CB7CA291CD6A68D1F /* Fetchers */,
 				864667F065D11B9F7057313A /* Fetchers|Repositories */,
 				0905FAAFA452136E7F13F2C0 /* Mappers */,
 				DE2AA53B84A37E4C64E93492 /* Models */,
@@ -1140,7 +994,7 @@
 			children = (
 				A8FFFD33E2852D141B58B428 /* Info.plist */,
 				8802CACCB121B22F1226275D /* Networking.h */,
-				53A19E1C873E8126B2A8C55C /* Networking.typelias.swift */,
+				16951FC4AEB4B290AD72393C /* typelias.swift */,
 				BF800862CAF4A3753770D24B /* SimpleNetworkAgents */,
 				921F35635A53CC5A126FA3B3 /* Testing_Agents */,
 			);
@@ -1150,13 +1004,10 @@
 		B8616FA0E52D4AAEF0375FFC /* _Documentation_ */ = {
 			isa = PBXGroup;
 			children = (
-				EAE87AADAA4669C48ED1B1E8 /* AppRyanair.README.md */,
 				249F6AB264F5D51992E658CB /* Article1.pdf */,
-				49D8729663FD54E31FFE5115 /* BaseDomain.README.md */,
 				B2574D986FBC1B4751243F95 /* Combine_I.png */,
 				CC426A15B8CA921B698B7014 /* Combine_II.png */,
 				5E121CE990B04AFA70CA92C6 /* Designables_Preview.png */,
-				61AE1C00560B643F219A52DD /* DevTools.README.md */,
 				C3FB0748A29900FCDA5AEF49 /* MVVM_I.png */,
 				646E4C67B740AF1E2C2CCB18 /* MVVM.README.md */,
 				5A607F053A93A219D9243DF7 /* NotesAndReferences.md */,
@@ -1167,11 +1018,8 @@
 				0CDC909DE193B6496C70931E /* State_II.png */,
 				99EC43A417E7A538FCEC3E95 /* StateObject_I.png */,
 				AAD6AF6837727E75ACF4344A /* Subscribers_1.png */,
-				3D05E5C7D5C3CB8CA1F3926C /* Utils.README.md */,
-				4F844B10776E295ABD9EDAAC /* UtilsDesignables.README.md */,
-				5B85E362CE164DD38DB8EF92 /* UtilsExtensions.README.md */,
-				A21B0387F891B31C52D4EC9C /* UtilsNetworking.README.md */,
-				867A7042037B7551F5F2EB1B /* UtilsStorage.README.md */,
+				EAD212F6FD562F6E1E33E886 /* Bugs */,
+				F22D64E59C47EC5D833BC649 /* Frameworks.README */,
 			);
 			path = _Documentation_;
 			sourceTree = "<group>";
@@ -1210,6 +1058,7 @@
 			isa = PBXGroup;
 			children = (
 				30D63057A7B2325629D2EF28 /* API */,
+				1FD2296328D9D05871BBA068 /* Enteties.ResponseDto */,
 				FC1196A628F854728A7D16E4 /* Fetchers|Repositories */,
 			);
 			path = AppCore;
@@ -1280,58 +1129,27 @@
 			path = PublicCode;
 			sourceTree = "<group>";
 		};
-		ED7AE604F8D1F67CFBFFF7B3 /* UtilsVisualDocs */ = {
+		EAD212F6FD562F6E1E33E886 /* Bugs */ = {
 			isa = PBXGroup;
 			children = (
-				1DB965D88ABE12AFE65D624B /* Info.plist */,
-				335DEE055F8E0597B4CB79D1 /* Utils_VisualDocs.h */,
-				56F63C85EBAB15611397C106 /* CoolStuff */,
-				AAA71297899A085076891BEE /* ExternalSources.Recreating */,
-				080180234BBBCD28C0AD34B3 /* ExternalSources.SwiftUI-Lab */,
-				F3457285FC82769EA102D1BD /* VisualDocs */,
+				AC41EF29018A7CB7F8966DAB /* Simulator Screen Shot - iPod touch (7th generation) - 2020-11-06 at 10.50.54.png */,
 			);
-			path = UtilsVisualDocs;
+			path = Bugs;
 			sourceTree = "<group>";
 		};
-		F3457285FC82769EA102D1BD /* VisualDocs */ = {
+		F22D64E59C47EC5D833BC649 /* Frameworks.README */ = {
 			isa = PBXGroup;
 			children = (
-				B4CD8483CB172FD0FFC0E082 /* VisualDocs_@Binding.swift */,
-				59567EBEBD72FCEB932F5549 /* VisualDocs_@EnvironmentObject.swift */,
-				79D83B4114F74AFFCEF24645 /* VisualDocs_@Published.swift */,
-				B69F24FB5C728C4CA2BDCF2A /* VisualDocs_@State.swift */,
-				44C19851170E99AD363E8508 /* VisualDocs_Animations.swift */,
-				43A2895B34003B462D8FB442 /* VisualDocs_Background.swift */,
-				E24411E79DDE97020CE8F812 /* VisualDocs_Buttons.swift */,
-				AB843D92C3BBBE0B9BCCB68E /* VisualDocs_Colors.swift */,
-				7BE862A640E3009256F39C2D /* VisualDocs_Combine.swift */,
-				A0A76F3F87F8897273D2E30E /* VisualDocs_ErrorHandling.swift */,
-				E4E771E124697BBF7DBD1BE5 /* VisualDocs_Fonts.swift */,
-				27F5AA1C4919D829CD9E738E /* VisualDocs_ForEach.swift */,
-				1F15DC349C26A96B793B6AD9 /* VisualDocs_Form.swift */,
-				57E8E802EB6FBE3F4EECB5BF /* VisualDocs_horizontalSizeClass.swift */,
-				99AEC029FCB7DF7968D59A81 /* VisualDocs_Image.swift */,
-				F6D52154EA978B5A93AF1D79 /* VisualDocs_LayoutInScrollView.swift */,
-				92ADCEE5EC0E559E7EDA5DB9 /* VisualDocs_Lists.swift */,
-				5750DC679454B240C244C8E5 /* VisualDocs_NavigationView.swift */,
-				E373D812E02A8FB0E75491AC /* VisualDocs_onDelete.swift */,
-				0CB9B684B4469928167BFD38 /* VisualDocs_onEditingChanged.swift */,
-				AABBE40A7C89841059B17700 /* VisualDocs_onReceive.swift */,
-				D0B03820768603732DC2DA15 /* VisualDocs_Padding.swift */,
-				68C717B6ABE728167C785CDA /* VisualDocs_RemoteImageLoadging.swift */,
-				B07D4D793400A6F48AB21BED /* VisualDocs_RouteToAndCameBack.swift */,
-				0005DF39895AC1C55C9C8BE2 /* VisualDocs_Shadows.swift */,
-				8C9C9DCF09C999E2F1E63B01 /* VisualDocs_Shapes.swift */,
-				E5C7D18EB3F0C9E0DB988CDA /* VisualDocs_sheet.swift */,
-				1D52EC7D85F69FA35B120B58 /* VisualDocs_TabView.swift */,
-				BD5B35B6032144AC7C21CD98 /* VisualDocs_Text.swift */,
-				E053024B9870BB5AE2DA11C9 /* VisualDocs_TimerView.swift */,
-				8422836C835C90720860B64C /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */,
-				EA5645E64E5E07500E33D7C5 /* VisualDocs_WaysToReactToState_I.swift */,
-				10A45F9CC9CE0D467C04E9C9 /* VisualDocs_WaysToReactToState_II.swift */,
-				0FE2D5DB26894DF4AF807073 /* Binding */,
+				58534EA6E7683AD76E090B05 /* AppRyanair.README.md */,
+				61D5753080FE65BF7DFD6638 /* BaseDomain.README.md */,
+				41106B4DF4A4BE987C161CC3 /* DevTools.README.md */,
+				90156D5ED0605359DC5E3345 /* Utils.README.md */,
+				3F5F79D5583CA2D820CF16B9 /* UtilsDesignables.README.md */,
+				5780BE24C83C9FB3F92DF177 /* UtilsExtensions.README.md */,
+				DD0E8D715F6C71DAE3DECD8B /* UtilsNetworking.README.md */,
+				D24C8B1A564332780684A9C3 /* UtilsStorage.README.md */,
 			);
-			path = VisualDocs;
+			path = Frameworks.README;
 			sourceTree = "<group>";
 		};
 		F3524613261D41B600380DB3 /* RJPS_SwiftUI */ = {
@@ -1349,11 +1167,9 @@
 		FC1196A628F854728A7D16E4 /* Fetchers|Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				0782DD7C492FE4847EE1C879 /* AppDefaultsRepository.swift */,
-				D2521BEE2DF59B085458C965 /* Fetcher.swift */,
+				915AE907CB9C6588BAB5B453 /* FetcherHourlyChallenge.swift */,
 				1AF2EAA81CE0DD12FB408E09 /* HourlyChallengeFetcher.swift */,
 				5FD31AC2C437AB2F267DFB6A /* RepositoryHourlyChallenge.swift */,
-				AD5E997DF288BB715893D1F2 /* Enteties */,
 			);
 			path = "Fetchers|Repositories";
 			sourceTree = "<group>";
@@ -1382,14 +1198,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				566360BB52D770B83E04A9CD /* Designables.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52BDEA28FD96CCE79A00006C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F9102DCC042EE33ADD36926 /* Utils_VisualDocs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1488,6 +1296,7 @@
 			);
 			dependencies = (
 				B2E6C9714AC9CEEF1BAE8E4E /* PBXTargetDependency */,
+				38D7B2C98ADFB692B0263B1D /* PBXTargetDependency */,
 			);
 			name = AppWeather;
 			productName = AppWeather;
@@ -1514,24 +1323,6 @@
 			productName = RJPS_SwiftUI;
 			productReference = 9D3547569CA5446DD95C99A0 /* RJPS_SwiftUI.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0CCC47947625C24B10C0EC50 /* UtilsVisualDocs */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB762DEEB15756DCA06A5CB7 /* Build configuration list for PBXNativeTarget "UtilsVisualDocs" */;
-			buildPhases = (
-				52BDEA28FD96CCE79A00006C /* Headers */,
-				BA13E79491E3525F2062CE82 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				605A61C98EC40CC5573E0EB2 /* PBXTargetDependency */,
-				E53FAA435127A51B8B8BC545 /* PBXTargetDependency */,
-			);
-			name = UtilsVisualDocs;
-			productName = UtilsVisualDocs;
-			productReference = 0BBDE1C9C5F9D687AC577A08 /* UtilsVisualDocs.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		1B11CA5DB3DD17B41FB4C1EC /* BaseDomain */ = {
 			isa = PBXNativeTarget;
@@ -1576,6 +1367,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C11F41870EE21277CBE20AF8 /* PBXTargetDependency */,
 			);
 			name = AppRyanair;
 			productName = AppRyanair;
@@ -1624,6 +1416,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				59E8E8073B262C3762E4F376 /* PBXTargetDependency */,
+				AB5FFA8B90052B6E9E15C04D /* PBXTargetDependency */,
 			);
 			name = AppHourlyChallenge;
 			productName = AppHourlyChallenge;
@@ -1640,6 +1434,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				BCA1BCC42E3906F287AD96A0 /* PBXTargetDependency */,
+				5733BA8E738D15A7320CC24E /* PBXTargetDependency */,
 			);
 			name = UtilsDesignables;
 			productName = UtilsDesignables;
@@ -1674,6 +1470,7 @@
 			);
 			dependencies = (
 				D5320120F519F6C005705F21 /* PBXTargetDependency */,
+				4866297DFC8A6891FC7F01C3 /* PBXTargetDependency */,
 			);
 			name = UtilsStorage;
 			productName = UtilsStorage;
@@ -1691,6 +1488,7 @@
 			);
 			dependencies = (
 				41930EC651E47AD83A8D95D5 /* PBXTargetDependency */,
+				6D0ABA28A4D5DF77975B6CB0 /* PBXTargetDependency */,
 				D3426DC346B67263386ED4FB /* PBXTargetDependency */,
 			);
 			name = AppRyanairCore;
@@ -1725,6 +1523,7 @@
 			);
 			dependencies = (
 				05FA5E59A72CEABC1A4DDCFB /* PBXTargetDependency */,
+				CA25CFDE09F328DEAA93FDAA /* PBXTargetDependency */,
 			);
 			name = AppWeatherCore;
 			productName = AppWeatherCore;
@@ -1738,6 +1537,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1202;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 0A85371B0C5704A168BCBE43 /* Build configuration list for PBXProject "RJPSSwiftUI_V2" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1765,7 +1566,6 @@
 				29ABC7E7DE1F8E032C4A9C81 /* UtilsExtensions */,
 				559B8E96039B85D8BD495880 /* UtilsNetworking */,
 				D0E8B798166AF3C5EF938D16 /* UtilsStorage */,
-				0CCC47947625C24B10C0EC50 /* UtilsVisualDocs */,
 			);
 		};
 /* End PBXProject section */
@@ -1853,6 +1653,7 @@
 				8BCD02E4560A41C2A4DD28D1 /* DtoProtocol.swift in Sources */,
 				52278F6AF4831A1CCC624993 /* ListItemModel.swift in Sources */,
 				618FAFFA130EF82B82636D5E /* Response<T>.swift in Sources */,
+				5A084EFA8BEEE04CB804EAA6 /* typelias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1861,7 +1662,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEA6F0232FD4C20E35098ED /* APIResponseDto.swift in Sources */,
-				E3230EEFED07B15C7C5902B4 /* Networking.typelias.swift in Sources */,
 				3B945F6C30E508A25919EF1E /* SampleAPI_Testing.swift in Sources */,
 				2A3BD81F00A49E6DC6443B55 /* SimpleNetworkAgentProtocol.swift in Sources */,
 				A81F6CBE2B3A13C35E929FC5 /* SimpleNetworkAgent_A.swift in Sources */,
@@ -1869,6 +1669,7 @@
 				33966C710B4B5A745CCAF7A1 /* TestingAPIProtocol.swift in Sources */,
 				FC63DEBE1DE8D12AE1C9F295 /* TestingAPI_VersionA.swift in Sources */,
 				A17499D985FC58AEE98B07DE /* TestingAPI_VersionB.swift in Sources */,
+				4E6C98C2A3781BE547CD064A /* typelias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1878,8 +1679,8 @@
 			files = (
 				D45F31D2DB0E2B703EE4A7CD /* APIRyanair.swift in Sources */,
 				F048A334D94915342EF9DC25 /* APIRyanairProtocol.swift in Sources */,
-				24A3F1643156A52AF336FBE1 /* FetcherRyanair.swift in Sources */,
-				157EEBF42BAAAFD568A17DEA /* FetcherRyanairMock.swift in Sources */,
+				D385A2A69561FA2DBD16AC3A /* FetcherRyanair.swift in Sources */,
+				82C0018B8CF1EFD8A099D466 /* FetcherRyanairMock.swift in Sources */,
 				820E85EE8DF8658BFCFA20BB /* RepositorRyanairProtocol.swift in Sources */,
 				641C699E23B7E532B5492D3D /* RepositoryRyanair.swift in Sources */,
 				5EC204CB7C1F40EFE7CCD4A8 /* RyanairMappers.ListItemModel.swift in Sources */,
@@ -1943,15 +1744,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				06C9432AD11F9BE416B00EBB /* APIProtocol.swift in Sources */,
-				F039FC45B54EEBFD26BA4F89 /* AppDefaultsRepository.swift in Sources */,
 				37A641364AE0548B7FC097B1 /* B.DashboardViewBuilder.swift in Sources */,
 				594DD4F8FB6B747B8A55A7B7 /* B.DayDetailsView.swift in Sources */,
 				F98A641F92BB32E5874A2545 /* DateUtils.swift in Sources */,
-				1913D8E4C19A17C12F0B0419 /* E.HourlyErrorEntity.swift in Sources */,
-				D0A1B0950E34F163A9E01932 /* Fetcher.swift in Sources */,
+				2C415D6D2356E5DAE91DBEA4 /* FetcherHourlyChallenge.swift in Sources */,
 				C391159223E71B95ED072EB2 /* HourlyChallengeFetcher.swift in Sources */,
-				3541AC58243B0DFE0C4FCAB0 /* LastShelterHourlyMainScreen.swift in Sources */,
-				D09ED045E16237ADF9814EF7 /* LastShelter_DayDetails.swift in Sources */,
+				F103064C18BB17330CD37B5F /* HourlyChallengeResponseDto.HourlyErrorEntity.swift in Sources */,
+				22769483F309E58606C45A09 /* HourlyChallengeResponseDto.swift in Sources */,
 				8D976776BA01471DC5D5DC44 /* MailViewControllerRepresentable.swift in Sources */,
 				28B7CFA6256D2E7991F78F27 /* RepositoryHourlyChallenge.swift in Sources */,
 				921C58FD88F96A334CDD1B9D /* RepositoryHourlyChallengeProtocol.swift in Sources */,
@@ -1959,74 +1758,7 @@
 				6BB1C4F2E4FBD3F8720AADF9 /* V.DayDetailsView.swift in Sources */,
 				0F1396718E8670DEE7067097 /* VM.DashboardViewViewModel.swift in Sources */,
 				A115735698FEE223EB2EE703 /* VM.DayDetailsViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BA13E79491E3525F2062CE82 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0DA1F188814DA7C472369B56 /* InfiniteScrollView.swift in Sources */,
-				2B92B22393992BB30AA737D5 /* PasswordChecker.swift in Sources */,
-				B3F280F7B88934CD2B4BDA91 /* Recrating.InstagramMessages.swift in Sources */,
-				10F5C57BDEA7B825B3719754 /* Recreating.AppStore.swift in Sources */,
-				FF065E2225ABBE3549CDA87B /* Recreating.Breathe.swift in Sources */,
-				40B382D8C3E0D3B6BE03E805 /* Recreating.HomeScreen.swift in Sources */,
-				BA93AC05BC6CB26BFAFF5669 /* Recreating.Instagram.swift in Sources */,
-				E3071A57451E10567378F606 /* Recreating.LockScreen.swift in Sources */,
-				A74EF6E86CF5923780553546 /* Recreating.Maps_I.swift in Sources */,
-				5BB8D11513D0AC42CD8CD72B /* Recreating.Maps_II.swift in Sources */,
-				7F5D6ABCD9F42B2CEF7AA94E /* Recreating.Messages_I.swift in Sources */,
-				A0BF6666C3881E4312769AF8 /* Recreating.Messages_II.swift in Sources */,
-				26544D90B593100F27A5998E /* Recreating.Messages_III.swift in Sources */,
-				5FFFD18B7C4FA697DD594DAE /* Recreating.Reminder.swift in Sources */,
-				9EE1D0F83C38BAD384D6F792 /* Recreating.Settings.swift in Sources */,
-				7BD65AFD47C67234488B7C02 /* Recreating.Tinder.swift in Sources */,
-				EBAB1D71EE2DCDF99F2E2325 /* Recreating.Twitter.swift in Sources */,
-				B2B12B5A4434AADA0037ECF7 /* Recreating.iPhone12ProWebsite.swift in Sources */,
-				B57B057337053252984C0857 /* ScrollEffect3D.swift in Sources */,
-				158B111127ECE594EAE0983C /* SendEMailViewControllerRepresentable.swift in Sources */,
-				2D7F97E0E2D878C9B1A23A8E /* ShowAlertContentView.swift in Sources */,
-				68F6BFBC3FA2FBC2D9C3ED10 /* SimpleMVVM.swift in Sources */,
-				A15035457129B65010EE0192 /* VisualDocs_@Binding.swift in Sources */,
-				79BFDAFE1AB93E8938713183 /* VisualDocs_@EnvironmentObject.swift in Sources */,
-				AB84028581FE24C77319C49F /* VisualDocs_@Published.swift in Sources */,
-				ED606CB42C4423D729A0C714 /* VisualDocs_@State.swift in Sources */,
-				FBE0D2C237048D4E73F2715A /* VisualDocs_Animations.swift in Sources */,
-				8DCCB222750767A12350408C /* VisualDocs_Background.swift in Sources */,
-				6173BFCF8BD284B6C036A106 /* VisualDocs_Binding.State copy.swift in Sources */,
-				4A11245C2F540F05F59C2D8B /* VisualDocs_Buttons.swift in Sources */,
-				F46A54187580E5C7CB601C72 /* VisualDocs_Colors.swift in Sources */,
-				E16587C33E0D4476AC43A502 /* VisualDocs_Combine.swift in Sources */,
-				E7FDDBBF2074647982297D9C /* VisualDocs_ErrorHandling.swift in Sources */,
-				8426BB2DC297DD1525DAEFFB /* VisualDocs_Fonts.swift in Sources */,
-				1ED4B0A7BD061B89D1394DE7 /* VisualDocs_ForEach.swift in Sources */,
-				22F0855F07654D8B33B8315F /* VisualDocs_Form.swift in Sources */,
-				36ADD2A9B6331E5FCB388568 /* VisualDocs_Image.swift in Sources */,
-				0514DB51E12580E0E0D799CA /* VisualDocs_LayoutInScrollView.swift in Sources */,
-				C5FF98A4946CF3E15BD42751 /* VisualDocs_Lists.swift in Sources */,
-				F798DB9F204D80AB5491FED3 /* VisualDocs_NavigationView.swift in Sources */,
-				E764FCB199D70AC48AB0E8A8 /* VisualDocs_Padding.swift in Sources */,
-				491624E423A77F7516FE038E /* VisualDocs_RemoteImageLoadging.swift in Sources */,
-				8FCA7034ECC4EA998DB8CC5A /* VisualDocs_RouteToAndCameBack.swift in Sources */,
-				1B9D593F4227E02896A9718A /* VisualDocs_Shadows.swift in Sources */,
-				8855A860E80AFFFA3D5211F9 /* VisualDocs_Shapes.swift in Sources */,
-				21410E6D7EE43E872F80CC22 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift in Sources */,
-				E73880E15F9577E2E2BAD352 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */,
-				B231A525BFC5CDF6F2D39AD8 /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift in Sources */,
-				2C748ABEE66EEA537AEAE229 /* VisualDocs_SwiftUI_Lab_Triangle.swift in Sources */,
-				9FB692CE2A2F0BA01035F0F9 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift in Sources */,
-				94288BB837497FF50E854E5C /* VisualDocs_TabView.swift in Sources */,
-				8D38A16F63B161C43858C36F /* VisualDocs_Text.swift in Sources */,
-				3B07D6175FB6FA0A67B69ABB /* VisualDocs_TimerView.swift in Sources */,
-				7256E383E4F7BB1995D4A463 /* VisualDocs_UserDefaultsWithPropertyWrapper.swift in Sources */,
-				61868A1C73F911D557D807CF /* VisualDocs_WaysToReactToState_I.swift in Sources */,
-				7D2C1E7FA233126626E4E5C3 /* VisualDocs_WaysToReactToState_II.swift in Sources */,
-				9CDF50BFDDB81AF120AE383D /* VisualDocs_horizontalSizeClass.swift in Sources */,
-				4B11C3900F816E623147EB0D /* VisualDocs_onDelete.swift in Sources */,
-				62EDD6BDB506E9BB71A449BF /* VisualDocs_onEditingChanged.swift in Sources */,
-				30FF29DBE8B21EDF366BEBC3 /* VisualDocs_onReceive.swift in Sources */,
-				290DC6FEEE37AC72360E0B73 /* VisualDocs_sheet.swift in Sources */,
+				1E01295F3DEFB0024A7A8406 /* typelias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2043,8 +1775,8 @@
 			files = (
 				25051AEC2DD3ABA2F0F0C881 /* APIWeather.swift in Sources */,
 				3CFC580CE2AAA51DD446A336 /* APIWeatherProtocol.swift in Sources */,
-				A9C8D086DB917D6BE9B9C1F5 /* FetcherWeather.swift in Sources */,
-				26B03EB555FF085DEA3E40B1 /* FetcherWeatherMock.swift in Sources */,
+				D72766D72EE0D607FE3E0D59 /* FetcherWeather.swift in Sources */,
+				6D293C93C502B78EF8ECA253 /* FetcherWeatherMock.swift in Sources */,
 				A7605E7929E1B17E22AC5BB2 /* RepositoryWeather.swift in Sources */,
 				398DD451129BEC57FD0F7C2F /* RepositoryWeatherProtocol.swift in Sources */,
 				AC9F121479A40ADD2F74AC63 /* WeatherRequestDto.swift in Sources */,
@@ -2069,6 +1801,7 @@
 				A88755DE1F47F5C34884ABAB /* VM.CurrentWeatherViewModel.swift in Sources */,
 				EA72C4493216D15DEFBC285A /* VM.DailyWeatherRowViewModel.swift in Sources */,
 				ADD7347E2F4B9CE641EA9873 /* VM.WeeklyWeatherViewModel.swift in Sources */,
+				09D3A30B585E24BEF241F011 /* typelias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2111,20 +1844,60 @@
 			target = 465CD5C0E6CE491C8AAC4260 /* AppRyanair */;
 			targetProxy = EA98AF3EF2A43A91DB3BF205 /* PBXContainerItemProxy */;
 		};
+		38D7B2C98ADFB692B0263B1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB41D4AE41EFEC25BE3D8A80 /* AppWeatherCore */;
+			targetProxy = 181012825043ED9B175FEE40 /* PBXContainerItemProxy */;
+		};
 		41930EC651E47AD83A8D95D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0E8B798166AF3C5EF938D16 /* UtilsStorage */;
 			targetProxy = D6E4294DED36EAD64EAA5862 /* PBXContainerItemProxy */;
 		};
-		605A61C98EC40CC5573E0EB2 /* PBXTargetDependency */ = {
+		4866297DFC8A6891FC7F01C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29ABC7E7DE1F8E032C4A9C81 /* UtilsExtensions */;
-			targetProxy = B99BD34961042E5459CE44B2 /* PBXContainerItemProxy */;
+			target = 1B11CA5DB3DD17B41FB4C1EC /* BaseDomain */;
+			targetProxy = 8F7C001F9260857B59CC7FF4 /* PBXContainerItemProxy */;
+		};
+		5733BA8E738D15A7320CC24E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E71F3BD7B06D7D592696DD9D /* Utils */;
+			targetProxy = 2489B9CF78EC3C76525BF37D /* PBXContainerItemProxy */;
+		};
+		59E8E8073B262C3762E4F376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0E8B798166AF3C5EF938D16 /* UtilsStorage */;
+			targetProxy = 7158123A42762AB5AAC2D541 /* PBXContainerItemProxy */;
+		};
+		6D0ABA28A4D5DF77975B6CB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 559B8E96039B85D8BD495880 /* UtilsNetworking */;
+			targetProxy = 21F0880FED9176155737F963 /* PBXContainerItemProxy */;
+		};
+		AB5FFA8B90052B6E9E15C04D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B11CA5DB3DD17B41FB4C1EC /* BaseDomain */;
+			targetProxy = C47CA3E7C78A0947485EB06F /* PBXContainerItemProxy */;
 		};
 		B2E6C9714AC9CEEF1BAE8E4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1B11CA5DB3DD17B41FB4C1EC /* BaseDomain */;
 			targetProxy = 2BFF0B610E8F663A7CBCAE51 /* PBXContainerItemProxy */;
+		};
+		BCA1BCC42E3906F287AD96A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29ABC7E7DE1F8E032C4A9C81 /* UtilsExtensions */;
+			targetProxy = B4053E4373BCFB9AF0C75599 /* PBXContainerItemProxy */;
+		};
+		C11F41870EE21277CBE20AF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB8F4869241B49335512A85D /* AppRyanairCore */;
+			targetProxy = 69113F738901D46BAA938203 /* PBXContainerItemProxy */;
+		};
+		CA25CFDE09F328DEAA93FDAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4886B4BF174E99AB1982127D /* DevTools */;
+			targetProxy = 14AC4D8DA784EB2A4EFEB27F /* PBXContainerItemProxy */;
 		};
 		D3426DC346B67263386ED4FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2140,11 +1913,6 @@
 			isa = PBXTargetDependency;
 			target = 0661BEA084730FD2474D59BE /* AppWeather */;
 			targetProxy = 24F3468E040731B43BDC84B0 /* PBXContainerItemProxy */;
-		};
-		E53FAA435127A51B8B8BC545 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 662B48486B4B1507C7499A00 /* UtilsDesignables */;
-			targetProxy = 857280864FC5F1D457613734 /* PBXContainerItemProxy */;
 		};
 		EBC73ADD4D63E63CE42D3F52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2173,33 +1941,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0E72E7FCCADB0DFFC6A82810 /* Debug */ = {
+		0F0DB9279EA503602F7DE859 /* Debug_Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
+					"DEBUG=1",
 				);
-				INFOPLIST_FILE = Utils/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.Utils;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
-			name = Debug;
+			name = Debug_Prod;
 		};
 		0FBB076B70746E883B84E2BE /* Adhoc */ = {
 			isa = XCBuildConfiguration;
@@ -2210,10 +2013,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsStorage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2229,6 +2028,30 @@
 			};
 			name = Adhoc;
 		};
+		1237E68A88740FF8C49D53B0 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PublicCode/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
 		12D506DEF1D6A2D5208C2BD8 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2238,10 +2061,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2257,6 +2076,30 @@
 			};
 			name = Beta;
 		};
+		171A348E3551DD82EBB0F1F6 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
 		19052676F0BC317C7B967B28 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2266,10 +2109,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = PublicCode/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2284,6 +2123,30 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Beta;
+		};
+		19405BFCE5698BAD98C397EE /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanairCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
 		};
 		1E87F7369F1E562EA223124F /* Beta */ = {
 			isa = XCBuildConfiguration;
@@ -2302,6 +2165,30 @@
 			};
 			name = Beta;
 		};
+		221DF369BC878DE63927632B /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppHourlyChallenge/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppHourlyChallenge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
 		23892E366331C780E43D1051 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2311,10 +2198,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = PublicCode/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2330,6 +2213,30 @@
 			};
 			name = Release;
 		};
+		2453805063A42AE0EC5459D1 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
 		2D3C8385ED4BF8CC0868FEC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2339,10 +2246,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppHourlyChallenge/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2358,34 +2261,6 @@
 			};
 			name = Release;
 		};
-		2F28BFCAC67B5AFFDA5FD036 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = DevTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
 		30FA2416BA952BD7A05982FA /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2395,10 +2270,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppHourlyChallenge/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2457,10 +2328,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = BaseDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2476,34 +2343,6 @@
 			};
 			name = Beta;
 		};
-		3CA040DE1D496EFAA9F08653 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = AppWeather/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeather;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
 		3CDFCA2C03721335A7B7100D /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2513,10 +2352,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2532,6 +2367,78 @@
 			};
 			name = Adhoc;
 		};
+		450D5B75C058DB64458FE300 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsDesignables/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
+		459B7C92F041ED5C5CA92826 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppHourlyChallenge/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppHourlyChallenge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		47830AFEFDB31F2EBCF30DB0 /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeatherCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
 		49E95DDC5EA524AE418B02FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2541,10 +2448,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2569,10 +2472,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2588,6 +2487,30 @@
 			};
 			name = Release;
 		};
+		4A7FC99507A29B4A558950CB /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanairCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
 		4DCD175E51F64D5E5EA96B9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2597,10 +2520,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2625,10 +2544,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = BaseDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2653,10 +2568,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2681,10 +2592,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = DevTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2700,23 +2607,6 @@
 			};
 			name = Adhoc;
 		};
-		66388E9415CC7E14CAF66782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rjps.swiftui.RJPS-SwiftUI";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		66E56EC6E652F1F1C6302858 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2726,10 +2616,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2745,6 +2631,30 @@
 			};
 			name = Beta;
 		};
+		69201E015E4F4F5339FB12F3 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeatherCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
 		694A685DA4DFFA6282D7CA89 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2754,10 +2664,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2773,6 +2679,30 @@
 			};
 			name = Adhoc;
 		};
+		69F2BF711B566D53D1C565B0 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
 		6DB31F57C8947D984639F820 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2782,10 +2712,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = DevTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2801,6 +2727,30 @@
 			};
 			name = Release;
 		};
+		6F0F33886D581793222317F6 /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsDesignables/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
 		703A55B297415ADE0B00A7DB /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2810,10 +2760,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppHourlyChallenge/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2838,10 +2784,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsDesignables/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2856,34 +2798,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
-		};
-		76AC75C524443BA65E9958BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = UtilsStorage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
 		};
 		796483308D050DA87E78EBD6 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2931,7 +2845,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2951,10 +2864,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsDesignables/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2979,10 +2888,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2998,6 +2903,78 @@
 			};
 			name = Adhoc;
 		};
+		7F1279795FBB30F860654896 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsStorage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		7F17720E7CA9C6E22CF2DE38 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.Utils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		8202C1109895CA107B74A3B0 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.Utils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
 		831DFD0E4B6B8B5FB2445A64 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3007,10 +2984,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsStorage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3026,7 +2999,7 @@
 			};
 			name = Beta;
 		};
-		84B2B8F28D8930B3A349FECB /* Debug */ = {
+		83912900D21202C33543A4F5 /* Debug_Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -3035,24 +3008,68 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = UtilsVisualDocs/Info.plist;
+				INFOPLIST_FILE = AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsVisualDocs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeatherCore;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Debug_Dev;
+		};
+		83D3BE05B2092B9FA876ADBC /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PublicCode/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
+		84DA27C6FCF8BC0BBA45D1AD /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsStorage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
 		};
 		86904201911B21793DE6E275 /* Beta */ = {
 			isa = XCBuildConfiguration;
@@ -3063,10 +3080,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3091,10 +3104,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsNetworking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3110,7 +3119,7 @@
 			};
 			name = Beta;
 		};
-		8C6FBB58990E59964375EA81 /* Debug */ = {
+		8D06B267227EFE109E919FF2 /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -3119,108 +3128,83 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INFOPLIST_FILE = DevTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeatherCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Debug_QA;
 		};
-		8D2F0EF7E5A8E64746C0102C /* Beta */ = {
+		8F65F2EFA797C5AC6873D0B9 /* Debug_Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
+					"DEBUG=1",
 				);
-				INFOPLIST_FILE = UtilsVisualDocs/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsVisualDocs;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
-			name = Beta;
-		};
-		8F1C00FC25A2529F70E215A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = UtilsVisualDocs/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsVisualDocs;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		901EB3866E9AAC1770C5F49E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = UtilsExtensions/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
+			name = Debug_Dev;
 		};
 		91B1D14155AC2293CBA41211 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
@@ -3231,10 +3215,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsNetworking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3259,10 +3239,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Utils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3278,7 +3254,7 @@
 			};
 			name = Beta;
 		};
-		953347E7C9AE5F43642B1D08 /* Debug */ = {
+		9757413E7B242FBC8779B387 /* Debug_Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -3287,24 +3263,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = UtilsDesignables/Info.plist;
+				INFOPLIST_FILE = AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanairCore;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Debug_Prod;
 		};
 		98694B80A9998E6685EB34D2 /* Beta */ = {
 			isa = XCBuildConfiguration;
@@ -3315,10 +3287,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3380,7 +3348,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3391,34 +3358,6 @@
 			};
 			name = Adhoc;
 		};
-		9B7CE59A5D8BD262A1AF9B35 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = AppRyanairCore/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanairCore;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
 		9CD07B23205D8BEF97E2E30D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3428,10 +3367,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Utils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3447,6 +3382,102 @@
 			};
 			name = Release;
 		};
+		9E0E880DA43029D73B1BD156 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsDesignables/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		9F0D369F9FB31632E9026025 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanair;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		9F3325496F61582879803EC6 /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsStorage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
+		A0398F79EB2D09DFF24989DD /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanair;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
 		A4F1F7615BD3A017E987741A /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3456,10 +3487,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsDesignables/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3475,7 +3502,7 @@
 			};
 			name = Beta;
 		};
-		A5ED79FF370FEA525E5E9770 /* Adhoc */ = {
+		A6541160211F810BFE0D58D4 /* Debug_Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -3484,24 +3511,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = UtilsVisualDocs/Info.plist;
+				INFOPLIST_FILE = AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsVisualDocs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeather;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Adhoc;
+			name = Debug_Dev;
 		};
 		A70AB3277AA0EE4C5CE56C98 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3512,10 +3535,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3531,34 +3550,6 @@
 			};
 			name = Release;
 		};
-		A79F3C0A13F94F227D6E9D25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = BaseDomain/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.BaseDomain;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
 		ABFF301CDCC65D68CA3D0442 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3568,10 +3559,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = DevTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3596,10 +3583,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3624,10 +3607,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsNetworking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3643,7 +3622,7 @@
 			};
 			name = Release;
 		};
-		C47515257D444A3A50E0278A /* Debug */ = {
+		B4E246BBDF0E7A0190AEB964 /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -3652,54 +3631,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = UtilsNetworking/Info.plist;
+				INFOPLIST_FILE = UtilsExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsNetworking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Debug_QA;
 		};
-		C63C7CB0B0D6E7FC8DFE476A /* Adhoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = AppRyanair/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanair;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Adhoc;
-		};
-		C99299DFC354C03F782AE40F /* Debug */ = {
+		B569612455DA245C6715B3E3 /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -3751,7 +3698,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3761,7 +3707,274 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
-			name = Debug;
+			name = Debug_QA;
+		};
+		B6694285984CFDA901FCE915 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rjps.swiftui.RJPS-SwiftUI";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug_Prod;
+		};
+		B76D62344D49F0DD7EB6F994 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DevTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
+		BAE0AEA04D59DDE1A8B39FC9 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		BBE10467CCA9A90ADA0B0482 /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.Utils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
+		C06BD04E9CA2C319E63B1012 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PublicCode/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
+		C61113432D42E73D3A20F0F8 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BaseDomain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.BaseDomain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
+		C63C7CB0B0D6E7FC8DFE476A /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanair;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Adhoc;
+		};
+		CC46CAD4A68A40AC67C1D987 /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppWeather/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeather;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
+		D01471603BE142EFA8775C88 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DevTools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		DA76B987FE6635FC39CEC099 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rjps.swiftui.RJPS-SwiftUI";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug_Dev;
+		};
+		E0D15CDA1579A63CF3CA80D4 /* Debug_Prod */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BaseDomain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.BaseDomain;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Prod;
+		};
+		E2623EA784933FCDA6D6BD77 /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rjps.swiftui.RJPS-SwiftUI";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug_QA;
 		};
 		E3F09B52CA0A6358EA07EFFC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3772,10 +3985,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsStorage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3791,6 +4000,30 @@
 			};
 			name = Release;
 		};
+		E40430236CD032AB5FA74458 /* Debug_QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UtilsNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsNetworking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_QA;
+		};
 		E546E0EB38B5217DE5F313B4 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3800,10 +4033,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Utils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3819,7 +4048,7 @@
 			};
 			name = Adhoc;
 		};
-		EB4A8581378431BB0F724070 /* Debug */ = {
+		EC5778DC981D26F756727C8F /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -3828,24 +4057,44 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = AppHourlyChallenge/Info.plist;
+				INFOPLIST_FILE = BaseDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppHourlyChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.BaseDomain;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Debug_QA;
+		};
+		EF3C71AB71FDD93070E8F459 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanair;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
 		};
 		F1437D7F74ADB8CB3EE9DAA0 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
@@ -3856,10 +4105,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = PublicCode/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3875,34 +4120,6 @@
 			};
 			name = Adhoc;
 		};
-		F33706072A94661F48C6B6F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = PublicCode/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug;
-		};
 		FA1C57F19B089C611A873F65 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3912,10 +4129,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = BaseDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3940,10 +4153,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = UtilsExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3959,7 +4168,7 @@
 			};
 			name = Release;
 		};
-		FC6EDF3BF989071744887F0A /* Debug */ = {
+		FD6D8F7403CE2D577D6C576B /* Debug_Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -3968,24 +4177,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INFOPLIST_FILE = AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppRyanair;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppWeather;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Debug_Prod;
 		};
 		FDC79B9FD68A32684959F05C /* Beta */ = {
 			isa = XCBuildConfiguration;
@@ -4033,7 +4238,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4044,6 +4248,30 @@
 			};
 			name = Beta;
 		};
+		FDCE30F450B0A965B1CFB613 /* Debug_Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AppHourlyChallenge/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.AppHourlyChallenge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug_Dev;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4052,7 +4280,9 @@
 			buildConfigurations = (
 				9AE71379655D56F799CB8D45 /* Adhoc */,
 				FDC79B9FD68A32684959F05C /* Beta */,
-				C99299DFC354C03F782AE40F /* Debug */,
+				8F65F2EFA797C5AC6873D0B9 /* Debug_Dev */,
+				0F0DB9279EA503602F7DE859 /* Debug_Prod */,
+				B569612455DA245C6715B3E3 /* Debug_QA */,
 				796483308D050DA87E78EBD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4063,7 +4293,9 @@
 			buildConfigurations = (
 				91B1D14155AC2293CBA41211 /* Adhoc */,
 				8A4B495259B30F0B206F97B6 /* Beta */,
-				C47515257D444A3A50E0278A /* Debug */,
+				2453805063A42AE0EC5459D1 /* Debug_Dev */,
+				BAE0AEA04D59DDE1A8B39FC9 /* Debug_Prod */,
+				E40430236CD032AB5FA74458 /* Debug_QA */,
 				B339363AD7D66D83AD8DBFFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4074,7 +4306,9 @@
 			buildConfigurations = (
 				3978F0F70946C70D592A34A0 /* Adhoc */,
 				1E87F7369F1E562EA223124F /* Beta */,
-				66388E9415CC7E14CAF66782 /* Debug */,
+				DA76B987FE6635FC39CEC099 /* Debug_Dev */,
+				B6694285984CFDA901FCE915 /* Debug_Prod */,
+				E2623EA784933FCDA6D6BD77 /* Debug_QA */,
 				338158B86CA5434D89BB12BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4085,7 +4319,9 @@
 			buildConfigurations = (
 				0FBB076B70746E883B84E2BE /* Adhoc */,
 				831DFD0E4B6B8B5FB2445A64 /* Beta */,
-				76AC75C524443BA65E9958BE /* Debug */,
+				84DA27C6FCF8BC0BBA45D1AD /* Debug_Dev */,
+				7F1279795FBB30F860654896 /* Debug_Prod */,
+				9F3325496F61582879803EC6 /* Debug_QA */,
 				E3F09B52CA0A6358EA07EFFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4096,7 +4332,9 @@
 			buildConfigurations = (
 				FA1C57F19B089C611A873F65 /* Adhoc */,
 				39A123ECAFAD142CDA89C083 /* Beta */,
-				A79F3C0A13F94F227D6E9D25 /* Debug */,
+				C61113432D42E73D3A20F0F8 /* Debug_Dev */,
+				E0D15CDA1579A63CF3CA80D4 /* Debug_Prod */,
+				EC5778DC981D26F756727C8F /* Debug_QA */,
 				5128A78D93196753D5AF23D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4107,7 +4345,9 @@
 			buildConfigurations = (
 				589471D62667B5B40B74C061 /* Adhoc */,
 				ABFF301CDCC65D68CA3D0442 /* Beta */,
-				2F28BFCAC67B5AFFDA5FD036 /* Debug */,
+				B76D62344D49F0DD7EB6F994 /* Debug_Dev */,
+				D01471603BE142EFA8775C88 /* Debug_Prod */,
+				8D06B267227EFE109E919FF2 /* Debug_QA */,
 				6DB31F57C8947D984639F820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4118,7 +4358,9 @@
 			buildConfigurations = (
 				694A685DA4DFFA6282D7CA89 /* Adhoc */,
 				12D506DEF1D6A2D5208C2BD8 /* Beta */,
-				3CA040DE1D496EFAA9F08653 /* Debug */,
+				A6541160211F810BFE0D58D4 /* Debug_Dev */,
+				FD6D8F7403CE2D577D6C576B /* Debug_Prod */,
+				CC46CAD4A68A40AC67C1D987 /* Debug_QA */,
 				49E95DDC5EA524AE418B02FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4129,7 +4371,9 @@
 			buildConfigurations = (
 				3CDFCA2C03721335A7B7100D /* Adhoc */,
 				86904201911B21793DE6E275 /* Beta */,
-				9B7CE59A5D8BD262A1AF9B35 /* Debug */,
+				19405BFCE5698BAD98C397EE /* Debug_Dev */,
+				9757413E7B242FBC8779B387 /* Debug_Prod */,
+				4A7FC99507A29B4A558950CB /* Debug_QA */,
 				A70AB3277AA0EE4C5CE56C98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4140,7 +4384,9 @@
 			buildConfigurations = (
 				E546E0EB38B5217DE5F313B4 /* Adhoc */,
 				94F17F0F73C6E574DFE16B33 /* Beta */,
-				0E72E7FCCADB0DFFC6A82810 /* Debug */,
+				8202C1109895CA107B74A3B0 /* Debug_Dev */,
+				7F17720E7CA9C6E22CF2DE38 /* Debug_Prod */,
+				BBE10467CCA9A90ADA0B0482 /* Debug_QA */,
 				9CD07B23205D8BEF97E2E30D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4151,7 +4397,9 @@
 			buildConfigurations = (
 				F1437D7F74ADB8CB3EE9DAA0 /* Adhoc */,
 				19052676F0BC317C7B967B28 /* Beta */,
-				F33706072A94661F48C6B6F7 /* Debug */,
+				C06BD04E9CA2C319E63B1012 /* Debug_Dev */,
+				1237E68A88740FF8C49D53B0 /* Debug_Prod */,
+				83D3BE05B2092B9FA876ADBC /* Debug_QA */,
 				23892E366331C780E43D1051 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4162,7 +4410,9 @@
 			buildConfigurations = (
 				C63C7CB0B0D6E7FC8DFE476A /* Adhoc */,
 				AD0C8192D292DD74C6C614BB /* Beta */,
-				FC6EDF3BF989071744887F0A /* Debug */,
+				EF3C71AB71FDD93070E8F459 /* Debug_Dev */,
+				9F0D369F9FB31632E9026025 /* Debug_Prod */,
+				A0398F79EB2D09DFF24989DD /* Debug_QA */,
 				4DCD175E51F64D5E5EA96B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4173,7 +4423,9 @@
 			buildConfigurations = (
 				5578CB860C0E5C98B79FBEB6 /* Adhoc */,
 				98694B80A9998E6685EB34D2 /* Beta */,
-				8C6FBB58990E59964375EA81 /* Debug */,
+				83912900D21202C33543A4F5 /* Debug_Dev */,
+				69201E015E4F4F5339FB12F3 /* Debug_Prod */,
+				47830AFEFDB31F2EBCF30DB0 /* Debug_QA */,
 				4A550FD30177E5620597F2B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4184,19 +4436,10 @@
 			buildConfigurations = (
 				7BAB40BF126B7B8579FB1449 /* Adhoc */,
 				66E56EC6E652F1F1C6302858 /* Beta */,
-				901EB3866E9AAC1770C5F49E /* Debug */,
+				171A348E3551DD82EBB0F1F6 /* Debug_Dev */,
+				69F2BF711B566D53D1C565B0 /* Debug_Prod */,
+				B4E246BBDF0E7A0190AEB964 /* Debug_QA */,
 				FB1E23DFBBDF0A61612E9356 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Adhoc;
-		};
-		CB762DEEB15756DCA06A5CB7 /* Build configuration list for PBXNativeTarget "UtilsVisualDocs" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A5ED79FF370FEA525E5E9770 /* Adhoc */,
-				8D2F0EF7E5A8E64746C0102C /* Beta */,
-				84B2B8F28D8930B3A349FECB /* Debug */,
-				8F1C00FC25A2529F70E215A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Adhoc;
@@ -4206,7 +4449,9 @@
 			buildConfigurations = (
 				7B3977D898916E39134E8B1D /* Adhoc */,
 				A4F1F7615BD3A017E987741A /* Beta */,
-				953347E7C9AE5F43642B1D08 /* Debug */,
+				450D5B75C058DB64458FE300 /* Debug_Dev */,
+				9E0E880DA43029D73B1BD156 /* Debug_Prod */,
+				6F0F33886D581793222317F6 /* Debug_QA */,
 				7082C1B05FABA899A472A6A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -4217,7 +4462,9 @@
 			buildConfigurations = (
 				30FA2416BA952BD7A05982FA /* Adhoc */,
 				703A55B297415ADE0B00A7DB /* Beta */,
-				EB4A8581378431BB0F724070 /* Debug */,
+				FDCE30F450B0A965B1CFB613 /* Debug_Dev */,
+				459B7C92F041ED5C5CA92826 /* Debug_Prod */,
+				221DF369BC878DE63927632B /* Debug_QA */,
 				2D3C8385ED4BF8CC0868FEC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

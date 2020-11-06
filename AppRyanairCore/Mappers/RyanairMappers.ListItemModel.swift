@@ -6,9 +6,9 @@
 import Foundation
 //
 import Utils
-import Utils_Extensions
+import UtilsExtensions
 //
-import Base_Domain
+import BaseDomain
 public extension RyanairMappers {
 
     static func listItemsWith(trips: [RyanairResponseDto.Trip]) -> [ListItemModel] {

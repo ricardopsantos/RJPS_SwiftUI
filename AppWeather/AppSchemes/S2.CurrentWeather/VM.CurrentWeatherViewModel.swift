@@ -7,7 +7,7 @@ import SwiftUI
 import Combine
 //
 import Utils
-import App_Weather_Core
+import AppWeatherCore
 
 public extension VM {
     class CurrentWeatherViewModel: ObservableObject {

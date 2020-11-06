@@ -1,3 +1,8 @@
+
+####################### PROJECT #######################
+####################### PROJECT #######################  
+####################### PROJECT #######################
+
 name: RJPSSwiftUI_V2
 
 options:
@@ -8,8 +13,16 @@ options:
   findCarthageFrameworks: false
   minimumXcodeGenVersion: '2.18.0'
 
+####################### AUXILIAR FOLDERS #######################
+####################### AUXILIAR FOLDERS #######################  
+####################### AUXILIAR FOLDERS #######################
+
 fileGroups:
   - ./_Documentation_
+
+####################### CONFIGS #######################
+####################### CONFIGS #######################  
+####################### CONFIGS #######################
 
 configs:
   Debug_Dev: debug
@@ -19,6 +32,10 @@ configs:
   Adhoc: release
   Beta: release
   
+####################### SETTINGS #######################
+####################### SETTINGS #######################  
+####################### SETTINGS #######################
+
 settings:
   base:
     ENABLE_BITCODE: NO
@@ -31,8 +48,13 @@ targetTemplates:
     platform: iOS
     deploymentTarget: '13.0'
     type: framework
-    settings:
-      FRAMEWORK_SEARCH_PATHS: $(inherited) $(SRCROOT)/Carthage/Build/iOS
+    #settings:
+    #  FRAMEWORK_SEARCH_PATHS: $(inherited) $(SRCROOT)/Carthage/Build/iOS
+ 
+
+####################### TARGETS #######################
+####################### TARGETS #######################  
+####################### TARGETS #######################
        
 targets:
         
@@ -52,16 +74,30 @@ targets:
       - target: AppWeather
         link: true
 
-## AppHourlyChallenge
+######################### AppHourlyChallenge
 
   AppHourlyChallenge:
     templates: 
       - Framework
     sources: 
       - path: AppHourlyChallenge
-    
-## AppRyanair
+    dependencies:
+      - target: UtilsStorage
+        link: false
+      - target: BaseDomain
+        link: false
+        
+####################### AppRyanair ##
 
+  AppRyanair:
+    templates: 
+      - Framework
+    sources: 
+      - path: AppRyanair  
+    dependencies:
+      - target: AppRyanairCore
+        link: false
+        
   AppRyanairCore:
     templates: 
       - Framework
@@ -70,16 +106,12 @@ targets:
     dependencies:
       - target: UtilsStorage
         link: false
+      - target: UtilsNetworking
+        link: false
       - target: BaseDomain
         link: false
 
-  AppRyanair:
-    templates: 
-      - Framework
-    sources: 
-      - path: AppRyanair  
-
-## AppWeather
+######################### AppWeather
 
   AppWeather:
     templates: 
@@ -88,7 +120,9 @@ targets:
       - path: AppWeather  
     dependencies:
       - target: BaseDomain
-        link: false       
+        link: false  
+      - target: AppWeatherCore
+        link: false     
         
   AppWeatherCore:
     templates: 
@@ -98,8 +132,10 @@ targets:
     dependencies:
       - target: UtilsStorage
         link: false
-     
-## Generic Utils
+      - target: DevTools
+        link: false 
+         
+######################### Generic Utils
  
   DevTools:
     templates: 
@@ -131,7 +167,12 @@ targets:
       - Framework
     sources: 
       - path: UtilsDesignables
-   
+    dependencies:
+      - target: UtilsExtensions
+        link: false
+      - target: Utils
+        link: false
+        
   UtilsExtensions:
     templates: 
       - Framework
@@ -152,16 +193,20 @@ targets:
     dependencies:
       - target: UtilsExtensions
         link: false
+      - target: BaseDomain
+        link: false
     
-  UtilsVisualDocs:
-    templates: 
-      - Framework
-    sources: 
-      - path: UtilsVisualDocs
-    dependencies:
-      - target: UtilsExtensions
-        link: false
-      - target: UtilsDesignables
-        link: false
+  #UtilsVisualDocs:
+  #  templates: 
+  #    - Framework
+  #  sources: 
+  #    - path: UtilsVisualDocs
+  #  dependencies:
+  #    - target: UtilsExtensions
+  #      link: false
+  #    - target: UtilsDesignables
+  #      link: false
+  #    - target: UtilsStorage
+  #      link: false
         
  

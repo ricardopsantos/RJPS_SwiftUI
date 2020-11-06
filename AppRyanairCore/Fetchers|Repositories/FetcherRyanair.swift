@@ -6,10 +6,10 @@
 import Foundation
 import Combine
 //
-import Base_Domain
+import BaseDomain
 //
-import Utils_Networking
-import Utils_Storage
+import UtilsNetworking
+import UtilsStorage
 import Utils
 
 // The Fetcher will aggregate all deferent WEB APIs

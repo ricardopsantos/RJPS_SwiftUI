@@ -9,10 +9,10 @@ import SwiftUI
 //
 import Utils_Designables
 import Utils
-import Utils_Extensions
+import UtilsExtensions
 //
 import App_Ryanair_Core
-import Base_Domain
+import BaseDomain
 
 struct RyanairView1: View {
 

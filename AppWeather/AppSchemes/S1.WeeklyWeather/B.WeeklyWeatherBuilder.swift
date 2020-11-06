@@ -6,10 +6,10 @@
 import Foundation
 import SwiftUI
 //
+import AppWeatherCore
 import BaseDomain
 import UtilsStorage
 import BaseDomain
-import AppWeatherCore
 
 //
 // The Builder is responsible to build a View and setup the Fetcher and ViewModel

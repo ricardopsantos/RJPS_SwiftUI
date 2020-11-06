@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 //
-import Base_Domain
+import BaseDomain
 
 public struct SampleAPI_Testing {
     private init() {}

@@ -7,8 +7,8 @@ import Foundation
 import Combine
 import SwiftUI
 //
-import Utils_Designables
-import Utils_Extensions
+import UtilsDesignables
+import UtilsExtensions
 //
 import App_Ryanair_Core
 

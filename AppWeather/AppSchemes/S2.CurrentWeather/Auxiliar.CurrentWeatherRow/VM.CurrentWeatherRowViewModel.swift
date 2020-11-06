@@ -7,7 +7,7 @@ import Foundation
 import SwiftUI
 import MapKit
 //
-import App_Weather_Core
+import AppWeatherCore
 
 public extension VM {
     struct CurrentWeatherRowViewModel {

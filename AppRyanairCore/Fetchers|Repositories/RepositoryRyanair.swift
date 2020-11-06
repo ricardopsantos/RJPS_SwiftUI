@@ -7,7 +7,7 @@ import Foundation
 import Combine
 //
 import Utils
-import Utils_Storage
+import UtilsStorage
 
 public class RepositoryRyanair: ObservableObject, RepositoryRyanairProtocol {
     public init() { }

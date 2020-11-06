@@ -4,7 +4,7 @@
 //
 
 import Foundation
-import Base_Domain
+import BaseDomain
 
 //MARK:- Stations : https://tripstest.ryanair.com/static/stations.json
 

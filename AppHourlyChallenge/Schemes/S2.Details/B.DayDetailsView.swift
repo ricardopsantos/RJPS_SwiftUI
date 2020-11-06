@@ -21,7 +21,7 @@ public struct DayDetailsViewBuilder : BuilderProtocol {
     }
 
     static func buildView(_ weekDay: Int, _ timeZone: Int) -> some View {
-        let fetcher: APIProtocol = Fetcher()
+        let fetcher: APIProtocol = FetcherHourlyChallenge()
         let viewModel = VM.DayDetailsViewModel(weekDay: weekDay, timeZone: timeZone, fetcher: fetcher)
         return DayDetailsView(weekDay: weekDay, timeZone: timeZone, viewModel: viewModel)
     }

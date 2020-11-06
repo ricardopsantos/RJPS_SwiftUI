@@ -6,7 +6,7 @@
 import Foundation
 import Combine
 //
-import Base_Domain
+import BaseDomain
 
 // https://tripstest.ryanair.com/static/stations.json
 public protocol APIRyanairProtocol {

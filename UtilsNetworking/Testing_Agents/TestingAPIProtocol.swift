@@ -6,7 +6,7 @@
 import Foundation
 import Combine
 //
-import Base_Domain
+import BaseDomain
 
 public protocol TestingAPIProtocol {
     func repos(username: String, cache: CachePolicy) -> AnyPublisher<[APIResponseDto.Repository], APIError>

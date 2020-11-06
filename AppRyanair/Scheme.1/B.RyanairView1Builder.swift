@@ -6,7 +6,7 @@
 import Foundation
 import SwiftUI
 //
-import Base_Domain
+import BaseDomain
 import App_Ryanair_Core
 
 //

@@ -8,11 +8,10 @@ import Foundation
 import SwiftUI
 import Combine
 //
-import Base_Domain
-import App_Weather
-import App_HourlyChallenge
-import App_Ryanair
-import Utils_Extensions
+import AppWeather
+import AppHourlyChallenge
+import AppRyanair
+import UtilsExtensions
 //
 
 struct AppRoot_View: View {
@@ -21,9 +20,9 @@ struct AppRoot_View: View {
         VStack { ImageNames.cloud.image; Text("Weather") }
     })}
 
-    var tab2 : some View { RyanairView1Builder.buildView().tabItem({
-        VStack { ImageNames.paperplane.image; Text("Ryanair") }
-    })}
+    //var tab2 : some View { RyanairView1Builder.buildView().tabItem({
+    //    VStack { ImageNames.paperplane.image; Text("Ryanair") }
+    //})}
 
     var tab3 : some View { DashboardViewBuilder.buildView().tabItem({
         VStack { ImageNames.clock.image; Text("Hourly") }
@@ -32,7 +31,7 @@ struct AppRoot_View: View {
     var body : some View {
         TabView {
             tab1
-            tab2
+      //      tab2
             tab3
             DevScreen_View()
         }

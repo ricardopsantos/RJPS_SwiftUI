@@ -1,7 +1,4 @@
 //
-//  HourlyChallengeFetcher.swift
-//  App.HourlyChallenge
-//
 //  Created by Ricardo Santos on 07/08/2020.
 //  Copyright © 2020 Ricardo P Santos. All rights reserved.
 //
@@ -16,12 +13,12 @@ import Combine
 import UtilsExtensions
 import DevTools
 
-public class Fetcher {
+public class FetcherHourlyChallenge {
     public init() { }
-    public static var shared = Fetcher()
+    public static var shared = FetcherHourlyChallenge()
 }
 
-extension Fetcher: APIProtocol {
+extension FetcherHourlyChallenge: APIProtocol {
 
     public func fetchDay(weekDay: Int) -> AnyPublisher<String, E.HourlyErrorEntity> {
         return Just(FetcherStaticData.day(weekDay: weekDay))

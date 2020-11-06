@@ -8,7 +8,7 @@ import Foundation
 import SwiftUI
 import Combine
 //
-import Utils_Extensions
+import UtilsExtensions
 
 //swiftlint:disable multiple_closures_with_trailing_closure
 

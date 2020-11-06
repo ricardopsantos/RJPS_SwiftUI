@@ -8,9 +8,9 @@
 import Foundation
 import Combine
 //
-import Base_Domain
+import BaseDomain
 //
-import Utils_Extensions
+import UtilsExtensions
 import DevTools
 
 public class FetcherRyanairMock {

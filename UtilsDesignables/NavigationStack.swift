@@ -7,7 +7,7 @@ import Foundation
 import Combine
 import SwiftUI
 //
-import Utils_Extensions
+import UtilsExtensions
 
 //
 // https://medium.com/swlh/swiftui-custom-navigation-view-for-your-applications-7f6effa7dbcf
