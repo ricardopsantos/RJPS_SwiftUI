@@ -131,6 +131,14 @@
 		D493FCAFBBD280EADDA2B746 /* Scheme.1 in Resources */ = {isa = PBXBuildFile; fileRef = 821287E4C3CD8175D9A5DACD /* Scheme.1 */; };
 		D59D24EC811786B1634762AD /* Array+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D34D4596AB27F3EA2FAA91 /* Array+Filtering.swift */; };
 		D72766D72EE0D607FE3E0D59 /* FetcherWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BA4C7A5B16A138A9FEB71A /* FetcherWeather.swift */; };
+		D75F65B62555694E00F1F11B /* AppRyanair.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58534EA6E7683AD76E090B05 /* AppRyanair.README.swift */; };
+		D75F65C42555699B00F1F11B /* BaseDomain.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D5753080FE65BF7DFD6638 /* BaseDomain.README.swift */; };
+		D75F65D2255569A000F1F11B /* DevTools.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41106B4DF4A4BE987C161CC3 /* DevTools.README.swift */; };
+		D75F65E0255569A300F1F11B /* Utils.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90156D5ED0605359DC5E3345 /* Utils.README.swift */; };
+		D75F65EE255569A800F1F11B /* UtilsDesignables.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F79D5583CA2D820CF16B9 /* UtilsDesignables.README.swift */; };
+		D75F65FC255569B100F1F11B /* UtilsExtensions.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BE24C83C9FB3F92DF177 /* UtilsExtensions.README.swift */; };
+		D75F660A255569BA00F1F11B /* UtilsStorage.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24C8B1A564332780684A9C3 /* UtilsStorage.README.swift */; };
+		D75F6618255569BE00F1F11B /* UtilsNetworking.README.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E8D715F6C71DAE3DECD8B /* UtilsNetworking.README.swift */; };
 		D8C2213898B64B0892FD6938 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449894BA7D18006ACFCB7080 /* TextField+Extensions.swift */; };
 		DAB9D77B7A2C2C8E418F070B /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852842A5B423F03268064BF /* APIKeys.swift */; };
 		DD2A6CF8230C5BBE6661BAF6 /* AppRoot_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD323D5B174A074563ED746 /* AppRoot_View.swift */; };
@@ -160,6 +168,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0F3570251CAA34DC0E2C74E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29ABC7E7DE1F8E032C4A9C81;
+			remoteInfo = UtilsExtensions;
+		};
 		14AC4D8DA784EB2A4EFEB27F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
@@ -209,12 +224,26 @@
 			remoteGlobalIDString = 61270D18C2496A06E47787A5;
 			remoteInfo = AppHourlyChallenge;
 		};
+		4299C74D66C5D7327AC0A360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E8B798166AF3C5EF938D16;
+			remoteInfo = UtilsStorage;
+		};
 		57375D9AE693FFCE5EE85571 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1B11CA5DB3DD17B41FB4C1EC;
 			remoteInfo = BaseDomain;
+		};
+		6293D7934B5D13190D4E30B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E71F3BD7B06D7D592696DD9D;
+			remoteInfo = Utils;
 		};
 		69113F738901D46BAA938203 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -230,12 +259,33 @@
 			remoteGlobalIDString = D0E8B798166AF3C5EF938D16;
 			remoteInfo = UtilsStorage;
 		};
+		84554043046448F6125D22F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 662B48486B4B1507C7499A00;
+			remoteInfo = UtilsDesignables;
+		};
 		8F7C001F9260857B59CC7FF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1B11CA5DB3DD17B41FB4C1EC;
 			remoteInfo = BaseDomain;
+		};
+		93E5854F8AC91E9F0143DA52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 662B48486B4B1507C7499A00;
+			remoteInfo = UtilsDesignables;
+		};
+		9518D06B5B19333207828786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1150AA1182F82FAF97AADD28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0E8B798166AF3C5EF938D16;
+			remoteInfo = UtilsStorage;
 		};
 		B4053E4373BCFB9AF0C75599 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -341,10 +391,10 @@
 		3BEF195719F0519F4C1C6175 /* RepositoryHourlyChallengeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHourlyChallengeProtocol.swift; sourceTree = "<group>"; };
 		3DA6789C533798CE76863F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3EA74F06BDB51078BA768426 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		3F5F79D5583CA2D820CF16B9 /* UtilsDesignables.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsDesignables.README.md; sourceTree = "<group>"; };
+		3F5F79D5583CA2D820CF16B9 /* UtilsDesignables.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsDesignables.README.swift; sourceTree = "<group>"; };
 		400FC51D2C7E81A63867592F /* RyanairRequestDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Stations.swift; sourceTree = "<group>"; };
 		40149D00AAA923D935CA0517 /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
-		41106B4DF4A4BE987C161CC3 /* DevTools.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DevTools.README.md; sourceTree = "<group>"; };
+		41106B4DF4A4BE987C161CC3 /* DevTools.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTools.README.swift; sourceTree = "<group>"; };
 		42AC4E4A6D71101D9784402C /* Publisher+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Publisher.swift"; sourceTree = "<group>"; };
 		4322D21FBFA059A25040917B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		449894BA7D18006ACFCB7080 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
@@ -361,8 +411,8 @@
 		5424136BF7E4057AD12FFB93 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		55B35950183FE0EF5158B79F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		570276D910DFFE7AEFA29D63 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		5780BE24C83C9FB3F92DF177 /* UtilsExtensions.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsExtensions.README.md; sourceTree = "<group>"; };
-		58534EA6E7683AD76E090B05 /* AppRyanair.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppRyanair.README.md; sourceTree = "<group>"; };
+		5780BE24C83C9FB3F92DF177 /* UtilsExtensions.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtensions.README.swift; sourceTree = "<group>"; };
+		58534EA6E7683AD76E090B05 /* AppRyanair.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRyanair.README.swift; sourceTree = "<group>"; };
 		5A28512F7BBD69CF2ACC7885 /* AppRyanair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A607F053A93A219D9243DF7 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
 		5E121CE990B04AFA70CA92C6 /* Designables_Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Designables_Preview.png; sourceTree = "<group>"; };
@@ -370,7 +420,7 @@
 		5EEC85B9A8CB07E486A4E649 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		5F5993CC16E205B3973132DB /* DarkMode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkMode.png; sourceTree = "<group>"; };
 		5FD31AC2C437AB2F267DFB6A /* RepositoryHourlyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHourlyChallenge.swift; sourceTree = "<group>"; };
-		61D5753080FE65BF7DFD6638 /* BaseDomain.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BaseDomain.README.md; sourceTree = "<group>"; };
+		61D5753080FE65BF7DFD6638 /* BaseDomain.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDomain.README.swift; sourceTree = "<group>"; };
 		646E4C67B740AF1E2C2CCB18 /* MVVM.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVVM.README.md; sourceTree = "<group>"; };
 		6525EB7793D16A1FCCE39B15 /* TestingAPI_VersionA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionA.swift; sourceTree = "<group>"; };
 		660CB92AB5E19EF7DB176CAF /* DevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -410,7 +460,7 @@
 		8CFC940EDD5F10E7E7E2777B /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		8D111911EBC5C6E07049F391 /* Form.Results.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Results.2.png; sourceTree = "<group>"; };
 		8FC43BB53AFD1B2E7016568B /* CachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicy.swift; sourceTree = "<group>"; };
-		90156D5ED0605359DC5E3345 /* Utils.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Utils.README.md; sourceTree = "<group>"; };
+		90156D5ED0605359DC5E3345 /* Utils.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.README.swift; sourceTree = "<group>"; };
 		915AE907CB9C6588BAB5B453 /* FetcherHourlyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherHourlyChallenge.swift; sourceTree = "<group>"; };
 		928E72A2C48119A800C421AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945EB8A10D058DF3340A9FB3 /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
@@ -423,7 +473,7 @@
 		99EC43A417E7A538FCEC3E95 /* StateObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StateObject_I.png; sourceTree = "<group>"; };
 		9B58765EF7DD31B34B8C2920 /* B.DashboardViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.DashboardViewBuilder.swift; sourceTree = "<group>"; };
 		9C3557AF76EB8A924307F5EE /* Subscribers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subscribers+Extensions.swift"; sourceTree = "<group>"; };
-		9D3547569CA5446DD95C99A0 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D3547569CA5446DD95C99A0 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E178BFE55B38A9EB71870A3 /* PublicCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PublicCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E26BC311E92868D55DC5519 /* DevScreen_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevScreen_View.swift; sourceTree = "<group>"; };
 		A32066CA8C3E039529417B29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -465,7 +515,7 @@
 		CC6F001F078EB4A3049F0D04 /* Just+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Just+Extensions.swift"; sourceTree = "<group>"; };
 		CF9534E47930F8C6673A0FD5 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
 		D07E2AEA0F476C7EA31644F0 /* SampleAPI_Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI_Testing.swift; sourceTree = "<group>"; };
-		D24C8B1A564332780684A9C3 /* UtilsStorage.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsStorage.README.md; sourceTree = "<group>"; };
+		D24C8B1A564332780684A9C3 /* UtilsStorage.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsStorage.README.swift; sourceTree = "<group>"; };
 		D5D34D4596AB27F3EA2FAA91 /* Array+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Filtering.swift"; sourceTree = "<group>"; };
 		D71187CE3B40946CA1DEE71C /* Form.Autocomplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Autocomplete.png; sourceTree = "<group>"; };
 		D7670EF8675C23D5696771FC /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
@@ -474,7 +524,7 @@
 		DA92C182C75BB93951CFBD7D /* FetcherRyanairMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanairMock.swift; sourceTree = "<group>"; };
 		DB1DA58711A99E2583FA54E3 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB261E3417A651FA9853BFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD0E8D715F6C71DAE3DECD8B /* UtilsNetworking.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UtilsNetworking.README.md; sourceTree = "<group>"; };
+		DD0E8D715F6C71DAE3DECD8B /* UtilsNetworking.README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsNetworking.README.swift; sourceTree = "<group>"; };
 		E115D0836B3F84D38B35BCC2 /* DtoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoProtocol.swift; sourceTree = "<group>"; };
 		E1A2B15566CB3D4A2A047CA8 /* V.CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherView.swift; sourceTree = "<group>"; };
 		E1DD07816282DCFAB21D2D61 /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
@@ -596,6 +646,7 @@
 		192F808C6A86AE4C8CA22947 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				90156D5ED0605359DC5E3345 /* Utils.README.swift */,
 				C097FD54048CEAAC39599530 /* Info.plist */,
 				19FA3A641ABD70C05EC65173 /* Utils.h */,
 				CCE04BC0A31FE9458F8331C7 /* Code */,
@@ -606,6 +657,7 @@
 		1F491C776AE54803180EE95C /* BaseDomain */ = {
 			isa = PBXGroup;
 			children = (
+				61D5753080FE65BF7DFD6638 /* BaseDomain.README.swift */,
 				79E2EFDE664CB56797D4114E /* APIError.swift */,
 				2C6F6F63345F753FD0BFCD4C /* BuilderProtocol.swift */,
 				8FC43BB53AFD1B2E7016568B /* CachePolicy.swift */,
@@ -631,6 +683,7 @@
 		266098B7D5223CB656446A03 /* AppRyanair */ = {
 			isa = PBXGroup;
 			children = (
+				58534EA6E7683AD76E090B05 /* AppRyanair.README.swift */,
 				78FE48541F227A5D4C2C5E0C /* App_Ryanair.h */,
 				97FF70B17C12EA8929A9ECC1 /* Info.plist */,
 				821287E4C3CD8175D9A5DACD /* Scheme.1 */,
@@ -805,6 +858,7 @@
 		7AB9A9646F7E1D4392DEC8AD /* UtilsStorage */ = {
 			isa = PBXGroup;
 			children = (
+				D24C8B1A564332780684A9C3 /* UtilsStorage.README.swift */,
 				945EB8A10D058DF3340A9FB3 /* APICacheManager.swift */,
 				1852842A5B423F03268064BF /* APIKeys.swift */,
 				CB64ECDA4A220820F6AE6480 /* CacheUtils.swift */,
@@ -851,6 +905,8 @@
 		84E2A71648D662077E02129F /* UtilsDesignables */ = {
 			isa = PBXGroup;
 			children = (
+				5780BE24C83C9FB3F92DF177 /* UtilsExtensions.README.swift */,
+				3F5F79D5583CA2D820CF16B9 /* UtilsDesignables.README.swift */,
 				CC02B0AF777D30E275D3ACA1 /* Designables_Preview.swift */,
 				1E59A92F3552E157B82C7F4E /* Designables.h */,
 				18E09F0C6C8C497667CCDB2F /* Info.plist */,
@@ -992,6 +1048,7 @@
 		B7A968571546CE739CFD4EF9 /* UtilsNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				DD0E8D715F6C71DAE3DECD8B /* UtilsNetworking.README.swift */,
 				A8FFFD33E2852D141B58B428 /* Info.plist */,
 				8802CACCB121B22F1226275D /* Networking.h */,
 				16951FC4AEB4B290AD72393C /* typelias.swift */,
@@ -1019,7 +1076,6 @@
 				99EC43A417E7A538FCEC3E95 /* StateObject_I.png */,
 				AAD6AF6837727E75ACF4344A /* Subscribers_1.png */,
 				EAD212F6FD562F6E1E33E886 /* Bugs */,
-				F22D64E59C47EC5D833BC649 /* Frameworks.README */,
 			);
 			path = _Documentation_;
 			sourceTree = "<group>";
@@ -1103,6 +1159,7 @@
 		DAE0AEB1B5E42954834FF156 /* DevTools */ = {
 			isa = PBXGroup;
 			children = (
+				41106B4DF4A4BE987C161CC3 /* DevTools.README.swift */,
 				0CD745512419492075010983 /* DevTools.h */,
 				19317EC144F39C3D4BF9A59F /* DevTools.swift */,
 				3DA6789C533798CE76863F0E /* Info.plist */,
@@ -1135,21 +1192,6 @@
 				AC41EF29018A7CB7F8966DAB /* Simulator Screen Shot - iPod touch (7th generation) - 2020-11-06 at 10.50.54.png */,
 			);
 			path = Bugs;
-			sourceTree = "<group>";
-		};
-		F22D64E59C47EC5D833BC649 /* Frameworks.README */ = {
-			isa = PBXGroup;
-			children = (
-				58534EA6E7683AD76E090B05 /* AppRyanair.README.md */,
-				61D5753080FE65BF7DFD6638 /* BaseDomain.README.md */,
-				41106B4DF4A4BE987C161CC3 /* DevTools.README.md */,
-				90156D5ED0605359DC5E3345 /* Utils.README.md */,
-				3F5F79D5583CA2D820CF16B9 /* UtilsDesignables.README.md */,
-				5780BE24C83C9FB3F92DF177 /* UtilsExtensions.README.md */,
-				DD0E8D715F6C71DAE3DECD8B /* UtilsNetworking.README.md */,
-				D24C8B1A564332780684A9C3 /* UtilsStorage.README.md */,
-			);
-			path = Frameworks.README;
 			sourceTree = "<group>";
 		};
 		F3524613261D41B600380DB3 /* RJPS_SwiftUI */ = {
@@ -1297,6 +1339,7 @@
 			dependencies = (
 				B2E6C9714AC9CEEF1BAE8E4E /* PBXTargetDependency */,
 				38D7B2C98ADFB692B0263B1D /* PBXTargetDependency */,
+				6B28D184D171CA99C6F3FCC9 /* PBXTargetDependency */,
 			);
 			name = AppWeather;
 			productName = AppWeather;
@@ -1400,6 +1443,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				2DE5F2D83163B5B6D67D583F /* PBXTargetDependency */,
+				3C9D643F61CBB705D5CD112F /* PBXTargetDependency */,
+				456C4D253415DB4502E70330 /* PBXTargetDependency */,
 			);
 			name = UtilsNetworking;
 			productName = UtilsNetworking;
@@ -1418,6 +1464,7 @@
 			dependencies = (
 				59E8E8073B262C3762E4F376 /* PBXTargetDependency */,
 				AB5FFA8B90052B6E9E15C04D /* PBXTargetDependency */,
+				2FA24441AFAE44CBCC098C27 /* PBXTargetDependency */,
 			);
 			name = AppHourlyChallenge;
 			productName = AppHourlyChallenge;
@@ -1487,6 +1534,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7DE59EAD58733D6F2A251766 /* PBXTargetDependency */,
 				41930EC651E47AD83A8D95D5 /* PBXTargetDependency */,
 				6D0ABA28A4D5DF77975B6CB0 /* PBXTargetDependency */,
 				D3426DC346B67263386ED4FB /* PBXTargetDependency */,
@@ -1537,8 +1585,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1202;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 0A85371B0C5704A168BCBE43 /* Build configuration list for PBXProject "RJPSSwiftUI_V2" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1625,6 +1671,7 @@
 				DAB9D77B7A2C2C8E418F070B /* APIKeys.swift in Sources */,
 				CA410037013DD307ABF6D331 /* CacheUtils.swift in Sources */,
 				635A4720109EFDAE793B0CB1 /* GenericStorableKeyValueModel.swift in Sources */,
+				D75F660A255569BA00F1F11B /* UtilsStorage.README.swift in Sources */,
 				904A3819DC5100CDBDB6B3B4 /* HotCacheManager.swift in Sources */,
 				527B94B1A58DEF22B2F61B7F /* Storage.typealias.swift in Sources */,
 				8BDB99A044B47C397BFB7766 /* UserDefaults+Extensions.swift in Sources */,
@@ -1637,6 +1684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F7945DAB0D1DCA8F275299 /* DevTools+FeatureFlag.swift in Sources */,
+				D75F65D2255569A000F1F11B /* DevTools.README.swift in Sources */,
 				2F854AF8B4656FB44B6D606D /* DevTools+Log.swift in Sources */,
 				3C207E298E87B14E15CA55C0 /* DevTools.swift in Sources */,
 				73A061D7D37BC3C0E8E02CF9 /* OSLog+Extension.swift in Sources */,
@@ -1648,6 +1696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0248E15A4E4A5B1FDD6D9B17 /* APIError.swift in Sources */,
+				D75F65C42555699B00F1F11B /* BaseDomain.README.swift in Sources */,
 				D3F8597D3EB98FD5825546C2 /* BuilderProtocol.swift in Sources */,
 				1D2B6B78EB8AACC3B3C0465E /* CachePolicy.swift in Sources */,
 				8BCD02E4560A41C2A4DD28D1 /* DtoProtocol.swift in Sources */,
@@ -1663,6 +1712,7 @@
 			files = (
 				8CEA6F0232FD4C20E35098ED /* APIResponseDto.swift in Sources */,
 				3B945F6C30E508A25919EF1E /* SampleAPI_Testing.swift in Sources */,
+				D75F6618255569BE00F1F11B /* UtilsNetworking.README.swift in Sources */,
 				2A3BD81F00A49E6DC6443B55 /* SimpleNetworkAgentProtocol.swift in Sources */,
 				A81F6CBE2B3A13C35E929FC5 /* SimpleNetworkAgent_A.swift in Sources */,
 				29F41850752C46E1752146D8 /* SimpleNetworkAgent_B.swift in Sources */,
@@ -1700,6 +1750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75F65B62555694E00F1F11B /* AppRyanair.README.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1720,8 +1771,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20611C9DE861B2D5E5F34A17 /* ActivityIndicatorRepresentable.swift in Sources */,
+				D75F65EE255569A800F1F11B /* UtilsDesignables.README.swift in Sources */,
 				E6763124E15DE61B2D1E9DAC /* ConnectivityView.swift in Sources */,
 				E81B78866614A2DB01125458 /* DesignablesFactory.swift in Sources */,
+				D75F65FC255569B100F1F11B /* UtilsExtensions.README.swift in Sources */,
 				93D99FF2A27357BD36A617C0 /* Designables_PassCode.swift in Sources */,
 				EDB17148B9D45CB6FE3608B8 /* Designables_Preview.swift in Sources */,
 				0C1BCBB88929A127884D7079 /* NavigationStack.swift in Sources */,
@@ -1732,6 +1785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75F65E0255569A300F1F11B /* Utils.README.swift in Sources */,
 				8347D61CEB62A2E8D3F355DA /* CancelBag.swift in Sources */,
 				985CD3D0A0A90F11929CC6D3 /* DateFormatters.swift in Sources */,
 				87904AFFE770B38355D204C5 /* NetworkUtils.swift in Sources */,
@@ -1844,15 +1898,35 @@
 			target = 465CD5C0E6CE491C8AAC4260 /* AppRyanair */;
 			targetProxy = EA98AF3EF2A43A91DB3BF205 /* PBXContainerItemProxy */;
 		};
+		2DE5F2D83163B5B6D67D583F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29ABC7E7DE1F8E032C4A9C81 /* UtilsExtensions */;
+			targetProxy = 0F3570251CAA34DC0E2C74E6 /* PBXContainerItemProxy */;
+		};
+		2FA24441AFAE44CBCC098C27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 662B48486B4B1507C7499A00 /* UtilsDesignables */;
+			targetProxy = 93E5854F8AC91E9F0143DA52 /* PBXContainerItemProxy */;
+		};
 		38D7B2C98ADFB692B0263B1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FB41D4AE41EFEC25BE3D8A80 /* AppWeatherCore */;
 			targetProxy = 181012825043ED9B175FEE40 /* PBXContainerItemProxy */;
 		};
+		3C9D643F61CBB705D5CD112F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0E8B798166AF3C5EF938D16 /* UtilsStorage */;
+			targetProxy = 4299C74D66C5D7327AC0A360 /* PBXContainerItemProxy */;
+		};
 		41930EC651E47AD83A8D95D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0E8B798166AF3C5EF938D16 /* UtilsStorage */;
 			targetProxy = D6E4294DED36EAD64EAA5862 /* PBXContainerItemProxy */;
+		};
+		456C4D253415DB4502E70330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0E8B798166AF3C5EF938D16 /* UtilsStorage */;
+			targetProxy = 9518D06B5B19333207828786 /* PBXContainerItemProxy */;
 		};
 		4866297DFC8A6891FC7F01C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1869,10 +1943,20 @@
 			target = D0E8B798166AF3C5EF938D16 /* UtilsStorage */;
 			targetProxy = 7158123A42762AB5AAC2D541 /* PBXContainerItemProxy */;
 		};
+		6B28D184D171CA99C6F3FCC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 662B48486B4B1507C7499A00 /* UtilsDesignables */;
+			targetProxy = 84554043046448F6125D22F2 /* PBXContainerItemProxy */;
+		};
 		6D0ABA28A4D5DF77975B6CB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 559B8E96039B85D8BD495880 /* UtilsNetworking */;
 			targetProxy = 21F0880FED9176155737F963 /* PBXContainerItemProxy */;
+		};
+		7DE59EAD58733D6F2A251766 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E71F3BD7B06D7D592696DD9D /* Utils */;
+			targetProxy = 6293D7934B5D13190D4E30B6 /* PBXContainerItemProxy */;
 		};
 		AB5FFA8B90052B6E9E15C04D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2151,6 +2235,7 @@
 		1E87F7369F1E562EA223124F /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
@@ -2288,6 +2373,7 @@
 		338158B86CA5434D89BB12BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
@@ -2305,6 +2391,7 @@
 		3978F0F70946C70D592A34A0 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
@@ -3712,6 +3799,7 @@
 		B6694285984CFDA901FCE915 /* Debug_Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
@@ -3921,6 +4009,7 @@
 		DA76B987FE6635FC39CEC099 /* Debug_Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;
@@ -3962,6 +4051,7 @@
 		E2623EA784933FCDA6D6BD77 /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RJPS_SwiftUI/Info.plist;

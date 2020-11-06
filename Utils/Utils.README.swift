@@ -1,4 +1,6 @@
-# Utils
+/**
+
+ # Utils
 
 ## About
 
@@ -11,3 +13,4 @@ This module and `DevTools` should be project independent (having the ability do 
 * DevTools
 * Utils.*
 
+ */

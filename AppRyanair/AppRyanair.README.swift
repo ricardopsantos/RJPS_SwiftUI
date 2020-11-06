@@ -1,3 +1,5 @@
+/**
+
 #  App.Ryanair
 
 ## About
@@ -163,3 +165,4 @@ Map all `RyanairResponseDto` objects into mirror  `Model` objects so that the Vi
 
 See [Domain driven design](https://en.wikipedia.org/wiki/Domain-driven_design)
 
+*/

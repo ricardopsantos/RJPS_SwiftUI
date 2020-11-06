@@ -1,10 +1,14 @@
-# Utils.Designables
+/**
+
+# Utils.Extensions
 
 ## About
 
-Util UI components factory
+Extensions
 
 ## Allowed Dependencies
 
 * DevTools
 * Utils.*
+
+*/

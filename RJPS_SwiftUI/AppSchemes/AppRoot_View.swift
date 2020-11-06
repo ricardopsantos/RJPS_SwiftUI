@@ -14,6 +14,8 @@ import AppRyanair
 import UtilsExtensions
 //
 
+#warning("fazer make file e nele tb o graph viz")
+
 struct AppRoot_View: View {
 
     var tab1 : some View { WeeklyWeatherBuilder.buildView().tabItem({

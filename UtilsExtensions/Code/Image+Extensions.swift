@@ -114,7 +114,6 @@ public enum ImageNames: String, CaseIterable {
     }
 }
 
-/*
 public struct VisualDocs_ImageName: View {
     public init() { }
     @State var imageNames = ImageNames.allCases
@@ -174,15 +173,6 @@ public struct VisualDocs_ImageName: View {
                 }
             }
         }
-    }
-}
-*/
-
-public struct VisualDocs_ImageName: View {
-    public init() { }
-    @State var imageNames = ImageNames.allCases
-    public var body: some View {
-        Text("Hi")
     }
 }
 

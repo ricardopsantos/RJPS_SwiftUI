@@ -1,3 +1,5 @@
+/**
+
 # Base.Domain
 
 ## About
@@ -9,4 +11,5 @@ This module and `Utils.*` should be project independent (having the ability do j
 ## Allowed Dependencies
 
 __NONE__
-
+ 
+*/

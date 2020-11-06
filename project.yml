@@ -86,6 +86,8 @@ targets:
         link: false
       - target: BaseDomain
         link: false
+      - target: UtilsDesignables
+        link: false  
         
 ####################### AppRyanair ##
 
@@ -104,6 +106,8 @@ targets:
     sources: 
       - path: AppRyanairCore  
     dependencies:
+      - target: Utils
+        link: false
       - target: UtilsStorage
         link: false
       - target: UtilsNetworking
@@ -123,6 +127,8 @@ targets:
         link: false  
       - target: AppWeatherCore
         link: false     
+      - target: UtilsDesignables
+        link: false  
         
   AppWeatherCore:
     templates: 
@@ -184,7 +190,14 @@ targets:
       - Framework
     sources: 
       - path: UtilsNetworking
-      
+    dependencies:
+      - target: UtilsExtensions
+        link: false
+      - target: UtilsStorage
+        link: false
+      - target: UtilsStorage
+        link: false
+  
   UtilsStorage:
     templates: 
       - Framework
