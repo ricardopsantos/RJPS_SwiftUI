@@ -3,7 +3,7 @@ import Combine
 //
 import BaseDomain
 
-public struct SampleAPI_Testing {
+public struct SampleAPI_SampleCalls {
     private init() {}
 
     public static func test() {
