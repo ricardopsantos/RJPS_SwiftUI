@@ -39,24 +39,22 @@
 		2F8CCD996FF87B3BDEE38CB8 /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FDC4298D6987F99C7026A /* README.swift */; };
 		2FF13434146DDA7239BABF38 /* V.DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55ACEC6AFC2546A60FD4577 /* V.DashboardView.swift */; };
 		3375B182B5B7E515BD96AD7F /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7CF663E514F96ACDA0971B /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33966C710B4B5A745CCAF7A1 /* TestingAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA875C4E2BA4CABC6B8D3F /* TestingAPIProtocol.swift */; };
 		346C29DABEED4BB69823BFB7 /* Form.Validations.1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4DBC0413BAECCE1BD087DC2 /* Form.Validations.1.png */; };
 		368EF23E355B5FF7EEDC956F /* AppRyanair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A28512F7BBD69CF2ACC7885 /* AppRyanair.framework */; };
 		37A641364AE0548B7FC097B1 /* B.DashboardViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58765EF7DD31B34B8C2920 /* B.DashboardViewBuilder.swift */; };
 		38AFCB9244A1DE21E091F183 /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EB8A10D058DF3340A9FB3 /* APICacheManager.swift */; };
 		398DD451129BEC57FD0F7C2F /* RepositoryWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCE50FD26534FECAC45C62 /* RepositoryWeatherProtocol.swift */; };
-		3B945F6C30E508A25919EF1E /* SampleAPI_SampleCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E2AEA0F476C7EA31644F0 /* SampleAPI_SampleCalls.swift */; };
 		3C207E298E87B14E15CA55C0 /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19317EC144F39C3D4BF9A59F /* DevTools.swift */; };
 		3CFC580CE2AAA51DD446A336 /* APIWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4EF9F76794822F75BCA5C /* APIWeatherProtocol.swift */; };
 		3F4CA7CB23107ED6EEBECDC0 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774C2F7342A2F565AD68FD08 /* ProcessInfo.swift */; };
 		44AB43AE5882E1718C2310DA /* B.CurrentWeatherViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783877FBE44C08E222285EB /* B.CurrentWeatherViewBuilder.swift */; };
 		454195639565AEE46363DBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B537ECD7A3952AEB70B78C6 /* LaunchScreen.storyboard */; };
+		468A92B14124DEF177505EEE /* SampleAPI_SampleCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146AE0FFA06FDCB942EE7E54 /* SampleAPI_SampleCalls.swift */; };
 		475C2E11817777FC897D643C /* V.DailyWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200E653AF8CEA7C89DFB331 /* V.DailyWeatherRowView.swift */; };
 		4B64A71610FD99D2CA2F517B /* VM.CurrentWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E18D2E8D24C8E2555DF69B /* VM.CurrentWeatherRowViewModel.swift */; };
 		4BC6B0526701E5C00C2FA77F /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F9E00BCD0822A0CFE158A /* Result+Extensions.swift */; };
 		4E6C98C2A3781BE547CD064A /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16951FC4AEB4B290AD72393C /* typelias.swift */; };
 		52278F6AF4831A1CCC624993 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EC9229AB1F64A3D9B95B01 /* ListItemModel.swift */; };
-		527B94B1A58DEF22B2F61B7F /* typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8766722FDB490E5B8EE7F55C /* typealias.swift */; };
 		566360BB52D770B83E04A9CD /* Designables.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E59A92F3552E157B82C7F4E /* Designables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		589009855EB7C0B5D8C095F9 /* V.MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F4059A90EB022B056A30 /* V.MapViewRepresentable.swift */; };
 		58F47D550601251EC58D9325 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B20ECAF2E2791B8A7CEA1B /* URLSession+Extensions.swift */; };
@@ -64,11 +62,13 @@
 		5A084EFA8BEEE04CB804EAA6 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F95DA534949AF911D18E9F /* typelias.swift */; };
 		5EC204CB7C1F40EFE7CCD4A8 /* RyanairMappers.ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D891405A58F35680F25497B /* RyanairMappers.ListItemModel.swift */; };
 		5F44B1F06DCF0BABD498C29C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FDE0D1000334B6DA80E4F6 /* LaunchScreen.storyboard */; };
+		5FD908675723BC4CBF5950EC /* TestingAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CAD75CD92EBCDB4A9726C7 /* TestingAPIProtocol.swift */; };
 		618FAFFA130EF82B82636D5E /* Response<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C26B950C6D640F1EA78B7 /* Response<T>.swift */; };
 		6223D535930BE49A07B88018 /* PointFreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B06B849BEB1709D0E84D8 /* PointFreeFunctions.swift */; };
 		635A4720109EFDAE793B0CB1 /* GenericStorableKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB0D05C0CA9D6554EED2C62 /* GenericStorableKeyValueModel.swift */; };
 		641C699E23B7E532B5492D3D /* RepositoryRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706F4E8A13BBBF6F75688F8 /* RepositoryRyanair.swift */; };
 		6562DD128F53BEE73C9B6253 /* AppRyanair.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A28512F7BBD69CF2ACC7885 /* AppRyanair.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65ADCE02056FCFCCA14EB7D7 /* APIResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA00468C7A597512CFBBD7B /* APIResponseDto.swift */; };
 		6735AB758BAB569105180BED /* RyanairRequestDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED23E562D9EA44A00B7A9C /* RyanairRequestDto.Availability.swift */; };
 		6AECF5B0C04A70F4EA17B6C4 /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D67CB37DB55A9EBAF1A8C8A /* README.swift */; };
 		6BB1C4F2E4FBD3F8720AADF9 /* V.DayDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EF7FA45E3890ACCCC47E5A /* V.DayDetailsView.swift */; };
@@ -92,7 +92,6 @@
 		89F64E0978B34DB9A80E8054 /* WeatherResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA16A503E1A8AB18B6510F /* WeatherResponseDto.swift */; };
 		8BCD02E4560A41C2A4DD28D1 /* DtoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115D0836B3F84D38B35BCC2 /* DtoProtocol.swift */; };
 		8BDB99A044B47C397BFB7766 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE910976B705E5EEA35FC5 /* UserDefaults+Extensions.swift */; };
-		8CEA6F0232FD4C20E35098ED /* APIResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76258898BB584EA08B93E6 /* APIResponseDto.swift */; };
 		8D976776BA01471DC5D5DC44 /* MailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272CE4CDC48F084D4CDDCF69 /* MailViewControllerRepresentable.swift */; };
 		904A3819DC5100CDBDB6B3B4 /* HotCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6521B98EBA27A00B2CCF9B /* HotCacheManager.swift */; };
 		921C58FD88F96A334CDD1B9D /* RepositoryHourlyChallengeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF195719F0519F4C1C6175 /* RepositoryHourlyChallengeProtocol.swift */; };
@@ -108,7 +107,6 @@
 		9A60F29C12899DAAA09486F1 /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0274722E349B56CFFCCCE2 /* README.swift */; };
 		A04BCDF80A39817B16A4593A /* RyanairResponseDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1386E278EF424DD09A2743AA /* RyanairResponseDto.Availability.swift */; };
 		A115735698FEE223EB2EE703 /* VM.DayDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4837523BC9DCB636D0F5AD6E /* VM.DayDetailsViewModel.swift */; };
-		A17499D985FC58AEE98B07DE /* TestingAPI_VersionB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB623939C629D31724FAC /* TestingAPI_VersionB.swift */; };
 		A2176AC88993F48C888B1A65 /* PublicCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA2E66C45120762EFBA4CE5 /* PublicCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A22CD091E0CFB70C4D708474 /* Preview.Multiple.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F16695B697A2995579A6ED /* Preview.Multiple.png */; };
 		A2B3AA94DB571EC0E18C9D40 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8802CACCB121B22F1226275D /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -122,6 +120,7 @@
 		AC9F121479A40ADD2F74AC63 /* WeatherRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25DF826783574C3251B952 /* WeatherRequestDto.swift */; };
 		ADD7347E2F4B9CE641EA9873 /* VM.WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9534E47930F8C6673A0FD5 /* VM.WeeklyWeatherViewModel.swift */; };
 		AE7B3353F454332E55A2863A /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028EE27C4C61255A7765ED0 /* README.swift */; };
+		B2341A31E65886DA140539D4 /* TestingAPI_VersionA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D9D6EF9DFC8F32286D6CB3 /* TestingAPI_VersionA.swift */; };
 		B8CD4AD03343F2867DD0F61B /* Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = AA22515626316068ED33688D /* Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A2E1DC1BF2D5226E5F071F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB261E3417A651FA9853BFAE /* Assets.xcassets */; };
 		C0FDCDF16191ECF292326E6E /* README.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEBA1595D1FDC7872E9E1E9 /* README.swift */; };
@@ -145,10 +144,12 @@
 		DDC0DEC4745172284B6388D3 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102099EE37512AE9AC15006F /* JSONDecoder+Extensions.swift */; };
 		E1220C02675A312F28215D23 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 19FA3A641ABD70C05EC65173 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3A15E87C5186E7D3290F932 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 720CEC21F8DFEEF084E1B69B /* Keys.plist */; };
+		E47D248FEB05691264A3A360 /* TestingAPI_VersionB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AD0D7F187942F9C4D56B4 /* TestingAPI_VersionB.swift */; };
 		E5D0AC7D9A9452FF095F4201 /* Subscribers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3557AF76EB8A924307F5EE /* Subscribers+Extensions.swift */; };
 		E5F7945DAB0D1DCA8F275299 /* DevTools+FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224944403F7DCA8B5C23E999 /* DevTools+FeatureFlag.swift */; };
 		E6763124E15DE61B2D1E9DAC /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C532D495F0B9DD31CB848 /* ConnectivityView.swift */; };
 		E81B78866614A2DB01125458 /* DesignablesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F2B2B3EB3442EB46A44BF7 /* DesignablesFactory.swift */; };
+		E93416A81F28AE8BD77173F1 /* typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004646074AD7E89F2A432EA7 /* typealias.swift */; };
 		EA72C4493216D15DEFBC285A /* VM.DailyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC803950BBCAB32749E813 /* VM.DailyWeatherRowViewModel.swift */; };
 		EAA7FBB64D5399E55244BDFC /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671DFFCD24D9580F568A94D8 /* NSObject+Extensions.swift */; };
 		EB14314D7608CE116D688A18 /* V.WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837378564AAC88BB00342C34 /* V.WeeklyWeatherView.swift */; };
@@ -163,7 +164,6 @@
 		F8B6E30D3913AB9E7A50BCB2 /* AppHourlyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FA5AC7F76911E93DB92EAB /* AppHourlyChallenge.framework */; };
 		F98A641F92BB32E5874A2545 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F08CC8340B85AC4B6CB4EA /* DateUtils.swift */; };
 		FB558C580611F90C95C4B80D /* AppWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA47ADF484C65D38C73F6E1F /* AppWeather.framework */; };
-		FC63DEBE1DE8D12AE1C9F295 /* TestingAPI_VersionA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525EB7793D16A1FCCE39B15 /* TestingAPI_VersionA.swift */; };
 		FD9BF2F84C68B318B8936A3A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA74F06BDB51078BA768426 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -349,10 +349,10 @@
 
 /* Begin PBXFileReference section */
 		0028EE27C4C61255A7765ED0 /* README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.swift; sourceTree = "<group>"; };
+		004646074AD7E89F2A432EA7 /* typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typealias.swift; sourceTree = "<group>"; };
 		01C769B6C0F6821EA29F8894 /* AppWeatherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDC1D4B5A1EEBA8E49BBE /* App_HourlyChallenge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_HourlyChallenge.h; sourceTree = "<group>"; };
 		03C8F7161FD969EB4C9911D1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		03EA875C4E2BA4CABC6B8D3F /* TestingAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPIProtocol.swift; sourceTree = "<group>"; };
 		0541A1B76385F1992F42EBF4 /* RepositorRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorRyanairProtocol.swift; sourceTree = "<group>"; };
 		05AE80C74580F305CF034662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		07E8E4A205F201D470A440C0 /* Operators_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Operators_1.png; sourceTree = "<group>"; };
@@ -363,6 +363,7 @@
 		11FA5AC7F76911E93DB92EAB /* AppHourlyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppHourlyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		127751B7109AA5EE18259512 /* UtilsDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1386E278EF424DD09A2743AA /* RyanairResponseDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Availability.swift; sourceTree = "<group>"; };
+		146AE0FFA06FDCB942EE7E54 /* SampleAPI_SampleCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI_SampleCalls.swift; sourceTree = "<group>"; };
 		1619FB3DBF7C02D193113D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		16951FC4AEB4B290AD72393C /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		16CE5E560BF923CB093125D5 /* README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.swift; sourceTree = "<group>"; };
@@ -380,15 +381,16 @@
 		25D95C0F1F079A377B6138FC /* FetcherWeatherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeatherMock.swift; sourceTree = "<group>"; };
 		25FC803950BBCAB32749E813 /* VM.DailyWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DailyWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		272CE4CDC48F084D4CDDCF69 /* MailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		273AD0D7F187942F9C4D56B4 /* TestingAPI_VersionB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionB.swift; sourceTree = "<group>"; };
 		2BD1820D44812A4EF3F9C5E1 /* VM.CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 		2C6F6F63345F753FD0BFCD4C /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		2CFBEE21375584F167AB733F /* RyanairResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.swift; sourceTree = "<group>"; };
-		2F76258898BB584EA08B93E6 /* APIResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseDto.swift; sourceTree = "<group>"; };
 		3164456653A12F446EB49E4E /* SimpleNetworkAgent_A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgent_A.swift; sourceTree = "<group>"; };
 		32656132416D5362C50DD179 /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
 		33EF7FA45E3890ACCCC47E5A /* V.DayDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.DayDetailsView.swift; sourceTree = "<group>"; };
 		3651BD6C12EDB8A44E91E64E /* ObservableObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObservableObject_I.png; sourceTree = "<group>"; };
 		371075B99E5DCC8C68F26662 /* App_Ryanair_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App_Ryanair_Core.h; sourceTree = "<group>"; };
+		37CAD75CD92EBCDB4A9726C7 /* TestingAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPIProtocol.swift; sourceTree = "<group>"; };
 		38315D271FB3ACA27CEC61B8 /* WeatherResponseDto.WeeklyForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.WeeklyForecastEntity.swift; sourceTree = "<group>"; };
 		3BEF195719F0519F4C1C6175 /* RepositoryHourlyChallengeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHourlyChallengeProtocol.swift; sourceTree = "<group>"; };
 		3DA6789C533798CE76863F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 		52BA4C7A5B16A138A9FEB71A /* FetcherWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeather.swift; sourceTree = "<group>"; };
 		5424136BF7E4057AD12FFB93 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		55B35950183FE0EF5158B79F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		55D9D6EF9DFC8F32286D6CB3 /* TestingAPI_VersionA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionA.swift; sourceTree = "<group>"; };
 		570276D910DFFE7AEFA29D63 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5A28512F7BBD69CF2ACC7885 /* AppRyanair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A607F053A93A219D9243DF7 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
@@ -422,7 +425,6 @@
 		5F5993CC16E205B3973132DB /* DarkMode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkMode.png; sourceTree = "<group>"; };
 		5FD31AC2C437AB2F267DFB6A /* RepositoryHourlyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryHourlyChallenge.swift; sourceTree = "<group>"; };
 		646E4C67B740AF1E2C2CCB18 /* MVVM.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVVM.README.md; sourceTree = "<group>"; };
-		6525EB7793D16A1FCCE39B15 /* TestingAPI_VersionA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionA.swift; sourceTree = "<group>"; };
 		660CB92AB5E19EF7DB176CAF /* DevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6706F4E8A13BBBF6F75688F8 /* RepositoryRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRyanair.swift; sourceTree = "<group>"; };
 		671DFFCD24D9580F568A94D8 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
@@ -452,10 +454,8 @@
 		830FC817BD726FFE5A848230 /* AppRyanairCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837378564AAC88BB00342C34 /* V.WeeklyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.WeeklyWeatherView.swift; sourceTree = "<group>"; };
 		8487B9FA6D389E15ED676272 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		8766722FDB490E5B8EE7F55C /* typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typealias.swift; sourceTree = "<group>"; };
 		87BA8FC8BC734D490224B5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8802CACCB121B22F1226275D /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		880AB623939C629D31724FAC /* TestingAPI_VersionB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAPI_VersionB.swift; sourceTree = "<group>"; };
 		884AC9DCD99182C4F0CED742 /* Publishers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Publishers_1.png; sourceTree = "<group>"; };
 		89D848E728F4F5F7ECBE6559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8CFC940EDD5F10E7E7E2777B /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
@@ -496,6 +496,7 @@
 		B8541BEDB578A377497D85C9 /* Form.Internet.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Internet.1.png; sourceTree = "<group>"; };
 		B8CC877033BD59D91F9634F2 /* Form.Results.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Results.1.png; sourceTree = "<group>"; };
 		BD23DBFC820DF61C3EA8F7F8 /* B.WeeklyWeatherBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.WeeklyWeatherBuilder.swift; sourceTree = "<group>"; };
+		BDA00468C7A597512CFBBD7B /* APIResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseDto.swift; sourceTree = "<group>"; };
 		BEBDCE4BC9C419876BF9EE64 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		BFBB3F7592C9A28F37096886 /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		C097FD54048CEAAC39599530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -516,7 +517,6 @@
 		CC6F001F078EB4A3049F0D04 /* Just+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Just+Extensions.swift"; sourceTree = "<group>"; };
 		CE4FDC4298D6987F99C7026A /* README.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.swift; sourceTree = "<group>"; };
 		CF9534E47930F8C6673A0FD5 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
-		D07E2AEA0F476C7EA31644F0 /* SampleAPI_SampleCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI_SampleCalls.swift; sourceTree = "<group>"; };
 		D5D34D4596AB27F3EA2FAA91 /* Array+Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Filtering.swift"; sourceTree = "<group>"; };
 		D71187CE3B40946CA1DEE71C /* Form.Autocomplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Form.Autocomplete.png; sourceTree = "<group>"; };
 		D7670EF8675C23D5696771FC /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
@@ -607,6 +607,18 @@
 				D7670EF8675C23D5696771FC /* RyanairMappers.swift */,
 			);
 			path = Mappers;
+			sourceTree = "<group>";
+		};
+		119BFB900641684050EA2D8A /* SimpleNetworkAgents.Testing */ = {
+			isa = PBXGroup;
+			children = (
+				146AE0FFA06FDCB942EE7E54 /* SampleAPI_SampleCalls.swift */,
+				55D9D6EF9DFC8F32286D6CB3 /* TestingAPI_VersionA.swift */,
+				273AD0D7F187942F9C4D56B4 /* TestingAPI_VersionB.swift */,
+				37CAD75CD92EBCDB4A9726C7 /* TestingAPIProtocol.swift */,
+				9B52E03CCB14C89C335EE896 /* Entities */,
+			);
+			path = SimpleNetworkAgents.Testing;
 			sourceTree = "<group>";
 		};
 		129EBF6CBE7F434E3D5636DD /* AuxiliarViews */ = {
@@ -867,7 +879,7 @@
 				720CEC21F8DFEEF084E1B69B /* Keys.plist */,
 				5D67CB37DB55A9EBAF1A8C8A /* README.swift */,
 				A6F06C719CBC0149E0C042BB /* Storage.h */,
-				8766722FDB490E5B8EE7F55C /* typealias.swift */,
+				004646074AD7E89F2A432EA7 /* typealias.swift */,
 				FECE910976B705E5EEA35FC5 /* UserDefaults+Extensions.swift */,
 				6E51CAEC4C7514346E6527A5 /* UserDefaultsPropertyWrapper.swift */,
 			);
@@ -925,18 +937,6 @@
 			path = "Fetchers|Repositories";
 			sourceTree = "<group>";
 		};
-		921F35635A53CC5A126FA3B3 /* SimpleNetworkAgents.Testing */ = {
-			isa = PBXGroup;
-			children = (
-				D07E2AEA0F476C7EA31644F0 /* SampleAPI_SampleCalls.swift */,
-				03EA875C4E2BA4CABC6B8D3F /* TestingAPIProtocol.swift */,
-				6525EB7793D16A1FCCE39B15 /* TestingAPI_VersionA.swift */,
-				880AB623939C629D31724FAC /* TestingAPI_VersionB.swift */,
-				A123FC3AD399D329E9C1BB6F /* Entities */,
-			);
-			path = SimpleNetworkAgents.Testing;
-			sourceTree = "<group>";
-		};
 		93B02E0CD3C56AC61DF1599E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -958,6 +958,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9B52E03CCB14C89C335EE896 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BDA00468C7A597512CFBBD7B /* APIResponseDto.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		9F3C7ADE81F5C6E138F6EBA7 /* UtilsExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -976,14 +984,6 @@
 				8B537ECD7A3952AEB70B78C6 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A123FC3AD399D329E9C1BB6F /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				2F76258898BB584EA08B93E6 /* APIResponseDto.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		A44B6FEBB82E28769EB75A9E /* Scheme.2 */ = {
@@ -1053,7 +1053,7 @@
 				CE4FDC4298D6987F99C7026A /* README.swift */,
 				16951FC4AEB4B290AD72393C /* typelias.swift */,
 				BF800862CAF4A3753770D24B /* SimpleNetworkAgents */,
-				921F35635A53CC5A126FA3B3 /* SimpleNetworkAgents.Testing */,
+				119BFB900641684050EA2D8A /* SimpleNetworkAgents.Testing */,
 			);
 			path = UtilsNetworking;
 			sourceTree = "<group>";
@@ -1585,6 +1585,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1202;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 0A85371B0C5704A168BCBE43 /* Build configuration list for PBXProject "RJPSSwiftUI_V2" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1673,9 +1675,9 @@
 				635A4720109EFDAE793B0CB1 /* GenericStorableKeyValueModel.swift in Sources */,
 				904A3819DC5100CDBDB6B3B4 /* HotCacheManager.swift in Sources */,
 				6AECF5B0C04A70F4EA17B6C4 /* README.swift in Sources */,
-				527B94B1A58DEF22B2F61B7F /* typealias.swift in Sources */,
 				8BDB99A044B47C397BFB7766 /* UserDefaults+Extensions.swift in Sources */,
 				12DACDC0A18674B1DF33062B /* UserDefaultsPropertyWrapper.swift in Sources */,
+				E93416A81F28AE8BD77173F1 /* typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1710,15 +1712,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CEA6F0232FD4C20E35098ED /* APIResponseDto.swift in Sources */,
+				65ADCE02056FCFCCA14EB7D7 /* APIResponseDto.swift in Sources */,
 				2F8CCD996FF87B3BDEE38CB8 /* README.swift in Sources */,
-				3B945F6C30E508A25919EF1E /* SampleAPI_SampleCalls.swift in Sources */,
+				468A92B14124DEF177505EEE /* SampleAPI_SampleCalls.swift in Sources */,
 				2A3BD81F00A49E6DC6443B55 /* SimpleNetworkAgentProtocol.swift in Sources */,
 				A81F6CBE2B3A13C35E929FC5 /* SimpleNetworkAgent_A.swift in Sources */,
 				29F41850752C46E1752146D8 /* SimpleNetworkAgent_B.swift in Sources */,
-				33966C710B4B5A745CCAF7A1 /* TestingAPIProtocol.swift in Sources */,
-				FC63DEBE1DE8D12AE1C9F295 /* TestingAPI_VersionA.swift in Sources */,
-				A17499D985FC58AEE98B07DE /* TestingAPI_VersionB.swift in Sources */,
+				5FD908675723BC4CBF5950EC /* TestingAPIProtocol.swift in Sources */,
+				B2341A31E65886DA140539D4 /* TestingAPI_VersionA.swift in Sources */,
+				E47D248FEB05691264A3A360 /* TestingAPI_VersionB.swift in Sources */,
 				4E6C98C2A3781BE547CD064A /* typelias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

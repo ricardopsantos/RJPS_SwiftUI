@@ -1,8 +1,0 @@
-Utils.VisualDocs:
-    templates:
-      - Framework
-    sources:
-      - path: ../Utils.VisualDocs
-    dependencies:
-      - target: DevTools
-        link: false

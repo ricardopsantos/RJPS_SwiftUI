@@ -1,9 +1,0 @@
-targets:
-  App.HourlyChallenge:
-    templates:
-      - Framework
-    sources:
-      - path: ../App.HourlyChallenge
-    dependencies:
-      - target: DevTools
-        link: false

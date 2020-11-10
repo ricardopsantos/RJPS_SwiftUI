@@ -1,5 +1,0 @@
-  DevTools:
-    templates:
-      - Framework
-    sources:
-      - path: ../DevTools

@@ -1,8 +1,0 @@
-  Utils.Networking:
-    templates:
-      - Framework
-    sources:
-      - path: ../Utils.Networking
-    dependencies:
-      - target: DevTools
-        link: false

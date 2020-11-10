@@ -1,8 +1,0 @@
-  Utils.Storage:
-    templates:
-      - Framework
-    sources:
-      - path: ../Utils.Storage
-    dependencies:
-      - target: DevTools
-        link: false
