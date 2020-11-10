@@ -12,7 +12,7 @@ import UtilsNetworking
 public struct APIRyanair_A {
     public init() {}
     public struct Constants {
-        static let agent = SimpleNetworkAgent_B()
+        static let agent = SimpleNetworkAgentB()
         static let scheme = "https"
         static let host = "tripstest.ryanair.com"
         static let path = ""
@@ -20,7 +20,7 @@ public struct APIRyanair_A {
         static let dumpResponse = false
         static let decoder = JSONDecoder()
     }
-    var agent: SimpleNetworkAgent_B { return Self.Constants.agent }
+    var agent: SimpleNetworkAgentB { return Self.Constants.agent }
     var base: URL { return Self.Constants.base }
     var dumpResponse: Bool { return Self.Constants.dumpResponse }
     var decoder: JSONDecoder { return Self.Constants.decoder }
@@ -37,7 +37,7 @@ public struct APIRyanair_A {
 public struct APIRyanair_B {
     public init() {}
     public struct Constants {
-        static let agent = SimpleNetworkAgent_B()
+        static let agent = SimpleNetworkAgentB()
         static let scheme = "https"
         static let host = "sit-nativeapps.ryanair.com"
         static let path = "/api/v4"
@@ -45,7 +45,7 @@ public struct APIRyanair_B {
         static let dumpResponse = false
         static let decoder = JSONDecoder()
     }
-    var agent: SimpleNetworkAgent_B { return Self.Constants.agent }
+    var agent: SimpleNetworkAgentB { return Self.Constants.agent }
     var base: URL { return Self.Constants.base }
     var dumpResponse: Bool { return Self.Constants.dumpResponse }
     var decoder: JSONDecoder { return Self.Constants.decoder }

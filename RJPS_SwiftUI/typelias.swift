@@ -5,8 +5,3 @@
 
 import Foundation
 
-//public typealias E = Entity // Same as Model in MVP
-//public struct Entity { private init() {} }
-
-//public typealias VM = ViewModel // Same as Model in MVP
-//public struct ViewModel { private init() {} }

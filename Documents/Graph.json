@@ -1,0 +1,295 @@
+{
+  "fileGroups" : [
+    "..\/Documents"
+  ],
+  "configs" : {
+    "Adhoc" : "release",
+    "Debug_Dev" : "debug",
+    "Beta" : "release",
+    "Debug_QA" : "debug",
+    "Release" : "release",
+    "Debug_Prod" : "debug"
+  },
+  "settings" : {
+    "base" : {
+      "ENABLE_BITCODE" : false
+    },
+    "configs" : {
+      "Release" : {
+        "ENABLE_BITCODE" : true
+      }
+    }
+  },
+  "targets" : {
+    "DevTools" : {
+      "sources" : [
+        {
+          "path" : "..\/DevTools"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    },
+    "AppRyanairCore" : {
+      "templates" : [
+        "Framework"
+      ],
+      "dependencies" : [
+        {
+          "link" : false,
+          "target" : "Utils"
+        },
+        {
+          "target" : "UtilsStorage",
+          "link" : false
+        },
+        {
+          "target" : "UtilsNetworking",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "BaseDomain"
+        }
+      ],
+      "sources" : [
+        {
+          "path" : "..\/AppRyanairCore"
+        }
+      ]
+    },
+    "UtilsDesignables" : {
+      "sources" : [
+        {
+          "path" : "..\/UtilsDesignables"
+        }
+      ],
+      "dependencies" : [
+        {
+          "target" : "UtilsExtensions",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "Utils"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    },
+    "UtilsStorage" : {
+      "dependencies" : [
+        {
+          "link" : false,
+          "target" : "UtilsExtensions"
+        },
+        {
+          "link" : false,
+          "target" : "BaseDomain"
+        }
+      ],
+      "sources" : [
+        {
+          "path" : "..\/UtilsStorage"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    },
+    "AppWeatherCore" : {
+      "dependencies" : [
+        {
+          "target" : "UtilsStorage",
+          "link" : false
+        },
+        {
+          "target" : "DevTools",
+          "link" : false
+        }
+      ],
+      "sources" : [
+        {
+          "path" : "..\/AppWeatherCore"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    },
+    "BaseDomain" : {
+      "templates" : [
+        "Framework"
+      ],
+      "sources" : [
+        {
+          "path" : "..\/BaseDomain"
+        }
+      ]
+    },
+    "AppHourlyChallenge" : {
+      "templates" : [
+        "Framework"
+      ],
+      "sources" : [
+        {
+          "path" : "..\/AppHourlyChallenge"
+        }
+      ],
+      "dependencies" : [
+        {
+          "target" : "UtilsStorage",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "BaseDomain"
+        },
+        {
+          "link" : false,
+          "target" : "UtilsDesignables"
+        }
+      ]
+    },
+    "AppWeather" : {
+      "sources" : [
+        {
+          "path" : "..\/AppWeather"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ],
+      "dependencies" : [
+        {
+          "target" : "BaseDomain",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "AppWeatherCore"
+        },
+        {
+          "link" : false,
+          "target" : "UtilsDesignables"
+        }
+      ]
+    },
+    "Utils" : {
+      "sources" : [
+        {
+          "path" : "..\/Utils"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    },
+    "UtilsExtensions" : {
+      "sources" : [
+        {
+          "path" : "..\/UtilsExtensions"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    },
+    "RJPS_SwiftUI" : {
+      "deploymentTarget" : "13.0",
+      "type" : "application",
+      "dependencies" : [
+        {
+          "target" : "AppHourlyChallenge",
+          "link" : true
+        },
+        {
+          "target" : "AppRyanair",
+          "link" : true
+        },
+        {
+          "link" : true,
+          "target" : "AppWeather"
+        }
+      ],
+      "sources" : [
+        {
+          "path" : "..\/RJPS_SwiftUI"
+        }
+      ],
+      "platform" : "iOS"
+    },
+    "AppRyanair" : {
+      "templates" : [
+        "Framework"
+      ],
+      "dependencies" : [
+        {
+          "target" : "AppRyanairCore",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "UtilsDesignables"
+        },
+        {
+          "target" : "BaseDomain",
+          "link" : false
+        }
+      ],
+      "sources" : [
+        {
+          "path" : "..\/AppRyanair"
+        }
+      ]
+    },
+    "UtilsNetworking" : {
+      "sources" : [
+        {
+          "path" : "..\/UtilsNetworking"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ],
+      "dependencies" : [
+        {
+          "link" : false,
+          "target" : "UtilsExtensions"
+        },
+        {
+          "link" : false,
+          "target" : "UtilsStorage"
+        }
+      ]
+    },
+    "PublicCode" : {
+      "sources" : [
+        {
+          "path" : "..\/PublicCode"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    }
+  },
+  "options" : {
+    "bundleIdPrefix" : "com.rjps.swiftui",
+    "xcodeVersion" : "12.0.2",
+    "minimumXcodeGenVersion" : "2.18.0",
+    "findCarthageFrameworks" : false,
+    "generateEmptyDirectories" : true,
+    "deploymentTarget" : "13.0"
+  },
+  "targetTemplates" : {
+    "Framework" : {
+      "type" : "framework",
+      "deploymentTarget" : "13.0",
+      "platform" : "iOS"
+    }
+  },
+  "name" : "RJPS_SwiftUI"
+}

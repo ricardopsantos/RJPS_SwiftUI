@@ -3,7 +3,7 @@
 ####################### PROJECT #######################  
 ####################### PROJECT #######################
 
-name: RJPSSwiftUI_V2
+name: RJPS_SwiftUI
 
 options:
   bundleIdPrefix: com.rjps.swiftui
@@ -18,7 +18,7 @@ options:
 ####################### AUXILIAR FOLDERS #######################
 
 fileGroups:
-  - ./_Documentation_
+  - ../Documents
 
 ####################### CONFIGS #######################
 ####################### CONFIGS #######################  
@@ -65,7 +65,7 @@ targets:
     platform: iOS
     deploymentTarget: "13.0"
     sources:
-       - path: RJPS_SwiftUI
+       - path: ../RJPS_SwiftUI
     dependencies:
       - target: AppHourlyChallenge
         link: true
@@ -80,7 +80,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: AppHourlyChallenge
+      - path: ../AppHourlyChallenge
     dependencies:
       - target: UtilsStorage
         link: false
@@ -95,16 +95,20 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: AppRyanair  
+      - path: ../AppRyanair  
     dependencies:
       - target: AppRyanairCore
         link: false
+      - target: UtilsDesignables
+        link: false  
+      - target: BaseDomain
+        link: false  
         
   AppRyanairCore:
     templates: 
       - Framework
     sources: 
-      - path: AppRyanairCore  
+      - path: ../AppRyanairCore  
     dependencies:
       - target: Utils
         link: false
@@ -121,7 +125,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: AppWeather  
+      - path: ../AppWeather  
     dependencies:
       - target: BaseDomain
         link: false  
@@ -134,7 +138,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: AppWeatherCore
+      - path: ../AppWeatherCore
     dependencies:
       - target: UtilsStorage
         link: false
@@ -147,32 +151,31 @@ targets:
     templates: 
       - Framework
     sources:
-      - path: DevTools
+      - path: ../DevTools
   
   BaseDomain:
     templates: 
       - Framework
     sources:
-      - path: BaseDomain
+      - path: ../BaseDomain
       
   PublicCode:
     templates: 
       - Framework
     sources:
-      - path: PublicCode
+      - path: ../PublicCode
       
   Utils:
     templates: 
       - Framework
-    platform: iOS
     sources: 
-      - path: Utils
+      - path: ../Utils
 
   UtilsDesignables:
     templates: 
       - Framework
     sources: 
-      - path: UtilsDesignables
+      - path: ../UtilsDesignables
     dependencies:
       - target: UtilsExtensions
         link: false
@@ -183,17 +186,15 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: UtilsExtensions   
+      - path: ../UtilsExtensions   
       
   UtilsNetworking:
     templates: 
       - Framework
     sources: 
-      - path: UtilsNetworking
+      - path: ../UtilsNetworking
     dependencies:
       - target: UtilsExtensions
-        link: false
-      - target: UtilsStorage
         link: false
       - target: UtilsStorage
         link: false
@@ -202,7 +203,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: UtilsStorage
+      - path: ../UtilsStorage
     dependencies:
       - target: UtilsExtensions
         link: false

@@ -1,0 +1,47 @@
+digraph {
+
+  subgraph cluster_1 {
+    node [style=filled,color=white];
+    style=filled;
+    color=lightgrey;
+    AppHourlyChallenge;
+    label = "App 1 : HourlyChallenge";
+  }
+
+   subgraph cluster_2 {
+    label = "App 2 : Ryanair";
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    AppRyanair;
+    AppRyanairCore;
+  }
+
+  subgraph cluster_3 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    AppWeather;
+    AppWeatherCore;
+    label = "App 3 : Weather";
+  }
+
+  AppHourlyChallenge -> UtilsStorage [style=dashed]
+  AppHourlyChallenge -> BaseDomain [style=dashed]
+  AppHourlyChallenge -> UtilsDesignables [style=dashed]
+  AppRyanair -> AppRyanairCore [style=dashed]
+  AppRyanair -> UtilsDesignables [style=dashed]
+  AppRyanair -> BaseDomain [style=dashed]
+  AppRyanairCore -> UtilsStorage [style=dashed]
+  AppRyanairCore -> UtilsNetworking [style=dashed]
+  AppRyanairCore -> BaseDomain [style=dashed]
+  AppWeather -> BaseDomain [style=dashed]
+  AppWeather -> AppWeatherCore [style=dashed]
+  AppWeather -> UtilsDesignables [style=dashed]
+  AppWeatherCore -> UtilsStorage [style=dashed]
+  RJPS_SwiftUI -> AppHourlyChallenge [style=dashed]
+  RJPS_SwiftUI -> AppRyanair [style=dashed]
+  RJPS_SwiftUI -> AppWeather [style=dashed]
+  UtilsNetworking -> UtilsStorage [style=dashed]
+  UtilsStorage -> BaseDomain [style=dashed]
+}
