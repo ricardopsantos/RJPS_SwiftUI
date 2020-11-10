@@ -5,15 +5,6 @@
 
 import UIKit
 import SwiftUI
-import Combine
-//
-import App_Weather
-import App_HourlyChallenge
-import App_Ryanair
-//
-import Utils_Networking
-import Utils_Extensions
-import DevTools
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -8,11 +8,19 @@ import Foundation
 import SwiftUI
 import Combine
 //
-import Utils_Extensions
-import Utils_Designables
-import Utils_VisualDocs
+import UtilsExtensions
+import UtilsDesignables
+//import UtilsVisualDocs
 //
 
+#warning("finish")
+struct DevScreen_View: View {
+    var body : some View {
+        return Text("")
+    }
+}
+
+/*
 struct DevScreen_View: View {
     var body : some View {
 
@@ -94,7 +102,7 @@ struct DevScreen_View: View {
         }
         .tabItem({ VStack { ImageNames.heart.image; Text("Dev") } })}
 }
-
+*/
 public struct DevScreen_PreviewProvider: PreviewProvider {
     public static var previews: some View {
         Group {
