@@ -19,7 +19,8 @@ import BaseDomain
 public struct WeeklyWeatherBuilder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
-        let fetcher: APIWeatherProtocol = APIKeys.get(key: "OpenWeather") != nil ?  FetcherWeather() : FetcherWeatherMock()
+        let webAPI = APIWeather()
+        let fetcher: APIWeatherProtocol = APIKeys.get(key: "OpenWeather") != nil ?  FetcherWeather(webAPI: webAPI) : FetcherWeatherMock()
         let repository: RepositoryWeatherProtocol = RepositoryWeather()
         let viewModel  = VM.WeeklyWeatherViewModel(fetcher: fetcher, repository: repository)
         return WeeklyWeatherView(viewModel: viewModel)

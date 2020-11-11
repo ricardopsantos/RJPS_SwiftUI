@@ -143,6 +143,9 @@
 		D33FEC4F9A08DD2640CA4EDF /* B.RyanairView1Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B7E236BAA16E513A7E002 /* B.RyanairView1Builder.swift */; };
 		D53BABA519E4E42F50992EB7 /* AppWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00142DDB2ECACE3920DAE95D /* AppWeather.framework */; };
 		D5A0E4E8349D6DA1AE27E8BA /* V.DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148FACF38CDB95E8F34FA944 /* V.DashboardView.swift */; };
+		D712439E255B1A2400C68A29 /* TO_DO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712439D255B1A2400C68A29 /* TO_DO.swift */; };
+		D71243BB255BE95500C68A29 /* WeatherRequestDto.Wheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71243B9255BE95500C68A29 /* WeatherRequestDto.Wheater.swift */; };
+		D71243BC255BE95500C68A29 /* WeatherRequestDto.Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71243BA255BE95500C68A29 /* WeatherRequestDto.Forecast.swift */; };
 		D7345FB422F744D1CBA68BFA /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603968072588D8621D54E1E /* JSONDecoder+Extensions.swift */; };
 		D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD91DCBA8848FE6F8FB333 /* typelias.swift */; };
 		DEEB490640D2952390ED816C /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2341B3D52EE6AF79C4BA9 /* APICacheManager.swift */; };
@@ -522,6 +525,9 @@
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		D65BAEAC90395FD89C8349D3 /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
+		D712439D255B1A2400C68A29 /* TO_DO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TO_DO.swift; sourceTree = "<group>"; };
+		D71243B9255BE95500C68A29 /* WeatherRequestDto.Wheater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.Wheater.swift; sourceTree = "<group>"; };
+		D71243BA255BE95500C68A29 /* WeatherRequestDto.Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.Forecast.swift; sourceTree = "<group>"; };
 		D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90034C9F5CA9F78E6FF9F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D92EE556ED486448979CDA63 /* WeatherResponseDto.WeeklyForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.WeeklyForecastEntity.swift; sourceTree = "<group>"; };
@@ -1035,6 +1041,8 @@
 			isa = PBXGroup;
 			children = (
 				874360A98A5C24433AB4632A /* WeatherRequestDto.swift */,
+				D71243BA255BE95500C68A29 /* WeatherRequestDto.Forecast.swift */,
+				D71243B9255BE95500C68A29 /* WeatherRequestDto.Wheater.swift */,
 			);
 			path = Entities.RequestsDto;
 			sourceTree = "<group>";
@@ -1163,6 +1171,7 @@
 			isa = PBXGroup;
 			children = (
 				75D56DD18A6E5642F1E13910 /* AppDelegate.swift */,
+				D712439D255B1A2400C68A29 /* TO_DO.swift */,
 				70096BE0B2CCB68AD3F8011C /* Info.plist */,
 				06C36CF52FF3AE980140601C /* typelias.swift */,
 				464DE9C897B9CD4FA7961F8E /* AppSchemes */,
@@ -1857,7 +1866,9 @@
 				7CCD3B2925CFEA886DE1F05D /* FetcherWeatherMock.swift in Sources */,
 				981618B849D8060D1C79CD65 /* RepositoryWeather.swift in Sources */,
 				8EA3B42F535E0D5E09B0CCDF /* RepositoryWeatherProtocol.swift in Sources */,
+				D71243BC255BE95500C68A29 /* WeatherRequestDto.Forecast.swift in Sources */,
 				14A4B3831434CCB08EA11159 /* WeatherRequestDto.swift in Sources */,
+				D71243BB255BE95500C68A29 /* WeatherRequestDto.Wheater.swift in Sources */,
 				2AEE7EF723FC8266BF3C2E37 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift in Sources */,
 				94146DC32FB7A202F6A5476C /* WeatherResponseDto.WeeklyForecastEntity.swift in Sources */,
 				63A24BDCD8061B12C29ED16D /* WeatherResponseDto.swift in Sources */,
@@ -1901,6 +1912,7 @@
 			files = (
 				9B23BBE9A2FD7BB610C174C7 /* ActivityIndicator.swift in Sources */,
 				3BBCDD720030249B16C670BB /* AppDelegate.swift in Sources */,
+				D712439E255B1A2400C68A29 /* TO_DO.swift in Sources */,
 				20A9DFAE2E6A0F4F831A22B8 /* AppRoot_View.swift in Sources */,
 				C2B7B695EDFFC9A4E98FC6DA /* DevScreen_View.swift in Sources */,
 				EB50D3579087EAAE8D3B802E /* typelias.swift in Sources */,

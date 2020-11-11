@@ -4,9 +4,11 @@
 //
 
 import Foundation
+//
+import BaseDomain
 
 public extension WeatherResponseDto {
-    struct CurrentWeatherForecastEntity: Decodable {
+    struct CurrentWeatherForecastEntity: DtoProtocol {
         public let coord: Coord
         public let main: Main
 

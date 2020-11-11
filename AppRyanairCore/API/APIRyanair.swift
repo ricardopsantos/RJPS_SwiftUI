@@ -9,6 +9,10 @@ import Combine
 import UtilsStorage
 import UtilsNetworking
 
+//
+// API V1
+//
+
 public struct APIRyanair_A {
     public init() {}
     public struct Constants {
@@ -24,7 +28,9 @@ public struct APIRyanair_A {
     var base: URL { return Self.Constants.base }
     var dumpResponse: Bool { return Self.Constants.dumpResponse }
     var decoder: JSONDecoder { return Self.Constants.decoder }
+}
 
+extension APIRyanair_A {
     public func stations(_ request: RyanairRequestDto.Stations) -> URLComponents {
         var components    = URLComponents()
         components.scheme = Self.Constants.scheme
@@ -33,6 +39,10 @@ public struct APIRyanair_A {
         return components
     }
 }
+
+//
+// API V4
+//
 
 public struct APIRyanair_B {
     public init() {}
@@ -49,7 +59,9 @@ public struct APIRyanair_B {
     var base: URL { return Self.Constants.base }
     var dumpResponse: Bool { return Self.Constants.dumpResponse }
     var decoder: JSONDecoder { return Self.Constants.decoder }
+}
 
+extension APIRyanair_B {
     public func availability(_ request: RyanairRequestDto.Availability) -> URLComponents {
         var components    = URLComponents()
         components.scheme = Self.Constants.scheme

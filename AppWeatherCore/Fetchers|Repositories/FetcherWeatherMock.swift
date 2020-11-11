@@ -21,7 +21,7 @@ public class FetcherWeatherMock {
 }
 
 extension FetcherWeatherMock: APIWeatherProtocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {
+    public func weeklyWeatherForecast(request: WeatherRequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {
         let data = Data(weeklyWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
@@ -32,7 +32,7 @@ extension FetcherWeatherMock: APIWeatherProtocol {
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError> {
+    public func currentWeatherForecast(request: WeatherRequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError> {
         let data = Data(currentWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970

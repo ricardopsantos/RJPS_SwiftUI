@@ -26,7 +26,7 @@ public extension VM {
 
         func refresh() {
             fetcher
-                .currentWeatherForecast(forCity: city)
+                .currentWeatherForecast(request: WeatherRequestDto.CurrentWeatherForecast(city: self.city), cache: .cacheElseLoad)
                 .map(VM.CurrentWeatherRowViewModel.init)
                 .receive(on: DispatchQueue.main)
                 .sink(receiveCompletion: { [weak self] value in

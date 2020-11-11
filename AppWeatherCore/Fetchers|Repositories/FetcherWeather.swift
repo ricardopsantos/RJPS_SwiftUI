@@ -7,58 +7,64 @@ import Foundation
 import Combine
 //
 import BaseDomain
+//
+import UtilsNetworking
+import UtilsStorage
+import Utils
+
+// The Fetcher will aggregate all deferent WEB APIs
+// The Fetcher will aggregate all deferent WEB APIs
+// The Fetcher will aggregate all deferent WEB APIs
 
 public class FetcherWeather {
-    private let session: URLSession
-    public init(session: URLSession = .shared) {
-        self.session = session
+    private let webAPI: APIWeather
+    private var cacheLiveSpam = 60 // minutes
+    let cancelBag = CancelBag()
+    public init(webAPI: APIWeather) {
+        self.webAPI = webAPI
     }
 }
+
+// MARK: - APIRyanairProtocol
 
 extension FetcherWeather: APIWeatherProtocol {
-    public func weeklyWeatherForecast(forCity city: String) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {
-        return forecast(with: APIWeather.makeWeeklyForecastComponents(withCity: city))
-    }
+    public func weeklyWeatherForecast(request: WeatherRequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {
+        let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
+        let targetAPI = webAPI
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.forecast(request: request), targetAPI.decoder, false) as AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: WeatherResponseDto.WeeklyForecastEntity.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: WeatherResponseDto.WeeklyForecastEntity.self, onFail: apiSubscriber)
 
-    public func currentWeatherForecast(forCity city: String) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError> {
-        return forecast(with: APIWeather.makeCurrentDayForecastComponents(withCity: city))
-    }
-}
+        apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
+            guard let self = self else { return }
+            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.cacheLiveSpam)
+        }).store(in: cancelBag)
 
-fileprivate extension FetcherWeather {
-     func forecast<T>(with components: URLComponents) -> AnyPublisher<T, APIError> where T: Decodable {
-        // Try to create an instance of URL from the URLComponents. If this fails, return an error
-        // wrapped in a Fail value. Then, erase its type to AnyPublisher, since that’s the method’s return type.
-        guard let url = components.url else {
-            let error = APIError.network(description: "Couldn't create URL")
-            return Fail(error: error).eraseToAnyPublisher()
+        switch cache {
+        case .ignoringCache: return apiSubscriber
+        case .cacheElseLoad: return cacheSubscriberFailSafe
+        case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
+        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
         }
-
-        // Uses the new URLSession method dataTaskPublisher(for:) to fetch the data. This method takes
-        // an instance of URLRequest and returns either a tuple (Data, URLResponse) or a URLError.
-        return session.dataTaskPublisher(for: URLRequest(url: url))
-            // Because the method returns AnyPublisher<T, WeatherError>, you map the error from URLError to WeatherError.
-            .mapError { error in .network(description: error.localizedDescription) }
-            // The uses of flatMap deserves a post of their own. Here, you use it to convert the data
-            // coming from the server as JSON to a fully-fledged object. You use decode(_:) as an auxiliary
-            // function to achieve this. Since you are only interested in the first value emitted by the network request, you set .max(1).
-            .flatMap(maxPublishers: .max(1)) { [weak self] pair in self!.decode(pair.data) }
-            // If you don’t use eraseToAnyPublisher() you’ll have to carry over the full type returned
-            // by flatMap: Publishers.FlatMap<AnyPublisher<_, WeatherError>, Publishers.MapError<URLSession.DataTaskPublisher, WeatherError>>.
-            // As a consumer of the API, you don’t want to be burdened with these details. So, to improve the API ergonomics,
-            // you erase the type to AnyPublisher. This is also useful because adding any new transformation (e.g. filter)
-            // changes the returned type and, therefore, leaks implementation details.
-            .eraseToAnyPublisher()
     }
 
-    func decode<T>(_ data: Data) -> AnyPublisher<T, APIError> where T: Decodable {
-        //let str = String(decoding: data, as: UTF8.self)
-        //
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .secondsSince1970
-        return Just(data).decode(type: T.self, decoder: decoder).mapError { error in
-            .parsing(description: error.localizedDescription)
-        }.eraseToAnyPublisher()
-    }
+    public func currentWeatherForecast(request: WeatherRequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError> {
+        let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
+        let targetAPI = webAPI
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.weather(request: request), targetAPI.decoder, true) as AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: WeatherResponseDto.CurrentWeatherForecastEntity.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: WeatherResponseDto.CurrentWeatherForecastEntity.self, onFail: apiSubscriber)
 
+        apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
+            guard let self = self else { return }
+            APICacheManager.shared.save(data, key: cacheKey, params: [], lifeSpam: self.cacheLiveSpam)
+        }).store(in: cancelBag)
+
+        switch cache {
+        case .ignoringCache: return apiSubscriber
+        case .cacheElseLoad: return cacheSubscriberFailSafe
+        case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
+        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+    }
+    }
 }
