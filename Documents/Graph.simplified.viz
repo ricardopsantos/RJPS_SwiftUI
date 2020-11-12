@@ -1,0 +1,43 @@
+digraph {
+
+   subgraph cluster_2 {
+    label = "App 1 : Ryanair";
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    AppRyanair;
+    AppRyanairCore;
+    AppRyanairDomain;
+    AppRyanairWebAPI;
+  }
+
+  subgraph cluster_3 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    AppWeather;
+    AppWeatherCore;
+    AppWeatherDomain;
+    AppWeatherWebAPI;
+    label = "App 2 : Weather";
+  }
+
+  BaseDomain [label=BaseDomain shape=box]
+  AppRyanair -> AppRyanairCore [style=dashed]
+  AppRyanair -> AppRyanairDomain [style=dashed]
+  AppRyanair -> AppRyanairWebAPI [style=dashed]
+  AppRyanair -> BaseDomain [style=dashed]
+  AppRyanairCore -> AppRyanairDomain [style=dashed]
+  AppRyanairCore -> AppRyanairWebAPI [style=dashed]
+  AppRyanairCore -> BaseDomain [style=dashed]
+  AppRyanairDomain -> BaseDomain [style=dashed]
+  AppRyanairWebAPI -> AppRyanairDomain [style=dashed]
+  AppWeather -> BaseDomain [style=dashed]
+  AppWeather -> AppWeatherCore [style=dashed]
+  AppWeatherCore -> AppWeatherDomain [style=dashed]
+  AppWeatherCore -> AppWeatherWebAPI [style=dashed]
+  AppWeatherDomain -> BaseDomain [style=dashed]
+  AppWeatherWebAPI -> AppWeatherDomain [style=dashed]
+  RJPS_SwiftUI -> AppRyanair [style=dashed]
+  RJPS_SwiftUI -> AppWeather [style=dashed]
+}
