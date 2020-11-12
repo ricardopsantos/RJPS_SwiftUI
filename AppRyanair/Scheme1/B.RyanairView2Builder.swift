@@ -8,6 +8,8 @@ import SwiftUI
 //
 import BaseDomain
 import AppRyanairCore
+import AppRyanairWebAPI
+import AppRyanairDomain
 
 //
 // The Builder is responsible to build a View and setup the Fetcher and ViewModel

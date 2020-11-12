@@ -6,6 +6,8 @@
 import Foundation
 import Combine
 //
+import AppRyanairDomain
+//
 import Utils
 import UtilsStorage
 

@@ -11,6 +11,7 @@ import Combine
 import UtilsExtensions
 import DevTools
 //
+import AppWeatherDomain
 import BaseDomain
 
 public class FetcherWeatherMock {

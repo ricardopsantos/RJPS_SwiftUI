@@ -11,6 +11,7 @@ import UtilsDesignables
 import UtilsExtensions
 //
 import AppRyanairCore
+import AppRyanairDomain
 
 struct RyanairView2: View {
 

@@ -10,6 +10,8 @@ import UtilsExtensions
 import Utils
 //
 import AppRyanairCore
+import AppRyanairWebAPI
+import AppRyanairDomain
 
 public extension VM {
     class RyanairView2ViewModel: ObservableObject {

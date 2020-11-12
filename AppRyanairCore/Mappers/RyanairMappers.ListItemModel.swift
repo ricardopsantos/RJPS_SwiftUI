@@ -9,6 +9,8 @@ import Utils
 import UtilsExtensions
 //
 import BaseDomain
+import AppRyanairDomain
+
 public extension RyanairMappers {
 
     static func listItemsWith(trips: [RyanairResponseDto.Trip]) -> [ListItemModel] {

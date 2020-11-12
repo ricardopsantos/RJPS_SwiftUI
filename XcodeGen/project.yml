@@ -67,28 +67,30 @@ targets:
     sources:
        - path: ../RJPS_SwiftUI
     dependencies:
-      - target: AppHourlyChallenge
-        link: true
+      #- target: AppHourlyChallenge
+      #  link: true
       - target: AppRyanair
         link: true
       - target: AppWeather
         link: true
+      - target: DocumentsVisual
+        link: true  
 
 ######################### AppHourlyChallenge
 
-  AppHourlyChallenge:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppHourlyChallenge
-    dependencies:
-      - target: UtilsStorage
-        link: false
-      - target: BaseDomain
-        link: false
-      - target: UtilsDesignables
-        link: false  
-        
+#  AppHourlyChallenge:
+#    templates: 
+#      - Framework
+#    sources: 
+#      - path: ../AppHourlyChallenge
+#    dependencies:
+#      - target: UtilsStorage
+#        link: false
+#      - target: BaseDomain
+#        link: false
+#      - target: UtilsDesignables
+#        link: false  
+
 ####################### AppRyanair ##
 
   AppRyanair:
@@ -99,10 +101,23 @@ targets:
     dependencies:
       - target: AppRyanairCore
         link: false
+      - target: AppRyanairDomain
+        link: false
+      - target: AppRyanairWebAPI
+        link: false
       - target: UtilsDesignables
         link: false  
       - target: BaseDomain
         link: false  
+      
+  AppRyanairDomain:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppRyanairDomain
+    dependencies:
+      - target: BaseDomain
+        link: false
         
   AppRyanairCore:
     templates: 
@@ -110,15 +125,32 @@ targets:
     sources: 
       - path: ../AppRyanairCore  
     dependencies:
+      - target: AppRyanairDomain
+        link: false
+      - target: AppRyanairWebAPI
+        link: false  
       - target: Utils
         link: false
       - target: UtilsStorage
         link: false
-      - target: UtilsNetworking
-        link: false
       - target: BaseDomain
         link: false
-
+        
+  AppRyanairWebAPI:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppRyanairWebAPI
+    dependencies:
+      - target: AppRyanairDomain
+        link: false 
+      - target: UtilsNetworking
+        link: false
+      - target: UtilsStorage
+        link: false
+      - target: DevTools
+        link: false   
+ 
 ######################### AppWeather
 
   AppWeather:
@@ -134,19 +166,47 @@ targets:
       - target: UtilsDesignables
         link: false  
         
+  AppWeatherDomain:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppWeatherDomain
+    dependencies:
+      - target: BaseDomain
+        link: false  
+        
   AppWeatherCore:
     templates: 
       - Framework
     sources: 
       - path: ../AppWeatherCore
     dependencies:
+      - target: AppWeatherDomain
+        link: false
+      - target: AppWeatherWebAPI
+        link: false  
       - target: UtilsStorage
         link: false
       - target: DevTools
         link: false 
+        
+  AppWeatherWebAPI:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppWeatherWebAPI
+    dependencies:
+      - target: AppWeatherDomain
+        link: false 
+      - target: UtilsNetworking
+        link: false
+      - target: UtilsStorage
+        link: false
+      - target: DevTools
+        link: false     
          
 ######################### Generic Utils
- 
+      
   DevTools:
     templates: 
       - Framework
@@ -210,17 +270,19 @@ targets:
       - target: BaseDomain
         link: false
     
-  #UtilsVisualDocs:
-  #  templates: 
-  #    - Framework
-  #  sources: 
-  #    - path: UtilsVisualDocs
-  #  dependencies:
-  #    - target: UtilsExtensions
-  #      link: false
-  #    - target: UtilsDesignables
-  #      link: false
-  #    - target: UtilsStorage
-  #      link: false
+  DocumentsVisual:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../DocumentsVisual
+    dependencies:
+      - target: DocumentsVisual
+        link: false 
+      - target: UtilsExtensions
+        link: false
+      - target: UtilsDesignables
+        link: false
+      - target: UtilsStorage
+        link: false
         
  

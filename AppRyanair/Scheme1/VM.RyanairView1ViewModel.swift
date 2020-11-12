@@ -9,8 +9,9 @@ import Combine
 import UtilsExtensions
 import Utils
 //
-import AppRyanairCore
 import BaseDomain
+import AppRyanairDomain
+import AppRyanairCore
 
 public extension VM {
     class RyanairView1ViewModel: ObservableObject {

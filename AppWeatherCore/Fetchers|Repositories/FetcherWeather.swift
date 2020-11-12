@@ -7,6 +7,8 @@ import Foundation
 import Combine
 //
 import BaseDomain
+import AppWeatherWebAPI
+import AppWeatherDomain
 //
 import UtilsNetworking
 import UtilsStorage
@@ -25,7 +27,7 @@ public class FetcherWeather {
     }
 }
 
-// MARK: - APIRyanairProtocol
+// MARK: - APIWeatherProtocol
 
 extension FetcherWeather: APIWeatherProtocol {
     public func weeklyWeatherForecast(request: WeatherRequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {

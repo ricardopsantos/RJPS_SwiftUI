@@ -9,6 +9,7 @@ import Foundation
 import Combine
 //
 import BaseDomain
+import AppRyanairDomain
 //
 import UtilsExtensions
 import DevTools

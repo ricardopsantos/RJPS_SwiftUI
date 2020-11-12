@@ -6,9 +6,10 @@
 import Foundation
 import Combine
 //
+import AppRyanairWebAPI
+import AppRyanairDomain
 import BaseDomain
 //
-import UtilsNetworking
 import UtilsStorage
 import Utils
 
