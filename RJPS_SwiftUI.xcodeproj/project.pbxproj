@@ -216,6 +216,13 @@
 			remoteGlobalIDString = 81F8949F21D457612CC2D643;
 			remoteInfo = UtilsExtensions;
 		};
+		03D78C3E87772A93555F7284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76205C43CAA0CA483701CCA2;
+			remoteInfo = AppWeatherDomain;
+		};
 		0FE8F3286D849522698782FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
@@ -244,12 +251,12 @@
 			remoteGlobalIDString = 24E2F185AE418FA7D9A28F55;
 			remoteInfo = UtilsStorage;
 		};
-		1ED727DEB4132FC807E12A54 /* PBXContainerItemProxy */ = {
+		2086E433675AE16AE923573F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE9567AA6C7A6370EEE7777B;
-			remoteInfo = AppRyanairWebAPI;
+			remoteGlobalIDString = 4F1D977177BB9890B6DA92B1;
+			remoteInfo = BaseDomain;
 		};
 		35BB5839E96B80069810D118 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -412,13 +419,6 @@
 			remoteGlobalIDString = 4F1D977177BB9890B6DA92B1;
 			remoteInfo = BaseDomain;
 		};
-		CF0FC9C40D4937C570CA03D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68329027E38CBAB21AD08741;
-			remoteInfo = DocumentsVisual;
-		};
 		D480D593DD8F4619317BB060 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
@@ -509,7 +509,6 @@
 
 /* Begin PBXFileReference section */
 		00142DDB2ECACE3920DAE95D /* AppWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		007C27DBD4E4F0EDB4A70FFE /* image.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.1.png; sourceTree = "<group>"; };
 		03D67EB568941F5DAACCB712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059BC945D323BB6A54ED5E66 /* V.CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherView.swift; sourceTree = "<group>"; };
 		05DEBA0F8F9689F4BAB94553 /* SimpleNetworkAgentsUsageComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentsUsageComparison.swift; sourceTree = "<group>"; };
@@ -523,7 +522,6 @@
 		0F520C877E66D1756A616A44 /* Recreating.Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Twitter.swift; sourceTree = "<group>"; };
 		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; path = Graph.simplified.viz; sourceTree = "<group>"; };
 		16216F9E504CE4D36E31AF12 /* ScrollEffect3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3D.swift; sourceTree = "<group>"; };
-		16438F1AA6E386CDCE760A6A /* image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.2.png; sourceTree = "<group>"; };
 		1659F5196E8478221C51668C /* VisualDocs_ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ForEach.swift; sourceTree = "<group>"; };
 		1791D4C1470706844DD2A691 /* VisualDocs_Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Combine.swift; sourceTree = "<group>"; };
 		17A2DABBF7D04C84C6E7CB10 /* VisualDocs_SwiftUI_Lab_Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Triangle.swift; sourceTree = "<group>"; };
@@ -581,6 +579,7 @@
 		4888B5A9C5C02F67883EC538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsStorage.h; sourceTree = "<group>"; };
 		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; path = Graph.viz; sourceTree = "<group>"; };
+		4B16F34813BD45939D8CAACC /* readme.image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.2.png; sourceTree = "<group>"; };
 		4C57D16F8C946D06ACD61614 /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		4DDF12D318A4AB2FEFA74C70 /* PublicCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicCode.h; sourceTree = "<group>"; };
 		502CA0E81503990D8AB67BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -594,7 +593,6 @@
 		55F0E522E6FDDE54D9852754 /* UtilsExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56DA020DA930FD99560F9077 /* typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typealias.swift; sourceTree = "<group>"; };
 		59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherDomain.h; sourceTree = "<group>"; };
-		5AD1F1EF7DF2E4A58FCB01A5 /* image.4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.4.png; sourceTree = "<group>"; };
 		5B2E704F58EE2CBD5D1E46C7 /* Recreating.Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Reminder.swift; sourceTree = "<group>"; };
 		5D1CF494755B297A20A4B750 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
 		5D8AA0307C665B2C7CEB781A /* ObservableObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObservableObject_I.png; sourceTree = "<group>"; };
@@ -653,10 +651,12 @@
 		8FF7316D27C4486F36F6C787 /* B.WeeklyWeatherBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.WeeklyWeatherBuilder.swift; sourceTree = "<group>"; };
 		938AF7C4E4D7BB552359D44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		944EDDF047C396F6B9CF8E2D /* VisualDocs_@Published.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Published.swift"; sourceTree = "<group>"; };
+		952F534448A025D9330BA658 /* readme.image.4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.4.png; sourceTree = "<group>"; };
 		95895818A9832B44BA8507EB /* V.RyanairView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView2.swift; sourceTree = "<group>"; };
 		9597886916DBF70B75B17A06 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		95C1E64CE7A0FB8851ABA010 /* SimpleNetworkAgentBExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentBExample.swift; sourceTree = "<group>"; };
 		97135D44DD2D9FAAE437D8D6 /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
+		99118C096B1078A8AA436182 /* readme.image.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.0.png; sourceTree = "<group>"; };
 		99CD8B4ACB97AAA8CD3E92D0 /* DevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0678081AB2CA02AB166C75 /* Recreating.HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.HomeScreen.swift; sourceTree = "<group>"; };
 		9CB46CAA7AF0827942E390C9 /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -675,7 +675,6 @@
 		A664B45544D230A5F4455799 /* B.CurrentWeatherViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.CurrentWeatherViewBuilder.swift; sourceTree = "<group>"; };
 		A6FBF7AC49B37FFDC183B8A6 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		A9502B7ECAEF4AF074036775 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		A9C9160BC12564E7BA44E44F /* image.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.3.png; sourceTree = "<group>"; };
 		AAA276BB503306AA54981962 /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
 		AAA7C4DAE6220690517E076C /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
 		AAE3471A14A96927FFE2F660 /* AppRyanair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -724,6 +723,7 @@
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.3.png; sourceTree = "<group>"; };
 		D90034C9F5CA9F78E6FF9F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsNetworking.h; sourceTree = "<group>"; };
 		DC5D942D9DF0D7F58F6B54FB /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
@@ -745,6 +745,7 @@
 		EEA8BA314105EE778D3A0B42 /* WeatherRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.swift; sourceTree = "<group>"; };
 		EEEE426F17613140C5164C43 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		F0DCCF9AB25CAE776D97080C /* RepositoryWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeatherProtocol.swift; sourceTree = "<group>"; };
+		F28DD9EDF46F223087DFFAB2 /* readme.image.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.1.png; sourceTree = "<group>"; };
 		F4387B5AB3A663F43C5FCB89 /* DesignablesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignablesFactory.swift; sourceTree = "<group>"; };
 		F43A18114563AFE07376770D /* PointFreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFreeFunctions.swift; sourceTree = "<group>"; };
 		F492B00701E0FB853EBBF7DA /* AppWeatherWebAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherWebAPI.h; sourceTree = "<group>"; };
@@ -970,10 +971,11 @@
 		3C476F2CED7E5A495BC99BF8 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				007C27DBD4E4F0EDB4A70FFE /* image.1.png */,
-				16438F1AA6E386CDCE760A6A /* image.2.png */,
-				A9C9160BC12564E7BA44E44F /* image.3.png */,
-				5AD1F1EF7DF2E4A58FCB01A5 /* image.4.png */,
+				99118C096B1078A8AA436182 /* readme.image.0.png */,
+				F28DD9EDF46F223087DFFAB2 /* readme.image.1.png */,
+				4B16F34813BD45939D8CAACC /* readme.image.2.png */,
+				D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */,
+				952F534448A025D9330BA658 /* readme.image.4.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1739,7 +1741,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6CE12060772454C947395C4F /* PBXTargetDependency */,
 				5A05D046E87700DBABB1735E /* PBXTargetDependency */,
 				B516CA08332A01F0CAB50481 /* PBXTargetDependency */,
 				039CE4675F0F9DFAD0DE25C7 /* PBXTargetDependency */,
@@ -1885,7 +1886,6 @@
 			dependencies = (
 				B3C07372A8DBD1B73FBED0CE /* PBXTargetDependency */,
 				137001899C1561F468C755B2 /* PBXTargetDependency */,
-				376D8BA6DB16E89190E197C3 /* PBXTargetDependency */,
 				4DFD3D23209BFE36E7874E67 /* PBXTargetDependency */,
 				FE5676486E3925210C1BCFB7 /* PBXTargetDependency */,
 			);
@@ -1922,6 +1922,7 @@
 			dependencies = (
 				D6AA80784D57C7011101B870 /* PBXTargetDependency */,
 				D9F708888B8A33DA51161F9C /* PBXTargetDependency */,
+				BB8D26228EF8434A7B753CC3 /* PBXTargetDependency */,
 				C4A33724083B045DF3BF2E3F /* PBXTargetDependency */,
 				6C64651B2ECE9B997E7B40B9 /* PBXTargetDependency */,
 			);
@@ -1941,6 +1942,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD446296A69B4B59D8BE7310 /* PBXTargetDependency */,
 				0DCC9275161F2682E7B8EB63 /* PBXTargetDependency */,
 				A3F5D9FEB029901A27996273 /* PBXTargetDependency */,
 				616184146544286731B45646 /* PBXTargetDependency */,
@@ -2394,11 +2396,6 @@
 			target = 81F8949F21D457612CC2D643 /* UtilsExtensions */;
 			targetProxy = 01840F6DA83110C5BD3D7D74 /* PBXContainerItemProxy */;
 		};
-		376D8BA6DB16E89190E197C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BE9567AA6C7A6370EEE7777B /* AppRyanairWebAPI */;
-			targetProxy = 1ED727DEB4132FC807E12A54 /* PBXContainerItemProxy */;
-		};
 		3EAE1E4A2EECA1E1A4482CF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24E2F185AE418FA7D9A28F55 /* UtilsStorage */;
@@ -2434,11 +2431,6 @@
 			target = 9938DB06F947F0FEBD148F29 /* DevTools */;
 			targetProxy = 972C28908CF25B4FA0E71170 /* PBXContainerItemProxy */;
 		};
-		6CE12060772454C947395C4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68329027E38CBAB21AD08741 /* DocumentsVisual */;
-			targetProxy = CF0FC9C40D4937C570CA03D0 /* PBXContainerItemProxy */;
-		};
 		A3F5D9FEB029901A27996273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F44FC4AEFA0122BBAAB10BFF /* AppWeatherCore */;
@@ -2458,6 +2450,11 @@
 			isa = PBXTargetDependency;
 			target = 30C57D83104BF50CFBBBC766 /* UtilsDesignables */;
 			targetProxy = 35BB5839E96B80069810D118 /* PBXContainerItemProxy */;
+		};
+		BB8D26228EF8434A7B753CC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F1D977177BB9890B6DA92B1 /* BaseDomain */;
+			targetProxy = 2086E433675AE16AE923573F /* PBXContainerItemProxy */;
 		};
 		C0F2BD9E97F44A202B64D0F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2513,6 +2510,11 @@
 			isa = PBXTargetDependency;
 			target = 9938DB06F947F0FEBD148F29 /* DevTools */;
 			targetProxy = 9B187923A9B6977243DE973A /* PBXContainerItemProxy */;
+		};
+		FD446296A69B4B59D8BE7310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76205C43CAA0CA483701CCA2 /* AppWeatherDomain */;
+			targetProxy = 03D78C3E87772A93555F7284 /* PBXContainerItemProxy */;
 		};
 		FE4B99351AFF8FD9042BC6AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -19,6 +19,6 @@ public struct CurrentWeatherViewBuilder: BuilderProtocol {
         //let fetcher: APIProtocol = APIKeys.get(key: "OpenWeather") != nil ?  Fetcher() : FetcherMock()
         //let repository: RepositoryProtocol = Repository()
         //let viewModel  = CurrentWeatherView(weatherFetcher: fetcher, weatherRepository: repository)
-        return Text(verbatim: "")
+        return EmptyView()
     }
 }

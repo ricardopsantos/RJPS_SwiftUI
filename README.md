@@ -19,10 +19,12 @@
 
 ## Some things you can find on this project...
 
-![Preview](readme.images/image.1.png)
+![Preview](Documents/images/readme.image.0.png)
 
-![Preview](readme.images/image.2.png)
+![Preview](Documents/images/readme.image.1.png)
 
-![Preview](readme.images/image.3.png)
+![Preview](Documents/images/readme.image.2.png)
 
-![Preview](readme.images/image.4.png)
+![Preview](Documents/images/readme.image.3.png)
+
+![Preview](Documents/images/readme.image.4.png)

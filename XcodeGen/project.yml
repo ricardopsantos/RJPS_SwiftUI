@@ -103,8 +103,6 @@ targets:
         link: false
       - target: AppRyanairDomain
         link: false
-      - target: AppRyanairWebAPI
-        link: false
       - target: UtilsDesignables
         link: false  
       - target: BaseDomain
@@ -159,6 +157,8 @@ targets:
     sources: 
       - path: ../AppWeather  
     dependencies:
+      - target: AppWeatherDomain
+        link: false  
       - target: BaseDomain
         link: false  
       - target: AppWeatherCore
@@ -185,6 +185,8 @@ targets:
         link: false
       - target: AppWeatherWebAPI
         link: false  
+      - target: BaseDomain
+        link: false
       - target: UtilsStorage
         link: false
       - target: DevTools
@@ -276,8 +278,6 @@ targets:
     sources: 
       - path: ../DocumentsVisual
     dependencies:
-      - target: DocumentsVisual
-        link: false 
       - target: UtilsExtensions
         link: false
       - target: UtilsDesignables

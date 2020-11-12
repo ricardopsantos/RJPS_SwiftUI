@@ -14,7 +14,7 @@ We’re building the logic of a program, without describing its control flow. Th
 
 __Combine = Publishers + Subscribers + Operators__
 
-![Combine_I](Combine_I.png)
+![Combine_I](images/wiki/Combine_I.png)
 
 ---
 
@@ -38,7 +38,7 @@ There are four kinds of messages:
 
 Apart from that, publisher implements the `receive(subscriber:)` method to connect with a subscriber. In other words, publisher’s output matches with subscriber’s input and the same for the failure types.
 
-![Publishers_1](Publishers_1.png)
+![Publishers_1](images/wiki/Publishers_1.png)
 
 ---
 
@@ -52,7 +52,7 @@ Any of these chains of publishers and operators end up with a subscriber. This r
 
 * `assign(to:on:)` : Bind the element received in a property of your data model or on a UI control. That property is identified by a key path.
 
-![Subscribers_1](Subscribers_1.png)
+![Subscribers_1](images/wiki/Subscribers_1.png)
 
 They describe three events that can occur in one’s lifetime and are related to the four messages described above.
 
@@ -71,7 +71,7 @@ Operators, however, are Combine’s superpower. They are methods that operate on
 * Or, if you need to perform an expensive task (such as fetching information across the network), you could use the `debounce` operator to wait until the user stops typing
 * The `map` operator allows you to transform input values of a certain type into output values of a different type
 
-![Operators_1](Operators_1.png)
+![Operators_1](images/wiki/Operators_1.png)
 
 ## Combine
 
@@ -165,7 +165,7 @@ Look inside and subscribe to changes from properties that are marked with __@Pub
 
 __@Published__ wraps a property on a reference type with the observable container, just like __@State__ does it for view properties.
 
-![ObservableObject](ObservableObject_I.png)
+![ObservableObject](images/wiki/ObservableObject_I.png)
 
 ---
 
@@ -206,7 +206,7 @@ Note that `@State` variables are also great while prototyping your app. For exam
 
 __State with value type__
 
-![](State_I.png)
+![](images/wiki/State_I.png)
 
 `@State` creates an observable container for our property and puts it outside of the view. SwiftUI now keeps the connection between our view and the observed data. So that next time this view is re-created, it can inject the data into the corresponding property of the view.
 
@@ -216,7 +216,7 @@ __State with reference type__
 
 You just need to keep in mind that the property you wrap with@State will hold a reference, and a reference will be the only thing SwiftUI will store in the state and observe for changes.
 
-![](State_II.png)
+![](images/wiki/State_II.png)
 
 ---
 
@@ -224,7 +224,7 @@ You just need to keep in mind that the property you wrap with@State will hold a 
 
 It does all the same things as @ObservedObject but additionally puts observed properties into the state outside of the view hierarchy.
 
-![](StateObject_I.png)
+![](images/wiki/StateObject_I.png)
 
 __When to use @ObservedObject instead of @StateObject? : Use @StateObject in the view which creates an object. Use @ObservedObject when the view receives objects from outside.__
 

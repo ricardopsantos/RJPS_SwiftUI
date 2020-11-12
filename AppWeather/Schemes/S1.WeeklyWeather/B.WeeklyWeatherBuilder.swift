@@ -13,7 +13,6 @@ import BaseDomain
 //
 import UtilsStorage
 
-
 //
 // The Builder is responsible to build a View and setup the Fetcher and ViewModel
 // The method [static func buildView()] is mandatory, but we can have more

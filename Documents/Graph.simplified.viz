@@ -1,20 +1,14 @@
 digraph {
 
-  subgraph cluster_1 {
-    node [style=filled,color=white];
-    style=filled;
-    color=lightgrey;
-    AppHourlyChallenge;
-    label = "App 1 : HourlyChallenge";
-  }
-
    subgraph cluster_2 {
-    label = "App 2 : Ryanair";
+    label = "App 1 : Ryanair";
     style=filled;
     color=lightgrey;
     node [style=filled,color=white];
     AppRyanair;
     AppRyanairCore;
+    AppRyanairDomain;
+    AppRyanairWebAPI;
   }
 
   subgraph cluster_3 {
@@ -23,25 +17,27 @@ digraph {
     node [style=filled,color=white];
     AppWeather;
     AppWeatherCore;
-    label = "App 3 : Weather";
+    AppWeatherDomain;
+    AppWeatherWebAPI;
+    label = "App 2 : Weather";
   }
 
-  AppHourlyChallenge -> UtilsStorage [style=dashed]
-  AppHourlyChallenge -> BaseDomain [style=dashed]
-  AppHourlyChallenge -> UtilsDesignables [style=dashed]
+  BaseDomain [label=BaseDomain shape=box]
   AppRyanair -> AppRyanairCore [style=dashed]
-  AppRyanair -> UtilsDesignables [style=dashed]
+  AppRyanair -> AppRyanairDomain [style=dashed]
+  AppRyanair -> AppRyanairWebAPI [style=dashed]
   AppRyanair -> BaseDomain [style=dashed]
-  AppRyanairCore -> UtilsStorage [style=dashed]
-  AppRyanairCore -> UtilsNetworking [style=dashed]
+  AppRyanairCore -> AppRyanairDomain [style=dashed]
+  AppRyanairCore -> AppRyanairWebAPI [style=dashed]
   AppRyanairCore -> BaseDomain [style=dashed]
+  AppRyanairDomain -> BaseDomain [style=dashed]
+  AppRyanairWebAPI -> AppRyanairDomain [style=dashed]
   AppWeather -> BaseDomain [style=dashed]
   AppWeather -> AppWeatherCore [style=dashed]
-  AppWeather -> UtilsDesignables [style=dashed]
-  AppWeatherCore -> UtilsStorage [style=dashed]
-  RJPS_SwiftUI -> AppHourlyChallenge [style=dashed]
+  AppWeatherCore -> AppWeatherDomain [style=dashed]
+  AppWeatherCore -> AppWeatherWebAPI [style=dashed]
+  AppWeatherDomain -> BaseDomain [style=dashed]
+  AppWeatherWebAPI -> AppWeatherDomain [style=dashed]
   RJPS_SwiftUI -> AppRyanair [style=dashed]
   RJPS_SwiftUI -> AppWeather [style=dashed]
-  UtilsNetworking -> UtilsStorage [style=dashed]
-  UtilsStorage -> BaseDomain [style=dashed]
 }
