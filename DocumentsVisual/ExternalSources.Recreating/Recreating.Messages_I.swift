@@ -8,6 +8,8 @@ import Foundation
 import SwiftUI
 import Combine
 
+//swiftlint:disable all
+
 struct Messages_I: View {
     var body: some View {
         NavigationView {
@@ -41,7 +43,12 @@ struct SearchBar: View {
                 Text("Search")
                 Spacer()
                 Image(systemName: "mic.fill")
-            }.padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)).frame(width: 350).foregroundColor(.secondary).background(Color.gray.opacity(0.1)).cornerRadius(8).padding(.horizontal)
+            }.padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+            .frame(width: 350)
+            .foregroundColor(.secondary)
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(8)
+            .padding(.horizontal)
         }
     }
 }

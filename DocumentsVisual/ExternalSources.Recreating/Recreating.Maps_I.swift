@@ -9,6 +9,8 @@ import SwiftUI
 import Combine
 import MapKit 
 
+//swiftlint:disable all
+
 struct Maps_I: View {
     var body: some View {
         ZStack {

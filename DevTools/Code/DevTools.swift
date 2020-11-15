@@ -5,6 +5,9 @@
 
 import Foundation
 
+/**
+ DevTools is where we have developer auxiliar tools. Utilities, logs, Feature Flags and so on
+ */
 public struct DevTools {
     
 }

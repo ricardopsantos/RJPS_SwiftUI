@@ -8,6 +8,8 @@ import UIKit
 import SwiftUI
 import Combine
 
+//swiftlint:disable all
+
 struct SimpleMVVM: View {
     @EnvironmentObject var viewModel: SimpleMVVM_ViewModel
     var body: some View {

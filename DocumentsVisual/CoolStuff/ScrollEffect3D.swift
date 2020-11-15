@@ -8,6 +8,8 @@ import UIKit
 import SwiftUI
 import Combine
 
+//swiftlint:disable all
+
 struct ScrollEffect3D: View {
     var colors: [Color]
 

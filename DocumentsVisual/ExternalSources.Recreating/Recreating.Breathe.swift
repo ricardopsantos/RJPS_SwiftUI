@@ -8,6 +8,8 @@ import Foundation
 import SwiftUI
 import Combine
 
+//swiftlint:disable all
+
 struct Breathe: View {
     @State var scale = false
     @State var rotate  = false
@@ -32,7 +34,7 @@ struct Breathe: View {
                     Circle().frame(width: 80, height: 80).foregroundColor(Color(UIColor.systemBlue)).offset(y: 42)
                 }
             }.rotationEffect(.degrees(120)).opacity(1/2)
-        }.rotationEffect(.degrees(rotate ? 180 : 0)).scaleEffect(scale  ? 1 : 1/8).animation(Animation.easeInOut.repeatForever(autoreverses: true).speed(1/8)).onAppear() {
+        }.rotationEffect(.degrees(rotate ? 180 : 0)).scaleEffect(scale  ? 1 : 1/8).animation(Animation.easeInOut.repeatForever(autoreverses: true).speed(1/8)).onAppear {
             self.rotate.toggle()
             self.scale.toggle()
         }

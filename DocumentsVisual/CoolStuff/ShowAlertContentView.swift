@@ -11,6 +11,8 @@ import UIKit
 import SwiftUI
 import Combine
 
+//swiftlint:disable all
+
 struct ShowAlertContentView: View {
     @State private var showAlert = false
     var body: some View {
@@ -18,7 +20,7 @@ struct ShowAlertContentView: View {
           Color.yellow
           .opacity(0.01)
           .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
         }.alert(isPresented: $showAlert) {
           Alert(title: Text("Important message"), message: Text("Numbers Only"), dismissButton: .default(Text("Ok")))

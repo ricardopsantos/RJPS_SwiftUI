@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 
-//swiftlint:disable statement_position
+//swiftlint:disable all
 
 // https://peterfriese.dev/swift-combine-love/
 

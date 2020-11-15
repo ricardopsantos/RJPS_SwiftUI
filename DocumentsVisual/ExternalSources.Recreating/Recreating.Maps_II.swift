@@ -9,6 +9,8 @@ import SwiftUI
 import Combine
 import MapKit 
 
+//swiftlint:disable all
+
 struct Maps_II: View {
     @State var latitude = 37.7749
     @State var longitude = -122.4194

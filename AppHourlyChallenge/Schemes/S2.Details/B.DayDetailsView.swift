@@ -13,7 +13,7 @@ import BaseDomain
 // The method [static func buildView()] is mandatory, but we can have more
 //
 
-public struct DayDetailsViewBuilder : BuilderProtocol {
+public struct DayDetailsViewBuilder: BuilderProtocol {
     private init() { }
 
     public static func buildView() -> some View {

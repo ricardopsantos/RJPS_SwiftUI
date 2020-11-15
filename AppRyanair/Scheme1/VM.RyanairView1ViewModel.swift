@@ -94,7 +94,6 @@ public extension VM {
     }
 }
 
-
 // MARK: - Combine
 
 private extension VM.RyanairView1ViewModel {
@@ -236,7 +235,6 @@ private extension VM.RyanairView1ViewModel {
         }.store(in: cancelBag)
     }
 }
-
 
 // MARK: - Router
 
