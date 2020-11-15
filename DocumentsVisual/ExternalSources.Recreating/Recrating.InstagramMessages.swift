@@ -6,6 +6,8 @@
 import Foundation
 import SwiftUI
 
+//swiftlint:disable all
+
 struct InstagramMessages: View {
     var body: some View {
         VStack(spacing: 24) {

@@ -8,6 +8,8 @@ import Foundation
 import SwiftUI
 import Combine
 
+//swiftlint:disable all
+
 struct Settings: View {
     var body: some View {
         NavigationView {

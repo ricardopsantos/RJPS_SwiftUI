@@ -176,4 +176,3 @@ struct RyanairView1_PreviewProvider3: PreviewProvider {
         })
     }
 }
-

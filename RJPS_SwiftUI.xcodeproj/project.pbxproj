@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		02B9920C0A2972A3809BE33A /* VisualDocs_WaysToReactToState_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D657903B51BB02118ABF3 /* VisualDocs_WaysToReactToState_I.swift */; };
+		04627141BEFD0833FF2B787F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818DDA833ACAE8D2C9081DB /* Assets.xcassets */; };
 		049B7E1745E1072A452E75FB /* Array+Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C224C8CB268BF02E1105F /* Array+Filtering.swift */; };
 		04F020AADE46F8300FB03B7F /* VisualDocs_horizontalSizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A6EBDCA41C0D956967D4B9 /* VisualDocs_horizontalSizeClass.swift */; };
 		06B39F68C5441495DCD5C165 /* TO_DO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1B98ED7BE671F241B28ADA /* TO_DO.swift */; };
 		09552933C485FE3449A58A5F /* UtilsNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A4D81D2254469BD2C53B135 /* VisualDocs_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA7C4DAE6220690517E076C /* VisualDocs_Colors.swift */; };
 		0B99D7A853B5E89FDC615796 /* PublicCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DDF12D318A4AB2FEFA74C70 /* PublicCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5B100F8B2A3508D3EEC612 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A7DE1333B603B4C1613A56 /* DateFormatters.swift */; };
 		0D76E0BB87B36E9CEBD5E016 /* VisualDocs_@EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B103BB77442CE35727F45 /* VisualDocs_@EnvironmentObject.swift */; };
 		0D91F1E880295DCE4C490886 /* VisualDocs_SwiftUI_Lab_Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2DABBF7D04C84C6E7CB10 /* VisualDocs_SwiftUI_Lab_Triangle.swift */; };
+		0DEF8B15F6357A79D52E1346 /* DtoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04B23E92830D9865940927 /* DtoProtocol.swift */; };
 		11604ADF848208B586F88F99 /* DocumentsVisual.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A517861DB2AD74392AF1D257 /* DocumentsVisual.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1172E13E0FB32693E7601E0F /* Recreating.HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0678081AB2CA02AB166C75 /* Recreating.HomeScreen.swift */; };
 		118A94583F325D131D94E3C3 /* RyanairRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A6004D7F31ADECF70ADF4 /* RyanairRequestDto.swift */; };
 		1273C430EABCD1D94B5CBF02 /* B.WeeklyWeatherBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF7316D27C4486F36F6C787 /* B.WeeklyWeatherBuilder.swift */; };
 		1299C6586A0B715B847F5A45 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556496C27429637513A4EB7A /* NSObject+Extensions.swift */; };
+		144E0BF182B7C9E515233BA7 /* HotCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2ECCC7ACD08C828E1EDB15 /* HotCacheManager.swift */; };
 		14FE198734334E76C021637A /* V.MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57992B4A6D6BD68832380C2 /* V.MapViewRepresentable.swift */; };
 		15F963EF598DE04043CF48A4 /* Recreating.LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370ECD68E9265B32F98F1F06 /* Recreating.LockScreen.swift */; };
 		1841A9931D651AF816908518 /* RyanairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365D55A19F1E6F9E588392A7 /* RyanairModel.swift */; };
@@ -31,22 +35,22 @@
 		1B0EBC2FAD0D24C13F64489C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4C4444D076A9569A0ECBC /* View+Extensions.swift */; };
 		1B7C0571E6240E32E8D6B5EB /* APIRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B4FFE152239DD97862409 /* APIRyanair.swift */; };
 		1E62DA891E2E80E5132A5F78 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E58DE91B235ED37BFAA2B4 /* typelias.swift */; };
-		1E9FC313CC8B2025A335B4AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3782BECB14DFCC9B87ED58 /* LaunchScreen.storyboard */; };
-		1FB0242E83E6958C991BAABC /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1348CC50E76D4982CA71D5D /* DevTools.swift */; };
-		213FFDCEB6998719723C2326 /* GenericStorableKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB9888290C2A06B9A97C06A /* GenericStorableKeyValueModel.swift */; };
 		233EDBB14D92663C3324B6D0 /* DesignablesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4387B5AB3A663F43C5FCB89 /* DesignablesFactory.swift */; };
+		265279CF4595C836948CFBD7 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0701C6CFCCA449B7049ECE /* CancelBag.swift */; };
+		2675FBCA900C96C6C5EB941C /* APIRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516123A9B1D038EECB64F5E /* APIRyanairProtocol.swift */; };
 		269EF91E0E8DCD28FF04409C /* RepositoryRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743E095F591F0A57DD810BD6 /* RepositoryRyanair.swift */; };
+		2DB8D4A5F3B3C3B754421AD8 /* RepositorRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18081A0AE1324D6C848053E5 /* RepositorRyanairProtocol.swift */; };
 		2EF2E813B9EDD42A886E9F86 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97135D44DD2D9FAAE437D8D6 /* ProcessInfo.swift */; };
 		2F925C6244DC63A4E9955C43 /* DocumentsVisual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A517861DB2AD74392AF1D257 /* DocumentsVisual.framework */; };
+		3123708008B852D2063FB22F /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3D8D6F4B16B600E11402A /* UserDefaults+Extensions.swift */; };
 		3246313EEDB689A3806F3302 /* VisualDocs_Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AAEAE062126728EA499290 /* VisualDocs_Fonts.swift */; };
 		335A0EC57D8C2782A72E926D /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7C61E5983D86F5E316ED42 /* TextField+Extensions.swift */; };
-		337DC6456954C258ECB0D7FB /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97878B4ACABE10C707D8A5D /* APIError.swift */; };
 		3788AC5FBC6F26F444A0B22F /* APIResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D474052E4A1C3E8A01B29B3 /* APIResponseDto.swift */; };
+		39E2AB73E2002EA8874BAEF4 /* V.RyanairView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */; };
 		3A2AB111687E2D73B3CE84FE /* SimpleNetworkAgentBExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1E64CE7A0FB8851ABA010 /* SimpleNetworkAgentBExample.swift */; };
 		3B18F099984FF27F3923F6EF /* VisualDocs_WaysToReactToState_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F58CBBA308EF92D23AFF34 /* VisualDocs_WaysToReactToState_II.swift */; };
 		3B7FC0850EB4434B8C0BCF97 /* VisualDocs_Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A187835C9BFB8A45BD50440 /* VisualDocs_Buttons.swift */; };
 		3B81A17D7CD05B0ABEE4F839 /* typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA020DA930FD99560F9077 /* typealias.swift */; };
-		3B870EE4504C5092DFEAABE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF7A6234B3A8EC3AA411E16 /* LaunchScreen.storyboard */; };
 		3BBCDD720030249B16C670BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D56DD18A6E5642F1E13910 /* AppDelegate.swift */; };
 		3C6E04BFE46D59C867C3119B /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE426F17613140C5164C43 /* typelias.swift */; };
 		3DFA11388ADD2D08697C6304 /* VisualDocs_RemoteImageLoadging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800F494E2DBB227789A98347 /* VisualDocs_RemoteImageLoadging.swift */; };
@@ -54,24 +58,24 @@
 		40DC1BF60A16625787D562A5 /* Publisher+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40558584A534AB7605B24D33 /* Publisher+Publisher.swift */; };
 		42BDEB961450882BCAB69FD6 /* VisualDocs_Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C4AE03E1BC4A8153354939 /* VisualDocs_Lists.swift */; };
 		42BE51C3FE17E1FF7F265B6C /* FetcherWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940EEF606815CB243DEC289 /* FetcherWeather.swift */; };
+		430AA7F05DD28D2A9B0A0A72 /* VM.RyanairView2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BD84DFD6AB35DB926EA1C /* VM.RyanairView2ViewModel.swift */; };
 		45A682F132E29DD74144C5AB /* Recreating.Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F520C877E66D1756A616A44 /* Recreating.Twitter.swift */; };
 		4628DEEC062AD48BC4B21559 /* V.CurrentWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF52A58C8DDDA59C5C146DF /* V.CurrentWeatherRowView.swift */; };
+		46CD3B86D8DD69DAC5A259FB /* RepositoryWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985AB94FEB80BF0E4246790 /* RepositoryWeatherProtocol.swift */; };
 		46DB9C12E2EF2D59D7C8BB55 /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518A0DF79E324ADB0D2090BC /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */; };
 		475D7C1690EB2861401881EF /* AppWeatherDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		49EF4DCE7A592D5454184683 /* AppRyanair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE3471A14A96927FFE2F660 /* AppRyanair.framework */; };
 		4E0AC466E946EC063F4584A1 /* VisualDocs_RouteToAndCameBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E29B5C3C82AF867839358E /* VisualDocs_RouteToAndCameBack.swift */; };
-		4FCE46F5C9451888556D3FB2 /* CachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D7AA71F67EB95096C2E144 /* CachePolicy.swift */; };
+		5155AEE0A200E84217C26920 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04193C0E8DFCAD9C0C50467 /* UserDefaultsPropertyWrapper.swift */; };
 		528CC5348DE53455443E791C /* VM.RyanairView1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D232B6F5748ACBD851F8E4 /* VM.RyanairView1ViewModel.swift */; };
+		5346B17AC7A5BCD0E7CE8086 /* WeatherMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CAED30B0C8D189CF816854 /* WeatherMappers.swift */; };
 		53B53B7026B70EE09FC66F06 /* VM.CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD31F68722031B518A1C6D /* VM.CurrentWeatherViewModel.swift */; };
-		54350ACD6708CE268111381B /* VM.RyanairView2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCA86090292686EDEF1E83 /* VM.RyanairView2ViewModel.swift */; };
-		5535E9EFB238E4FFB2CC6930 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDB83FAB22CED4EF507DA1C /* ListItemModel.swift */; };
-		55C4A39D0E43472FAB114C1A /* PointFreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A18114563AFE07376770D /* PointFreeFunctions.swift */; };
-		55D5913F9190E0BB361EAB35 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE165FC5EA57A4F04D13234A /* UserDefaults+Extensions.swift */; };
 		590E8F5D324C3F2CE5F22F42 /* VisualDocs_Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD52CCE5AD9E31459B283E /* VisualDocs_Animations.swift */; };
 		592D5F7EFF599E28EAF1A59C /* DocumentsVisual.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E13DF6A51067A64C0016CF /* DocumentsVisual.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C9F5EAD779AE0DFFC4CD872 /* ShowAlertContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C49EFB9625F47CA5198A06B /* ShowAlertContentView.swift */; };
 		5D896BC088485A18F0A2DE1D /* AppRyanair.h in Headers */ = {isa = PBXBuildFile; fileRef = C9ACA0820776505AA5F25627 /* AppRyanair.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E084C49AED2A7D8D44B580A /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9597886916DBF70B75B17A06 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F0A8994E7FA9248B6E0B7F1 /* E.APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D19BB993642FC3274E0012 /* E.APIError.swift */; };
 		5F293339A71DEF1672B52EA8 /* Just+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8E406FAA75E5F4EBA21EA /* Just+Extensions.swift */; };
 		5F6320B52E9FEEA011F32382 /* DevTools+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33295B4DC3BB89FE216C3978 /* DevTools+Log.swift */; };
 		60BB2AAFF7B9646780ADAB23 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5983CD3C7D47902000DEDF /* PasswordChecker.swift */; };
@@ -84,7 +88,9 @@
 		645805E5BF2D1C862E6E18A6 /* WeatherRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8BA314105EE778D3A0B42 /* WeatherRequestDto.swift */; };
 		645E72B62615FA2EFC89C384 /* SimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB61DE8BE63DE516A3DA03E0 /* SimpleNetworkAgentProtocol.swift */; };
 		6666ECCFB99DCFB535515F7C /* RyanairRequestDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94FB6291970E6A6830B92D5 /* RyanairRequestDto.Availability.swift */; };
+		6699483372A7F65142423777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A956A64686C90154E9CC42D0 /* LaunchScreen.storyboard */; };
 		66C5B026F4470CD1E729AFA0 /* FetcherRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB85B59071A9F6828F2A54 /* FetcherRyanair.swift */; };
+		66E6F55021348BCBCC9FB8DF /* E.CachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */; };
 		67132059C1FDF52269D7B152 /* VisualDocs_Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB6F71D25DD9A8FF273281 /* VisualDocs_Shapes.swift */; };
 		68333FEEE6186E87D057D84F /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F895216DB11D631D768CCA8B /* URLSession+Extensions.swift */; };
 		68B81F7D6ACAF63DD17E886C /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB46CAA7AF0827942E390C9 /* Recreating.Messages_III.swift */; };
@@ -92,7 +98,6 @@
 		69D1B0013EBCBCBBA88F3722 /* V.RyanairView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */; };
 		6D768B1107766500062F9FE1 /* Recrating.InstagramMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D46015E82E44C9CC52373E /* Recrating.InstagramMessages.swift */; };
 		7070B7667FB04BE9E871E163 /* Recreating.Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A24C02196B1A71CF4807D7 /* Recreating.Settings.swift */; };
-		71185F1F5A712FCDF0473E05 /* B.RyanairView2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D8D5B9AC4F7A8777F371F /* B.RyanairView2Builder.swift */; };
 		716AE619B08813E431C3F164 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3857012AE71FC85B8D561E /* Keys.plist */; };
 		71BBDB5E5C998A8F36B9549F /* VisualDocs_Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBC4489A9E95075DD9A1A85 /* VisualDocs_Background.swift */; };
 		728A18968EEB963694A92E0D /* UtilsStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -100,18 +105,18 @@
 		7680B5D3E8C9D9D4946FAE7E /* VisualDocs_NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF961777F89BFAC2505776 /* VisualDocs_NavigationView.swift */; };
 		772C29D04B615D1158153D45 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82168D8E998A15A4A106A299 /* ActivityIndicator.swift */; };
 		773E655F0E7C294FD9769F21 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EB43AE939660E7765C785 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift */; };
-		77CC6BAF9D65DC47FFF358A2 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A226B12D61D3AEB3D3C2F562 /* NetworkUtils.swift */; };
 		78272CB36419DC5661802BFB /* AppWeatherWebAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = F492B00701E0FB853EBBF7DA /* AppWeatherWebAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		784DDA9B8CA88271B84F1069 /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A393EEB58783AF5B3D6AA621 /* UIScreen+Extensions.swift */; };
 		7915B8BEAF1987B18B908A0C /* VisualDocs_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68AFF82888D5D8932BC2142 /* VisualDocs_onDelete.swift */; };
-		7B9F172E9AF90C538DCA2769 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8985293F8D6F3F5254A348B /* CancelBag.swift */; };
 		7BD261E3BF7E7BCB9EF6DEB0 /* Recreating.iPhone12ProWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F02DFCBDC0D7D046DF571 /* Recreating.iPhone12ProWebsite.swift */; };
 		7C304D153D8680E09918F31A /* VisualDocs_UserDefaultsWithPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01E49AEB54E2F8AE432C0E /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */; };
+		7C718A9987C9707FD89C605D /* PointFreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F441540CDD44B916CB37753 /* PointFreeFunctions.swift */; };
 		7CCD3B2925CFEA886DE1F05D /* FetcherWeatherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608CE52D6E2AEB0627F7FBE6 /* FetcherWeatherMock.swift */; };
 		7DDFBBFCE62E24798C7FDA30 /* AppRyanairWebAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 69AE8FE7EE588489D853ED2C /* AppRyanairWebAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E0D07B46282CB6B5DC8A533 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1BBB26EB5EAC319DBBEC1 /* UIColor+Extensions.swift */; };
 		7F1FADC77D05319E913E7D00 /* VisualDocs_@Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF92BFA0A7354CDC61F39B /* VisualDocs_@Binding.swift */; };
 		7F5280D9814FC32783680571 /* SimpleNetworkAgentA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275748A320F05952058A15AE /* SimpleNetworkAgentA.swift */; };
+		7F9B081051B01B8987F9FC46 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF414F1644C5D16EAED64E71 /* CacheUtils.swift */; };
 		7FF85E06A4F0889312FB4B98 /* V.CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059BC945D323BB6A54ED5E66 /* V.CurrentWeatherView.swift */; };
 		8155D163545B9692E8A89828 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F7AF84C93894F4C73A2A02 /* typelias.swift */; };
 		82913BFE7B4F78B74B16171D /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCDAF8F624655D681E0741 /* Recreating.Messages_I.swift */; };
@@ -123,35 +128,32 @@
 		8FBC623FE154865F36F1AC8B /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C78377E2B8758665FAC911 /* Text+Extensions.swift */; };
 		8FCB4C2E11A04AF24836CBEA /* SimpleMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B5EB8BA785BD992A04ABA /* SimpleMVVM.swift */; };
 		90AFE56B4E3E728B124EA94E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9502B7ECAEF4AF074036775 /* Date+Extensions.swift */; };
-		91B8E9254D8077B75885C914 /* RepositorRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0E6BCD9450B7E2EFB2FDF /* RepositorRyanairProtocol.swift */; };
 		91E5E01AA0E8D2A29B9DA61E /* FetcherRyanairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68688B397AA2018723E867BB /* FetcherRyanairMock.swift */; };
 		93366AE8A368FC80456B39F3 /* VisualDocs_Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9C88B0CCBB17F86F50990C /* VisualDocs_Shadows.swift */; };
 		93409F6050185749C103C5D9 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD8CE1BFCCA5D8B52A2BC1 /* Locale+Extensions.swift */; };
 		939FF98BF882E7D57C245AD3 /* VisualDocs_onEditingChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5EE75C43DFA9FD0885A9B8 /* VisualDocs_onEditingChanged.swift */; };
 		93D94B3068536FC253855DA2 /* VisualDocs_ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1659F5196E8478221C51668C /* VisualDocs_ForEach.swift */; };
 		964083044B90BFF57B4F0C2B /* Recreating.AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738DAF23D1EB220F779F873 /* Recreating.AppStore.swift */; };
-		96B7B9E20DDF05DF12CE4B7E /* HotCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C913CC2B63BA362866B26F /* HotCacheManager.swift */; };
 		96ED6D371EAD9F30BF56DF9A /* VisualDocs_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1791D4C1470706844DD2A691 /* VisualDocs_Combine.swift */; };
-		97BE07DF8F8818066D4F9E30 /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5D837AD0002AD27914843 /* NavigationStack.swift */; };
 		981618B849D8060D1C79CD65 /* RepositoryWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258D8B589FD2081F91282AD /* RepositoryWeather.swift */; };
 		9D3C65F6E6EE77DC60927D9F /* AppWeatherCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 425E886BADCBCA866DF3F3AC /* AppWeatherCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D8AB4894F5B9F109FD46CB5 /* RyanairModel.AirPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424FC20AA4CF7EB3825B3801 /* RyanairModel.AirPort.swift */; };
+		9DF6F8ADD9B1E3435C94027E /* B.RyanairView2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */; };
 		9EE54EAA9A028E53CA0A3F45 /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0F75B75457282FB4A2712 /* ConnectivityView.swift */; };
 		9F7F73E7602C391D2F831A92 /* RyanairRequestDto.Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1DCE16F76D0EE2FA5DDDF /* RyanairRequestDto.Stations.swift */; };
 		A1FB2A8E9A6F2040025AA151 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6131C00F405071F458EAB750 /* Result+Extensions.swift */; };
-		A23F085D0E0E2F989ECC8948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D67EB568941F5DAACCB712 /* Assets.xcassets */; };
 		A347C5C253B2D790BA702BC1 /* WeatherRequestDto.Wheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC57391BC67EEC13B7CED /* WeatherRequestDto.Wheater.swift */; };
 		A4F205C468A933F0DF4D19F9 /* BaseDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BF426C78331EDE88D4BE70 /* BaseDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A590200DD606C46AA6C93A95 /* GenericStorableKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D847CC0AE405D19FF5A7 /* GenericStorableKeyValueModel.swift */; };
 		A69CBBAA2134A0C4CB062BDA /* Error+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDD317D791891A09529325 /* Error+Extensions.swift */; };
-		AA0DA59EE20B381044605CC2 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A76AE20783306F2161A89F /* CacheUtils.swift */; };
-		AAC99CEF7864786A2942B889 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBF7AC49B37FFDC183B8A6 /* BuilderProtocol.swift */; };
+		A7031918D6FE5D86D12F2CE0 /* Response<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED715D8344B2531862EC197 /* Response<T>.swift */; };
 		ABA86E54721573FA65F43ADC /* WeatherResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C38BC66C8A48BE23E3C55C /* WeatherResponseDto.swift */; };
-		AF25399A2933ED57A3B30A94 /* Response<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED1EB36DE5D1A173D1AD70 /* Response<T>.swift */; };
-		B080695268B8DA25A1D1F68C /* APIWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942D4ED81870B56ECC0CBF2 /* APIWeatherProtocol.swift */; };
+		ABCE65918E7078BADD8B57A1 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50218750F0988469529868 /* BuilderProtocol.swift */; };
 		B3CD2C91DF8CCC5589C5913B /* B.CurrentWeatherViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664B45544D230A5F4455799 /* B.CurrentWeatherViewBuilder.swift */; };
 		B3EB1E56F7FEAAA17AA89CBE /* VisualDocs_TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0A9A181678A300D6CE828 /* VisualDocs_TimerView.swift */; };
 		B4AA3D1D4D8DEFE6B449B790 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213750D963C8391165294FDF /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */; };
 		B4E6F630785DEDA481945E81 /* APIWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D673A3A8070290C2819496 /* APIWeather.swift */; };
+		B7696F1A5610D242447252B8 /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE3253DF3DB49296298C7D /* APICacheManager.swift */; };
 		B869F734A9E2A1A240168D69 /* AppRoot_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456212E58E54AD3DAE404733 /* AppRoot_View.swift */; };
 		BA844F323C4859207B1F07C5 /* VisualDocs_Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0470DF8AA99FA4607E2823 /* VisualDocs_Form.swift */; };
 		BB9967A972B1DCE8AF501078 /* VisualDocs_Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D63C3F106438E6054528E60 /* VisualDocs_Padding.swift */; };
@@ -160,40 +162,39 @@
 		BEDB581C65FEA845EAE21FC1 /* RyanairResponseDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8006111CD5C46C1E53C37674 /* RyanairResponseDto.Availability.swift */; };
 		BFDC38453873D9C5B4BAF0D3 /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603856A3D6F22D8A999211A6 /* Recreating.Messages_II.swift */; };
 		C06C0B9071F0471E51519006 /* Recreating.Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD4BEE1ABC25EF8E3A27B2 /* Recreating.Breathe.swift */; };
+		C20A7CAF097D21D5B1016B4D /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485366910AC6D1AD05F3BCD5 /* NetworkUtils.swift */; };
 		C414B5014DE52B3E8DA0E616 /* DevScreen_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1C98534C09965470282DE /* DevScreen_View.swift */; };
 		C459841B6502B6178A3B7934 /* VisualDocs_TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3E310B7AEC388C319C543 /* VisualDocs_TabView.swift */; };
 		C8CAA9B8E5DDD8740BAD471E /* VisualDocs_onReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D32D28B66E0C47BF2A35AE /* VisualDocs_onReceive.swift */; };
 		C9C570501E69CA0A21C35EA9 /* AppRyanairCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB093C839136CB04360A277 /* AppRyanairCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CE3C0350260B2F0CB507BE /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48850AC30F8B356139B3ED45 /* Recreating.Tinder.swift */; };
 		CB25A315F5D099A6852E77CA /* V.WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A108CE142B5EC6599A1BDB /* V.WeeklyWeatherView.swift */; };
-		CB429C3114F519FA1731D842 /* DtoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5030C2E06302D73BB87DE /* DtoProtocol.swift */; };
 		CBAEAE2B98960C47B8764B6A /* WeatherRequestDto.Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3CB7C864DAD83DDDCF2A42 /* WeatherRequestDto.Forecast.swift */; };
+		CBEAE46FEBA82875AF86E2E5 /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82B964635EB2B85B693C81 /* DevTools.swift */; };
 		CC29F4D30367969C5150F320 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4FE0D54F412C0709E33F1 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */; };
 		CCD2CA1C5665A72633554F67 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F9A5FA6C8EF33A05623D81 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift */; };
 		CCFB6E3CD6C035D25197D85F /* SimpleNetworkAgentsUsageComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DEBA0F8F9689F4BAB94553 /* SimpleNetworkAgentsUsageComparison.swift */; };
 		CD8ECF015913F54E4EE90C4F /* Recreating.Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E704F58EE2CBD5D1E46C7 /* Recreating.Reminder.swift */; };
-		CDAA35DC56D8271FC55D0B84 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B719BA731E527F7B7B9F33 /* UserDefaultsPropertyWrapper.swift */; };
 		CE09950359429E7285B2E45C /* VM.CurrentWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715D3A7043B6C4324AA8D74E /* VM.CurrentWeatherRowViewModel.swift */; };
 		CF72803BFC22FA03E77C6453 /* Designables_PassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA276BB503306AA54981962 /* Designables_PassCode.swift */; };
+		D1A0A9F449700820539EDA22 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F4BF33DBC25A9F9BB1A08 /* APIKeys.swift */; };
 		D2B79B47C20AE5414A6F5F9E /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52728F591213FE7F74F49071 /* InfiniteScrollView.swift */; };
 		D2F2584CCCCE11D4001CE3A8 /* RyanairMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5037BB498ECC16D7DF38DAE /* RyanairMappers.swift */; };
-		D30F1F8ED8B8D271D7523458 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA457CBEA66ECB44C63BDC4 /* APIKeys.swift */; };
 		D33FEC4F9A08DD2640CA4EDF /* B.RyanairView1Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B7E236BAA16E513A7E002 /* B.RyanairView1Builder.swift */; };
 		D53BABA519E4E42F50992EB7 /* AppWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00142DDB2ECACE3920DAE95D /* AppWeather.framework */; };
+		D5569458AAAF060EE6FDB19F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B3DBF5C63C982B765FFEA4 /* NavigationStack.swift */; };
 		D7345FB422F744D1CBA68BFA /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603968072588D8621D54E1E /* JSONDecoder+Extensions.swift */; };
 		D7D6C6FE273093A72D9059AD /* VM.DailyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB083902EF90FC9C173BB47 /* VM.DailyWeatherRowViewModel.swift */; };
 		D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD91DCBA8848FE6F8FB333 /* typelias.swift */; };
 		DA1727CBC53CACD869D97FA2 /* VisualDocs_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00610EDE156A60C7F921C87 /* VisualDocs_Image.swift */; };
-		DD939BB762EF62A1CB9113B4 /* RepositoryWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DCCF9AB25CAE776D97080C /* RepositoryWeatherProtocol.swift */; };
 		DDFD722A9D63A67CB5267E26 /* SimpleNetworkAgentB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18DB623F1370C2C67568B26 /* SimpleNetworkAgentB.swift */; };
 		DEDE2509D5594D5A63C2476A /* VisualDocs_ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDF569C4FD77C571C680040 /* VisualDocs_ErrorHandling.swift */; };
-		DEEB490640D2952390ED816C /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2341B3D52EE6AF79C4BA9 /* APICacheManager.swift */; };
 		DFB119BBF4DB4DFD083155F5 /* SimpleNetworkAgentAExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8248CE791F182234BB50A7F9 /* SimpleNetworkAgentAExample.swift */; };
 		E30DBDC3F1702803A75394EB /* VisualDocs_LayoutInScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E319C2D9E6EE29073F1F2 /* VisualDocs_LayoutInScrollView.swift */; };
 		E60227E8630F23A686EBE883 /* SimpleNetworkAgentExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B191024DE3720148499E1E0 /* SimpleNetworkAgentExampleProtocol.swift */; };
+		E627AA0EF58588AEFFFDDD2E /* APIWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CED726603B355821BE044 /* APIWeatherProtocol.swift */; };
 		E636E87848B010CE96590DB8 /* UtilsExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 36C921D39E8B9C4D87D3ACC4 /* UtilsExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6B0FD2425936423B5DE8B16 /* AppWeather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00142DDB2ECACE3920DAE95D /* AppWeather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E774F276496C85075C32F0E7 /* APIRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57D16F8C946D06ACD61614 /* APIRyanairProtocol.swift */; };
 		E891FFF297C9C116E830AC0E /* AppRyanair.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAE3471A14A96927FFE2F660 /* AppRyanair.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB50D3579087EAAE8D3B802E /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C36CF52FF3AE980140601C /* typelias.swift */; };
 		EEB7E424DDD907CFBACF6FBD /* Subscribers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3759428451AB5C8EB3E593A /* Subscribers+Extensions.swift */; };
@@ -202,10 +203,8 @@
 		F2D7B51969B25399226D2342 /* Recreating.Maps_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180810D6A08DA75942BCCE0B /* Recreating.Maps_I.swift */; };
 		F37CC59A511F69391217BD89 /* SendEMailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE748A682563E081BE9DF3D4 /* SendEMailViewControllerRepresentable.swift */; };
 		F52B6B40991984B3FDAE9E14 /* RyanairResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530974CA2A600E6375E5AAF /* RyanairResponseDto.swift */; };
-		F606E373D98494E5530DC862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD26F5FEC9E0C6F8B257FDEB /* Assets.xcassets */; };
-		F6CD1A3BCE7E4264F4B53568 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B54E21B71859F4B95DB9 /* DateFormatters.swift */; };
 		F9C227B25E058C8E43029E1B /* VisualDocs_Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406DB7B6C0F5749EF49A483 /* VisualDocs_Text.swift */; };
-		FDB9134EA69016500FCFA72F /* V.RyanairView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95895818A9832B44BA8507EB /* V.RyanairView2.swift */; };
+		FF35B77A76F93E27CF329B10 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DBF5FB5AF431F74F5B0DC /* ListItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -509,13 +508,12 @@
 
 /* Begin PBXFileReference section */
 		00142DDB2ECACE3920DAE95D /* AppWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		03D67EB568941F5DAACCB712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03A22E4B897581CD713314A2 /* Subscribers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subscribers_1.png; sourceTree = "<group>"; };
 		059BC945D323BB6A54ED5E66 /* V.CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherView.swift; sourceTree = "<group>"; };
 		05DEBA0F8F9689F4BAB94553 /* SimpleNetworkAgentsUsageComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentsUsageComparison.swift; sourceTree = "<group>"; };
 		06C36CF52FF3AE980140601C /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		07F58CBBA308EF92D23AFF34 /* VisualDocs_WaysToReactToState_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_WaysToReactToState_II.swift; sourceTree = "<group>"; };
 		0940EEF606815CB243DEC289 /* FetcherWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeather.swift; sourceTree = "<group>"; };
-		09E5030C2E06302D73BB87DE /* DtoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoProtocol.swift; sourceTree = "<group>"; };
 		0AB083902EF90FC9C173BB47 /* VM.DailyWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DailyWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		0C33EF15820822B333C09DD2 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
 		0CF124C35989E2A72EE5B03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -526,10 +524,10 @@
 		1791D4C1470706844DD2A691 /* VisualDocs_Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Combine.swift; sourceTree = "<group>"; };
 		17A2DABBF7D04C84C6E7CB10 /* VisualDocs_SwiftUI_Lab_Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Triangle.swift; sourceTree = "<group>"; };
 		180810D6A08DA75942BCCE0B /* Recreating.Maps_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_I.swift; sourceTree = "<group>"; };
+		18081A0AE1324D6C848053E5 /* RepositorRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorRyanairProtocol.swift; sourceTree = "<group>"; };
 		18AB46AF3E560DDFC6B3D8FB /* UtilsNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1928A641F6EA18DC8537875C /* Combine_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_II.png; sourceTree = "<group>"; };
-		19B4C8822B39A96C142194E7 /* Combine_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_I.png; sourceTree = "<group>"; };
 		19DD31F68722031B518A1C6D /* VM.CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
+		1A770CA6C776F702CEDB0A87 /* Operators_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Operators_1.png; sourceTree = "<group>"; };
 		1AC93243F1B250D0CD8DDAB3 /* Article_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article_2.pdf; sourceTree = "<group>"; };
 		1C0D657903B51BB02118ABF3 /* VisualDocs_WaysToReactToState_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_WaysToReactToState_I.swift; sourceTree = "<group>"; };
 		1C49EFB9625F47CA5198A06B /* ShowAlertContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertContentView.swift; sourceTree = "<group>"; };
@@ -542,25 +540,26 @@
 		22C4AE03E1BC4A8153354939 /* VisualDocs_Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Lists.swift; sourceTree = "<group>"; };
 		2380D974064CB9092DA06F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		249ABFC46F1D302386E9C2FC /* UtilsDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2674DA8931544BCB652A5C67 /* Subscribers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subscribers_1.png; sourceTree = "<group>"; };
 		275748A320F05952058A15AE /* SimpleNetworkAgentA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentA.swift; sourceTree = "<group>"; };
+		2B2ECCC7ACD08C828E1EDB15 /* HotCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCacheManager.swift; sourceTree = "<group>"; };
 		2DDDBE6F619DDA18D48D9127 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2DDF569C4FD77C571C680040 /* VisualDocs_ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ErrorHandling.swift; sourceTree = "<group>"; };
+		2F441540CDD44B916CB37753 /* PointFreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFreeFunctions.swift; sourceTree = "<group>"; };
+		303436CECB3B068F18E5D6D4 /* Combine_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_I.png; sourceTree = "<group>"; };
 		30CDD317D791891A09529325 /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
+		31B66A15F91E9A1FF1F0121C /* ObservableObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObservableObject_I.png; sourceTree = "<group>"; };
 		32D46015E82E44C9CC52373E /* Recrating.InstagramMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recrating.InstagramMessages.swift; sourceTree = "<group>"; };
 		33295B4DC3BB89FE216C3978 /* DevTools+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+Log.swift"; sourceTree = "<group>"; };
 		3432EA19BFC55B29D251033B /* UtilsStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CB85B59071A9F6828F2A54 /* FetcherRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanair.swift; sourceTree = "<group>"; };
 		365D55A19F1E6F9E588392A7 /* RyanairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.swift; sourceTree = "<group>"; };
-		3666B54E21B71859F4B95DB9 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		36C921D39E8B9C4D87D3ACC4 /* UtilsExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsExtensions.h; sourceTree = "<group>"; };
 		370ECD68E9265B32F98F1F06 /* Recreating.LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.LockScreen.swift; sourceTree = "<group>"; };
 		3823C6A93472AB42F0BA1F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		39A7DE1333B603B4C1613A56 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		39D11BC6542317493C09C80A /* 1_DXMC02UcmOHBOHXhx4njzA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_DXMC02UcmOHBOHXhx4njzA.png; sourceTree = "<group>"; };
-		3AF5D837AD0002AD27914843 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		3B191024DE3720148499E1E0 /* SimpleNetworkAgentExampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentExampleProtocol.swift; sourceTree = "<group>"; };
-		3D38F73BE561FCE865194FB8 /* Publishers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Publishers_1.png; sourceTree = "<group>"; };
-		3E3DF5621ECC781B78E3A50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CDCC0B249042028EF682A4A /* MVVM_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVVM_I.png; sourceTree = "<group>"; };
 		3F02FCE9B39D01648AFA02DC /* AppWeatherWebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherWebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD4B9C40D5B506D7D727988 /* AppWeatherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE3E0168FDF656222D2FF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -573,17 +572,18 @@
 		456212E58E54AD3DAE404733 /* AppRoot_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot_View.swift; sourceTree = "<group>"; };
 		45AAEAE062126728EA499290 /* VisualDocs_Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Fonts.swift; sourceTree = "<group>"; };
 		467065DA1E56481371C7266D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		46A76AE20783306F2161A89F /* CacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
-		47ED1EB36DE5D1A173D1AD70 /* Response<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response<T>.swift"; sourceTree = "<group>"; };
+		485366910AC6D1AD05F3BCD5 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		48850AC30F8B356139B3ED45 /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 		4888B5A9C5C02F67883EC538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		48CAED30B0C8D189CF816854 /* WeatherMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMappers.swift; sourceTree = "<group>"; };
 		4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsStorage.h; sourceTree = "<group>"; };
 		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; path = Graph.viz; sourceTree = "<group>"; };
+		4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView2.swift; sourceTree = "<group>"; };
 		4B16F34813BD45939D8CAACC /* readme.image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.2.png; sourceTree = "<group>"; };
-		4C57D16F8C946D06ACD61614 /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		4DDF12D318A4AB2FEFA74C70 /* PublicCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicCode.h; sourceTree = "<group>"; };
 		502CA0E81503990D8AB67BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		518A0DF79E324ADB0D2090BC /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift; sourceTree = "<group>"; };
+		51B3DBF5C63C982B765FFEA4 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		52728F591213FE7F74F49071 /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		527BC57391BC67EEC13B7CED /* WeatherRequestDto.Wheater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.Wheater.swift; sourceTree = "<group>"; };
 		53D673A3A8070290C2819496 /* APIWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeather.swift; sourceTree = "<group>"; };
@@ -593,13 +593,15 @@
 		55F0E522E6FDDE54D9852754 /* UtilsExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56DA020DA930FD99560F9077 /* typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typealias.swift; sourceTree = "<group>"; };
 		59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherDomain.h; sourceTree = "<group>"; };
+		5985AB94FEB80BF0E4246790 /* RepositoryWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeatherProtocol.swift; sourceTree = "<group>"; };
+		59CE3253DF3DB49296298C7D /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
+		5A82B964635EB2B85B693C81 /* DevTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTools.swift; sourceTree = "<group>"; };
 		5B2E704F58EE2CBD5D1E46C7 /* Recreating.Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Reminder.swift; sourceTree = "<group>"; };
 		5D1CF494755B297A20A4B750 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
-		5D8AA0307C665B2C7CEB781A /* ObservableObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObservableObject_I.png; sourceTree = "<group>"; };
 		603856A3D6F22D8A999211A6 /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
 		608CE52D6E2AEB0627F7FBE6 /* FetcherWeatherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeatherMock.swift; sourceTree = "<group>"; };
-		60C913CC2B63BA362866B26F /* HotCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCacheManager.swift; sourceTree = "<group>"; };
 		6131C00F405071F458EAB750 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView2Builder.swift; sourceTree = "<group>"; };
 		61CDE3F96B1C03C132390EE3 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		6258D8B589FD2081F91282AD /* RepositoryWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeather.swift; sourceTree = "<group>"; };
 		62A24C02196B1A71CF4807D7 /* Recreating.Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Settings.swift; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 		6547481CD3A70B152D5B8C1C /* Recreating.Maps_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_II.swift; sourceTree = "<group>"; };
 		68688B397AA2018723E867BB /* FetcherRyanairMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanairMock.swift; sourceTree = "<group>"; };
 		69AE8FE7EE588489D853ED2C /* AppRyanairWebAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanairWebAPI.h; sourceTree = "<group>"; };
+		6A0701C6CFCCA449B7049ECE /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		6A7F163C9E85B2CFACCD8C5D /* MVVM.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVVM.README.md; sourceTree = "<group>"; };
 		6BAF92BFA0A7354CDC61F39B /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
 		6D63C3F106438E6054528E60 /* VisualDocs_Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Padding.swift; sourceTree = "<group>"; };
@@ -615,36 +618,38 @@
 		70096BE0B2CCB68AD3F8011C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		715D3A7043B6C4324AA8D74E /* VM.CurrentWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		71C38BC66C8A48BE23E3C55C /* WeatherResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.swift; sourceTree = "<group>"; };
+		735BD84DFD6AB35DB926EA1C /* VM.RyanairView2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView2ViewModel.swift; sourceTree = "<group>"; };
 		73A6EBDCA41C0D956967D4B9 /* VisualDocs_horizontalSizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_horizontalSizeClass.swift; sourceTree = "<group>"; };
 		73BBA09D5A81545FF38087E5 /* PublicCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PublicCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C78377E2B8758665FAC911 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
 		743E095F591F0A57DD810BD6 /* RepositoryRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRyanair.swift; sourceTree = "<group>"; };
 		75AD4BEE1ABC25EF8E3A27B2 /* Recreating.Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Breathe.swift; sourceTree = "<group>"; };
 		75D56DD18A6E5642F1E13910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75E5661B55A7D21DC20FEA73 /* Operators_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Operators_1.png; sourceTree = "<group>"; };
 		76028CF2A6E6120F9CE5BEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7738DAF23D1EB220F779F873 /* Recreating.AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.AppStore.swift; sourceTree = "<group>"; };
-		77E6DAC6F84746FA1B3D938A /* StateObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StateObject_I.png; sourceTree = "<group>"; };
 		789AEE850DAEA200BE10E930 /* Designables_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_Preview.swift; sourceTree = "<group>"; };
 		7A76055AC37FB89A0DE0FA47 /* AppRyanairDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AC2341B3D52EE6AF79C4BA9 /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
-		7B050C01F4E0EE2F1B452AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B29B8A3CDA297967E01A1DF /* VisualDocs_Binding.State copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_Binding.State copy.swift"; sourceTree = "<group>"; };
+		7B3D97BEA0B2EB8DEE09799F /* Combine_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_II.png; sourceTree = "<group>"; };
+		7B85DE7A055F6E8B3D9B98B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C50218750F0988469529868 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		7D1D0C6D82768059054BEB19 /* Recreating.Instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Instagram.swift; sourceTree = "<group>"; };
-		7DCE8B9B72F4FB11CC22E569 /* State_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_I.png; sourceTree = "<group>"; };
 		8006111CD5C46C1E53C37674 /* RyanairResponseDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Availability.swift; sourceTree = "<group>"; };
 		800F494E2DBB227789A98347 /* VisualDocs_RemoteImageLoadging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RemoteImageLoadging.swift; sourceTree = "<group>"; };
 		82168D8E998A15A4A106A299 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8248CE791F182234BB50A7F9 /* SimpleNetworkAgentAExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentAExample.swift; sourceTree = "<group>"; };
 		83E29B5C3C82AF867839358E /* VisualDocs_RouteToAndCameBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RouteToAndCameBack.swift; sourceTree = "<group>"; };
-		84B719BA731E527F7B7B9F33 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		84C72E09A198ED1228911C16 /* RyanairResponseDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Stations.swift; sourceTree = "<group>"; };
+		84D19BB993642FC3274E0012 /* E.APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.APIError.swift; sourceTree = "<group>"; };
 		85D232B6F5748ACBD851F8E4 /* VM.RyanairView1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView1ViewModel.swift; sourceTree = "<group>"; };
+		871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.CachePolicy.swift; sourceTree = "<group>"; };
 		8A187835C9BFB8A45BD50440 /* VisualDocs_Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Buttons.swift; sourceTree = "<group>"; };
 		8AC8E406FAA75E5F4EBA21EA /* Just+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Just+Extensions.swift"; sourceTree = "<group>"; };
 		8B2F02DFCBDC0D7D046DF571 /* Recreating.iPhone12ProWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.iPhone12ProWebsite.swift; sourceTree = "<group>"; };
+		8B8CED726603B355821BE044 /* APIWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeatherProtocol.swift; sourceTree = "<group>"; };
 		8D7C61E5983D86F5E316ED42 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		8DC2C8F0383B4E6CE9010BF8 /* VisualDocs_sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_sheet.swift; sourceTree = "<group>"; };
+		8E04B23E92830D9865940927 /* DtoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoProtocol.swift; sourceTree = "<group>"; };
 		8E6AAF1E9FCBB123D19C4133 /* AppWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeather.h; sourceTree = "<group>"; };
 		8EAD52CCE5AD9E31459B283E /* VisualDocs_Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Animations.swift; sourceTree = "<group>"; };
 		8F86347E7FA51E88CD989616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -652,10 +657,11 @@
 		938AF7C4E4D7BB552359D44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		944EDDF047C396F6B9CF8E2D /* VisualDocs_@Published.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Published.swift"; sourceTree = "<group>"; };
 		952F534448A025D9330BA658 /* readme.image.4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.4.png; sourceTree = "<group>"; };
-		95895818A9832B44BA8507EB /* V.RyanairView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView2.swift; sourceTree = "<group>"; };
 		9597886916DBF70B75B17A06 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		95C1E64CE7A0FB8851ABA010 /* SimpleNetworkAgentBExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentBExample.swift; sourceTree = "<group>"; };
+		961DBF5FB5AF431F74F5B0DC /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
 		97135D44DD2D9FAAE437D8D6 /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
+		9818DDA833ACAE8D2C9081DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99118C096B1078A8AA436182 /* readme.image.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.0.png; sourceTree = "<group>"; };
 		99CD8B4ACB97AAA8CD3E92D0 /* DevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0678081AB2CA02AB166C75 /* Recreating.HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.HomeScreen.swift; sourceTree = "<group>"; };
@@ -663,24 +669,22 @@
 		9F833AC88E286AE718F7926D /* AppWeatherDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0092ECE406080F9E83F0461 /* AppRyanairDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanairDomain.h; sourceTree = "<group>"; };
 		A09B4FFE152239DD97862409 /* APIRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanair.swift; sourceTree = "<group>"; };
-		A1348CC50E76D4982CA71D5D /* DevTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTools.swift; sourceTree = "<group>"; };
 		A1C4FE0D54F412C0709E33F1 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift; sourceTree = "<group>"; };
 		A1FD8CE1BFCCA5D8B52A2BC1 /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
-		A226B12D61D3AEB3D3C2F562 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		A34F4BF33DBC25A9F9BB1A08 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		A3759428451AB5C8EB3E593A /* Subscribers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subscribers+Extensions.swift"; sourceTree = "<group>"; };
 		A393EEB58783AF5B3D6AA621 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		A3B1C98534C09965470282DE /* DevScreen_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevScreen_View.swift; sourceTree = "<group>"; };
 		A3D3E310B7AEC388C319C543 /* VisualDocs_TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TabView.swift; sourceTree = "<group>"; };
 		A517861DB2AD74392AF1D257 /* DocumentsVisual.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DocumentsVisual.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A9FF852496CBBCC75C48A7 /* State_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_I.png; sourceTree = "<group>"; };
 		A664B45544D230A5F4455799 /* B.CurrentWeatherViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.CurrentWeatherViewBuilder.swift; sourceTree = "<group>"; };
-		A6FBF7AC49B37FFDC183B8A6 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		A9502B7ECAEF4AF074036775 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		AAA276BB503306AA54981962 /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
 		AAA7C4DAE6220690517E076C /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
 		AAE3471A14A96927FFE2F660 /* AppRyanair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC01E49AEB54E2F8AE432C0E /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_UserDefaultsWithPropertyWrapper.swift; sourceTree = "<group>"; };
 		ACF2F463F48095A1087018A5 /* VisualDocs_@State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@State.swift"; sourceTree = "<group>"; };
-		ADDB83FAB22CED4EF507DA1C /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
 		AF0576F803455E664AD9FAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B0E0A9A181678A300D6CE828 /* VisualDocs_TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TimerView.swift; sourceTree = "<group>"; };
 		B17489FD4902A191E848C573 /* RyanairMappers.ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.ListItemModel.swift; sourceTree = "<group>"; };
@@ -695,14 +699,12 @@
 		B7EF961777F89BFAC2505776 /* VisualDocs_NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_NavigationView.swift; sourceTree = "<group>"; };
 		B8E58DE91B235ED37BFAA2B4 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		B94FB6291970E6A6830B92D5 /* RyanairRequestDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Availability.swift; sourceTree = "<group>"; };
-		BAA457CBEA66ECB44C63BDC4 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		BB61DE8BE63DE516A3DA03E0 /* SimpleNetworkAgentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentProtocol.swift; sourceTree = "<group>"; };
-		BD26F5FEC9E0C6F8B257FDEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BEA0E6BCD9450B7E2EFB2FDF /* RepositorRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorRyanairProtocol.swift; sourceTree = "<group>"; };
+		BE9AEA1604479D5DD8662B2D /* Publishers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Publishers_1.png; sourceTree = "<group>"; };
+		BED715D8344B2531862EC197 /* Response<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response<T>.swift"; sourceTree = "<group>"; };
 		BFF52A58C8DDDA59C5C146DF /* V.CurrentWeatherRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherRowView.swift; sourceTree = "<group>"; };
 		C18DB623F1370C2C67568B26 /* SimpleNetworkAgentB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentB.swift; sourceTree = "<group>"; };
 		C43B5EB8BA785BD992A04ABA /* SimpleMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVM.swift; sourceTree = "<group>"; };
-		C4BCA86090292686EDEF1E83 /* VM.RyanairView2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView2ViewModel.swift; sourceTree = "<group>"; };
 		C53D12EF9FF4F00EEBEC11E1 /* AppRyanairWebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairWebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57992B4A6D6BD68832380C2 /* V.MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.MapViewRepresentable.swift; sourceTree = "<group>"; };
 		C6BF426C78331EDE88D4BE70 /* BaseDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDomain.h; sourceTree = "<group>"; };
@@ -710,16 +712,15 @@
 		C7B4C4444D076A9569A0ECBC /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C9ACA0820776505AA5F25627 /* AppRyanair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanair.h; sourceTree = "<group>"; };
 		CAAAE63CE1C794D3D4B2FB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		CAB9888290C2A06B9A97C06A /* GenericStorableKeyValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorableKeyValueModel.swift; sourceTree = "<group>"; };
 		CAC0F75B75457282FB4A2712 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
 		CBB093C839136CB04360A277 /* AppRyanairCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanairCore.h; sourceTree = "<group>"; };
-		CDF3E0EBE0A46C4559112AF7 /* MVVM_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVVM_I.png; sourceTree = "<group>"; };
+		CCC3D8D6F4B16B600E11402A /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		CE748A682563E081BE9DF3D4 /* SendEMailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEMailViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		CEEC704D763B3C7A595E9FBF /* V.DailyWeatherRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.DailyWeatherRowView.swift; sourceTree = "<group>"; };
+		CF414F1644C5D16EAED64E71 /* CacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
 		CF9C88B0CCBB17F86F50990C /* VisualDocs_Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Shadows.swift; sourceTree = "<group>"; };
 		D06E319C2D9E6EE29073F1F2 /* VisualDocs_LayoutInScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_LayoutInScrollView.swift; sourceTree = "<group>"; };
-		D3D7AA71F67EB95096C2E144 /* CachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicy.swift; sourceTree = "<group>"; };
-		D5BB9FBB538FD89FAD262DF1 /* Designables_Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Designables_Preview.png; sourceTree = "<group>"; };
+		D516123A9B1D038EECB64F5E /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -732,22 +733,19 @@
 		DD5983CD3C7D47902000DEDF /* PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
 		DFBCDAF8F624655D681E0741 /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		E00610EDE156A60C7F921C87 /* VisualDocs_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Image.swift; sourceTree = "<group>"; };
+		E04193C0E8DFCAD9C0C50467 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		E0D9BDAF70FC475E89F85334 /* Graph.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Graph.json; sourceTree = "<group>"; };
-		E15E871586E7E27FF12309B0 /* State_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_II.png; sourceTree = "<group>"; };
+		E299D847CC0AE405D19FF5A7 /* GenericStorableKeyValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorableKeyValueModel.swift; sourceTree = "<group>"; };
 		E2D32D28B66E0C47BF2A35AE /* VisualDocs_onReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onReceive.swift; sourceTree = "<group>"; };
-		E8985293F8D6F3F5254A348B /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
-		E942D4ED81870B56ECC0CBF2 /* APIWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeatherProtocol.swift; sourceTree = "<group>"; };
-		E97878B4ACABE10C707D8A5D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		EB8D8D5B9AC4F7A8777F371F /* B.RyanairView2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView2Builder.swift; sourceTree = "<group>"; };
+		EBD1DA737D63E2C324FB6ACD /* StateObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StateObject_I.png; sourceTree = "<group>"; };
 		EC5EE75C43DFA9FD0885A9B8 /* VisualDocs_onEditingChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onEditingChanged.swift; sourceTree = "<group>"; };
+		ED070521B14500FDD3D8D938 /* State_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_II.png; sourceTree = "<group>"; };
 		ED33B95737D6042FD0225FCD /* UtilsDesignables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsDesignables.h; sourceTree = "<group>"; };
 		EE1B98ED7BE671F241B28ADA /* TO_DO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TO_DO.swift; sourceTree = "<group>"; };
 		EEA8BA314105EE778D3A0B42 /* WeatherRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.swift; sourceTree = "<group>"; };
 		EEEE426F17613140C5164C43 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		F0DCCF9AB25CAE776D97080C /* RepositoryWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeatherProtocol.swift; sourceTree = "<group>"; };
 		F28DD9EDF46F223087DFFAB2 /* readme.image.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.1.png; sourceTree = "<group>"; };
 		F4387B5AB3A663F43C5FCB89 /* DesignablesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignablesFactory.swift; sourceTree = "<group>"; };
-		F43A18114563AFE07376770D /* PointFreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFreeFunctions.swift; sourceTree = "<group>"; };
 		F492B00701E0FB853EBBF7DA /* AppWeatherWebAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherWebAPI.h; sourceTree = "<group>"; };
 		F5037BB498ECC16D7DF38DAE /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
 		F68AFF82888D5D8932BC2142 /* VisualDocs_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onDelete.swift; sourceTree = "<group>"; };
@@ -760,7 +758,6 @@
 		FD9A6004D7F31ADECF70ADF4 /* RyanairRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.swift; sourceTree = "<group>"; };
 		FDD1DCE16F76D0EE2FA5DDDF /* RyanairRequestDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Stations.swift; sourceTree = "<group>"; };
 		FDDD91DCBA8848FE6F8FB333 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		FE165FC5EA57A4F04D13234A /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		FEFC41F3306740283E3413EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -806,12 +803,9 @@
 		08EC7345C4681F2A99DAC67F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E8985293F8D6F3F5254A348B /* CancelBag.swift */,
-				3666B54E21B71859F4B95DB9 /* DateFormatters.swift */,
 				CAAAE63CE1C794D3D4B2FB0B /* Info.plist */,
-				A226B12D61D3AEB3D3C2F562 /* NetworkUtils.swift */,
-				F43A18114563AFE07376770D /* PointFreeFunctions.swift */,
 				9597886916DBF70B75B17A06 /* Utils.h */,
+				2D50F014F948D2EF1626771E /* Code */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -839,11 +833,8 @@
 			isa = PBXGroup;
 			children = (
 				220B7E236BAA16E513A7E002 /* B.RyanairView1Builder.swift */,
-				EB8D8D5B9AC4F7A8777F371F /* B.RyanairView2Builder.swift */,
 				B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */,
-				95895818A9832B44BA8507EB /* V.RyanairView2.swift */,
 				85D232B6F5748ACBD851F8E4 /* VM.RyanairView1ViewModel.swift */,
-				C4BCA86090292686EDEF1E83 /* VM.RyanairView2ViewModel.swift */,
 			);
 			path = Scheme1;
 			sourceTree = "<group>";
@@ -896,7 +887,6 @@
 			children = (
 				789AEE850DAEA200BE10E930 /* Designables_Preview.swift */,
 				AF0576F803455E664AD9FAAD /* Info.plist */,
-				3AF5D837AD0002AD27914843 /* NavigationStack.swift */,
 				ED33B95737D6042FD0225FCD /* UtilsDesignables.h */,
 				9748C02D6EC59D1A09CEABE8 /* Code */,
 			);
@@ -920,6 +910,17 @@
 				365D55A19F1E6F9E588392A7 /* RyanairModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2D50F014F948D2EF1626771E /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				6A0701C6CFCCA449B7049ECE /* CancelBag.swift */,
+				39A7DE1333B603B4C1613A56 /* DateFormatters.swift */,
+				485366910AC6D1AD05F3BCD5 /* NetworkUtils.swift */,
+				2F441540CDD44B916CB37753 /* PointFreeFunctions.swift */,
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 		30B3B552025D12694CFC06BA /* SimpleNetworkAgents.Testing */ = {
@@ -976,29 +977,28 @@
 				4B16F34813BD45939D8CAACC /* readme.image.2.png */,
 				D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */,
 				952F534448A025D9330BA658 /* readme.image.4.png */,
+				8077909224D14C2898860DB7 /* wiki */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		3C73B54C14858673798BDA2C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D516123A9B1D038EECB64F5E /* APIRyanairProtocol.swift */,
+				18081A0AE1324D6C848053E5 /* RepositorRyanairProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		3DBAC92EF43034F7ACAD5223 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
-				19B4C8822B39A96C142194E7 /* Combine_I.png */,
-				1928A641F6EA18DC8537875C /* Combine_II.png */,
-				D5BB9FBB538FD89FAD262DF1 /* Designables_Preview.png */,
 				E0D9BDAF70FC475E89F85334 /* Graph.json */,
 				138F2AEBF74C579055689533 /* Graph.simplified.viz */,
 				4AC5DE6AC22E447384CA0CD8 /* Graph.viz */,
-				CDF3E0EBE0A46C4559112AF7 /* MVVM_I.png */,
 				6A7F163C9E85B2CFACCD8C5D /* MVVM.README.md */,
 				0C33EF15820822B333C09DD2 /* NotesAndReferences.md */,
-				5D8AA0307C665B2C7CEB781A /* ObservableObject_I.png */,
-				75E5661B55A7D21DC20FEA73 /* Operators_1.png */,
-				3D38F73BE561FCE865194FB8 /* Publishers_1.png */,
-				7DCE8B9B72F4FB11CC22E569 /* State_I.png */,
-				E15E871586E7E27FF12309B0 /* State_II.png */,
-				77E6DAC6F84746FA1B3D938A /* StateObject_I.png */,
-				2674DA8931544BCB652A5C67 /* Subscribers_1.png */,
 				5D48E1527EF67311931182D9 /* articles */,
 				181111B49B5ED8F6445F845B /* Bugs */,
 				3C476F2CED7E5A495BC99BF8 /* images */,
@@ -1015,11 +1015,28 @@
 			path = PublicCode;
 			sourceTree = "<group>";
 		};
+		488157A726C0FC3DCD59E996 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9818DDA833ACAE8D2C9081DB /* Assets.xcassets */,
+				A956A64686C90154E9CC42D0 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4A90F55CBE8F09450DC57763 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4D7237FA817059D6F2237419 /* BaseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				961DBF5FB5AF431F74F5B0DC /* ListItemModel.swift */,
+			);
+			path = BaseObjects;
 			sourceTree = "<group>";
 		};
 		4FB7AAD46FE538F34010AD04 /* Entities.RequestsDto */ = {
@@ -1061,6 +1078,7 @@
 				425E886BADCBCA866DF3F3AC /* AppWeatherCore.h */,
 				467065DA1E56481371C7266D /* Info.plist */,
 				A86D2C8DE6BD488B1F26E198 /* Fetchers|Repositories */,
+				964DA41309168A3B90DE5B0A /* Mappers */,
 			);
 			path = AppWeatherCore;
 			sourceTree = "<group>";
@@ -1068,6 +1086,9 @@
 		5A4F1EFD4677081281073275 /* Scheme2 */ = {
 			isa = PBXGroup;
 			children = (
+				61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */,
+				4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */,
+				735BD84DFD6AB35DB926EA1C /* VM.RyanairView2ViewModel.swift */,
 			);
 			path = Scheme2;
 			sourceTree = "<group>";
@@ -1095,13 +1116,12 @@
 		5DC0EC91E201044DCB3A43F4 /* AppWeatherDomain */ = {
 			isa = PBXGroup;
 			children = (
-				E942D4ED81870B56ECC0CBF2 /* APIWeatherProtocol.swift */,
 				59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */,
 				8F86347E7FA51E88CD989616 /* Info.plist */,
-				F0DCCF9AB25CAE776D97080C /* RepositoryWeatherProtocol.swift */,
 				8DB88EEFB019B05F40FEFB51 /* Enteties.ResponseDto */,
 				4FB7AAD46FE538F34010AD04 /* Entities.RequestsDto */,
 				4A90F55CBE8F09450DC57763 /* Models */,
+				74F92B740E9E651E17A0EEAD /* Protocols */,
 			);
 			path = AppWeatherDomain;
 			sourceTree = "<group>";
@@ -1115,13 +1135,13 @@
 			path = Auxiliar.CurrentWeatherRow;
 			sourceTree = "<group>";
 		};
-		7193D313BC6882A1528F1B34 /* Supporting Files */ = {
+		74F92B740E9E651E17A0EEAD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				BD26F5FEC9E0C6F8B257FDEB /* Assets.xcassets */,
-				3F3782BECB14DFCC9B87ED58 /* LaunchScreen.storyboard */,
+				8B8CED726603B355821BE044 /* APIWeatherProtocol.swift */,
+				5985AB94FEB80BF0E4246790 /* RepositoryWeatherProtocol.swift */,
 			);
-			path = "Supporting Files";
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		77812E569DBA6A6B53AEFAAA /* AppRyanairWebAPI */ = {
@@ -1187,15 +1207,45 @@
 			path = VisualDocs;
 			sourceTree = "<group>";
 		};
+		8077909224D14C2898860DB7 /* wiki */ = {
+			isa = PBXGroup;
+			children = (
+				303436CECB3B068F18E5D6D4 /* Combine_I.png */,
+				7B3D97BEA0B2EB8DEE09799F /* Combine_II.png */,
+				3CDCC0B249042028EF682A4A /* MVVM_I.png */,
+				31B66A15F91E9A1FF1F0121C /* ObservableObject_I.png */,
+				1A770CA6C776F702CEDB0A87 /* Operators_1.png */,
+				BE9AEA1604479D5DD8662B2D /* Publishers_1.png */,
+				A5A9FF852496CBBCC75C48A7 /* State_I.png */,
+				ED070521B14500FDD3D8D938 /* State_II.png */,
+				EBD1DA737D63E2C324FB6ACD /* StateObject_I.png */,
+				03A22E4B897581CD713314A2 /* Subscribers_1.png */,
+			);
+			path = wiki;
+			sourceTree = "<group>";
+		};
 		808104ABEF20ACBC51796019 /* DevTools */ = {
 			isa = PBXGroup;
 			children = (
 				20FB0DB882EACD3DCC78F3B1 /* DevTools.h */,
-				A1348CC50E76D4982CA71D5D /* DevTools.swift */,
 				3823C6A93472AB42F0BA1F9C /* Info.plist */,
 				E41CA7F934F7CAB7DE3C0BB8 /* Code */,
 			);
 			path = DevTools;
+			sourceTree = "<group>";
+		};
+		8409C09CA5F809FB1FEFB4ED /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				59CE3253DF3DB49296298C7D /* APICacheManager.swift */,
+				A34F4BF33DBC25A9F9BB1A08 /* APIKeys.swift */,
+				CF414F1644C5D16EAED64E71 /* CacheUtils.swift */,
+				E299D847CC0AE405D19FF5A7 /* GenericStorableKeyValueModel.swift */,
+				2B2ECCC7ACD08C828E1EDB15 /* HotCacheManager.swift */,
+				CCC3D8D6F4B16B600E11402A /* UserDefaults+Extensions.swift */,
+				E04193C0E8DFCAD9C0C50467 /* UserDefaultsPropertyWrapper.swift */,
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 		8DB88EEFB019B05F40FEFB51 /* Enteties.ResponseDto */ = {
@@ -1208,6 +1258,14 @@
 			path = Enteties.ResponseDto;
 			sourceTree = "<group>";
 		};
+		964DA41309168A3B90DE5B0A /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				48CAED30B0C8D189CF816854 /* WeatherMappers.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
 		9748C02D6EC59D1A09CEABE8 /* Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -1215,6 +1273,7 @@
 				CAC0F75B75457282FB4A2712 /* ConnectivityView.swift */,
 				AAA276BB503306AA54981962 /* Designables_PassCode.swift */,
 				F4387B5AB3A663F43C5FCB89 /* DesignablesFactory.swift */,
+				51B3DBF5C63C982B765FFEA4 /* NavigationStack.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1231,6 +1290,15 @@
 			path = S2.CurrentWeather;
 			sourceTree = "<group>";
 		};
+		A5908C434E609DD380BD193D /* Enuns */ = {
+			isa = PBXGroup;
+			children = (
+				84D19BB993642FC3274E0012 /* E.APIError.swift */,
+				871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */,
+			);
+			path = Enuns;
+			sourceTree = "<group>";
+		};
 		A86D2C8DE6BD488B1F26E198 /* Fetchers|Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -1244,13 +1312,12 @@
 		AD8AF1B9EFFACCF1FBF99700 /* AppRyanairDomain */ = {
 			isa = PBXGroup;
 			children = (
-				4C57D16F8C946D06ACD61614 /* APIRyanairProtocol.swift */,
 				A0092ECE406080F9E83F0461 /* AppRyanairDomain.h */,
 				0CF124C35989E2A72EE5B03C /* Info.plist */,
-				BEA0E6BCD9450B7E2EFB2FDF /* RepositorRyanairProtocol.swift */,
 				D5D88E655504E82F177187B8 /* Enteties.ResponseDto */,
 				5BB4D8C43D70D055690781B5 /* Entities.RequestsDto */,
 				2BD8777780837F1585DE927E /* Models */,
+				3C73B54C14858673798BDA2C /* Protocols */,
 			);
 			path = AppRyanairDomain;
 			sourceTree = "<group>";
@@ -1272,6 +1339,14 @@
 				0C4153BA54FE324CEFDA7499 /* Mappers */,
 			);
 			path = AppRyanairCore;
+			sourceTree = "<group>";
+		};
+		BAD91B91B5397B53BFF85AA6 /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				BED715D8344B2531862EC197 /* Response<T>.swift */,
+			);
+			path = Generics;
 			sourceTree = "<group>";
 		};
 		BFC54AAEE92DBB2B89C668A9 /* Code */ = {
@@ -1303,8 +1378,6 @@
 		C1A17AC9A0B1DC6A7BB09F18 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				03D67EB568941F5DAACCB712 /* Assets.xcassets */,
-				7FF7A6234B3A8EC3AA411E16 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -1350,17 +1423,11 @@
 		D426BEE2405BD2C219B37259 /* UtilsStorage */ = {
 			isa = PBXGroup;
 			children = (
-				7AC2341B3D52EE6AF79C4BA9 /* APICacheManager.swift */,
-				BAA457CBEA66ECB44C63BDC4 /* APIKeys.swift */,
-				46A76AE20783306F2161A89F /* CacheUtils.swift */,
-				CAB9888290C2A06B9A97C06A /* GenericStorableKeyValueModel.swift */,
-				60C913CC2B63BA362866B26F /* HotCacheManager.swift */,
 				FEFC41F3306740283E3413EB /* Info.plist */,
 				FD3857012AE71FC85B8D561E /* Keys.plist */,
 				56DA020DA930FD99560F9077 /* typealias.swift */,
-				FE165FC5EA57A4F04D13234A /* UserDefaults+Extensions.swift */,
-				84B719BA731E527F7B7B9F33 /* UserDefaultsPropertyWrapper.swift */,
 				4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */,
+				8409C09CA5F809FB1FEFB4ED /* Code */,
 			);
 			path = UtilsStorage;
 			sourceTree = "<group>";
@@ -1409,6 +1476,7 @@
 				EE1B98ED7BE671F241B28ADA /* TO_DO.swift */,
 				06C36CF52FF3AE980140601C /* typelias.swift */,
 				E4D40BA47D468C68BF5A995E /* Schemes */,
+				488157A726C0FC3DCD59E996 /* Supporting Files */,
 				C1A17AC9A0B1DC6A7BB09F18 /* SupportingFiles */,
 			);
 			path = RJPS_SwiftUI;
@@ -1417,6 +1485,7 @@
 		E41CA7F934F7CAB7DE3C0BB8 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				5A82B964635EB2B85B693C81 /* DevTools.swift */,
 				1CD0B0004D79F094E69BD215 /* DevTools+FeatureFlag.swift */,
 				33295B4DC3BB89FE216C3978 /* DevTools+Log.swift */,
 				6E950B61765C9CCCA12A2124 /* OSLog+Extension.swift */,
@@ -1442,7 +1511,6 @@
 				502CA0E81503990D8AB67BCF /* Info.plist */,
 				B8E58DE91B235ED37BFAA2B4 /* typelias.swift */,
 				353D4E7EB5C806FBC945E018 /* Schemes */,
-				7193D313BC6882A1528F1B34 /* Supporting Files */,
 			);
 			path = AppWeather;
 			sourceTree = "<group>";
@@ -1450,15 +1518,13 @@
 		F5A4CC66FD073B19BB5A1FC7 /* BaseDomain */ = {
 			isa = PBXGroup;
 			children = (
-				E97878B4ACABE10C707D8A5D /* APIError.swift */,
 				C6BF426C78331EDE88D4BE70 /* BaseDomain.h */,
-				A6FBF7AC49B37FFDC183B8A6 /* BuilderProtocol.swift */,
-				D3D7AA71F67EB95096C2E144 /* CachePolicy.swift */,
-				09E5030C2E06302D73BB87DE /* DtoProtocol.swift */,
 				76028CF2A6E6120F9CE5BEF6 /* Info.plist */,
-				ADDB83FAB22CED4EF507DA1C /* ListItemModel.swift */,
-				47ED1EB36DE5D1A173D1AD70 /* Response<T>.swift */,
 				FDDD91DCBA8848FE6F8FB333 /* typelias.swift */,
+				4D7237FA817059D6F2237419 /* BaseObjects */,
+				A5908C434E609DD380BD193D /* Enuns */,
+				BAD91B91B5397B53BFF85AA6 /* Generics */,
+				F6AFC53A26C5BC44C1A4AFBB /* Protocols */,
 			);
 			path = BaseDomain;
 			sourceTree = "<group>";
@@ -1469,6 +1535,15 @@
 				C57992B4A6D6BD68832380C2 /* V.MapViewRepresentable.swift */,
 			);
 			path = Auxiliar.MapView;
+			sourceTree = "<group>";
+		};
+		F6AFC53A26C5BC44C1A4AFBB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7C50218750F0988469529868 /* BuilderProtocol.swift */,
+				8E04B23E92830D9865940927 /* DtoProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F8B0BBC4BFF466E2B7CCFCFB /* Sources */ = {
@@ -1937,7 +2012,6 @@
 			buildPhases = (
 				98F83A9A361A343E42F4BDBF /* Headers */,
 				56AF732CAF58C875C5E5C23A /* Sources */,
-				9CF670845E75493A0445A59B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -2009,17 +2083,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A23F085D0E0E2F989ECC8948 /* Assets.xcassets in Resources */,
-				3B870EE4504C5092DFEAABE9 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CF670845E75493A0445A59B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F606E373D98494E5530DC862 /* Assets.xcassets in Resources */,
-				1E9FC313CC8B2025A335B4AA /* LaunchScreen.storyboard in Resources */,
+				04627141BEFD0833FF2B787F /* Assets.xcassets in Resources */,
+				6699483372A7F65142423777 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2032,7 +2097,7 @@
 			files = (
 				63E8A1B6E3830CE6B43B80A6 /* DevTools+FeatureFlag.swift in Sources */,
 				5F6320B52E9FEEA011F32382 /* DevTools+Log.swift in Sources */,
-				1FB0242E83E6958C991BAABC /* DevTools.swift in Sources */,
+				CBEAE46FEBA82875AF86E2E5 /* DevTools.swift in Sources */,
 				BBF26F00127EB3ED98A91081 /* OSLog+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2041,10 +2106,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B9F172E9AF90C538DCA2769 /* CancelBag.swift in Sources */,
-				F6CD1A3BCE7E4264F4B53568 /* DateFormatters.swift in Sources */,
-				77CC6BAF9D65DC47FFF358A2 /* NetworkUtils.swift in Sources */,
-				55C4A39D0E43472FAB114C1A /* PointFreeFunctions.swift in Sources */,
+				265279CF4595C836948CFBD7 /* CancelBag.swift in Sources */,
+				0D5B100F8B2A3508D3EEC612 /* DateFormatters.swift in Sources */,
+				C20A7CAF097D21D5B1016B4D /* NetworkUtils.swift in Sources */,
+				7C718A9987C9707FD89C605D /* PointFreeFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2052,8 +2117,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E774F276496C85075C32F0E7 /* APIRyanairProtocol.swift in Sources */,
-				91B8E9254D8077B75885C914 /* RepositorRyanairProtocol.swift in Sources */,
+				2675FBCA900C96C6C5EB941C /* APIRyanairProtocol.swift in Sources */,
+				2DB8D4A5F3B3C3B754421AD8 /* RepositorRyanairProtocol.swift in Sources */,
 				9D8AB4894F5B9F109FD46CB5 /* RyanairModel.AirPort.swift in Sources */,
 				1841A9931D651AF816908518 /* RyanairModel.swift in Sources */,
 				6666ECCFB99DCFB535515F7C /* RyanairRequestDto.Availability.swift in Sources */,
@@ -2074,7 +2139,7 @@
 				233EDBB14D92663C3324B6D0 /* DesignablesFactory.swift in Sources */,
 				CF72803BFC22FA03E77C6453 /* Designables_PassCode.swift in Sources */,
 				8B716FB0592992FAE9C0BFA2 /* Designables_Preview.swift in Sources */,
-				97BE07DF8F8818066D4F9E30 /* NavigationStack.swift in Sources */,
+				D5569458AAAF060EE6FDB19F /* NavigationStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2108,8 +2173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B080695268B8DA25A1D1F68C /* APIWeatherProtocol.swift in Sources */,
-				DD939BB762EF62A1CB9113B4 /* RepositoryWeatherProtocol.swift in Sources */,
+				E627AA0EF58588AEFFFDDD2E /* APIWeatherProtocol.swift in Sources */,
+				46CD3B86D8DD69DAC5A259FB /* RepositoryWeatherProtocol.swift in Sources */,
 				CBAEAE2B98960C47B8764B6A /* WeatherRequestDto.Forecast.swift in Sources */,
 				A347C5C253B2D790BA702BC1 /* WeatherRequestDto.Wheater.swift in Sources */,
 				645805E5BF2D1C862E6E18A6 /* WeatherRequestDto.swift in Sources */,
@@ -2139,12 +2204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				337DC6456954C258ECB0D7FB /* APIError.swift in Sources */,
-				AAC99CEF7864786A2942B889 /* BuilderProtocol.swift in Sources */,
-				4FCE46F5C9451888556D3FB2 /* CachePolicy.swift in Sources */,
-				CB429C3114F519FA1731D842 /* DtoProtocol.swift in Sources */,
-				5535E9EFB238E4FFB2CC6930 /* ListItemModel.swift in Sources */,
-				AF25399A2933ED57A3B30A94 /* Response<T>.swift in Sources */,
+				ABCE65918E7078BADD8B57A1 /* BuilderProtocol.swift in Sources */,
+				0DEF8B15F6357A79D52E1346 /* DtoProtocol.swift in Sources */,
+				5F0A8994E7FA9248B6E0B7F1 /* E.APIError.swift in Sources */,
+				66E6F55021348BCBCC9FB8DF /* E.CachePolicy.swift in Sources */,
+				FF35B77A76F93E27CF329B10 /* ListItemModel.swift in Sources */,
+				A7031918D6FE5D86D12F2CE0 /* Response<T>.swift in Sources */,
 				D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2194,6 +2259,7 @@
 				42BE51C3FE17E1FF7F265B6C /* FetcherWeather.swift in Sources */,
 				7CCD3B2925CFEA886DE1F05D /* FetcherWeatherMock.swift in Sources */,
 				981618B849D8060D1C79CD65 /* RepositoryWeather.swift in Sources */,
+				5346B17AC7A5BCD0E7CE8086 /* WeatherMappers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2285,13 +2351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEEB490640D2952390ED816C /* APICacheManager.swift in Sources */,
-				D30F1F8ED8B8D271D7523458 /* APIKeys.swift in Sources */,
-				AA0DA59EE20B381044605CC2 /* CacheUtils.swift in Sources */,
-				213FFDCEB6998719723C2326 /* GenericStorableKeyValueModel.swift in Sources */,
-				96B7B9E20DDF05DF12CE4B7E /* HotCacheManager.swift in Sources */,
-				55D5913F9190E0BB361EAB35 /* UserDefaults+Extensions.swift in Sources */,
-				CDAA35DC56D8271FC55D0B84 /* UserDefaultsPropertyWrapper.swift in Sources */,
+				B7696F1A5610D242447252B8 /* APICacheManager.swift in Sources */,
+				D1A0A9F449700820539EDA22 /* APIKeys.swift in Sources */,
+				7F9B081051B01B8987F9FC46 /* CacheUtils.swift in Sources */,
+				A590200DD606C46AA6C93A95 /* GenericStorableKeyValueModel.swift in Sources */,
+				144E0BF182B7C9E515233BA7 /* HotCacheManager.swift in Sources */,
+				3123708008B852D2063FB22F /* UserDefaults+Extensions.swift in Sources */,
+				5155AEE0A200E84217C26920 /* UserDefaultsPropertyWrapper.swift in Sources */,
 				3B81A17D7CD05B0ABEE4F839 /* typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2301,11 +2367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33FEC4F9A08DD2640CA4EDF /* B.RyanairView1Builder.swift in Sources */,
-				71185F1F5A712FCDF0473E05 /* B.RyanairView2Builder.swift in Sources */,
+				9DF6F8ADD9B1E3435C94027E /* B.RyanairView2Builder.swift in Sources */,
 				69D1B0013EBCBCBBA88F3722 /* V.RyanairView1.swift in Sources */,
-				FDB9134EA69016500FCFA72F /* V.RyanairView2.swift in Sources */,
+				39E2AB73E2002EA8874BAEF4 /* V.RyanairView2.swift in Sources */,
 				528CC5348DE53455443E791C /* VM.RyanairView1ViewModel.swift in Sources */,
-				54350ACD6708CE268111381B /* VM.RyanairView2ViewModel.swift in Sources */,
+				430AA7F05DD28D2A9B0A0A72 /* VM.RyanairView2ViewModel.swift in Sources */,
 				8155D163545B9692E8A89828 /* typelias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2529,18 +2595,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3F3782BECB14DFCC9B87ED58 /* LaunchScreen.storyboard */ = {
+		A956A64686C90154E9CC42D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3E3DF5621ECC781B78E3A50D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		7FF7A6234B3A8EC3AA411E16 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B050C01F4E0EE2F1B452AEB /* Base */,
+				7B85DE7A055F6E8B3D9B98B2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

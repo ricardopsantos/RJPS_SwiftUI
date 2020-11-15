@@ -124,9 +124,10 @@ type_name:
         - MD
         - M
         - Id
+        - T
 
 identifier_name:
-    max_length: 60
+    max_length: 80
     excluded:
         - iPhone
         - id

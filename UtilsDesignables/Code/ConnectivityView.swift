@@ -19,7 +19,7 @@ public struct ConnectivityView: View {
             .font(.caption)
             .foregroundColor(Color.red)
             .multilineTextAlignment(.center)
-            .onAppear() {
+            .onAppear {
                 ConnectivityUtils.shared.monitor.pathUpdateHandler = { path in
                     DispatchQueue.main.async {
                         if path.status == .satisfied {

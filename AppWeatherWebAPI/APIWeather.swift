@@ -13,7 +13,7 @@ import BaseDomain
 import AppWeatherDomain
 
 public class APIWeather {
-    public init() { }
+    public init() { }
     public struct Constants {
         public static let agent = SimpleNetworkAgentB()
         public static let dumpResponse = false

@@ -28,4 +28,3 @@ public struct WeeklyWeatherBuilder: BuilderProtocol {
         return WeeklyWeatherView(viewModel: viewModel)
     }
 }
-

@@ -42,7 +42,7 @@ struct VisualDocs_Animations_A: View {
                 .rotationEffect(.degrees(-90))
                 .rotation3DEffect(.degrees(180), axis: (x: 0, y: 0, z: 0))
                 .animation(Animation.easeInOut.speed(0.25))
-                .onAppear() {
+                .onAppear {
                     self.progress = 1
                 }
         }
@@ -58,7 +58,6 @@ struct VisualDocs_Animations_A_PreviewProvider: PreviewProvider {
 //
 // B: -------------------------------------------------------
 //
-
 
 struct AnimatableCircle_B: Shape {
     var progress: CGFloat
@@ -101,7 +100,7 @@ struct VisualDocs_Animations_B: View {
                 .frame(width: 90, height: 90)
                 .foregroundColor(Color(.systemIndigo))
                 .animation(Animation.easeInOut.speed(0.25))
-                .onAppear() {
+                .onAppear {
                     self.progress = 1
                 }
         }
@@ -113,7 +112,6 @@ struct VisualDocs_Animations_B_PreviewProvider: PreviewProvider {
         return VisualDocs_Animations_B()
     }
 }
-
 
 struct AnimatableCircle_C: Shape {
     var progress: CGFloat
@@ -177,7 +175,7 @@ struct VisualDocs_Animations_C: View {
                 .frame(width: 90, height: 90)
                 .modifier(VisualDocs_Animations_C_AnimatableModifier(progress: progress))
                 .animation(Animation.linear.speed(0.25))
-                .onAppear() {
+                .onAppear {
                     self.progress = 1
                 }
         }

@@ -8,6 +8,8 @@ import Foundation
 import SwiftUI
 import Combine
 
+//swiftlint:disable all
+
 struct Messages_III: View {
     var body: some View {
         VStack {

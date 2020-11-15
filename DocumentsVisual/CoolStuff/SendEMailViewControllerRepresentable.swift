@@ -9,6 +9,8 @@ import SwiftUI
 import Combine
 import MessageUI
 
+//swiftlint:disable all
+
 //
 // Naming convention : XXXControllerRepresentable
 //

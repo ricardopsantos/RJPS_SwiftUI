@@ -8,6 +8,8 @@ import SwiftUI
 import UIKit
 import Combine
 
+//swiftlint:disable all
+
 struct Tinder: View {
     @State var size: CGSize = .zero
     var body: some View {
@@ -31,10 +33,25 @@ struct Tinder: View {
 
                 //Lets have the profile images on top of each other using ZStack
                 ZStack {
-                    Image(systemName: "person.fill").resizable().frame(height: 400).cornerRadius(12).padding(.vertical, 15).padding(.horizontal, 8).shadow(radius: 4)
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .frame(height: 400)
+                        .cornerRadius(12)
+                        .padding(.vertical, 15)
+                        .padding(.horizontal, 8)
+                        .shadow(radius: 4)
 
                     //We want to be able to drag the picture on top. For this tutorial, let's learn how to add gestures to your components
-                    Image(systemName: "person.fill").resizable().aspectRatio(contentMode: .fill).frame(height: 400).cornerRadius(12).padding(.vertical, 15).padding(.horizontal, 8).shadow(radius: 4).gesture(DragGesture().onChanged({ (value) in
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 400)
+                        .cornerRadius(12)
+                        .padding(.vertical, 15)
+                        .padding(.horizontal, 8)
+                        .shadow(radius: 4)
+                        .gesture(DragGesture()
+                                    .onChanged({ (value) in
                         self.size = value.translation
                     }).onEnded({ (value) in
                         _ = value

@@ -5,8 +5,6 @@
 
 import Foundation
 
-#warning("rename to debug tools")
-
 public extension DevTools {
     enum FeatureFlag: String, CaseIterable {
 
