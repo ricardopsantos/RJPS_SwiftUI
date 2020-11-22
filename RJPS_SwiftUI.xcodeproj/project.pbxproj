@@ -131,6 +131,7 @@
 		91E5E01AA0E8D2A29B9DA61E /* FetcherRyanairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68688B397AA2018723E867BB /* FetcherRyanairMock.swift */; };
 		93366AE8A368FC80456B39F3 /* VisualDocs_Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9C88B0CCBB17F86F50990C /* VisualDocs_Shadows.swift */; };
 		93409F6050185749C103C5D9 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD8CE1BFCCA5D8B52A2BC1 /* Locale+Extensions.swift */; };
+		934E8B830CB5C418BD4B5848 /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = E7F97941A5B3C2A856934172 /* RJSLibUFBase */; };
 		939FF98BF882E7D57C245AD3 /* VisualDocs_onEditingChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5EE75C43DFA9FD0885A9B8 /* VisualDocs_onEditingChanged.swift */; };
 		93D94B3068536FC253855DA2 /* VisualDocs_ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1659F5196E8478221C51668C /* VisualDocs_ForEach.swift */; };
 		964083044B90BFF57B4F0C2B /* Recreating.AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738DAF23D1EB220F779F873 /* Recreating.AppStore.swift */; };
@@ -766,6 +767,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934E8B830CB5C418BD4B5848 /* RJSLibUFBase in Frameworks */,
 				49EF4DCE7A592D5454184683 /* AppRyanair.framework in Frameworks */,
 				D53BABA519E4E42F50992EB7 /* AppWeather.framework in Frameworks */,
 				2F925C6244DC63A4E9955C43 /* DocumentsVisual.framework in Frameworks */,
@@ -1765,6 +1767,9 @@
 				2C0F65E13FC18B42B91B58DB /* PBXTargetDependency */,
 			);
 			name = RJPS_SwiftUI;
+			packageProductDependencies = (
+				E7F97941A5B3C2A856934172 /* RJSLibUFBase */,
+			);
 			productName = RJPS_SwiftUI;
 			productReference = D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -2045,6 +2050,9 @@
 				en,
 			);
 			mainGroup = DA3D2F2AF59C76FA620B2031;
+			packageReferences = (
+				015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -5764,6 +5772,25 @@
 			defaultConfigurationName = Adhoc;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ricardopsantos/RJSLibUF";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7F97941A5B3C2A856934172 /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 }

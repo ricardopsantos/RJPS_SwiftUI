@@ -51,6 +51,14 @@ targetTemplates:
     #settings:
     #  FRAMEWORK_SEARCH_PATHS: $(inherited) $(SRCROOT)/Carthage/Build/iOS
  
+####################### SPM #######################
+####################### SPM #######################  
+####################### SPM #######################
+
+packages:
+  RJSLibUF:
+    url: https://github.com/ricardopsantos/RJSLibUF
+    from: 1.0.0
 
 ####################### TARGETS #######################
 ####################### TARGETS #######################  
@@ -67,6 +75,8 @@ targets:
     sources:
        - path: ../RJPS_SwiftUI
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
       #- target: AppHourlyChallenge
       #  link: true
       - target: AppRyanair

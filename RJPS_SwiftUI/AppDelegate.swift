@@ -5,6 +5,7 @@
 
 import UIKit
 import SwiftUI
+import RJSLibUFBase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        print(RJS_Constants.Tags.progressView)
         let printer: (String) -> Void = { print($0) }
         printer("teste")
 
