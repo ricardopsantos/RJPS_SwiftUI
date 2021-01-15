@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -184,6 +184,11 @@
 		D53BABA519E4E42F50992EB7 /* AppWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00142DDB2ECACE3920DAE95D /* AppWeather.framework */; };
 		D5569458AAAF060EE6FDB19F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B3DBF5C63C982B765FFEA4 /* NavigationStack.swift */; };
 		D7345FB422F744D1CBA68BFA /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603968072588D8621D54E1E /* JSONDecoder+Extensions.swift */; };
+		D77751FC25B21D5B0021ADFF /* RJSLibUFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = D77751FB25B21D5B0021ADFF /* RJSLibUFNetworking */; };
+		D77751FE25B21D5B0021ADFF /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = D77751FD25B21D5B0021ADFF /* RJSLibUFBase */; };
+		D777520025B21D5B0021ADFF /* RJSLibUFALayouts in Frameworks */ = {isa = PBXBuildFile; productRef = D77751FF25B21D5B0021ADFF /* RJSLibUFALayouts */; };
+		D777520225B21D5B0021ADFF /* RJSLibUFAppThemes in Frameworks */ = {isa = PBXBuildFile; productRef = D777520125B21D5B0021ADFF /* RJSLibUFAppThemes */; };
+		D777520425B21D5B0021ADFF /* RJSLibUFStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D777520325B21D5B0021ADFF /* RJSLibUFStorage */; };
 		D7D6C6FE273093A72D9059AD /* VM.DailyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB083902EF90FC9C173BB47 /* VM.DailyWeatherRowViewModel.swift */; };
 		D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD91DCBA8848FE6F8FB333 /* typelias.swift */; };
 		DA1727CBC53CACD869D97FA2 /* VisualDocs_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00610EDE156A60C7F921C87 /* VisualDocs_Image.swift */; };
@@ -518,7 +523,7 @@
 		0C33EF15820822B333C09DD2 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
 		0CF124C35989E2A72EE5B03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0F520C877E66D1756A616A44 /* Recreating.Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Twitter.swift; sourceTree = "<group>"; };
-		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; path = Graph.simplified.viz; sourceTree = "<group>"; };
+		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.simplified.viz; sourceTree = "<group>"; };
 		16216F9E504CE4D36E31AF12 /* ScrollEffect3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3D.swift; sourceTree = "<group>"; };
 		1659F5196E8478221C51668C /* VisualDocs_ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ForEach.swift; sourceTree = "<group>"; };
 		1791D4C1470706844DD2A691 /* VisualDocs_Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Combine.swift; sourceTree = "<group>"; };
@@ -577,7 +582,7 @@
 		4888B5A9C5C02F67883EC538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		48CAED30B0C8D189CF816854 /* WeatherMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMappers.swift; sourceTree = "<group>"; };
 		4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsStorage.h; sourceTree = "<group>"; };
-		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; path = Graph.viz; sourceTree = "<group>"; };
+		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.viz; sourceTree = "<group>"; };
 		4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView2.swift; sourceTree = "<group>"; };
 		4B16F34813BD45939D8CAACC /* readme.image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.2.png; sourceTree = "<group>"; };
 		4DDF12D318A4AB2FEFA74C70 /* PublicCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicCode.h; sourceTree = "<group>"; };
@@ -767,8 +772,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49EF4DCE7A592D5454184683 /* AppRyanair.framework in Frameworks */,
+				D777520025B21D5B0021ADFF /* RJSLibUFALayouts in Frameworks */,
 				D53BABA519E4E42F50992EB7 /* AppWeather.framework in Frameworks */,
 				2F925C6244DC63A4E9955C43 /* DocumentsVisual.framework in Frameworks */,
+				D77751FC25B21D5B0021ADFF /* RJSLibUFNetworking in Frameworks */,
+				D777520425B21D5B0021ADFF /* RJSLibUFStorage in Frameworks */,
+				D777520225B21D5B0021ADFF /* RJSLibUFAppThemes in Frameworks */,
+				D77751FE25B21D5B0021ADFF /* RJSLibUFBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1765,6 +1775,13 @@
 				2C0F65E13FC18B42B91B58DB /* PBXTargetDependency */,
 			);
 			name = RJPS_SwiftUI;
+			packageProductDependencies = (
+				D77751FB25B21D5B0021ADFF /* RJSLibUFNetworking */,
+				D77751FD25B21D5B0021ADFF /* RJSLibUFBase */,
+				D77751FF25B21D5B0021ADFF /* RJSLibUFALayouts */,
+				D777520125B21D5B0021ADFF /* RJSLibUFAppThemes */,
+				D777520325B21D5B0021ADFF /* RJSLibUFStorage */,
+			);
 			productName = RJPS_SwiftUI;
 			productReference = D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -2033,8 +2050,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1202;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 0DE10B5135A4E28DFB703D90 /* Build configuration list for PBXProject "RJPS_SwiftUI" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -2045,6 +2060,9 @@
 				en,
 			);
 			mainGroup = DA3D2F2AF59C76FA620B2031;
+			packageReferences = (
+				D77751FA25B21D5B0021ADFF /* XCRemoteSwiftPackageReference "RJSLibUF" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -5764,6 +5782,45 @@
 			defaultConfigurationName = Adhoc;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D77751FA25B21D5B0021ADFF /* XCRemoteSwiftPackageReference "RJSLibUF" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ricardopsantos/RJSLibUF";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D77751FB25B21D5B0021ADFF /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D77751FA25B21D5B0021ADFF /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		D77751FD25B21D5B0021ADFF /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D77751FA25B21D5B0021ADFF /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		D77751FF25B21D5B0021ADFF /* RJSLibUFALayouts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D77751FA25B21D5B0021ADFF /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFALayouts;
+		};
+		D777520125B21D5B0021ADFF /* RJSLibUFAppThemes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D77751FA25B21D5B0021ADFF /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFAppThemes;
+		};
+		D777520325B21D5B0021ADFF /* RJSLibUFStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D77751FA25B21D5B0021ADFF /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 }
