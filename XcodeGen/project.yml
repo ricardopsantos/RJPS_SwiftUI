@@ -91,8 +91,8 @@ targets:
         link: true
       - target: AppWeather
         link: true
-      #- target: DocumentsVisual
-      #  link: true  
+      - target: DocumentsVisual
+        link: true  
 
     #postCompileScripts:
     #  - script: |
@@ -295,15 +295,8 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFBase
         link: false
-     
-  PublicCode:
-    templates: 
-      - Framework
-    sources:
-      - path: ../PublicCode
-    dependencies:
       - package: RJSLibUF
-        product: RJSLibUFBase
+        product: RJSLibUFNetworking
         link: false
         
   Utils:
@@ -336,10 +329,12 @@ targets:
       - Framework
     sources: 
       - path: ../UtilsExtensions   
-#    dependencies:
-#      - package: RJSLibUF
-#        product: RJSLibUFBase
-#        link: false
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+        product: RJSLibUFAppThemes
+        link: true ############################################
         
   UtilsNetworking:
     templates: 
@@ -372,22 +367,22 @@ targets:
       - target: BaseDomain
         link: false
     
-#  DocumentsVisual:
-#    templates: 
-#      - Framework
-#    sources: 
-#      - path: ../DocumentsVisual
-#    dependencies:
-#      - package: RJSLibUF
-#        product: RJSLibUFBase
-#        link: false
-#        product: RJSLibUFAppThemes
-#        link: false
-#      - target: UtilsExtensions
-#        link: false
-#      - target: UtilsDesignables
-#        link: false
-#      - target: UtilsStorage
-#        link: false
+  DocumentsVisual:
+    templates:
+      - Framework
+    sources:
+      - path: ../DocumentsVisual
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+        product: RJSLibUFAppThemes
+        link: false
+      - target: UtilsExtensions
+        link: false
+      - target: UtilsDesignables
+        link: false
+      - target: UtilsStorage
+        link: false
         
  

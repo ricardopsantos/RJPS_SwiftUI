@@ -13,11 +13,7 @@ import RJSLibUFAppThemes
 //
 import UtilsExtensions
 import UtilsDesignables
-
-#warning("comentado")
-/*
 import DocumentsVisual
-
 
 struct DevScreen_View: View {
     var body : some View {
@@ -31,8 +27,7 @@ struct DevScreen_View: View {
                     NavigationLink(destination: VisualDocs_Shapes_PreviewProvider.previews) { Text("Shapes WIKI") }
                 }
                 Section(header: Text("Personal Components Reference")) {
-                    #warning("comentado")
-                    //NavigationLink(destination: VisualDocs_Designables.previews) { Text("My Designables") }
+                    NavigationLink(destination: VisualDocs_Designables.previews) { Text("My Designables") }
                     NavigationLink(destination: VisualDocs_ViewExtensions_PreviewProvider.previews) { Text("View+Extensions") }
                     NavigationLink(destination: VisualDocs_Buttons_PreviewProvider.previews) { Text("Sample Buttons") }
                     NavigationLink(destination: VisualDocs_Shadows_PreviewProvider.previews) { Text("Sample Shadows") }
@@ -110,4 +105,4 @@ public struct DevScreen_PreviewProvider: PreviewProvider {
         }
     }
 }
-*/
+

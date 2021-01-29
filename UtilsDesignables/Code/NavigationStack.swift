@@ -105,8 +105,7 @@ struct TitleView: View {
                 Text(title)//.padding(.leading, 20).font(Font.system(size: 20.0))
                 Spacer()
                 Button(action: homeAction) {
-                    #warning("comentado")
-                    //ImageNames.house.image
+                    ImageNames.house.image
                     Image(uiImage: UIImage(systemName: "house", withConfiguration: UIImage.SymbolConfiguration(pointSize: 15, weight: .bold, scale: .large))! ) .padding(.trailing, 20)
                 }
                 .foregroundColor(Color.black)

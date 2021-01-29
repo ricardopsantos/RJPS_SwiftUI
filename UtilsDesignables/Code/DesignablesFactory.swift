@@ -106,8 +106,7 @@ public extension DesignablesFactory {
             HStack {
                 if imageName.count > 0 {
                     if imageColor1 != nil && imageColor2 != nil {
-                        #warning("comentado")
-                        //Image(systemName: imageName).tint(color: imageColor2 ?? Color.black).frame(width: 28, height: 28).background(imageColor1 ?? Color.black) .cornerRadius(6)
+                        Image(systemName: imageName).tint(color: imageColor2 ?? Color.black).frame(width: 28, height: 28).background(imageColor1 ?? Color.black) .cornerRadius(6)
                     } else {
                         Image(systemName: imageName).frame(width: 28, height: 28)
                     }

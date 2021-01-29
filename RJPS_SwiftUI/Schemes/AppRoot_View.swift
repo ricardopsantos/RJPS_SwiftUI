@@ -32,8 +32,7 @@ struct AppRoot_View: View {
         TabView {
             tab1
             tab2
-            #warning("comentado")
-            //DevScreen_View()
+            DevScreen_View()
         }
     }
 }

@@ -27,8 +27,7 @@ struct Designables_PassCode: View {
             Spacer()
             HStack {
                 Spacer()
-                #warning("comentado")
-                //TextField("", text: $text).font(.largeTitle).multilineTextAlignment(.center).textColor(color).padding().border(color, width: 1)
+                TextField("", text: $text).font(.largeTitle).multilineTextAlignment(.center).textColor(color).padding().border(color, width: 1)
                 Spacer()
             }
             Spacer()
