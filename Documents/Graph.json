@@ -1,69 +1,329 @@
 {
+  "settings" : {
+    "base" : {
+      "ENABLE_BITCODE" : false
+    },
+    "configs" : {
+      "Release" : {
+        "ENABLE_BITCODE" : true
+      }
+    }
+  },
+  "targetTemplates" : {
+    "Framework" : {
+      "deploymentTarget" : "13.0",
+      "platform" : "iOS",
+      "type" : "framework"
+    }
+  },
+  "configs" : {
+    "Debug_Dev" : "debug",
+    "Beta" : "release",
+    "Debug_Prod" : "debug",
+    "Debug_QA" : "debug",
+    "Adhoc" : "release",
+    "Release" : "release"
+  },
+  "name" : "RJPS_SwiftUI",
+  "packages" : {
+    "RJSLibUF" : {
+      "revision" : "8be04fcc539a457915f46c0f3af6582a2ab0b01b",
+      "url" : "https:\/\/github.com\/ricardopsantos\/RJSLibUF"
+    }
+  },
   "targets" : {
-    "UtilsNetworking" : {
+    "UtilsExtensions" : {
+      "sources" : [
+        {
+          "path" : "..\/UtilsExtensions"
+        }
+      ],
       "templates" : [
         "Framework"
+      ]
+    },
+    "RJPS_SwiftUI" : {
+      "sources" : [
+        {
+          "path" : "..\/RJPS_SwiftUI"
+        }
+      ],
+      "deploymentTarget" : "13.0",
+      "type" : "application",
+      "dependencies" : [
+        {
+          "product" : "RJSLibUFBase",
+          "link" : true,
+          "package" : "RJSLibUF"
+        },
+        {
+          "package" : "RJSLibUF",
+          "product" : "RJSLibUFAppThemes",
+          "link" : true
+        },
+        {
+          "package" : "RJSLibUF",
+          "product" : "RJSLibUFNetworking",
+          "link" : true
+        },
+        {
+          "target" : "AppRyanair",
+          "link" : true
+        },
+        {
+          "link" : true,
+          "target" : "AppWeather"
+        }
+      ],
+      "platform" : "iOS"
+    },
+    "Utils" : {
+      "templates" : [
+        "Framework"
+      ],
+      "sources" : [
+        {
+          "path" : "..\/Utils"
+        }
       ],
       "dependencies" : [
         {
           "package" : "RJSLibUF",
           "product" : "RJSLibUFBase",
+          "link" : true
+        }
+      ]
+    },
+    "BaseDomain" : {
+      "sources" : [
+        {
+          "path" : "..\/BaseDomain"
+        }
+      ],
+      "dependencies" : [
+        {
+          "link" : false,
+          "product" : "RJSLibUFBase",
+          "package" : "RJSLibUF"
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ]
+    },
+    "AppWeatherCore" : {
+      "dependencies" : [
+        {
+          "product" : "RJSLibUFBase",
+          "package" : "RJSLibUF",
           "link" : false
         },
         {
           "link" : false,
-          "target" : "UtilsExtensions"
+          "target" : "AppWeatherDomain"
+        },
+        {
+          "target" : "AppWeatherWebAPI",
+          "link" : false
+        },
+        {
+          "target" : "BaseDomain",
+          "link" : false
         },
         {
           "target" : "UtilsStorage",
           "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "DevTools"
         }
+      ],
+      "templates" : [
+        "Framework"
       ],
       "sources" : [
         {
-          "path" : "..\/UtilsNetworking"
+          "path" : "..\/AppWeatherCore"
         }
       ]
     },
-    "AppWeatherWebAPI" : {
+    "AppRyanairWebAPI" : {
       "dependencies" : [
         {
+          "link" : false,
           "package" : "RJSLibUF",
-          "product" : "RJSLibUFBase",
+          "product" : "RJSLibUFBase"
+        },
+        {
+          "product" : "RJSLibUFNetworking",
+          "package" : "RJSLibUF",
           "link" : false
         },
         {
-          "target" : "AppWeatherDomain",
-          "link" : false
+          "link" : false,
+          "target" : "AppRyanairDomain"
         },
         {
           "target" : "UtilsNetworking",
           "link" : false
         },
         {
-          "target" : "UtilsStorage",
-          "link" : false
+          "link" : false,
+          "target" : "UtilsStorage"
         },
         {
           "target" : "DevTools",
           "link" : false
         }
       ],
+      "templates" : [
+        "Framework"
+      ],
       "sources" : [
         {
-          "path" : "..\/AppWeatherWebAPI"
+          "path" : "..\/AppRyanairWebAPI"
+        }
+      ]
+    },
+    "AppRyanairDomain" : {
+      "sources" : [
+        {
+          "path" : "..\/AppRyanairDomain"
         }
       ],
       "templates" : [
         "Framework"
+      ],
+      "dependencies" : [
+        {
+          "package" : "RJSLibUF",
+          "link" : false,
+          "product" : "RJSLibUFBase"
+        },
+        {
+          "product" : "RJSLibUFNetworking",
+          "link" : false,
+          "package" : "RJSLibUF"
+        },
+        {
+          "target" : "BaseDomain",
+          "link" : false
+        }
+      ]
+    },
+    "DevTools" : {
+      "templates" : [
+        "Framework"
+      ],
+      "dependencies" : [
+        {
+          "product" : "RJSLibUFBase",
+          "link" : false,
+          "package" : "RJSLibUF"
+        }
+      ],
+      "sources" : [
+        {
+          "path" : "..\/DevTools"
+        }
+      ]
+    },
+    "AppWeatherDomain" : {
+      "templates" : [
+        "Framework"
+      ],
+      "sources" : [
+        {
+          "path" : "..\/AppWeatherDomain"
+        }
+      ],
+      "dependencies" : [
+        {
+          "package" : "RJSLibUF",
+          "product" : "RJSLibUFBase",
+          "link" : true
+        },
+        {
+          "product" : "RJSLibUFNetworking",
+          "package" : "RJSLibUF",
+          "link" : false
+        },
+        {
+          "target" : "BaseDomain",
+          "link" : false
+        }
+      ]
+    },
+    "UtilsDesignables" : {
+      "templates" : [
+        "Framework"
+      ],
+      "dependencies" : [
+        {
+          "package" : "RJSLibUF",
+          "product" : "RJSLibUFAppThemes",
+          "link" : false
+        },
+        {
+          "target" : "UtilsExtensions",
+          "link" : false
+        },
+        {
+          "target" : "Utils",
+          "link" : false
+        }
+      ],
+      "sources" : [
+        {
+          "path" : "..\/UtilsDesignables"
+        }
+      ]
+    },
+    "AppRyanair" : {
+      "dependencies" : [
+        {
+          "package" : "RJSLibUF",
+          "product" : "RJSLibUFAppThemes",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "AppRyanairCore"
+        },
+        {
+          "target" : "AppRyanairDomain",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "UtilsDesignables"
+        },
+        {
+          "target" : "BaseDomain",
+          "link" : false
+        }
+      ],
+      "templates" : [
+        "Framework"
+      ],
+      "sources" : [
+        {
+          "path" : "..\/AppRyanair"
+        }
       ]
     },
     "UtilsStorage" : {
       "dependencies" : [
         {
-          "product" : "RJSLibUFBase",
           "package" : "RJSLibUF",
+          "product" : "RJSLibUFBase",
           "link" : true
+        },
+        {
+          "link" : true,
+          "product" : "RJSLibUFNetworking",
+          "package" : "RJSLibUF"
         },
         {
           "target" : "UtilsExtensions",
@@ -83,117 +343,10 @@
         "Framework"
       ]
     },
-    "RJPS_SwiftUI" : {
-      "sources" : [
-        {
-          "path" : "..\/RJPS_SwiftUI"
-        }
-      ],
-      "deploymentTarget" : "13.0",
-      "type" : "application",
-      "dependencies" : [
-        {
-          "package" : "RJSLibUF",
-          "link" : true,
-          "product" : "RJSLibUFBase"
-        },
-        {
-          "package" : "RJSLibUF",
-          "product" : "RJSLibUFAppThemes",
-          "link" : true
-        },
-        {
-          "target" : "AppRyanair",
-          "link" : true
-        },
-        {
-          "link" : true,
-          "target" : "AppWeather"
-        }
-      ],
-      "platform" : "iOS"
-    },
-    "AppWeather" : {
-      "dependencies" : [
-        {
-          "package" : "RJSLibUF",
-          "product" : "RJSLibUFBase",
-          "link" : false
-        },
-        {
-          "link" : false,
-          "package" : "RJSLibUF",
-          "product" : "RJSLibUFAppThemes"
-        },
-        {
-          "link" : false,
-          "target" : "AppWeatherDomain"
-        },
-        {
-          "target" : "BaseDomain",
-          "link" : false
-        },
-        {
-          "target" : "AppWeatherCore",
-          "link" : false
-        },
-        {
-          "link" : false,
-          "target" : "UtilsDesignables"
-        }
-      ],
-      "sources" : [
-        {
-          "path" : "..\/AppWeather"
-        }
-      ],
-      "templates" : [
-        "Framework"
-      ]
-    },
-    "DevTools" : {
-      "templates" : [
-        "Framework"
-      ],
-      "sources" : [
-        {
-          "path" : "..\/DevTools"
-        }
-      ],
-      "dependencies" : [
-        {
-          "product" : "RJSLibUFBase",
-          "link" : false,
-          "package" : "RJSLibUF"
-        }
-      ]
-    },
-    "UtilsDesignables" : {
-      "sources" : [
-        {
-          "path" : "..\/UtilsDesignables"
-        }
-      ],
-      "templates" : [
-        "Framework"
-      ],
-      "dependencies" : [
-        {
-          "product" : "RJSLibUFAppThemes",
-          "package" : "RJSLibUF",
-          "link" : false
-        },
-        {
-          "target" : "UtilsExtensions",
-          "link" : false
-        },
-        {
-          "target" : "Utils",
-          "link" : false
-        }
-      ]
-    },
     "PublicCode" : {
+      "templates" : [
+        "Framework"
+      ],
       "sources" : [
         {
           "path" : "..\/PublicCode"
@@ -201,67 +354,64 @@
       ],
       "dependencies" : [
         {
-          "link" : false,
           "product" : "RJSLibUFBase",
-          "package" : "RJSLibUF"
+          "package" : "RJSLibUF",
+          "link" : false
         }
-      ],
-      "templates" : [
-        "Framework"
       ]
     },
-    "AppRyanair" : {
-      "sources" : [
-        {
-          "path" : "..\/AppRyanair"
-        }
-      ],
+    "AppWeather" : {
       "templates" : [
         "Framework"
       ],
       "dependencies" : [
         {
-          "package" : "RJSLibUF",
+          "product" : "RJSLibUFBase",
+          "link" : false,
+          "package" : "RJSLibUF"
+        },
+        {
           "product" : "RJSLibUFAppThemes",
+          "link" : false,
+          "package" : "RJSLibUF"
+        },
+        {
+          "link" : false,
+          "target" : "AppWeatherDomain"
+        },
+        {
+          "link" : false,
+          "target" : "BaseDomain"
+        },
+        {
+          "link" : false,
+          "target" : "AppWeatherCore"
+        },
+        {
+          "target" : "UtilsDesignables",
           "link" : false
-        },
+        }
+      ],
+      "sources" : [
         {
-          "link" : false,
-          "target" : "AppRyanairCore"
-        },
-        {
-          "link" : false,
-          "target" : "AppRyanairDomain"
-        },
-        {
-          "link" : false,
-          "target" : "UtilsDesignables"
-        },
-        {
-          "target" : "BaseDomain",
-          "link" : false
+          "path" : "..\/AppWeather"
         }
       ]
     },
     "AppRyanairCore" : {
-      "sources" : [
-        {
-          "path" : "..\/AppRyanairCore"
-        }
-      ],
       "dependencies" : [
         {
           "package" : "RJSLibUF",
-          "product" : "RJSLibUFBase",
-          "link" : false
+          "link" : false,
+          "product" : "RJSLibUFBase"
         },
         {
           "target" : "AppRyanairDomain",
           "link" : false
         },
         {
-          "target" : "AppRyanairWebAPI",
-          "link" : false
+          "link" : false,
+          "target" : "AppRyanairWebAPI"
         },
         {
           "link" : false,
@@ -272,101 +422,43 @@
           "target" : "UtilsStorage"
         },
         {
-          "target" : "BaseDomain",
-          "link" : false
-        }
-      ],
-      "templates" : [
-        "Framework"
-      ]
-    },
-    "AppWeatherDomain" : {
-      "dependencies" : [
-        {
-          "link" : true,
-          "package" : "RJSLibUF",
-          "product" : "RJSLibUFBase"
-        },
-        {
           "link" : false,
           "target" : "BaseDomain"
         }
       ],
-      "templates" : [
-        "Framework"
-      ],
       "sources" : [
         {
-          "path" : "..\/AppWeatherDomain"
+          "path" : "..\/AppRyanairCore"
         }
-      ]
-    },
-    "UtilsExtensions" : {
+      ],
       "templates" : [
         "Framework"
-      ],
+      ]
+    },
+    "AppWeatherWebAPI" : {
       "sources" : [
         {
-          "path" : "..\/UtilsExtensions"
+          "path" : "..\/AppWeatherWebAPI"
         }
-      ]
-    },
-    "AppRyanairDomain" : {
-      "templates" : [
-        "Framework"
       ],
       "dependencies" : [
         {
-          "product" : "RJSLibUFBase",
           "link" : false,
+          "product" : "RJSLibUFBase",
           "package" : "RJSLibUF"
         },
         {
-          "target" : "BaseDomain",
-          "link" : false
-        }
-      ],
-      "sources" : [
-        {
-          "path" : "..\/AppRyanairDomain"
-        }
-      ]
-    },
-    "BaseDomain" : {
-      "templates" : [
-        "Framework"
-      ],
-      "sources" : [
-        {
-          "path" : "..\/BaseDomain"
-        }
-      ],
-      "dependencies" : [
-        {
-          "product" : "RJSLibUFBase",
-          "package" : "RJSLibUF",
-          "link" : false
-        }
-      ]
-    },
-    "AppWeatherCore" : {
-      "dependencies" : [
-        {
-          "product" : "RJSLibUFBase",
-          "package" : "RJSLibUF",
-          "link" : false
+          "product" : "RJSLibUFNetworking",
+          "link" : false,
+          "package" : "RJSLibUF"
         },
         {
           "link" : false,
           "target" : "AppWeatherDomain"
         },
         {
-          "link" : false,
-          "target" : "AppWeatherWebAPI"
-        },
-        {
-          "link" : false,
-          "target" : "BaseDomain"
+          "target" : "UtilsNetworking",
+          "link" : false
         },
         {
           "link" : false,
@@ -379,103 +471,41 @@
       ],
       "templates" : [
         "Framework"
-      ],
-      "sources" : [
-        {
-          "path" : "..\/AppWeatherCore"
-        }
       ]
     },
-    "AppRyanairWebAPI" : {
-      "templates" : [
-        "Framework"
-      ],
+    "UtilsNetworking" : {
       "sources" : [
         {
-          "path" : "..\/AppRyanairWebAPI"
+          "path" : "..\/UtilsNetworking"
         }
       ],
       "dependencies" : [
         {
-          "package" : "RJSLibUF",
-          "link" : false,
-          "product" : "RJSLibUFAppThemes"
-        },
-        {
-          "target" : "AppRyanairDomain",
-          "link" : false
-        },
-        {
-          "target" : "UtilsNetworking",
-          "link" : false
-        },
-        {
-          "link" : false,
-          "target" : "UtilsStorage"
-        },
-        {
-          "link" : false,
-          "target" : "DevTools"
-        }
-      ]
-    },
-    "Utils" : {
-      "dependencies" : [
-        {
-          "package" : "RJSLibUF",
           "product" : "RJSLibUFBase",
-          "link" : true
+          "package" : "RJSLibUF",
+          "link" : false
+        },
+        {
+          "link" : false,
+          "target" : "UtilsExtensions"
+        },
+        {
+          "target" : "UtilsStorage",
+          "link" : false
         }
       ],
       "templates" : [
         "Framework"
-      ],
-      "sources" : [
-        {
-          "path" : "..\/Utils"
-        }
       ]
-    }
-  },
-  "targetTemplates" : {
-    "Framework" : {
-      "platform" : "iOS",
-      "deploymentTarget" : "13.0",
-      "type" : "framework"
-    }
-  },
-  "configs" : {
-    "Adhoc" : "release",
-    "Debug_Prod" : "debug",
-    "Debug_Dev" : "debug",
-    "Release" : "release",
-    "Debug_QA" : "debug",
-    "Beta" : "release"
-  },
-  "name" : "RJPS_SwiftUI",
-  "packages" : {
-    "RJSLibUF" : {
-      "url" : "https:\/\/github.com\/ricardopsantos\/RJSLibUF",
-      "revision" : "72b15ba63d83baa243602d75e829f91dc7b6cdcb"
-    }
-  },
-  "settings" : {
-    "configs" : {
-      "Release" : {
-        "ENABLE_BITCODE" : true
-      }
-    },
-    "base" : {
-      "ENABLE_BITCODE" : false
     }
   },
   "options" : {
-    "minimumXcodeGenVersion" : "2.18.0",
-    "deploymentTarget" : "13.0",
     "findCarthageFrameworks" : false,
+    "minimumXcodeGenVersion" : "2.18.0",
+    "generateEmptyDirectories" : true,
+    "deploymentTarget" : "13.0",
     "bundleIdPrefix" : "com.rjps.swiftui",
-    "xcodeVersion" : "12.0.2",
-    "generateEmptyDirectories" : true
+    "xcodeVersion" : "12.0.2"
   },
   "fileGroups" : [
     "..\/Documents"

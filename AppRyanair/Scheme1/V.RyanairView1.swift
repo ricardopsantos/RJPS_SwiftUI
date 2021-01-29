@@ -62,8 +62,7 @@ extension RyanairView1 {
     var outputView: some View {
         VStack {
             DesignablesFactory.ErrorView(message: viewModel.viewIn.outputText)
-            #warning("comentado")
- //           ConnectivityView(subTitle: "Will try to use cache if available")
+            ConnectivityView(subTitle: "Will try to use cache if available")
         }
     }
 

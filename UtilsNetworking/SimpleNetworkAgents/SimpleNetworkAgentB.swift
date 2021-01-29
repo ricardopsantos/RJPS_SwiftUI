@@ -10,11 +10,10 @@ import RJSLibUFBase
 //
 import UtilsExtensions
 
-#warning("os URLSession.defaultForConnectivity for comentados em vários lugares")
 public class SimpleNetworkAgentB: SimpleNetworkAgentProtocol {
-    private init() { self.session = /*URLSession.defaultForConnectivity*/ URLSession.shared }
+    private init() { self.session = URLSession.defaultForConnectivity }
     public var session: URLSession
-    public init(session: URLSession = /*URLSession.defaultForConnectivity*/ URLSession.shared) {
+    public init(session: URLSession = URLSession.defaultForConnectivity) {
         self.session = session
     }
 }

@@ -94,7 +94,7 @@ public func whereAmI(function: StaticString = #function,
                      prefix: String = "") -> String {
     return whereAmIDynamic(function: String(function), file: String(file), line: line, short: short, prefix: prefix)
 }
-
+/*
 public func perfectMapperThrows<A: Encodable, B: Decodable>(inValue: A, outValue: B.Type) throws -> B {
     do {
         let encoded = try JSONEncoder().encode(inValue)
@@ -135,4 +135,4 @@ public func perfectMapper<A: Encodable, B: Decodable>(inValue: A, outValue: B.Ty
         return nil
     }
 }
-
+*/

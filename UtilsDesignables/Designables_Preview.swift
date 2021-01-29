@@ -21,8 +21,7 @@ public struct Designables_View: View {
             }
             VStack {
                 Text("ConnectivityView").font(.caption)
-                #warning("comentado")
-                //ConnectivityView(subTitle: "Try again latter")
+                ConnectivityView(subTitle: "Try again latter")
                 Divider()
             }
             VStack {

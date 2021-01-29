@@ -4,7 +4,7 @@
 //
 
 import Foundation
-
+/*
  public enum APIError: Error {
     case ok // no error
     case genericError 
@@ -12,4 +12,4 @@ import Foundation
     case parsing(description: String)
     case network(description: String)
     case failedWithStatusCode(code: Int)
-}
+}*/

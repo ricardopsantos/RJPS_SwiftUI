@@ -79,7 +79,7 @@ extension GenericStorableKeyValueModel {
 
     static func get(composedKey: String) -> GenericStorableKeyValueModel? {
         if let cached = UserDefaults.standard.data(forKey: composedKey),
-            let result = try? JSONDecoder().decodeSafe(GenericStorableKeyValueModel.self, from: cached),
+            let result = try? JSONDecoder().decodeFriendly(GenericStorableKeyValueModel.self, from: cached),
             result.value != nil {
             return result
         }

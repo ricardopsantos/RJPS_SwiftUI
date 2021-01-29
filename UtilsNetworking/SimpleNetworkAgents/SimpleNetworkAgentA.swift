@@ -25,7 +25,7 @@ import BaseDomain // Because of Response<T>
 public class SimpleNetworkAgentA: SimpleNetworkAgentProtocol {
     private init() { self.session = .shared }
     public var session: URLSession
-    public init(session: URLSession = /*URLSession.defaultForConnectivity*/ URLSession.shared) {
+    public init(session: URLSession = URLSession.defaultForConnectivity) {
         self.session = session
     }
 }
