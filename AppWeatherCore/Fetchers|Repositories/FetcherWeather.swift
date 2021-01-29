@@ -6,6 +6,8 @@
 import Foundation
 import Combine
 //
+import RJSLibUFBase
+//
 import BaseDomain
 import AppWeatherWebAPI
 import AppWeatherDomain

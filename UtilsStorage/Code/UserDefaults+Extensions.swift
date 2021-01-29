@@ -4,6 +4,8 @@
 //
 
 import Foundation
+//
+import RJSLibUFBase
 
 public extension UserDefaults {
     func save(kvStorableRecord: GenericStorableKeyValueModel) {

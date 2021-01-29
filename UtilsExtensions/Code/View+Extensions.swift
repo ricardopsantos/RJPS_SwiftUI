@@ -6,7 +6,9 @@
 import UIKit
 import Foundation
 import SwiftUI
-
+//
+#warning("comentado")
+/*
 public extension Shape {
     func addSimpleStroke(color: UIColor, width: CGFloat) -> some View {
         self.stroke(Color(color), lineWidth: width)
@@ -20,15 +22,6 @@ public extension RoundedRectangle {
 }
 
 public extension View {
-
-    func buildPreviews() -> some View {
-        Group {
-            self.previewDisplayName("Default")
-            self.environment(\.colorScheme, .dark).previewDisplayName("Dark")
-            self.previewDevice("iPhone 8").previewDisplayName("Default - iPhone8")
-            self.previewDevice("iPhone 11 Pro").previewDisplayName("Default - iPhone11")
-        }
-    }
 
     // https://stackoverflow.com/questions/56517813/how-to-print-to-xcode-console-in-swiftui
     func SwiftUIDebugPrint(_ vars: Any..., function: String=#function) -> some View {
@@ -129,34 +122,19 @@ public extension View {
         self.opacity(some)
     }
 
-    func textColor(_ color: Color) -> some View {
-        self.foregroundColor(color)
-    }
-
     func addCorner(color: Color, lineWidth: CGFloat, padding: Bool) -> some View {
         self
             .doIf_v1(padding) { $0.padding(8) }
             .overlay(Capsule(style: .continuous).stroke(color, lineWidth: lineWidth).foregroundColor(Color.clear))
     }
 
-    // Draw a corner, outside the View
-    func addOuterCornerOverlaying(color: UIColor, radius: CGFloat = 3, width: CGFloat = 2, padding: Bool) -> some View {
-        self
-            .doIf_v1(padding) { $0.padding(8) }
-            .overlay(RoundedRectangle(cornerRadius: radius).addSimpleStroke(color: color, width: width))
-    }
-
-    func debugWithSimpleStroke(color: UIColor = .red, width: CGFloat=3) -> some View {
-        self.overlay(RoundedRectangle(cornerRadius: 0).addSimpleStroke(color: color, width: width))
-    }
-
     func debugWithDashedStroke(color: UIColor = .red, width: CGFloat=3, dashed: Bool=true) -> some View {
         self.overlay(RoundedRectangle(cornerRadius: 0).addDashedStroke(color: color, width: width))
     }
 
-    func debugComposed(color: UIColor = .red, width: CGFloat=3) -> some View {
-        self.debugWithDashedStroke(color: color, width: width).padding(width).debugWithSimpleStroke(color: color, width: width)
-    }
+    //func debugComposed(color: UIColor = .red, width: CGFloat=3) -> some View {
+     //   self.debugWithDashedStroke(color: color, width: width).padding(width).debugWithSimpleStroke(color: color, width: width)
+    //}
 }
 
 public struct ViewExtensions: View {
@@ -250,3 +228,4 @@ public struct VisualDocs_ViewExtensions_PreviewProvider: PreviewProvider {
         ViewExtensions()
     }
 }
+*/

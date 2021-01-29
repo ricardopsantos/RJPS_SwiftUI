@@ -6,6 +6,8 @@
 import Foundation
 import Combine
 //
+import RJSLibUFBase
+//
 import AppRyanairWebAPI
 import AppRyanairDomain
 import BaseDomain

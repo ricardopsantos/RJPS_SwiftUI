@@ -4,7 +4,10 @@
 //
 
 import Foundation
+//
+import RJSLibUFBase
 
+#warning("delete latter")
 public class HotCacheManager {
 
     private init() {}

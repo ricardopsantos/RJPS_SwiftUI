@@ -4,6 +4,8 @@
 //
 
 import Foundation
+//
+import RJSLibUFBase
 
 public struct APIKeys {
     public static func get(key: String) -> String? {

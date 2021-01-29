@@ -58,7 +58,8 @@ targetTemplates:
 packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
-    from: 1.0.0
+#    from: 1.0.0
+    revision: 72b15ba63d83baa243602d75e829f91dc7b6cdcb
 
 ####################### TARGETS #######################
 ####################### TARGETS #######################  
@@ -77,14 +78,18 @@ targets:
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
+        link: true
+      - package: RJSLibUF
+        product: RJSLibUFAppThemes
+        link: true
+
       #- target: AppHourlyChallenge
-      #  link: true
       - target: AppRyanair
         link: true
       - target: AppWeather
         link: true
-      - target: DocumentsVisual
-        link: true  
+      #- target: DocumentsVisual
+      #  link: true  
 
     #postCompileScripts:
     #  - script: |
@@ -118,6 +123,10 @@ targets:
     sources: 
       - path: ../AppRyanair  
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        product: RJSLibUFAppThemes
+        link: false
       - target: AppRyanairCore
         link: false
       - target: AppRyanairDomain
@@ -133,6 +142,9 @@ targets:
     sources: 
       - path: ../AppRyanairDomain
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
       - target: BaseDomain
         link: false
         
@@ -142,6 +154,9 @@ targets:
     sources: 
       - path: ../AppRyanairCore  
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
       - target: AppRyanairDomain
         link: false
       - target: AppRyanairWebAPI
@@ -159,6 +174,10 @@ targets:
     sources: 
       - path: ../AppRyanairWebAPI
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        product: RJSLibUFAppThemes
+        link: false
       - target: AppRyanairDomain
         link: false 
       - target: UtilsNetworking
@@ -176,6 +195,12 @@ targets:
     sources: 
       - path: ../AppWeather  
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase       
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFAppThemes
+        link: false
       - target: AppWeatherDomain
         link: false  
       - target: BaseDomain
@@ -191,6 +216,9 @@ targets:
     sources: 
       - path: ../AppWeatherDomain
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: true ############################################
       - target: BaseDomain
         link: false  
         
@@ -200,6 +228,9 @@ targets:
     sources: 
       - path: ../AppWeatherCore
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
       - target: AppWeatherDomain
         link: false
       - target: AppWeatherWebAPI
@@ -217,6 +248,9 @@ targets:
     sources: 
       - path: ../AppWeatherWebAPI
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
       - target: AppWeatherDomain
         link: false 
       - target: UtilsNetworking
@@ -233,31 +267,51 @@ targets:
       - Framework
     sources:
       - path: ../DevTools
-  
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+        
   BaseDomain:
     templates: 
       - Framework
     sources:
       - path: ../BaseDomain
-      
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+     
   PublicCode:
     templates: 
       - Framework
     sources:
       - path: ../PublicCode
-      
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+        
   Utils:
     templates: 
       - Framework
     sources: 
       - path: ../Utils
-
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: true ############################################
+        
   UtilsDesignables:
     templates: 
       - Framework
     sources: 
       - path: ../UtilsDesignables
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        product: RJSLibUFAppThemes
+        link: false
       - target: UtilsExtensions
         link: false
       - target: Utils
@@ -268,13 +322,20 @@ targets:
       - Framework
     sources: 
       - path: ../UtilsExtensions   
-      
+#    dependencies:
+#      - package: RJSLibUF
+#        product: RJSLibUFBase
+#        link: false
+        
   UtilsNetworking:
     templates: 
       - Framework
     sources: 
       - path: ../UtilsNetworking
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
       - target: UtilsExtensions
         link: false
       - target: UtilsStorage
@@ -286,22 +347,30 @@ targets:
     sources: 
       - path: ../UtilsStorage
     dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: true ############################################
       - target: UtilsExtensions
         link: false
       - target: BaseDomain
         link: false
     
-  DocumentsVisual:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../DocumentsVisual
-    dependencies:
-      - target: UtilsExtensions
-        link: false
-      - target: UtilsDesignables
-        link: false
-      - target: UtilsStorage
-        link: false
+#  DocumentsVisual:
+#    templates: 
+#      - Framework
+#    sources: 
+#      - path: ../DocumentsVisual
+#    dependencies:
+#      - package: RJSLibUF
+#        product: RJSLibUFBase
+#        link: false
+#        product: RJSLibUFAppThemes
+#        link: false
+#      - target: UtilsExtensions
+#        link: false
+#      - target: UtilsDesignables
+#        link: false
+#      - target: UtilsStorage
+#        link: false
         
  

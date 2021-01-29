@@ -5,6 +5,9 @@
 
 import Foundation
 import SwiftUI
+//
+import RJSLibUFAppThemes
+import RJSLibUFBase
 
 public struct Designables_View: View {
     public init() { }
@@ -18,7 +21,8 @@ public struct Designables_View: View {
             }
             VStack {
                 Text("ConnectivityView").font(.caption)
-                ConnectivityView(subTitle: "Try again latter")
+                #warning("comentado")
+                //ConnectivityView(subTitle: "Try again latter")
                 Divider()
             }
             VStack {
@@ -56,6 +60,8 @@ public struct Designables_View: View {
 
 public struct VisualDocs_Designables: PreviewProvider {
     public static var previews: some View {
-        return Designables_View().buildPreviews()
+        Text("apagar isto depois do fix").font(.caption)
+        #warning("comentado")
+ //       return Designables_View().buildPreviews()
     }
 }

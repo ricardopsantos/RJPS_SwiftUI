@@ -5,6 +5,8 @@
 
 import Foundation
 //
+import RJSLibUFBase
+//
 import UtilsExtensions
 
 public class GenericStorableKeyValueModel: Codable {

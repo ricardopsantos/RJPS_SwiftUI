@@ -6,12 +6,15 @@
 import Foundation
 import Combine
 //
+import RJSLibUFBase
+//
 import UtilsExtensions
 
+#warning("os URLSession.defaultForConnectivity for comentados em vários lugares")
 public class SimpleNetworkAgentB: SimpleNetworkAgentProtocol {
-    private init() { self.session = URLSession.defaultForConnectivity }
+    private init() { self.session = /*URLSession.defaultForConnectivity*/ URLSession.shared }
     public var session: URLSession
-    public init(session: URLSession = URLSession.defaultForConnectivity) {
+    public init(session: URLSession = /*URLSession.defaultForConnectivity*/ URLSession.shared) {
         self.session = session
     }
 }

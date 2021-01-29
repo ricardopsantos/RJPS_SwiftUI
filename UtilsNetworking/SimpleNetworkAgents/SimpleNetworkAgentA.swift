@@ -1,8 +1,9 @@
 import Foundation
 import Combine
 //
-import UtilsExtensions
+import RJSLibUFBase
 //
+import UtilsExtensions
 import BaseDomain // Because of Response<T>
 
 // https://www.vadimbulavin.com/modern-networking-in-swift-5-with-urlsession-combine-framework-and-codable/
@@ -24,7 +25,7 @@ import BaseDomain // Because of Response<T>
 public class SimpleNetworkAgentA: SimpleNetworkAgentProtocol {
     private init() { self.session = .shared }
     public var session: URLSession
-    public init(session: URLSession = URLSession.defaultForConnectivity) {
+    public init(session: URLSession = /*URLSession.defaultForConnectivity*/ URLSession.shared) {
         self.session = session
     }
 }

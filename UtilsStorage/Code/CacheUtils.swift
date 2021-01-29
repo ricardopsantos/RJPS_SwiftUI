@@ -4,6 +4,8 @@
 //
 
 import Foundation
+//
+import RJSLibUFBase
 
 struct CacheUtils {
     static func composedKey(_ key: String, _ keyParams: [String]) -> String {

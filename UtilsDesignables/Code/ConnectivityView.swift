@@ -6,8 +6,12 @@
 import Foundation
 import SwiftUI
 //
+import RJSLibUFAppThemes
+//
 import Utils
 
+#warning("comentado")
+/*
 public struct ConnectivityView: View {
     @State var connectivity = ""
     let subTitle: String
@@ -31,4 +35,4 @@ public struct ConnectivityView: View {
                 }
         }
     }
-}
+}*/

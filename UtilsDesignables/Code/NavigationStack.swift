@@ -7,6 +7,9 @@ import Foundation
 import Combine
 import SwiftUI
 //
+import RJSLibUFBase
+import RJSLibUFAppThemes
+//
 import UtilsExtensions
 
 //
@@ -102,7 +105,8 @@ struct TitleView: View {
                 Text(title)//.padding(.leading, 20).font(Font.system(size: 20.0))
                 Spacer()
                 Button(action: homeAction) {
-                    ImageNames.house.image
+                    #warning("comentado")
+                    //ImageNames.house.image
                     Image(uiImage: UIImage(systemName: "house", withConfiguration: UIImage.SymbolConfiguration(pointSize: 15, weight: .bold, scale: .large))! ) .padding(.trailing, 20)
                 }
                 .foregroundColor(Color.black)

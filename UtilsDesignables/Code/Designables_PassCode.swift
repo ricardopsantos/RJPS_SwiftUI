@@ -8,6 +8,8 @@ import Foundation
 import SwiftUI
 import Combine
 //
+import RJSLibUFAppThemes
+//
 import UtilsExtensions
 
 //swiftlint:disable multiple_closures_with_trailing_closure
@@ -25,7 +27,8 @@ struct Designables_PassCode: View {
             Spacer()
             HStack {
                 Spacer()
-                TextField("", text: $text).font(.largeTitle).multilineTextAlignment(.center).textColor(color).padding().border(color, width: 1)
+                #warning("comentado")
+                //TextField("", text: $text).font(.largeTitle).multilineTextAlignment(.center).textColor(color).padding().border(color, width: 1)
                 Spacer()
             }
             Spacer()

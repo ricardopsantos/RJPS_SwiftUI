@@ -7,6 +7,9 @@ import Foundation
 import Combine
 import SwiftUI
 //
+import RJSLibUFBase
+import RJSLibUFAppThemes
+//
 import UtilsDesignables
 import Utils
 import UtilsExtensions
@@ -59,7 +62,8 @@ extension RyanairView1 {
     var outputView: some View {
         VStack {
             DesignablesFactory.ErrorView(message: viewModel.viewIn.outputText)
-            ConnectivityView(subTitle: "Will try to use cache if available")
+            #warning("comentado")
+ //           ConnectivityView(subTitle: "Will try to use cache if available")
         }
     }
 
