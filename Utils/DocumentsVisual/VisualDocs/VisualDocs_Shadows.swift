@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import UtilsDesignables
+import Utils
 
 struct VisualDocs_Shadows: View {
     var radius: CGFloat = 4.0

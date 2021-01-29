@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import UtilsDesignables
+import Utils
 
 // MARK: VisualDocs_RouteToAndCameBack_Sample_I
 

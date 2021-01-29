@@ -7,10 +7,9 @@ import Foundation
 import Combine
 import SwiftUI
 //
-import UtilsDesignables
-//
 import AppRyanairCore
 import AppRyanairDomain
+import Utils
 
 struct RyanairView2: View {
 

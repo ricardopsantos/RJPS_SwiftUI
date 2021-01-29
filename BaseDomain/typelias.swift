@@ -6,8 +6,12 @@
 import Foundation
 //
 import RJSLibUFNetworking
+import RJSLibUFBase
+import RJSLibUFStorage
 
 public typealias V = SchemeView
 public struct SchemeView { private init() {} }
 
-public typealias APIError = RJS_FRPNetworkClientAPIError
+public typealias APIError    = RJS_FRPNetworkClientAPIError
+public typealias CachePolicy = RJS_CacheStrategy
+

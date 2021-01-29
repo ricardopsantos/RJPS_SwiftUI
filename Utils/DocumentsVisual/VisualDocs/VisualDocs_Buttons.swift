@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import UtilsDesignables
+import Utils
 
 struct VisualDocs_Buttons: View {
     let size_w: CGFloat = 50

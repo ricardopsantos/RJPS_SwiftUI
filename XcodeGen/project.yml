@@ -85,14 +85,17 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFNetworking
         link: true
+      - package: RJSLibUF
+        product: RJSLibUFStorage
+        link: false 
         
       #- target: AppHourlyChallenge
       - target: AppRyanair
         link: true
       - target: AppWeather
         link: true
-      - target: DocumentsVisual
-        link: true  
+#      - target: DocumentsVisual
+#        link: true  
 
     #postCompileScripts:
     #  - script: |
@@ -136,7 +139,7 @@ targets:
         link: false
       - target: AppRyanairDomain
         link: false
-      - target: UtilsDesignables
+      - target: Utils
         link: false  
       - target: BaseDomain
         link: false  
@@ -153,6 +156,9 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFNetworking
         link: false
+      - package: RJSLibUF
+        product: RJSLibUFStorage
+        link: false 
       - target: BaseDomain
         link: false
         
@@ -190,7 +196,7 @@ targets:
         link: false 
       - target: UtilsNetworking
         link: false
-      - target: DevTools
+      - target: Utils
         link: false   
  
 ######################### AppWeather ######################### 
@@ -215,7 +221,7 @@ targets:
         link: false  
       - target: AppWeatherCore
         link: false     
-      - target: UtilsDesignables
+      - target: Utils
         link: false  
         
   AppWeatherDomain:
@@ -250,7 +256,7 @@ targets:
         link: false
 #      - target: UtilsStorage
 #        link: false
-      - target: DevTools
+      - target: Utils
         link: false 
         
   AppWeatherWebAPI:
@@ -270,23 +276,21 @@ targets:
       - target: UtilsNetworking
         link: false
       - target: Utils
-        link: false
-      - target: DevTools
-        link: false     
+        link: false   
          
 ######################### Generic Utils ######################### 
 ######################### Generic Utils ######################### 
 ######################### Generic Utils ######################### 
       
-  DevTools:
-    templates: 
-      - Framework
-    sources:
-      - path: ../DevTools
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
+#  DevTools:
+#    templates: 
+#      - Framework
+#    sources:
+#      - path: ../DevTools
+#    dependencies:
+#      - package: RJSLibUF
+#        product: RJSLibUFBase
+#        link: false
         
   BaseDomain:
     templates: 
@@ -316,19 +320,22 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFNetworking
         link: true ############################################
-        
-  UtilsDesignables:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../UtilsDesignables
-    dependencies:
       - package: RJSLibUF
-        product: RJSLibUFBase
-        product: RJSLibUFAppThemes
-        link: false
-      - target: Utils
-        link: false
+        product: RJSLibUFStorage
+        link: true ############################################
+        
+#  UtilsDesignables:
+#    templates: 
+#      - Framework
+#    sources: 
+#      - path: ../UtilsDesignables
+#    dependencies:
+#      - package: RJSLibUF
+#        product: RJSLibUFBase
+#        product: RJSLibUFAppThemes
+#        link: false
+#      - target: Utils
+#        link: false
         
 #  UtilsExtensions:
 #    templates:
@@ -371,21 +378,21 @@ targets:
 #      - target: BaseDomain
 #        link: false
     
-  DocumentsVisual:
-    templates:
-      - Framework
-    sources:
-      - path: ../DocumentsVisual
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
-        product: RJSLibUFAppThemes
-        link: false
-      - target: Utils
-        link: false
-      - target: UtilsDesignables
-        link: false
+#  DocumentsVisual:
+#    templates:
+#      - Framework
+#    sources:
+#      - path: ../DocumentsVisual
+#    dependencies:
+#      - package: RJSLibUF
+#        product: RJSLibUFBase
+#        link: false
+#        product: RJSLibUFAppThemes
+#        link: false
+#      - target: Utils
+#        link: false
+#      - target: UtilsDesignables
+#        link: false
 #      - target: UtilsStorage
 #        link: false
         

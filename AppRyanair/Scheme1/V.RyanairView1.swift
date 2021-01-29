@@ -10,7 +10,6 @@ import SwiftUI
 import RJSLibUFBase
 import RJSLibUFAppThemes
 //
-import UtilsDesignables
 import Utils
 //
 import AppRyanairCore

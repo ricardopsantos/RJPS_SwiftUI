@@ -4,10 +4,10 @@
 //
 
 import Foundation
-
+/*
 public enum CachePolicy: Hashable {
     case ignoringCache
     case cacheElseLoad
     case cacheAndLoad
     case cacheDontLoad
-}
+}*/

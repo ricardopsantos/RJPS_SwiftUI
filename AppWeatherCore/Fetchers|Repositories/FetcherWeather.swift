@@ -44,10 +44,10 @@ extension FetcherWeather: APIWeatherProtocol {
         }).store(in: cancelBag)
 
         switch cache {
-        case .ignoringCache: return apiSubscriber
+        case .noCacheLoad:   return apiSubscriber
         case .cacheElseLoad: return cacheSubscriberFailSafe
         case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
-        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        case .cacheNoLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
         }
     }
 
@@ -64,10 +64,10 @@ extension FetcherWeather: APIWeatherProtocol {
         }).store(in: cancelBag)
 
         switch cache {
-        case .ignoringCache: return apiSubscriber
+        case .noCacheLoad:   return apiSubscriber
         case .cacheElseLoad: return cacheSubscriberFailSafe
         case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
-        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
-    }
+        case .cacheNoLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        }
     }
 }
