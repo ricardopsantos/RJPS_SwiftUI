@@ -10,19 +10,6 @@ import RJSLibUFBase
 //
 import BaseDomain
 
-public extension Publisher {
-    var genericError: AnyPublisher<Self.Output, Error> {
-        return self.mapError({ (error: Self.Failure) -> Error in return error }).eraseToAnyPublisher()
-    }
-
-    func sampleOperator<T>(source: T) -> AnyPublisher<Self.Output, Self.Failure> where T: Publisher, T.Output: Equatable, T.Failure == Self.Failure {
-        combineLatest(source)
-            .removeDuplicates(by: { (first, second) -> Bool in first.1 == second.1 })
-            .map { first in first.0 }
-        .eraseToAnyPublisher()
-    }
-}
-
 public class APICacheManager {
     private init() {}
     public static let shared = APICacheManager()
@@ -61,7 +48,7 @@ private extension APICacheManager {
         if let cached = GenericStorableKeyValueModel.get(composedKey: composedKey),
             let value = cached.value,
             let data = value.data(using: .utf8),
-            let result = try? JSONDecoder().decodeSafe(type, from: data) {
+            let result = try? JSONDecoder().decodeFriendly(type, from: data) {
                 return result
         }
         return nil

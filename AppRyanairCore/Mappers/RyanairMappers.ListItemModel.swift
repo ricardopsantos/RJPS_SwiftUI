@@ -18,11 +18,13 @@ public extension RyanairMappers {
         trips.forEach { (trip) in
             trip.flights.forEach { (flight) in
                 let flightNumber = flight.flightNumber
-                #warning("unsafe. fix the !")
-                let date = DateFormatters.medium.string(from: Date.with(flight.timeUTC.first!)!)
-                let title = "\(flightNumber), \(flight.regularFare!.fares.first!.amount)€"
-                let subTitle = "\(date)"
-                acc.append(ListItemModel(id: flight.id, title: title, subtitle: subTitle))
+                if let time = flight.timeUTC.first,
+                   let dateWithTime = Date.with(time) {
+                    let date = DateFormatters.medium.string(from: dateWithTime)
+                    let title = "\(flightNumber), \(flight.regularFare!.fares.first!.amount)€"
+                    let subTitle = "\(date)"
+                    acc.append(ListItemModel(id: flight.id, title: title, subtitle: subTitle))
+                }
             }
         }
         return acc

@@ -7,11 +7,10 @@ import Foundation
 import SwiftUI
 //
 import RJSLibUFAppThemes
+import RJSLibUFBase
 //
 import Utils
 
-#warning("comentado")
-/*
 public struct ConnectivityView: View {
     @State var connectivity = ""
     let subTitle: String
@@ -24,7 +23,7 @@ public struct ConnectivityView: View {
             .foregroundColor(Color.red)
             .multilineTextAlignment(.center)
             .onAppear {
-                ConnectivityUtils.shared.monitor.pathUpdateHandler = { path in
+                RJS_NetworMonitor.shared.monitor.pathUpdateHandler = { path in
                     DispatchQueue.main.async {
                         if path.status == .satisfied {
                             self.connectivity = ""
@@ -35,4 +34,4 @@ public struct ConnectivityView: View {
                 }
         }
     }
-}*/
+}

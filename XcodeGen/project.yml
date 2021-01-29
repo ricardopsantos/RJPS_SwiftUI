@@ -59,7 +59,7 @@ packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
 #    from: 1.0.0
-    revision: 72b15ba63d83baa243602d75e829f91dc7b6cdcb
+    revision: 8be04fcc539a457915f46c0f3af6582a2ab0b01b
 
 ####################### TARGETS #######################
 ####################### TARGETS #######################  
@@ -82,7 +82,10 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFAppThemes
         link: true
-
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: true
+        
       #- target: AppHourlyChallenge
       - target: AppRyanair
         link: true
@@ -145,6 +148,9 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFBase
         link: false
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: false
       - target: BaseDomain
         link: false
         
@@ -176,7 +182,9 @@ targets:
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
-        product: RJSLibUFAppThemes
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
         link: false
       - target: AppRyanairDomain
         link: false 
@@ -219,6 +227,9 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFBase
         link: true ############################################
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: false
       - target: BaseDomain
         link: false  
         
@@ -250,6 +261,9 @@ targets:
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
         link: false
       - target: AppWeatherDomain
         link: false 
@@ -349,6 +363,9 @@ targets:
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
+        link: true ############################################
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
         link: true ############################################
       - target: UtilsExtensions
         link: false

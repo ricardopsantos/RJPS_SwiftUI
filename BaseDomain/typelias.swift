@@ -4,6 +4,10 @@
 //
 
 import Foundation
+//
+import RJSLibUFNetworking
 
 public typealias V = SchemeView
 public struct SchemeView { private init() {} }
+
+public typealias APIError = RJS_FRPNetworkClientAPIError
