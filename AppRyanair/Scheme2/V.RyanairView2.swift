@@ -8,7 +8,6 @@ import Combine
 import SwiftUI
 //
 import UtilsDesignables
-import UtilsExtensions
 //
 import AppRyanairCore
 import AppRyanairDomain

@@ -12,7 +12,6 @@ import RJSLibUFBase
 //
 import AppWeather
 import AppRyanair
-import UtilsExtensions
 
 struct AppRoot_View: View {
 

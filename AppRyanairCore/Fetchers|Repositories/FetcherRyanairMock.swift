@@ -11,7 +11,6 @@ import Combine
 import BaseDomain
 import AppRyanairDomain
 //
-import UtilsExtensions
 import DevTools
 
 public class FetcherRyanairMock {

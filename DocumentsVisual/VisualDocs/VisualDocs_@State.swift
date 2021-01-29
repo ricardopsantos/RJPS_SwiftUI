@@ -8,7 +8,6 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import UtilsExtensions
 
 var visualDocs_State_Intro: String = """
 Binding is a property wrapper type that can read and write a value owned by a source of truth. We have several possible types of sources of truth in SwiftUI.

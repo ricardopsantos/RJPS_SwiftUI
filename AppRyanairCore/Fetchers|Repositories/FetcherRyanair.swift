@@ -12,7 +12,6 @@ import AppRyanairWebAPI
 import AppRyanairDomain
 import BaseDomain
 //
-import UtilsStorage
 import Utils
 
 // The Fetcher will aggregate all deferent WEB APIs

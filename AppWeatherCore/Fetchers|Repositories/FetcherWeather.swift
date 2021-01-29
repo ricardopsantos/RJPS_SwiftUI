@@ -13,7 +13,6 @@ import AppWeatherWebAPI
 import AppWeatherDomain
 //
 import UtilsNetworking
-import UtilsStorage
 import Utils
 
 // The Fetcher will aggregate all deferent WEB APIs

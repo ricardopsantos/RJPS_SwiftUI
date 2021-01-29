@@ -7,8 +7,6 @@ import Foundation
 import Combine
 //
 import RJSLibUFBase
-//
-import UtilsExtensions
 
 public class SimpleNetworkAgentB: SimpleNetworkAgentProtocol {
     private init() { self.session = URLSession.defaultForConnectivity }

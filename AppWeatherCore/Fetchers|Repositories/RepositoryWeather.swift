@@ -8,8 +8,9 @@ import UIKit
 import SwiftUI
 import Combine
 //
+import Utils
+//
 import AppWeatherDomain
-import UtilsStorage
 
 public class RepositoryWeather: ObservableObject, RepositoryWeatherProtocol {
     public init() { }

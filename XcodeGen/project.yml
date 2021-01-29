@@ -118,7 +118,9 @@ targets:
 #      - target: UtilsDesignables
 #        link: false  
 
-####################### AppRyanair ##
+####################### AppRyanair #######################
+####################### AppRyanair #######################
+####################### AppRyanair #######################
 
   AppRyanair:
     templates: 
@@ -169,8 +171,6 @@ targets:
         link: false  
       - target: Utils
         link: false
-      - target: UtilsStorage
-        link: false
       - target: BaseDomain
         link: false
         
@@ -190,12 +190,12 @@ targets:
         link: false 
       - target: UtilsNetworking
         link: false
-      - target: UtilsStorage
-        link: false
       - target: DevTools
         link: false   
  
-######################### AppWeather
+######################### AppWeather ######################### 
+######################### AppWeather ######################### 
+######################### AppWeather ######################### 
 
   AppWeather:
     templates: 
@@ -248,8 +248,8 @@ targets:
         link: false  
       - target: BaseDomain
         link: false
-      - target: UtilsStorage
-        link: false
+#      - target: UtilsStorage
+#        link: false
       - target: DevTools
         link: false 
         
@@ -269,12 +269,14 @@ targets:
         link: false 
       - target: UtilsNetworking
         link: false
-      - target: UtilsStorage
+      - target: Utils
         link: false
       - target: DevTools
         link: false     
          
-######################### Generic Utils
+######################### Generic Utils ######################### 
+######################### Generic Utils ######################### 
+######################### Generic Utils ######################### 
       
   DevTools:
     templates: 
@@ -308,6 +310,12 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFBase
         link: true ############################################
+      - package: RJSLibUF
+        product: RJSLibUFAppThemes
+        link: true ############################################
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: true ############################################
         
   UtilsDesignables:
     templates: 
@@ -319,22 +327,20 @@ targets:
         product: RJSLibUFBase
         product: RJSLibUFAppThemes
         link: false
-      - target: UtilsExtensions
-        link: false
       - target: Utils
         link: false
         
-  UtilsExtensions:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../UtilsExtensions   
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
-        product: RJSLibUFAppThemes
-        link: true ############################################
+#  UtilsExtensions:
+#    templates:
+#      - Framework
+#    sources:
+#      - path: ../UtilsExtensions
+#    dependencies:
+#      - package: RJSLibUF
+#        product: RJSLibUFBase
+#        link: false
+#        product: RJSLibUFAppThemes
+#        link: true ############################################
         
   UtilsNetworking:
     templates: 
@@ -345,27 +351,25 @@ targets:
       - package: RJSLibUF
         product: RJSLibUFBase
         link: false
-      - target: UtilsExtensions
-        link: false
-      - target: UtilsStorage
+      - target: Utils
         link: false
   
-  UtilsStorage:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../UtilsStorage
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: true ############################################
-      - package: RJSLibUF
-        product: RJSLibUFNetworking
-        link: true ############################################
-      - target: UtilsExtensions
-        link: false
-      - target: BaseDomain
-        link: false
+#  UtilsStorage:
+#    templates:
+#      - Framework
+#    sources:
+#      - path: ../UtilsStorage
+#    dependencies:
+#      - package: RJSLibUF
+#        product: RJSLibUFBase
+#        link: true ############################################
+#      - package: RJSLibUF
+#        product: RJSLibUFNetworking
+#        link: true ############################################
+#      - target: UtilsExtensions
+#        link: false
+#      - target: BaseDomain
+#        link: false
     
   DocumentsVisual:
     templates:
@@ -378,11 +382,11 @@ targets:
         link: false
         product: RJSLibUFAppThemes
         link: false
-      - target: UtilsExtensions
+      - target: Utils
         link: false
       - target: UtilsDesignables
         link: false
-      - target: UtilsStorage
-        link: false
+#      - target: UtilsStorage
+#        link: false
         
  
