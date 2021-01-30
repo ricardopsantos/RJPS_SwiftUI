@@ -6,8 +6,7 @@
 import Foundation
 import Combine
 //
-import UtilsStorage
-import DevTools
+import Utils
 //
 import BaseDomain
 
@@ -42,10 +41,10 @@ extension SimpleNetworkAgentBExample: TestingAPIProtocol {
         }).store(in: &subscriptions)
 
         switch cache {
-        case .ignoringCache: return apiSubscriber
+        case .noCacheLoad:   return apiSubscriber
         case .cacheElseLoad: return cacheSubscriberFailSafe
         case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
-        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        case .cacheNoLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
         }
     }
 

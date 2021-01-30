@@ -3,163 +3,196 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00050DC7518891F913A752D4 /* VisualDocs_onEditingChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE77D9DE4A05F0DFB2CD270 /* VisualDocs_onEditingChanged.swift */; };
+		00996FD9A40CC394602EBF7A /* InfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F70AD1FF77511B1FED81AAF /* InfiniteScrollView.swift */; };
+		04512C8D28621FBFB97C5C34 /* SimpleMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA67B97408E0DBC8A0E9B3 /* SimpleMVVM.swift */; };
 		04627141BEFD0833FF2B787F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9818DDA833ACAE8D2C9081DB /* Assets.xcassets */; };
 		06B39F68C5441495DCD5C165 /* TO_DO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1B98ED7BE671F241B28ADA /* TO_DO.swift */; };
+		06CBBB1DE216A5174F7F59A5 /* VisualDocs_ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E54EF3AAA9C54F7E76ACDF /* VisualDocs_ForEach.swift */; };
+		06DC25FC0C9D3B71F6A14349 /* VisualDocs_ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622D4D31DA0F4FF7723CE5E /* VisualDocs_ErrorHandling.swift */; };
 		09552933C485FE3449A58A5F /* UtilsNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B99D7A853B5E89FDC615796 /* PublicCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DDF12D318A4AB2FEFA74C70 /* PublicCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D5B100F8B2A3508D3EEC612 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A7DE1333B603B4C1613A56 /* DateFormatters.swift */; };
 		0DEF8B15F6357A79D52E1346 /* DtoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04B23E92830D9865940927 /* DtoProtocol.swift */; };
+		108E5FDB738540BB4338B1AF /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B67088EDB34DBE5DDE06E4 /* UserDefaults+Extensions.swift */; };
 		118A94583F325D131D94E3C3 /* RyanairRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A6004D7F31ADECF70ADF4 /* RyanairRequestDto.swift */; };
 		1273C430EABCD1D94B5CBF02 /* B.WeeklyWeatherBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF7316D27C4486F36F6C787 /* B.WeeklyWeatherBuilder.swift */; };
+		129EB689E72F91B5B3530501 /* Recreating.Messages_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01C15F15CCEB8B7F1CD907 /* Recreating.Messages_I.swift */; };
 		13BB2FFD18C5841D4F063F94 /* typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D39E389A1EE0D5F8D3E92D /* typealias.swift */; };
 		14FE198734334E76C021637A /* V.MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57992B4A6D6BD68832380C2 /* V.MapViewRepresentable.swift */; };
+		1530078385889097232F48C5 /* Recrating.InstagramMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51FEC39EF31BC39517194B7 /* Recrating.InstagramMessages.swift */; };
+		15A142EDEFDB771800094A78 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EDE24D312B4435396B1C36 /* DateFormatters.swift */; };
+		15CE28610E9735856B9B0D7A /* DevTools+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3597E50C742BFAE0418398DF /* DevTools+Log.swift */; };
+		16D2A8C2669CCE04E85B35A7 /* UtilsDesignables.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D948CDEFC56DBA14DB784B /* UtilsDesignables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1841A9931D651AF816908518 /* RyanairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365D55A19F1E6F9E588392A7 /* RyanairModel.swift */; };
-		1ACA6B44177DD29F801CDE59 /* DevTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 20FB0DB882EACD3DCC78F3B1 /* DevTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B0EBC2FAD0D24C13F64489C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4C4444D076A9569A0ECBC /* View+Extensions.swift */; };
 		1B7C0571E6240E32E8D6B5EB /* APIRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09B4FFE152239DD97862409 /* APIRyanair.swift */; };
+		1C0D85327B8393572DBD76F7 /* VisualDocs_Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3583281A55ECE0D2107CE94 /* VisualDocs_Fonts.swift */; };
+		1CBF96BEFAB654999DC2F19A /* VisualDocs_Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D831C39D868017B60E776 /* VisualDocs_Animations.swift */; };
 		1E62DA891E2E80E5132A5F78 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E58DE91B235ED37BFAA2B4 /* typelias.swift */; };
-		233EDBB14D92663C3324B6D0 /* DesignablesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4387B5AB3A663F43C5FCB89 /* DesignablesFactory.swift */; };
+		1EDA9B1D408A0B056E388F29 /* DesignablesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA9CFA4506924F7ADC0AC0 /* DesignablesFactory.swift */; };
+		1F82455987CE75AC46DD71A9 /* VisualDocs_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D20E641AC8412EB36136DDE /* VisualDocs_Colors.swift */; };
+		2119490B5C59E1B762B0D956 /* VisualDocs_NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E2CA68814A787CED497F9F /* VisualDocs_NavigationView.swift */; };
+		21A0D088C207537AD5D2B65C /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A9C2A58E5C0E4441940D45 /* ActivityIndicatorRepresentable.swift */; };
+		24197EFAE1670186B8A9DF63 /* VisualDocs_WaysToReactToState_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460CC3B5125FCC54BDF02D4 /* VisualDocs_WaysToReactToState_I.swift */; };
+		250E879C4FD00BBC083D5C8A /* Recreating.Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F9C7D43ECC080487B3D46 /* Recreating.Reminder.swift */; };
+		25C4B65F430A541CD186DBCE /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F61173993B9FD61AADD4 /* TextField+Extensions.swift */; };
+		25D4817CD3E523F2CF92A834 /* VisualDocs_RemoteImageLoadging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8273F863B5D5E5FDDE7210 /* VisualDocs_RemoteImageLoadging.swift */; };
+		2647F53F747BA0263674E635 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7893E50FF6CD9AA4D1A181E0 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift */; };
+		265FCB63066D13CB8EA4F52B /* ScrollEffect3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921AE610DC269EC6CB22A1A /* ScrollEffect3D.swift */; };
 		2675FBCA900C96C6C5EB941C /* APIRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516123A9B1D038EECB64F5E /* APIRyanairProtocol.swift */; };
 		269EF91E0E8DCD28FF04409C /* RepositoryRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743E095F591F0A57DD810BD6 /* RepositoryRyanair.swift */; };
+		29639FE655152D99B93C9AB2 /* VisualDocs_@State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E09AA21E80F9FA8785498 /* VisualDocs_@State.swift */; };
+		2CCBFDD8801502118584C0C4 /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A8FF7395A94ABE15B2442 /* ConnectivityView.swift */; };
 		2DB8D4A5F3B3C3B754421AD8 /* RepositorRyanairProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18081A0AE1324D6C848053E5 /* RepositorRyanairProtocol.swift */; };
-		3123708008B852D2063FB22F /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC3D8D6F4B16B600E11402A /* UserDefaults+Extensions.swift */; };
-		335A0EC57D8C2782A72E926D /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7C61E5983D86F5E316ED42 /* TextField+Extensions.swift */; };
+		2FEC435EC574B4706586B473 /* VisualDocs_horizontalSizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8796654DC0E688BE870F246 /* VisualDocs_horizontalSizeClass.swift */; };
+		30DC13826D95DAF4AD74A0ED /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE986DF58B24C6AEE885F4 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */; };
+		33DBCF22EE3EAA1B4A54C2C6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA5C0657C599FFA54A96DA5 /* UIColor+Extensions.swift */; };
+		343FF00F6CAB0A0713F7D509 /* VisualDocs_TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E525AC89A7806A2C450AAC /* VisualDocs_TimerView.swift */; };
 		36AD25FE9CCB9C11F5EA7A54 /* RJSLibUFAppThemes in Frameworks */ = {isa = PBXBuildFile; productRef = 9706A851856364DAC568272D /* RJSLibUFAppThemes */; };
 		3788AC5FBC6F26F444A0B22F /* APIResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D474052E4A1C3E8A01B29B3 /* APIResponseDto.swift */; };
 		39E2AB73E2002EA8874BAEF4 /* V.RyanairView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */; };
 		3A2AB111687E2D73B3CE84FE /* SimpleNetworkAgentBExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1E64CE7A0FB8851ABA010 /* SimpleNetworkAgentBExample.swift */; };
-		3B81A17D7CD05B0ABEE4F839 /* typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA020DA930FD99560F9077 /* typealias.swift */; };
+		3AC678DE6BBFD2008BD263D3 /* Recreating.Maps_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2F2A2A45862C0F0438B181 /* Recreating.Maps_I.swift */; };
 		3BBCDD720030249B16C670BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D56DD18A6E5642F1E13910 /* AppDelegate.swift */; };
 		3C6E04BFE46D59C867C3119B /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE426F17613140C5164C43 /* typelias.swift */; };
+		3D98E6F490313C002A17799C /* VisualDocs_Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920124B4A60455191B01CC9 /* VisualDocs_Buttons.swift */; };
+		3ECA5E5EDC0C10C358738DB7 /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE16F18A8D384CD96D4D6D6 /* NavigationStack.swift */; };
+		41F51FE3159675D6109A8368 /* Recreating.Instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466CDB73CD79FE25894A5DA /* Recreating.Instagram.swift */; };
 		42BE51C3FE17E1FF7F265B6C /* FetcherWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940EEF606815CB243DEC289 /* FetcherWeather.swift */; };
 		430AA7F05DD28D2A9B0A0A72 /* VM.RyanairView2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BD84DFD6AB35DB926EA1C /* VM.RyanairView2ViewModel.swift */; };
+		4608E2FB149D4BDAFD0528AC /* Recreating.LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3FD0B6A6F37B2ACE385D6F /* Recreating.LockScreen.swift */; };
 		4628DEEC062AD48BC4B21559 /* V.CurrentWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF52A58C8DDDA59C5C146DF /* V.CurrentWeatherRowView.swift */; };
 		46CD3B86D8DD69DAC5A259FB /* RepositoryWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985AB94FEB80BF0E4246790 /* RepositoryWeatherProtocol.swift */; };
 		475D7C1690EB2861401881EF /* AppWeatherDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47DB132B8F668C5766901A63 /* RJSLibUFStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DA18E7AC4895AEF865EEC2F8 /* RJSLibUFStorage */; };
 		49EF4DCE7A592D5454184683 /* AppRyanair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE3471A14A96927FFE2F660 /* AppRyanair.framework */; };
-		5155AEE0A200E84217C26920 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04193C0E8DFCAD9C0C50467 /* UserDefaultsPropertyWrapper.swift */; };
+		4A27BBA6DA2A7CDA7F305CC1 /* VisualDocs_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406CF4833D142D77B4C2267 /* VisualDocs_onDelete.swift */; };
+		5230AC29FC46BDE4ADDB1DE4 /* VisualDocs_sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E63428CDF9748B3940979 /* VisualDocs_sheet.swift */; };
 		528CC5348DE53455443E791C /* VM.RyanairView1ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D232B6F5748ACBD851F8E4 /* VM.RyanairView1ViewModel.swift */; };
 		5346B17AC7A5BCD0E7CE8086 /* WeatherMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CAED30B0C8D189CF816854 /* WeatherMappers.swift */; };
 		53B53B7026B70EE09FC66F06 /* VM.CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DD31F68722031B518A1C6D /* VM.CurrentWeatherViewModel.swift */; };
-		581EC5340FF09B133A61D563 /* RJSLibUFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = ADAB3D971FCFA0BD12316626 /* RJSLibUFNetworking */; };
+		54C597D74B4112B449C077D6 /* RJSLibUFAppThemes in Frameworks */ = {isa = PBXBuildFile; productRef = 38262CE2E7E1E88352C3767C /* RJSLibUFAppThemes */; };
+		5511EDD2F154B76813A8D0E2 /* VisualDocs_@Published.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1551FE4E9C323C5D1AC614 /* VisualDocs_@Published.swift */; };
+		572E2EB4C78D9B8D4B117087 /* VisualDocs_Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C314B4851483F9E3124E376 /* VisualDocs_Padding.swift */; };
+		57A97B078FBCD69ECBC492A3 /* VisualDocs_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80533931C258A91D70E22EE5 /* VisualDocs_Image.swift */; };
+		582E2471C74DCFB068A32A0E /* GenericStorableKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD2B3F9F326A99DA7E417C /* GenericStorableKeyValueModel.swift */; };
+		583640FF61DF476F740BC8CE /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA223F2FF54D28E6D97AF65 /* View+Extensions.swift */; };
+		58A661E8EE0D6B52FA0145D2 /* VisualDocs_SwiftUI_Lab_Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C90045A7AEBCCCEE3AF11 /* VisualDocs_SwiftUI_Lab_Triangle.swift */; };
 		5D896BC088485A18F0A2DE1D /* AppRyanair.h in Headers */ = {isa = PBXBuildFile; fileRef = C9ACA0820776505AA5F25627 /* AppRyanair.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E084C49AED2A7D8D44B580A /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9597886916DBF70B75B17A06 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F0A8994E7FA9248B6E0B7F1 /* E.APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D19BB993642FC3274E0012 /* E.APIError.swift */; };
-		5F6320B52E9FEEA011F32382 /* DevTools+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33295B4DC3BB89FE216C3978 /* DevTools+Log.swift */; };
-		61A95175EBFBB043D0A06949 /* UtilsDesignables.h in Headers */ = {isa = PBXBuildFile; fileRef = ED33B95737D6042FD0225FCD /* UtilsDesignables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61BDCA47F3527A5FAC9FDAF5 /* V.DailyWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC704D763B3C7A595E9FBF /* V.DailyWeatherRowView.swift */; };
-		635A677ECC2EBF967767D17E /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D942D9DF0D7F58F6B54FB /* ActivityIndicatorRepresentable.swift */; };
-		63E8A1B6E3830CE6B43B80A6 /* DevTools+FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0B0004D79F094E69BD215 /* DevTools+FeatureFlag.swift */; };
 		63EA756AA4AEA8124A107F5F /* WeatherResponseDto.WeeklyForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79A51B4BE479DA4CA721C73 /* WeatherResponseDto.WeeklyForecastEntity.swift */; };
 		645805E5BF2D1C862E6E18A6 /* WeatherRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8BA314105EE778D3A0B42 /* WeatherRequestDto.swift */; };
 		645E72B62615FA2EFC89C384 /* SimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB61DE8BE63DE516A3DA03E0 /* SimpleNetworkAgentProtocol.swift */; };
 		6666ECCFB99DCFB535515F7C /* RyanairRequestDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94FB6291970E6A6830B92D5 /* RyanairRequestDto.Availability.swift */; };
 		6699483372A7F65142423777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A956A64686C90154E9CC42D0 /* LaunchScreen.storyboard */; };
 		66C5B026F4470CD1E729AFA0 /* FetcherRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB85B59071A9F6828F2A54 /* FetcherRyanair.swift */; };
-		66E6F55021348BCBCC9FB8DF /* E.CachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */; };
 		6909AC7CBEB624DE4F26C03E /* RyanairResponseDto.Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72E09A198ED1228911C16 /* RyanairResponseDto.Stations.swift */; };
 		69D1B0013EBCBCBBA88F3722 /* V.RyanairView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */; };
-		716AE619B08813E431C3F164 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD3857012AE71FC85B8D561E /* Keys.plist */; };
-		728A18968EEB963694A92E0D /* UtilsStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A50F9EED51906E70BB7E600 /* VisualDocs_Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206DFAC93A3570553640E407 /* VisualDocs_Shadows.swift */; };
+		6E2F4527783BDC4E1B8649F5 /* VisualDocs_Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC821680DAB3E28A33C711F6 /* VisualDocs_Form.swift */; };
+		710A3894044C0C61BD335753 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE404817E4B4087E5FF78F7A /* PasswordChecker.swift */; };
+		71AADD660A7DA3EF1B8D149F /* Recreating.HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8E0194026BAA33EB3FEEDF /* Recreating.HomeScreen.swift */; };
 		73490E5C5C2A67496B5D3D19 /* AppRyanairDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = A0092ECE406080F9E83F0461 /* AppRyanairDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		772C29D04B615D1158153D45 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82168D8E998A15A4A106A299 /* ActivityIndicator.swift */; };
 		773E655F0E7C294FD9769F21 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EB43AE939660E7765C785 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift */; };
+		777DF90EF2A03680DA9D5201 /* VisualDocs_RouteToAndCameBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1AC39774E40E819A3315F6 /* VisualDocs_RouteToAndCameBack.swift */; };
 		78272CB36419DC5661802BFB /* AppWeatherWebAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = F492B00701E0FB853EBBF7DA /* AppWeatherWebAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C718A9987C9707FD89C605D /* PointFreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F441540CDD44B916CB37753 /* PointFreeFunctions.swift */; };
+		7A87E4A0072283C121AD1C3F /* VisualDocs_@EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC12AD87134A93389315FC5 /* VisualDocs_@EnvironmentObject.swift */; };
 		7CCD3B2925CFEA886DE1F05D /* FetcherWeatherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608CE52D6E2AEB0627F7FBE6 /* FetcherWeatherMock.swift */; };
+		7D7C6E145D0B5504156558A5 /* VisualDocs_@Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DF45427F05B67EC6249595 /* VisualDocs_@Binding.swift */; };
 		7DDFBBFCE62E24798C7FDA30 /* AppRyanairWebAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 69AE8FE7EE588489D853ED2C /* AppRyanairWebAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E0D07B46282CB6B5DC8A533 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1BBB26EB5EAC319DBBEC1 /* UIColor+Extensions.swift */; };
 		7F5280D9814FC32783680571 /* SimpleNetworkAgentA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275748A320F05952058A15AE /* SimpleNetworkAgentA.swift */; };
-		7F9B081051B01B8987F9FC46 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF414F1644C5D16EAED64E71 /* CacheUtils.swift */; };
 		7FF85E06A4F0889312FB4B98 /* V.CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059BC945D323BB6A54ED5E66 /* V.CurrentWeatherView.swift */; };
+		80381CDC816063C5ECFAFD80 /* Recreating.Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA64233B772478D7EC32A15 /* Recreating.Twitter.swift */; };
+		805BF96286D995B8E13AE9D9 /* VisualDocs_onReceive.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE599E5EAFCD6DEC1F67597 /* VisualDocs_onReceive.swift */; };
+		808801FDA03A9E9E034E1974 /* Recreating.AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C0213CF19D2A77B7B69CF /* Recreating.AppStore.swift */; };
 		8155D163545B9692E8A89828 /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F7AF84C93894F4C73A2A02 /* typelias.swift */; };
+		83F6FBA78E5C6DE42FC75DEB /* ShowAlertContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3567CFD1CB96CE158AAFA0F7 /* ShowAlertContentView.swift */; };
 		857AC522A27421F09ECF9DA3 /* VM.WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CF494755B297A20A4B750 /* VM.WeeklyWeatherViewModel.swift */; };
-		8B716FB0592992FAE9C0BFA2 /* Designables_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789AEE850DAEA200BE10E930 /* Designables_Preview.swift */; };
 		8C207013E32C1A5DCD535866 /* AppWeather.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6AAF1E9FCBB123D19C4133 /* AppWeather.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91E5E01AA0E8D2A29B9DA61E /* FetcherRyanairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68688B397AA2018723E867BB /* FetcherRyanairMock.swift */; };
-		93409F6050185749C103C5D9 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD8CE1BFCCA5D8B52A2BC1 /* Locale+Extensions.swift */; };
 		934E8B830CB5C418BD4B5848 /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = E7F97941A5B3C2A856934172 /* RJSLibUFBase */; };
 		981618B849D8060D1C79CD65 /* RepositoryWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258D8B589FD2081F91282AD /* RepositoryWeather.swift */; };
+		9C8EA5DBCC9F51CD9F0DF573 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3086D6BCCA52EB6DDA0815B6 /* CacheUtils.swift */; };
+		9CA1968B04FCD20850832769 /* VisualDocs_Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08F1095ECFC07264A3281AB /* VisualDocs_Lists.swift */; };
 		9D3C65F6E6EE77DC60927D9F /* AppWeatherCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 425E886BADCBCA866DF3F3AC /* AppWeatherCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D8AB4894F5B9F109FD46CB5 /* RyanairModel.AirPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424FC20AA4CF7EB3825B3801 /* RyanairModel.AirPort.swift */; };
+		9DC9651BA847F4D26E05E539 /* VisualDocs_Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60484B11B63AA671A97C3 /* VisualDocs_Background.swift */; };
+		9DE717E9D92A227F4B605E21 /* SendEMailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A8A475BBDB2109B3DCB21 /* SendEMailViewControllerRepresentable.swift */; };
 		9DF6F8ADD9B1E3435C94027E /* B.RyanairView2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */; };
-		9EE54EAA9A028E53CA0A3F45 /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0F75B75457282FB4A2712 /* ConnectivityView.swift */; };
 		9F7F73E7602C391D2F831A92 /* RyanairRequestDto.Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1DCE16F76D0EE2FA5DDDF /* RyanairRequestDto.Stations.swift */; };
 		A347C5C253B2D790BA702BC1 /* WeatherRequestDto.Wheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC57391BC67EEC13B7CED /* WeatherRequestDto.Wheater.swift */; };
 		A370C0944A340B4E04BF6ADC /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = FC29B98246696EBB7663FC70 /* RJSLibUFBase */; };
 		A4F205C468A933F0DF4D19F9 /* BaseDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BF426C78331EDE88D4BE70 /* BaseDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A590200DD606C46AA6C93A95 /* GenericStorableKeyValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D847CC0AE405D19FF5A7 /* GenericStorableKeyValueModel.swift */; };
+		A6BE6CC1234E8D9282F36E16 /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BE62660EF57771AEF3483 /* Recreating.Messages_II.swift */; };
 		A7031918D6FE5D86D12F2CE0 /* Response<T>.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED715D8344B2531862EC197 /* Response<T>.swift */; };
 		ABA86E54721573FA65F43ADC /* WeatherResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C38BC66C8A48BE23E3C55C /* WeatherResponseDto.swift */; };
 		ABCE65918E7078BADD8B57A1 /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50218750F0988469529868 /* BuilderProtocol.swift */; };
+		AF5508C1A4006F4B1661328A /* Recreating.Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1835FFC152A7EDED5AA9AF2 /* Recreating.Settings.swift */; };
+		B0A31D7B7C3C90AF262FFACF /* Recreating.Maps_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6AC8A5AF680AC0DE48F58 /* Recreating.Maps_II.swift */; };
+		B257B8017DDCCF4864860891 /* typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D2DEBEC3AD9ECF787D71F4 /* typealias.swift */; };
 		B3CD2C91DF8CCC5589C5913B /* B.CurrentWeatherViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664B45544D230A5F4455799 /* B.CurrentWeatherViewBuilder.swift */; };
 		B4E6F630785DEDA481945E81 /* APIWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D673A3A8070290C2819496 /* APIWeather.swift */; };
-		B7696F1A5610D242447252B8 /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE3253DF3DB49296298C7D /* APICacheManager.swift */; };
 		B869F734A9E2A1A240168D69 /* AppRoot_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456212E58E54AD3DAE404733 /* AppRoot_View.swift */; };
+		BD0459C2670F6E644ACED6F7 /* Designables_PassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C6F1ED6364E85DD739F9C /* Designables_PassCode.swift */; };
 		BDF8A85BF781C8CE10C97818 /* RyanairMappers.ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17489FD4902A191E848C573 /* RyanairMappers.ListItemModel.swift */; };
 		BEDB581C65FEA845EAE21FC1 /* RyanairResponseDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8006111CD5C46C1E53C37674 /* RyanairResponseDto.Availability.swift */; };
+		BF35F2CFC770C5D4EEE48B55 /* VisualDocs_LayoutInScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E178D20FA1E108EC0EDAD54A /* VisualDocs_LayoutInScrollView.swift */; };
+		C01C84C7DF6A52BF6B521C91 /* PointFreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EC0566D6F7B70F672E16F /* PointFreeFunctions.swift */; };
+		C3696336E1B504BD567D53DD /* VisualDocs_UserDefaultsWithPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7496840A6A53B76DACF9B7 /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */; };
 		C414B5014DE52B3E8DA0E616 /* DevScreen_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1C98534C09965470282DE /* DevScreen_View.swift */; };
-		C831D30D7D8CF65A9B61A8EE /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = D399AB77AD25504888AF0B11 /* RJSLibUFBase */; };
+		C56E5266EF0B8DB450D489C6 /* DocumentsVisual.h in Headers */ = {isa = PBXBuildFile; fileRef = FB031CB87332A957DC77B903 /* DocumentsVisual.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C689A9619EA21718D1E37BB8 /* Recreating.iPhone12ProWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590EB07DA602F86299D87BD /* Recreating.iPhone12ProWebsite.swift */; };
+		C9B995B4DF91E48400202F1D /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571E6FFD03240EEF637DFAD7 /* APIKeys.swift */; };
 		C9C570501E69CA0A21C35EA9 /* AppRyanairCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB093C839136CB04360A277 /* AppRyanairCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA6B954E19310923FB5837F1 /* VisualDocs_Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD2D81429C645BC1F42566 /* VisualDocs_Text.swift */; };
 		CB25A315F5D099A6852E77CA /* V.WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A108CE142B5EC6599A1BDB /* V.WeeklyWeatherView.swift */; };
 		CBAEAE2B98960C47B8764B6A /* WeatherRequestDto.Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3CB7C864DAD83DDDCF2A42 /* WeatherRequestDto.Forecast.swift */; };
-		CBEAE46FEBA82875AF86E2E5 /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82B964635EB2B85B693C81 /* DevTools.swift */; };
 		CCFB6E3CD6C035D25197D85F /* SimpleNetworkAgentsUsageComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DEBA0F8F9689F4BAB94553 /* SimpleNetworkAgentsUsageComparison.swift */; };
 		CE09950359429E7285B2E45C /* VM.CurrentWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715D3A7043B6C4324AA8D74E /* VM.CurrentWeatherRowViewModel.swift */; };
-		CF72803BFC22FA03E77C6453 /* Designables_PassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA276BB503306AA54981962 /* Designables_PassCode.swift */; };
-		D1A0A9F449700820539EDA22 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F4BF33DBC25A9F9BB1A08 /* APIKeys.swift */; };
+		D1F0E3842B8E010CDE3E0790 /* VisualDocs_Binding.State copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42570CAA24B352463CE7238D /* VisualDocs_Binding.State copy.swift */; };
 		D2F2584CCCCE11D4001CE3A8 /* RyanairMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5037BB498ECC16D7DF38DAE /* RyanairMappers.swift */; };
 		D33FEC4F9A08DD2640CA4EDF /* B.RyanairView1Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B7E236BAA16E513A7E002 /* B.RyanairView1Builder.swift */; };
+		D392CAD6B7A8A2213C5E0EBA /* Recreating.Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F8CF95BF937F522B91BD3D /* Recreating.Breathe.swift */; };
 		D53BABA519E4E42F50992EB7 /* AppWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00142DDB2ECACE3920DAE95D /* AppWeather.framework */; };
-		D5569458AAAF060EE6FDB19F /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B3DBF5C63C982B765FFEA4 /* NavigationStack.swift */; };
+		D5B6AC7147D79052CBF619BA /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA579D82D4F55326AF96BCE5 /* DevTools.swift */; };
 		D7D6C6FE273093A72D9059AD /* VM.DailyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB083902EF90FC9C173BB47 /* VM.DailyWeatherRowViewModel.swift */; };
+		D8101C72AA4F5AFBFE571172 /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA93689C55495FAC5A04BBF /* Recreating.Messages_III.swift */; };
 		D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD91DCBA8848FE6F8FB333 /* typelias.swift */; };
 		DBC31ED88008F4F2410CB706 /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = 47EF46B4A8B4B5A00081A60D /* RJSLibUFBase */; };
 		DDFD722A9D63A67CB5267E26 /* SimpleNetworkAgentB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18DB623F1370C2C67568B26 /* SimpleNetworkAgentB.swift */; };
+		DEE23A98B2141AAC5AEA411B /* RJSLibUFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = C13C58B70DF704124323EC93 /* RJSLibUFNetworking */; };
 		DFB119BBF4DB4DFD083155F5 /* SimpleNetworkAgentAExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8248CE791F182234BB50A7F9 /* SimpleNetworkAgentAExample.swift */; };
 		E019C0DDE35ECFFD2CCC229A /* RJSLibUFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 1331DB20F431ACFEB1BB9D37 /* RJSLibUFNetworking */; };
+		E4C39E0B5177F9B5F97F6AE5 /* DevTools+FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B530CA65F540FB433426F5 /* DevTools+FeatureFlag.swift */; };
 		E60227E8630F23A686EBE883 /* SimpleNetworkAgentExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B191024DE3720148499E1E0 /* SimpleNetworkAgentExampleProtocol.swift */; };
 		E627AA0EF58588AEFFFDDD2E /* APIWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CED726603B355821BE044 /* APIWeatherProtocol.swift */; };
-		E636E87848B010CE96590DB8 /* UtilsExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 36C921D39E8B9C4D87D3ACC4 /* UtilsExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6B0FD2425936423B5DE8B16 /* AppWeather.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00142DDB2ECACE3920DAE95D /* AppWeather.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6FCA1D088043D68288D7B71 /* VisualDocs_TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BBD0E5AF9F4B2D9E78415 /* VisualDocs_TabView.swift */; };
+		E838AEE3A0B63FC19505CF1A /* Designables_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7560C7572BEF95E83488B /* Designables_Preview.swift */; };
 		E891FFF297C9C116E830AC0E /* AppRyanair.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAE3471A14A96927FFE2F660 /* AppRyanair.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EADF4EEC3C804126FA9BBC1C /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2AD8566582991ABCB8113 /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */; };
 		EB50D3579087EAAE8D3B802E /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C36CF52FF3AE980140601C /* typelias.swift */; };
+		EB91F31940821965D3C75BFF /* VisualDocs_Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26721742A209BE71BFB7CF /* VisualDocs_Shapes.swift */; };
+		ED9A0751500538387B3E86D5 /* APICacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2F89A4574F9E1ECD9CADEC /* APICacheManager.swift */; };
+		EE5DDF4CE619001A3D3D274F /* VisualDocs_WaysToReactToState_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947D447A084ED83E7DC65C4 /* VisualDocs_WaysToReactToState_II.swift */; };
+		EFD4E5069A37640FDCA3CC8C /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF67281D0E1B918C81BA72 /* Recreating.Tinder.swift */; };
 		F52B6B40991984B3FDAE9E14 /* RyanairResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530974CA2A600E6375E5AAF /* RyanairResponseDto.swift */; };
+		F85452A19511D3F6B139ADA1 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B46176F369B2E97E6C164 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */; };
 		FF35B77A76F93E27CF329B10 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DBF5FB5AF431F74F5B0DC /* ListItemModel.swift */; };
+		FFF3B2FC2F1F11F4C596C109 /* VisualDocs_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6F88A8F5E03DCA2430BD8 /* VisualDocs_Combine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		01840F6DA83110C5BD3D7D74 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 81F8949F21D457612CC2D643;
-			remoteInfo = UtilsExtensions;
-		};
 		03D78C3E87772A93555F7284 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 76205C43CAA0CA483701CCA2;
 			remoteInfo = AppWeatherDomain;
-		};
-		0FE8F3286D849522698782FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 81F8949F21D457612CC2D643;
-			remoteInfo = UtilsExtensions;
-		};
-		152D859E22B5E986805501FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24E2F185AE418FA7D9A28F55;
-			remoteInfo = UtilsStorage;
 		};
 		1B4CE484161B1E51F87378AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -168,26 +201,12 @@
 			remoteGlobalIDString = A6FF042F23D45338EF7072DC;
 			remoteInfo = AppWeatherWebAPI;
 		};
-		1BA57EE0C32090EDB04D2825 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24E2F185AE418FA7D9A28F55;
-			remoteInfo = UtilsStorage;
-		};
 		2086E433675AE16AE923573F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4F1D977177BB9890B6DA92B1;
 			remoteInfo = BaseDomain;
-		};
-		4B6D954B8ADC035D0FBA808D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24E2F185AE418FA7D9A28F55;
-			remoteInfo = UtilsStorage;
 		};
 		5B2F6318F0A7054E53350D23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -210,13 +229,6 @@
 			remoteGlobalIDString = C5484B918A35A508BD381F76;
 			remoteInfo = AppRyanair;
 		};
-		68097363896A50B8A03B4B65 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9938DB06F947F0FEBD148F29;
-			remoteInfo = DevTools;
-		};
 		68362D9165125338F033F348 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
@@ -224,12 +236,12 @@
 			remoteGlobalIDString = 4F1D977177BB9890B6DA92B1;
 			remoteInfo = BaseDomain;
 		};
-		695D265F0F6DD3B014B784AD /* PBXContainerItemProxy */ = {
+		6BC8BBF27B5D210EC48F0307 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 30C57D83104BF50CFBBBC766;
-			remoteInfo = UtilsDesignables;
+			remoteGlobalIDString = F184BB3F918849F5A968AB3E;
+			remoteInfo = Utils;
 		};
 		70E4C72F93BA924411F4DDCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -245,19 +257,12 @@
 			remoteGlobalIDString = C03D931CCBA6BE8F06C2E384;
 			remoteInfo = AppRyanairDomain;
 		};
-		83F6175490E3249F39487B5F /* PBXContainerItemProxy */ = {
+		86341B99B9D404871E93431A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 81F8949F21D457612CC2D643;
-			remoteInfo = UtilsExtensions;
-		};
-		8E086E449D15ADF07E9000CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 30C57D83104BF50CFBBBC766;
-			remoteInfo = UtilsDesignables;
+			remoteGlobalIDString = F184BB3F918849F5A968AB3E;
+			remoteInfo = Utils;
 		};
 		9696BDE53372A4B60A7353F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -265,20 +270,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4F1D977177BB9890B6DA92B1;
 			remoteInfo = BaseDomain;
-		};
-		972C28908CF25B4FA0E71170 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9938DB06F947F0FEBD148F29;
-			remoteInfo = DevTools;
-		};
-		9B187923A9B6977243DE973A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9938DB06F947F0FEBD148F29;
-			remoteInfo = DevTools;
 		};
 		A629CA265AB4EB5502143B11 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -294,12 +285,33 @@
 			remoteGlobalIDString = BE9567AA6C7A6370EEE7777B;
 			remoteInfo = AppRyanairWebAPI;
 		};
+		B0A3FA71FA6171AB3C392D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F184BB3F918849F5A968AB3E;
+			remoteInfo = Utils;
+		};
 		B68BAEC8B62F8895660D73D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F50E542FE14495F45669D9A8;
 			remoteInfo = AppWeather;
+		};
+		B9D4DA0F1F89016164AB643E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F184BB3F918849F5A968AB3E;
+			remoteInfo = Utils;
+		};
+		BAF0192E2DBCA510814EF3AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F184BB3F918849F5A968AB3E;
+			remoteInfo = Utils;
 		};
 		C88EB9D89529D066B38834FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -329,12 +341,12 @@
 			remoteGlobalIDString = 4F1D977177BB9890B6DA92B1;
 			remoteInfo = BaseDomain;
 		};
-		DBD7767D3B2081FEBB1263F6 /* PBXContainerItemProxy */ = {
+		D7843BED65CF88AFDF240FF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 24E2F185AE418FA7D9A28F55;
-			remoteInfo = UtilsStorage;
+			remoteGlobalIDString = F184BB3F918849F5A968AB3E;
+			remoteInfo = Utils;
 		};
 		DC3503440AB2DCE2F7D3704E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -343,33 +355,12 @@
 			remoteGlobalIDString = 6CF5363003A8AA1F1F751B31;
 			remoteInfo = UtilsNetworking;
 		};
-		DEF1915ABFAE5FAFF9F956B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F184BB3F918849F5A968AB3E;
-			remoteInfo = Utils;
-		};
-		E8CEA19D7615BA048380C845 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24E2F185AE418FA7D9A28F55;
-			remoteInfo = UtilsStorage;
-		};
 		EAC39930811C1B34D338E317 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 76205C43CAA0CA483701CCA2;
 			remoteInfo = AppWeatherDomain;
-		};
-		F114BD028DF144A5D3FE5D6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5618CBA7ACB9538F7B0D4246 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F1D977177BB9890B6DA92B1;
-			remoteInfo = BaseDomain;
 		};
 		F3F4D8AC26C577DACE5BB6F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -409,68 +400,84 @@
 		059BC945D323BB6A54ED5E66 /* V.CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherView.swift; sourceTree = "<group>"; };
 		05DEBA0F8F9689F4BAB94553 /* SimpleNetworkAgentsUsageComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentsUsageComparison.swift; sourceTree = "<group>"; };
 		06C36CF52FF3AE980140601C /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
+		0920124B4A60455191B01CC9 /* VisualDocs_Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Buttons.swift; sourceTree = "<group>"; };
 		0940EEF606815CB243DEC289 /* FetcherWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeather.swift; sourceTree = "<group>"; };
 		0AB083902EF90FC9C173BB47 /* VM.DailyWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DailyWeatherRowViewModel.swift; sourceTree = "<group>"; };
+		0AEE986DF58B24C6AEE885F4 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift; sourceTree = "<group>"; };
+		0BA93689C55495FAC5A04BBF /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
+		0BE60484B11B63AA671A97C3 /* VisualDocs_Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Background.swift; sourceTree = "<group>"; };
+		0C01C15F15CCEB8B7F1CD907 /* Recreating.Messages_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_I.swift; sourceTree = "<group>"; };
 		0C33EF15820822B333C09DD2 /* NotesAndReferences.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NotesAndReferences.md; sourceTree = "<group>"; };
 		0CF124C35989E2A72EE5B03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.simplified.viz; sourceTree = "<group>"; };
+		0D20E641AC8412EB36136DDE /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
+		0E7C6F1ED6364E85DD739F9C /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
+		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; path = Graph.simplified.viz; sourceTree = "<group>"; };
 		18081A0AE1324D6C848053E5 /* RepositorRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorRyanairProtocol.swift; sourceTree = "<group>"; };
+		188A8FF7395A94ABE15B2442 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
 		18AB46AF3E560DDFC6B3D8FB /* UtilsNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DD31F68722031B518A1C6D /* VM.CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
+		19E2CA68814A787CED497F9F /* VisualDocs_NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_NavigationView.swift; sourceTree = "<group>"; };
 		1A770CA6C776F702CEDB0A87 /* Operators_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Operators_1.png; sourceTree = "<group>"; };
 		1AC93243F1B250D0CD8DDAB3 /* Article_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article_2.pdf; sourceTree = "<group>"; };
-		1CC0A8E28E5CACA015BCFECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		1CD0B0004D79F094E69BD215 /* DevTools+FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+FeatureFlag.swift"; sourceTree = "<group>"; };
+		1B7496840A6A53B76DACF9B7 /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_UserDefaultsWithPropertyWrapper.swift; sourceTree = "<group>"; };
 		1D474052E4A1C3E8A01B29B3 /* APIResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseDto.swift; sourceTree = "<group>"; };
-		20FB0DB882EACD3DCC78F3B1 /* DevTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevTools.h; sourceTree = "<group>"; };
+		1D7A8A475BBDB2109B3DCB21 /* SendEMailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEMailViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		1DA5C0657C599FFA54A96DA5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		206DFAC93A3570553640E407 /* VisualDocs_Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Shadows.swift; sourceTree = "<group>"; };
 		220B7E236BAA16E513A7E002 /* B.RyanairView1Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView1Builder.swift; sourceTree = "<group>"; };
-		249ABFC46F1D302386E9C2FC /* UtilsDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2466CDB73CD79FE25894A5DA /* Recreating.Instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Instagram.swift; sourceTree = "<group>"; };
+		2622D4D31DA0F4FF7723CE5E /* VisualDocs_ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ErrorHandling.swift; sourceTree = "<group>"; };
 		275748A320F05952058A15AE /* SimpleNetworkAgentA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentA.swift; sourceTree = "<group>"; };
-		2F441540CDD44B916CB37753 /* PointFreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFreeFunctions.swift; sourceTree = "<group>"; };
 		303436CECB3B068F18E5D6D4 /* Combine_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_I.png; sourceTree = "<group>"; };
+		3086D6BCCA52EB6DDA0815B6 /* CacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
 		31B66A15F91E9A1FF1F0121C /* ObservableObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObservableObject_I.png; sourceTree = "<group>"; };
-		33295B4DC3BB89FE216C3978 /* DevTools+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+Log.swift"; sourceTree = "<group>"; };
-		3432EA19BFC55B29D251033B /* UtilsStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341BE62660EF57771AEF3483 /* Recreating.Messages_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_II.swift; sourceTree = "<group>"; };
+		3567CFD1CB96CE158AAFA0F7 /* ShowAlertContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertContentView.swift; sourceTree = "<group>"; };
+		3597E50C742BFAE0418398DF /* DevTools+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+Log.swift"; sourceTree = "<group>"; };
 		35CB85B59071A9F6828F2A54 /* FetcherRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanair.swift; sourceTree = "<group>"; };
 		365D55A19F1E6F9E588392A7 /* RyanairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.swift; sourceTree = "<group>"; };
-		36C921D39E8B9C4D87D3ACC4 /* UtilsExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsExtensions.h; sourceTree = "<group>"; };
-		3823C6A93472AB42F0BA1F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		39A7DE1333B603B4C1613A56 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		372C90045A7AEBCCCEE3AF11 /* VisualDocs_SwiftUI_Lab_Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Triangle.swift; sourceTree = "<group>"; };
 		39D11BC6542317493C09C80A /* 1_DXMC02UcmOHBOHXhx4njzA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_DXMC02UcmOHBOHXhx4njzA.png; sourceTree = "<group>"; };
 		3B191024DE3720148499E1E0 /* SimpleNetworkAgentExampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentExampleProtocol.swift; sourceTree = "<group>"; };
 		3CDCC0B249042028EF682A4A /* MVVM_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVVM_I.png; sourceTree = "<group>"; };
 		3F02FCE9B39D01648AFA02DC /* AppWeatherWebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherWebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6E63428CDF9748B3940979 /* VisualDocs_sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_sheet.swift; sourceTree = "<group>"; };
 		3FD4B9C40D5B506D7D727988 /* AppWeatherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE3E0168FDF656222D2FF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		40A108CE142B5EC6599A1BDB /* V.WeeklyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.WeeklyWeatherView.swift; sourceTree = "<group>"; };
 		424FC20AA4CF7EB3825B3801 /* RyanairModel.AirPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.AirPort.swift; sourceTree = "<group>"; };
+		42570CAA24B352463CE7238D /* VisualDocs_Binding.State copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_Binding.State copy.swift"; sourceTree = "<group>"; };
 		425E886BADCBCA866DF3F3AC /* AppWeatherCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherCore.h; sourceTree = "<group>"; };
+		43D2DEBEC3AD9ECF787D71F4 /* typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typealias.swift; sourceTree = "<group>"; };
+		4406CF4833D142D77B4C2267 /* VisualDocs_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onDelete.swift; sourceTree = "<group>"; };
 		456212E58E54AD3DAE404733 /* AppRoot_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot_View.swift; sourceTree = "<group>"; };
 		467065DA1E56481371C7266D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		47D948CDEFC56DBA14DB784B /* UtilsDesignables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsDesignables.h; sourceTree = "<group>"; };
 		4888B5A9C5C02F67883EC538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		48CAED30B0C8D189CF816854 /* WeatherMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMappers.swift; sourceTree = "<group>"; };
-		4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsStorage.h; sourceTree = "<group>"; };
-		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.viz; sourceTree = "<group>"; };
+		495C0213CF19D2A77B7B69CF /* Recreating.AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.AppStore.swift; sourceTree = "<group>"; };
+		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; path = Graph.viz; sourceTree = "<group>"; };
 		4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView2.swift; sourceTree = "<group>"; };
 		4B16F34813BD45939D8CAACC /* readme.image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.2.png; sourceTree = "<group>"; };
-		4DDF12D318A4AB2FEFA74C70 /* PublicCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicCode.h; sourceTree = "<group>"; };
+		4F70AD1FF77511B1FED81AAF /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		502CA0E81503990D8AB67BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		51B3DBF5C63C982B765FFEA4 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		527BC57391BC67EEC13B7CED /* WeatherRequestDto.Wheater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.Wheater.swift; sourceTree = "<group>"; };
 		53D673A3A8070290C2819496 /* APIWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeather.swift; sourceTree = "<group>"; };
 		545EB43AE939660E7765C785 /* WeatherResponseDto.CurrentWeatherForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.CurrentWeatherForecastEntity.swift; sourceTree = "<group>"; };
 		5530974CA2A600E6375E5AAF /* RyanairResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.swift; sourceTree = "<group>"; };
-		55F0E522E6FDDE54D9852754 /* UtilsExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56DA020DA930FD99560F9077 /* typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typealias.swift; sourceTree = "<group>"; };
+		571E6FFD03240EEF637DFAD7 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		582E09AA21E80F9FA8785498 /* VisualDocs_@State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@State.swift"; sourceTree = "<group>"; };
 		59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherDomain.h; sourceTree = "<group>"; };
 		5985AB94FEB80BF0E4246790 /* RepositoryWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeatherProtocol.swift; sourceTree = "<group>"; };
-		59CE3253DF3DB49296298C7D /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
-		5A82B964635EB2B85B693C81 /* DevTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTools.swift; sourceTree = "<group>"; };
+		5AE16F18A8D384CD96D4D6D6 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
+		5C314B4851483F9E3124E376 /* VisualDocs_Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Padding.swift; sourceTree = "<group>"; };
 		5D1CF494755B297A20A4B750 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
 		608CE52D6E2AEB0627F7FBE6 /* FetcherWeatherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeatherMock.swift; sourceTree = "<group>"; };
 		61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView2Builder.swift; sourceTree = "<group>"; };
+		61E525AC89A7806A2C450AAC /* VisualDocs_TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TimerView.swift; sourceTree = "<group>"; };
 		6258D8B589FD2081F91282AD /* RepositoryWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeather.swift; sourceTree = "<group>"; };
 		62C4657A7D7659F910DA8D26 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FD2B3F9F326A99DA7E417C /* GenericStorableKeyValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorableKeyValueModel.swift; sourceTree = "<group>"; };
 		68688B397AA2018723E867BB /* FetcherRyanairMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanairMock.swift; sourceTree = "<group>"; };
 		69AE8FE7EE588489D853ED2C /* AppRyanairWebAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanairWebAPI.h; sourceTree = "<group>"; };
 		6A7F163C9E85B2CFACCD8C5D /* MVVM.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVVM.README.md; sourceTree = "<group>"; };
@@ -478,73 +485,96 @@
 		70096BE0B2CCB68AD3F8011C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		715D3A7043B6C4324AA8D74E /* VM.CurrentWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		71C38BC66C8A48BE23E3C55C /* WeatherResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.swift; sourceTree = "<group>"; };
+		71D7560C7572BEF95E83488B /* Designables_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_Preview.swift; sourceTree = "<group>"; };
 		735BD84DFD6AB35DB926EA1C /* VM.RyanairView2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView2ViewModel.swift; sourceTree = "<group>"; };
-		73BBA09D5A81545FF38087E5 /* PublicCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PublicCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		743E095F591F0A57DD810BD6 /* RepositoryRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRyanair.swift; sourceTree = "<group>"; };
+		7460CC3B5125FCC54BDF02D4 /* VisualDocs_WaysToReactToState_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_WaysToReactToState_I.swift; sourceTree = "<group>"; };
+		7590EB07DA602F86299D87BD /* Recreating.iPhone12ProWebsite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.iPhone12ProWebsite.swift; sourceTree = "<group>"; };
 		75D56DD18A6E5642F1E13910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76028CF2A6E6120F9CE5BEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		789AEE850DAEA200BE10E930 /* Designables_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_Preview.swift; sourceTree = "<group>"; };
+		7893E50FF6CD9AA4D1A181E0 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_ViewTree_1a.swift; sourceTree = "<group>"; };
+		7921AE610DC269EC6CB22A1A /* ScrollEffect3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3D.swift; sourceTree = "<group>"; };
 		7A76055AC37FB89A0DE0FA47 /* AppRyanairDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3D97BEA0B2EB8DEE09799F /* Combine_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_II.png; sourceTree = "<group>"; };
 		7B85DE7A055F6E8B3D9B98B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C50218750F0988469529868 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
+		7E3EC0566D6F7B70F672E16F /* PointFreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFreeFunctions.swift; sourceTree = "<group>"; };
 		8006111CD5C46C1E53C37674 /* RyanairResponseDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Availability.swift; sourceTree = "<group>"; };
+		80533931C258A91D70E22EE5 /* VisualDocs_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Image.swift; sourceTree = "<group>"; };
 		82168D8E998A15A4A106A299 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8248CE791F182234BB50A7F9 /* SimpleNetworkAgentAExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentAExample.swift; sourceTree = "<group>"; };
 		84C72E09A198ED1228911C16 /* RyanairResponseDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Stations.swift; sourceTree = "<group>"; };
-		84D19BB993642FC3274E0012 /* E.APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.APIError.swift; sourceTree = "<group>"; };
+		84DF45427F05B67EC6249595 /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
 		85D232B6F5748ACBD851F8E4 /* VM.RyanairView1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView1ViewModel.swift; sourceTree = "<group>"; };
-		871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.CachePolicy.swift; sourceTree = "<group>"; };
 		8B8CED726603B355821BE044 /* APIWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeatherProtocol.swift; sourceTree = "<group>"; };
-		8D7C61E5983D86F5E316ED42 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
+		8C1AC39774E40E819A3315F6 /* VisualDocs_RouteToAndCameBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RouteToAndCameBack.swift; sourceTree = "<group>"; };
+		8CA64233B772478D7EC32A15 /* Recreating.Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Twitter.swift; sourceTree = "<group>"; };
+		8D1551FE4E9C323C5D1AC614 /* VisualDocs_@Published.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Published.swift"; sourceTree = "<group>"; };
 		8E04B23E92830D9865940927 /* DtoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoProtocol.swift; sourceTree = "<group>"; };
 		8E6AAF1E9FCBB123D19C4133 /* AppWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeather.h; sourceTree = "<group>"; };
 		8F86347E7FA51E88CD989616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8FF7316D27C4486F36F6C787 /* B.WeeklyWeatherBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.WeeklyWeatherBuilder.swift; sourceTree = "<group>"; };
 		938AF7C4E4D7BB552359D44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		94B530CA65F540FB433426F5 /* DevTools+FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+FeatureFlag.swift"; sourceTree = "<group>"; };
 		952F534448A025D9330BA658 /* readme.image.4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.4.png; sourceTree = "<group>"; };
 		9597886916DBF70B75B17A06 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		95C1E64CE7A0FB8851ABA010 /* SimpleNetworkAgentBExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentBExample.swift; sourceTree = "<group>"; };
 		961DBF5FB5AF431F74F5B0DC /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
 		9818DDA833ACAE8D2C9081DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99118C096B1078A8AA436182 /* readme.image.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.0.png; sourceTree = "<group>"; };
-		99CD8B4ACB97AAA8CD3E92D0 /* DevTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		996B46176F369B2E97E6C164 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift; sourceTree = "<group>"; };
+		99E6F88A8F5E03DCA2430BD8 /* VisualDocs_Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Combine.swift; sourceTree = "<group>"; };
+		9BE77D9DE4A05F0DFB2CD270 /* VisualDocs_onEditingChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onEditingChanged.swift; sourceTree = "<group>"; };
 		9F833AC88E286AE718F7926D /* AppWeatherDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0092ECE406080F9E83F0461 /* AppRyanairDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanairDomain.h; sourceTree = "<group>"; };
 		A09B4FFE152239DD97862409 /* APIRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanair.swift; sourceTree = "<group>"; };
-		A1FD8CE1BFCCA5D8B52A2BC1 /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
-		A34F4BF33DBC25A9F9BB1A08 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		A2EDE24D312B4435396B1C36 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		A3B1C98534C09965470282DE /* DevScreen_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevScreen_View.swift; sourceTree = "<group>"; };
+		A42BBD0E5AF9F4B2D9E78415 /* VisualDocs_TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TabView.swift; sourceTree = "<group>"; };
 		A5A9FF852496CBBCC75C48A7 /* State_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_I.png; sourceTree = "<group>"; };
 		A664B45544D230A5F4455799 /* B.CurrentWeatherViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.CurrentWeatherViewBuilder.swift; sourceTree = "<group>"; };
-		AAA276BB503306AA54981962 /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
+		A947D447A084ED83E7DC65C4 /* VisualDocs_WaysToReactToState_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_WaysToReactToState_II.swift; sourceTree = "<group>"; };
 		AAE3471A14A96927FFE2F660 /* AppRyanair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF0576F803455E664AD9FAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ADE599E5EAFCD6DEC1F67597 /* VisualDocs_onReceive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onReceive.swift; sourceTree = "<group>"; };
+		AE404817E4B4087E5FF78F7A /* PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
+		B08F1095ECFC07264A3281AB /* VisualDocs_Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Lists.swift; sourceTree = "<group>"; };
 		B17489FD4902A191E848C573 /* RyanairMappers.ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.ListItemModel.swift; sourceTree = "<group>"; };
 		B4F4B39218571ECEC93977B2 /* AppRyanairCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C92D056D628F3EFF63C2C8 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63977B3308EE96B4832FC29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B713F61173993B9FD61AADD4 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView1.swift; sourceTree = "<group>"; };
-		B7E4318C26100809075471CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8E58DE91B235ED37BFAA2B4 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		B94FB6291970E6A6830B92D5 /* RyanairRequestDto.Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Availability.swift; sourceTree = "<group>"; };
 		BB61DE8BE63DE516A3DA03E0 /* SimpleNetworkAgentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentProtocol.swift; sourceTree = "<group>"; };
+		BBB2AD8566582991ABCB8113 /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift; sourceTree = "<group>"; };
+		BCA223F2FF54D28E6D97AF65 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		BCC12AD87134A93389315FC5 /* VisualDocs_@EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@EnvironmentObject.swift"; sourceTree = "<group>"; };
+		BE26721742A209BE71BFB7CF /* VisualDocs_Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Shapes.swift; sourceTree = "<group>"; };
 		BE9AEA1604479D5DD8662B2D /* Publishers_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Publishers_1.png; sourceTree = "<group>"; };
 		BED715D8344B2531862EC197 /* Response<T>.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response<T>.swift"; sourceTree = "<group>"; };
 		BFF52A58C8DDDA59C5C146DF /* V.CurrentWeatherRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.CurrentWeatherRowView.swift; sourceTree = "<group>"; };
 		C18DB623F1370C2C67568B26 /* SimpleNetworkAgentB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentB.swift; sourceTree = "<group>"; };
+		C3583281A55ECE0D2107CE94 /* VisualDocs_Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Fonts.swift; sourceTree = "<group>"; };
+		C427CD0BF320B0C2DC391658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C53D12EF9FF4F00EEBEC11E1 /* AppRyanairWebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairWebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57992B4A6D6BD68832380C2 /* V.MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.MapViewRepresentable.swift; sourceTree = "<group>"; };
 		C6BF426C78331EDE88D4BE70 /* BaseDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDomain.h; sourceTree = "<group>"; };
 		C79A51B4BE479DA4CA721C73 /* WeatherResponseDto.WeeklyForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseDto.WeeklyForecastEntity.swift; sourceTree = "<group>"; };
-		C7B4C4444D076A9569A0ECBC /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		C8796654DC0E688BE870F246 /* VisualDocs_horizontalSizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_horizontalSizeClass.swift; sourceTree = "<group>"; };
+		C8D6AC8A5AF680AC0DE48F58 /* Recreating.Maps_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_II.swift; sourceTree = "<group>"; };
 		C9ACA0820776505AA5F25627 /* AppRyanair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanair.h; sourceTree = "<group>"; };
+		C9B67088EDB34DBE5DDE06E4 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		CA579D82D4F55326AF96BCE5 /* DevTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTools.swift; sourceTree = "<group>"; };
 		CAAAE63CE1C794D3D4B2FB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		CAC0F75B75457282FB4A2712 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
+		CB3FD0B6A6F37B2ACE385D6F /* Recreating.LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.LockScreen.swift; sourceTree = "<group>"; };
 		CBB093C839136CB04360A277 /* AppRyanairCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanairCore.h; sourceTree = "<group>"; };
-		CCC3D8D6F4B16B600E11402A /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		CE9F9C7D43ECC080487B3D46 /* Recreating.Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Reminder.swift; sourceTree = "<group>"; };
 		CEEC704D763B3C7A595E9FBF /* V.DailyWeatherRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.DailyWeatherRowView.swift; sourceTree = "<group>"; };
-		CF414F1644C5D16EAED64E71 /* CacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
+		CF8273F863B5D5E5FDDE7210 /* VisualDocs_RemoteImageLoadging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RemoteImageLoadging.swift; sourceTree = "<group>"; };
+		CFFA9CFA4506924F7ADC0AC0 /* DesignablesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignablesFactory.swift; sourceTree = "<group>"; };
+		D2AA67B97408E0DBC8A0E9B3 /* SimpleMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVM.swift; sourceTree = "<group>"; };
+		D2EF67281D0E1B918C81BA72 /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 		D516123A9B1D038EECB64F5E /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
@@ -552,27 +582,33 @@
 		D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.3.png; sourceTree = "<group>"; };
 		D90034C9F5CA9F78E6FF9F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsNetworking.h; sourceTree = "<group>"; };
-		DC5D942D9DF0D7F58F6B54FB /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
-		DCE1BBB26EB5EAC319DBBEC1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		E04193C0E8DFCAD9C0C50467 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
+		DDCD2D81429C645BC1F42566 /* VisualDocs_Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Text.swift; sourceTree = "<group>"; };
+		DE8E0194026BAA33EB3FEEDF /* Recreating.HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.HomeScreen.swift; sourceTree = "<group>"; };
 		E0D9BDAF70FC475E89F85334 /* Graph.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Graph.json; sourceTree = "<group>"; };
-		E299D847CC0AE405D19FF5A7 /* GenericStorableKeyValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorableKeyValueModel.swift; sourceTree = "<group>"; };
+		E178D20FA1E108EC0EDAD54A /* VisualDocs_LayoutInScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_LayoutInScrollView.swift; sourceTree = "<group>"; };
+		E1835FFC152A7EDED5AA9AF2 /* Recreating.Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Settings.swift; sourceTree = "<group>"; };
+		E6E54EF3AAA9C54F7E76ACDF /* VisualDocs_ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ForEach.swift; sourceTree = "<group>"; };
+		EADB037EB792CD3B160AA811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EBD1DA737D63E2C324FB6ACD /* StateObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StateObject_I.png; sourceTree = "<group>"; };
+		EC821680DAB3E28A33C711F6 /* VisualDocs_Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Form.swift; sourceTree = "<group>"; };
 		ED070521B14500FDD3D8D938 /* State_II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State_II.png; sourceTree = "<group>"; };
-		ED33B95737D6042FD0225FCD /* UtilsDesignables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsDesignables.h; sourceTree = "<group>"; };
 		EE1B98ED7BE671F241B28ADA /* TO_DO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TO_DO.swift; sourceTree = "<group>"; };
 		EEA8BA314105EE778D3A0B42 /* WeatherRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.swift; sourceTree = "<group>"; };
 		EEEE426F17613140C5164C43 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		F28DD9EDF46F223087DFFAB2 /* readme.image.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.1.png; sourceTree = "<group>"; };
-		F4387B5AB3A663F43C5FCB89 /* DesignablesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignablesFactory.swift; sourceTree = "<group>"; };
 		F492B00701E0FB853EBBF7DA /* AppWeatherWebAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherWebAPI.h; sourceTree = "<group>"; };
 		F5037BB498ECC16D7DF38DAE /* RyanairMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.swift; sourceTree = "<group>"; };
+		F51FEC39EF31BC39517194B7 /* Recrating.InstagramMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recrating.InstagramMessages.swift; sourceTree = "<group>"; };
+		F68D831C39D868017B60E776 /* VisualDocs_Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Animations.swift; sourceTree = "<group>"; };
+		F8A9C2A58E5C0E4441940D45 /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
+		F9F8CF95BF937F522B91BD3D /* Recreating.Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Breathe.swift; sourceTree = "<group>"; };
+		FB031CB87332A957DC77B903 /* DocumentsVisual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentsVisual.h; sourceTree = "<group>"; };
 		FB3CB7C864DAD83DDDCF2A42 /* WeatherRequestDto.Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestDto.Forecast.swift; sourceTree = "<group>"; };
-		FD3857012AE71FC85B8D561E /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Keys.plist; sourceTree = "<group>"; };
+		FC2F2A2A45862C0F0438B181 /* Recreating.Maps_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_I.swift; sourceTree = "<group>"; };
 		FD9A6004D7F31ADECF70ADF4 /* RyanairRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.swift; sourceTree = "<group>"; };
 		FDD1DCE16F76D0EE2FA5DDDF /* RyanairRequestDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairRequestDto.Stations.swift; sourceTree = "<group>"; };
 		FDDD91DCBA8848FE6F8FB333 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		FEFC41F3306740283E3413EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE2F89A4574F9E1ECD9CADEC /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,6 +617,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A370C0944A340B4E04BF6ADC /* RJSLibUFBase in Frameworks */,
+				54C597D74B4112B449C077D6 /* RJSLibUFAppThemes in Frameworks */,
+				DEE23A98B2141AAC5AEA411B /* RJSLibUFNetworking in Frameworks */,
+				47DB132B8F668C5766901A63 /* RJSLibUFStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,15 +643,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC793D513A0FC89018B5D2BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C831D30D7D8CF65A9B61A8EE /* RJSLibUFBase in Frameworks */,
-				581EC5340FF09B133A61D563 /* RJSLibUFNetworking in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -628,14 +658,9 @@
 				9F833AC88E286AE718F7926D /* AppWeatherDomain.framework */,
 				3F02FCE9B39D01648AFA02DC /* AppWeatherWebAPI.framework */,
 				62C4657A7D7659F910DA8D26 /* BaseDomain.framework */,
-				99CD8B4ACB97AAA8CD3E92D0 /* DevTools.framework */,
-				73BBA09D5A81545FF38087E5 /* PublicCode.framework */,
 				D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */,
 				B5C92D056D628F3EFF63C2C8 /* Utils.framework */,
-				249ABFC46F1D302386E9C2FC /* UtilsDesignables.framework */,
-				55F0E522E6FDDE54D9852754 /* UtilsExtensions.framework */,
 				18AB46AF3E560DDFC6B3D8FB /* UtilsNetworking.framework */,
-				3432EA19BFC55B29D251033B /* UtilsStorage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -644,8 +669,14 @@
 			isa = PBXGroup;
 			children = (
 				CAAAE63CE1C794D3D4B2FB0B /* Info.plist */,
+				43D2DEBEC3AD9ECF787D71F4 /* typealias.swift */,
 				9597886916DBF70B75B17A06 /* Utils.h */,
-				2D50F014F948D2EF1626771E /* Code */,
+				259A87291110E9B6865A262F /* Designables */,
+				2F6436C698EAF8312F27F09D /* DevTools */,
+				138436504D06A7589567BA34 /* DocumentsVisual */,
+				BE12B46D7ABB652F92171D1C /* Extensions */,
+				48B357B460A9EC4013985A84 /* Generic */,
+				FCED70D5095A3BB923A049BE /* Storage */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -659,14 +690,17 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
-		11AF615FE8E9B2FFC58DCC41 /* UtilsExtensions */ = {
+		138436504D06A7589567BA34 /* DocumentsVisual */ = {
 			isa = PBXGroup;
 			children = (
-				1CC0A8E28E5CACA015BCFECA /* Info.plist */,
-				36C921D39E8B9C4D87D3ACC4 /* UtilsExtensions.h */,
-				BFC54AAEE92DBB2B89C668A9 /* Code */,
+				FB031CB87332A957DC77B903 /* DocumentsVisual.h */,
+				C427CD0BF320B0C2DC391658 /* Info.plist */,
+				E9A962D6E604CFFF4BEA2C77 /* CoolStuff */,
+				9ACF2093D6C7B399BED8F486 /* ExternalSources.Recreating */,
+				98A5ABB85D11AF281D4C6BAA /* ExternalSources.SwiftUI-Lab */,
+				DBE661B0E2EBBC306630347D /* VisualDocs */,
 			);
-			path = UtilsExtensions;
+			path = DocumentsVisual;
 			sourceTree = "<group>";
 		};
 		13EAABA9AD1EB04CE3EF5555 /* Scheme1 */ = {
@@ -709,15 +743,15 @@
 			path = SimpleNetworkAgents;
 			sourceTree = "<group>";
 		};
-		269E3D1DA0BA0A75A91F6549 /* UtilsDesignables */ = {
+		259A87291110E9B6865A262F /* Designables */ = {
 			isa = PBXGroup;
 			children = (
-				789AEE850DAEA200BE10E930 /* Designables_Preview.swift */,
-				AF0576F803455E664AD9FAAD /* Info.plist */,
-				ED33B95737D6042FD0225FCD /* UtilsDesignables.h */,
-				9748C02D6EC59D1A09CEABE8 /* Code */,
+				71D7560C7572BEF95E83488B /* Designables_Preview.swift */,
+				EADB037EB792CD3B160AA811 /* Info.plist */,
+				47D948CDEFC56DBA14DB784B /* UtilsDesignables.h */,
+				96543558444E31661CBCEC05 /* Code */,
 			);
-			path = UtilsDesignables;
+			path = Designables;
 			sourceTree = "<group>";
 		};
 		27C8D8975F4E99FD6F38685B /* Fetchers|Repositories */ = {
@@ -739,13 +773,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2D50F014F948D2EF1626771E /* Code */ = {
+		2F6436C698EAF8312F27F09D /* DevTools */ = {
 			isa = PBXGroup;
 			children = (
-				39A7DE1333B603B4C1613A56 /* DateFormatters.swift */,
-				2F441540CDD44B916CB37753 /* PointFreeFunctions.swift */,
+				CA579D82D4F55326AF96BCE5 /* DevTools.swift */,
+				94B530CA65F540FB433426F5 /* DevTools+FeatureFlag.swift */,
+				3597E50C742BFAE0418398DF /* DevTools+Log.swift */,
 			);
-			path = Code;
+			path = DevTools;
 			sourceTree = "<group>";
 		};
 		30B3B552025D12694CFC06BA /* SimpleNetworkAgents.Testing */ = {
@@ -806,15 +841,6 @@
 			path = Documents;
 			sourceTree = "<group>";
 		};
-		40EC1322FAD1DEB2D3DDF0DC /* PublicCode */ = {
-			isa = PBXGroup;
-			children = (
-				B7E4318C26100809075471CF /* Info.plist */,
-				4DDF12D318A4AB2FEFA74C70 /* PublicCode.h */,
-			);
-			path = PublicCode;
-			sourceTree = "<group>";
-		};
 		488157A726C0FC3DCD59E996 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +848,15 @@
 				A956A64686C90154E9CC42D0 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48B357B460A9EC4013985A84 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				A2EDE24D312B4435396B1C36 /* DateFormatters.swift */,
+				7E3EC0566D6F7B70F672E16F /* PointFreeFunctions.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 		4D7237FA817059D6F2237419 /* BaseObjects */ = {
@@ -952,29 +987,6 @@
 			path = wiki;
 			sourceTree = "<group>";
 		};
-		808104ABEF20ACBC51796019 /* DevTools */ = {
-			isa = PBXGroup;
-			children = (
-				20FB0DB882EACD3DCC78F3B1 /* DevTools.h */,
-				3823C6A93472AB42F0BA1F9C /* Info.plist */,
-				E41CA7F934F7CAB7DE3C0BB8 /* Code */,
-			);
-			path = DevTools;
-			sourceTree = "<group>";
-		};
-		8409C09CA5F809FB1FEFB4ED /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				59CE3253DF3DB49296298C7D /* APICacheManager.swift */,
-				A34F4BF33DBC25A9F9BB1A08 /* APIKeys.swift */,
-				CF414F1644C5D16EAED64E71 /* CacheUtils.swift */,
-				E299D847CC0AE405D19FF5A7 /* GenericStorableKeyValueModel.swift */,
-				CCC3D8D6F4B16B600E11402A /* UserDefaults+Extensions.swift */,
-				E04193C0E8DFCAD9C0C50467 /* UserDefaultsPropertyWrapper.swift */,
-			);
-			path = Code;
-			sourceTree = "<group>";
-		};
 		8DB88EEFB019B05F40FEFB51 /* Enteties.ResponseDto */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,14 +1005,14 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
-		9748C02D6EC59D1A09CEABE8 /* Code */ = {
+		96543558444E31661CBCEC05 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				DC5D942D9DF0D7F58F6B54FB /* ActivityIndicatorRepresentable.swift */,
-				CAC0F75B75457282FB4A2712 /* ConnectivityView.swift */,
-				AAA276BB503306AA54981962 /* Designables_PassCode.swift */,
-				F4387B5AB3A663F43C5FCB89 /* DesignablesFactory.swift */,
-				51B3DBF5C63C982B765FFEA4 /* NavigationStack.swift */,
+				F8A9C2A58E5C0E4441940D45 /* ActivityIndicatorRepresentable.swift */,
+				188A8FF7395A94ABE15B2442 /* ConnectivityView.swift */,
+				0E7C6F1ED6364E85DD739F9C /* Designables_PassCode.swift */,
+				CFFA9CFA4506924F7ADC0AC0 /* DesignablesFactory.swift */,
+				5AE16F18A8D384CD96D4D6D6 /* NavigationStack.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1017,13 +1029,39 @@
 			path = S2.CurrentWeather;
 			sourceTree = "<group>";
 		};
-		A5908C434E609DD380BD193D /* Enuns */ = {
+		98A5ABB85D11AF281D4C6BAA /* ExternalSources.SwiftUI-Lab */ = {
 			isa = PBXGroup;
 			children = (
-				84D19BB993642FC3274E0012 /* E.APIError.swift */,
-				871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */,
+				0AEE986DF58B24C6AEE885F4 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */,
+				996B46176F369B2E97E6C164 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */,
+				BBB2AD8566582991ABCB8113 /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */,
+				372C90045A7AEBCCCEE3AF11 /* VisualDocs_SwiftUI_Lab_Triangle.swift */,
+				7893E50FF6CD9AA4D1A181E0 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift */,
 			);
-			path = Enuns;
+			path = "ExternalSources.SwiftUI-Lab";
+			sourceTree = "<group>";
+		};
+		9ACF2093D6C7B399BED8F486 /* ExternalSources.Recreating */ = {
+			isa = PBXGroup;
+			children = (
+				F51FEC39EF31BC39517194B7 /* Recrating.InstagramMessages.swift */,
+				495C0213CF19D2A77B7B69CF /* Recreating.AppStore.swift */,
+				F9F8CF95BF937F522B91BD3D /* Recreating.Breathe.swift */,
+				DE8E0194026BAA33EB3FEEDF /* Recreating.HomeScreen.swift */,
+				2466CDB73CD79FE25894A5DA /* Recreating.Instagram.swift */,
+				7590EB07DA602F86299D87BD /* Recreating.iPhone12ProWebsite.swift */,
+				CB3FD0B6A6F37B2ACE385D6F /* Recreating.LockScreen.swift */,
+				FC2F2A2A45862C0F0438B181 /* Recreating.Maps_I.swift */,
+				C8D6AC8A5AF680AC0DE48F58 /* Recreating.Maps_II.swift */,
+				0C01C15F15CCEB8B7F1CD907 /* Recreating.Messages_I.swift */,
+				341BE62660EF57771AEF3483 /* Recreating.Messages_II.swift */,
+				0BA93689C55495FAC5A04BBF /* Recreating.Messages_III.swift */,
+				CE9F9C7D43ECC080487B3D46 /* Recreating.Reminder.swift */,
+				E1835FFC152A7EDED5AA9AF2 /* Recreating.Settings.swift */,
+				D2EF67281D0E1B918C81BA72 /* Recreating.Tinder.swift */,
+				8CA64233B772478D7EC32A15 /* Recreating.Twitter.swift */,
+			);
+			path = ExternalSources.Recreating;
 			sourceTree = "<group>";
 		};
 		A86D2C8DE6BD488B1F26E198 /* Fetchers|Repositories */ = {
@@ -1069,15 +1107,22 @@
 			path = Generics;
 			sourceTree = "<group>";
 		};
-		BFC54AAEE92DBB2B89C668A9 /* Code */ = {
+		BE12B46D7ABB652F92171D1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A1FD8CE1BFCCA5D8B52A2BC1 /* Locale+Extensions.swift */,
-				8D7C61E5983D86F5E316ED42 /* TextField+Extensions.swift */,
-				DCE1BBB26EB5EAC319DBBEC1 /* UIColor+Extensions.swift */,
-				C7B4C4444D076A9569A0ECBC /* View+Extensions.swift */,
+				B713F61173993B9FD61AADD4 /* TextField+Extensions.swift */,
+				1DA5C0657C599FFA54A96DA5 /* UIColor+Extensions.swift */,
+				BCA223F2FF54D28E6D97AF65 /* View+Extensions.swift */,
 			);
-			path = Code;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BEB06B896F9BDBE0D3001AEF /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				42570CAA24B352463CE7238D /* VisualDocs_Binding.State copy.swift */,
+			);
+			path = Binding;
 			sourceTree = "<group>";
 		};
 		C2FFEB3E8F38D928A27A4F55 /* Auxiliar.DailyWeatherRow */ = {
@@ -1118,18 +1163,6 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		D426BEE2405BD2C219B37259 /* UtilsStorage */ = {
-			isa = PBXGroup;
-			children = (
-				FEFC41F3306740283E3413EB /* Info.plist */,
-				FD3857012AE71FC85B8D561E /* Keys.plist */,
-				56DA020DA930FD99560F9077 /* typealias.swift */,
-				4A61BA6B1797082D6C53DFDB /* UtilsStorage.h */,
-				8409C09CA5F809FB1FEFB4ED /* Code */,
-			);
-			path = UtilsStorage;
-			sourceTree = "<group>";
-		};
 		D5D88E655504E82F177187B8 /* Enteties.ResponseDto */ = {
 			isa = PBXGroup;
 			children = (
@@ -1152,17 +1185,53 @@
 				5DC0EC91E201044DCB3A43F4 /* AppWeatherDomain */,
 				D1465F5C16817F9281DB11C7 /* AppWeatherWebAPI */,
 				F5A4CC66FD073B19BB5A1FC7 /* BaseDomain */,
-				808104ABEF20ACBC51796019 /* DevTools */,
 				3DBAC92EF43034F7ACAD5223 /* Documents */,
-				40EC1322FAD1DEB2D3DDF0DC /* PublicCode */,
 				DE19A2C55A6455542FAEB911 /* RJPS_SwiftUI */,
 				08EC7345C4681F2A99DAC67F /* Utils */,
-				269E3D1DA0BA0A75A91F6549 /* UtilsDesignables */,
-				11AF615FE8E9B2FFC58DCC41 /* UtilsExtensions */,
 				16C18917A8F1CB7242EFBEDA /* UtilsNetworking */,
-				D426BEE2405BD2C219B37259 /* UtilsStorage */,
 				056A774ACC20DE0B9C9AE7B9 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		DBE661B0E2EBBC306630347D /* VisualDocs */ = {
+			isa = PBXGroup;
+			children = (
+				84DF45427F05B67EC6249595 /* VisualDocs_@Binding.swift */,
+				BCC12AD87134A93389315FC5 /* VisualDocs_@EnvironmentObject.swift */,
+				8D1551FE4E9C323C5D1AC614 /* VisualDocs_@Published.swift */,
+				582E09AA21E80F9FA8785498 /* VisualDocs_@State.swift */,
+				F68D831C39D868017B60E776 /* VisualDocs_Animations.swift */,
+				0BE60484B11B63AA671A97C3 /* VisualDocs_Background.swift */,
+				0920124B4A60455191B01CC9 /* VisualDocs_Buttons.swift */,
+				0D20E641AC8412EB36136DDE /* VisualDocs_Colors.swift */,
+				99E6F88A8F5E03DCA2430BD8 /* VisualDocs_Combine.swift */,
+				2622D4D31DA0F4FF7723CE5E /* VisualDocs_ErrorHandling.swift */,
+				C3583281A55ECE0D2107CE94 /* VisualDocs_Fonts.swift */,
+				E6E54EF3AAA9C54F7E76ACDF /* VisualDocs_ForEach.swift */,
+				EC821680DAB3E28A33C711F6 /* VisualDocs_Form.swift */,
+				C8796654DC0E688BE870F246 /* VisualDocs_horizontalSizeClass.swift */,
+				80533931C258A91D70E22EE5 /* VisualDocs_Image.swift */,
+				E178D20FA1E108EC0EDAD54A /* VisualDocs_LayoutInScrollView.swift */,
+				B08F1095ECFC07264A3281AB /* VisualDocs_Lists.swift */,
+				19E2CA68814A787CED497F9F /* VisualDocs_NavigationView.swift */,
+				4406CF4833D142D77B4C2267 /* VisualDocs_onDelete.swift */,
+				9BE77D9DE4A05F0DFB2CD270 /* VisualDocs_onEditingChanged.swift */,
+				ADE599E5EAFCD6DEC1F67597 /* VisualDocs_onReceive.swift */,
+				5C314B4851483F9E3124E376 /* VisualDocs_Padding.swift */,
+				CF8273F863B5D5E5FDDE7210 /* VisualDocs_RemoteImageLoadging.swift */,
+				8C1AC39774E40E819A3315F6 /* VisualDocs_RouteToAndCameBack.swift */,
+				206DFAC93A3570553640E407 /* VisualDocs_Shadows.swift */,
+				BE26721742A209BE71BFB7CF /* VisualDocs_Shapes.swift */,
+				3F6E63428CDF9748B3940979 /* VisualDocs_sheet.swift */,
+				A42BBD0E5AF9F4B2D9E78415 /* VisualDocs_TabView.swift */,
+				DDCD2D81429C645BC1F42566 /* VisualDocs_Text.swift */,
+				61E525AC89A7806A2C450AAC /* VisualDocs_TimerView.swift */,
+				1B7496840A6A53B76DACF9B7 /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */,
+				7460CC3B5125FCC54BDF02D4 /* VisualDocs_WaysToReactToState_I.swift */,
+				A947D447A084ED83E7DC65C4 /* VisualDocs_WaysToReactToState_II.swift */,
+				BEB06B896F9BDBE0D3001AEF /* Binding */,
+			);
+			path = VisualDocs;
 			sourceTree = "<group>";
 		};
 		DE19A2C55A6455542FAEB911 /* RJPS_SwiftUI */ = {
@@ -1178,16 +1247,6 @@
 			path = RJPS_SwiftUI;
 			sourceTree = "<group>";
 		};
-		E41CA7F934F7CAB7DE3C0BB8 /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				5A82B964635EB2B85B693C81 /* DevTools.swift */,
-				1CD0B0004D79F094E69BD215 /* DevTools+FeatureFlag.swift */,
-				33295B4DC3BB89FE216C3978 /* DevTools+Log.swift */,
-			);
-			path = Code;
-			sourceTree = "<group>";
-		};
 		E4D40BA47D468C68BF5A995E /* Schemes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1196,6 +1255,19 @@
 				A3B1C98534C09965470282DE /* DevScreen_View.swift */,
 			);
 			path = Schemes;
+			sourceTree = "<group>";
+		};
+		E9A962D6E604CFFF4BEA2C77 /* CoolStuff */ = {
+			isa = PBXGroup;
+			children = (
+				4F70AD1FF77511B1FED81AAF /* InfiniteScrollView.swift */,
+				AE404817E4B4087E5FF78F7A /* PasswordChecker.swift */,
+				7921AE610DC269EC6CB22A1A /* ScrollEffect3D.swift */,
+				1D7A8A475BBDB2109B3DCB21 /* SendEMailViewControllerRepresentable.swift */,
+				3567CFD1CB96CE158AAFA0F7 /* ShowAlertContentView.swift */,
+				D2AA67B97408E0DBC8A0E9B3 /* SimpleMVVM.swift */,
+			);
+			path = CoolStuff;
 			sourceTree = "<group>";
 		};
 		F4C9A5D308080F6F082EFA3A /* AppWeather */ = {
@@ -1216,7 +1288,6 @@
 				76028CF2A6E6120F9CE5BEF6 /* Info.plist */,
 				FDDD91DCBA8848FE6F8FB333 /* typelias.swift */,
 				4D7237FA817059D6F2237419 /* BaseObjects */,
-				A5908C434E609DD380BD193D /* Enuns */,
 				BAD91B91B5397B53BFF85AA6 /* Generics */,
 				F6AFC53A26C5BC44C1A4AFBB /* Protocols */,
 			);
@@ -1240,30 +1311,26 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		FCED70D5095A3BB923A049BE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				FE2F89A4574F9E1ECD9CADEC /* APICacheManager.swift */,
+				571E6FFD03240EEF637DFAD7 /* APIKeys.swift */,
+				3086D6BCCA52EB6DDA0815B6 /* CacheUtils.swift */,
+				67FD2B3F9F326A99DA7E417C /* GenericStorableKeyValueModel.swift */,
+				C9B67088EDB34DBE5DDE06E4 /* UserDefaults+Extensions.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		06A37EA577C39CBE1619CDCE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				728A18968EEB963694A92E0D /* UtilsStorage.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1AA10F13432A463A60351793 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				73490E5C5C2A67496B5D3D19 /* AppRyanairDomain.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3316B5D0CCE5535BBFC21961 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				61A95175EBFBB043D0A06949 /* UtilsDesignables.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,14 +1358,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D95740F593D73AD272B4997 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B99D7A853B5E89FDC615796 /* PublicCode.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		80ADC91FC808DA76751E4EAF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1312,14 +1371,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C570501E69CA0A21C35EA9 /* AppRyanairCore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DD55648D6C92D615040C676 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1ACA6B44177DD29F801CDE59 /* DevTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1359,81 +1410,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56E5266EF0B8DB450D489C6 /* DocumentsVisual.h in Headers */,
 				5E084C49AED2A7D8D44B580A /* Utils.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DC8D4BDDED95ACFD2F70043E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E636E87848B010CE96590DB8 /* UtilsExtensions.h in Headers */,
+				16D2A8C2669CCE04E85B35A7 /* UtilsDesignables.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		24E2F185AE418FA7D9A28F55 /* UtilsStorage */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 177BA907C4BB3AF6761FDB9A /* Build configuration list for PBXNativeTarget "UtilsStorage" */;
-			buildPhases = (
-				06A37EA577C39CBE1619CDCE /* Headers */,
-				E8DDD12107EC869D03326904 /* Sources */,
-				421AD785952CBDBD4E5F7924 /* Resources */,
-				EC793D513A0FC89018B5D2BB /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3553B116CCCB663FB019B29B /* PBXTargetDependency */,
-				09E9B1C67C59D3C7DA12E9CF /* PBXTargetDependency */,
-			);
-			name = UtilsStorage;
-			packageProductDependencies = (
-				D399AB77AD25504888AF0B11 /* RJSLibUFBase */,
-				ADAB3D971FCFA0BD12316626 /* RJSLibUFNetworking */,
-			);
-			productName = UtilsStorage;
-			productReference = 3432EA19BFC55B29D251033B /* UtilsStorage.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		2C63B134DE5E9B3251B825FC /* PublicCode */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9CB33489F9CC2BF03C42BA5 /* Build configuration list for PBXNativeTarget "PublicCode" */;
-			buildPhases = (
-				7D95740F593D73AD272B4997 /* Headers */,
-				5B15998C5493324E4DAA8B33 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				28EF8712A78861DC5E742139 /* PBXTargetDependency */,
-			);
-			name = PublicCode;
-			productName = PublicCode;
-			productReference = 73BBA09D5A81545FF38087E5 /* PublicCode.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		30C57D83104BF50CFBBBC766 /* UtilsDesignables */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 306352CB816B822999788D3E /* Build configuration list for PBXNativeTarget "UtilsDesignables" */;
-			buildPhases = (
-				3316B5D0CCE5535BBFC21961 /* Headers */,
-				426F23A365923D7821DE32D4 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				704B1F224DF41218C9D71006 /* PBXTargetDependency */,
-				E887B80DEE95DA582315F42E /* PBXTargetDependency */,
-				EDE64E3D5F4602EA91105445 /* PBXTargetDependency */,
-			);
-			name = UtilsDesignables;
-			productName = UtilsDesignables;
-			productReference = 249ABFC46F1D302386E9C2FC /* UtilsDesignables.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4582753D3262ACDCB2C631A5 /* RJPS_SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2AF37F9B66E7CA30435D912 /* Build configuration list for PBXNativeTarget "RJPS_SwiftUI" */;
@@ -1446,6 +1431,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4EA5C036BF071DC47B871452 /* PBXTargetDependency */,
 				1018EED0B4490F46A627FFBA /* PBXTargetDependency */,
 				22AF16BD35BC3FEF00E73D45 /* PBXTargetDependency */,
 			);
@@ -1470,6 +1456,8 @@
 			);
 			dependencies = (
 				81C4FC6322D565A7F48DC4F4 /* PBXTargetDependency */,
+				CEEFAE30EF6604B708B25681 /* PBXTargetDependency */,
+				BFF86C49774612F5DAAF4CEA /* PBXTargetDependency */,
 			);
 			name = BaseDomain;
 			productName = BaseDomain;
@@ -1490,7 +1478,6 @@
 				0D651D5E5E6074A6D418DB54 /* PBXTargetDependency */,
 				32ED3CD7768CCD3627C6AA45 /* PBXTargetDependency */,
 				1A7AFD8B1AC76A897CCC2879 /* PBXTargetDependency */,
-				5237B890558A866B8BDC075F /* PBXTargetDependency */,
 				B26E7AEB02B55D2287BCBD02 /* PBXTargetDependency */,
 			);
 			name = AppRyanairCore;
@@ -1509,8 +1496,7 @@
 			);
 			dependencies = (
 				E0F913211A6DDAAD4DB21E95 /* PBXTargetDependency */,
-				D4E3F78C102C41DD2B77887B /* PBXTargetDependency */,
-				2D1EC71F95303EBF5355F700 /* PBXTargetDependency */,
+				29782448C4A6D507F3297E82 /* PBXTargetDependency */,
 			);
 			name = UtilsNetworking;
 			productName = UtilsNetworking;
@@ -1539,39 +1525,6 @@
 			productReference = 9F833AC88E286AE718F7926D /* AppWeatherDomain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		81F8949F21D457612CC2D643 /* UtilsExtensions */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 66107B832FDCCCEFF2F23524 /* Build configuration list for PBXNativeTarget "UtilsExtensions" */;
-			buildPhases = (
-				DC8D4BDDED95ACFD2F70043E /* Headers */,
-				9719D1082EBCE4F0D3CFDDDB /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UtilsExtensions;
-			productName = UtilsExtensions;
-			productReference = 55F0E522E6FDDE54D9852754 /* UtilsExtensions.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9938DB06F947F0FEBD148F29 /* DevTools */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 76003906CBBC5FC956304C74 /* Build configuration list for PBXNativeTarget "DevTools" */;
-			buildPhases = (
-				8DD55648D6C92D615040C676 /* Headers */,
-				041AF6AC7DF845C6D1BC854D /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A904BBA04DEAB0BFD41874F9 /* PBXTargetDependency */,
-			);
-			name = DevTools;
-			productName = DevTools;
-			productReference = 99CD8B4ACB97AAA8CD3E92D0 /* DevTools.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		A6FF042F23D45338EF7072DC /* AppWeatherWebAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F150D886F3090D6DBF7985F /* Build configuration list for PBXNativeTarget "AppWeatherWebAPI" */;
@@ -1586,8 +1539,7 @@
 				D045B575F2EF16D06FDFA669 /* PBXTargetDependency */,
 				FE4B99351AFF8FD9042BC6AB /* PBXTargetDependency */,
 				0B4FF44803AC63BCCA8E3776 /* PBXTargetDependency */,
-				C0F2BD9E97F44A202B64D0F4 /* PBXTargetDependency */,
-				0D1239395D3DB0DE46B82CB3 /* PBXTargetDependency */,
+				80192BBCB4984564E8C0845E /* PBXTargetDependency */,
 			);
 			name = AppWeatherWebAPI;
 			productName = AppWeatherWebAPI;
@@ -1608,8 +1560,7 @@
 				1DF262ADDC9C9A79996FD6AA /* PBXTargetDependency */,
 				D575075DBB95B65554C0C40B /* PBXTargetDependency */,
 				4E9069220C1C655CCF760968 /* PBXTargetDependency */,
-				3EAE1E4A2EECA1E1A4482CF0 /* PBXTargetDependency */,
-				EF0E02C8B07DC4F6D3587928 /* PBXTargetDependency */,
+				39D285C03213C295BA9FBF4F /* PBXTargetDependency */,
 			);
 			name = AppRyanairWebAPI;
 			productName = AppRyanairWebAPI;
@@ -1628,6 +1579,7 @@
 			dependencies = (
 				A255F3D3FE986208D40AB2BD /* PBXTargetDependency */,
 				3B7F490635484C9CCEDD2872 /* PBXTargetDependency */,
+				C62CEC2EEAFDC88F7CE57DE2 /* PBXTargetDependency */,
 				ED7E48D730FBE14A16D86A3C /* PBXTargetDependency */,
 			);
 			name = AppRyanairDomain;
@@ -1648,7 +1600,7 @@
 				F02F5117E36C09CDEBC4F357 /* PBXTargetDependency */,
 				B3C07372A8DBD1B73FBED0CE /* PBXTargetDependency */,
 				137001899C1561F468C755B2 /* PBXTargetDependency */,
-				4DFD3D23209BFE36E7874E67 /* PBXTargetDependency */,
+				0F481C77387143314BBB6A05 /* PBXTargetDependency */,
 				FE5676486E3925210C1BCFB7 /* PBXTargetDependency */,
 			);
 			name = AppRyanair;
@@ -1671,6 +1623,9 @@
 			name = Utils;
 			packageProductDependencies = (
 				FC29B98246696EBB7663FC70 /* RJSLibUFBase */,
+				38262CE2E7E1E88352C3767C /* RJSLibUFAppThemes */,
+				C13C58B70DF704124323EC93 /* RJSLibUFNetworking */,
+				DA18E7AC4895AEF865EEC2F8 /* RJSLibUFStorage */,
 			);
 			productName = Utils;
 			productReference = B5C92D056D628F3EFF63C2C8 /* Utils.framework */;
@@ -1690,8 +1645,7 @@
 				D6AA80784D57C7011101B870 /* PBXTargetDependency */,
 				D9F708888B8A33DA51161F9C /* PBXTargetDependency */,
 				BB8D26228EF8434A7B753CC3 /* PBXTargetDependency */,
-				C4A33724083B045DF3BF2E3F /* PBXTargetDependency */,
-				6C64651B2ECE9B997E7B40B9 /* PBXTargetDependency */,
+				F26681952C35053D3677B57B /* PBXTargetDependency */,
 			);
 			name = AppWeatherCore;
 			productName = AppWeatherCore;
@@ -1713,7 +1667,7 @@
 				FD446296A69B4B59D8BE7310 /* PBXTargetDependency */,
 				0DCC9275161F2682E7B8EB63 /* PBXTargetDependency */,
 				A3F5D9FEB029901A27996273 /* PBXTargetDependency */,
-				616184146544286731B45646 /* PBXTargetDependency */,
+				99D19036165202741E5CA9B4 /* PBXTargetDependency */,
 			);
 			name = AppWeather;
 			productName = AppWeather;
@@ -1727,6 +1681,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1202;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 0DE10B5135A4E28DFB703D90 /* Build configuration list for PBXProject "RJPS_SwiftUI" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1752,27 +1708,14 @@
 				76205C43CAA0CA483701CCA2 /* AppWeatherDomain */,
 				A6FF042F23D45338EF7072DC /* AppWeatherWebAPI */,
 				4F1D977177BB9890B6DA92B1 /* BaseDomain */,
-				9938DB06F947F0FEBD148F29 /* DevTools */,
-				2C63B134DE5E9B3251B825FC /* PublicCode */,
 				4582753D3262ACDCB2C631A5 /* RJPS_SwiftUI */,
 				F184BB3F918849F5A968AB3E /* Utils */,
-				30C57D83104BF50CFBBBC766 /* UtilsDesignables */,
-				81F8949F21D457612CC2D643 /* UtilsExtensions */,
 				6CF5363003A8AA1F1F751B31 /* UtilsNetworking */,
-				24E2F185AE418FA7D9A28F55 /* UtilsStorage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		421AD785952CBDBD4E5F7924 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				716AE619B08813E431C3F164 /* Keys.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		95051E6DCABCF29BEA6F00CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1785,22 +1728,91 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		041AF6AC7DF845C6D1BC854D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				63E8A1B6E3830CE6B43B80A6 /* DevTools+FeatureFlag.swift in Sources */,
-				5F6320B52E9FEEA011F32382 /* DevTools+Log.swift in Sources */,
-				CBEAE46FEBA82875AF86E2E5 /* DevTools.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		20A9E8358AD76D751445C1C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5B100F8B2A3508D3EEC612 /* DateFormatters.swift in Sources */,
-				7C718A9987C9707FD89C605D /* PointFreeFunctions.swift in Sources */,
+				ED9A0751500538387B3E86D5 /* APICacheManager.swift in Sources */,
+				C9B995B4DF91E48400202F1D /* APIKeys.swift in Sources */,
+				21A0D088C207537AD5D2B65C /* ActivityIndicatorRepresentable.swift in Sources */,
+				9C8EA5DBCC9F51CD9F0DF573 /* CacheUtils.swift in Sources */,
+				2CCBFDD8801502118584C0C4 /* ConnectivityView.swift in Sources */,
+				15A142EDEFDB771800094A78 /* DateFormatters.swift in Sources */,
+				1EDA9B1D408A0B056E388F29 /* DesignablesFactory.swift in Sources */,
+				BD0459C2670F6E644ACED6F7 /* Designables_PassCode.swift in Sources */,
+				E838AEE3A0B63FC19505CF1A /* Designables_Preview.swift in Sources */,
+				E4C39E0B5177F9B5F97F6AE5 /* DevTools+FeatureFlag.swift in Sources */,
+				15CE28610E9735856B9B0D7A /* DevTools+Log.swift in Sources */,
+				D5B6AC7147D79052CBF619BA /* DevTools.swift in Sources */,
+				582E2471C74DCFB068A32A0E /* GenericStorableKeyValueModel.swift in Sources */,
+				00996FD9A40CC394602EBF7A /* InfiniteScrollView.swift in Sources */,
+				3ECA5E5EDC0C10C358738DB7 /* NavigationStack.swift in Sources */,
+				710A3894044C0C61BD335753 /* PasswordChecker.swift in Sources */,
+				C01C84C7DF6A52BF6B521C91 /* PointFreeFunctions.swift in Sources */,
+				1530078385889097232F48C5 /* Recrating.InstagramMessages.swift in Sources */,
+				808801FDA03A9E9E034E1974 /* Recreating.AppStore.swift in Sources */,
+				D392CAD6B7A8A2213C5E0EBA /* Recreating.Breathe.swift in Sources */,
+				71AADD660A7DA3EF1B8D149F /* Recreating.HomeScreen.swift in Sources */,
+				41F51FE3159675D6109A8368 /* Recreating.Instagram.swift in Sources */,
+				4608E2FB149D4BDAFD0528AC /* Recreating.LockScreen.swift in Sources */,
+				3AC678DE6BBFD2008BD263D3 /* Recreating.Maps_I.swift in Sources */,
+				B0A31D7B7C3C90AF262FFACF /* Recreating.Maps_II.swift in Sources */,
+				129EB689E72F91B5B3530501 /* Recreating.Messages_I.swift in Sources */,
+				A6BE6CC1234E8D9282F36E16 /* Recreating.Messages_II.swift in Sources */,
+				D8101C72AA4F5AFBFE571172 /* Recreating.Messages_III.swift in Sources */,
+				250E879C4FD00BBC083D5C8A /* Recreating.Reminder.swift in Sources */,
+				AF5508C1A4006F4B1661328A /* Recreating.Settings.swift in Sources */,
+				EFD4E5069A37640FDCA3CC8C /* Recreating.Tinder.swift in Sources */,
+				80381CDC816063C5ECFAFD80 /* Recreating.Twitter.swift in Sources */,
+				C689A9619EA21718D1E37BB8 /* Recreating.iPhone12ProWebsite.swift in Sources */,
+				265FCB63066D13CB8EA4F52B /* ScrollEffect3D.swift in Sources */,
+				9DE717E9D92A227F4B605E21 /* SendEMailViewControllerRepresentable.swift in Sources */,
+				83F6FBA78E5C6DE42FC75DEB /* ShowAlertContentView.swift in Sources */,
+				04512C8D28621FBFB97C5C34 /* SimpleMVVM.swift in Sources */,
+				25C4B65F430A541CD186DBCE /* TextField+Extensions.swift in Sources */,
+				33DBCF22EE3EAA1B4A54C2C6 /* UIColor+Extensions.swift in Sources */,
+				108E5FDB738540BB4338B1AF /* UserDefaults+Extensions.swift in Sources */,
+				583640FF61DF476F740BC8CE /* View+Extensions.swift in Sources */,
+				7D7C6E145D0B5504156558A5 /* VisualDocs_@Binding.swift in Sources */,
+				7A87E4A0072283C121AD1C3F /* VisualDocs_@EnvironmentObject.swift in Sources */,
+				5511EDD2F154B76813A8D0E2 /* VisualDocs_@Published.swift in Sources */,
+				29639FE655152D99B93C9AB2 /* VisualDocs_@State.swift in Sources */,
+				1CBF96BEFAB654999DC2F19A /* VisualDocs_Animations.swift in Sources */,
+				9DC9651BA847F4D26E05E539 /* VisualDocs_Background.swift in Sources */,
+				D1F0E3842B8E010CDE3E0790 /* VisualDocs_Binding.State copy.swift in Sources */,
+				3D98E6F490313C002A17799C /* VisualDocs_Buttons.swift in Sources */,
+				1F82455987CE75AC46DD71A9 /* VisualDocs_Colors.swift in Sources */,
+				FFF3B2FC2F1F11F4C596C109 /* VisualDocs_Combine.swift in Sources */,
+				06DC25FC0C9D3B71F6A14349 /* VisualDocs_ErrorHandling.swift in Sources */,
+				1C0D85327B8393572DBD76F7 /* VisualDocs_Fonts.swift in Sources */,
+				06CBBB1DE216A5174F7F59A5 /* VisualDocs_ForEach.swift in Sources */,
+				6E2F4527783BDC4E1B8649F5 /* VisualDocs_Form.swift in Sources */,
+				57A97B078FBCD69ECBC492A3 /* VisualDocs_Image.swift in Sources */,
+				BF35F2CFC770C5D4EEE48B55 /* VisualDocs_LayoutInScrollView.swift in Sources */,
+				9CA1968B04FCD20850832769 /* VisualDocs_Lists.swift in Sources */,
+				2119490B5C59E1B762B0D956 /* VisualDocs_NavigationView.swift in Sources */,
+				572E2EB4C78D9B8D4B117087 /* VisualDocs_Padding.swift in Sources */,
+				25D4817CD3E523F2CF92A834 /* VisualDocs_RemoteImageLoadging.swift in Sources */,
+				777DF90EF2A03680DA9D5201 /* VisualDocs_RouteToAndCameBack.swift in Sources */,
+				6A50F9EED51906E70BB7E600 /* VisualDocs_Shadows.swift in Sources */,
+				EB91F31940821965D3C75BFF /* VisualDocs_Shapes.swift in Sources */,
+				30DC13826D95DAF4AD74A0ED /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift in Sources */,
+				F85452A19511D3F6B139ADA1 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */,
+				EADF4EEC3C804126FA9BBC1C /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift in Sources */,
+				58A661E8EE0D6B52FA0145D2 /* VisualDocs_SwiftUI_Lab_Triangle.swift in Sources */,
+				2647F53F747BA0263674E635 /* VisualDocs_SwiftUI_Lab_ViewTree_1a.swift in Sources */,
+				E6FCA1D088043D68288D7B71 /* VisualDocs_TabView.swift in Sources */,
+				CA6B954E19310923FB5837F1 /* VisualDocs_Text.swift in Sources */,
+				343FF00F6CAB0A0713F7D509 /* VisualDocs_TimerView.swift in Sources */,
+				C3696336E1B504BD567D53DD /* VisualDocs_UserDefaultsWithPropertyWrapper.swift in Sources */,
+				24197EFAE1670186B8A9DF63 /* VisualDocs_WaysToReactToState_I.swift in Sources */,
+				EE5DDF4CE619001A3D3D274F /* VisualDocs_WaysToReactToState_II.swift in Sources */,
+				2FEC435EC574B4706586B473 /* VisualDocs_horizontalSizeClass.swift in Sources */,
+				4A27BBA6DA2A7CDA7F305CC1 /* VisualDocs_onDelete.swift in Sources */,
+				00050DC7518891F913A752D4 /* VisualDocs_onEditingChanged.swift in Sources */,
+				805BF96286D995B8E13AE9D9 /* VisualDocs_onReceive.swift in Sources */,
+				5230AC29FC46BDE4ADDB1DE4 /* VisualDocs_sheet.swift in Sources */,
+				B257B8017DDCCF4864860891 /* typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1822,19 +1834,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		426F23A365923D7821DE32D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				635A677ECC2EBF967767D17E /* ActivityIndicatorRepresentable.swift in Sources */,
-				9EE54EAA9A028E53CA0A3F45 /* ConnectivityView.swift in Sources */,
-				233EDBB14D92663C3324B6D0 /* DesignablesFactory.swift in Sources */,
-				CF72803BFC22FA03E77C6453 /* Designables_PassCode.swift in Sources */,
-				8B716FB0592992FAE9C0BFA2 /* Designables_Preview.swift in Sources */,
-				D5569458AAAF060EE6FDB19F /* NavigationStack.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		56AF732CAF58C875C5E5C23A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1851,13 +1850,6 @@
 				D7D6C6FE273093A72D9059AD /* VM.DailyWeatherRowViewModel.swift in Sources */,
 				857AC522A27421F09ECF9DA3 /* VM.WeeklyWeatherViewModel.swift in Sources */,
 				1E62DA891E2E80E5132A5F78 /* typelias.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B15998C5493324E4DAA8B33 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1898,22 +1890,9 @@
 			files = (
 				ABCE65918E7078BADD8B57A1 /* BuilderProtocol.swift in Sources */,
 				0DEF8B15F6357A79D52E1346 /* DtoProtocol.swift in Sources */,
-				5F0A8994E7FA9248B6E0B7F1 /* E.APIError.swift in Sources */,
-				66E6F55021348BCBCC9FB8DF /* E.CachePolicy.swift in Sources */,
 				FF35B77A76F93E27CF329B10 /* ListItemModel.swift in Sources */,
 				A7031918D6FE5D86D12F2CE0 /* Response<T>.swift in Sources */,
 				D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9719D1082EBCE4F0D3CFDDDB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93409F6050185749C103C5D9 /* Locale+Extensions.swift in Sources */,
-				335A0EC57D8C2782A72E926D /* TextField+Extensions.swift in Sources */,
-				7E0D07B46282CB6B5DC8A533 /* UIColor+Extensions.swift in Sources */,
-				1B0EBC2FAD0D24C13F64489C /* View+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1956,20 +1935,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8DDD12107EC869D03326904 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7696F1A5610D242447252B8 /* APICacheManager.swift in Sources */,
-				D1A0A9F449700820539EDA22 /* APIKeys.swift in Sources */,
-				7F9B081051B01B8987F9FC46 /* CacheUtils.swift in Sources */,
-				A590200DD606C46AA6C93A95 /* GenericStorableKeyValueModel.swift in Sources */,
-				3123708008B852D2063FB22F /* UserDefaults+Extensions.swift in Sources */,
-				5155AEE0A200E84217C26920 /* UserDefaultsPropertyWrapper.swift in Sources */,
-				3B81A17D7CD05B0ABEE4F839 /* typealias.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FE8027865A796B793C26DF05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2002,22 +1967,12 @@
 /* Begin PBXTargetDependency section */
 		08848FC6B02A82DC47CCCF7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_EFC37403-A667-419B-9608-DB89D7CDD686" /* RJSLibUFBase */;
-		};
-		09E9B1C67C59D3C7DA12E9CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4F1D977177BB9890B6DA92B1 /* BaseDomain */;
-			targetProxy = F114BD028DF144A5D3FE5D6F /* PBXContainerItemProxy */;
+			productRef = "TEMP_7CEC1090-FB86-494A-A80B-BF44DFD47862" /* RJSLibUFBase */;
 		};
 		0B4FF44803AC63BCCA8E3776 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6CF5363003A8AA1F1F751B31 /* UtilsNetworking */;
 			targetProxy = C88EB9D89529D066B38834FD /* PBXContainerItemProxy */;
-		};
-		0D1239395D3DB0DE46B82CB3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9938DB06F947F0FEBD148F29 /* DevTools */;
-			targetProxy = 68097363896A50B8A03B4B65 /* PBXContainerItemProxy */;
 		};
 		0D651D5E5E6074A6D418DB54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2028,6 +1983,11 @@
 			isa = PBXTargetDependency;
 			target = 4F1D977177BB9890B6DA92B1 /* BaseDomain */;
 			targetProxy = D480D593DD8F4619317BB060 /* PBXContainerItemProxy */;
+		};
+		0F481C77387143314BBB6A05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F184BB3F918849F5A968AB3E /* Utils */;
+			targetProxy = 86341B99B9D404871E93431A /* PBXContainerItemProxy */;
 		};
 		1018EED0B4490F46A627FFBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2046,106 +2006,83 @@
 		};
 		1DF262ADDC9C9A79996FD6AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_012D258A-0F8F-4123-9D13-78022AC95055" /* RJSLibUFNetworking */;
+			productRef = "TEMP_C991ED70-158B-4105-860D-F0C3BF0EDAF7" /* RJSLibUFNetworking */;
 		};
 		22AF16BD35BC3FEF00E73D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F50E542FE14495F45669D9A8 /* AppWeather */;
 			targetProxy = B68BAEC8B62F8895660D73D6 /* PBXContainerItemProxy */;
 		};
-		28EF8712A78861DC5E742139 /* PBXTargetDependency */ = {
+		29782448C4A6D507F3297E82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_3B7FEA3A-08F7-490B-8D12-B863F3B963D7" /* RJSLibUFBase */;
-		};
-		2D1EC71F95303EBF5355F700 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 24E2F185AE418FA7D9A28F55 /* UtilsStorage */;
-			targetProxy = DBD7767D3B2081FEBB1263F6 /* PBXContainerItemProxy */;
+			target = F184BB3F918849F5A968AB3E /* Utils */;
+			targetProxy = 6BC8BBF27B5D210EC48F0307 /* PBXContainerItemProxy */;
 		};
 		32ED3CD7768CCD3627C6AA45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BE9567AA6C7A6370EEE7777B /* AppRyanairWebAPI */;
 			targetProxy = AA1630779CBE49B2DD715E47 /* PBXContainerItemProxy */;
 		};
-		3553B116CCCB663FB019B29B /* PBXTargetDependency */ = {
+		39D285C03213C295BA9FBF4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81F8949F21D457612CC2D643 /* UtilsExtensions */;
-			targetProxy = 01840F6DA83110C5BD3D7D74 /* PBXContainerItemProxy */;
+			target = F184BB3F918849F5A968AB3E /* Utils */;
+			targetProxy = D7843BED65CF88AFDF240FF6 /* PBXContainerItemProxy */;
 		};
 		3AF4AF09E7310C0A68566BDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_CF288662-21A2-4944-8C75-46EBCA568DD9" /* RJSLibUFNetworking */;
+			productRef = "TEMP_F6563744-5091-485C-B693-67A68879D7B4" /* RJSLibUFNetworking */;
 		};
 		3B7F490635484C9CCEDD2872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_02EBF889-F0B9-4110-B847-692C0B168C9D" /* RJSLibUFNetworking */;
-		};
-		3EAE1E4A2EECA1E1A4482CF0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 24E2F185AE418FA7D9A28F55 /* UtilsStorage */;
-			targetProxy = 1BA57EE0C32090EDB04D2825 /* PBXContainerItemProxy */;
+			productRef = "TEMP_4971BD11-39EC-4A0B-9520-0FB3570C554B" /* RJSLibUFNetworking */;
 		};
 		4C295052D082B7A0B21590DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_5B28D014-6912-42C6-9AB9-2C1BBF1084A8" /* RJSLibUFBase */;
-		};
-		4DFD3D23209BFE36E7874E67 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 30C57D83104BF50CFBBBC766 /* UtilsDesignables */;
-			targetProxy = 695D265F0F6DD3B014B784AD /* PBXContainerItemProxy */;
+			productRef = "TEMP_A9009850-D240-4B6E-8BFE-E75F049D835E" /* RJSLibUFBase */;
 		};
 		4E9069220C1C655CCF760968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6CF5363003A8AA1F1F751B31 /* UtilsNetworking */;
 			targetProxy = DC3503440AB2DCE2F7D3704E /* PBXContainerItemProxy */;
 		};
-		5237B890558A866B8BDC075F /* PBXTargetDependency */ = {
+		4EA5C036BF071DC47B871452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24E2F185AE418FA7D9A28F55 /* UtilsStorage */;
-			targetProxy = E8CEA19D7615BA048380C845 /* PBXContainerItemProxy */;
+			productRef = "TEMP_C8AD9ABB-2C1F-4503-A796-A54CC380AE3C" /* RJSLibUFStorage */;
 		};
-		616184146544286731B45646 /* PBXTargetDependency */ = {
+		80192BBCB4984564E8C0845E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 30C57D83104BF50CFBBBC766 /* UtilsDesignables */;
-			targetProxy = 8E086E449D15ADF07E9000CB /* PBXContainerItemProxy */;
-		};
-		6C64651B2ECE9B997E7B40B9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9938DB06F947F0FEBD148F29 /* DevTools */;
-			targetProxy = 972C28908CF25B4FA0E71170 /* PBXContainerItemProxy */;
-		};
-		704B1F224DF41218C9D71006 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = "TEMP_A4AA21BA-4BAC-48F4-8DD1-6D52E77E3F53" /* RJSLibUFAppThemes */;
+			target = F184BB3F918849F5A968AB3E /* Utils */;
+			targetProxy = BAF0192E2DBCA510814EF3AC /* PBXContainerItemProxy */;
 		};
 		81C4FC6322D565A7F48DC4F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_A0BA1BAA-CC3B-4647-B082-EA90B04CF9ED" /* RJSLibUFBase */;
+			productRef = "TEMP_402F6D71-0F5C-4D6B-8A31-F6D9AA29FAE9" /* RJSLibUFBase */;
 		};
 		834F20AF556F35889EC6FE20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_FFDBC6E3-B061-49D9-8641-4B9448E30EEE" /* RJSLibUFBase */;
+			productRef = "TEMP_8DB56B2D-4CDC-4B65-B7D6-B091F4DD4349" /* RJSLibUFBase */;
 		};
 		860F228254A6D68B87AB878F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_F98283D5-72C3-432E-A91E-4098B2723C28" /* RJSLibUFBase */;
+			productRef = "TEMP_09F26ED4-55FB-4197-9DC2-E7A50414477A" /* RJSLibUFBase */;
+		};
+		99D19036165202741E5CA9B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F184BB3F918849F5A968AB3E /* Utils */;
+			targetProxy = B9D4DA0F1F89016164AB643E /* PBXContainerItemProxy */;
 		};
 		A255F3D3FE986208D40AB2BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_009B61FB-28BA-411E-831E-740A79965E7B" /* RJSLibUFBase */;
+			productRef = "TEMP_3452B8BD-5D5C-4559-89E3-15232E69F029" /* RJSLibUFBase */;
 		};
 		A3F5D9FEB029901A27996273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F44FC4AEFA0122BBAAB10BFF /* AppWeatherCore */;
 			targetProxy = C93B0A61BF9133F33B9F123E /* PBXContainerItemProxy */;
 		};
-		A904BBA04DEAB0BFD41874F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = "TEMP_4D4F0857-CDF2-4059-9295-0B5C927023DD" /* RJSLibUFBase */;
-		};
 		B053B74733BF51D83FCB83E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_6FBE5BA4-32F3-4CA5-BCB4-74AAE315ACD1" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_4F002100-2DD2-4BAD-9994-1ECA5BE38357" /* RJSLibUFAppThemes */;
 		};
 		B26E7AEB02B55D2287BCBD02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2162,24 +2099,21 @@
 			target = 4F1D977177BB9890B6DA92B1 /* BaseDomain */;
 			targetProxy = 2086E433675AE16AE923573F /* PBXContainerItemProxy */;
 		};
-		C0F2BD9E97F44A202B64D0F4 /* PBXTargetDependency */ = {
+		BFF86C49774612F5DAAF4CEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24E2F185AE418FA7D9A28F55 /* UtilsStorage */;
-			targetProxy = 152D859E22B5E986805501FC /* PBXContainerItemProxy */;
+			productRef = "TEMP_1EAB9E91-E2DB-433E-9CEF-6DF7956F668B" /* RJSLibUFStorage */;
 		};
-		C4A33724083B045DF3BF2E3F /* PBXTargetDependency */ = {
+		C62CEC2EEAFDC88F7CE57DE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24E2F185AE418FA7D9A28F55 /* UtilsStorage */;
-			targetProxy = 4B6D954B8ADC035D0FBA808D /* PBXContainerItemProxy */;
+			productRef = "TEMP_0AA38988-CE72-41DE-87EE-DAE01981548D" /* RJSLibUFStorage */;
+		};
+		CEEFAE30EF6604B708B25681 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = "TEMP_B3845799-FC08-4B86-BF7A-37D0BDB898BD" /* RJSLibUFNetworking */;
 		};
 		D045B575F2EF16D06FDFA669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_FC88E5B2-A006-4BC5-B315-27979E8425E5" /* RJSLibUFNetworking */;
-		};
-		D4E3F78C102C41DD2B77887B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 81F8949F21D457612CC2D643 /* UtilsExtensions */;
-			targetProxy = 83F6175490E3249F39487B5F /* PBXContainerItemProxy */;
+			productRef = "TEMP_C8864A45-E410-44B6-ABDF-F8D9C0CF8BD7" /* RJSLibUFNetworking */;
 		};
 		D575075DBB95B65554C0C40B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2198,40 +2132,30 @@
 		};
 		E01FBE92119DDA783E4516CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_8E23EE5D-EF03-4C4F-BFFF-244EA2051157" /* RJSLibUFBase */;
+			productRef = "TEMP_A7FDE099-239C-460D-B6E1-A9FB8A4718C4" /* RJSLibUFBase */;
 		};
 		E0F913211A6DDAAD4DB21E95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_C5DA776A-9803-40EB-BC83-109A6CFF7E7F" /* RJSLibUFBase */;
+			productRef = "TEMP_13605E86-8F63-4980-8510-3A3D8EE95F4C" /* RJSLibUFBase */;
 		};
 		E4BF07CC044294EB90650052 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4F1D977177BB9890B6DA92B1 /* BaseDomain */;
 			targetProxy = CA2BF3326E433146481506B5 /* PBXContainerItemProxy */;
 		};
-		E887B80DEE95DA582315F42E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 81F8949F21D457612CC2D643 /* UtilsExtensions */;
-			targetProxy = 0FE8F3286D849522698782FA /* PBXContainerItemProxy */;
-		};
 		ED7E48D730FBE14A16D86A3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4F1D977177BB9890B6DA92B1 /* BaseDomain */;
 			targetProxy = 68362D9165125338F033F348 /* PBXContainerItemProxy */;
 		};
-		EDE64E3D5F4602EA91105445 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F184BB3F918849F5A968AB3E /* Utils */;
-			targetProxy = DEF1915ABFAE5FAFF9F956B7 /* PBXContainerItemProxy */;
-		};
-		EF0E02C8B07DC4F6D3587928 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9938DB06F947F0FEBD148F29 /* DevTools */;
-			targetProxy = 9B187923A9B6977243DE973A /* PBXContainerItemProxy */;
-		};
 		F02F5117E36C09CDEBC4F357 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_8375294C-AE09-4145-A171-91E7CF821372" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_85E91CBD-BA91-4DF6-BD16-0C206E98EC4E" /* RJSLibUFAppThemes */;
+		};
+		F26681952C35053D3677B57B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F184BB3F918849F5A968AB3E /* Utils */;
+			targetProxy = B0A3FA71FA6171AB3C392D3E /* PBXContainerItemProxy */;
 		};
 		FD446296A69B4B59D8BE7310 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2310,30 +2234,6 @@
 			};
 			name = Debug_Dev;
 		};
-		107BCFB8918C4689C4B6309E /* Beta */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DevTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Beta;
-		};
 		1170D107258791BE3C24A5E0 /* Debug_Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2358,102 +2258,6 @@
 			};
 			name = Debug_Dev;
 		};
-		1DC830F2F95448B95FDF2850 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsStorage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		1EF4364440B6078195F155A8 /* Debug_QA */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DevTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_QA;
-		};
-		1FDF165F1D825AAD1E450154 /* Debug_QA */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsExtensions/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_QA;
-		};
-		20194A2FD283389401237255 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsDesignables/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
 		229D359781633C07C31D0CEF /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2477,30 +2281,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug_QA;
-		};
-		273DA571825AA881E326D2BC /* Beta */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PublicCode/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Beta;
 		};
 		27A7174D2D7137033070F9E6 /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
@@ -2542,30 +2322,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Adhoc;
-		};
-		2A32F7F0C4E6EB5FDB16055F /* Debug_QA */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsStorage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_QA;
 		};
 		303A4DC53C55EDDBFE427524 /* Debug_Prod */ = {
 			isa = XCBuildConfiguration;
@@ -2624,7 +2380,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_FILE = Utils/DocumentsVisual/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2926,78 +2682,6 @@
 			};
 			name = Debug_Dev;
 		};
-		55B25DC98478AF7E32433218 /* Beta */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsExtensions/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Beta;
-		};
-		55BAAE46FB9DF2467AB9F7CA /* Debug_Dev */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsDesignables/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Dev;
-		};
-		578C6155F9B5C1D3D100A624 /* Debug_Prod */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsStorage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Prod;
-		};
 		57F1DD41A3463F3EB574D88E /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3021,30 +2705,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Adhoc;
-		};
-		584B09740226C3685555B046 /* Debug_Dev */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DevTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Dev;
 		};
 		5A908F3E9999F9D38F2E7BF5 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
@@ -3103,7 +2763,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_FILE = Utils/DocumentsVisual/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3141,30 +2801,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Adhoc;
-		};
-		65C978007A8B65C90FC0AA6A /* Debug_Dev */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsStorage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Dev;
 		};
 		666C328CDBAE94EE6BFDE60E /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
@@ -3223,7 +2859,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_FILE = Utils/DocumentsVisual/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3559,54 +3195,6 @@
 			};
 			name = Debug_Prod;
 		};
-		7DB97A23646D577351704336 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DevTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		7DE4FECD16C6C401008DC0DA /* Debug_QA */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsDesignables/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_QA;
-		};
 		7DF01FFC7D8788A9DB130D50 /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3670,30 +3258,6 @@
 			};
 			name = Debug_QA;
 		};
-		7EC73945AB8470B2C702E2D1 /* Beta */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsDesignables/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Beta;
-		};
 		804AFAA3B91BEB407FF52AEE /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3717,54 +3281,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Adhoc;
-		};
-		81468A3DEA46B37690261DFB /* Debug_Prod */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsDesignables/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Prod;
-		};
-		834AB1738169E6F52B51E3B6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PublicCode/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
 		};
 		845D4E4CCAD65A75D2BE5EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3823,7 +3339,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_FILE = Utils/DocumentsVisual/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3909,30 +3425,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug_Prod;
-		};
-		89B1EE131FFE965E968EEFF7 /* Adhoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PublicCode/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Adhoc;
 		};
 		8E223D4071E4455D1B1C950C /* Debug_Prod */ = {
 			isa = XCBuildConfiguration;
@@ -4053,30 +3545,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
-		};
-		A5E70FBDD4B63A54C8043D54 /* Beta */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsStorage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Beta;
 		};
 		A610612FC8280C789E07DA30 /* Beta */ = {
 			isa = XCBuildConfiguration;
@@ -4248,7 +3716,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_FILE = Utils/DocumentsVisual/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4304,30 +3772,6 @@
 			};
 			name = Debug_QA;
 		};
-		BEFBE6199A99130BFB98866C /* Debug_QA */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PublicCode/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_QA;
-		};
 		C29E968524095B1C49952892 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4337,7 +3781,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_FILE = Utils/DocumentsVisual/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4400,30 +3844,6 @@
 			};
 			name = Adhoc;
 		};
-		C8B766DA60D863BA2A9A5F9C /* Adhoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsStorage/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsStorage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Adhoc;
-		};
 		CF0820D3FACFD3E2C0CB2315 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4447,30 +3867,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Adhoc;
-		};
-		CF6B4C1063C7625BFBA3E736 /* Debug_Prod */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PublicCode/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Prod;
 		};
 		D2AF7A6B5AE0D5514383AAB0 /* Debug_QA */ = {
 			isa = XCBuildConfiguration;
@@ -4544,126 +3940,6 @@
 			};
 			name = Release;
 		};
-		D499F4D62D7AB3E02AD86E35 /* Debug_Dev */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsExtensions/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Dev;
-		};
-		D5C8187277F5B2570CC9E147 /* Adhoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsDesignables/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsDesignables;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Adhoc;
-		};
-		D84B1721AB625532A8A6C85F /* Debug_Prod */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DevTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Prod;
-		};
-		D92B97BD50858DF5107C8D48 /* Adhoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DevTools/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.DevTools;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Adhoc;
-		};
-		DCD5DE32722D0A7BAEE9A0E3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsExtensions/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
 		DD621014ADEAE958192772BB /* Debug_Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4687,30 +3963,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug_Dev;
-		};
-		E0E6FE26DDFF0DFFA7A4A616 /* Debug_Prod */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsExtensions/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Prod;
 		};
 		E20A7F2C4D2FB43538A3E259 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
@@ -4817,54 +4069,6 @@
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Beta;
-		};
-		ED101B04EC394E873B305046 /* Debug_Dev */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PublicCode/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.PublicCode;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Debug_Dev;
-		};
-		EE1BBFC8FE3736D0DAA91491 /* Adhoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UtilsExtensions/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rjps.swiftui.UtilsExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Adhoc;
 		};
 		F16A52DCAF5B984D9003B18F /* Debug_Prod */ = {
 			isa = XCBuildConfiguration;
@@ -5067,19 +4271,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Adhoc;
 		};
-		177BA907C4BB3AF6761FDB9A /* Build configuration list for PBXNativeTarget "UtilsStorage" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C8B766DA60D863BA2A9A5F9C /* Adhoc */,
-				A5E70FBDD4B63A54C8043D54 /* Beta */,
-				65C978007A8B65C90FC0AA6A /* Debug_Dev */,
-				578C6155F9B5C1D3D100A624 /* Debug_Prod */,
-				2A32F7F0C4E6EB5FDB16055F /* Debug_QA */,
-				1DC830F2F95448B95FDF2850 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Adhoc;
-		};
 		194F512759D578556CED915F /* Build configuration list for PBXNativeTarget "AppWeatherCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5119,19 +4310,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Adhoc;
 		};
-		306352CB816B822999788D3E /* Build configuration list for PBXNativeTarget "UtilsDesignables" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5C8187277F5B2570CC9E147 /* Adhoc */,
-				7EC73945AB8470B2C702E2D1 /* Beta */,
-				55BAAE46FB9DF2467AB9F7CA /* Debug_Dev */,
-				81468A3DEA46B37690261DFB /* Debug_Prod */,
-				7DE4FECD16C6C401008DC0DA /* Debug_QA */,
-				20194A2FD283389401237255 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Adhoc;
-		};
 		4F0D5A7FBC8982BBD6727624 /* Build configuration list for PBXNativeTarget "AppWeatherDomain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5141,19 +4319,6 @@
 				7A0373C8218457167F5796E4 /* Debug_Prod */,
 				6DEE55334226E2EB9625F765 /* Debug_QA */,
 				E2F91B07AC94F10B031597C0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Adhoc;
-		};
-		66107B832FDCCCEFF2F23524 /* Build configuration list for PBXNativeTarget "UtilsExtensions" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EE1BBFC8FE3736D0DAA91491 /* Adhoc */,
-				55B25DC98478AF7E32433218 /* Beta */,
-				D499F4D62D7AB3E02AD86E35 /* Debug_Dev */,
-				E0E6FE26DDFF0DFFA7A4A616 /* Debug_Prod */,
-				1FDF165F1D825AAD1E450154 /* Debug_QA */,
-				DCD5DE32722D0A7BAEE9A0E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Adhoc;
@@ -5171,19 +4336,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Adhoc;
 		};
-		76003906CBBC5FC956304C74 /* Build configuration list for PBXNativeTarget "DevTools" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D92B97BD50858DF5107C8D48 /* Adhoc */,
-				107BCFB8918C4689C4B6309E /* Beta */,
-				584B09740226C3685555B046 /* Debug_Dev */,
-				D84B1721AB625532A8A6C85F /* Debug_Prod */,
-				1EF4364440B6078195F155A8 /* Debug_QA */,
-				7DB97A23646D577351704336 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Adhoc;
-		};
 		A2AF37F9B66E7CA30435D912 /* Build configuration list for PBXNativeTarget "RJPS_SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5193,19 +4345,6 @@
 				AC38A37DD9A0BE14D51D624E /* Debug_Prod */,
 				27A7174D2D7137033070F9E6 /* Debug_QA */,
 				E33766FA60E19D861D9261A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Adhoc;
-		};
-		C9CB33489F9CC2BF03C42BA5 /* Build configuration list for PBXNativeTarget "PublicCode" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				89B1EE131FFE965E968EEFF7 /* Adhoc */,
-				273DA571825AA881E326D2BC /* Beta */,
-				ED101B04EC394E873B305046 /* Debug_Dev */,
-				CF6B4C1063C7625BFBA3E736 /* Debug_Prod */,
-				BEFBE6199A99130BFB98866C /* Debug_QA */,
-				834AB1738169E6F52B51E3B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Adhoc;
@@ -5270,7 +4409,7 @@
 			repositoryURL = "https://github.com/ricardopsantos/RJSLibUF";
 			requirement = {
 				kind = revision;
-				revision = 8be04fcc539a457915f46c0f3af6582a2ab0b01b;
+				revision = 71912bcc27fff048eb85ea8f83252cfbd4aca852;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -5280,6 +4419,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
+		};
+		38262CE2E7E1E88352C3767C /* RJSLibUFAppThemes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFAppThemes;
 		};
 		47EF46B4A8B4B5A00081A60D /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -5291,15 +4435,15 @@
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFAppThemes;
 		};
-		ADAB3D971FCFA0BD12316626 /* RJSLibUFNetworking */ = {
+		C13C58B70DF704124323EC93 /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		D399AB77AD25504888AF0B11 /* RJSLibUFBase */ = {
+		DA18E7AC4895AEF865EEC2F8 /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
+			productName = RJSLibUFStorage;
 		};
 		E7F97941A5B3C2A856934172 /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -5311,90 +4455,95 @@
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_009B61FB-28BA-411E-831E-740A79965E7B" /* RJSLibUFBase */ = {
+		"TEMP_09F26ED4-55FB-4197-9DC2-E7A50414477A" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_012D258A-0F8F-4123-9D13-78022AC95055" /* RJSLibUFNetworking */ = {
+		"TEMP_0AA38988-CE72-41DE-87EE-DAE01981548D" /* RJSLibUFStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFStorage;
+		};
+		"TEMP_13605E86-8F63-4980-8510-3A3D8EE95F4C" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_1EAB9E91-E2DB-433E-9CEF-6DF7956F668B" /* RJSLibUFStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFStorage;
+		};
+		"TEMP_3452B8BD-5D5C-4559-89E3-15232E69F029" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_402F6D71-0F5C-4D6B-8A31-F6D9AA29FAE9" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_4971BD11-39EC-4A0B-9520-0FB3570C554B" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		"TEMP_02EBF889-F0B9-4110-B847-692C0B168C9D" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_3B7FEA3A-08F7-490B-8D12-B863F3B963D7" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_4D4F0857-CDF2-4059-9295-0B5C927023DD" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_5B28D014-6912-42C6-9AB9-2C1BBF1084A8" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_6FBE5BA4-32F3-4CA5-BCB4-74AAE315ACD1" /* RJSLibUFAppThemes */ = {
+		"TEMP_4F002100-2DD2-4BAD-9994-1ECA5BE38357" /* RJSLibUFAppThemes */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFAppThemes;
 		};
-		"TEMP_8375294C-AE09-4145-A171-91E7CF821372" /* RJSLibUFAppThemes */ = {
+		"TEMP_7CEC1090-FB86-494A-A80B-BF44DFD47862" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_85E91CBD-BA91-4DF6-BD16-0C206E98EC4E" /* RJSLibUFAppThemes */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFAppThemes;
 		};
-		"TEMP_8E23EE5D-EF03-4C4F-BFFF-244EA2051157" /* RJSLibUFBase */ = {
+		"TEMP_8DB56B2D-4CDC-4B65-B7D6-B091F4DD4349" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_A0BA1BAA-CC3B-4647-B082-EA90B04CF9ED" /* RJSLibUFBase */ = {
+		"TEMP_A7FDE099-239C-460D-B6E1-A9FB8A4718C4" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_A4AA21BA-4BAC-48F4-8DD1-6D52E77E3F53" /* RJSLibUFAppThemes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFAppThemes;
-		};
-		"TEMP_C5DA776A-9803-40EB-BC83-109A6CFF7E7F" /* RJSLibUFBase */ = {
+		"TEMP_A9009850-D240-4B6E-8BFE-E75F049D835E" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_CF288662-21A2-4944-8C75-46EBCA568DD9" /* RJSLibUFNetworking */ = {
+		"TEMP_B3845799-FC08-4B86-BF7A-37D0BDB898BD" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		"TEMP_EFC37403-A667-419B-9608-DB89D7CDD686" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_F98283D5-72C3-432E-A91E-4098B2723C28" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_FC88E5B2-A006-4BC5-B315-27979E8425E5" /* RJSLibUFNetworking */ = {
+		"TEMP_C8864A45-E410-44B6-ABDF-F8D9C0CF8BD7" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		"TEMP_FFDBC6E3-B061-49D9-8641-4B9448E30EEE" /* RJSLibUFBase */ = {
+		"TEMP_C8AD9ABB-2C1F-4503-A796-A54CC380AE3C" /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
+			productName = RJSLibUFStorage;
+		};
+		"TEMP_C991ED70-158B-4105-860D-F0C3BF0EDAF7" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_F6563744-5091-485C-B693-67A68879D7B4" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

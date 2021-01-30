@@ -6,7 +6,7 @@
 import SwiftUI
 import Combine
 //
-import UtilsDesignables
+import Utils
 
 // MARK: - Preview
 

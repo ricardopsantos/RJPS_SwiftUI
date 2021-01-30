@@ -10,8 +10,7 @@ import AppWeatherCore
 import AppWeatherDomain
 import AppWeatherWebAPI
 import BaseDomain
-//
-import UtilsStorage
+import Utils
 
 //
 // The Builder is responsible to build a View and setup the Fetcher and ViewModel

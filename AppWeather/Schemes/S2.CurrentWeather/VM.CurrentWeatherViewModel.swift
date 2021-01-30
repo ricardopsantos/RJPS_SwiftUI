@@ -7,7 +7,6 @@ import SwiftUI
 import Combine
 //
 import RJSLibUFBase
-//
 import Utils
 //
 import AppWeatherDomain

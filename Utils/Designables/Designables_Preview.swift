@@ -59,8 +59,6 @@ public struct Designables_View: View {
 
 public struct VisualDocs_Designables: PreviewProvider {
     public static var previews: some View {
-        Text("apagar isto depois do fix").font(.caption)
-        #warning("comentado")
- //       return Designables_View().buildPreviews()
+        return Designables_View().buildPreviews()
     }
 }

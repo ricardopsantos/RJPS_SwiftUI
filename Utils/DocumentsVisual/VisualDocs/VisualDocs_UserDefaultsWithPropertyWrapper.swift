@@ -8,11 +8,11 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import UtilsStorage
+import RJSLibUFStorage
 
 class TheViewModel: ObservableObject {
     let objectWillChange = PassthroughSubject<Void, Never>()
-    @UserDefaultsPropertyWrapper("ShowOnStart", defaultValue: true)
+    @RJS_DefaultsPropertyWrapper("ShowOnStart", defaultValue: true)
     var showOnStart: Bool { willSet { objectWillChange.send() } }
 }
 

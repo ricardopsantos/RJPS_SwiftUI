@@ -11,8 +11,6 @@ import RJSLibUFBase
 import AppRyanairWebAPI
 import AppRyanairDomain
 import BaseDomain
-//
-import UtilsStorage
 import Utils
 
 // The Fetcher will aggregate all deferent WEB APIs
@@ -48,10 +46,10 @@ extension FetcherRyanair: APIRyanairProtocol {
         }).store(in: cancelBag)
 
         switch cache {
-        case .ignoringCache: return apiSubscriber
+        case .noCacheLoad:   return apiSubscriber
         case .cacheElseLoad: return cacheSubscriberFailSafe
         case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
-        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        case .cacheNoLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
         }
     }
 
@@ -68,10 +66,10 @@ extension FetcherRyanair: APIRyanairProtocol {
         }).store(in: cancelBag)
 
         switch cache {
-        case .ignoringCache: return apiSubscriber
+        case .noCacheLoad:   return apiSubscriber
         case .cacheElseLoad: return cacheSubscriberFailSafe
         case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
-        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        case .cacheNoLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
         }
     }
 }

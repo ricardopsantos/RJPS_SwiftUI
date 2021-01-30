@@ -8,7 +8,6 @@ import SwiftUI
 import Combine
 //
 import Utils
-//
 import AppWeatherCore
 import AppWeatherDomain
 

@@ -11,9 +11,7 @@ import RJSLibUFBase
 import BaseDomain
 import AppWeatherWebAPI
 import AppWeatherDomain
-//
 import UtilsNetworking
-import UtilsStorage
 import Utils
 
 // The Fetcher will aggregate all deferent WEB APIs
@@ -45,10 +43,10 @@ extension FetcherWeather: APIWeatherProtocol {
         }).store(in: cancelBag)
 
         switch cache {
-        case .ignoringCache: return apiSubscriber
+        case .noCacheLoad:   return apiSubscriber
         case .cacheElseLoad: return cacheSubscriberFailSafe
         case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
-        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        case .cacheNoLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
         }
     }
 
@@ -65,10 +63,10 @@ extension FetcherWeather: APIWeatherProtocol {
         }).store(in: cancelBag)
 
         switch cache {
-        case .ignoringCache: return apiSubscriber
+        case .noCacheLoad:   return apiSubscriber
         case .cacheElseLoad: return cacheSubscriberFailSafe
         case .cacheAndLoad : return Publishers.Merge(cacheSubscriberFailable, apiSubscriber).eraseToAnyPublisher()
-        case .cacheDontLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
-    }
+        case .cacheNoLoad: return cacheSubscriberFailable.eraseToAnyPublisher()
+        }
     }
 }

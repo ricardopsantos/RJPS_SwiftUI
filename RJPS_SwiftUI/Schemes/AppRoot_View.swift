@@ -12,7 +12,6 @@ import RJSLibUFBase
 //
 import AppWeather
 import AppRyanair
-import UtilsExtensions
 
 struct AppRoot_View: View {
 
@@ -32,8 +31,7 @@ struct AppRoot_View: View {
         TabView {
             tab1
             tab2
-            #warning("comentado")
-            //DevScreen_View()
+            DevScreen_View()
         }
     }
 }

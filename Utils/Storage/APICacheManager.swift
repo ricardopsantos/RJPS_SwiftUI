@@ -8,8 +8,6 @@ import Combine
 //
 import RJSLibUFBase
 //
-import BaseDomain
-
 public class APICacheManager {
     private init() {}
     public static let shared = APICacheManager()

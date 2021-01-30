@@ -10,9 +10,7 @@ import Combine
 //
 import BaseDomain
 import AppRyanairDomain
-//
-import UtilsExtensions
-import DevTools
+import Utils
 
 public class FetcherRyanairMock {
     public init() { }

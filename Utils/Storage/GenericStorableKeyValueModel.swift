@@ -6,9 +6,8 @@
 import Foundation
 //
 import RJSLibUFBase
-//
-import UtilsExtensions
 
+#warning("to delete")
 public class GenericStorableKeyValueModel: Codable {
     public var keyBase: String = ""
     public var key: String = ""         // Computed cache key (with parameters)
