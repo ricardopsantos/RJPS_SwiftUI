@@ -11,7 +11,6 @@ import RJSLibUFBase
 import RJSLibUFAppThemes
 //
 import Utils
-//
 import AppRyanairCore
 import BaseDomain
 

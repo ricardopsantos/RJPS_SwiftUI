@@ -6,7 +6,6 @@
 import Foundation
 //
 import Utils
-//
 import BaseDomain
 import AppRyanairDomain
 

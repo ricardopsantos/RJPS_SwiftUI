@@ -8,8 +8,9 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import Utils
+import RJSLibUFStorage
 //
+import Utils
 import AppWeatherDomain
 
 public class RepositoryWeather: ObservableObject, RepositoryWeatherProtocol {
@@ -27,6 +28,6 @@ private final class RepositoryWeatherLogic: ObservableObject {
     let objectWillChange = PassthroughSubject<Void, Never>()
     static var id: String { return Bundle.main.bundleIdentifier! }
 
-    @UserDefaultsPropertyWrapper("\(id).lastCity", defaultValue: "")
+    @RJS_DefaultsPropertyWrapper("\(id).lastCity", defaultValue: "")
     var lastCity: String { willSet { objectWillChange.send() } }
 }

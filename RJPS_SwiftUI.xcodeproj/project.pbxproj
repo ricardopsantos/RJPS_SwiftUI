@@ -82,7 +82,6 @@
 		58A661E8EE0D6B52FA0145D2 /* VisualDocs_SwiftUI_Lab_Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C90045A7AEBCCCEE3AF11 /* VisualDocs_SwiftUI_Lab_Triangle.swift */; };
 		5D896BC088485A18F0A2DE1D /* AppRyanair.h in Headers */ = {isa = PBXBuildFile; fileRef = C9ACA0820776505AA5F25627 /* AppRyanair.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E084C49AED2A7D8D44B580A /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9597886916DBF70B75B17A06 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F0A8994E7FA9248B6E0B7F1 /* E.APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D19BB993642FC3274E0012 /* E.APIError.swift */; };
 		61BDCA47F3527A5FAC9FDAF5 /* V.DailyWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC704D763B3C7A595E9FBF /* V.DailyWeatherRowView.swift */; };
 		63EA756AA4AEA8124A107F5F /* WeatherResponseDto.WeeklyForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79A51B4BE479DA4CA721C73 /* WeatherResponseDto.WeeklyForecastEntity.swift */; };
 		645805E5BF2D1C862E6E18A6 /* WeatherRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8BA314105EE778D3A0B42 /* WeatherRequestDto.swift */; };
@@ -90,7 +89,6 @@
 		6666ECCFB99DCFB535515F7C /* RyanairRequestDto.Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94FB6291970E6A6830B92D5 /* RyanairRequestDto.Availability.swift */; };
 		6699483372A7F65142423777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A956A64686C90154E9CC42D0 /* LaunchScreen.storyboard */; };
 		66C5B026F4470CD1E729AFA0 /* FetcherRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB85B59071A9F6828F2A54 /* FetcherRyanair.swift */; };
-		66E6F55021348BCBCC9FB8DF /* E.CachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */; };
 		6909AC7CBEB624DE4F26C03E /* RyanairResponseDto.Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72E09A198ED1228911C16 /* RyanairResponseDto.Stations.swift */; };
 		69D1B0013EBCBCBBA88F3722 /* V.RyanairView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */; };
 		6A50F9EED51906E70BB7E600 /* VisualDocs_Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206DFAC93A3570553640E407 /* VisualDocs_Shadows.swift */; };
@@ -126,7 +124,6 @@
 		9DE717E9D92A227F4B605E21 /* SendEMailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A8A475BBDB2109B3DCB21 /* SendEMailViewControllerRepresentable.swift */; };
 		9DF6F8ADD9B1E3435C94027E /* B.RyanairView2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */; };
 		9F7F73E7602C391D2F831A92 /* RyanairRequestDto.Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1DCE16F76D0EE2FA5DDDF /* RyanairRequestDto.Stations.swift */; };
-		9F85B705F86416601D7AD198 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610BCF9D807E05EC0F34EB4 /* Locale+Extensions.swift */; };
 		A347C5C253B2D790BA702BC1 /* WeatherRequestDto.Wheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC57391BC67EEC13B7CED /* WeatherRequestDto.Wheater.swift */; };
 		A370C0944A340B4E04BF6ADC /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = FC29B98246696EBB7663FC70 /* RJSLibUFBase */; };
 		A4F205C468A933F0DF4D19F9 /* BaseDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BF426C78331EDE88D4BE70 /* BaseDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -156,7 +153,6 @@
 		CBAEAE2B98960C47B8764B6A /* WeatherRequestDto.Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3CB7C864DAD83DDDCF2A42 /* WeatherRequestDto.Forecast.swift */; };
 		CCFB6E3CD6C035D25197D85F /* SimpleNetworkAgentsUsageComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DEBA0F8F9689F4BAB94553 /* SimpleNetworkAgentsUsageComparison.swift */; };
 		CE09950359429E7285B2E45C /* VM.CurrentWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715D3A7043B6C4324AA8D74E /* VM.CurrentWeatherRowViewModel.swift */; };
-		D0ED4993ADE9E50FFD9B1013 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64A3D3C326F2A88904F4519 /* UserDefaultsPropertyWrapper.swift */; };
 		D1F0E3842B8E010CDE3E0790 /* VisualDocs_Binding.State copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42570CAA24B352463CE7238D /* VisualDocs_Binding.State copy.swift */; };
 		D2F2584CCCCE11D4001CE3A8 /* RyanairMappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5037BB498ECC16D7DF38DAE /* RyanairMappers.swift */; };
 		D33FEC4F9A08DD2640CA4EDF /* B.RyanairView1Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B7E236BAA16E513A7E002 /* B.RyanairView1Builder.swift */; };
@@ -508,10 +504,8 @@
 		82168D8E998A15A4A106A299 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8248CE791F182234BB50A7F9 /* SimpleNetworkAgentAExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentAExample.swift; sourceTree = "<group>"; };
 		84C72E09A198ED1228911C16 /* RyanairResponseDto.Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairResponseDto.Stations.swift; sourceTree = "<group>"; };
-		84D19BB993642FC3274E0012 /* E.APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.APIError.swift; sourceTree = "<group>"; };
 		84DF45427F05B67EC6249595 /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
 		85D232B6F5748ACBD851F8E4 /* VM.RyanairView1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView1ViewModel.swift; sourceTree = "<group>"; };
-		871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.CachePolicy.swift; sourceTree = "<group>"; };
 		8B8CED726603B355821BE044 /* APIWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeatherProtocol.swift; sourceTree = "<group>"; };
 		8C1AC39774E40E819A3315F6 /* VisualDocs_RouteToAndCameBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RouteToAndCameBack.swift; sourceTree = "<group>"; };
 		8CA64233B772478D7EC32A15 /* Recreating.Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Twitter.swift; sourceTree = "<group>"; };
@@ -548,7 +542,6 @@
 		B4F4B39218571ECEC93977B2 /* AppRyanairCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C92D056D628F3EFF63C2C8 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63977B3308EE96B4832FC29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B64A3D3C326F2A88904F4519 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		B713F61173993B9FD61AADD4 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView1.swift; sourceTree = "<group>"; };
 		B8E58DE91B235ED37BFAA2B4 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
@@ -584,7 +577,6 @@
 		D2EF67281D0E1B918C81BA72 /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 		D516123A9B1D038EECB64F5E /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		D610BCF9D807E05EC0F34EB4 /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.3.png; sourceTree = "<group>"; };
@@ -1072,15 +1064,6 @@
 			path = ExternalSources.Recreating;
 			sourceTree = "<group>";
 		};
-		A5908C434E609DD380BD193D /* Enuns */ = {
-			isa = PBXGroup;
-			children = (
-				84D19BB993642FC3274E0012 /* E.APIError.swift */,
-				871BC119E68AAF6F2953C696 /* E.CachePolicy.swift */,
-			);
-			path = Enuns;
-			sourceTree = "<group>";
-		};
 		A86D2C8DE6BD488B1F26E198 /* Fetchers|Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -1127,7 +1110,6 @@
 		BE12B46D7ABB652F92171D1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D610BCF9D807E05EC0F34EB4 /* Locale+Extensions.swift */,
 				B713F61173993B9FD61AADD4 /* TextField+Extensions.swift */,
 				1DA5C0657C599FFA54A96DA5 /* UIColor+Extensions.swift */,
 				BCA223F2FF54D28E6D97AF65 /* View+Extensions.swift */,
@@ -1306,7 +1288,6 @@
 				76028CF2A6E6120F9CE5BEF6 /* Info.plist */,
 				FDDD91DCBA8848FE6F8FB333 /* typelias.swift */,
 				4D7237FA817059D6F2237419 /* BaseObjects */,
-				A5908C434E609DD380BD193D /* Enuns */,
 				BAD91B91B5397B53BFF85AA6 /* Generics */,
 				F6AFC53A26C5BC44C1A4AFBB /* Protocols */,
 			);
@@ -1338,7 +1319,6 @@
 				3086D6BCCA52EB6DDA0815B6 /* CacheUtils.swift */,
 				67FD2B3F9F326A99DA7E417C /* GenericStorableKeyValueModel.swift */,
 				C9B67088EDB34DBE5DDE06E4 /* UserDefaults+Extensions.swift */,
-				B64A3D3C326F2A88904F4519 /* UserDefaultsPropertyWrapper.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -1477,6 +1457,7 @@
 			dependencies = (
 				81C4FC6322D565A7F48DC4F4 /* PBXTargetDependency */,
 				CEEFAE30EF6604B708B25681 /* PBXTargetDependency */,
+				BFF86C49774612F5DAAF4CEA /* PBXTargetDependency */,
 			);
 			name = BaseDomain;
 			productName = BaseDomain;
@@ -1765,7 +1746,6 @@
 				D5B6AC7147D79052CBF619BA /* DevTools.swift in Sources */,
 				582E2471C74DCFB068A32A0E /* GenericStorableKeyValueModel.swift in Sources */,
 				00996FD9A40CC394602EBF7A /* InfiniteScrollView.swift in Sources */,
-				9F85B705F86416601D7AD198 /* Locale+Extensions.swift in Sources */,
 				3ECA5E5EDC0C10C358738DB7 /* NavigationStack.swift in Sources */,
 				710A3894044C0C61BD335753 /* PasswordChecker.swift in Sources */,
 				C01C84C7DF6A52BF6B521C91 /* PointFreeFunctions.swift in Sources */,
@@ -1792,7 +1772,6 @@
 				25C4B65F430A541CD186DBCE /* TextField+Extensions.swift in Sources */,
 				33DBCF22EE3EAA1B4A54C2C6 /* UIColor+Extensions.swift in Sources */,
 				108E5FDB738540BB4338B1AF /* UserDefaults+Extensions.swift in Sources */,
-				D0ED4993ADE9E50FFD9B1013 /* UserDefaultsPropertyWrapper.swift in Sources */,
 				583640FF61DF476F740BC8CE /* View+Extensions.swift in Sources */,
 				7D7C6E145D0B5504156558A5 /* VisualDocs_@Binding.swift in Sources */,
 				7A87E4A0072283C121AD1C3F /* VisualDocs_@EnvironmentObject.swift in Sources */,
@@ -1911,8 +1890,6 @@
 			files = (
 				ABCE65918E7078BADD8B57A1 /* BuilderProtocol.swift in Sources */,
 				0DEF8B15F6357A79D52E1346 /* DtoProtocol.swift in Sources */,
-				5F0A8994E7FA9248B6E0B7F1 /* E.APIError.swift in Sources */,
-				66E6F55021348BCBCC9FB8DF /* E.CachePolicy.swift in Sources */,
 				FF35B77A76F93E27CF329B10 /* ListItemModel.swift in Sources */,
 				A7031918D6FE5D86D12F2CE0 /* Response<T>.swift in Sources */,
 				D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */,
@@ -1990,7 +1967,7 @@
 /* Begin PBXTargetDependency section */
 		08848FC6B02A82DC47CCCF7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_1D50CF83-3172-430F-A47C-6597012ACE1C" /* RJSLibUFBase */;
+			productRef = "TEMP_7CEC1090-FB86-494A-A80B-BF44DFD47862" /* RJSLibUFBase */;
 		};
 		0B4FF44803AC63BCCA8E3776 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2029,7 +2006,7 @@
 		};
 		1DF262ADDC9C9A79996FD6AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_64D25702-550B-42B2-B4C7-73065E513F70" /* RJSLibUFNetworking */;
+			productRef = "TEMP_C991ED70-158B-4105-860D-F0C3BF0EDAF7" /* RJSLibUFNetworking */;
 		};
 		22AF16BD35BC3FEF00E73D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2053,15 +2030,15 @@
 		};
 		3AF4AF09E7310C0A68566BDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_DEC37863-785B-4CBB-AFD8-E4FDDD999893" /* RJSLibUFNetworking */;
+			productRef = "TEMP_F6563744-5091-485C-B693-67A68879D7B4" /* RJSLibUFNetworking */;
 		};
 		3B7F490635484C9CCEDD2872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_DB87FAF6-4CB0-4FA7-9C04-BA86FF84FDE4" /* RJSLibUFNetworking */;
+			productRef = "TEMP_4971BD11-39EC-4A0B-9520-0FB3570C554B" /* RJSLibUFNetworking */;
 		};
 		4C295052D082B7A0B21590DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_2969AF42-4FA6-443B-8E4A-4A79C06EEFAF" /* RJSLibUFBase */;
+			productRef = "TEMP_A9009850-D240-4B6E-8BFE-E75F049D835E" /* RJSLibUFBase */;
 		};
 		4E9069220C1C655CCF760968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2070,7 +2047,7 @@
 		};
 		4EA5C036BF071DC47B871452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_F8C9746E-B387-4472-9378-66DB5FA934CA" /* RJSLibUFStorage */;
+			productRef = "TEMP_C8AD9ABB-2C1F-4503-A796-A54CC380AE3C" /* RJSLibUFStorage */;
 		};
 		80192BBCB4984564E8C0845E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2079,15 +2056,15 @@
 		};
 		81C4FC6322D565A7F48DC4F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_13F12A39-EE27-4CB0-A1C4-F3D6F045C743" /* RJSLibUFBase */;
+			productRef = "TEMP_402F6D71-0F5C-4D6B-8A31-F6D9AA29FAE9" /* RJSLibUFBase */;
 		};
 		834F20AF556F35889EC6FE20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_84532AE0-57FC-4D04-8A88-B9E7A2062189" /* RJSLibUFBase */;
+			productRef = "TEMP_8DB56B2D-4CDC-4B65-B7D6-B091F4DD4349" /* RJSLibUFBase */;
 		};
 		860F228254A6D68B87AB878F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_84314193-6B9A-46BE-A29C-49976828BB84" /* RJSLibUFBase */;
+			productRef = "TEMP_09F26ED4-55FB-4197-9DC2-E7A50414477A" /* RJSLibUFBase */;
 		};
 		99D19036165202741E5CA9B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2096,7 +2073,7 @@
 		};
 		A255F3D3FE986208D40AB2BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_8BCF4710-F56A-4CCD-86A9-C9C0D0E7F60A" /* RJSLibUFBase */;
+			productRef = "TEMP_3452B8BD-5D5C-4559-89E3-15232E69F029" /* RJSLibUFBase */;
 		};
 		A3F5D9FEB029901A27996273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2105,7 +2082,7 @@
 		};
 		B053B74733BF51D83FCB83E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_04E1CB1F-4CF8-4D9A-B845-50FC41D4DFB8" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_4F002100-2DD2-4BAD-9994-1ECA5BE38357" /* RJSLibUFAppThemes */;
 		};
 		B26E7AEB02B55D2287BCBD02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2122,17 +2099,21 @@
 			target = 4F1D977177BB9890B6DA92B1 /* BaseDomain */;
 			targetProxy = 2086E433675AE16AE923573F /* PBXContainerItemProxy */;
 		};
+		BFF86C49774612F5DAAF4CEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = "TEMP_1EAB9E91-E2DB-433E-9CEF-6DF7956F668B" /* RJSLibUFStorage */;
+		};
 		C62CEC2EEAFDC88F7CE57DE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_B27DCED3-50AF-4618-ABF3-A8A8ED9CBFAE" /* RJSLibUFStorage */;
+			productRef = "TEMP_0AA38988-CE72-41DE-87EE-DAE01981548D" /* RJSLibUFStorage */;
 		};
 		CEEFAE30EF6604B708B25681 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_0C519B5B-4728-411C-8156-3F486C3D6965" /* RJSLibUFNetworking */;
+			productRef = "TEMP_B3845799-FC08-4B86-BF7A-37D0BDB898BD" /* RJSLibUFNetworking */;
 		};
 		D045B575F2EF16D06FDFA669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_2B8AFDF1-1053-4796-B25E-CD7CFAFD7332" /* RJSLibUFNetworking */;
+			productRef = "TEMP_C8864A45-E410-44B6-ABDF-F8D9C0CF8BD7" /* RJSLibUFNetworking */;
 		};
 		D575075DBB95B65554C0C40B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2151,11 +2132,11 @@
 		};
 		E01FBE92119DDA783E4516CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_0A5166DA-7E54-4941-AECE-F539508E4FBA" /* RJSLibUFBase */;
+			productRef = "TEMP_A7FDE099-239C-460D-B6E1-A9FB8A4718C4" /* RJSLibUFBase */;
 		};
 		E0F913211A6DDAAD4DB21E95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_BC9D1A86-1A7F-45C6-A68B-ADAE8B0A0112" /* RJSLibUFBase */;
+			productRef = "TEMP_13605E86-8F63-4980-8510-3A3D8EE95F4C" /* RJSLibUFBase */;
 		};
 		E4BF07CC044294EB90650052 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2169,7 +2150,7 @@
 		};
 		F02F5117E36C09CDEBC4F357 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_1216791C-B3A2-4BDF-9189-4B6F6FF94090" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_85E91CBD-BA91-4DF6-BD16-0C206E98EC4E" /* RJSLibUFAppThemes */;
 		};
 		F26681952C35053D3677B57B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4428,7 +4409,7 @@
 			repositoryURL = "https://github.com/ricardopsantos/RJSLibUF";
 			requirement = {
 				kind = revision;
-				revision = 8be04fcc539a457915f46c0f3af6582a2ab0b01b;
+				revision = 71912bcc27fff048eb85ea8f83252cfbd4aca852;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -4474,90 +4455,95 @@
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_04E1CB1F-4CF8-4D9A-B845-50FC41D4DFB8" /* RJSLibUFAppThemes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFAppThemes;
-		};
-		"TEMP_0A5166DA-7E54-4941-AECE-F539508E4FBA" /* RJSLibUFBase */ = {
+		"TEMP_09F26ED4-55FB-4197-9DC2-E7A50414477A" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_0C519B5B-4728-411C-8156-3F486C3D6965" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_1216791C-B3A2-4BDF-9189-4B6F6FF94090" /* RJSLibUFAppThemes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFAppThemes;
-		};
-		"TEMP_13F12A39-EE27-4CB0-A1C4-F3D6F045C743" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_1D50CF83-3172-430F-A47C-6597012ACE1C" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_2969AF42-4FA6-443B-8E4A-4A79C06EEFAF" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_2B8AFDF1-1053-4796-B25E-CD7CFAFD7332" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_64D25702-550B-42B2-B4C7-73065E513F70" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_84314193-6B9A-46BE-A29C-49976828BB84" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_84532AE0-57FC-4D04-8A88-B9E7A2062189" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_8BCF4710-F56A-4CCD-86A9-C9C0D0E7F60A" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_B27DCED3-50AF-4618-ABF3-A8A8ED9CBFAE" /* RJSLibUFStorage */ = {
+		"TEMP_0AA38988-CE72-41DE-87EE-DAE01981548D" /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFStorage;
 		};
-		"TEMP_BC9D1A86-1A7F-45C6-A68B-ADAE8B0A0112" /* RJSLibUFBase */ = {
+		"TEMP_13605E86-8F63-4980-8510-3A3D8EE95F4C" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_DB87FAF6-4CB0-4FA7-9C04-BA86FF84FDE4" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_DEC37863-785B-4CBB-AFD8-E4FDDD999893" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_F8C9746E-B387-4472-9378-66DB5FA934CA" /* RJSLibUFStorage */ = {
+		"TEMP_1EAB9E91-E2DB-433E-9CEF-6DF7956F668B" /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFStorage;
+		};
+		"TEMP_3452B8BD-5D5C-4559-89E3-15232E69F029" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_402F6D71-0F5C-4D6B-8A31-F6D9AA29FAE9" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_4971BD11-39EC-4A0B-9520-0FB3570C554B" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_4F002100-2DD2-4BAD-9994-1ECA5BE38357" /* RJSLibUFAppThemes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFAppThemes;
+		};
+		"TEMP_7CEC1090-FB86-494A-A80B-BF44DFD47862" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_85E91CBD-BA91-4DF6-BD16-0C206E98EC4E" /* RJSLibUFAppThemes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFAppThemes;
+		};
+		"TEMP_8DB56B2D-4CDC-4B65-B7D6-B091F4DD4349" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_A7FDE099-239C-460D-B6E1-A9FB8A4718C4" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_A9009850-D240-4B6E-8BFE-E75F049D835E" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_B3845799-FC08-4B86-BF7A-37D0BDB898BD" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_C8864A45-E410-44B6-ABDF-F8D9C0CF8BD7" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_C8AD9ABB-2C1F-4503-A796-A54CC380AE3C" /* RJSLibUFStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFStorage;
+		};
+		"TEMP_C991ED70-158B-4105-860D-F0C3BF0EDAF7" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_F6563744-5091-485C-B693-67A68879D7B4" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

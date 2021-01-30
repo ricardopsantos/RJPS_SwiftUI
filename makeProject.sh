@@ -1,6 +1,6 @@
-xcodegen -s ./XcodeGen/project.yml -p ./
+xcodegen -s ./XcodeGen/RJPS_SwiftUI.yml -p ./
 
 open RJPS_SwiftUI.xcodeproj
-cd XcodeGen
-xcodegen dump --type graphviz --file ../Documents/Graph.viz
-xcodegen dump --type json --file ../Documents/Graph.json
+
+xcodegen dump --spec ./XcodeGen/RJPS_SwiftUI.yml --type graphviz --file ../Documents/Graph.viz
+xcodegen dump --spec ./XcodeGen/RJPS_SwiftUI.yml --type json --file ../Documents/Graph.json

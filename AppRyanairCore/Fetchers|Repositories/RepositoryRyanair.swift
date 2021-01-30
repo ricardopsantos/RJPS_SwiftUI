@@ -6,8 +6,9 @@
 import Foundation
 import Combine
 //
-import AppRyanairDomain
+import RJSLibUFStorage
 //
+import AppRyanairDomain
 import Utils
 
 public class RepositoryRyanair: ObservableObject, RepositoryRyanairProtocol {
@@ -25,6 +26,6 @@ private final class RepositoryRyanairLogic: ObservableObject {
     let objectWillChange = PassthroughSubject<Void, Never>()
     static var id: String { return Bundle.main.bundleIdentifier! }
 
-    @UserDefaultsPropertyWrapper("\(id).something", defaultValue: "")
+    @RJS_DefaultsPropertyWrapper("\(id).something", defaultValue: "")
     var lastCity: String { willSet { objectWillChange.send() } }
 }

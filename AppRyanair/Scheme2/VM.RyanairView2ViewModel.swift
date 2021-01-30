@@ -9,7 +9,6 @@ import Combine
 import RJSLibUFBase
 //
 import Utils
-//
 import AppRyanairCore
 import AppRyanairWebAPI
 import AppRyanairDomain

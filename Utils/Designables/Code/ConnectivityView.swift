@@ -8,8 +8,6 @@ import SwiftUI
 //
 import RJSLibUFAppThemes
 import RJSLibUFBase
-//
-import Utils
 
 public struct ConnectivityView: View {
     @State var connectivity = ""

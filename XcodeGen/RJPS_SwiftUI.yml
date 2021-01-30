@@ -59,7 +59,7 @@ packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
 #    from: 1.0.0
-    revision: 8be04fcc539a457915f46c0f3af6582a2ab0b01b
+    revision: 71912bcc27fff048eb85ea8f83252cfbd4aca852 # 2.0.0
 
 ####################### TARGETS #######################
 ####################### TARGETS #######################  
@@ -282,16 +282,6 @@ targets:
 ######################### Generic Utils ######################### 
 ######################### Generic Utils ######################### 
       
-#  DevTools:
-#    templates: 
-#      - Framework
-#    sources:
-#      - path: ../DevTools
-#    dependencies:
-#      - package: RJSLibUF
-#        product: RJSLibUFBase
-#        link: false
-        
   BaseDomain:
     templates: 
       - Framework
@@ -303,6 +293,9 @@ targets:
         link: false
       - package: RJSLibUF
         product: RJSLibUFNetworking
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFStorage
         link: false
         
   Utils:
