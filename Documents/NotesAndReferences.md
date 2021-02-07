@@ -344,6 +344,7 @@ __Code Sample__ : See section @EnvironmentObject
 
 ## SwiftUI References
 
+* [On the road to learn SwiftUI](https://karinprater.medium.com/on-the-road-to-learn-swiftui-8b26b528199c)
 * [Getting started with UIKit in SwiftUI and vice versa](https://www.avanderlee.com/swiftui/integrating-swiftui-with-uikit/)
 * [Understanding of Property Wrappers in SwiftUI](https://medium.com/mindful-engineering/understanding-of-property-wrappers-in-swiftui-3789a72515c0)
 * [Fucking SwiftUI](https://fuckingswiftui.com/)

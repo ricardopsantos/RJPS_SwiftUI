@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -411,7 +411,7 @@
 		0CF124C35989E2A72EE5B03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D20E641AC8412EB36136DDE /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
 		0E7C6F1ED6364E85DD739F9C /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
-		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; path = Graph.simplified.viz; sourceTree = "<group>"; };
+		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.simplified.viz; sourceTree = "<group>"; };
 		18081A0AE1324D6C848053E5 /* RepositorRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorRyanairProtocol.swift; sourceTree = "<group>"; };
 		188A8FF7395A94ABE15B2442 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
 		18AB46AF3E560DDFC6B3D8FB /* UtilsNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,7 +456,7 @@
 		4888B5A9C5C02F67883EC538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		48CAED30B0C8D189CF816854 /* WeatherMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMappers.swift; sourceTree = "<group>"; };
 		495C0213CF19D2A77B7B69CF /* Recreating.AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.AppStore.swift; sourceTree = "<group>"; };
-		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; path = Graph.viz; sourceTree = "<group>"; };
+		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.viz; sourceTree = "<group>"; };
 		4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView2.swift; sourceTree = "<group>"; };
 		4B16F34813BD45939D8CAACC /* readme.image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.2.png; sourceTree = "<group>"; };
 		4F70AD1FF77511B1FED81AAF /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
@@ -579,6 +579,7 @@
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7C3BFCF25D055EF00A78C0C /* CoolStuffToTest.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoolStuffToTest.md; sourceTree = "<group>"; };
 		D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.3.png; sourceTree = "<group>"; };
 		D90034C9F5CA9F78E6FF9F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsNetworking.h; sourceTree = "<group>"; };
@@ -834,6 +835,7 @@
 				4AC5DE6AC22E447384CA0CD8 /* Graph.viz */,
 				6A7F163C9E85B2CFACCD8C5D /* MVVM.README.md */,
 				0C33EF15820822B333C09DD2 /* NotesAndReferences.md */,
+				D7C3BFCF25D055EF00A78C0C /* CoolStuffToTest.md */,
 				5D48E1527EF67311931182D9 /* articles */,
 				181111B49B5ED8F6445F845B /* Bugs */,
 				3C476F2CED7E5A495BC99BF8 /* images */,
@@ -1681,8 +1683,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1202;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 0DE10B5135A4E28DFB703D90 /* Build configuration list for PBXProject "RJPS_SwiftUI" */;
 			compatibilityVersion = "Xcode 10.0";
