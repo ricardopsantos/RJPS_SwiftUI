@@ -67,8 +67,8 @@ public extension VM {
 
         @Published var isLoading: Bool = false
 
-        private let fetcher: APIRyanairProtocol
-        private var repository: RepositoryRyanairProtocol
+        @RJS_Inject private var fetcher: APIRyanairProtocol
+        @RJS_Inject private var repository: RepositoryRyanairProtocol
         private var cancelBag = CancelBag()
 
         private var trips: [ResponseDto.Trip] = [] {
@@ -83,11 +83,11 @@ public extension VM {
             }
         }
 
-        public init(fetcher: APIRyanairProtocol,
-                    repository: RepositoryRyanairProtocol,
-                    scheduler: DispatchQueue = DispatchQueue(label: "RyanairView1ViewModel")) {
-            self.fetcher = fetcher
-            self.repository = repository
+        public init(/*fetcher: APIRyanairProtocol,
+                    repository: RepositoryRyanairProtocol,*/
+            scheduler: DispatchQueue = DispatchQueue(label: "\(RyanairView1ViewModel.self)")) {
+            //self.fetcher = fetcher
+            //self.repository = repository
             fetchStations()
             observeUserInteractions()
         }

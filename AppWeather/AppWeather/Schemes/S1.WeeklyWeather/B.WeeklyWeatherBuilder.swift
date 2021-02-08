@@ -20,8 +20,7 @@ import Utils
 public struct WeeklyWeatherBuilder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
-        // Resolving ViewModel dependencies
-        Resolver.AppWeather()
+        Resolver.AppWeather() // Resolve dependencies
         let viewModel = VM.WeeklyWeatherViewModel()
         return WeeklyWeatherView(viewModel: viewModel)
     }

@@ -19,19 +19,20 @@ import AppRyanairDomain
 public struct RyanairView1Builder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
-        Resolver.AppRyanair()
-        let apiRyanair_A = APIRyanair_A()
-        let apiRyanair_B = APIRyanair_B()
-        let fetcher: APIRyanairProtocol = FetcherRyanair(webAPI_A: apiRyanair_A, webAPI_B: apiRyanair_B)
-        let repository: RepositoryRyanairProtocol = RepositoryRyanair()
-        let viewModel = VM.RyanairView1ViewModel(fetcher: fetcher, repository: repository)
-        return RyanairView1(viewModel: viewModel)
+        Resolver.AppRyanair(mock: false)
+        //let apiRyanair_A = APIRyanair_A()
+        //let apiRyanair_B = APIRyanair_B()
+        //let fetcher: APIRyanairProtocol = FetcherRyanair(webAPI_A: apiRyanair_A, webAPI_B: apiRyanair_B)
+        //let repository: RepositoryRyanairProtocol = RepositoryRyanair()
+        //let viewModel = VM.RyanairView1ViewModel(fetcher: fetcher, repository: repository)
+        return RyanairView1(viewModel: VM.RyanairView1ViewModel())
     }
 
     public static func buildMockView() -> some View {
-        let fetcher: APIRyanairProtocol = FetcherRyanairMock()
-        let repository: RepositoryRyanairProtocol = RepositoryRyanair()
-        let viewModel = VM.RyanairView1ViewModel(fetcher: fetcher, repository: repository)
-        return RyanairView1(viewModel: viewModel)
+        Resolver.AppRyanair(mock: true)
+        //let fetcher: APIRyanairProtocol = FetcherRyanairMock()
+        //let repository: RepositoryRyanairProtocol = RepositoryRyanair()
+        //let viewModel = VM.RyanairView1ViewModel(fetcher: fetcher, repository: repository)
+        return RyanairView1(viewModel: VM.RyanairView1ViewModel())
     }
 }
