@@ -16,7 +16,10 @@ public struct APIKeys {
         if let dict = keys, let value = dict[key] as? String {
             return value.replacingOccurrences(of: " ", with: "")
         }
-        print("Key [\(key)] not found")
+        if let value = ProcessInfo.processInfo.environment[key] {
+            return value
+        }
+        RJS_Logs.error("Key [\(key)] not found")
         return nil
     }
 }
