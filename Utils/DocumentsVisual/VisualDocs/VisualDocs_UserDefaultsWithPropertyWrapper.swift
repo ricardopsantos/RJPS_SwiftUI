@@ -9,10 +9,11 @@ import SwiftUI
 import Combine
 //
 import RJSLibUFStorage
-
+import RJSLibUFBase
+/*
 class TheViewModel: ObservableObject {
     let objectWillChange = PassthroughSubject<Void, Never>()
-    @RJS_DefaultsPropertyWrapper("ShowOnStart", defaultValue: true)
+    @RJS_UserDefaults("ShowOnStart", defaultValue: true)
     var showOnStart: Bool { willSet { objectWillChange.send() } }
 }
 
@@ -36,4 +37,4 @@ struct VisualDocs_UserDefaultsWithPropertyWrapper_PreviewProvider: PreviewProvid
     static var previews: some View {
         VisualDocs_UserDefaultsWithPropertyWrapper()
     }
-}
+}*/

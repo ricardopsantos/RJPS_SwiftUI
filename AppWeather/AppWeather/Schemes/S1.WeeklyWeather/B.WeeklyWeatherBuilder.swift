@@ -20,10 +20,9 @@ import Utils
 public struct WeeklyWeatherBuilder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
-        let webAPI = APIWeather()
-        let fetcher: APIWeatherProtocol = APIKeys.get(key: "OpenWeather") != nil ?  FetcherWeather(webAPI: webAPI) : FetcherWeatherMock()
-        let repository: RepositoryWeatherProtocol = RepositoryWeather()
-        let viewModel  = VM.WeeklyWeatherViewModel(fetcher: fetcher, repository: repository)
+        // Resolving ViewModel dependencies
+        Resolver.AppWeather()
+        let viewModel = VM.WeeklyWeatherViewModel()
         return WeeklyWeatherView(viewModel: viewModel)
     }
 }

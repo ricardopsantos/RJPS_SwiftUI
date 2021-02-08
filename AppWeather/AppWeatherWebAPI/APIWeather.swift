@@ -20,7 +20,7 @@ public class APIWeather {
         public static let scheme = "https"
         public static let host = "api.openweathermap.org"
         public static let path = "/data/2.5"
-        public static var key: String { APIKeys.get(key: "OpenWeather") ?? "" }
+        public static var key: String { APIKeys.get(key: "OPEN_WEATHER_KEY") ?? "" }
     }
     public var agent: SimpleNetworkAgentB { return Self.Constants.agent }
     public var decoder: JSONDecoder { return Self.Constants.decoder }

@@ -19,6 +19,7 @@ import AppRyanairDomain
 public struct RyanairView1Builder: BuilderProtocol {
     private init() { }
     public static func buildView() -> some View {
+        Resolver.AppRyanair()
         let apiRyanair_A = APIRyanair_A()
         let apiRyanair_B = APIRyanair_B()
         let fetcher: APIRyanairProtocol = FetcherRyanair(webAPI_A: apiRyanair_A, webAPI_B: apiRyanair_B)

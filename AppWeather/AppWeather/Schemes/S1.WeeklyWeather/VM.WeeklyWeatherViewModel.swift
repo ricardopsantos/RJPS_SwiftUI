@@ -37,14 +37,11 @@ public extension VM {
 
         @Published var isLoading: Bool = false
 
-        private let fetcher: APIWeatherProtocol
-        private var repository: RepositoryWeatherProtocol
+        @RJS_Inject private var fetcher: APIWeatherProtocol
+        @RJS_Inject private var repository: RepositoryWeatherProtocol
         private var cancelBag = CancelBag()
 
-        public init(fetcher: APIWeatherProtocol, repository: RepositoryWeatherProtocol, scheduler: DispatchQueue = DispatchQueue(label: "WeatherViewModel")) {
-            self.fetcher = fetcher
-            self.repository = repository
-
+        public init(scheduler: DispatchQueue = DispatchQueue(label: "\(WeeklyWeatherViewModel.self)")) {
             let observer = self.viewOut.$city.dropFirst(1).debounce(for: .seconds(1), scheduler: DispatchQueue.main)
 
             // 1 - call fetchWeather

@@ -62,7 +62,7 @@ targetTemplates:
 packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
-    revision: 71912bcc27fff048eb85ea8f83252cfbd4aca852 # 2.0.0
+    revision: a5d3f01571f592cea6c94d32481a90f5da8284d8 
 
 #
 # QGrid is the missing SwiftUI collection view. It uses the same approach as SwiftUI's List view,
@@ -159,7 +159,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppRyanair  
+      - path: ../AppRyanair/AppRyanair  
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
@@ -178,7 +178,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppRyanairDomain
+      - path: ../AppRyanair/AppRyanairDomain
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
@@ -196,7 +196,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppRyanairCore  
+      - path: ../AppRyanair/AppRyanairCore  
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
@@ -214,7 +214,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppRyanairWebAPI
+      - path: ../AppRyanair/AppRyanairWebAPI
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
@@ -237,7 +237,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppWeather  
+      - path: ../AppWeather/AppWeather  
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase       
@@ -258,7 +258,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppWeatherDomain
+      - path: ../AppWeather/AppWeatherDomain
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
@@ -273,7 +273,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppWeatherCore
+      - path: ../AppWeather/AppWeatherCore
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
@@ -293,7 +293,7 @@ targets:
     templates: 
       - Framework
     sources: 
-      - path: ../AppWeatherWebAPI
+      - path: ../AppWeather/AppWeatherWebAPI
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase

@@ -14,6 +14,8 @@
 		06B39F68C5441495DCD5C165 /* TO_DO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1B98ED7BE671F241B28ADA /* TO_DO.swift */; };
 		06CBBB1DE216A5174F7F59A5 /* VisualDocs_ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E54EF3AAA9C54F7E76ACDF /* VisualDocs_ForEach.swift */; };
 		06DC25FC0C9D3B71F6A14349 /* VisualDocs_ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622D4D31DA0F4FF7723CE5E /* VisualDocs_ErrorHandling.swift */; };
+		0926BF9C2C4FA596A1BD7D53 /* ResponseDto+Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29338B695A4D3BB44B74C58 /* ResponseDto+Stations.swift */; };
+		092C2BA5A72BEB0FD5767AE6 /* ResponseDto+Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F8E811867181EE763908CE /* ResponseDto+Availability.swift */; };
 		09552933C485FE3449A58A5F /* UtilsNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DEF8B15F6357A79D52E1346 /* DtoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E04B23E92830D9865940927 /* DtoProtocol.swift */; };
 		108E5FDB738540BB4338B1AF /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B67088EDB34DBE5DDE06E4 /* UserDefaults+Extensions.swift */; };
@@ -34,6 +36,7 @@
 		2119490B5C59E1B762B0D956 /* VisualDocs_NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E2CA68814A787CED497F9F /* VisualDocs_NavigationView.swift */; };
 		21A0D088C207537AD5D2B65C /* ActivityIndicatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A9C2A58E5C0E4441940D45 /* ActivityIndicatorRepresentable.swift */; };
 		24197EFAE1670186B8A9DF63 /* VisualDocs_WaysToReactToState_I.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460CC3B5125FCC54BDF02D4 /* VisualDocs_WaysToReactToState_I.swift */; };
+		241F82E66C5F0529DE852A53 /* RequestDto+Wheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434FDFCE4CBBF94700690893 /* RequestDto+Wheater.swift */; };
 		250E879C4FD00BBC083D5C8A /* Recreating.Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F9C7D43ECC080487B3D46 /* Recreating.Reminder.swift */; };
 		25C4B65F430A541CD186DBCE /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F61173993B9FD61AADD4 /* TextField+Extensions.swift */; };
 		25D4817CD3E523F2CF92A834 /* VisualDocs_RemoteImageLoadging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8273F863B5D5E5FDDE7210 /* VisualDocs_RemoteImageLoadging.swift */; };
@@ -65,6 +68,7 @@
 		46CD3B86D8DD69DAC5A259FB /* RepositoryWeatherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985AB94FEB80BF0E4246790 /* RepositoryWeatherProtocol.swift */; };
 		475D7C1690EB2861401881EF /* AppWeatherDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47DB132B8F668C5766901A63 /* RJSLibUFStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DA18E7AC4895AEF865EEC2F8 /* RJSLibUFStorage */; };
+		49EAFF6BBF28F7F13535A470 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D7F00765BF71EE67DEBF5 /* Model.swift */; };
 		49EF4DCE7A592D5454184683 /* AppRyanair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE3471A14A96927FFE2F660 /* AppRyanair.framework */; };
 		4A27BBA6DA2A7CDA7F305CC1 /* VisualDocs_onDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406CF4833D142D77B4C2267 /* VisualDocs_onDelete.swift */; };
 		5230AC29FC46BDE4ADDB1DE4 /* VisualDocs_sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E63428CDF9748B3940979 /* VisualDocs_sheet.swift */; };
@@ -81,22 +85,20 @@
 		5D896BC088485A18F0A2DE1D /* AppRyanair.h in Headers */ = {isa = PBXBuildFile; fileRef = C9ACA0820776505AA5F25627 /* AppRyanair.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E084C49AED2A7D8D44B580A /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9597886916DBF70B75B17A06 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61BDCA47F3527A5FAC9FDAF5 /* V.DailyWeatherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC704D763B3C7A595E9FBF /* V.DailyWeatherRowView.swift */; };
-		63EA756AA4AEA8124A107F5F /* ResponseDto+WeeklyForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79A51B4BE479DA4CA721C73 /* ResponseDto+WeeklyForecastEntity.swift */; };
 		645E72B62615FA2EFC89C384 /* SimpleNetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB61DE8BE63DE516A3DA03E0 /* SimpleNetworkAgentProtocol.swift */; };
-		6666ECCFB99DCFB535515F7C /* RequestDto+Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94FB6291970E6A6830B92D5 /* RequestDto+Availability.swift */; };
 		6699483372A7F65142423777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A956A64686C90154E9CC42D0 /* LaunchScreen.storyboard */; };
 		66C5B026F4470CD1E729AFA0 /* FetcherRyanair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB85B59071A9F6828F2A54 /* FetcherRyanair.swift */; };
-		6909AC7CBEB624DE4F26C03E /* ResponseDto+Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C72E09A198ED1228911C16 /* ResponseDto+Stations.swift */; };
 		69D1B0013EBCBCBBA88F3722 /* V.RyanairView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */; };
 		6A50F9EED51906E70BB7E600 /* VisualDocs_Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206DFAC93A3570553640E407 /* VisualDocs_Shadows.swift */; };
 		6E2F4527783BDC4E1B8649F5 /* VisualDocs_Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC821680DAB3E28A33C711F6 /* VisualDocs_Form.swift */; };
 		710A3894044C0C61BD335753 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE404817E4B4087E5FF78F7A /* PasswordChecker.swift */; };
 		71AADD660A7DA3EF1B8D149F /* Recreating.HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8E0194026BAA33EB3FEEDF /* Recreating.HomeScreen.swift */; };
+		7337272A06241024B748B1EE /* RequestDto+Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A821F1144079A16487F98D6 /* RequestDto+Availability.swift */; };
 		73490E5C5C2A67496B5D3D19 /* AppRyanairDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = A0092ECE406080F9E83F0461 /* AppRyanairDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		772C29D04B615D1158153D45 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82168D8E998A15A4A106A299 /* ActivityIndicator.swift */; };
-		773E655F0E7C294FD9769F21 /* ResponseDto+CurrentWeatherForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EB43AE939660E7765C785 /* ResponseDto+CurrentWeatherForecastEntity.swift */; };
 		777DF90EF2A03680DA9D5201 /* VisualDocs_RouteToAndCameBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1AC39774E40E819A3315F6 /* VisualDocs_RouteToAndCameBack.swift */; };
 		78272CB36419DC5661802BFB /* AppWeatherWebAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = F492B00701E0FB853EBBF7DA /* AppWeatherWebAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79A433C0A63298EDA0603A60 /* RequestDto+Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95CAD4DB4F6709B8D895027 /* RequestDto+Stations.swift */; };
 		7A87E4A0072283C121AD1C3F /* VisualDocs_@EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC12AD87134A93389315FC5 /* VisualDocs_@EnvironmentObject.swift */; };
 		7CCD3B2925CFEA886DE1F05D /* FetcherWeatherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608CE52D6E2AEB0627F7FBE6 /* FetcherWeatherMock.swift */; };
 		7D7C6E145D0B5504156558A5 /* VisualDocs_@Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DF45427F05B67EC6249595 /* VisualDocs_@Binding.swift */; };
@@ -110,7 +112,10 @@
 		83F6FBA78E5C6DE42FC75DEB /* ShowAlertContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3567CFD1CB96CE158AAFA0F7 /* ShowAlertContentView.swift */; };
 		857AC522A27421F09ECF9DA3 /* VM.WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CF494755B297A20A4B750 /* VM.WeeklyWeatherViewModel.swift */; };
 		8C207013E32C1A5DCD535866 /* AppWeather.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6AAF1E9FCBB123D19C4133 /* AppWeather.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90472EA1E1E5E174AF2FEC20 /* RequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8CDCB1646F5A88B62763F /* RequestDto.swift */; };
+		90CDBF5F346C5B6E7B4FC302 /* ResponseDto+CurrentWeatherForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB628153F33D1CB5CC87464 /* ResponseDto+CurrentWeatherForecastEntity.swift */; };
 		91E5E01AA0E8D2A29B9DA61E /* FetcherRyanairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68688B397AA2018723E867BB /* FetcherRyanairMock.swift */; };
+		92360D17DA20362B41589671 /* ResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525FD3080263E5B92B02271 /* ResponseDto.swift */; };
 		934E8B830CB5C418BD4B5848 /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = E7F97941A5B3C2A856934172 /* RJSLibUFBase */; };
 		981618B849D8060D1C79CD65 /* RepositoryWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258D8B589FD2081F91282AD /* RepositoryWeather.swift */; };
 		9C8EA5DBCC9F51CD9F0DF573 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3086D6BCCA52EB6DDA0815B6 /* CacheUtils.swift */; };
@@ -120,8 +125,7 @@
 		9DC9651BA847F4D26E05E539 /* VisualDocs_Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60484B11B63AA671A97C3 /* VisualDocs_Background.swift */; };
 		9DE717E9D92A227F4B605E21 /* SendEMailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A8A475BBDB2109B3DCB21 /* SendEMailViewControllerRepresentable.swift */; };
 		9DF6F8ADD9B1E3435C94027E /* B.RyanairView2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */; };
-		9F7F73E7602C391D2F831A92 /* RequestDto+Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1DCE16F76D0EE2FA5DDDF /* RequestDto+Stations.swift */; };
-		A347C5C253B2D790BA702BC1 /* RequestDto+Wheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC57391BC67EEC13B7CED /* RequestDto+Wheater.swift */; };
+		A1DCC15FCECBB3946126EAF1 /* RequestDto+Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694EA959B52B6CD1D43F88E1 /* RequestDto+Forecast.swift */; };
 		A370C0944A340B4E04BF6ADC /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = FC29B98246696EBB7663FC70 /* RJSLibUFBase */; };
 		A4F205C468A933F0DF4D19F9 /* BaseDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BF426C78331EDE88D4BE70 /* BaseDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6BE6CC1234E8D9282F36E16 /* Recreating.Messages_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BE62660EF57771AEF3483 /* Recreating.Messages_II.swift */; };
@@ -135,7 +139,6 @@
 		B869F734A9E2A1A240168D69 /* AppRoot_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456212E58E54AD3DAE404733 /* AppRoot_View.swift */; };
 		BD0459C2670F6E644ACED6F7 /* Designables_PassCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C6F1ED6364E85DD739F9C /* Designables_PassCode.swift */; };
 		BDF8A85BF781C8CE10C97818 /* RyanairMappers.ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17489FD4902A191E848C573 /* RyanairMappers.ListItemModel.swift */; };
-		BEDB581C65FEA845EAE21FC1 /* ResponseDto+Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8006111CD5C46C1E53C37674 /* ResponseDto+Availability.swift */; };
 		BF35F2CFC770C5D4EEE48B55 /* VisualDocs_LayoutInScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E178D20FA1E108EC0EDAD54A /* VisualDocs_LayoutInScrollView.swift */; };
 		C01C84C7DF6A52BF6B521C91 /* PointFreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EC0566D6F7B70F672E16F /* PointFreeFunctions.swift */; };
 		C3696336E1B504BD567D53DD /* VisualDocs_UserDefaultsWithPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7496840A6A53B76DACF9B7 /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */; };
@@ -146,7 +149,6 @@
 		C9C570501E69CA0A21C35EA9 /* AppRyanairCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB093C839136CB04360A277 /* AppRyanairCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA6B954E19310923FB5837F1 /* VisualDocs_Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD2D81429C645BC1F42566 /* VisualDocs_Text.swift */; };
 		CB25A315F5D099A6852E77CA /* V.WeeklyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A108CE142B5EC6599A1BDB /* V.WeeklyWeatherView.swift */; };
-		CBAEAE2B98960C47B8764B6A /* RequestDto+Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3CB7C864DAD83DDDCF2A42 /* RequestDto+Forecast.swift */; };
 		CCFB6E3CD6C035D25197D85F /* SimpleNetworkAgentsUsageComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DEBA0F8F9689F4BAB94553 /* SimpleNetworkAgentsUsageComparison.swift */; };
 		CE09950359429E7285B2E45C /* VM.CurrentWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715D3A7043B6C4324AA8D74E /* VM.CurrentWeatherRowViewModel.swift */; };
 		D1F0E3842B8E010CDE3E0790 /* VisualDocs_Binding.State copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42570CAA24B352463CE7238D /* VisualDocs_Binding.State copy.swift */; };
@@ -155,10 +157,10 @@
 		D392CAD6B7A8A2213C5E0EBA /* Recreating.Breathe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F8CF95BF937F522B91BD3D /* Recreating.Breathe.swift */; };
 		D53BABA519E4E42F50992EB7 /* AppWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00142DDB2ECACE3920DAE95D /* AppWeather.framework */; };
 		D5B6AC7147D79052CBF619BA /* DevTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA579D82D4F55326AF96BCE5 /* DevTools.swift */; };
+		D72EC4F225D1DC10005EA5B1 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EC4F125D1DC10005EA5B1 /* Resolver.swift */; };
+		D72EC52E25D1DC97005EA5B1 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EC50925D1DC31005EA5B1 /* Resolver.swift */; };
+		D72EC53A25D1DCA3005EA5B1 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EC51625D1DC71005EA5B1 /* Resolver.swift */; };
 		D7D6C6FE273093A72D9059AD /* VM.DailyWeatherRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB083902EF90FC9C173BB47 /* VM.DailyWeatherRowViewModel.swift */; };
-		D7F2081125D1C49100D8CF50 /* ResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C38BC66C8A48BE23E3C55C /* ResponseDto.swift */; };
-		D7F208D525D1CA8800D8CF50 /* RequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F208D425D1CA8800D8CF50 /* RequestDto.swift */; };
-		D7F2094525D1CBD700D8CF50 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F2094425D1CBD700D8CF50 /* Model.swift */; };
 		D8101C72AA4F5AFBFE571172 /* Recreating.Messages_III.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA93689C55495FAC5A04BBF /* Recreating.Messages_III.swift */; };
 		D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD91DCBA8848FE6F8FB333 /* typelias.swift */; };
 		DBC31ED88008F4F2410CB706 /* RJSLibUFBase in Frameworks */ = {isa = PBXBuildFile; productRef = 47EF46B4A8B4B5A00081A60D /* RJSLibUFBase */; };
@@ -180,6 +182,7 @@
 		EE5DDF4CE619001A3D3D274F /* VisualDocs_WaysToReactToState_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947D447A084ED83E7DC65C4 /* VisualDocs_WaysToReactToState_II.swift */; };
 		EFD4E5069A37640FDCA3CC8C /* Recreating.Tinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EF67281D0E1B918C81BA72 /* Recreating.Tinder.swift */; };
 		F85452A19511D3F6B139ADA1 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B46176F369B2E97E6C164 /* VisualDocs_SwiftUI_Lab_GeometryEffectTransitionsDemo.swift */; };
+		FBFC1CFF4B079084F1E8F09E /* ResponseDto+WeeklyForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9395616851931A7CA3497A91 /* ResponseDto+WeeklyForecastEntity.swift */; };
 		FF35B77A76F93E27CF329B10 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DBF5FB5AF431F74F5B0DC /* ListItemModel.swift */; };
 		FFF3B2FC2F1F11F4C596C109 /* VisualDocs_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6F88A8F5E03DCA2430BD8 /* VisualDocs_Combine.swift */; };
 /* End PBXBuildFile section */
@@ -400,6 +403,7 @@
 		06C36CF52FF3AE980140601C /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		0920124B4A60455191B01CC9 /* VisualDocs_Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Buttons.swift; sourceTree = "<group>"; };
 		0940EEF606815CB243DEC289 /* FetcherWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeather.swift; sourceTree = "<group>"; };
+		0A821F1144079A16487F98D6 /* RequestDto+Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Availability.swift"; sourceTree = "<group>"; };
 		0AB083902EF90FC9C173BB47 /* VM.DailyWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.DailyWeatherRowViewModel.swift; sourceTree = "<group>"; };
 		0AEE986DF58B24C6AEE885F4 /* VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_AdvancedAnimations.swift; sourceTree = "<group>"; };
 		0BA93689C55495FAC5A04BBF /* Recreating.Messages_III.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Messages_III.swift; sourceTree = "<group>"; };
@@ -416,7 +420,6 @@
 		19DD31F68722031B518A1C6D /* VM.CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 		19E2CA68814A787CED497F9F /* VisualDocs_NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_NavigationView.swift; sourceTree = "<group>"; };
 		1A770CA6C776F702CEDB0A87 /* Operators_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Operators_1.png; sourceTree = "<group>"; };
-		1AC93243F1B250D0CD8DDAB3 /* Article_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article_2.pdf; sourceTree = "<group>"; };
 		1B7496840A6A53B76DACF9B7 /* VisualDocs_UserDefaultsWithPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_UserDefaultsWithPropertyWrapper.swift; sourceTree = "<group>"; };
 		1D474052E4A1C3E8A01B29B3 /* APIResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseDto.swift; sourceTree = "<group>"; };
 		1D7A8A475BBDB2109B3DCB21 /* SendEMailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEMailViewControllerRepresentable.swift; sourceTree = "<group>"; };
@@ -424,6 +427,7 @@
 		206DFAC93A3570553640E407 /* VisualDocs_Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Shadows.swift; sourceTree = "<group>"; };
 		220B7E236BAA16E513A7E002 /* B.RyanairView1Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView1Builder.swift; sourceTree = "<group>"; };
 		2466CDB73CD79FE25894A5DA /* Recreating.Instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Instagram.swift; sourceTree = "<group>"; };
+		247B493CC29971196E99D17F /* 1_DXMC02UcmOHBOHXhx4njzA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_DXMC02UcmOHBOHXhx4njzA.png; sourceTree = "<group>"; };
 		2622D4D31DA0F4FF7723CE5E /* VisualDocs_ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ErrorHandling.swift; sourceTree = "<group>"; };
 		275748A320F05952058A15AE /* SimpleNetworkAgentA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentA.swift; sourceTree = "<group>"; };
 		303436CECB3B068F18E5D6D4 /* Combine_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Combine_I.png; sourceTree = "<group>"; };
@@ -434,7 +438,6 @@
 		3597E50C742BFAE0418398DF /* DevTools+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+Log.swift"; sourceTree = "<group>"; };
 		35CB85B59071A9F6828F2A54 /* FetcherRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanair.swift; sourceTree = "<group>"; };
 		372C90045A7AEBCCCEE3AF11 /* VisualDocs_SwiftUI_Lab_Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Triangle.swift; sourceTree = "<group>"; };
-		39D11BC6542317493C09C80A /* 1_DXMC02UcmOHBOHXhx4njzA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_DXMC02UcmOHBOHXhx4njzA.png; sourceTree = "<group>"; };
 		3B191024DE3720148499E1E0 /* SimpleNetworkAgentExampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentExampleProtocol.swift; sourceTree = "<group>"; };
 		3CDCC0B249042028EF682A4A /* MVVM_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MVVM_I.png; sourceTree = "<group>"; };
 		3F02FCE9B39D01648AFA02DC /* AppWeatherWebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppWeatherWebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -445,6 +448,7 @@
 		424FC20AA4CF7EB3825B3801 /* RyanairModel.AirPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairModel.AirPort.swift; sourceTree = "<group>"; };
 		42570CAA24B352463CE7238D /* VisualDocs_Binding.State copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_Binding.State copy.swift"; sourceTree = "<group>"; };
 		425E886BADCBCA866DF3F3AC /* AppWeatherCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherCore.h; sourceTree = "<group>"; };
+		434FDFCE4CBBF94700690893 /* RequestDto+Wheater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Wheater.swift"; sourceTree = "<group>"; };
 		43D2DEBEC3AD9ECF787D71F4 /* typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typealias.swift; sourceTree = "<group>"; };
 		4406CF4833D142D77B4C2267 /* VisualDocs_onDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_onDelete.swift; sourceTree = "<group>"; };
 		456212E58E54AD3DAE404733 /* AppRoot_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot_View.swift; sourceTree = "<group>"; };
@@ -458,9 +462,8 @@
 		4B16F34813BD45939D8CAACC /* readme.image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.2.png; sourceTree = "<group>"; };
 		4F70AD1FF77511B1FED81AAF /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
 		502CA0E81503990D8AB67BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		527BC57391BC67EEC13B7CED /* RequestDto+Wheater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Wheater.swift"; sourceTree = "<group>"; };
+		51D8CDCB1646F5A88B62763F /* RequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDto.swift; sourceTree = "<group>"; };
 		53D673A3A8070290C2819496 /* APIWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeather.swift; sourceTree = "<group>"; };
-		545EB43AE939660E7765C785 /* ResponseDto+CurrentWeatherForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+CurrentWeatherForecastEntity.swift"; sourceTree = "<group>"; };
 		571E6FFD03240EEF637DFAD7 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		582E09AA21E80F9FA8785498 /* VisualDocs_@State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@State.swift"; sourceTree = "<group>"; };
 		59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppWeatherDomain.h; sourceTree = "<group>"; };
@@ -469,19 +472,21 @@
 		5C314B4851483F9E3124E376 /* VisualDocs_Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Padding.swift; sourceTree = "<group>"; };
 		5CBF1213E5F8ABC3D488546D /* CoolStuffToTest.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoolStuffToTest.md; sourceTree = "<group>"; };
 		5D1CF494755B297A20A4B750 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
+		5F4B55897464B6798E951688 /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		608CE52D6E2AEB0627F7FBE6 /* FetcherWeatherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeatherMock.swift; sourceTree = "<group>"; };
 		61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView2Builder.swift; sourceTree = "<group>"; };
 		61E525AC89A7806A2C450AAC /* VisualDocs_TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_TimerView.swift; sourceTree = "<group>"; };
 		6258D8B589FD2081F91282AD /* RepositoryWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeather.swift; sourceTree = "<group>"; };
 		62C4657A7D7659F910DA8D26 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66686837FE5D3A5132549D38 /* Article_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article_2.pdf; sourceTree = "<group>"; };
 		67FD2B3F9F326A99DA7E417C /* GenericStorableKeyValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStorableKeyValueModel.swift; sourceTree = "<group>"; };
 		68688B397AA2018723E867BB /* FetcherRyanairMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherRyanairMock.swift; sourceTree = "<group>"; };
+		694EA959B52B6CD1D43F88E1 /* RequestDto+Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Forecast.swift"; sourceTree = "<group>"; };
 		69AE8FE7EE588489D853ED2C /* AppRyanairWebAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanairWebAPI.h; sourceTree = "<group>"; };
 		6A7F163C9E85B2CFACCD8C5D /* MVVM.README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVVM.README.md; sourceTree = "<group>"; };
 		6D8A583FA94A145F52862C01 /* Simulator Screen Shot - iPod touch (7th generation) - 2020-11-06 at 10.50.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPod touch (7th generation) - 2020-11-06 at 10.50.54.png"; sourceTree = "<group>"; };
 		70096BE0B2CCB68AD3F8011C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		715D3A7043B6C4324AA8D74E /* VM.CurrentWeatherRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.CurrentWeatherRowViewModel.swift; sourceTree = "<group>"; };
-		71C38BC66C8A48BE23E3C55C /* ResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDto.swift; sourceTree = "<group>"; };
 		71D7560C7572BEF95E83488B /* Designables_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_Preview.swift; sourceTree = "<group>"; };
 		735BD84DFD6AB35DB926EA1C /* VM.RyanairView2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView2ViewModel.swift; sourceTree = "<group>"; };
 		743E095F591F0A57DD810BD6 /* RepositoryRyanair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRyanair.swift; sourceTree = "<group>"; };
@@ -496,12 +501,11 @@
 		7B85DE7A055F6E8B3D9B98B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C50218750F0988469529868 /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		7E3EC0566D6F7B70F672E16F /* PointFreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFreeFunctions.swift; sourceTree = "<group>"; };
-		8006111CD5C46C1E53C37674 /* ResponseDto+Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+Availability.swift"; sourceTree = "<group>"; };
 		80533931C258A91D70E22EE5 /* VisualDocs_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Image.swift; sourceTree = "<group>"; };
 		82168D8E998A15A4A106A299 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8248CE791F182234BB50A7F9 /* SimpleNetworkAgentAExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentAExample.swift; sourceTree = "<group>"; };
-		84C72E09A198ED1228911C16 /* ResponseDto+Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+Stations.swift"; sourceTree = "<group>"; };
 		84DF45427F05B67EC6249595 /* VisualDocs_@Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualDocs_@Binding.swift"; sourceTree = "<group>"; };
+		8525FD3080263E5B92B02271 /* ResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDto.swift; sourceTree = "<group>"; };
 		85D232B6F5748ACBD851F8E4 /* VM.RyanairView1ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.RyanairView1ViewModel.swift; sourceTree = "<group>"; };
 		8B8CED726603B355821BE044 /* APIWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeatherProtocol.swift; sourceTree = "<group>"; };
 		8C1AC39774E40E819A3315F6 /* VisualDocs_RouteToAndCameBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RouteToAndCameBack.swift; sourceTree = "<group>"; };
@@ -512,6 +516,7 @@
 		8F86347E7FA51E88CD989616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8FF7316D27C4486F36F6C787 /* B.WeeklyWeatherBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.WeeklyWeatherBuilder.swift; sourceTree = "<group>"; };
 		938AF7C4E4D7BB552359D44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9395616851931A7CA3497A91 /* ResponseDto+WeeklyForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+WeeklyForecastEntity.swift"; sourceTree = "<group>"; };
 		94B530CA65F540FB433426F5 /* DevTools+FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevTools+FeatureFlag.swift"; sourceTree = "<group>"; };
 		952F534448A025D9330BA658 /* readme.image.4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.4.png; sourceTree = "<group>"; };
 		9597886916DBF70B75B17A06 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -538,11 +543,11 @@
 		B17489FD4902A191E848C573 /* RyanairMappers.ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanairMappers.ListItemModel.swift; sourceTree = "<group>"; };
 		B4F4B39218571ECEC93977B2 /* AppRyanairCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C92D056D628F3EFF63C2C8 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F8E811867181EE763908CE /* ResponseDto+Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+Availability.swift"; sourceTree = "<group>"; };
 		B63977B3308EE96B4832FC29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B713F61173993B9FD61AADD4 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		B7BF7BCA30CB22DBFB8A9D07 /* V.RyanairView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView1.swift; sourceTree = "<group>"; };
 		B8E58DE91B235ED37BFAA2B4 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		B94FB6291970E6A6830B92D5 /* RequestDto+Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Availability.swift"; sourceTree = "<group>"; };
 		BB61DE8BE63DE516A3DA03E0 /* SimpleNetworkAgentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkAgentProtocol.swift; sourceTree = "<group>"; };
 		BBB2AD8566582991ABCB8113 /* VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_SwiftUI_Lab_Safely_Modifying_View_State.swift; sourceTree = "<group>"; };
 		BCA223F2FF54D28E6D97AF65 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -556,8 +561,8 @@
 		C427CD0BF320B0C2DC391658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C53D12EF9FF4F00EEBEC11E1 /* AppRyanairWebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppRyanairWebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57992B4A6D6BD68832380C2 /* V.MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.MapViewRepresentable.swift; sourceTree = "<group>"; };
+		C69D7F00765BF71EE67DEBF5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C6BF426C78331EDE88D4BE70 /* BaseDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDomain.h; sourceTree = "<group>"; };
-		C79A51B4BE479DA4CA721C73 /* ResponseDto+WeeklyForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+WeeklyForecastEntity.swift"; sourceTree = "<group>"; };
 		C8796654DC0E688BE870F246 /* VisualDocs_horizontalSizeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_horizontalSizeClass.swift; sourceTree = "<group>"; };
 		C8D6AC8A5AF680AC0DE48F58 /* Recreating.Maps_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_II.swift; sourceTree = "<group>"; };
 		C9ACA0820776505AA5F25627 /* AppRyanair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRyanair.h; sourceTree = "<group>"; };
@@ -570,23 +575,26 @@
 		CEEC704D763B3C7A595E9FBF /* V.DailyWeatherRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.DailyWeatherRowView.swift; sourceTree = "<group>"; };
 		CF8273F863B5D5E5FDDE7210 /* VisualDocs_RemoteImageLoadging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_RemoteImageLoadging.swift; sourceTree = "<group>"; };
 		CFFA9CFA4506924F7ADC0AC0 /* DesignablesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignablesFactory.swift; sourceTree = "<group>"; };
+		D29338B695A4D3BB44B74C58 /* ResponseDto+Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+Stations.swift"; sourceTree = "<group>"; };
 		D2AA67B97408E0DBC8A0E9B3 /* SimpleMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVM.swift; sourceTree = "<group>"; };
 		D2EF67281D0E1B918C81BA72 /* Recreating.Tinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Tinder.swift; sourceTree = "<group>"; };
 		D516123A9B1D038EECB64F5E /* APIRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRyanairProtocol.swift; sourceTree = "<group>"; };
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
-		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7F208D425D1CA8800D8CF50 /* RequestDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDto.swift; sourceTree = "<group>"; };
-		D7F2094425D1CBD700D8CF50 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D72EC4F125D1DC10005EA5B1 /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		D72EC50925D1DC31005EA5B1 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		D72EC51625D1DC71005EA5B1 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.3.png; sourceTree = "<group>"; };
 		D90034C9F5CA9F78E6FF9F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsNetworking.h; sourceTree = "<group>"; };
 		DDCD2D81429C645BC1F42566 /* VisualDocs_Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Text.swift; sourceTree = "<group>"; };
 		DE8E0194026BAA33EB3FEEDF /* Recreating.HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.HomeScreen.swift; sourceTree = "<group>"; };
+		DFB628153F33D1CB5CC87464 /* ResponseDto+CurrentWeatherForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseDto+CurrentWeatherForecastEntity.swift"; sourceTree = "<group>"; };
 		E0D9BDAF70FC475E89F85334 /* Graph.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Graph.json; sourceTree = "<group>"; };
 		E178D20FA1E108EC0EDAD54A /* VisualDocs_LayoutInScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_LayoutInScrollView.swift; sourceTree = "<group>"; };
 		E1835FFC152A7EDED5AA9AF2 /* Recreating.Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Settings.swift; sourceTree = "<group>"; };
 		E6E54EF3AAA9C54F7E76ACDF /* VisualDocs_ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_ForEach.swift; sourceTree = "<group>"; };
+		E95CAD4DB4F6709B8D895027 /* RequestDto+Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Stations.swift"; sourceTree = "<group>"; };
 		EADB037EB792CD3B160AA811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EBD1DA737D63E2C324FB6ACD /* StateObject_I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StateObject_I.png; sourceTree = "<group>"; };
 		EC821680DAB3E28A33C711F6 /* VisualDocs_Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Form.swift; sourceTree = "<group>"; };
@@ -601,9 +609,7 @@
 		F8A9C2A58E5C0E4441940D45 /* ActivityIndicatorRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorRepresentable.swift; sourceTree = "<group>"; };
 		F9F8CF95BF937F522B91BD3D /* Recreating.Breathe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Breathe.swift; sourceTree = "<group>"; };
 		FB031CB87332A957DC77B903 /* DocumentsVisual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentsVisual.h; sourceTree = "<group>"; };
-		FB3CB7C864DAD83DDDCF2A42 /* RequestDto+Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Forecast.swift"; sourceTree = "<group>"; };
 		FC2F2A2A45862C0F0438B181 /* Recreating.Maps_I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.Maps_I.swift; sourceTree = "<group>"; };
-		FDD1DCE16F76D0EE2FA5DDDF /* RequestDto+Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestDto+Stations.swift"; sourceTree = "<group>"; };
 		FDDD91DCBA8848FE6F8FB333 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		FE2F89A4574F9E1ECD9CADEC /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -698,6 +704,16 @@
 				DBE661B0E2EBBC306630347D /* VisualDocs */,
 			);
 			path = DocumentsVisual;
+			sourceTree = "<group>";
+		};
+		13BB2426BD6946233A2429D2 /* CoolArticles */ = {
+			isa = PBXGroup;
+			children = (
+				247B493CC29971196E99D17F /* 1_DXMC02UcmOHBOHXhx4njzA.png */,
+				66686837FE5D3A5132549D38 /* Article_2.pdf */,
+				5F4B55897464B6798E951688 /* Article1.pdf */,
+			);
+			path = CoolArticles;
 			sourceTree = "<group>";
 		};
 		13EAABA9AD1EB04CE3EF5555 /* Scheme1 */ = {
@@ -831,8 +847,8 @@
 				4AC5DE6AC22E447384CA0CD8 /* Graph.viz */,
 				6A7F163C9E85B2CFACCD8C5D /* MVVM.README.md */,
 				0C33EF15820822B333C09DD2 /* NotesAndReferences.md */,
-				5D48E1527EF67311931182D9 /* articles */,
 				181111B49B5ED8F6445F845B /* Bugs */,
+				13BB2426BD6946233A2429D2 /* CoolArticles */,
 				3C476F2CED7E5A495BC99BF8 /* images */,
 			);
 			path = Documents;
@@ -864,15 +880,6 @@
 			path = BaseObjects;
 			sourceTree = "<group>";
 		};
-		4FB7AAD46FE538F34010AD04 /* RequestsDto */ = {
-			isa = PBXGroup;
-			children = (
-				FB3CB7C864DAD83DDDCF2A42 /* RequestDto+Forecast.swift */,
-				527BC57391BC67EEC13B7CED /* RequestDto+Wheater.swift */,
-			);
-			path = RequestsDto;
-			sourceTree = "<group>";
-		};
 		50FFFFBF8575325421C859FF /* AppWeatherCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,8 +887,10 @@
 				467065DA1E56481371C7266D /* Info.plist */,
 				A86D2C8DE6BD488B1F26E198 /* Fetchers|Repositories */,
 				964DA41309168A3B90DE5B0A /* Mappers */,
+				D72EC50925D1DC31005EA5B1 /* Resolver.swift */,
 			);
-			path = AppWeatherCore;
+			name = AppWeatherCore;
+			path = AppWeather/AppWeatherCore;
 			sourceTree = "<group>";
 		};
 		5A4F1EFD4677081281073275 /* Scheme2 */ = {
@@ -897,20 +906,10 @@
 		5BB4D8C43D70D055690781B5 /* Entities.RequestsDto */ = {
 			isa = PBXGroup;
 			children = (
-				B94FB6291970E6A6830B92D5 /* RequestDto+Availability.swift */,
-				FDD1DCE16F76D0EE2FA5DDDF /* RequestDto+Stations.swift */,
+				0A821F1144079A16487F98D6 /* RequestDto+Availability.swift */,
+				E95CAD4DB4F6709B8D895027 /* RequestDto+Stations.swift */,
 			);
 			path = Entities.RequestsDto;
-			sourceTree = "<group>";
-		};
-		5D48E1527EF67311931182D9 /* articles */ = {
-			isa = PBXGroup;
-			children = (
-				39D11BC6542317493C09C80A /* 1_DXMC02UcmOHBOHXhx4njzA.png */,
-				1AC93243F1B250D0CD8DDAB3 /* Article_2.pdf */,
-				D62E0E95E84D5425B9C9DE8F /* Article1.pdf */,
-			);
-			path = articles;
 			sourceTree = "<group>";
 		};
 		5DC0EC91E201044DCB3A43F4 /* AppWeatherDomain */ = {
@@ -918,11 +917,12 @@
 			children = (
 				59837DFA33409DD9597D5F05 /* AppWeatherDomain.h */,
 				8F86347E7FA51E88CD989616 /* Info.plist */,
-				8DB88EEFB019B05F40FEFB51 /* ResponseDto */,
-				4FB7AAD46FE538F34010AD04 /* RequestsDto */,
 				74F92B740E9E651E17A0EEAD /* Protocols */,
+				E23A038CBD0074FEDEA9CD47 /* RequestsDto */,
+				F9A151E857F7699AF5A06729 /* ResponseDto */,
 			);
-			path = AppWeatherDomain;
+			name = AppWeatherDomain;
+			path = AppWeather/AppWeatherDomain;
 			sourceTree = "<group>";
 		};
 		60F72B69CBDAE607C0C184DB /* Auxiliar.CurrentWeatherRow */ = {
@@ -950,7 +950,8 @@
 				69AE8FE7EE588489D853ED2C /* AppRyanairWebAPI.h */,
 				3FE3E0168FDF656222D2FF64 /* Info.plist */,
 			);
-			path = AppRyanairWebAPI;
+			name = AppRyanairWebAPI;
+			path = AppRyanair/AppRyanairWebAPI;
 			sourceTree = "<group>";
 		};
 		7A8AF86B33C55CADC44A59B3 /* AppRyanair */ = {
@@ -962,7 +963,8 @@
 				13EAABA9AD1EB04CE3EF5555 /* Scheme1 */,
 				5A4F1EFD4677081281073275 /* Scheme2 */,
 			);
-			path = AppRyanair;
+			name = AppRyanair;
+			path = AppRyanair/AppRyanair;
 			sourceTree = "<group>";
 		};
 		8077909224D14C2898860DB7 /* wiki */ = {
@@ -980,15 +982,6 @@
 				03A22E4B897581CD713314A2 /* Subscribers_1.png */,
 			);
 			path = wiki;
-			sourceTree = "<group>";
-		};
-		8DB88EEFB019B05F40FEFB51 /* ResponseDto */ = {
-			isa = PBXGroup;
-			children = (
-				545EB43AE939660E7765C785 /* ResponseDto+CurrentWeatherForecastEntity.swift */,
-				C79A51B4BE479DA4CA721C73 /* ResponseDto+WeeklyForecastEntity.swift */,
-			);
-			path = ResponseDto;
 			sourceTree = "<group>";
 		};
 		964DA41309168A3B90DE5B0A /* Mappers */ = {
@@ -1079,7 +1072,8 @@
 				2BD8777780837F1585DE927E /* Models */,
 				3C73B54C14858673798BDA2C /* Protocols */,
 			);
-			path = AppRyanairDomain;
+			name = AppRyanairDomain;
+			path = AppRyanair/AppRyanairDomain;
 			sourceTree = "<group>";
 		};
 		AEC6ADFE00599ECFDD4F5C0A /* AppRyanairCore */ = {
@@ -1089,8 +1083,10 @@
 				4888B5A9C5C02F67883EC538 /* Info.plist */,
 				27C8D8975F4E99FD6F38685B /* Fetchers|Repositories */,
 				0C4153BA54FE324CEFDA7499 /* Mappers */,
+				D72EC51625D1DC71005EA5B1 /* Resolver.swift */,
 			);
-			path = AppRyanairCore;
+			name = AppRyanairCore;
+			path = AppRyanair/AppRyanairCore;
 			sourceTree = "<group>";
 		};
 		BAD91B91B5397B53BFF85AA6 /* Generics */ = {
@@ -1146,7 +1142,8 @@
 				F492B00701E0FB853EBBF7DA /* AppWeatherWebAPI.h */,
 				B63977B3308EE96B4832FC29 /* Info.plist */,
 			);
-			path = AppWeatherWebAPI;
+			name = AppWeatherWebAPI;
+			path = AppWeather/AppWeatherWebAPI;
 			sourceTree = "<group>";
 		};
 		D3BFADB3CFCF8BBCBC30BE7D /* Entities */ = {
@@ -1160,8 +1157,8 @@
 		D5D88E655504E82F177187B8 /* Enteties.ResponseDto */ = {
 			isa = PBXGroup;
 			children = (
-				8006111CD5C46C1E53C37674 /* ResponseDto+Availability.swift */,
-				84C72E09A198ED1228911C16 /* ResponseDto+Stations.swift */,
+				B5F8E811867181EE763908CE /* ResponseDto+Availability.swift */,
+				D29338B695A4D3BB44B74C58 /* ResponseDto+Stations.swift */,
 			);
 			path = Enteties.ResponseDto;
 			sourceTree = "<group>";
@@ -1240,6 +1237,15 @@
 			path = RJPS_SwiftUI;
 			sourceTree = "<group>";
 		};
+		E23A038CBD0074FEDEA9CD47 /* RequestsDto */ = {
+			isa = PBXGroup;
+			children = (
+				694EA959B52B6CD1D43F88E1 /* RequestDto+Forecast.swift */,
+				434FDFCE4CBBF94700690893 /* RequestDto+Wheater.swift */,
+			);
+			path = RequestsDto;
+			sourceTree = "<group>";
+		};
 		E4D40BA47D468C68BF5A995E /* Schemes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1271,7 +1277,8 @@
 				B8E58DE91B235ED37BFAA2B4 /* typelias.swift */,
 				353D4E7EB5C806FBC945E018 /* Schemes */,
 			);
-			path = AppWeather;
+			name = AppWeather;
+			path = AppWeather/AppWeather;
 			sourceTree = "<group>";
 		};
 		F5A4CC66FD073B19BB5A1FC7 /* BaseDomain */ = {
@@ -1279,10 +1286,11 @@
 			children = (
 				C6BF426C78331EDE88D4BE70 /* BaseDomain.h */,
 				76028CF2A6E6120F9CE5BEF6 /* Info.plist */,
+				C69D7F00765BF71EE67DEBF5 /* Model.swift */,
+				D72EC4F125D1DC10005EA5B1 /* Resolver.swift */,
+				51D8CDCB1646F5A88B62763F /* RequestDto.swift */,
+				8525FD3080263E5B92B02271 /* ResponseDto.swift */,
 				FDDD91DCBA8848FE6F8FB333 /* typelias.swift */,
-				71C38BC66C8A48BE23E3C55C /* ResponseDto.swift */,
-				D7F2094425D1CBD700D8CF50 /* Model.swift */,
-				D7F208D425D1CA8800D8CF50 /* RequestDto.swift */,
 				4D7237FA817059D6F2237419 /* BaseObjects */,
 				BAD91B91B5397B53BFF85AA6 /* Generics */,
 				F6AFC53A26C5BC44C1A4AFBB /* Protocols */,
@@ -1305,6 +1313,15 @@
 				8E04B23E92830D9865940927 /* DtoProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F9A151E857F7699AF5A06729 /* ResponseDto */ = {
+			isa = PBXGroup;
+			children = (
+				DFB628153F33D1CB5CC87464 /* ResponseDto+CurrentWeatherForecastEntity.swift */,
+				9395616851931A7CA3497A91 /* ResponseDto+WeeklyForecastEntity.swift */,
+			);
+			path = ResponseDto;
 			sourceTree = "<group>";
 		};
 		FCED70D5095A3BB923A049BE /* Storage */ = {
@@ -1819,11 +1836,11 @@
 			files = (
 				2675FBCA900C96C6C5EB941C /* APIRyanairProtocol.swift in Sources */,
 				2DB8D4A5F3B3C3B754421AD8 /* RepositorRyanairProtocol.swift in Sources */,
+				7337272A06241024B748B1EE /* RequestDto+Availability.swift in Sources */,
+				79A433C0A63298EDA0603A60 /* RequestDto+Stations.swift in Sources */,
+				092C2BA5A72BEB0FD5767AE6 /* ResponseDto+Availability.swift in Sources */,
+				0926BF9C2C4FA596A1BD7D53 /* ResponseDto+Stations.swift in Sources */,
 				9D8AB4894F5B9F109FD46CB5 /* RyanairModel.AirPort.swift in Sources */,
-				6666ECCFB99DCFB535515F7C /* RequestDto+Availability.swift in Sources */,
-				9F7F73E7602C391D2F831A92 /* RequestDto+Stations.swift in Sources */,
-				BEDB581C65FEA845EAE21FC1 /* ResponseDto+Availability.swift in Sources */,
-				6909AC7CBEB624DE4F26C03E /* ResponseDto+Stations.swift in Sources */,
 				13BB2FFD18C5841D4F063F94 /* typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1853,10 +1870,10 @@
 			files = (
 				E627AA0EF58588AEFFFDDD2E /* APIWeatherProtocol.swift in Sources */,
 				46CD3B86D8DD69DAC5A259FB /* RepositoryWeatherProtocol.swift in Sources */,
-				CBAEAE2B98960C47B8764B6A /* RequestDto+Forecast.swift in Sources */,
-				A347C5C253B2D790BA702BC1 /* RequestDto+Wheater.swift in Sources */,
-				773E655F0E7C294FD9769F21 /* ResponseDto+CurrentWeatherForecastEntity.swift in Sources */,
-				63EA756AA4AEA8124A107F5F /* ResponseDto+WeeklyForecastEntity.swift in Sources */,
+				A1DCC15FCECBB3946126EAF1 /* RequestDto+Forecast.swift in Sources */,
+				241F82E66C5F0529DE852A53 /* RequestDto+Wheater.swift in Sources */,
+				90CDBF5F346C5B6E7B4FC302 /* ResponseDto+CurrentWeatherForecastEntity.swift in Sources */,
+				FBFC1CFF4B079084F1E8F09E /* ResponseDto+WeeklyForecastEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1881,13 +1898,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCE65918E7078BADD8B57A1 /* BuilderProtocol.swift in Sources */,
-				D7F208D525D1CA8800D8CF50 /* RequestDto.swift in Sources */,
-				D7F2094525D1CBD700D8CF50 /* Model.swift in Sources */,
 				0DEF8B15F6357A79D52E1346 /* DtoProtocol.swift in Sources */,
 				FF35B77A76F93E27CF329B10 /* ListItemModel.swift in Sources */,
+				49EAFF6BBF28F7F13535A470 /* Model.swift in Sources */,
+				90472EA1E1E5E174AF2FEC20 /* RequestDto.swift in Sources */,
+				D72EC4F225D1DC10005EA5B1 /* Resolver.swift in Sources */,
 				A7031918D6FE5D86D12F2CE0 /* Response<T>.swift in Sources */,
+				92360D17DA20362B41589671 /* ResponseDto.swift in Sources */,
 				D8C8938170FD2898E4C17FCA /* typelias.swift in Sources */,
-				D7F2081125D1C49100D8CF50 /* ResponseDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1898,6 +1916,7 @@
 				66C5B026F4470CD1E729AFA0 /* FetcherRyanair.swift in Sources */,
 				91E5E01AA0E8D2A29B9DA61E /* FetcherRyanairMock.swift in Sources */,
 				269EF91E0E8DCD28FF04409C /* RepositoryRyanair.swift in Sources */,
+				D72EC53A25D1DCA3005EA5B1 /* Resolver.swift in Sources */,
 				BDF8A85BF781C8CE10C97818 /* RyanairMappers.ListItemModel.swift in Sources */,
 				D2F2584CCCCE11D4001CE3A8 /* RyanairMappers.swift in Sources */,
 			);
@@ -1907,6 +1926,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72EC52E25D1DC97005EA5B1 /* Resolver.swift in Sources */,
 				42BE51C3FE17E1FF7F265B6C /* FetcherWeather.swift in Sources */,
 				7CCD3B2925CFEA886DE1F05D /* FetcherWeatherMock.swift in Sources */,
 				981618B849D8060D1C79CD65 /* RepositoryWeather.swift in Sources */,
@@ -1962,7 +1982,7 @@
 /* Begin PBXTargetDependency section */
 		08848FC6B02A82DC47CCCF7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_2EF9F4B5-319D-460A-943D-1ACABFCDE79D" /* RJSLibUFBase */;
+			productRef = "TEMP_C2008F97-ABF5-441A-AA42-95008154756D" /* RJSLibUFBase */;
 		};
 		0B4FF44803AC63BCCA8E3776 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2001,7 +2021,7 @@
 		};
 		1DF262ADDC9C9A79996FD6AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_F5E47C49-A4A4-4C29-BDA9-6B53799AD703" /* RJSLibUFNetworking */;
+			productRef = "TEMP_4EBC20CF-6B04-4331-9D51-933C2DF2E993" /* RJSLibUFNetworking */;
 		};
 		22AF16BD35BC3FEF00E73D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2025,15 +2045,15 @@
 		};
 		3AF4AF09E7310C0A68566BDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_64CBD593-CF75-4704-B405-64B7319871D4" /* RJSLibUFNetworking */;
+			productRef = "TEMP_2C156CC7-239A-4498-A0EF-9855BC59B2BA" /* RJSLibUFNetworking */;
 		};
 		3B7F490635484C9CCEDD2872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_4142E609-5D5B-4757-AA3E-3591A36811B4" /* RJSLibUFNetworking */;
+			productRef = "TEMP_D41EAAB7-8174-47C1-AA39-2863284BA1C6" /* RJSLibUFNetworking */;
 		};
 		4C295052D082B7A0B21590DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_B0B0AD22-4CD3-4403-BD9E-2974C2B1BA40" /* RJSLibUFBase */;
+			productRef = "TEMP_9D0DB472-E630-478A-864F-D4D3AF54C119" /* RJSLibUFBase */;
 		};
 		4E9069220C1C655CCF760968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2042,7 +2062,7 @@
 		};
 		4EA5C036BF071DC47B871452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_2200E635-6626-4786-94EA-161BD92EE8B5" /* RJSLibUFStorage */;
+			productRef = "TEMP_CF3C2E43-D16E-47F3-8736-D3C0052153A3" /* RJSLibUFStorage */;
 		};
 		80192BBCB4984564E8C0845E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2051,15 +2071,15 @@
 		};
 		81C4FC6322D565A7F48DC4F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_D35590E0-5D70-4649-8708-05D54CC9F7A5" /* RJSLibUFBase */;
+			productRef = "TEMP_625D1523-5433-460B-B9F8-D1AEA4438747" /* RJSLibUFBase */;
 		};
 		834F20AF556F35889EC6FE20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_AE981796-C6C5-43B5-9587-5DA1EC8F0A20" /* RJSLibUFBase */;
+			productRef = "TEMP_5C15A15B-134B-4378-87AB-4437F9EFD6B3" /* RJSLibUFBase */;
 		};
 		860F228254A6D68B87AB878F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_012EF4FE-D373-44DE-9D5E-B448BEF8348A" /* RJSLibUFBase */;
+			productRef = "TEMP_0665A3D1-F718-4AC6-B79C-76414C86C4CC" /* RJSLibUFBase */;
 		};
 		99D19036165202741E5CA9B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2068,7 +2088,7 @@
 		};
 		A255F3D3FE986208D40AB2BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_ADDFC5B9-5E1C-4D61-86F1-EC8CFEB1CF8A" /* RJSLibUFBase */;
+			productRef = "TEMP_20342865-8A55-4B2E-B3C8-E33EF66C998A" /* RJSLibUFBase */;
 		};
 		A3F5D9FEB029901A27996273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2077,7 +2097,7 @@
 		};
 		B053B74733BF51D83FCB83E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_714C5F6A-2315-4D60-AB68-6196ED2F0836" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_7F66CE6D-AC5C-4ABB-8C01-7D40817E48CF" /* RJSLibUFAppThemes */;
 		};
 		B26E7AEB02B55D2287BCBD02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2096,19 +2116,19 @@
 		};
 		BFF86C49774612F5DAAF4CEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_839945B2-18A1-4EEE-B825-FFAECC31D23A" /* RJSLibUFStorage */;
+			productRef = "TEMP_40528D40-DE3B-47CD-AE42-41C96CBC9D09" /* RJSLibUFStorage */;
 		};
 		C62CEC2EEAFDC88F7CE57DE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_4E8464BE-8151-4E9E-B18C-66CF7C04F1A4" /* RJSLibUFStorage */;
+			productRef = "TEMP_E55789B8-3A69-435F-91C5-7559530CCA24" /* RJSLibUFStorage */;
 		};
 		CEEFAE30EF6604B708B25681 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_89B9E829-0611-4AA4-B771-EAF217A9DC33" /* RJSLibUFNetworking */;
+			productRef = "TEMP_E843DE01-98B9-493E-876E-68549B5E0DA4" /* RJSLibUFNetworking */;
 		};
 		D045B575F2EF16D06FDFA669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_A315EA2A-8B3C-4853-B0BA-14E24CE08CC1" /* RJSLibUFNetworking */;
+			productRef = "TEMP_170EFE6B-7442-406A-AC30-699F26E39CEB" /* RJSLibUFNetworking */;
 		};
 		D575075DBB95B65554C0C40B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2127,11 +2147,11 @@
 		};
 		E01FBE92119DDA783E4516CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_E20F5C17-7E87-4BD5-8EBD-2F7AA769E920" /* RJSLibUFBase */;
+			productRef = "TEMP_B50A4B50-9289-4A32-87F0-2EA63C9C964D" /* RJSLibUFBase */;
 		};
 		E0F913211A6DDAAD4DB21E95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_96EF9CDA-C239-4E37-A559-461BC274A1F8" /* RJSLibUFBase */;
+			productRef = "TEMP_F86D3FED-A9B6-46ED-935C-DE311D74E707" /* RJSLibUFBase */;
 		};
 		E4BF07CC044294EB90650052 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2145,7 +2165,7 @@
 		};
 		F02F5117E36C09CDEBC4F357 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_AE55B731-2759-4C02-BA95-EF9B748ACF3C" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_6A1B19C4-291F-49BA-921A-0D0995957AE5" /* RJSLibUFAppThemes */;
 		};
 		F26681952C35053D3677B57B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2190,7 +2210,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairWebAPI/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2214,7 +2234,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairWebAPI/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2238,7 +2258,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairDomain/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2262,7 +2282,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeather/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2303,7 +2323,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherDomain/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2327,7 +2347,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2351,7 +2371,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2399,7 +2419,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2423,7 +2443,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairDomain/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2447,7 +2467,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2551,7 +2571,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2575,7 +2595,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherDomain/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2662,7 +2682,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherWebAPI/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2686,7 +2706,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairDomain/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2734,7 +2754,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeather/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2782,7 +2802,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeather/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2806,7 +2826,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2878,7 +2898,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairWebAPI/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2975,7 +2995,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherDomain/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3023,7 +3043,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherDomain/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3175,7 +3195,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherDomain/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3286,7 +3306,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3358,7 +3378,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairWebAPI/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3382,7 +3402,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherWebAPI/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3406,7 +3426,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherWebAPI/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3430,7 +3450,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairDomain/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3454,7 +3474,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairWebAPI/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3478,7 +3498,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3502,7 +3522,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairDomain/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3526,7 +3546,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeather/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3550,7 +3570,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3574,7 +3594,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherWebAPI/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3615,7 +3635,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeather/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3639,7 +3659,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairDomain/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3663,7 +3683,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3752,7 +3772,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairWebAPI/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3800,7 +3820,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3824,7 +3844,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3848,7 +3868,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3872,7 +3892,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherWebAPI/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3896,7 +3916,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeather/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeather/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3920,7 +3940,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3944,7 +3964,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherCore/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3985,7 +4005,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherWebAPI/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherWebAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4009,7 +4029,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppWeatherDomain/Info.plist;
+				INFOPLIST_FILE = AppWeather/AppWeatherDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4050,7 +4070,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanair/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanair/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4137,7 +4157,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4161,7 +4181,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AppRyanairCore/Info.plist;
+				INFOPLIST_FILE = AppRyanair/AppRyanairCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4404,7 +4424,7 @@
 			repositoryURL = "https://github.com/ricardopsantos/RJSLibUF";
 			requirement = {
 				kind = revision;
-				revision = 71912bcc27fff048eb85ea8f83252cfbd4aca852;
+				revision = a5d3f01571f592cea6c94d32481a90f5da8284d8;
 			};
 		};
 		718DE72752A261C536FFB5D8 /* XCRemoteSwiftPackageReference "QGrid" */ = {
@@ -4474,95 +4494,95 @@
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_012EF4FE-D373-44DE-9D5E-B448BEF8348A" /* RJSLibUFBase */ = {
+		"TEMP_0665A3D1-F718-4AC6-B79C-76414C86C4CC" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_2200E635-6626-4786-94EA-161BD92EE8B5" /* RJSLibUFStorage */ = {
+		"TEMP_170EFE6B-7442-406A-AC30-699F26E39CEB" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFStorage;
+			productName = RJSLibUFNetworking;
 		};
-		"TEMP_2EF9F4B5-319D-460A-943D-1ACABFCDE79D" /* RJSLibUFBase */ = {
+		"TEMP_20342865-8A55-4B2E-B3C8-E33EF66C998A" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_4142E609-5D5B-4757-AA3E-3591A36811B4" /* RJSLibUFNetworking */ = {
+		"TEMP_2C156CC7-239A-4498-A0EF-9855BC59B2BA" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		"TEMP_4E8464BE-8151-4E9E-B18C-66CF7C04F1A4" /* RJSLibUFStorage */ = {
+		"TEMP_40528D40-DE3B-47CD-AE42-41C96CBC9D09" /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFStorage;
 		};
-		"TEMP_64CBD593-CF75-4704-B405-64B7319871D4" /* RJSLibUFNetworking */ = {
+		"TEMP_4EBC20CF-6B04-4331-9D51-933C2DF2E993" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		"TEMP_714C5F6A-2315-4D60-AB68-6196ED2F0836" /* RJSLibUFAppThemes */ = {
+		"TEMP_5C15A15B-134B-4378-87AB-4437F9EFD6B3" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_625D1523-5433-460B-B9F8-D1AEA4438747" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_6A1B19C4-291F-49BA-921A-0D0995957AE5" /* RJSLibUFAppThemes */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFAppThemes;
 		};
-		"TEMP_839945B2-18A1-4EEE-B825-FFAECC31D23A" /* RJSLibUFStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFStorage;
-		};
-		"TEMP_89B9E829-0611-4AA4-B771-EAF217A9DC33" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_96EF9CDA-C239-4E37-A559-461BC274A1F8" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_A315EA2A-8B3C-4853-B0BA-14E24CE08CC1" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_ADDFC5B9-5E1C-4D61-86F1-EC8CFEB1CF8A" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_AE55B731-2759-4C02-BA95-EF9B748ACF3C" /* RJSLibUFAppThemes */ = {
+		"TEMP_7F66CE6D-AC5C-4ABB-8C01-7D40817E48CF" /* RJSLibUFAppThemes */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFAppThemes;
 		};
-		"TEMP_AE981796-C6C5-43B5-9587-5DA1EC8F0A20" /* RJSLibUFBase */ = {
+		"TEMP_9D0DB472-E630-478A-864F-D4D3AF54C119" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_B0B0AD22-4CD3-4403-BD9E-2974C2B1BA40" /* RJSLibUFBase */ = {
+		"TEMP_B50A4B50-9289-4A32-87F0-2EA63C9C964D" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_D35590E0-5D70-4649-8708-05D54CC9F7A5" /* RJSLibUFBase */ = {
+		"TEMP_C2008F97-ABF5-441A-AA42-95008154756D" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_E20F5C17-7E87-4BD5-8EBD-2F7AA769E920" /* RJSLibUFBase */ = {
+		"TEMP_CF3C2E43-D16E-47F3-8736-D3C0052153A3" /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
+			productName = RJSLibUFStorage;
 		};
-		"TEMP_F5E47C49-A4A4-4C29-BDA9-6B53799AD703" /* RJSLibUFNetworking */ = {
+		"TEMP_D41EAAB7-8174-47C1-AA39-2863284BA1C6" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
+		};
+		"TEMP_E55789B8-3A69-435F-91C5-7559530CCA24" /* RJSLibUFStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFStorage;
+		};
+		"TEMP_E843DE01-98B9-493E-876E-68549B5E0DA4" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_F86D3FED-A9B6-46ED-935C-DE311D74E707" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
