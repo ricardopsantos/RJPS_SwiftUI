@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -411,7 +411,7 @@
 		0CF124C35989E2A72EE5B03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0D20E641AC8412EB36136DDE /* VisualDocs_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Colors.swift; sourceTree = "<group>"; };
 		0E7C6F1ED6364E85DD739F9C /* Designables_PassCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designables_PassCode.swift; sourceTree = "<group>"; };
-		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.simplified.viz; sourceTree = "<group>"; };
+		138F2AEBF74C579055689533 /* Graph.simplified.viz */ = {isa = PBXFileReference; path = Graph.simplified.viz; sourceTree = "<group>"; };
 		18081A0AE1324D6C848053E5 /* RepositorRyanairProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorRyanairProtocol.swift; sourceTree = "<group>"; };
 		188A8FF7395A94ABE15B2442 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
 		18AB46AF3E560DDFC6B3D8FB /* UtilsNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UtilsNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,7 +456,7 @@
 		4888B5A9C5C02F67883EC538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		48CAED30B0C8D189CF816854 /* WeatherMappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMappers.swift; sourceTree = "<group>"; };
 		495C0213CF19D2A77B7B69CF /* Recreating.AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recreating.AppStore.swift; sourceTree = "<group>"; };
-		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; lastKnownFileType = text; path = Graph.viz; sourceTree = "<group>"; };
+		4AC5DE6AC22E447384CA0CD8 /* Graph.viz */ = {isa = PBXFileReference; path = Graph.viz; sourceTree = "<group>"; };
 		4B039F99C8D12DFB51E38396 /* V.RyanairView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.RyanairView2.swift; sourceTree = "<group>"; };
 		4B16F34813BD45939D8CAACC /* readme.image.2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.2.png; sourceTree = "<group>"; };
 		4F70AD1FF77511B1FED81AAF /* InfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollView.swift; sourceTree = "<group>"; };
@@ -471,6 +471,7 @@
 		5985AB94FEB80BF0E4246790 /* RepositoryWeatherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWeatherProtocol.swift; sourceTree = "<group>"; };
 		5AE16F18A8D384CD96D4D6D6 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		5C314B4851483F9E3124E376 /* VisualDocs_Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDocs_Padding.swift; sourceTree = "<group>"; };
+		5CBF1213E5F8ABC3D488546D /* CoolStuffToTest.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoolStuffToTest.md; sourceTree = "<group>"; };
 		5D1CF494755B297A20A4B750 /* VM.WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM.WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
 		608CE52D6E2AEB0627F7FBE6 /* FetcherWeatherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherWeatherMock.swift; sourceTree = "<group>"; };
 		61540A44CA4C9EC89CFD95B9 /* B.RyanairView2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.RyanairView2Builder.swift; sourceTree = "<group>"; };
@@ -579,7 +580,6 @@
 		D5F7AF84C93894F4C73A2A02 /* typelias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typelias.swift; sourceTree = "<group>"; };
 		D62E0E95E84D5425B9C9DE8F /* Article1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Article1.pdf; sourceTree = "<group>"; };
 		D71DE4D97539A5708DD21E72 /* RJPS_SwiftUI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RJPS_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7C3BFCF25D055EF00A78C0C /* CoolStuffToTest.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CoolStuffToTest.md; sourceTree = "<group>"; };
 		D8C1665E17DFEC5CAB678A62 /* readme.image.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = readme.image.3.png; sourceTree = "<group>"; };
 		D90034C9F5CA9F78E6FF9F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D98E173E4AA89263279EA1E5 /* UtilsNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsNetworking.h; sourceTree = "<group>"; };
@@ -830,12 +830,12 @@
 		3DBAC92EF43034F7ACAD5223 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				5CBF1213E5F8ABC3D488546D /* CoolStuffToTest.md */,
 				E0D9BDAF70FC475E89F85334 /* Graph.json */,
 				138F2AEBF74C579055689533 /* Graph.simplified.viz */,
 				4AC5DE6AC22E447384CA0CD8 /* Graph.viz */,
 				6A7F163C9E85B2CFACCD8C5D /* MVVM.README.md */,
 				0C33EF15820822B333C09DD2 /* NotesAndReferences.md */,
-				D7C3BFCF25D055EF00A78C0C /* CoolStuffToTest.md */,
 				5D48E1527EF67311931182D9 /* articles */,
 				181111B49B5ED8F6445F845B /* Bugs */,
 				3C476F2CED7E5A495BC99BF8 /* images */,
@@ -1683,6 +1683,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1202;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 0DE10B5135A4E28DFB703D90 /* Build configuration list for PBXProject "RJPS_SwiftUI" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1694,7 +1696,10 @@
 			);
 			mainGroup = DA3D2F2AF59C76FA620B2031;
 			packageReferences = (
+				B4195A33BCC07A9A6743506F /* XCRemoteSwiftPackageReference "ChartView" */,
+				718DE72752A261C536FFB5D8 /* XCRemoteSwiftPackageReference "QGrid" */,
 				015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */,
+				D61656F2C826E0AA8E1FFD8D /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -1967,7 +1972,7 @@
 /* Begin PBXTargetDependency section */
 		08848FC6B02A82DC47CCCF7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_7CEC1090-FB86-494A-A80B-BF44DFD47862" /* RJSLibUFBase */;
+			productRef = "TEMP_2EF9F4B5-319D-460A-943D-1ACABFCDE79D" /* RJSLibUFBase */;
 		};
 		0B4FF44803AC63BCCA8E3776 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2006,7 +2011,7 @@
 		};
 		1DF262ADDC9C9A79996FD6AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_C991ED70-158B-4105-860D-F0C3BF0EDAF7" /* RJSLibUFNetworking */;
+			productRef = "TEMP_F5E47C49-A4A4-4C29-BDA9-6B53799AD703" /* RJSLibUFNetworking */;
 		};
 		22AF16BD35BC3FEF00E73D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2030,15 +2035,15 @@
 		};
 		3AF4AF09E7310C0A68566BDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_F6563744-5091-485C-B693-67A68879D7B4" /* RJSLibUFNetworking */;
+			productRef = "TEMP_64CBD593-CF75-4704-B405-64B7319871D4" /* RJSLibUFNetworking */;
 		};
 		3B7F490635484C9CCEDD2872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_4971BD11-39EC-4A0B-9520-0FB3570C554B" /* RJSLibUFNetworking */;
+			productRef = "TEMP_4142E609-5D5B-4757-AA3E-3591A36811B4" /* RJSLibUFNetworking */;
 		};
 		4C295052D082B7A0B21590DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_A9009850-D240-4B6E-8BFE-E75F049D835E" /* RJSLibUFBase */;
+			productRef = "TEMP_B0B0AD22-4CD3-4403-BD9E-2974C2B1BA40" /* RJSLibUFBase */;
 		};
 		4E9069220C1C655CCF760968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2047,7 +2052,7 @@
 		};
 		4EA5C036BF071DC47B871452 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_C8AD9ABB-2C1F-4503-A796-A54CC380AE3C" /* RJSLibUFStorage */;
+			productRef = "TEMP_2200E635-6626-4786-94EA-161BD92EE8B5" /* RJSLibUFStorage */;
 		};
 		80192BBCB4984564E8C0845E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2056,15 +2061,15 @@
 		};
 		81C4FC6322D565A7F48DC4F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_402F6D71-0F5C-4D6B-8A31-F6D9AA29FAE9" /* RJSLibUFBase */;
+			productRef = "TEMP_D35590E0-5D70-4649-8708-05D54CC9F7A5" /* RJSLibUFBase */;
 		};
 		834F20AF556F35889EC6FE20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_8DB56B2D-4CDC-4B65-B7D6-B091F4DD4349" /* RJSLibUFBase */;
+			productRef = "TEMP_AE981796-C6C5-43B5-9587-5DA1EC8F0A20" /* RJSLibUFBase */;
 		};
 		860F228254A6D68B87AB878F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_09F26ED4-55FB-4197-9DC2-E7A50414477A" /* RJSLibUFBase */;
+			productRef = "TEMP_012EF4FE-D373-44DE-9D5E-B448BEF8348A" /* RJSLibUFBase */;
 		};
 		99D19036165202741E5CA9B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2073,7 +2078,7 @@
 		};
 		A255F3D3FE986208D40AB2BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_3452B8BD-5D5C-4559-89E3-15232E69F029" /* RJSLibUFBase */;
+			productRef = "TEMP_ADDFC5B9-5E1C-4D61-86F1-EC8CFEB1CF8A" /* RJSLibUFBase */;
 		};
 		A3F5D9FEB029901A27996273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2082,7 +2087,7 @@
 		};
 		B053B74733BF51D83FCB83E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_4F002100-2DD2-4BAD-9994-1ECA5BE38357" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_714C5F6A-2315-4D60-AB68-6196ED2F0836" /* RJSLibUFAppThemes */;
 		};
 		B26E7AEB02B55D2287BCBD02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2101,19 +2106,19 @@
 		};
 		BFF86C49774612F5DAAF4CEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_1EAB9E91-E2DB-433E-9CEF-6DF7956F668B" /* RJSLibUFStorage */;
+			productRef = "TEMP_839945B2-18A1-4EEE-B825-FFAECC31D23A" /* RJSLibUFStorage */;
 		};
 		C62CEC2EEAFDC88F7CE57DE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_0AA38988-CE72-41DE-87EE-DAE01981548D" /* RJSLibUFStorage */;
+			productRef = "TEMP_4E8464BE-8151-4E9E-B18C-66CF7C04F1A4" /* RJSLibUFStorage */;
 		};
 		CEEFAE30EF6604B708B25681 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_B3845799-FC08-4B86-BF7A-37D0BDB898BD" /* RJSLibUFNetworking */;
+			productRef = "TEMP_89B9E829-0611-4AA4-B771-EAF217A9DC33" /* RJSLibUFNetworking */;
 		};
 		D045B575F2EF16D06FDFA669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_C8864A45-E410-44B6-ABDF-F8D9C0CF8BD7" /* RJSLibUFNetworking */;
+			productRef = "TEMP_A315EA2A-8B3C-4853-B0BA-14E24CE08CC1" /* RJSLibUFNetworking */;
 		};
 		D575075DBB95B65554C0C40B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2132,11 +2137,11 @@
 		};
 		E01FBE92119DDA783E4516CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_A7FDE099-239C-460D-B6E1-A9FB8A4718C4" /* RJSLibUFBase */;
+			productRef = "TEMP_E20F5C17-7E87-4BD5-8EBD-2F7AA769E920" /* RJSLibUFBase */;
 		};
 		E0F913211A6DDAAD4DB21E95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_13605E86-8F63-4980-8510-3A3D8EE95F4C" /* RJSLibUFBase */;
+			productRef = "TEMP_96EF9CDA-C239-4E37-A559-461BC274A1F8" /* RJSLibUFBase */;
 		};
 		E4BF07CC044294EB90650052 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2150,7 +2155,7 @@
 		};
 		F02F5117E36C09CDEBC4F357 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = "TEMP_85E91CBD-BA91-4DF6-BD16-0C206E98EC4E" /* RJSLibUFAppThemes */;
+			productRef = "TEMP_AE55B731-2759-4C02-BA95-EF9B748ACF3C" /* RJSLibUFAppThemes */;
 		};
 		F26681952C35053D3677B57B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4412,6 +4417,30 @@
 				revision = 71912bcc27fff048eb85ea8f83252cfbd4aca852;
 			};
 		};
+		718DE72752A261C536FFB5D8 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B4195A33BCC07A9A6743506F /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D61656F2C826E0AA8E1FFD8D /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -4455,92 +4484,92 @@
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_09F26ED4-55FB-4197-9DC2-E7A50414477A" /* RJSLibUFBase */ = {
+		"TEMP_012EF4FE-D373-44DE-9D5E-B448BEF8348A" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_0AA38988-CE72-41DE-87EE-DAE01981548D" /* RJSLibUFStorage */ = {
+		"TEMP_2200E635-6626-4786-94EA-161BD92EE8B5" /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFStorage;
 		};
-		"TEMP_13605E86-8F63-4980-8510-3A3D8EE95F4C" /* RJSLibUFBase */ = {
+		"TEMP_2EF9F4B5-319D-460A-943D-1ACABFCDE79D" /* RJSLibUFBase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFBase;
 		};
-		"TEMP_1EAB9E91-E2DB-433E-9CEF-6DF7956F668B" /* RJSLibUFStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFStorage;
-		};
-		"TEMP_3452B8BD-5D5C-4559-89E3-15232E69F029" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_402F6D71-0F5C-4D6B-8A31-F6D9AA29FAE9" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_4971BD11-39EC-4A0B-9520-0FB3570C554B" /* RJSLibUFNetworking */ = {
+		"TEMP_4142E609-5D5B-4757-AA3E-3591A36811B4" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		"TEMP_4F002100-2DD2-4BAD-9994-1ECA5BE38357" /* RJSLibUFAppThemes */ = {
+		"TEMP_4E8464BE-8151-4E9E-B18C-66CF7C04F1A4" /* RJSLibUFStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFStorage;
+		};
+		"TEMP_64CBD593-CF75-4704-B405-64B7319871D4" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_714C5F6A-2315-4D60-AB68-6196ED2F0836" /* RJSLibUFAppThemes */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFAppThemes;
 		};
-		"TEMP_7CEC1090-FB86-494A-A80B-BF44DFD47862" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_85E91CBD-BA91-4DF6-BD16-0C206E98EC4E" /* RJSLibUFAppThemes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFAppThemes;
-		};
-		"TEMP_8DB56B2D-4CDC-4B65-B7D6-B091F4DD4349" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_A7FDE099-239C-460D-B6E1-A9FB8A4718C4" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_A9009850-D240-4B6E-8BFE-E75F049D835E" /* RJSLibUFBase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFBase;
-		};
-		"TEMP_B3845799-FC08-4B86-BF7A-37D0BDB898BD" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_C8864A45-E410-44B6-ABDF-F8D9C0CF8BD7" /* RJSLibUFNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
-			productName = RJSLibUFNetworking;
-		};
-		"TEMP_C8AD9ABB-2C1F-4503-A796-A54CC380AE3C" /* RJSLibUFStorage */ = {
+		"TEMP_839945B2-18A1-4EEE-B825-FFAECC31D23A" /* RJSLibUFStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFStorage;
 		};
-		"TEMP_C991ED70-158B-4105-860D-F0C3BF0EDAF7" /* RJSLibUFNetworking */ = {
+		"TEMP_89B9E829-0611-4AA4-B771-EAF217A9DC33" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;
 		};
-		"TEMP_F6563744-5091-485C-B693-67A68879D7B4" /* RJSLibUFNetworking */ = {
+		"TEMP_96EF9CDA-C239-4E37-A559-461BC274A1F8" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_A315EA2A-8B3C-4853-B0BA-14E24CE08CC1" /* RJSLibUFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFNetworking;
+		};
+		"TEMP_ADDFC5B9-5E1C-4D61-86F1-EC8CFEB1CF8A" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_AE55B731-2759-4C02-BA95-EF9B748ACF3C" /* RJSLibUFAppThemes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFAppThemes;
+		};
+		"TEMP_AE981796-C6C5-43B5-9587-5DA1EC8F0A20" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_B0B0AD22-4CD3-4403-BD9E-2974C2B1BA40" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_D35590E0-5D70-4649-8708-05D54CC9F7A5" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_E20F5C17-7E87-4BD5-8EBD-2F7AA769E920" /* RJSLibUFBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
+			productName = RJSLibUFBase;
+		};
+		"TEMP_F5E47C49-A4A4-4C29-BDA9-6B53799AD703" /* RJSLibUFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 015CA3717868ADCC451A0F49 /* XCRemoteSwiftPackageReference "RJSLibUF" */;
 			productName = RJSLibUFNetworking;

@@ -54,11 +54,42 @@ targetTemplates:
 ####################### SPM #######################  
 ####################### SPM #######################
 
+#
+# 8 Amazing SwiftUI Libraries to Use in Your Next Project
+# https://medium.com/better-programming/8-amazing-swiftui-libraries-to-use-in-your-next-project-52efaf211143
+#
+
 packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
-#    from: 1.0.0
     revision: 71912bcc27fff048eb85ea8f83252cfbd4aca852 # 2.0.0
+
+#
+# QGrid is the missing SwiftUI collection view. It uses the same approach as SwiftUI's List view,
+# by computing its cells from an underlying collection of identified data.
+#
+
+  QGrid:
+    url: https://github.com/Q-Mobile/QGrid
+    branch: master
+    
+#
+# SwiftUIX attempts to fill the gaps of the still nascent SwiftUI framework, providing an extensive
+# suite of components, extensions and utilities to complement the standard library.
+#
+
+  SwiftUIX:
+    url: https://github.com/SwiftUIX/SwiftUIX
+    branch: master
+
+#
+# Swift package for displaying charts effortlessly.
+#
+
+  ChartView:
+    url: https://github.com/AppPear/ChartView
+    branch: master
+
 
 ####################### TARGETS #######################
 ####################### TARGETS #######################  
