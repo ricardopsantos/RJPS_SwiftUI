@@ -7,7 +7,7 @@ import Foundation
 //
 import BaseDomain
 
-public extension RyanairResponseDto {
+public extension ResponseDto {
 
     // MARK: - Availability
     struct Availability: DtoProtocol {

@@ -8,6 +8,7 @@ import Combine
 //
 import AppRyanairDomain
 import UtilsNetworking
+import BaseDomain
 
 //
 // API V1
@@ -31,7 +32,7 @@ public struct APIRyanair_A {
 }
 
 extension APIRyanair_A {
-    public func stations(_ request: RyanairRequestDto.Stations) -> URLComponents {
+    public func stations(_ request: RequestDto.Stations) -> URLComponents {
         var components    = URLComponents()
         components.scheme = Self.Constants.scheme
         components.host   = Self.Constants.host
@@ -62,7 +63,7 @@ public struct APIRyanair_B {
 }
 
 extension APIRyanair_B {
-    public func availability(_ request: RyanairRequestDto.Availability) -> URLComponents {
+    public func availability(_ request: RequestDto.Availability) -> URLComponents {
         var components    = URLComponents()
         components.scheme = Self.Constants.scheme
         components.host   = Self.Constants.host

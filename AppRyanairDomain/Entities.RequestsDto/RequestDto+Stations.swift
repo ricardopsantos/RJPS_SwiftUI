@@ -4,8 +4,10 @@
 //
 
 import Foundation
+//
+import BaseDomain
 
-public extension RyanairRequestDto {
+public extension RequestDto {
     struct Stations {
         public init() { }
     }

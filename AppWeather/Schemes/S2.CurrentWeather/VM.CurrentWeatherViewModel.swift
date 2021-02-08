@@ -11,6 +11,7 @@ import Utils
 //
 import AppWeatherDomain
 import AppWeatherCore
+import BaseDomain
 
 public extension VM {
     class CurrentWeatherViewModel: ObservableObject {
@@ -29,7 +30,7 @@ public extension VM {
 
         func refresh() {
             fetcher
-                .currentWeatherForecast(request: WeatherRequestDto.CurrentWeatherForecast(city: self.city), cache: .cacheElseLoad)
+                .currentWeatherForecast(request: RequestDto.CurrentWeatherForecast(city: self.city), cache: .cacheElseLoad)
                 .map(VM.CurrentWeatherRowViewModel.init)
                 .receive(on: DispatchQueue.main)
                 .sink(receiveCompletion: { [weak self] value in

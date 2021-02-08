@@ -30,12 +30,12 @@ public class FetcherWeather {
 // MARK: - APIWeatherProtocol
 
 extension FetcherWeather: APIWeatherProtocol {
-    public func weeklyWeatherForecast(request: WeatherRequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {
+    public func weeklyWeatherForecast(request: RequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<ResponseDto.WeeklyForecastEntity, APIError> {
         let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
         let targetAPI = webAPI
-        let apiSubscriber           = targetAPI.agent.run(targetAPI.forecast(request: request), targetAPI.decoder, false) as AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError>
-        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: WeatherResponseDto.WeeklyForecastEntity.self)
-        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: WeatherResponseDto.WeeklyForecastEntity.self, onFail: apiSubscriber)
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.forecast(request: request), targetAPI.decoder, false) as AnyPublisher<ResponseDto.WeeklyForecastEntity, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: ResponseDto.WeeklyForecastEntity.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: ResponseDto.WeeklyForecastEntity.self, onFail: apiSubscriber)
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
             guard let self = self else { return }
@@ -50,12 +50,12 @@ extension FetcherWeather: APIWeatherProtocol {
         }
     }
 
-    public func currentWeatherForecast(request: WeatherRequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError> {
+    public func currentWeatherForecast(request: RequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<ResponseDto.CurrentWeatherForecastEntity, APIError> {
         let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
         let targetAPI = webAPI
-        let apiSubscriber           = targetAPI.agent.run(targetAPI.weather(request: request), targetAPI.decoder, true) as AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError>
-        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: WeatherResponseDto.CurrentWeatherForecastEntity.self)
-        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: WeatherResponseDto.CurrentWeatherForecastEntity.self, onFail: apiSubscriber)
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.weather(request: request), targetAPI.decoder, true) as AnyPublisher<ResponseDto.CurrentWeatherForecastEntity, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: ResponseDto.CurrentWeatherForecastEntity.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: ResponseDto.CurrentWeatherForecastEntity.self, onFail: apiSubscriber)
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
             guard let self = self else { return }

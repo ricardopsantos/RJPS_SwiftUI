@@ -20,22 +20,22 @@ public class FetcherWeatherMock {
 }
 
 extension FetcherWeatherMock: APIWeatherProtocol {
-    public func weeklyWeatherForecast(request: WeatherRequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError> {
+    public func weeklyWeatherForecast(request: RequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<ResponseDto.WeeklyForecastEntity, APIError> {
         let data = Data(weeklyWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data)
-            .decode(type: WeatherResponseDto.WeeklyForecastEntity.self, decoder: decoder)
+            .decode(type: ResponseDto.WeeklyForecastEntity.self, decoder: decoder)
             .mapError { error in
                 DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
-    public func currentWeatherForecast(request: WeatherRequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError> {
+    public func currentWeatherForecast(request: RequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<ResponseDto.CurrentWeatherForecastEntity, APIError> {
         let data = Data(currentWeatherForecastMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        return Just(data).decode(type: WeatherResponseDto.CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
+        return Just(data).decode(type: ResponseDto.CurrentWeatherForecastEntity.self, decoder: decoder).mapError { error in
             DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()

@@ -12,6 +12,7 @@ import Utils
 import AppRyanairCore
 import AppRyanairWebAPI
 import AppRyanairDomain
+import BaseDomain
 
 public extension VM {
     class RyanairView2ViewModel: ObservableObject {
@@ -32,7 +33,7 @@ public extension VM {
         @Published var viewIn: ViewStateIn = ViewStateIn()
         class ViewStateIn: ObservableObject {
             @Published fileprivate(set) var isLoading: Bool = false
-            @Published var flight: RyanairResponseDto.Flight?
+            @Published var flight: ResponseDto.Flight?
         }
 
         private let fetcher: APIRyanairProtocol
@@ -42,7 +43,7 @@ public extension VM {
         public init(fetcher: APIRyanairProtocol,
                     repository: RepositoryRyanairProtocol,
                     scheduler: DispatchQueue = DispatchQueue(label: "RyanairView2ViewModel"),
-                    flight: RyanairResponseDto.Flight?) {
+                    flight: ResponseDto.Flight?) {
             self.fetcher = fetcher
             self.repository = repository
             self.viewIn.flight = flight

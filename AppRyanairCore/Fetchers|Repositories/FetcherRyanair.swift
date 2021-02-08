@@ -33,12 +33,12 @@ public class FetcherRyanair {
 extension FetcherRyanair: APIRyanairProtocol {
 
     // https://tripstest.ryanair.com/static/stations.json
-    public func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError> {
+    public func stations(request: RequestDto.Stations, cache: CachePolicy) -> AnyPublisher<ResponseDto.Stations, APIError> {
         let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
         let targetAPI = webAPI_A
-        let apiSubscriber           = targetAPI.agent.run(targetAPI.stations(request), targetAPI.decoder, false) as AnyPublisher<RyanairResponseDto.Stations, APIError>
-        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairResponseDto.Stations.self)
-        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairResponseDto.Stations.self, onFail: apiSubscriber)
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.stations(request), targetAPI.decoder, false) as AnyPublisher<ResponseDto.Stations, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: ResponseDto.Stations.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: ResponseDto.Stations.self, onFail: apiSubscriber)
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
             guard let self = self else { return }
@@ -53,12 +53,12 @@ extension FetcherRyanair: APIRyanairProtocol {
         }
     }
 
-    public func availability(request: RyanairRequestDto.Availability, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Availability, APIError> {
+    public func availability(request: RequestDto.Availability, cache: CachePolicy) -> AnyPublisher<ResponseDto.Availability, APIError> {
         let cacheKey = "\(#function)_\(request)".replacingOccurrences(of: "\"", with: "")
         let targetAPI = webAPI_B
-        let apiSubscriber           = targetAPI.agent.run(targetAPI.availability(request), targetAPI.decoder, true) as AnyPublisher<RyanairResponseDto.Availability, APIError>
-        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: RyanairResponseDto.Availability.self)
-        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: RyanairResponseDto.Availability.self, onFail: apiSubscriber)
+        let apiSubscriber           = targetAPI.agent.run(targetAPI.availability(request), targetAPI.decoder, true) as AnyPublisher<ResponseDto.Availability, APIError>
+        let cacheSubscriberFailable = APICacheManager.shared.getAsyncFallible(key: cacheKey, params: [], type: ResponseDto.Availability.self)
+        let cacheSubscriberFailSafe = APICacheManager.shared.getAsyncFailSafe(key: cacheKey, params: [], type: ResponseDto.Availability.self, onFail: apiSubscriber)
 
         apiSubscriber.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] (data) in
             guard let self = self else { return }

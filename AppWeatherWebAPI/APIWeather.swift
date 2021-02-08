@@ -32,7 +32,7 @@ public class APIWeather {
 
 public extension APIWeather {
 
-    func forecast(request: WeatherRequestDto.WeeklyWeatherForecast) -> URLComponents {
+    func forecast(request: RequestDto.WeeklyWeatherForecast) -> URLComponents {
         // https://api.openweathermap.org/data/2.5/forecast?q=Lisboa&mode=json&units=metric&APPID=XXXXXXXXX
         var components = URLComponents()
         components.scheme = Self.Constants.scheme
@@ -47,7 +47,7 @@ public extension APIWeather {
         return components
     }
 
-    func weather(request: WeatherRequestDto.CurrentWeatherForecast) -> URLComponents {
+    func weather(request: RequestDto.CurrentWeatherForecast) -> URLComponents {
         // https://api.openweathermap.org/data/2.5/weather?q=Lisboa&mode=json&units=metric&APPID=XXXXXXXXX
         var components    = URLComponents()
         components.scheme = Self.Constants.scheme

@@ -27,7 +27,7 @@ public struct RyanairView2Builder: BuilderProtocol {
         return RyanairView2(viewModel: viewModel)
     }
 
-    public static func buildView(flight: RyanairResponseDto.Flight?) -> some View {
+    public static func buildView(flight: ResponseDto.Flight?) -> some View {
         let apiRyanair_A = APIRyanair_A()
         let apiRyanair_B = APIRyanair_B()
         let fetcher: APIRyanairProtocol = FetcherRyanair(webAPI_A: apiRyanair_A, webAPI_B: apiRyanair_B)

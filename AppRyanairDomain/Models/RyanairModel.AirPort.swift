@@ -4,8 +4,10 @@
 //
 
 import Foundation
+//
+import BaseDomain
 
-public extension RyanairModel {
+public extension Model {
     struct AirPort: Identifiable {
         public var id: String { return code }
         public let name: String
@@ -18,7 +20,7 @@ public extension RyanairModel {
     }
 }
 
-extension RyanairModel.AirPort: Hashable {
+extension Model.AirPort: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(code)
         hasher.combine(name)

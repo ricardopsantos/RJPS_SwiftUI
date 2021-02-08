@@ -11,6 +11,7 @@ import RJSLibUFBase
 import Utils
 import AppWeatherCore
 import AppWeatherDomain
+import BaseDomain
 
 public extension VM {
 
@@ -68,7 +69,7 @@ private extension VM.WeeklyWeatherViewModel {
         self.isLoading = true
         // Start by making a new request to fetch the information from the OpenWeatherMap API.
         // Pass the city name as the argument.
-        fetcher.weeklyWeatherForecast(request: WeatherRequestDto.WeeklyWeatherForecast(city: city), cache: .cacheElseLoad)
+        fetcher.weeklyWeatherForecast(request: RequestDto.WeeklyWeatherForecast(city: city), cache: .cacheElseLoad)
             .map { response in response.list.map(VM.DailyWeatherRowViewModel.init) }
             .map(Array.removeDuplicates)
             .receive(on: DispatchQueue.main)

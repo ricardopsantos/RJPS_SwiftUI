@@ -9,10 +9,11 @@ import MapKit
 //
 import AppWeatherCore
 import AppWeatherDomain
+import BaseDomain
 
 public extension VM {
     struct CurrentWeatherRowViewModel {
-        private let item: WeatherResponseDto.CurrentWeatherForecastEntity
+        private let item: ResponseDto.CurrentWeatherForecastEntity
 
         var temperature: String {
             return String(format: "%.1f", item.main.temperature)
@@ -34,7 +35,7 @@ public extension VM {
             return CLLocationCoordinate2D.init(latitude: item.coord.lat, longitude: item.coord.lon)
         }
         
-        init(item: WeatherResponseDto.CurrentWeatherForecastEntity) {
+        init(item: ResponseDto.CurrentWeatherForecastEntity) {
             self.item = item
         }
     }

@@ -10,11 +10,12 @@ import Combine
 import Utils
 import AppWeatherCore
 import AppWeatherDomain
+import BaseDomain
 
 public extension VM {
     
     struct DailyWeatherRowViewModel: Identifiable {
-        private let item: WeatherResponseDto.WeeklyForecastEntity.Item
+        private let item: ResponseDto.WeeklyForecastEntity.Item
 
         public var id: String { return day + temperature + title }
         var day: String { return DateFormatters.dayFormatter.string(from: item.date) }
@@ -32,7 +33,7 @@ public extension VM {
             return description
         }
         
-        init(item: WeatherResponseDto.WeeklyForecastEntity.Item) {
+        init(item: ResponseDto.WeeklyForecastEntity.Item) {
             self.item = item
         }
     }

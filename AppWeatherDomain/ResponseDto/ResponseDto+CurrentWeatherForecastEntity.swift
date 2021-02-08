@@ -7,7 +7,7 @@ import Foundation
 //
 import BaseDomain
 
-public extension WeatherResponseDto {
+public extension ResponseDto {
     struct CurrentWeatherForecastEntity: DtoProtocol {
         public let coord: Coord
         public let main: Main

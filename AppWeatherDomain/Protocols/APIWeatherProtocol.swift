@@ -9,6 +9,6 @@ import Combine
 import BaseDomain
 
 public protocol APIWeatherProtocol {
-    func weeklyWeatherForecast(request: WeatherRequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.WeeklyForecastEntity, APIError>
-    func currentWeatherForecast(request: WeatherRequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<WeatherResponseDto.CurrentWeatherForecastEntity, APIError>
+    func weeklyWeatherForecast(request: RequestDto.WeeklyWeatherForecast, cache: CachePolicy) -> AnyPublisher<ResponseDto.WeeklyForecastEntity, APIError>
+    func currentWeatherForecast(request: RequestDto.CurrentWeatherForecast, cache: CachePolicy) -> AnyPublisher<ResponseDto.CurrentWeatherForecastEntity, APIError>
 }

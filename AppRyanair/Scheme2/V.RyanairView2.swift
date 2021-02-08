@@ -10,6 +10,7 @@ import SwiftUI
 import AppRyanairCore
 import AppRyanairDomain
 import Utils
+import BaseDomain
 
 struct RyanairView2: View {
 
@@ -34,7 +35,7 @@ struct RyanairView2: View {
 
 struct RyanairView2_PreviewProvider: PreviewProvider {
     static var previews: some View {
-        let flight = RyanairResponseDto.Flight(faresLeft: 1,
+        let flight = ResponseDto.Flight(faresLeft: 1,
                                                flightKey: "flightKey",
                                                infantsLeft: 1,
                                                operatedBy: "operatedBy",

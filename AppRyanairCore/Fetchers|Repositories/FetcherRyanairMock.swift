@@ -19,24 +19,24 @@ public class FetcherRyanairMock {
 // MARK: - APIRyanairProtocol
 
 extension FetcherRyanairMock: APIRyanairProtocol {
-    public func stations(request: RyanairRequestDto.Stations, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Stations, APIError> {
+    public func stations(request: RequestDto.Stations, cache: CachePolicy) -> AnyPublisher<ResponseDto.Stations, APIError> {
         let data = Data(stationsMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data)
-            .decode(type: RyanairResponseDto.Stations.self, decoder: decoder)
+            .decode(type: ResponseDto.Stations.self, decoder: decoder)
             .mapError { error in
                 DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)
         }.eraseToAnyPublisher()
     }
 
-    public func availability(request: RyanairRequestDto.Availability, cache: CachePolicy) -> AnyPublisher<RyanairResponseDto.Availability, APIError> {
+    public func availability(request: RequestDto.Availability, cache: CachePolicy) -> AnyPublisher<ResponseDto.Availability, APIError> {
         let data = Data(availabilityMock.utf8)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return Just(data)
-            .decode(type: RyanairResponseDto.Availability.self, decoder: decoder)
+            .decode(type: ResponseDto.Availability.self, decoder: decoder)
             .mapError { error in
                 DevTools.log(error: "Error : \(error)")
             return .parsing(description: error.localizedDescription)

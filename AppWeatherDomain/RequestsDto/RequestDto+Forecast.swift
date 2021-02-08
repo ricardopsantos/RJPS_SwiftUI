@@ -4,13 +4,14 @@
 //
 
 import Foundation
+//
+import BaseDomain
 
 // Encapsulate all WeatherRequestDto
 
-public extension WeatherRequestDto {
-    struct CurrentWeatherForecast {
+public extension RequestDto {
+    struct WeeklyWeatherForecast {
         public let city: String
-
         public init(city: String) {
             self.city = city
         }

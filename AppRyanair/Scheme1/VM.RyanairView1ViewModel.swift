@@ -19,7 +19,7 @@ public extension VM {
         // Encapsulate the ViewModel internal/auxiliar state properties
         @Published private var vmInternalState: ViewModelState = ViewModelState()
         class ViewModelState: ObservableObject {
-            fileprivate var airports: [RyanairModel.AirPort] = []
+            fileprivate var airports: [Model.AirPort] = []
         }
 
         // Encapsulate that the View properties that the ViewModel needs to read on to work
@@ -61,8 +61,8 @@ public extension VM {
         class ViewStateIn: ObservableObject {
             @Published fileprivate(set) var outputText: String = ""
             @Published fileprivate(set) var outputList: [ListItemModel] = []
-            @Published fileprivate(set) var airportsDepartureSuggestions: [RyanairModel.AirPort] = []
-            @Published fileprivate(set) var airportsArrivalSuggestions: [RyanairModel.AirPort] = []
+            @Published fileprivate(set) var airportsDepartureSuggestions: [Model.AirPort] = []
+            @Published fileprivate(set) var airportsArrivalSuggestions: [Model.AirPort] = []
         }
 
         @Published var isLoading: Bool = false
@@ -71,7 +71,7 @@ public extension VM {
         private var repository: RepositoryRyanairProtocol
         private var cancelBag = CancelBag()
 
-        private var trips: [RyanairResponseDto.Trip] = [] {
+        private var trips: [ResponseDto.Trip] = [] {
             didSet {
                 self.viewIn.outputList = []
                 self.viewIn.outputList.append(contentsOf: RyanairMappers.listItemsWith(trips: self.trips))
@@ -168,12 +168,12 @@ private extension VM.RyanairView1ViewModel {
     func fetchStations() {
         cleanViewOutput()
         self.isLoading = true
-        let stations = self.fetcher.stations(request: RyanairRequestDto.Stations(), cache: .cacheElseLoad)
+        let stations = self.fetcher.stations(request: RequestDto.Stations(), cache: .cacheElseLoad)
         stations.sink(receiveCompletion: { [weak self] (result) in
             self?.hideLoading()
         }) { [weak self] (result) in
             guard let self = self else { return }
-            self.vmInternalState.airports = result.stations.map({ RyanairModel.AirPort(name: $0.name, code: $0.code) })
+            self.vmInternalState.airports = result.stations.map({ Model.AirPort(name: $0.name, code: $0.code) })
         }.store(in: cancelBag)
     }
 
@@ -212,7 +212,7 @@ private extension VM.RyanairView1ViewModel {
         let adt = viewOut.adult
         let teen = viewOut.teen
         let chd = viewOut.children
-        let apiRequest = RyanairRequestDto.Availability(origin: origin,
+        let apiRequest = RequestDto.Availability(origin: origin,
                                                         destination: destination,
                                                         dateout: dateout,
                                                         datein: "",
@@ -242,7 +242,7 @@ private extension VM.RyanairView1ViewModel {
 
 public extension VM.RyanairView1ViewModel {
     func routeWithFight(id: String) -> some View {
-        var param: RyanairResponseDto.Flight!
+        var param: ResponseDto.Flight!
         trips.forEach { (trip) in
             trip.flights.forEach { (flight) in
                 if flight.id == id {

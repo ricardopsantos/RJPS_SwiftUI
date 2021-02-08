@@ -9,7 +9,7 @@ import BaseDomain
 
 //MARK:- Stations : https://tripstest.ryanair.com/static/stations.json
 
-public extension RyanairResponseDto {
+public extension ResponseDto {
     struct Stations: DtoProtocol {
         public let stations: [Station]
     }

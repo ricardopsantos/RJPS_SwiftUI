@@ -11,7 +11,7 @@ import AppRyanairDomain
 
 public extension RyanairMappers {
 
-    static func listItemsWith(trips: [RyanairResponseDto.Trip]) -> [ListItemModel] {
+    static func listItemsWith(trips: [ResponseDto.Trip]) -> [ListItemModel] {
         var acc: [ListItemModel] = []
         trips.forEach { (trip) in
             trip.flights.forEach { (flight) in
