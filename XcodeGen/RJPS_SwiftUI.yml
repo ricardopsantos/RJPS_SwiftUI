@@ -42,14 +42,6 @@ settings:
     Release: 
       ENABLE_BITCODE: YES
      
-targetTemplates:
-  Framework:
-    platform: iOS
-    deploymentTarget: '13.0'
-    type: framework
-    #settings:
-    #  FRAMEWORK_SEARCH_PATHS: $(inherited) $(SRCROOT)/Carthage/Build/iOS
- 
 ####################### SPM #######################
 ####################### SPM #######################  
 ####################### SPM #######################
@@ -62,7 +54,7 @@ targetTemplates:
 packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
-    revision: a5d3f01571f592cea6c94d32481a90f5da8284d8 
+    revision: 362dbb9ab54ddc072d7eaeef012e2a8c3457d2da
 
 #
 # QGrid is the missing SwiftUI collection view. It uses the same approach as SwiftUI's List view,
@@ -90,11 +82,28 @@ packages:
     url: https://github.com/AppPear/ChartView
     branch: master
 
+####################### INCLUDE #######################
+####################### INCLUDE #######################
+####################### INCLUDE #######################
+ 
+include:
+  
+  ## Templates
+  - _FrameworkTemplate.yml
+  
+  ## Scripts
+  
+  - _SwiftLint.yml
+  
+  ## Apps
+  #- App.HourlyChallenge.yml
+  - App.Ryanair.yml
+  - App.Weather.yml
 
 ####################### TARGETS #######################
 ####################### TARGETS #######################  
 ####################### TARGETS #######################
-       
+
 targets:
         
 ## Base App
@@ -124,190 +133,9 @@ targets:
         link: true
       - target: AppWeather
         link: true
-#      - target: DocumentsVisual
-#        link: true  
-
-    #postCompileScripts:
-    #  - script: |
-    #            if which swiftlint >/dev/null; then
-    #               swiftlint
-    #            else
-    #               echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
-    #            fi
-    #    name: Run SwiftLint
-        
-######################### AppHourlyChallenge
-
-#  AppHourlyChallenge:
-#    templates: 
-#      - Framework
-#    sources: 
-#      - path: ../AppHourlyChallenge
-#    dependencies:
-#      - target: UtilsStorage
-#        link: false
-#      - target: BaseDomain
-#        link: false
-#      - target: UtilsDesignables
-#        link: false  
-
-####################### AppRyanair #######################
-####################### AppRyanair #######################
-####################### AppRyanair #######################
-
-  AppRyanair:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppRyanair/AppRyanair  
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        product: RJSLibUFAppThemes
-        link: false
-      - target: AppRyanairCore
-        link: false
-      - target: AppRyanairDomain
-        link: false
-      - target: Utils
-        link: false  
-      - target: BaseDomain
-        link: false  
-      
-  AppRyanairDomain:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppRyanair/AppRyanairDomain
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
-      - package: RJSLibUF
-        product: RJSLibUFNetworking
-        link: false
-      - package: RJSLibUF
-        product: RJSLibUFStorage
-        link: false 
-      - target: BaseDomain
-        link: false
-        
-  AppRyanairCore:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppRyanair/AppRyanairCore  
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
-      - target: AppRyanairDomain
-        link: false
-      - target: AppRyanairWebAPI
-        link: false  
-      - target: Utils
-        link: false
-      - target: BaseDomain
-        link: false
-        
-  AppRyanairWebAPI:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppRyanair/AppRyanairWebAPI
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
-      - package: RJSLibUF
-        product: RJSLibUFNetworking
-        link: false
-      - target: AppRyanairDomain
-        link: false 
-      - target: UtilsNetworking
-        link: false
-      - target: Utils
-        link: false   
- 
-######################### AppWeather ######################### 
-######################### AppWeather ######################### 
-######################### AppWeather ######################### 
-
-  AppWeather:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppWeather/AppWeather  
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase       
-        link: false
-      - package: RJSLibUF
-        product: RJSLibUFAppThemes
-        link: false
-      - target: AppWeatherDomain
-        link: false  
-      - target: BaseDomain
-        link: false  
-      - target: AppWeatherCore
-        link: false     
-      - target: Utils
-        link: false  
-        
-  AppWeatherDomain:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppWeather/AppWeatherDomain
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: true ############################################
-      - package: RJSLibUF
-        product: RJSLibUFNetworking
-        link: false
-      - target: BaseDomain
-        link: false  
-        
-  AppWeatherCore:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppWeather/AppWeatherCore
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
-      - target: AppWeatherDomain
-        link: false
-      - target: AppWeatherWebAPI
-        link: false  
-      - target: BaseDomain
-        link: false
-#      - target: UtilsStorage
-#        link: false
-      - target: Utils
-        link: false 
-        
-  AppWeatherWebAPI:
-    templates: 
-      - Framework
-    sources: 
-      - path: ../AppWeather/AppWeatherWebAPI
-    dependencies:
-      - package: RJSLibUF
-        product: RJSLibUFBase
-        link: false
-      - package: RJSLibUF
-        product: RJSLibUFNetworking
-        link: false
-      - target: AppWeatherDomain
-        link: false 
-      - target: UtilsNetworking
-        link: false
-      - target: Utils
-        link: false   
-         
+      #- target: DocumentsVisual
+      #  link: true
+                 
 ######################### Generic Utils ######################### 
 ######################### Generic Utils ######################### 
 ######################### Generic Utils ######################### 
@@ -336,42 +164,17 @@ targets:
     dependencies:
       - package: RJSLibUF
         product: RJSLibUFBase
-        link: true ############################################
+        link: true
       - package: RJSLibUF
         product: RJSLibUFAppThemes
-        link: true ############################################
+        link: true
       - package: RJSLibUF
         product: RJSLibUFNetworking
-        link: true ############################################
+        link: true
       - package: RJSLibUF
         product: RJSLibUFStorage
-        link: true ############################################
-        
-#  UtilsDesignables:
-#    templates: 
-#      - Framework
-#    sources: 
-#      - path: ../UtilsDesignables
-#    dependencies:
-#      - package: RJSLibUF
-#        product: RJSLibUFBase
-#        product: RJSLibUFAppThemes
-#        link: false
-#      - target: Utils
-#        link: false
-        
-#  UtilsExtensions:
-#    templates:
-#      - Framework
-#    sources:
-#      - path: ../UtilsExtensions
-#    dependencies:
-#      - package: RJSLibUF
-#        product: RJSLibUFBase
-#        link: false
-#        product: RJSLibUFAppThemes
-#        link: true ############################################
-        
+        link: true
+                
   UtilsNetworking:
     templates: 
       - Framework
@@ -383,24 +186,7 @@ targets:
         link: false
       - target: Utils
         link: false
-  
-#  UtilsStorage:
-#    templates:
-#      - Framework
-#    sources:
-#      - path: ../UtilsStorage
-#    dependencies:
-#      - package: RJSLibUF
-#        product: RJSLibUFBase
-#        link: true ############################################
-#      - package: RJSLibUF
-#        product: RJSLibUFNetworking
-#        link: true ############################################
-#      - target: UtilsExtensions
-#        link: false
-#      - target: BaseDomain
-#        link: false
-    
+      
 #  DocumentsVisual:
 #    templates:
 #      - Framework
@@ -414,9 +200,5 @@ targets:
 #        link: false
 #      - target: Utils
 #        link: false
-#      - target: UtilsDesignables
+#      - target: Utils
 #        link: false
-#      - target: UtilsStorage
-#        link: false
-        
- 

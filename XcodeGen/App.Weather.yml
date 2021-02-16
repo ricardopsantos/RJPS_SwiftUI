@@ -1,0 +1,76 @@
+targets:
+        
+  AppWeather:
+    templates:
+      - Framework
+    sources:
+      - path: ../AppWeather/AppWeather
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFAppThemes
+        link: false
+      - target: AppWeatherDomain
+        link: false
+      - target: BaseDomain
+        link: false
+      - target: AppWeatherCore
+        link: false
+      - target: Utils
+        link: false
+        
+  AppWeatherDomain:
+    templates:
+      - Framework
+    sources:
+      - path: ../AppWeather/AppWeatherDomain
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: true ############################################
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: false
+      - target: BaseDomain
+        link: false
+        
+  AppWeatherCore:
+    templates:
+      - Framework
+    sources:
+      - path: ../AppWeather/AppWeatherCore
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+      - target: AppWeatherDomain
+        link: false
+      - target: AppWeatherWebAPI
+        link: false
+      - target: BaseDomain
+        link: false
+#      - target: UtilsStorage
+#        link: false
+      - target: Utils
+        link: false
+        
+  AppWeatherWebAPI:
+    templates:
+      - Framework
+    sources:
+      - path: ../AppWeather/AppWeatherWebAPI
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: false
+      - target: AppWeatherDomain
+        link: false
+      - target: UtilsNetworking
+        link: false
+      - target: Utils
+        link: false

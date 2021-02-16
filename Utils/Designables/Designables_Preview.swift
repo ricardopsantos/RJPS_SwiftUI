@@ -20,11 +20,6 @@ public struct Designables_View: View {
                 Divider()
             }
             VStack {
-                Text("ConnectivityView").font(.caption)
-                ConnectivityView(subTitle: "Try again latter")
-                Divider()
-            }
-            VStack {
                 Text("Button 1").font(.caption)
                 DesignablesFactory.Button(title: "Title", action: { print("!action!") })
                 Divider()
@@ -62,3 +57,4 @@ public struct VisualDocs_Designables: PreviewProvider {
         return Designables_View().buildPreviews()
     }
 }
+

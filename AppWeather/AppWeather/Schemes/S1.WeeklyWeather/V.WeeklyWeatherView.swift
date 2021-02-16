@@ -6,6 +6,8 @@
 import SwiftUI
 import Combine
 //
+import RJSLibUFBase
+//
 import Utils
 
 // MARK: - Preview
@@ -56,7 +58,7 @@ public struct WeeklyWeatherView: View {
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Weather ⛅️")
             }
-            ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
+            RJS_Designables_SwiftUI.LoadingAnimations.Pack2.ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
         }
     }
 }

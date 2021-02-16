@@ -10,8 +10,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import UtilsExtensions
-import DevTools
+import Utils
 
 public class FetcherHourlyChallenge {
     public init() { }

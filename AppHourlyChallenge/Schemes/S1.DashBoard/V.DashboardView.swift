@@ -14,7 +14,7 @@ import SwiftUI
 import Combine
 import MessageUI
 //
-import UtilsDesignables
+import Utils
 
 // MARK: - View
 

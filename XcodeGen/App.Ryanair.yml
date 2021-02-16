@@ -1,0 +1,78 @@
+targets:
+        
+  AppRyanair:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppRyanair/AppRyanair  
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        product: RJSLibUFAppThemes
+        link: false
+      - target: AppRyanairCore
+        link: false
+      - target: AppRyanairDomain
+        link: false
+      - target: AppRyanairWebAPI
+        link: false
+      - target: Utils
+        link: false  
+      - target: BaseDomain
+        link: false  
+      
+  AppRyanairDomain:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppRyanair/AppRyanairDomain
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFStorage
+        link: false 
+      - target: BaseDomain
+        link: false
+        
+  AppRyanairCore:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppRyanair/AppRyanairCore  
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+      - target: AppRyanairDomain
+        link: false
+      - target: AppRyanairWebAPI
+        link: false  
+      - target: Utils
+        link: false
+      - target: BaseDomain
+        link: false
+        
+  AppRyanairWebAPI:
+    templates: 
+      - Framework
+    sources: 
+      - path: ../AppRyanair/AppRyanairWebAPI
+    dependencies:
+      - package: RJSLibUF
+        product: RJSLibUFBase
+        link: false
+      - package: RJSLibUF
+        product: RJSLibUFNetworking
+        link: false
+      - target: AppRyanairDomain
+        link: false 
+      - target: UtilsNetworking
+        link: false
+      - target: Utils
+        link: false   
+ 

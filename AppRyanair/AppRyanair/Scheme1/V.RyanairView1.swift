@@ -47,7 +47,7 @@ struct RyanairView1: View {
                 }
             }
             .disabled(viewModel.isLoading).blur(radius: viewModel.isLoading ? 3 : 0)
-            ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
+            RJS_Designables_SwiftUI.LoadingAnimations.Pack2.ActivityIndicator_V2(isAnimating: $viewModel.isLoading)
         }
     }
 }
@@ -59,7 +59,7 @@ extension RyanairView1 {
     var outputView: some View {
         VStack {
             DesignablesFactory.ErrorView(message: viewModel.viewIn.outputText)
-            ConnectivityView(subTitle: "Will try to use cache if available")
+            RJS_Designables_SwiftUI.ConnectivityView(subTitle: "Will try to use cache if available")
         }
     }
 
@@ -171,7 +171,7 @@ struct RyanairView1_PreviewProvider2: PreviewProvider {
 
 struct RyanairView1_PreviewProvider3: PreviewProvider {
     static var previews: some View {
-        ActivityIndicator_V3(isAnimating: .constant(true), message: .constant("Loading..."), content: {
+        RJS_Designables_SwiftUI.LoadingAnimations.Pack2.ActivityIndicator_V3(isAnimating: .constant(true), message: .constant("Loading..."), content: {
             RyanairView1Builder.buildMockView()
         })
     }

@@ -8,5 +8,5 @@ import RJSLibUFNetworking
 import RJSLibUFBase
 import RJSLibUFStorage
 
-public typealias APIError    = RJS_FRPNetworkClientAPIError
+public typealias APIError    = RJS_FRPNetworkAgentAPIError
 public typealias CachePolicy = RJS_CacheStrategy

@@ -1,0 +1,12 @@
+targets:
+        
+  AppHourlyChallenge:
+    templates:
+      - Framework
+    sources:
+      - path: ../AppHourlyChallenge
+    dependencies:
+      - target: Utils
+        link: false
+      - target: BaseDomain
+        link: false

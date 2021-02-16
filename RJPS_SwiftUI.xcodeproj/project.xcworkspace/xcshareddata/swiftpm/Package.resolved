@@ -2,11 +2,38 @@
   "object": {
     "pins": [
       {
+        "package": "SwiftUICharts",
+        "repositoryURL": "https://github.com/AppPear/ChartView",
+        "state": {
+          "branch": "master",
+          "revision": "08f0053b164f05ccbdb7153b1b3b10b565e8f1f1",
+          "version": null
+        }
+      },
+      {
+        "package": "QGrid",
+        "repositoryURL": "https://github.com/Q-Mobile/QGrid",
+        "state": {
+          "branch": "master",
+          "revision": "8565654a123a0fa5e7969443cc2b13512c6cea33",
+          "version": null
+        }
+      },
+      {
         "package": "rjps-lib-uf",
         "repositoryURL": "https://github.com/ricardopsantos/RJSLibUF",
         "state": {
           "branch": null,
-          "revision": "71912bcc27fff048eb85ea8f83252cfbd4aca852",
+          "revision": "362dbb9ab54ddc072d7eaeef012e2a8c3457d2da",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftUIX",
+        "repositoryURL": "https://github.com/SwiftUIX/SwiftUIX",
+        "state": {
+          "branch": "master",
+          "revision": "e23bf349d154ab1cd711ecdb993d480d07598647",
           "version": null
         }
       }

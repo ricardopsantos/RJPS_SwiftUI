@@ -8,7 +8,7 @@ import UIKit
 import SwiftUI
 import Combine
 //
-import UtilsStorage
+import RJSLibUFBase
 
 final class RepositoryHourlyChallenge: ObservableObject {
     private init() { }
@@ -18,6 +18,6 @@ final class RepositoryHourlyChallenge: ObservableObject {
         return Bundle.main.bundleIdentifier!
     }
     
-    @UserDefaultsPropertyWrapper("\(id).timeZone", defaultValue: 0)
+    @RJS_Defaults("\(id).timeZone", defaultValue: 0)
     var timeZone: Int { willSet { objectWillChange.send() } }
 }

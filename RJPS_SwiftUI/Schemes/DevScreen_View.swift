@@ -55,7 +55,6 @@ struct DevScreen_View: View {
                 }
                 Section(header: Text("Misc")) {
                     NavigationLink(destination: VisualDocs_Background_PreviewProvider.previews) { Text("Background") }
-                    NavigationLink(destination: VisualDocs_ActivityIndicatorX_PreviewProvider.previews) { Text("Loading...") }
                     NavigationLink(destination: PasswordChecker_PreviewProvider.previews) { Text("PasswordChecker") }
                     NavigationLink(destination: InfiniteScrollView_PreviewProvider.previews) { Text("InfiniteScrollView") }
                     NavigationLink(destination: SimpleMVVM_PreviewProvider.previews) { Text("SimpleMVVM") }
