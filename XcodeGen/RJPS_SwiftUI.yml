@@ -54,7 +54,7 @@ settings:
 packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
-    revision: 362dbb9ab54ddc072d7eaeef012e2a8c3457d2da
+    revision: cab26ea9992a651c4db5fa5df188ce2bbad9a61e
 
 #
 # QGrid is the missing SwiftUI collection view. It uses the same approach as SwiftUI's List view,
