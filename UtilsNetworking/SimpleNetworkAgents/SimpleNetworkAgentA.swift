@@ -37,8 +37,11 @@ public extension SimpleNetworkAgentA {
             .dataTaskPublisher(for: request) // 3
             .tryMap { result -> Response<T> in
                 guard let httpResponse = result.response as? HTTPURLResponse, 200...299 ~= httpResponse.statusCode else {
-                    let code = (result.response as! HTTPURLResponse).statusCode
-                    throw APIError.failedWithStatusCode(code: code)
+                    if let code = (result.response as? HTTPURLResponse)?.statusCode {
+                        throw APIError.failedWithStatusCode(code: code)
+                    } else {
+                        throw APIError.genericError
+                    }
                 }
                 if dumpResponse {
                     print("request: \(request)\n\(String(decoding: result.data, as: UTF8.self))")

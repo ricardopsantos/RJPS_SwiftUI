@@ -100,4 +100,3 @@ public struct VisualDocs_ViewExtensions_PreviewProvider: PreviewProvider {
         ViewExtensions()
     }
 }
-

@@ -54,34 +54,8 @@ settings:
 packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
-    revision: cab26ea9992a651c4db5fa5df188ce2bbad9a61e
-
-#
-# QGrid is the missing SwiftUI collection view. It uses the same approach as SwiftUI's List view,
-# by computing its cells from an underlying collection of identified data.
-#
-
-  QGrid:
-    url: https://github.com/Q-Mobile/QGrid
-    branch: master
+    revision: 0e05d09406c7b9f861ab3a3202f7a72782794a46
     
-#
-# SwiftUIX attempts to fill the gaps of the still nascent SwiftUI framework, providing an extensive
-# suite of components, extensions and utilities to complement the standard library.
-#
-
-  SwiftUIX:
-    url: https://github.com/SwiftUIX/SwiftUIX
-    branch: master
-
-#
-# Swift package for displaying charts effortlessly.
-#
-
-  ChartView:
-    url: https://github.com/AppPear/ChartView
-    branch: master
-
 ####################### INCLUDE #######################
 ####################### INCLUDE #######################
 ####################### INCLUDE #######################

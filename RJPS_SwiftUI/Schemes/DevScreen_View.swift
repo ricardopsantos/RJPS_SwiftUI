@@ -19,7 +19,6 @@ struct DevScreen_View: View {
         NavigationView {
             List {
                 Section(header: Text("WIKI Reference")) {
-                    NavigationLink(destination: VisualDocs_Colors_PreviewProvider.previews) { Text("Color WIKI") }
                     NavigationLink(destination: VisualDocs_Fonts_PreviewProvider.previews) { Text("Fonts WIKI") }
                     //NavigationLink(destination: VisualDocs_ImageName_PreviewProvider.previews) { Text("Images WIKI") }
                     NavigationLink(destination: VisualDocs_Shapes_PreviewProvider.previews) { Text("Shapes WIKI") }
@@ -102,4 +101,3 @@ public struct DevScreen_PreviewProvider: PreviewProvider {
         }
     }
 }
-

@@ -57,4 +57,3 @@ public struct VisualDocs_Designables: PreviewProvider {
         return Designables_View().buildPreviews()
     }
 }
-
