@@ -54,7 +54,7 @@ settings:
 packages:
   RJSLibUF:
     url: https://github.com/ricardopsantos/RJSLibUF
-    revision: 0e05d09406c7b9f861ab3a3202f7a72782794a46
+    revision: "4a6e4231d8026b10b4959cc7a086d328eed08eaa"
     
 ####################### INCLUDE #######################
 ####################### INCLUDE #######################
